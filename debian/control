@@ -1,0 +1,31 @@
+Source: switchboard-plug-parental-controls
+Section: x11
+Priority: optional
+Maintainer: Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
+Build-Depends: cmake,
+               debhelper (>= 9),
+               libgranite-dev,
+               libgtk-3-dev,
+               libpolkit-gobject-1-dev,
+               libswitchboard-2.0-dev,
+               valac
+Standards-Version: 3.9.2
+Homepage: https://launchpad.net/pantheon-plugs
+
+Package: switchboard-plug-parental-controls
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Enhances: switchboard
+Description: Manage network connections
+ Switchboard plug for managing parental controls.
+
+Package: switchboard-plug-parental-controls-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: switchboard-plug-parental-controls (= ${binary:Version}), ${misc:Depends}
+Enhances: switchboard-plug-parental-controls
+Description: Manage network connections (debugging symbols)
+ Switchboard plug for managing parental controls.
+ .
+ This package contains debugging symbols for switchboard-plug-parental-controls.
