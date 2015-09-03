@@ -65,11 +65,15 @@ namespace PC.Widgets {
                 this.remove (useritem);
             }
 
-            var current_page = new ControlPage (Utils.get_current_user ());
-            insert (new UserItem (current_page), 0);
-            int pos = 1;
-            foreach (unowned Act.User temp_user in Utils.get_usermanager ().list_users ()) {
-                if (Utils.get_current_user () != temp_user) {
+            int pos = 0;
+            if (Utils.get_current_user ().get_account_type () != Act.UserAccountType.ADMINISTRATOR) {
+                var current_page = new ControlPage (Utils.get_current_user ());
+                insert (new UserItem (current_page), 0);
+                pos++;
+            }
+
+            foreach (var temp_user in Utils.get_usermanager ().list_users ()) {
+                if (temp_user.get_account_type () != Act.UserAccountType.ADMINISTRATOR && Utils.get_current_user () != temp_user) {
                     var page = new ControlPage (temp_user);
                     insert (new UserItem (page), pos);
                     pos++;
@@ -85,10 +89,10 @@ namespace PC.Widgets {
         }
 
         public void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
-            if (row == get_row_at_index (0)) {
+            if (((UserItem) row).user == Utils.get_current_user ()) {
                 row.set_header (my_account_label);
-            } else if (row == get_row_at_index (1)) {
-                row.set_header (other_accounts_label);
+            } else {
+                row.set_header (null);
             }
         }
 
