@@ -81,6 +81,24 @@ public class WeekSpinBox : Gtk.Box {
         return hbtn_to.get_text () + mbtn_to.get_text ();
     }
 
+    public void set_from (string from) {
+        char[] data = from.to_utf8 ();
+        string from_h = data[0].to_string () + data[1].to_string ();
+        string from_m = data[2].to_string () + data[3].to_string ();
+
+        hbtn_from.set_value (double.parse (from_h));
+        mbtn_from.set_value (double.parse (from_m)); 
+    }
+
+    public void set_to (string to) {
+        char[] data = to.to_utf8 ();
+        string to_h = data[0].to_string () + data[1].to_string ();
+        string to_m = data[2].to_string () + data[3].to_string ();
+
+        hbtn_to.set_value (double.parse (to_h));
+        mbtn_to.set_value (double.parse (to_m)); 
+    }
+
     private void _changed () {
         changed ();
     }

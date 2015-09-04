@@ -21,13 +21,13 @@
  */
 
 namespace Cli {
-    public class PAMReader : FileReader {
+    public class PAMWriter : FileReader {
         public File file;
         private const string CONF_START = "## PANTHEON_PARENTAL_CONTROL_START";
         private const string CONF_END = "## PANTHEON_PARENTAL_CONTROL_END";
         private const string CONF_REGEX = CONF_START + "|" + CONF_END;
 
-        public PAMReader (File file) {
+        public PAMWriter (File file) {
             this.file = file;
         }    
 

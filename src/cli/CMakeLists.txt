@@ -1,6 +1,6 @@
 vala_precompile (VALA_C parental-control-cli
     FileReader.vala
-    PAMReader.vala
+    PAMWriter.vala
     main.vala
 PACKAGES
     posix

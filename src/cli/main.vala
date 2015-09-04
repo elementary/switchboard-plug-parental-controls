@@ -71,7 +71,7 @@ namespace Cli {
             if (restrict_pam_line != null && user != null) {
                 ensure_pam_lightdm_enabled ();
 
-                var pam_reader = new PAMReader (File.new_for_path ("/etc/security/time.conf"));
+                var pam_reader = new PAMWriter (File.new_for_path ("/etc/security/time.conf"));
                 pam_reader.add_conf_line (restrict_pam_line, user);
             }
 
@@ -81,8 +81,6 @@ namespace Cli {
 
             return 0;
         }
-
-
 
         private void ensure_pam_lightdm_enabled () {
             string path = "/etc/pam.d/lightdm";
@@ -114,7 +112,8 @@ namespace Cli {
                     key_file.load_from_file (conf_dir, flags);
                 } catch (FileError e) {
                     warning ("%s\n", e.message);
-                }                
+                }  
+                              
                 key_file.set_boolean ("PlankDockPreferences", "LockItems", lock);
 
                 try {

@@ -21,6 +21,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/InternetBox.vala
     Widgets/AppsBox.vala
     Widgets/WeekSpinBox.vala
+    PAMControl.vala
     Utils.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES

@@ -117,6 +117,7 @@ namespace PC.Widgets {
 
             monitor_updates ();
             update ();
+            load_restrictions ();
 
             this.add (allow_box);
             this.add (limit_box);
@@ -128,6 +129,41 @@ namespace PC.Widgets {
             dock_btn.active = true;
             print_btn.active = true;
             limit_switch.active = false;
+        }
+
+        private void load_restrictions () {
+            var restricts = PAMControl.get_all_restrictions ();
+            foreach (var restrict in restricts) {
+                if (restrict.user == user.get_user_name ()) {
+                    limit_switch.active = true;
+
+                    limit_combobox.active_id = restrict.day_id;
+                    switch (restrict.day_id) {
+                        case ALL_ID:
+                            string from_weekday = restrict.weekday_hours.split ("-")[0];
+                            string to_weekday = restrict.weekday_hours.split ("-")[1];
+                            string from_weekend = restrict.weekend_hours.split ("-")[0];
+                            string to_weekend = restrict.weekend_hours.split ("-")[1];
+
+                            weekday_box.set_from (from_weekday);
+                            weekday_box.set_to (to_weekday);
+
+                            weekend_box.set_from (from_weekend);
+                            weekend_box.set_to (to_weekend);
+                            break;
+                        case WEEKDAYS_ID:
+                            weekday_box.set_from (restrict.from);
+                            weekday_box.set_to (restrict.to);
+                            break;
+                        case WEEKENDS_ID:
+                            weekend_box.set_from (restrict.from);
+                            weekend_box.set_to (restrict.to);
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }
         }
 
         private void update_pam () {
@@ -146,7 +182,7 @@ namespace PC.Widgets {
                     break;
             }
 
-            Utils.call_cli ({"--user", user.get_user_name (), "--restrict-pam-line", restrict});
+            PAMControl.try_add_restrict_line (user.get_user_name (), restrict);
         }
 
         private string generate_pam_conf_restriction (string id, string from, string to) {
@@ -169,8 +205,12 @@ namespace PC.Widgets {
         }
 
         private void monitor_updates () {
-            var monitor = File.new_for_path (conf_dir).monitor_file (FileMonitorFlags.NONE);
-            monitor.changed.connect (update);
+            try {
+                var monitor = File.new_for_path (conf_dir).monitor_file (FileMonitorFlags.NONE);
+                monitor.changed.connect (update);
+            } catch (IOError e) {
+                warning ("%s\n", e.message);
+            }
         }
 
         private void update () {
@@ -178,8 +218,10 @@ namespace PC.Widgets {
             try {
                 key_file.load_from_file (conf_dir, KeyFileFlags.NONE);
                 dock_btn.active = !key_file.get_boolean ("PlankDockPreferences", "LockItems");
-            } catch (KeyFileError err) {
-                stdout.printf ("%s\n", err.message);
+            } catch (FileError e) {
+                warning ("%s\n", e.message);
+            } catch (Error e) {
+                warning ("%s\n", e.message);
             }
 
             bool active = limit_switch.get_active ();
@@ -190,10 +232,7 @@ namespace PC.Widgets {
         }
 
         private void on_dock_btn_activate () {
-            //var request = Request.get_default ();
-            if (Utils.get_permission ().allowed) {
-                Utils.call_cli ({"--home-dir", user.get_home_dir (), "--lock-dock", (!dock_btn.get_active ()).to_string ()});
-            }
+            PAMControl.try_lock_dock_for_user (user.get_user_name (), dock_btn.get_active ());
         }
 
         private void on_print_conf_activate () {
@@ -206,16 +245,24 @@ namespace PC.Widgets {
             }
 
             string[] printers = get_printers ();
-            foreach (string printer in printers) {
+            try {
                 var conn = Bus.get_sync (BusType.SYSTEM);
-                conn.call_sync ("org.opensuse.CupsPkHelper.Mechanism",
-                                "/",
-                                "org.opensuse.CupsPkHelper.Mechanism",
-                                method,
-                                new Variant ("(sas)", printer, builder),
-                                null,
-                                0, -1);
-            }
+                foreach (string printer in printers) {
+                    try {
+                        conn.call_sync ("org.opensuse.CupsPkHelper.Mechanism",
+                                    "/",
+                                    "org.opensuse.CupsPkHelper.Mechanism",
+                                    method,
+                                    new Variant ("(sas)", printer, builder),
+                                    null,
+                                    0, -1);
+                    } catch (Error e) {
+                        warning ("%s\n", e.message);
+                    } 
+                }
+            } catch (IOError e) {
+                warning ("%s\n", e.message);
+            } 
         }  
 
         private void on_limit_combobox_changed () {
@@ -244,12 +291,18 @@ namespace PC.Widgets {
             var file = File.new_for_path (path);
 
             FileInfo info = null;
-            var enumerator = file.enumerate_children ("standard::*", FileQueryInfoFlags.NOFOLLOW_SYMLINKS);
-            while ((info = enumerator.next_file ()) != null) {
-                string printer = info.get_name ().split (".")[0];
-                if (!(printer in retval)) {
-                    retval += printer;
+            try {
+                var enumerator = file.enumerate_children ("standard::*", FileQueryInfoFlags.NOFOLLOW_SYMLINKS);
+                while ((info = enumerator.next_file ()) != null) {
+                    string printer = info.get_name ().split (".")[0];
+                    if (!(printer in retval)) {
+                        retval += printer;
+                    }
                 }
+            } catch (IOError e) {
+                warning ("%s\n", e.message);
+            } catch (Error e) {
+                warning ("%s\n", e.message);
             }
 
             return retval;

@@ -26,8 +26,8 @@ namespace PC.Widgets {
     public class UserListBox : Gtk.ListBox {
         private Gtk.Label my_account_label;
         private Gtk.Label other_accounts_label;
-        private Gtk.ListBoxRow  guest_session_row;
-        private Gtk.Label guest_description_label;
+        //private Gtk.ListBoxRow  guest_session_row;
+        //private Gtk.Label guest_description_label;
 
         public UserListBox () { 
             selection_mode = Gtk.SelectionMode.SINGLE;
@@ -96,7 +96,7 @@ namespace PC.Widgets {
             }
         }
 
-        private void build_guest_session_row () {
+        /*private void build_guest_session_row () {
             guest_session_row = new Gtk.ListBoxRow ();
             guest_session_row.name = "guest-session";
 
@@ -125,6 +125,6 @@ namespace PC.Widgets {
 
             label_box.pack_start (full_name_label, false, false);
             label_box.pack_start (guest_description_label, false, false);
-        }
+        }*/
     }
 }
