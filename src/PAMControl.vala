@@ -125,5 +125,11 @@ namespace PC {
                 Utils.call_cli ({"--user", user_name, "--restrict-pam-line", restrict});
             }
         }
+
+        public static void try_remove_user_restrict (string user_name) {
+            if (Utils.get_permission ().allowed) {            
+                Utils.call_cli ({"--user", user_name, "--remove-restrict"});
+            }            
+        }
     }
 }

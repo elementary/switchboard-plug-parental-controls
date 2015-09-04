@@ -68,6 +68,35 @@ namespace Cli {
             }
         }
 
+        public void remove_user_restrictions (string user) {
+            string contents = this.read_contents (file);
+            string conf_section = get_conf_section ();
+
+            string new_conf = "";
+            if (conf_section != "" && user != "") {
+                int i = 0;
+                string[] split = conf_section.split ("\n");
+                foreach (string section_line in split) {
+                    bool contains = (user in section_line);
+                    if (!contains) {
+                        if (i > 0) {
+                            new_conf += "\n";
+                        }
+
+                        new_conf += section_line;
+                    }
+
+                    i++;
+                }
+
+                try {
+                    FileUtils.set_contents (file.get_path (), contents.replace (conf_section, new_conf));
+                } catch (FileError e) {
+                    warning ("%s\n", e.message);
+                }
+            }            
+        } 
+
         public void add_conf_line (string line, string? user = null) {
             string contents = this.read_contents (file);
             string conf_section = get_conf_section ();
@@ -92,7 +121,7 @@ namespace Cli {
                 try {
                     FileUtils.set_contents (file.get_path (), contents.replace (conf_section, new_conf));
                 } catch (FileError e) {
-
+                    warning ("%s\n", e.message);
                 }
 
                 contents = this.read_contents (file);

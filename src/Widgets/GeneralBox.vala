@@ -83,7 +83,7 @@ namespace PC.Widgets {
 
             limit_switch = new Gtk.Switch ();
             limit_switch.active = false;
-            limit_switch.notify["active"].connect (update);
+            limit_switch.notify["active"].connect (on_limit_switch_changed);
             limit_method_box.add (limit_switch);
             limit_method_box.add (limit_combobox);
             limit_box.add (limit_method_box);
@@ -224,11 +224,14 @@ namespace PC.Widgets {
                 warning ("%s\n", e.message);
             }
 
+            update_sensitivity ();
+            /* TODO: Get denied users for printing configuration */
+        }
+
+        private void update_sensitivity () {
             bool active = limit_switch.get_active ();
             limit_combobox.sensitive = active;
-            frame.sensitive = active;
-
-            /* TODO: Get denied users for printing configuration */
+            frame.sensitive = active;            
         }
 
         private void on_dock_btn_activate () {
@@ -264,6 +267,16 @@ namespace PC.Widgets {
                 warning ("%s\n", e.message);
             } 
         }  
+
+        private void on_limit_switch_changed () {
+            if (limit_switch.get_active ()) {
+                update_pam ();
+            } else {
+                PAMControl.try_remove_user_restrict (user.get_user_name ());
+            }
+
+            update_sensitivity ();
+        }
 
         private void on_limit_combobox_changed () {
             switch (limit_combobox.get_active_id ()) {

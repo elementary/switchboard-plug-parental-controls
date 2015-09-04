@@ -44,11 +44,14 @@ namespace Cli {
             string? restrict_pam_line = null;
             string? lock_dock = null;
 
-            var options = new OptionEntry[4];
-            options[0] = { "user", 0, 0, OptionArg.STRING, ref user, "Use username", null };
+            bool remove_restrict = false;
+
+            var options = new OptionEntry[5];
+            options[0] = { "user", 0, 0, OptionArg.STRING, ref user, "Use specific user", null };
             options[1] = { "home-dir", 0, 0, OptionArg.FILENAME, ref home_dir, "Use specific home directory", null };
             options[2] = { "lock-dock", 0, 0, OptionArg.STRING, ref lock_dock, "Lock the given user dock", null };
             options[3] = { "restrict-pam-line", 0, 0, OptionArg.STRING, ref restrict_pam_line, "Add specified line to pam configuration", null };
+            options[4] = { "remove-restrict", 0, 0, OptionArg.NONE, ref remove_restrict, "Remove all time restrictions for specified user", null };
 
             string[] args = command_line.get_arguments ();
             string*[] _args = new string[args.length];
@@ -68,11 +71,16 @@ namespace Cli {
                 return 1;
             }   
 
+            if (remove_restrict && user != "") {
+            	var pam_writer = new PAMWriter (File.new_for_path ("/etc/security/time.conf"));
+            	pam_writer.remove_user_restrictions (user);
+            }
+
             if (restrict_pam_line != null && user != null) {
                 ensure_pam_lightdm_enabled ();
 
-                var pam_reader = new PAMWriter (File.new_for_path ("/etc/security/time.conf"));
-                pam_reader.add_conf_line (restrict_pam_line, user);
+                var pam_writer = new PAMWriter (File.new_for_path ("/etc/security/time.conf"));
+                pam_writer.add_conf_line (restrict_pam_line, user);
             }
 
             if (home_dir != null && lock_dock != null) {
