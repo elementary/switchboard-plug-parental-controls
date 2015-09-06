@@ -21,8 +21,8 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/InternetBox.vala
     Widgets/AppsBox.vala
     Widgets/WeekSpinBox.vala
-    PAMControl.vala
-    Utils.vala
+    shared/PAMControl.vala
+    shared/Utils.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0
@@ -38,8 +38,10 @@ OPTIONS
 
 configure_file (${CMAKE_SOURCE_DIR}/data/org.pantheon.switchboard.parental-controls.policy.cmake ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.parental-controls.policy)
 install (FILES ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.parental-controls.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
+install (FILES ${CMAKE_SOURCE_DIR}/data/parental-control.desktop DESTINATION /etc/xdg/autostart)
 
 add_subdirectory (cli)
+add_subdirectory (daemon)
 
 add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C})
 target_link_libraries (${CMAKE_PROJECT_NAME} ${DEPS_LIBRARIES}) 

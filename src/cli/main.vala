@@ -118,6 +118,8 @@ namespace Cli {
                 var flags = KeyFileFlags.KEEP_COMMENTS|KeyFileFlags.KEEP_TRANSLATIONS;
                 try {
                     key_file.load_from_file (conf_dir, flags);
+                } catch (KeyFileError e) {
+                    warning ("%s\n", e.message);
                 } catch (FileError e) {
                     warning ("%s\n", e.message);
                 }  

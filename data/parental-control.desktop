@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=Parental Control Daemon
+Comment=Pantheon Parental Control Daemon
+Icon=preferences-system-parental-controls
+Exec=parental-control-daemon
+Terminal=false
+Type=Application
+Categories=System
+OnlyShowIn=Pantheon
+NoDisplay=true
+X-GNOME-Autostart-Notify=true
+X-GNOME-AutoRestart=true
+X-GNOME-Autostart-Phase=Panel
