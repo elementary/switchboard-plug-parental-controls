@@ -1,5 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Source: https://launchpad.net/switchboard-plug-networking
+Source: https://launchpad.net/switchboard-plug-parental-controls
 
 Files: *
 Copyright: Copyright (C) 2011-2013 Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
@@ -10,6 +10,7 @@ Files: debian/*
 Copyright: Copyright (C) 2011-2013 Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
            Copyright (C) 2015 Adam Bieńkowski <donadigos159@gmail.com>
            Copyright (C) 2015 Cameron Norman <camerontnorman@gmail.com>
+           Copyright (C) 2015 Cody Garver <cody@elementary.io>
 License: GPL-3
 
 License: GPL-3
