@@ -4,7 +4,7 @@ vala_precompile (VALA_C parental-control-cli
     ${CMAKE_SOURCE_DIR}/src/shared/PAMControl.vala
 PACKAGES
     posix
-    AccountsService-1.0
+    accountsservice
     polkit-gobject-1
     granite
     gtk+-3.0

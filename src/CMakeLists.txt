@@ -27,7 +27,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
 PACKAGES
     gtk+-3.0
     posix
-    AccountsService-1.0
+    accountsservice
     polkit-gobject-1
     switchboard-2.0
     granite
