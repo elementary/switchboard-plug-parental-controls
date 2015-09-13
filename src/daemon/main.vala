@@ -37,7 +37,7 @@ namespace PC.Daemon {
                                 if (current_date.get_day_of_week () < 6) {
                                     int estimated_time = int.parse (restrict.to);
                                     var span = get_difference_span (estimated_time, current_date);
-                                    start_loop ((int)((span / span.MINUTE * -1) + 1) - 24 * 60);
+                                    start_loop ((int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * 60);
                                 }
 
                                 break;
@@ -45,7 +45,7 @@ namespace PC.Daemon {
                                 if (current_date.get_day_of_week () >= 6) {
                                     int estimated_time = int.parse (restrict.to);
                                     var span = get_difference_span (estimated_time, current_date);
-                                    start_loop ((int)((span / span.MINUTE * -1) + 1) - 24 * 60);
+                                    start_loop ((int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * 60);
                                 }
 
                                 break;
@@ -58,7 +58,7 @@ namespace PC.Daemon {
                                 }
                                 
                                 var span = get_difference_span (estimated_time, current_date);
-                                int minutes = (int)((span / span.MINUTE * -1) + 1) - 24 * 60;
+                                int minutes = (int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * 60;
                                 if (minutes > 0) {
                                     start_loop (minutes);
                                 } else {
@@ -100,7 +100,7 @@ namespace PC.Daemon {
 
             var span = current_date.difference (estimated_date);            
             if (end_day) {
-                span -= span.MINUTE;
+                span -= GLib.TimeSpan.MINUTE;
             }
 
             return span;
