@@ -1,5 +1,7 @@
 vala_precompile (VALA_C parental-control-cli
-    main.vala
+    Daemon.vala
+    ProcessWatcher.vala
+    Process.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Utils.vala
     ${CMAKE_SOURCE_DIR}/src/shared/PAMControl.vala
 PACKAGES

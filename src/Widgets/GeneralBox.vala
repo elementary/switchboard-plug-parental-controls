@@ -235,7 +235,7 @@ namespace PC.Widgets {
         }
 
         private void on_dock_btn_activate () {
-            PAMControl.try_lock_dock_for_user (user.get_user_name (), dock_btn.get_active ());
+            Utils.try_lock_dock_for_user (user.get_user_name (), dock_btn.get_active ());
         }
 
         private void on_print_conf_activate () {

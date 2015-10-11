@@ -69,7 +69,6 @@ namespace PC {
 
             foreach (string line in conf.split ("\n")) {
                 if (!line.has_prefix ("#")) {
-
                     var restrict_info = PAMRestrictInfo ();
                     string[] units = line.split (";");
                     if (units.length >= 4) {
@@ -112,12 +111,6 @@ namespace PC {
             }
 
             return retval;
-        }
-
-        public static void try_lock_dock_for_user (string user_name, bool lock) {
-            if (Utils.get_permission ().allowed) {
-                Utils.call_cli ({"--home-dir", user_name, "--lock-dock", (!lock).to_string ()});
-            }
         }
 
         public static void try_add_restrict_line (string user_name, string restrict) {

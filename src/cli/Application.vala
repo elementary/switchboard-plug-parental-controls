@@ -28,6 +28,7 @@ namespace Cli {
         public App () {
             Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE);
         }
+        
         public static int main (string[] args) {
             if (Environment.get_user_name () != "root") {
                 stdout.printf ("Error: To run this program you need root privigiles\n\n");

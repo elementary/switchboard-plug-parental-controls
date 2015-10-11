@@ -103,4 +103,11 @@ namespace PC.Utils {
         output = output.slice (output.last_index_of ("/") + 1, output.length).chomp ();
         return output;
     }
+
+    public static void try_lock_dock_for_user (string user_name, bool lock) {
+        if (Utils.get_permission ().allowed) {
+            Utils.call_cli ({"--home-dir", user_name, "--lock-dock", (!lock).to_string ()});
+        }
+    }
+
 }

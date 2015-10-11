@@ -1,7 +1,7 @@
 vala_precompile (VALA_C parental-control-cli
+	Application.vala
     FileReader.vala
     PAMWriter.vala
-    main.vala
 PACKAGES
     posix
     gio-2.0
