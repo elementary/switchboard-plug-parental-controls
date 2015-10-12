@@ -56,7 +56,7 @@ namespace PC.Daemon {
                         }
 
                         if (!has_pid) {
-                            watch_pid (pid);
+                            process_pid (pid);
                         }
                     }
                 }
@@ -65,11 +65,28 @@ namespace PC.Daemon {
             }
         }
 
-        private void watch_pid (int pid) {
+        private void process_pid (int pid) {
             var process = new Process (pid);
             process_list.append (process);
 
-            //Environment.find_program_in_path
+
+            string executable = process.get_command ().split (" ")[0];
+            string lock_path = Utils.get_usermanager ().get_user (user).get_home_dir () + "/.config/app-lock.conf";
+            if (!File.new_for_path (lock_path).query_exists ()) {
+                return;
+            }
+
+            if (executable != null && !executable.has_prefix ("/")) {
+                executable = Environment.find_program_in_path (executable);
+            }
+
+            var key_file = new KeyFile ();
+            key_file.load_from_file (lock_path, 0);
+
+            if (executable != null && executable in key_file.get_string_list ("AppLock", "Targets")) {
+                process.kill ();
+                process_list.remove (process);
+            }
         }
     }
 }

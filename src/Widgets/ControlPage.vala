@@ -32,14 +32,13 @@ namespace PC.Widgets {
             hexpand = true;
             orientation = Gtk.Orientation.VERTICAL;
 
-            
             var general = new GeneralBox (user);
             general.expand = true;
 
             var stack = new Gtk.Stack ();
             stack.add_titled (general, "general", _("General"));
             stack.add_titled (new InternetBox (), "internet", _("Internet"));
-            stack.add_titled (new AppsBox (), "apps", _("Applications"));
+            stack.add_titled (new AppsBox (user), "apps", _("Applications"));
 
             var switcher = new Gtk.StackSwitcher ();
             switcher.halign = Gtk.Align.CENTER;

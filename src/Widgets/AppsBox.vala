@@ -22,18 +22,29 @@
 
 namespace PC.Widgets {
     public class AppsBox : Gtk.Box {
+    	private const string APP_LOCK_CONF = "/.config/app-lock.conf";
+    	private List<AppEntry> entries;
+
+    	private Gtk.ComboBoxText combo;
+    	private Act.User user;
+
     	protected class AppEntry : Gtk.Box {
     		public signal void changed ();
 
     		private Gtk.CheckButton check_btn;
+    		private string executable;
 
     		public AppEntry (AppInfo info) {
     			orientation = Gtk.Orientation.VERTICAL;
 
+    			executable = info.get_executable ();
     			check_btn = new Gtk.CheckButton ();
     			check_btn.halign = Gtk.Align.END;
     			check_btn.valign = Gtk.Align.START;
     			check_btn.margin_end = 12;
+    			check_btn.notify["active"].connect (() => {
+    				changed ();
+    			});
 
     			var overlay = new Gtk.Overlay ();
 
@@ -61,12 +72,23 @@ namespace PC.Widgets {
     			add (label);
     		}
 
+    		public string get_executable () {
+    			return executable;
+    		}
+
+    		public bool get_active () {
+    			return check_btn.get_active ();
+    		}
+
     		public void set_active (bool active) {
     			check_btn.set_active (active);
     		}
     	}
 
-        public AppsBox () {
+        public AppsBox (Act.User user) {
+        	this.user = user;
+        	entries = new List<AppEntry> ();
+
             orientation = Gtk.Orientation.VERTICAL;
             spacing = 12;
 
@@ -83,7 +105,7 @@ namespace PC.Widgets {
             var placeholder = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
             placeholder.margin = 6;
 
-            var combo = new Gtk.ComboBoxText ();
+            combo = new Gtk.ComboBoxText ();
             combo.margin_end = 3;
             combo.append_text (_("Prevent"));
             combo.append_text (_("Allow"));
@@ -111,12 +133,33 @@ namespace PC.Widgets {
             foreach (var app_info in app_list) {
             	if (app_info.should_show ()) {
 	            	var entry = new AppEntry (app_info);
+	            	entries.append (entry);
+	            	entry.changed.connect (on_changed);
+
 	            	flow_box.add (entry);
             	}
             }
 
             add (frame);
             add (admin_check_btn);
+        }
+
+        private void on_changed (AppEntry entry) {
+        	var key_file = new KeyFile ();
+        	key_file.set_list_separator (';');
+
+        	string[] targets = {};
+        	foreach (var _entry in entries) {
+        		if (_entry.get_active ()) {
+        			targets += Environment.find_program_in_path (_entry.get_executable ());
+        		}
+        	}
+
+        	key_file.set_integer ("AppLock", "Type", combo.get_active ());
+        	key_file.set_string_list ("AppLock", "Targets", targets);
+
+        	string path = user.get_home_dir () + APP_LOCK_CONF;
+        	Utils.call_cli ({ "--set-contents", key_file.to_data (), "--file", path });
         }
     }
 }

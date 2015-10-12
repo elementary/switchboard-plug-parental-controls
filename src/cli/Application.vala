@@ -44,15 +44,19 @@ namespace Cli {
             string? home_dir = null;
             string? restrict_pam_line = null;
             string? lock_dock = null;
+            string? set_contents = null;
+            string? file = null;
 
             bool remove_restrict = false;
 
-            var options = new OptionEntry[5];
+            var options = new OptionEntry[7];
             options[0] = { "user", 0, 0, OptionArg.STRING, ref user, "Use specific user", null };
             options[1] = { "home-dir", 0, 0, OptionArg.FILENAME, ref home_dir, "Use specific home directory", null };
             options[2] = { "lock-dock", 0, 0, OptionArg.STRING, ref lock_dock, "Lock the given user dock", null };
             options[3] = { "restrict-pam-line", 0, 0, OptionArg.STRING, ref restrict_pam_line, "Add specified line to pam configuration", null };
             options[4] = { "remove-restrict", 0, 0, OptionArg.NONE, ref remove_restrict, "Remove all time restrictions for specified user", null };
+            options[5] = { "set-contents", 0, 0, OptionArg.STRING, ref set_contents, "Set contents of specified filename", null };
+            options[6] = { "file", 0, 0, OptionArg.FILENAME, ref file, "A file to use", null };
 
             string[] args = command_line.get_arguments ();
             string*[] _args = new string[args.length];
@@ -88,7 +92,29 @@ namespace Cli {
                lock_dock_for_user (home_dir, bool.parse (lock_dock.to_string ()));
             }
 
+            if (set_contents != null && file != null) {
+                set_file_contents (file, set_contents);
+            }
+
             return 0;
+        }
+
+        private void set_file_contents (string path, string contents) {
+            var file = File.new_for_path (path);
+            if (!file.query_exists ()) {
+                try {
+                    var os = file.create (FileCreateFlags.REPLACE_DESTINATION);
+                    os.write (contents.data);
+                } catch (Error e) {
+                    warning ("%s\n", e.message);
+                }
+            } else {
+                try {
+                    FileUtils.set_contents (path, contents);
+                } catch (Error e) {
+                    warning ("%s\n", e.message);
+                }
+            }
         }
 
         private void ensure_pam_lightdm_enabled () {

@@ -42,6 +42,10 @@ namespace PC.Daemon {
             return update ();
         }
 
+        public void kill () {
+            Posix.kill (pid, Posix.SIGINT);
+        }
+
         private bool update () {
             if (!File.new_for_path ("/proc/%d/stat".printf (pid)).query_exists ()) {
                 return false;
