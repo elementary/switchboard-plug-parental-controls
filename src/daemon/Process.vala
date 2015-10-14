@@ -20,7 +20,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace PC.Daemon {
+namespace PC.Daemon.AppLock {
     public class Process : Object {
         private int pid;
         private string command;

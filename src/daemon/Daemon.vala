@@ -40,12 +40,7 @@ namespace PC.Daemon {
         public override void activate () {
             var loop = new MainLoop ();
             PC.Utils.get_usermanager ().notify["is-loaded"].connect (() => {
-                var watcher = ProcessWatcher.watch_app_usage (Utils.get_current_user ().get_user_name ());
-                Timeout.add (2000, () => {
-                    watcher.update ();
-                    return true;
-                });
-
+                AppLock.ProcessWatcher.watch_app_usage (Utils.get_current_user ().get_user_name ());
 
                 string current_user = Utils.get_current_user ().get_user_name ();
                 var restricts = PAMControl.get_all_restrictions ();
@@ -53,7 +48,6 @@ namespace PC.Daemon {
                 foreach (var restrict in restricts) {
                     if (restrict.user == current_user) {
                         quit = false;
-                        print ("Initializing Parental Control Daemon\n"); 
 
                         var current_date = new DateTime.now_local ();
                         string minute = current_date.get_minute ().to_string ();
@@ -62,7 +56,7 @@ namespace PC.Daemon {
                         }
 
                         switch (restrict.day_id) {
-                            case "weekdays":
+                            case Vars.WEEKDAYS_ID:
                                 if (current_date.get_day_of_week () < 6) {
                                     int estimated_time = int.parse (restrict.to);
                                     var span = get_difference_span (estimated_time, current_date);
@@ -70,7 +64,7 @@ namespace PC.Daemon {
                                 }
 
                                 break;
-                            case "weekends":
+                            case Vars.WEEKENDS_ID:
                                 if (current_date.get_day_of_week () >= 6) {
                                     int estimated_time = int.parse (restrict.to);
                                     var span = get_difference_span (estimated_time, current_date);
@@ -78,7 +72,7 @@ namespace PC.Daemon {
                                 }
 
                                 break;
-                            case "all":
+                            case Vars.ALL_ID:
                                 int estimated_time = 2400;
                                 if (current_date.get_day_of_week () < 6) {
                                     estimated_time = int.parse (restrict.weekday_hours.split ("-")[1]);

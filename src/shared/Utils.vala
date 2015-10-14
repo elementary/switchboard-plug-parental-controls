@@ -52,11 +52,11 @@ namespace PC.Utils {
                                 null,
                                 null);
         } catch (SpawnError e) {
-            stdout.printf ("Error: %s\n", e.message);
+            warning ("%s\n", e.message);
         }
     }
 
-    public bool list_contains (List list, Object data) {
+    public bool list_contains (List list, List.G data) {
         foreach (var unit in list.copy ()) {
             if (unit == data) {
                 return true;

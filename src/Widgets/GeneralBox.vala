@@ -27,10 +27,6 @@ namespace PC.Widgets {
             END
         }
 
-        private const string PLANK_CONF_DIR = "/.config/plank/dock1/settings";
-        private const string ALL_ID = "all";
-        private const string WEEKDAYS_ID = "weekdays";
-        private const string WEEKENDS_ID = "weekends";
         private string conf_dir = "";
         private Act.User user;
         private Gtk.CheckButton dock_btn;
@@ -45,7 +41,7 @@ namespace PC.Widgets {
 
         public GeneralBox (Act.User user) {
             this.user = user;
-            conf_dir = user.get_home_dir () + PLANK_CONF_DIR;
+            conf_dir = user.get_home_dir () + Vars.PLANK_CONF_DIR;
 
             margin_start = margin_end = 12;
             spacing = 12;
@@ -75,9 +71,9 @@ namespace PC.Widgets {
             limit_combobox = new Gtk.ComboBoxText ();
             limit_combobox.hexpand = true;
             limit_combobox.margin_end = 64;
-            limit_combobox.append (ALL_ID, _("On weekdays and weekends"));
-            limit_combobox.append (WEEKDAYS_ID, _("Only on weekdays"));
-            limit_combobox.append (WEEKENDS_ID, _("Only on weekends"));
+            limit_combobox.append (Vars.ALL_ID, _("On weekdays and weekends"));
+            limit_combobox.append (Vars.WEEKDAYS_ID, _("Only on weekdays"));
+            limit_combobox.append (Vars.WEEKENDS_ID, _("Only on weekends"));
             limit_combobox.active_id = "all";
             limit_combobox.changed.connect (on_limit_combobox_changed);
 
@@ -89,13 +85,7 @@ namespace PC.Widgets {
             limit_box.add (limit_method_box);
 
             frame = new Gtk.Frame (null);
-            var css_provider = new Gtk.CssProvider ();
-            try {
-                css_provider.load_from_data ("GtkFrame {\nbackground: #ffffff;\n}", -1);
-                frame.get_style_context ().add_provider (css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);                
-            } catch (Error e) {
-                warning ("%s\n", e.message);
-            }
+            frame.override_background_color (0, { 1, 1, 1, 1 });
 
             var frame_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
 
@@ -139,7 +129,7 @@ namespace PC.Widgets {
 
                     limit_combobox.active_id = restrict.day_id;
                     switch (restrict.day_id) {
-                        case ALL_ID:
+                        case Vars.ALL_ID:
                             string from_weekday = restrict.weekday_hours.split ("-")[0];
                             string to_weekday = restrict.weekday_hours.split ("-")[1];
                             string from_weekend = restrict.weekend_hours.split ("-")[0];
@@ -151,11 +141,11 @@ namespace PC.Widgets {
                             weekend_box.set_from (from_weekend);
                             weekend_box.set_to (to_weekend);
                             break;
-                        case WEEKDAYS_ID:
+                        case Vars.WEEKDAYS_ID:
                             weekday_box.set_from (restrict.from);
                             weekday_box.set_to (restrict.to);
                             break;
-                        case WEEKENDS_ID:
+                        case Vars.WEEKENDS_ID:
                             weekend_box.set_from (restrict.from);
                             weekend_box.set_to (restrict.to);
                             break;
@@ -170,14 +160,14 @@ namespace PC.Widgets {
             string restrict = "";
             string id = limit_combobox.get_active_id ();
             switch (id) {
-                case ALL_ID:
+                case Vars.ALL_ID:
                     restrict = generate_pam_conf_restriction (id, weekday_box.get_from (), weekday_box.get_to ());
                     restrict += "|" + weekend_box.get_from () + "-" + weekend_box.get_to ();
                     break;
-                case WEEKDAYS_ID:
+                case Vars.WEEKDAYS_ID:
                     restrict = generate_pam_conf_restriction (id, weekday_box.get_from (), weekday_box.get_to ());
                     break;
-                case WEEKENDS_ID:
+                case Vars.WEEKENDS_ID:
                     restrict = generate_pam_conf_restriction (id, weekend_box.get_from (), weekend_box.get_to ());
                     break;
             }
@@ -189,13 +179,13 @@ namespace PC.Widgets {
             string retval = "*;*;";
             string days = "";
             switch (id) {
-                case ALL_ID:
+                case Vars.ALL_ID:
                     days = "Al";
                     break;
-                case WEEKDAYS_ID:
+                case Vars.WEEKDAYS_ID:
                     days = "Wk";
                     break;
-                case WEEKENDS_ID:
+                case Vars.WEEKENDS_ID:
                     days = "Wd";
                     break;
             }
@@ -247,10 +237,9 @@ namespace PC.Widgets {
                 method = "PrinterSetUsersAllowed";
             }
 
-            string[] printers = get_printers ();
             try {
                 var conn = Bus.get_sync (BusType.SYSTEM);
-                foreach (string printer in printers) {
+                foreach (string printer in get_printers ()) {
                     try {
                         conn.call_sync ("org.opensuse.CupsPkHelper.Mechanism",
                                     "/",
@@ -280,15 +269,15 @@ namespace PC.Widgets {
 
         private void on_limit_combobox_changed () {
             switch (limit_combobox.get_active_id ()) {
-                case ALL_ID:
+                case Vars.ALL_ID:
                     weekday_box.sensitive = true;
                     weekend_box.sensitive = true;
                     break;
-                case WEEKDAYS_ID:
+                case Vars.WEEKDAYS_ID:
                     weekday_box.sensitive = true;
                     weekend_box.sensitive = false;      
                     break;
-                case WEEKENDS_ID:
+                case Vars.WEEKENDS_ID:
                     weekday_box.sensitive = false;
                     weekend_box.sensitive = true;
                     break;                                
