@@ -51,7 +51,7 @@ namespace PC.Daemon.AppLock {
                 if (FileUtils.test (lock_path, FileTest.EXISTS)) {
                     var key_file = new KeyFile ();
                     try {
-                        key_file.load_from_file (lock_path, 0);
+                        key_file.load_from_file (Utils.build_app_lock_path (act_user), 0);
 
                         targets = key_file.get_string_list (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_TARGETS);
                         admin = key_file.get_boolean (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_ADMIN);

@@ -122,18 +122,7 @@ namespace PC.Widgets {
             });
 
             apps_popover = new AppChooser (add_button);
-            apps_popover.app_chosen.connect ((info) => {
-                if (!get_info_loaded (info)) {
-                    var row = new AppEntry (info);
-                    row.deleted.connect (on_deleted);
-
-                    entries.append (row);
-                    list_box.add (row);
-                    list_box.show_all ();
-                }
-
-                on_changed ();
-            });
+            apps_popover.app_chosen.connect (load_info);
 
             toolbar.add (add_button);
             toolbar.add (remove_button);
@@ -143,6 +132,20 @@ namespace PC.Widgets {
 
             add (frame);
             add (admin_check_btn);
+
+            load_existing ();
+        }
+
+        private void load_info (AppInfo info) {
+            if (!get_info_loaded (info)) {
+                var row = new AppEntry (info);
+                row.deleted.connect (on_deleted);
+
+                entries.append (row);
+                list_box.add (row);
+                list_box.show_all ();
+                on_changed ();
+            }
         }
 
         private bool get_info_loaded (AppInfo info) {
@@ -176,12 +179,26 @@ namespace PC.Widgets {
                 key_file.set_string_list (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_TARGETS, targets);
                 key_file.set_boolean (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_ADMIN, admin_check_btn.get_active ());
 
-                Utils.call_cli ({ "--set-contents", key_file.to_data (), "--file", build_app_lock_path () });
+                Utils.call_cli ({ "--set-contents", key_file.to_data (), "--file", Utils.build_app_lock_path (user) });
             }   
         }
 
-        private string? build_app_lock_path () {
-            return user.get_home_dir () + Vars.APP_LOCK_CONF_DIR;
+        private void load_existing () {
+            var key_file = new KeyFile ();
+            try {
+                key_file.load_from_file (Utils.build_app_lock_path (user), 0);
+                string[] targets = key_file.get_string_list (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_TARGETS);
+                foreach (var info in AppInfo.get_all ()) {
+                    if (info.should_show ()
+                        && Environment.find_program_in_path (info.get_executable ()) in targets) {
+                        load_info (info);
+                    }
+                }
+            } catch (KeyFileError e) {
+                warning ("%s\n", e.message);
+            } catch (FileError e) {
+                warning ("%s\n", e.message);
+            }
         }
     }
 }

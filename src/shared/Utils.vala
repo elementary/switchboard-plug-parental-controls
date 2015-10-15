@@ -95,6 +95,10 @@ namespace PC.Utils {
         return current_user;
     }
 
+    public string? build_app_lock_path (Act.User user) {
+        return user.get_home_dir () + Vars.APP_LOCK_CONF_DIR;
+    }
+
     public static string get_display_manager () {
         //TODO: add file location for different, non-debian-based distros
         string file = "/etc/X11/default-display-manager";
