@@ -20,6 +20,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/GeneralBox.vala
     Widgets/InternetBox.vala
     Widgets/AppsBox.vala
+    Widgets/AppChooser.vala
     Widgets/WeekSpinBox.vala
     shared/Vars.vala
     shared/PAMControl.vala

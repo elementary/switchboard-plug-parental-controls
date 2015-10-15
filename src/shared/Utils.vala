@@ -37,6 +37,13 @@ namespace PC.Utils {
             }
     }
 
+    public static string create_markup (string name, string comment) {
+        var escaped_name = Markup.escape_text (name);
+        var escaped_comment = Markup.escape_text (comment);
+
+        return @"<span font_weight=\"bold\" size=\"large\">$escaped_name</span>\n$escaped_comment";
+    }
+
     public static void call_cli (string[] args) {
         string[] spawn_args = { "pkexec", "parental-control-cli" };
         foreach (string arg in args) {
