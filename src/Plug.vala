@@ -29,6 +29,8 @@ namespace PC {
         private Gtk.ScrolledWindow scrolled_window;
 
         public MainBox () {
+            var stack = new Gtk.Stack ();
+
             var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
             paned.width_request = 250;
 
@@ -64,7 +66,8 @@ namespace PC {
             infobar_action.add (lock_button);
 
             Utils.get_permission ().notify["allowed"].connect (() => {
-                if (Utils.get_permission ().allowed) {
+                paned.sensitive = Utils.get_permission ().get_allowed ();
+                if (Utils.get_permission ().get_allowed ()) {
                     infobar.no_show_all = true;
                     infobar.hide ();
                 }
@@ -73,7 +76,22 @@ namespace PC {
             var main_grid = new Gtk.Grid ();
             main_grid.attach (infobar, 0, 1, 1, 1);
             main_grid.attach (paned, 0, 2, 1, 1);
-            this.add (main_grid);
+
+            var alert = new Widgets.EmbeddedAlert ();
+            alert.set_alert (_("No users to edit"), _("There are no avaliable standard users to edit their restrictions."), null, true, Gtk.MessageType.INFO);
+
+            stack.add (main_grid);
+            stack.add (alert);
+
+            Utils.get_usermanager ().notify["is-loaded"].connect (() => {
+                if (list.get_has_users ()) {
+                    stack.visible_child = main_grid;
+                } else {
+                    stack.visible_child = alert;
+                }
+            });
+
+            this.add (stack);
             this.show_all ();
         }
     }
