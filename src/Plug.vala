@@ -77,8 +77,18 @@ namespace PC {
             main_grid.attach (infobar, 0, 1, 1, 1);
             main_grid.attach (paned, 0, 2, 1, 1);
 
-            var alert = new Widgets.EmbeddedAlert ();
-            alert.set_alert (_("No users to edit"), _("There are no avaliable standard users to edit their restrictions."), null, true, Gtk.MessageType.INFO);
+            var alert = new Granite.Widgets.AlertView (_("No users to edit"), _("Parental Controls can only be applied to user accounts that don't have administrative permissions.
+You can change a user's account type from \"Administrator\" to \"Standard\" in the User Accounts pane."), "preferences-system-parental-controls");
+
+            var link_button = new Gtk.LinkButton.with_label ("", _("Configure User Accounts"));
+            link_button.halign = Gtk.Align.START;
+            link_button.tooltip_text = _("Open Users settings");
+            link_button.activate_link.connect (() => {
+                new Granite.Services.SimpleCommand ("/usr/bin", "switchboard user-accounts").run ();
+                return true;
+            });
+
+            alert.attach (link_button, 2, 3, 1, 1);
 
             stack.add (main_grid);
             stack.add (alert);
