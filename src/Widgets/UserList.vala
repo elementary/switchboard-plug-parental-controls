@@ -84,7 +84,7 @@ namespace PC.Widgets {
 
         public bool get_has_users () {
             update_ui ();
-            return (users.length () - 1 > 0);
+            return (users.length () > 0);
         }
 
         public void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
