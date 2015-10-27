@@ -77,8 +77,7 @@ namespace PC {
             main_grid.attach (infobar, 0, 1, 1, 1);
             main_grid.attach (paned, 0, 2, 1, 1);
 
-            var alert = new Granite.Widgets.AlertView (_("No users to edit"), _("Parental Controls can only be applied to user accounts that don't have administrative permissions.
-You can change a user's account type from \"Administrator\" to \"Standard\" in the User Accounts pane."), "preferences-system-parental-controls");
+            var alert = new Granite.Widgets.AlertView (_("No users to edit"), _("Parental Controls can only be applied to user accounts that don't have administrative permissions.\nYou can change a user's account type from \"Administrator\" to \"Standard\" in the User Accounts pane."), "preferences-system-parental-controls");
 
             var link_button = new Gtk.LinkButton.with_label ("", _("Configure User Accounts"));
             link_button.halign = Gtk.Align.START;
