@@ -23,7 +23,7 @@
 namespace PC.Daemon.AppLock {
     public class ProcessWatcher : Object {
         private List<Process> process_list;
-        private string user;
+        private Act.User user;
 
         // Represents current running pids that were unlocked by admin permission
         private Gee.ArrayList<Pid> locked_pids;
@@ -36,22 +36,17 @@ namespace PC.Daemon.AppLock {
         // If ProcessWatcher needs to watch specific user
         private bool valid = false;
 
-        public static void watch_app_usage (string user) {
-            new ProcessWatcher (user);
-        }
-
-        private ProcessWatcher (string user) {
-            this.user = user;
+        public ProcessWatcher (Act.User _user) {
+            this.user = _user;
             process_list = new List<Process> ();
             locked_pids = new Gee.ArrayList<Pid> ();
 
-            var act_user = Utils.get_usermanager ().get_user (user);
-            if (act_user != null) {
-                string lock_path = act_user.get_home_dir () + Vars.APP_LOCK_CONF_DIR;
+            if (user != null) {
+                string lock_path = user.get_home_dir () + Vars.APP_LOCK_CONF_DIR;
                 if (FileUtils.test (lock_path, FileTest.EXISTS)) {
                     var key_file = new KeyFile ();
                     try {
-                        key_file.load_from_file (Utils.build_app_lock_path (act_user), 0);
+                        key_file.load_from_file (Utils.build_app_lock_path (user), 0);
 
                         targets = key_file.get_string_list (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_TARGETS);
                         admin = key_file.get_boolean (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_ADMIN);

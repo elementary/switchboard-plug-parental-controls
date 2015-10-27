@@ -20,17 +20,14 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
+[DBus (name = "org.freedesktop.DisplayManager.Seat")]
+public interface Seat : Object {
+	[DBus (name = "SwitchToGreeter")]
+	public abstract void switch_to_greeter () throws Error;    		
+}
+
 namespace PC.Daemon {
-    [DBus (name = "org.freedesktop.ScreenSaver")]
-    interface LockManager : Object {
-        public abstract void lock () throws IOError;
-    }
-
     public class App : Gtk.Application {
-
-        public App () {
-        }
-
         public static int main (string[] args) {
             Gtk.init (ref args);
             var app = new App ();
@@ -39,14 +36,18 @@ namespace PC.Daemon {
 
         public override void activate () {
             var loop = new MainLoop ();
-            PC.Utils.get_usermanager ().notify["is-loaded"].connect (() => {
-                AppLock.ProcessWatcher.watch_app_usage (Utils.get_current_user ().get_user_name ());
 
-                string current_user = Utils.get_current_user ().get_user_name ();
+            PC.Utils.get_usermanager ().notify["is-loaded"].connect (() => {
+            	var current_user = Utils.get_current_user ();
+                var watcher = new AppLock.ProcessWatcher (current_user);
+                if (watcher == null || !watcher.update ()) {
+                	watcher.unref ();
+                }
+
                 var restricts = PAMControl.get_all_restrictions ();
                 bool quit = true;
                 foreach (var restrict in restricts) {
-                    if (restrict.user == current_user) {
+                    if (restrict.user == current_user.get_user_name ()) {
                         quit = false;
 
                         var current_date = new DateTime.now_local ();
@@ -144,6 +145,12 @@ namespace PC.Daemon {
                 return false;
             });
 
+            Timeout.add_seconds ((remaining_minutes - 1) * 60, () => {
+                send_notification (0, 1);
+
+                return false;
+            });
+
             Timeout.add_seconds (60, () => {
                 remaining_minutes--;
                 if (remaining_minutes == 0) {
@@ -165,42 +172,35 @@ namespace PC.Daemon {
         }
 
         private void lock () {
-            try {
-                LockManager? lock_manager = null;
-                lock_manager = Bus.get_proxy_sync (BusType.SESSION, "org.freedesktop.ScreenSaver", "/org/freedesktop/ScreenSaver");
-                lock_manager.lock ();
-            } catch (IOError e) {
-                warning ("%s\n", e.message);
-            }
+        	string? seat_path = Environment.get_variable ("XDG_SEAT_PATH");
+        	if (seat_path == "" || seat_path == null) {
+        		seat_path = "/org/freedesktop/DisplayManager/Seat0";
+        	}
 
-        }
+        	Seat? seat = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.DisplayManager", seat_path); 
+        	try {
+        		seat.switch_to_greeter ();
+        	} catch (Error e) {
+        		warning ("%s\n", e.message);
+        	}
+        }	
 
         private new void send_notification (int hours = 0, int minutes = 0) {
             string time = "";
             if (hours > 0) {
-                time = hours.to_string () + " ";
-                if (hours == 1) {
-                    time += _("hour");
-                } else {
-                    time += _("hours");
-                }
+            	time = ngettext (_("hour"), _("hours"), (ulong)hours);
 
                 if (minutes > 0) {
-                    time += " " + _("and") + " " + minutes.to_string () + " " + _("minutes");
+                    time += " " + _("and") + " " + ngettext (_("minute"), _("minutes"), (ulong)minutes);
                 }  
 
             } else if (minutes > 0) {
-                time = minutes.to_string () + " ";
-                if (minutes == 1) {
-                    time += _("minute");
-                } else {
-                    time += _("minutes");
-                }
+            	time = ngettext (_("minute"), _("minutes"), (ulong)minutes);
             }
 
             string body = _("The computer will lock after %s.").printf (time);
             if (minutes <= 10) {
-                body += " " + _("Make sure to close all applications before the limit.");
+                body += " " + _("Make sure to close all applications before your computer will be locked.");
             }
 
             var notification = new Notification ("Time left");

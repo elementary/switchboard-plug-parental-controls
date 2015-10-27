@@ -91,7 +91,7 @@ namespace PC.Utils {
             return current_user;
         }
 
-        current_user = get_usermanager ().get_user (GLib.Environment.get_user_name ());
+        current_user = get_usermanager ().get_user (Environment.get_user_name ());
         return current_user;
     }
 

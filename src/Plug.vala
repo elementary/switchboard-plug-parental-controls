@@ -70,6 +70,9 @@ namespace PC {
                 if (Utils.get_permission ().get_allowed ()) {
                     infobar.no_show_all = true;
                     infobar.hide ();
+                } else {
+                    infobar.no_show_all = false;
+                    infobar.show_all ();
                 }
             });
 
