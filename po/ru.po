@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-27 16:28+0100\n"
-"PO-Revision-Date: 2015-10-27 22:09+0000\n"
-"Last-Translator: Yuly Nesterov <crow@rikka.io>\n"
+"PO-Revision-Date: 2015-10-28 12:53+0000\n"
+"Last-Translator: Maxim Taranov <png2378@protonmail.ch>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-28 06:13+0000\n"
-"X-Generator: Launchpad (build 17833)\n"
+"X-Launchpad-Export-Date: 2015-10-29 05:42+0000\n"
+"X-Generator: Launchpad (build 17837)\n"
 
 #: ../src/Widgets/UserList.vala:44
 msgid "My Account"
-msgstr "Моя учетная запись"
+msgstr "Моя учётная запись"
 
 #: ../src/Widgets/UserList.vala:48
 msgid "Other Accounts"
@@ -27,7 +27,7 @@ msgstr "Другие учётные записи"
 
 #: ../src/Widgets/GeneralBox.vala:53
 msgid "Allow this user to:"
-msgstr "Разрешить пользователю это:"
+msgstr "Разрешить этому пользователю:"
 
 #: ../src/Widgets/GeneralBox.vala:69
 msgid "Limit computer use:"
@@ -35,7 +35,7 @@ msgstr "Ограничение использования компьютера:"
 
 #: ../src/Widgets/GeneralBox.vala:74
 msgid "On weekdays and weekends"
-msgstr "В выходные и будние дни"
+msgstr "В будние и выходные"
 
 #: ../src/Widgets/GeneralBox.vala:75
 msgid "Only on weekdays"
@@ -51,7 +51,7 @@ msgstr "Будние дни"
 
 #: ../src/Widgets/GeneralBox.vala:96
 msgid "Weekends"
-msgstr "Выходные"
+msgstr "Выходные дни"
 
 #: ../src/Widgets/WeekSpinBox.vala:65
 msgid "From:"
@@ -71,15 +71,15 @@ msgstr "Поиск приложений"
 
 #: ../src/Widgets/AppsBox.vala:80
 msgid "Allow access to these apps with admin permission"
-msgstr ""
+msgstr "Разрешить доступ к этим приложениям с правами администратора"
 
 #: ../src/Widgets/AppsBox.vala:111
 msgid "Add Prevented Apps…"
-msgstr ""
+msgstr "Добавить запрещённые приложения"
 
 #: ../src/Widgets/AppsBox.vala:117
 msgid "Remove Selected App"
-msgstr "Удалить выбранные приложения"
+msgstr "Удалить выбранное приложение"
 
 #: ../src/Widgets/ControlPage.vala:39
 msgid "General"
@@ -108,18 +108,18 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
-"Родительский контроль может быть применен только к учетным записям "
-"пользователей, не имеющим права администратора.\n"
-"Вы можете изменить тип учетной записи пользователя от «Администратор» к "
-"«Пользователь» в панели управления учетными записями."
+"Родительский контроль может быть применён только к учётным записям, не "
+"имеющим прав администратора.\n"
+"Вы можете изменить тип учётной записи с «Администратора» на «Пользователя» в "
+"панели управления учётными записями."
 
 #: ../src/Plug.vala:82
 msgid "Configure User Accounts"
-msgstr "Настроить учетные записи"
+msgstr "Настроить учётные записи"
 
 #: ../src/Plug.vala:84
 msgid "Open Users settings"
-msgstr ""
+msgstr "Открыть настройки пользователей"
 
 #: ../src/Plug.vala:113
 msgid "Parental Control"
@@ -155,7 +155,7 @@ msgstr "Этот компьютер будет заблокирован чере
 
 #: ../src/daemon/Daemon.vala:203
 msgid "Make sure to close all applications before the limit."
-msgstr ""
+msgstr "Обязательно закройте все приложения до срабатывания ограничения."
 
 #: ../src/daemon/AppLockDialog.vala:27
 msgid "You cannot run this application"
