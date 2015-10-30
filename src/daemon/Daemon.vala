@@ -22,8 +22,8 @@
 
 [DBus (name = "org.freedesktop.DisplayManager.Seat")]
 public interface Seat : Object {
-	[DBus (name = "SwitchToGreeter")]
-	public abstract void switch_to_greeter () throws Error;    		
+    [DBus (name = "SwitchToGreeter")]
+    public abstract void switch_to_greeter () throws Error;         
 }
 
 namespace PC.Daemon {
@@ -38,10 +38,10 @@ namespace PC.Daemon {
             var loop = new MainLoop ();
 
             PC.Utils.get_usermanager ().notify["is-loaded"].connect (() => {
-            	var current_user = Utils.get_current_user ();
+                var current_user = Utils.get_current_user ();
                 var watcher = new AppLock.ProcessWatcher (current_user);
                 if (watcher == null || !watcher.update ()) {
-                	watcher.unref ();
+                    watcher.unref ();
                 }
 
                 var restricts = PAMControl.get_all_restrictions ();
@@ -172,30 +172,30 @@ namespace PC.Daemon {
         }
 
         private void lock () {
-        	string? seat_path = Environment.get_variable ("XDG_SEAT_PATH");
-        	if (seat_path == "" || seat_path == null) {
-        		seat_path = "/org/freedesktop/DisplayManager/Seat0";
-        	}
+            string? seat_path = Environment.get_variable ("XDG_SEAT_PATH");
+            if (seat_path == "" || seat_path == null) {
+                seat_path = "/org/freedesktop/DisplayManager/Seat0";
+            }
 
-        	Seat? seat = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.DisplayManager", seat_path); 
-        	try {
-        		seat.switch_to_greeter ();
-        	} catch (Error e) {
-        		warning ("%s\n", e.message);
-        	}
-        }	
+            Seat? seat = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.DisplayManager", seat_path); 
+            try {
+                seat.switch_to_greeter ();
+            } catch (Error e) {
+                warning ("%s\n", e.message);
+            }
+        }   
 
-        private new void send_notification (int hours = 0, int minutes = 0) {
+        private new void send_notification (ulong hours = 0, ulong minutes = 0) {
             string time = "";
             if (hours > 0) {
-            	time = ngettext (_("hour"), _("hours"), (ulong)hours);
+                time = ngettext (_("%ld hour"), _("%ld hours"), (ulong)hours).printf (minutes);
 
                 if (minutes > 0) {
                     time += " " + _("and") + " " + ngettext (_("minute"), _("minutes"), (ulong)minutes);
                 }  
 
             } else if (minutes > 0) {
-            	time = ngettext (_("minute"), _("minutes"), (ulong)minutes);
+                time = ngettext (_("%ld minute"), _("%ld minutes"), (ulong)minutes).printf (minutes);
             }
 
             string body = _("The computer will lock after %s.").printf (time);
@@ -203,7 +203,7 @@ namespace PC.Daemon {
                 body += " " + _("Make sure to close all applications before your computer will be locked.");
             }
 
-            var notification = new Notification ("Time left");
+            var notification = new Notification (_("Time left"));
             try {
                 var pix = Icon.new_for_string ("dialog-warning");
                 notification.set_icon (pix);
