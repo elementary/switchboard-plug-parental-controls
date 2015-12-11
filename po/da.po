@@ -1,16 +1,16 @@
-# Spanish translation for switchboard-plug-networking
+# Danish translation for switchboard-plug-parental-controls
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
-# This file is distributed under the same license as the switchboard-plug-networking package.
+# This file is distributed under the same license as the switchboard-plug-parental-controls package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: switchboard-plug-networking\n"
+"Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-27 16:28+0100\n"
-"PO-Revision-Date: 2015-12-10 01:20+0000\n"
-"Last-Translator: Daniel Fore <Unknown>\n"
-"Language-Team: Spanish <es@li.org>\n"
+"PO-Revision-Date: 2015-12-09 12:41+0000\n"
+"Last-Translator: Jimmy Merrild Krag <jimmy@kragenet.dk>\n"
+"Language-Team: Danish <da@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,71 +19,71 @@ msgstr ""
 
 #: ../src/Widgets/UserList.vala:44
 msgid "My Account"
-msgstr "Mi Cuenta"
+msgstr "Min bruger"
 
 #: ../src/Widgets/UserList.vala:48
 msgid "Other Accounts"
-msgstr "Otras Cuentas"
+msgstr "Andre brugere"
 
 #: ../src/Widgets/GeneralBox.vala:53
 msgid "Allow this user to:"
-msgstr ""
+msgstr "Tillad denne bruger at:"
 
 #: ../src/Widgets/GeneralBox.vala:69
 msgid "Limit computer use:"
-msgstr ""
+msgstr "Begræns computerbrug:"
 
 #: ../src/Widgets/GeneralBox.vala:74
 msgid "On weekdays and weekends"
-msgstr ""
+msgstr "På hverdage og i weekender"
 
 #: ../src/Widgets/GeneralBox.vala:75
 msgid "Only on weekdays"
-msgstr ""
+msgstr "Kun på hverdage"
 
 #: ../src/Widgets/GeneralBox.vala:76
 msgid "Only on weekends"
-msgstr ""
+msgstr "Kun i weekender"
 
 #: ../src/Widgets/GeneralBox.vala:92
 msgid "Weekdays"
-msgstr ""
+msgstr "Hverdage"
 
 #: ../src/Widgets/GeneralBox.vala:96
 msgid "Weekends"
-msgstr "Fines de semana"
+msgstr "Weekender"
 
 #: ../src/Widgets/WeekSpinBox.vala:65
 msgid "From:"
-msgstr ""
+msgstr "Fra:"
 
 #: ../src/Widgets/WeekSpinBox.vala:69
 msgid "To:"
-msgstr ""
+msgstr "Til:"
 
 #: ../src/Widgets/WeekSpinBox.vala:71
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ../src/Widgets/AppChooser.vala:69
 msgid "Search Applications"
-msgstr "Buscar Aplicaciones"
+msgstr "Søg efter applikationer"
 
 #: ../src/Widgets/AppsBox.vala:80
 msgid "Allow access to these apps with admin permission"
-msgstr ""
+msgstr "Tillad adgang til disse applikationer med administrator-rettigheder"
 
 #: ../src/Widgets/AppsBox.vala:111
 msgid "Add Prevented Apps…"
-msgstr ""
+msgstr "Tilføj spærrede applikationer..."
 
 #: ../src/Widgets/AppsBox.vala:117
 msgid "Remove Selected App"
-msgstr ""
+msgstr "Fjern valgte applikation"
 
 #: ../src/Widgets/ControlPage.vala:39
 msgid "General"
-msgstr ""
+msgstr "Generelt"
 
 #: ../src/Widgets/ControlPage.vala:40
 msgid "Internet"
@@ -91,15 +91,15 @@ msgstr "Internet"
 
 #: ../src/Widgets/ControlPage.vala:41
 msgid "Applications"
-msgstr "Aplicaciones"
+msgstr "Applikationer"
 
 #: ../src/Widgets/UserItem.vala:61
 msgid "Administrator"
-msgstr "Administrador"
+msgstr "Administrator"
 
 #: ../src/Plug.vala:80
 msgid "No users to edit"
-msgstr ""
+msgstr "Ingen bruger at redigere"
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -108,46 +108,50 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
+"Forældrekontrol kan kun anvendes på brugerkonti der ikke har "
+"administrationsrettigheder.\n"
+"Du kan ændre en brugers kontotype fra \"Administrator\" til \"Standard\" i "
+"panelet for Brugere."
 
 #: ../src/Plug.vala:82
 msgid "Configure User Accounts"
-msgstr ""
+msgstr "Konfigurer brugerkonti"
 
 #: ../src/Plug.vala:84
 msgid "Open Users settings"
-msgstr ""
+msgstr "Åbn brugerens indstillinger"
 
 #: ../src/Plug.vala:113
 msgid "Parental Control"
-msgstr ""
+msgstr "Forældrekontrol"
 
 #: ../src/Plug.vala:114
 msgid "Parental Control settings"
-msgstr ""
+msgstr "Indstillinger for forældrekontrol"
 
 #: ../src/daemon/Daemon.vala:183
 msgid "hour"
-msgstr ""
+msgstr "time"
 
 #: ../src/daemon/Daemon.vala:185
 msgid "hours"
-msgstr ""
+msgstr "timer"
 
 #: ../src/daemon/Daemon.vala:189
 msgid "and"
-msgstr ""
+msgstr "og"
 
 #: ../src/daemon/Daemon.vala:189 ../src/daemon/Daemon.vala:197
 msgid "minutes"
-msgstr ""
+msgstr "minutter"
 
 #: ../src/daemon/Daemon.vala:195
 msgid "minute"
-msgstr ""
+msgstr "minut"
 
 #: ../src/daemon/Daemon.vala:201
 msgid "The computer will lock after %s."
-msgstr ""
+msgstr "Computeren vil låse efter %s"
 
 #: ../src/daemon/Daemon.vala:203
 msgid "Make sure to close all applications before the limit."
@@ -155,8 +159,8 @@ msgstr ""
 
 #: ../src/daemon/AppLockDialog.vala:27
 msgid "You cannot run this application"
-msgstr ""
+msgstr "Du kan ikke køre denne applikation"
 
 #: ../src/daemon/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
-msgstr ""
+msgstr "Du har ikke tilladelse til at køre denne applikation"
