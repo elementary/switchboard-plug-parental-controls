@@ -8,98 +8,98 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-27 16:28+0100\n"
-"PO-Revision-Date: 2015-09-03 23:39+0000\n"
+"PO-Revision-Date: 2015-12-12 14:57+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-28 06:13+0000\n"
-"X-Generator: Launchpad (build 17833)\n"
+"X-Launchpad-Export-Date: 2015-12-13 05:36+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 
 #: ../src/Widgets/UserList.vala:44
 msgid "My Account"
-msgstr ""
+msgstr "Minu konto"
 
 #: ../src/Widgets/UserList.vala:48
 msgid "Other Accounts"
-msgstr ""
+msgstr "Teised kontod"
 
 #: ../src/Widgets/GeneralBox.vala:53
 msgid "Allow this user to:"
-msgstr ""
+msgstr "Sellele kasutajale on lubatud:"
 
 #: ../src/Widgets/GeneralBox.vala:69
 msgid "Limit computer use:"
-msgstr ""
+msgstr "Arvuti kasutamise piiramine:"
 
 #: ../src/Widgets/GeneralBox.vala:74
 msgid "On weekdays and weekends"
-msgstr ""
+msgstr "Tööpäevadel ja nädalavahetustel"
 
 #: ../src/Widgets/GeneralBox.vala:75
 msgid "Only on weekdays"
-msgstr ""
+msgstr "Ainult tööpäevadel"
 
 #: ../src/Widgets/GeneralBox.vala:76
 msgid "Only on weekends"
-msgstr ""
+msgstr "Ainult nädalavahetustel"
 
 #: ../src/Widgets/GeneralBox.vala:92
 msgid "Weekdays"
-msgstr ""
+msgstr "Tööpäevadel"
 
 #: ../src/Widgets/GeneralBox.vala:96
 msgid "Weekends"
-msgstr ""
+msgstr "Nädalavahetusel"
 
 #: ../src/Widgets/WeekSpinBox.vala:65
 msgid "From:"
-msgstr ""
+msgstr "Alates:"
 
 #: ../src/Widgets/WeekSpinBox.vala:69
 msgid "To:"
-msgstr ""
+msgstr "Kuni:"
 
 #: ../src/Widgets/WeekSpinBox.vala:71
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ../src/Widgets/AppChooser.vala:69
 msgid "Search Applications"
-msgstr ""
+msgstr "Otsi rakendusi…"
 
 #: ../src/Widgets/AppsBox.vala:80
 msgid "Allow access to these apps with admin permission"
-msgstr ""
+msgstr "Nendele rakendustele juurkasutaja õiguste lubamine"
 
 #: ../src/Widgets/AppsBox.vala:111
 msgid "Add Prevented Apps…"
-msgstr ""
+msgstr "Keelatud rakenduste lisamine…"
 
 #: ../src/Widgets/AppsBox.vala:117
 msgid "Remove Selected App"
-msgstr ""
+msgstr "Eemalda valitud rakendus"
 
 #: ../src/Widgets/ControlPage.vala:39
 msgid "General"
-msgstr ""
+msgstr "Üldine"
 
 #: ../src/Widgets/ControlPage.vala:40
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: ../src/Widgets/ControlPage.vala:41
 msgid "Applications"
-msgstr ""
+msgstr "Rakendused"
 
 #: ../src/Widgets/UserItem.vala:61
 msgid "Administrator"
-msgstr ""
+msgstr "Administraator"
 
 #: ../src/Plug.vala:80
 msgid "No users to edit"
-msgstr ""
+msgstr "Muutmiseks kasutajad puuduvad"
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -108,55 +108,59 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
+"Vanemlike õigusi saab rakendada ainult nendele kontodele, millel puuduvad "
+"juurkasutaja õigused.\n"
+"Sul on võimalik muuta konto tüüpi juurkasutajast tavakasutajaks süsteemi "
+"seadetest kontode seadetest."
 
 #: ../src/Plug.vala:82
 msgid "Configure User Accounts"
-msgstr ""
+msgstr "Kasutajakontode konfigureerimine"
 
 #: ../src/Plug.vala:84
 msgid "Open Users settings"
-msgstr ""
+msgstr "Ava kasutajate seaded"
 
 #: ../src/Plug.vala:113
 msgid "Parental Control"
-msgstr ""
+msgstr "Vanemlik kontroll"
 
 #: ../src/Plug.vala:114
 msgid "Parental Control settings"
-msgstr ""
+msgstr "Vanemliku kontrolli seaded"
 
 #: ../src/daemon/Daemon.vala:183
 msgid "hour"
-msgstr ""
+msgstr "tund"
 
 #: ../src/daemon/Daemon.vala:185
 msgid "hours"
-msgstr ""
+msgstr "tundi"
 
 #: ../src/daemon/Daemon.vala:189
 msgid "and"
-msgstr ""
+msgstr "ja"
 
 #: ../src/daemon/Daemon.vala:189 ../src/daemon/Daemon.vala:197
 msgid "minutes"
-msgstr ""
+msgstr "minutit"
 
 #: ../src/daemon/Daemon.vala:195
 msgid "minute"
-msgstr ""
+msgstr "minut"
 
 #: ../src/daemon/Daemon.vala:201
 msgid "The computer will lock after %s."
-msgstr ""
+msgstr "Süsteem lukustatakse pärast %s."
 
 #: ../src/daemon/Daemon.vala:203
 msgid "Make sure to close all applications before the limit."
-msgstr ""
+msgstr "Palun sulge kõik rakendused enne aja lõppu."
 
 #: ../src/daemon/AppLockDialog.vala:27
 msgid "You cannot run this application"
-msgstr ""
+msgstr "Seda rakendust pole võimalik avada"
 
 #: ../src/daemon/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
-msgstr ""
+msgstr "Selle rakenduse käivitamiseks pole sul õigusi."

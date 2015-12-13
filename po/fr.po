@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-10-27 16:28+0100\n"
-"PO-Revision-Date: 2015-10-27 15:36+0000\n"
-"Last-Translator: Corentin Noël <corentin@elementaryos.org>\n"
+"PO-Revision-Date: 2015-12-12 14:59+0000\n"
+"Last-Translator: Nikos <Unknown>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-28 06:13+0000\n"
-"X-Generator: Launchpad (build 17833)\n"
+"X-Launchpad-Export-Date: 2015-12-13 05:36+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 
 #: ../src/Widgets/UserList.vala:44
 msgid "My Account"
@@ -63,7 +63,7 @@ msgstr "À :"
 
 #: ../src/Widgets/WeekSpinBox.vala:71
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ../src/Widgets/AppChooser.vala:69
 msgid "Search Applications"
@@ -100,7 +100,7 @@ msgstr "Administrateur"
 
 #: ../src/Plug.vala:80
 msgid "No users to edit"
-msgstr ""
+msgstr "Aucun utilisateur à modifier"
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -109,10 +109,14 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
+"Le Contrôle Parental ne peut être appliqué qu'aux utilisateurs n'ayant pas "
+"de permissions administrateur.\n"
+"Vous pouvez modifier le type de compte de 'Administrateur\" à \"Standard\" "
+"dans le panneau Comptes utilisateur"
 
 #: ../src/Plug.vala:82
 msgid "Configure User Accounts"
-msgstr ""
+msgstr "Configurer les comptes utilisateur"
 
 #: ../src/Plug.vala:84
 msgid "Open Users settings"
@@ -128,36 +132,36 @@ msgstr "Paramètres du contrôle parental"
 
 #: ../src/daemon/Daemon.vala:183
 msgid "hour"
-msgstr ""
+msgstr "heure"
 
 #: ../src/daemon/Daemon.vala:185
 msgid "hours"
-msgstr ""
+msgstr "heures"
 
 #: ../src/daemon/Daemon.vala:189
 msgid "and"
-msgstr ""
+msgstr "et"
 
 #: ../src/daemon/Daemon.vala:189 ../src/daemon/Daemon.vala:197
 msgid "minutes"
-msgstr ""
+msgstr "minutes"
 
 #: ../src/daemon/Daemon.vala:195
 msgid "minute"
-msgstr ""
+msgstr "minute"
 
 #: ../src/daemon/Daemon.vala:201
 msgid "The computer will lock after %s."
-msgstr ""
+msgstr "L'ordinateur se vérrouillera après %s."
 
 #: ../src/daemon/Daemon.vala:203
 msgid "Make sure to close all applications before the limit."
-msgstr ""
+msgstr "Veuillez fermer toutes les applications avant la limite."
 
 #: ../src/daemon/AppLockDialog.vala:27
 msgid "You cannot run this application"
-msgstr ""
+msgstr "Vous ne pouvez pas démarrer cette application"
 
 #: ../src/daemon/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
-msgstr ""
+msgstr "Vous n'êtes pas autorisé à démarrer cette application."
