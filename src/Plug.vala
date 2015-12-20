@@ -114,7 +114,7 @@ namespace PC {
             Object (category: Category.SYSTEM,
                     code_name: Build.PLUGCODENAME,
                     display_name: _("Parental Control"),
-                    description: _("Parental Control settings"),
+                    description: _("Configure time limits and restrict application usage"),
                     icon: "preferences-system-parental-controls");
             plug = this;
         }
