@@ -7,23 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-27 16:28+0100\n"
+"POT-Creation-Date: 2015-12-21 12:29-0200\n"
 "PO-Revision-Date: 2015-09-03 23:37+0000\n"
 "Last-Translator: Bogdan Lisnenko <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-28 06:13+0000\n"
-"X-Generator: Launchpad (build 17833)\n"
-
-#: ../src/Widgets/UserList.vala:44
-msgid "My Account"
-msgstr ""
-
-#: ../src/Widgets/UserList.vala:48
-msgid "Other Accounts"
-msgstr ""
+"X-Launchpad-Export-Date: 2015-12-22 05:20+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 
 #: ../src/Widgets/GeneralBox.vala:53
 msgid "Allow this user to:"
@@ -53,6 +45,10 @@ msgstr ""
 msgid "Weekends"
 msgstr ""
 
+#: ../src/Widgets/AppChooser.vala:69
+msgid "Search Applications"
+msgstr ""
+
 #: ../src/Widgets/WeekSpinBox.vala:65
 msgid "From:"
 msgstr ""
@@ -63,22 +59,6 @@ msgstr ""
 
 #: ../src/Widgets/WeekSpinBox.vala:71
 msgid ":"
-msgstr ""
-
-#: ../src/Widgets/AppChooser.vala:69
-msgid "Search Applications"
-msgstr ""
-
-#: ../src/Widgets/AppsBox.vala:80
-msgid "Allow access to these apps with admin permission"
-msgstr ""
-
-#: ../src/Widgets/AppsBox.vala:111
-msgid "Add Prevented Apps…"
-msgstr ""
-
-#: ../src/Widgets/AppsBox.vala:117
-msgid "Remove Selected App"
 msgstr ""
 
 #: ../src/Widgets/ControlPage.vala:39
@@ -97,11 +77,31 @@ msgstr ""
 msgid "Administrator"
 msgstr ""
 
-#: ../src/Plug.vala:80
+#: ../src/Widgets/UserList.vala:44
+msgid "My Account"
+msgstr ""
+
+#: ../src/Widgets/UserList.vala:48
+msgid "Other Accounts"
+msgstr ""
+
+#: ../src/Widgets/AppsBox.vala:80
+msgid "Allow access to these apps with admin permission"
+msgstr ""
+
+#: ../src/Widgets/AppsBox.vala:111
+msgid "Add Prevented Apps…"
+msgstr ""
+
+#: ../src/Widgets/AppsBox.vala:117
+msgid "Remove Selected App"
+msgstr ""
+
+#: ../src/Plug.vala:83
 msgid "No users to edit"
 msgstr ""
 
-#: ../src/Plug.vala:80
+#: ../src/Plug.vala:83
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -109,48 +109,20 @@ msgid ""
 "in the User Accounts pane."
 msgstr ""
 
-#: ../src/Plug.vala:82
+#: ../src/Plug.vala:85
 msgid "Configure User Accounts"
 msgstr ""
 
-#: ../src/Plug.vala:84
+#: ../src/Plug.vala:87
 msgid "Open Users settings"
 msgstr ""
 
-#: ../src/Plug.vala:113
+#: ../src/Plug.vala:116
 msgid "Parental Control"
 msgstr ""
 
-#: ../src/Plug.vala:114
-msgid "Parental Control settings"
-msgstr ""
-
-#: ../src/daemon/Daemon.vala:183
-msgid "hour"
-msgstr ""
-
-#: ../src/daemon/Daemon.vala:185
-msgid "hours"
-msgstr ""
-
-#: ../src/daemon/Daemon.vala:189
-msgid "and"
-msgstr ""
-
-#: ../src/daemon/Daemon.vala:189 ../src/daemon/Daemon.vala:197
-msgid "minutes"
-msgstr ""
-
-#: ../src/daemon/Daemon.vala:195
-msgid "minute"
-msgstr ""
-
-#: ../src/daemon/Daemon.vala:201
-msgid "The computer will lock after %s."
-msgstr ""
-
-#: ../src/daemon/Daemon.vala:203
-msgid "Make sure to close all applications before the limit."
+#: ../src/Plug.vala:117
+msgid "Configure time limits and restrict application usage"
 msgstr ""
 
 #: ../src/daemon/AppLockDialog.vala:27
@@ -159,4 +131,45 @@ msgstr ""
 
 #: ../src/daemon/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
+msgstr ""
+
+#: ../src/daemon/Daemon.vala:191
+msgid "%ld hour"
+msgstr ""
+
+#: ../src/daemon/Daemon.vala:191
+msgid "%ld hours"
+msgstr ""
+
+#: ../src/daemon/Daemon.vala:194
+msgid "and"
+msgstr ""
+
+#: ../src/daemon/Daemon.vala:194
+msgid "minute"
+msgstr ""
+
+#: ../src/daemon/Daemon.vala:194
+msgid "minutes"
+msgstr ""
+
+#: ../src/daemon/Daemon.vala:198
+msgid "%ld minute"
+msgstr ""
+
+#: ../src/daemon/Daemon.vala:198
+msgid "%ld minutes"
+msgstr ""
+
+#: ../src/daemon/Daemon.vala:201
+msgid "The computer will lock after %s."
+msgstr ""
+
+#: ../src/daemon/Daemon.vala:203
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr ""
+
+#: ../src/daemon/Daemon.vala:206
+msgid "Time left"
 msgstr ""

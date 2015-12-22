@@ -7,23 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-10-27 16:28+0100\n"
-"PO-Revision-Date: 2015-10-30 09:39+0000\n"
-"Last-Translator: Djaler <djaler1@gmail.com>\n"
+"POT-Creation-Date: 2015-12-21 12:29-0200\n"
+"PO-Revision-Date: 2015-12-21 19:20+0000\n"
+"Last-Translator: Yuly Nesterov <crow@rikka.io>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-10-31 05:38+0000\n"
-"X-Generator: Launchpad (build 17838)\n"
-
-#: ../src/Widgets/UserList.vala:44
-msgid "My Account"
-msgstr "Моя учётная запись"
-
-#: ../src/Widgets/UserList.vala:48
-msgid "Other Accounts"
-msgstr "Другие учётные записи"
+"X-Launchpad-Export-Date: 2015-12-22 05:20+0000\n"
+"X-Generator: Launchpad (build 17865)\n"
 
 #: ../src/Widgets/GeneralBox.vala:53
 msgid "Allow this user to:"
@@ -53,6 +45,10 @@ msgstr "Будние дни"
 msgid "Weekends"
 msgstr "Выходные дни"
 
+#: ../src/Widgets/AppChooser.vala:69
+msgid "Search Applications"
+msgstr "Поиск приложений"
+
 #: ../src/Widgets/WeekSpinBox.vala:65
 msgid "From:"
 msgstr "C"
@@ -64,22 +60,6 @@ msgstr "До:"
 #: ../src/Widgets/WeekSpinBox.vala:71
 msgid ":"
 msgstr ":"
-
-#: ../src/Widgets/AppChooser.vala:69
-msgid "Search Applications"
-msgstr "Поиск приложений"
-
-#: ../src/Widgets/AppsBox.vala:80
-msgid "Allow access to these apps with admin permission"
-msgstr "Разрешить доступ к этим приложениям с правами администратора"
-
-#: ../src/Widgets/AppsBox.vala:111
-msgid "Add Prevented Apps…"
-msgstr "Добавить запрещённые приложения..."
-
-#: ../src/Widgets/AppsBox.vala:117
-msgid "Remove Selected App"
-msgstr "Удалить выбранное приложение"
 
 #: ../src/Widgets/ControlPage.vala:39
 msgid "General"
@@ -97,11 +77,31 @@ msgstr "Приложения"
 msgid "Administrator"
 msgstr "Администратор"
 
-#: ../src/Plug.vala:80
+#: ../src/Widgets/UserList.vala:44
+msgid "My Account"
+msgstr "Моя учётная запись"
+
+#: ../src/Widgets/UserList.vala:48
+msgid "Other Accounts"
+msgstr "Другие учётные записи"
+
+#: ../src/Widgets/AppsBox.vala:80
+msgid "Allow access to these apps with admin permission"
+msgstr "Разрешить доступ к этим приложениям с правами администратора"
+
+#: ../src/Widgets/AppsBox.vala:111
+msgid "Add Prevented Apps…"
+msgstr "Добавить запрещённые приложения..."
+
+#: ../src/Widgets/AppsBox.vala:117
+msgid "Remove Selected App"
+msgstr "Удалить выбранное приложение"
+
+#: ../src/Plug.vala:83
 msgid "No users to edit"
 msgstr "Нет пользователей для редактирования"
 
-#: ../src/Plug.vala:80
+#: ../src/Plug.vala:83
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -113,49 +113,21 @@ msgstr ""
 "Вы можете изменить тип учётной записи с «Администратора» на «Пользователя» в "
 "панели управления учётными записями."
 
-#: ../src/Plug.vala:82
+#: ../src/Plug.vala:85
 msgid "Configure User Accounts"
 msgstr "Настроить учётные записи"
 
-#: ../src/Plug.vala:84
+#: ../src/Plug.vala:87
 msgid "Open Users settings"
 msgstr "Открыть настройки пользователей"
 
-#: ../src/Plug.vala:113
+#: ../src/Plug.vala:116
 msgid "Parental Control"
 msgstr "Родительский контроль"
 
-#: ../src/Plug.vala:114
-msgid "Parental Control settings"
-msgstr "Настройки родительского контроля"
-
-#: ../src/daemon/Daemon.vala:183
-msgid "hour"
-msgstr "час"
-
-#: ../src/daemon/Daemon.vala:185
-msgid "hours"
-msgstr "часов"
-
-#: ../src/daemon/Daemon.vala:189
-msgid "and"
-msgstr "и"
-
-#: ../src/daemon/Daemon.vala:189 ../src/daemon/Daemon.vala:197
-msgid "minutes"
-msgstr "минут"
-
-#: ../src/daemon/Daemon.vala:195
-msgid "minute"
-msgstr "минута"
-
-#: ../src/daemon/Daemon.vala:201
-msgid "The computer will lock after %s."
-msgstr "Этот компьютер будет заблокирован через %s."
-
-#: ../src/daemon/Daemon.vala:203
-msgid "Make sure to close all applications before the limit."
-msgstr "Обязательно закройте все приложения до срабатывания ограничения."
+#: ../src/Plug.vala:117
+msgid "Configure time limits and restrict application usage"
+msgstr "Настройка ограничения времени и использования приложений"
 
 #: ../src/daemon/AppLockDialog.vala:27
 msgid "You cannot run this application"
@@ -164,3 +136,46 @@ msgstr "Вы не можете запустить это приложение"
 #: ../src/daemon/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "У вас нет разрешения на запуск этого приложения."
+
+#: ../src/daemon/Daemon.vala:191
+msgid "%ld hour"
+msgstr "%ld час"
+
+#: ../src/daemon/Daemon.vala:191
+msgid "%ld hours"
+msgstr "%ld часов"
+
+#: ../src/daemon/Daemon.vala:194
+msgid "and"
+msgstr "и"
+
+#: ../src/daemon/Daemon.vala:194
+msgid "minute"
+msgstr "минута"
+
+#: ../src/daemon/Daemon.vala:194
+msgid "minutes"
+msgstr "минут"
+
+#: ../src/daemon/Daemon.vala:198
+msgid "%ld minute"
+msgstr "%ld минута"
+
+#: ../src/daemon/Daemon.vala:198
+msgid "%ld minutes"
+msgstr "%ld минут"
+
+#: ../src/daemon/Daemon.vala:201
+msgid "The computer will lock after %s."
+msgstr "Этот компьютер будет заблокирован через %s."
+
+#: ../src/daemon/Daemon.vala:203
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr ""
+"Обязательно закройте все приложения, прежде чем ваш компьютер будет "
+"заблокирован."
+
+#: ../src/daemon/Daemon.vala:206
+msgid "Time left"
+msgstr "Оставшееся время"
