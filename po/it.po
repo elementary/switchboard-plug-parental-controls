@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-12-21 12:29-0200\n"
-"PO-Revision-Date: 2015-11-15 18:26+0000\n"
-"Last-Translator: Emanuele Tocco <mr.emanueletocco@gmail.com>\n"
+"PO-Revision-Date: 2015-12-23 19:44+0000\n"
+"Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-22 05:20+0000\n"
+"X-Launchpad-Export-Date: 2015-12-24 05:42+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 
 #: ../src/Widgets/GeneralBox.vala:53
@@ -128,7 +128,7 @@ msgstr "Filtro Famiglia"
 
 #: ../src/Plug.vala:117
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "Configura i limiti di tempo e limita l'utilizzo delle applicazioni"
 
 #: ../src/daemon/AppLockDialog.vala:27
 msgid "You cannot run this application"
@@ -140,11 +140,11 @@ msgstr "Non ti è permesso avviare quest'applicazione."
 
 #: ../src/daemon/Daemon.vala:191
 msgid "%ld hour"
-msgstr ""
+msgstr "%ld ora"
 
 #: ../src/daemon/Daemon.vala:191
 msgid "%ld hours"
-msgstr ""
+msgstr "%ld ore"
 
 #: ../src/daemon/Daemon.vala:194
 msgid "and"
@@ -160,11 +160,11 @@ msgstr "minuti"
 
 #: ../src/daemon/Daemon.vala:198
 msgid "%ld minute"
-msgstr ""
+msgstr "%ld minuto"
 
 #: ../src/daemon/Daemon.vala:198
 msgid "%ld minutes"
-msgstr ""
+msgstr "%ld minuti"
 
 #: ../src/daemon/Daemon.vala:201
 msgid "The computer will lock after %s."
@@ -174,7 +174,9 @@ msgstr "Il computer verrà bloccato dopo %s."
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
+"Assicurati di chiudere tutte le applicazioni prima che il computer venga "
+"bloccato."
 
 #: ../src/daemon/Daemon.vala:206
 msgid "Time left"
-msgstr ""
+msgstr "Tempo rimanente"

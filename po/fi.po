@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-12-21 12:29-0200\n"
-"PO-Revision-Date: 2015-10-29 10:49+0000\n"
+"PO-Revision-Date: 2015-12-23 08:14+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-22 05:20+0000\n"
+"X-Launchpad-Export-Date: 2015-12-24 05:42+0000\n"
 "X-Generator: Launchpad (build 17865)\n"
 
 #: ../src/Widgets/GeneralBox.vala:53
@@ -127,7 +127,7 @@ msgstr "Käytönvalvonta"
 
 #: ../src/Plug.vala:117
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "Hallitse aikarajoituksia ja rajoita sovellusten käyttöä"
 
 #: ../src/daemon/AppLockDialog.vala:27
 msgid "You cannot run this application"
@@ -139,11 +139,11 @@ msgstr "Sinulla ei ole oikeutta suorittaa tätä sovellusta."
 
 #: ../src/daemon/Daemon.vala:191
 msgid "%ld hour"
-msgstr ""
+msgstr "%ld tunti"
 
 #: ../src/daemon/Daemon.vala:191
 msgid "%ld hours"
-msgstr ""
+msgstr "%ld tuntia"
 
 #: ../src/daemon/Daemon.vala:194
 msgid "and"
@@ -159,11 +159,11 @@ msgstr "minuuttia"
 
 #: ../src/daemon/Daemon.vala:198
 msgid "%ld minute"
-msgstr ""
+msgstr "%ld minuutti"
 
 #: ../src/daemon/Daemon.vala:198
 msgid "%ld minutes"
-msgstr ""
+msgstr "%ld minuuttia"
 
 #: ../src/daemon/Daemon.vala:201
 msgid "The computer will lock after %s."
@@ -173,7 +173,8 @@ msgstr "Tämän tietokoneen lukkiutumiseen on aikaa %s."
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
+"Varmista, että suljet kaikki sovellukset, ennen kuin tietokone lukitaan."
 
 #: ../src/daemon/Daemon.vala:206
 msgid "Time left"
-msgstr ""
+msgstr "Aikaa jäljellä"
