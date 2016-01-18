@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2015-12-21 12:29-0200\n"
-"PO-Revision-Date: 2016-01-12 11:26+0000\n"
-"Last-Translator: Lukáš Papík <stereo839@gmail.com>\n"
+"PO-Revision-Date: 2016-01-17 21:47+0000\n"
+"Last-Translator: Ľubomír Hlavko <5lubo555@azet.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-13 05:59+0000\n"
+"X-Launchpad-Export-Date: 2016-01-18 05:56+0000\n"
 "X-Generator: Launchpad (build 17886)\n"
 
 #: ../src/Widgets/GeneralBox.vala:53
@@ -31,11 +31,11 @@ msgstr "Vo všedné dni a víkendy"
 
 #: ../src/Widgets/GeneralBox.vala:75
 msgid "Only on weekdays"
-msgstr "Iba všedné dni"
+msgstr "Iba vo všedné dni"
 
 #: ../src/Widgets/GeneralBox.vala:76
 msgid "Only on weekends"
-msgstr "Iba víkedny"
+msgstr "Iba cez víkendy"
 
 #: ../src/Widgets/GeneralBox.vala:92
 msgid "Weekdays"
@@ -55,7 +55,7 @@ msgstr "Od:"
 
 #: ../src/Widgets/WeekSpinBox.vala:69
 msgid "To:"
-msgstr "Pre:"
+msgstr "Do:"
 
 #: ../src/Widgets/WeekSpinBox.vala:71
 msgid ":"
@@ -91,7 +91,7 @@ msgstr "Povoliť prístup k týmto aplikáciam s administrátorskými právami"
 
 #: ../src/Widgets/AppsBox.vala:111
 msgid "Add Prevented Apps…"
-msgstr "Pridať obmedzené aplikácie"
+msgstr "Pridať obmedzené aplikácie..."
 
 #: ../src/Widgets/AppsBox.vala:117
 msgid "Remove Selected App"
@@ -99,7 +99,7 @@ msgstr "Odstrániť vybranú aplikáciu"
 
 #: ../src/Plug.vala:83
 msgid "No users to edit"
-msgstr "Žiadny užívatelia na úpravu"
+msgstr "Žiadny používatelia na úpravu"
 
 #: ../src/Plug.vala:83
 msgid ""
@@ -108,22 +108,22 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
-"Rodičovskú kontrolu je možné použiť iba na užívateľské účty, ktoré nemajú "
+"Rodičovskú kontrolu je možné použiť iba na používateľské účty, ktoré nemajú "
 "oprávnenie správcu.\n"
-"Môžete zmeniť typ účtu užívateľa zo \"správcu\" na \"Standard\" v paneli "
+"Môžete zmeniť typ účtu užívateľa zo \"Správcu\" na \"Štandardný\" v paneli "
 "Používateľských Účtov."
 
 #: ../src/Plug.vala:85
 msgid "Configure User Accounts"
-msgstr "Konfigurácia užívateľských účtov"
+msgstr "Konfigurácia používateľských účtov"
 
 #: ../src/Plug.vala:87
 msgid "Open Users settings"
-msgstr "Otvoriť nastavenia uživateľa"
+msgstr "Otvoriť nastavenia používateľa"
 
 #: ../src/Plug.vala:116
 msgid "Parental Control"
-msgstr "Rodičovská Kontrola"
+msgstr "Rodičovská kontrola"
 
 #: ../src/Plug.vala:117
 msgid "Configure time limits and restrict application usage"
@@ -135,7 +135,7 @@ msgstr "Nemôžete spustiť tuto aplikáciu"
 
 #: ../src/daemon/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
-msgstr "Nieste oprávnený spustiť túto aplikáciu."
+msgstr "Nie ste oprávnený spustiť túto aplikáciu."
 
 #: ../src/daemon/Daemon.vala:191
 msgid "%ld hour"
@@ -173,7 +173,8 @@ msgstr "Počítač sa zamkne  po %s."
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
-"Uistite sa že ste zavreli všetke aplikácie než sa váš počítač zamkne."
+"Uistite sa že ste zatvorili všetky aplikácie predtým než sa váš počítač "
+"zamkne."
 
 #: ../src/daemon/Daemon.vala:206
 msgid "Time left"
