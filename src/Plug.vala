@@ -113,6 +113,8 @@ namespace PC {
                 return;
             }
 
+            list.fill ();
+
             usermanager.user_added.connect (on_user_added);
             usermanager.user_removed.connect (on_user_removed);            
             update_ui_state ();

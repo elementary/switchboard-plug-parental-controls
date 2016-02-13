@@ -55,12 +55,14 @@ namespace PC.Widgets {
                 items.append (useritem);
                 pos++;
             }*/
+        }
 
+        public void fill () {
             foreach (var user in Utils.get_usermanager ().list_users ()) {
                 add_user (user);
             }
 
-            select_first ();
+            select_first ();            
         }
 
         public void remove_user (Act.User user) {

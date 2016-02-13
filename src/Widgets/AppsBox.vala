@@ -29,6 +29,7 @@ namespace PC.Widgets {
         private AppChooser apps_popover;
         private Gtk.CheckButton admin_check_btn;
         private Gtk.ToolButton remove_button;
+        private Gtk.ToolButton clear_button;
 
         protected class AppEntry : Gtk.ListBoxRow {
             public signal void deleted ();
@@ -114,23 +115,28 @@ namespace PC.Widgets {
 
             var add_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON), null);
             add_button.tooltip_text = _("Add Prevented Apps…");
-            add_button.clicked.connect (() => {
-                apps_popover.show_all ();
-            });
+            add_button.clicked.connect (on_add_button_clicked);
 
             remove_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON), null);
             remove_button.tooltip_text = _("Remove Selected App");
             remove_button.sensitive = false;
-            remove_button.clicked.connect (() => {
-                var row = (AppEntry) list_box.get_selected_row ();
-                row.deleted ();
-            });
+            remove_button.clicked.connect (on_remove_button_clicked);
+
+            var expander = new Gtk.ToolItem ();
+            expander.set_expand (true);
+            expander.visible_vertical = false;
+
+            clear_button = new Gtk.ToolButton (null, "Clear");
+            clear_button.sensitive = false;
+            clear_button.clicked.connect (on_clear_button_clicked);
 
             apps_popover = new AppChooser (add_button);
             apps_popover.app_chosen.connect (load_info);
 
             toolbar.add (add_button);
             toolbar.add (remove_button);
+            toolbar.add (expander);
+            toolbar.add (clear_button);
 
             main_box.add (scrolled);
             main_box.add (toolbar);
@@ -139,6 +145,24 @@ namespace PC.Widgets {
             add (admin_check_btn);
 
             load_existing ();
+        }
+
+        private void on_add_button_clicked () {
+            apps_popover.show_all ();
+        }
+
+        private void on_remove_button_clicked () {
+            var entry = (AppEntry) list_box.get_selected_row ();
+            entry.deleted ();
+        }
+
+        private void on_clear_button_clicked () {
+            foreach (var entry in entries) {
+                Idle.add (() => {
+                    entry.deleted ();
+                    return false;
+                });
+            }
         }
 
         private void load_info (AppInfo info) {
@@ -164,13 +188,14 @@ namespace PC.Widgets {
         }
 
         private void on_deleted (AppEntry row) {
-            row.destroy ();
             entries.remove (row);
+            row.destroy ();
             on_changed ();
         }
 
         private void on_changed () {
             remove_button.sensitive = (list_box.get_selected_row () != null);
+            clear_button.sensitive = (entries.length () > 0);
 
             if (Utils.get_permission ().get_allowed ()) {
                 var key_file = new KeyFile ();
