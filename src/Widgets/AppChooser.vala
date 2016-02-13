@@ -38,7 +38,12 @@ namespace PC.Widgets {
                 image.pixel_size = 32;
                 add (image);
 
-                string markup = Utils.create_markup (info.get_display_name (), info.get_description ());
+                string? description = info.get_description ();
+                if (description == null) {
+                    description = "";
+                }
+
+                string markup = Utils.create_markup (info.get_display_name (), description);
                 var label = new Gtk.Label (markup);
                 label.use_markup = true;
                 label.halign = Gtk.Align.START;

@@ -26,14 +26,12 @@ namespace PC.Widgets {
     public class UserListBox : Gtk.ListBox {
         private Gtk.Label my_account_label;
         private Gtk.Label other_accounts_label;
-        private List<Act.User> users;
+        private List<UserItem> items;
 
         public UserListBox () { 
-            users = new List<Act.User> ();
+            items = new List<UserItem> ();
 
             selection_mode = Gtk.SelectionMode.SINGLE;
-            Utils.get_usermanager ().user_added.connect (update_ui);
-            Utils.get_usermanager ().user_removed.connect (update_ui);
             this.set_header_func (update_headers);
 
             build_ui ();
@@ -48,47 +46,65 @@ namespace PC.Widgets {
             other_accounts_label = new Gtk.Label (_("Other Accounts"));
             other_accounts_label.halign = Gtk.Align.START;
             other_accounts_label.get_style_context ().add_class ("h4");
-        }
 
-        public void update_ui () {
-            List<weak Gtk.Widget> userlist_items = get_children ();
-
-            foreach (unowned Gtk.Widget useritem in userlist_items) {
-                users.remove (((UserItem) useritem).user);
-                this.remove (useritem);
-            }
-
-            int pos = 0;
-            if (Utils.get_current_user ().get_account_type () != Act.UserAccountType.ADMINISTRATOR) {
-                var current_page = new ControlPage (Utils.get_current_user ());
-                insert (new UserItem (current_page), 0);
-                users.append (Utils.get_current_user ());
+            /*if (Utils.get_current_user ().get_account_type () != Act.UserAccountType.ADMINISTRATOR) {
+                var page = new ControlPage (Utils.get_current_user ());
+                var useritem = new UserItem (page);
+            
+                insert (useritem, 0);
+                items.append (useritem);
                 pos++;
-            }
+            }*/
 
             foreach (var user in Utils.get_usermanager ().list_users ()) {
-                if (user.get_account_type () != Act.UserAccountType.ADMINISTRATOR && Utils.get_current_user () != user) {
-                    var page = new ControlPage (user);
-                    insert (new UserItem (page), pos);
-                    users.append (user);
-                    pos++;
-                }
+                add_user (user);
             }
 
-            if (get_selected_row () == null) {
-                this.get_row_at_index (0).activate ();
+            select_first ();
+        }
+
+        public void remove_user (Act.User user) {
+            foreach (var item in items) {
+                if (item.user == user) {
+                    item.page.destroy ();
+                    item.destroy ();
+                    items.remove (item);
+                }
+            }
+        }
+
+        public void add_user (Act.User user) {
+            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
+                return;
+            }
+
+            bool had_users = get_has_users ();
+
+            var page = new ControlPage (user);
+            var useritem = new UserItem (page);
+
+            items.append (useritem);
+            add (useritem);
+
+            if (!had_users) {
+                select_first ();
             }
 
             show_all ();
         }
 
+        private void select_first () {
+            if (get_selected_row () == null) {
+                this.get_row_at_index (0).activate ();
+            }
+        }
+
         public bool get_has_users () {
-            update_ui ();
-            return (users.length () > 0);
+            return (items.length () > 0);
         }
 
         public void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
-            if (((UserItem) row).user == Utils.get_current_user ()) {
+            if (row is UserItem && ((UserItem) row).user == Utils.get_current_user ()) {
                 row.set_header (my_account_label);
             } else {
                 row.set_header (null);

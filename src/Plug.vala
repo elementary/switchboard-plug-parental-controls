@@ -24,12 +24,19 @@ namespace PC {
     public static Plug plug;
 
     public class MainBox : Gtk.Box {
+        private Gtk.Stack stack;
         private Gtk.Stack content;
         private Widgets.UserListBox list;
         private Gtk.ScrolledWindow scrolled_window;
+        private Gtk.Grid main_grid;
+        private Granite.Widgets.AlertView alert;
+
+        private Act.UserManager usermanager;
 
         public MainBox () {
-            var stack = new Gtk.Stack ();
+            usermanager = Utils.get_usermanager ();
+
+            stack = new Gtk.Stack ();
 
             var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
             paned.width_request = 250;
@@ -76,11 +83,11 @@ namespace PC {
                 }
             });
 
-            var main_grid = new Gtk.Grid ();
+            main_grid = new Gtk.Grid ();
             main_grid.attach (infobar, 0, 1, 1, 1);
             main_grid.attach (paned, 0, 2, 1, 1);
 
-            var alert = new Granite.Widgets.AlertView (_("No users to edit"), _("Parental Controls can only be applied to user accounts that don't have administrative permissions.\nYou can change a user's account type from \"Administrator\" to \"Standard\" in the User Accounts pane."), "preferences-system-parental-controls");
+            alert = new Granite.Widgets.AlertView (_("No users to edit"), _("Parental Controls can only be applied to user accounts that don't have administrative permissions.\nYou can change a user's account type from \"Administrator\" to \"Standard\" in the User Accounts pane."), "preferences-system-parental-controls");
 
             var link_button = new Gtk.LinkButton.with_label ("", _("Configure User Accounts"));
             link_button.halign = Gtk.Align.START;
@@ -95,16 +102,38 @@ namespace PC {
             stack.add (main_grid);
             stack.add (alert);
 
-            Utils.get_usermanager ().notify["is-loaded"].connect (() => {
-                if (list.get_has_users ()) {
-                    stack.visible_child = main_grid;
-                } else {
-                    stack.visible_child = alert;
-                }
-            });
+            usermanager.notify["is-loaded"].connect (on_usermanager_loaded);
 
             this.add (stack);
             this.show_all ();
+        }
+
+        private void on_usermanager_loaded () {
+            if (!usermanager.is_loaded) {
+                return;
+            }
+
+            usermanager.user_added.connect (on_user_added);
+            usermanager.user_removed.connect (on_user_removed);            
+            update_ui_state ();
+        }
+
+        private void update_ui_state () {
+            if (list.get_has_users ()) {
+                stack.visible_child = main_grid;
+            } else {
+                stack.visible_child = alert;
+            }    
+        }
+
+        private void on_user_added (Act.User user) {
+            list.add_user (user);
+            update_ui_state ();
+        }
+
+        private void on_user_removed (Act.User user) {
+            list.remove_user (user);
+            update_ui_state ();
         }
     }
 
