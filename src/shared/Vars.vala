@@ -20,16 +20,14 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
  
-namespace PC {
-    public class Vars : Object {
-        public static const string PLANK_CONF_DIR = "/.config/plank/dock1/settings";
-        public static const string APP_LOCK_CONF_DIR = "/.config/app-lock.conf";
-        public static const string APP_LOCK_GROUP = "AppLock";
-        public static const string APP_LOCK_TYPE = "Type";
-        public static const string APP_LOCK_TARGETS = "Targets";
-        public static const string APP_LOCK_ADMIN = "Admin";
-        public static const string ALL_ID = "all";
-        public static const string WEEKDAYS_ID = "weekdays";
-        public static const string WEEKENDS_ID = "weekends";   
-    }
+namespace PC.Vars {
+    public const string PLANK_CONF_DIR = "/.config/plank/dock1/settings";
+    public const string APP_LOCK_CONF_DIR = "/.config/app-lock.conf";
+    public const string APP_LOCK_GROUP = "AppLock";
+    public const string APP_LOCK_TYPE = "Type";
+    public const string APP_LOCK_TARGETS = "Targets";
+    public const string APP_LOCK_ADMIN = "Admin";
+    public const string ALL_ID = "all";
+    public const string WEEKDAYS_ID = "weekdays";
+    public const string WEEKENDS_ID = "weekends";   
 }

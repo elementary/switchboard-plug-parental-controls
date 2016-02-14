@@ -27,79 +27,89 @@ public interface Seat : Object {
 }
 
 namespace PC.Daemon {
-    public class App : Gtk.Application {
+    public class Daemon : Application {
+        private MainLoop loop;
+
         public static int main (string[] args) {
             Gtk.init (ref args);
-            var app = new App ();
+            var app = new Daemon ();
             return app.run (args);
         }
 
         public override void activate () {
-            var loop = new MainLoop ();
+            loop = new MainLoop ();
+            PC.Utils.get_usermanager ().notify["is-loaded"].connect (on_usermanager_loaded);
+            loop.run ();
+        }
 
-            PC.Utils.get_usermanager ().notify["is-loaded"].connect (() => {
-                var current_user = Utils.get_current_user ();
-                var watcher = new AppLock.ProcessWatcher (current_user);
-                if (watcher == null || !watcher.update ()) {
-                    watcher.unref ();
-                }
+        private void on_usermanager_loaded () {
+            if (!PC.Utils.get_usermanager ().is_loaded) {
+                return;
+            }
 
-                var restricts = PAMControl.get_all_restrictions ();
-                bool quit = true;
-                foreach (var restrict in restricts) {
-                    if (restrict.user == current_user.get_user_name ()) {
-                        quit = false;
+            var current_user = Utils.get_current_user ();
+            var watcher = new AppLock.ProcessWatcher (current_user);
+            if (watcher.valid) {
+                watcher.start ();
+            }
 
-                        var current_date = new DateTime.now_local ();
-                        string minute = current_date.get_minute ().to_string ();
-                        if (int.parse (minute) < 10) {
-                            minute = "0" + minute;
-                        }
+            var restricts = PAMControl.get_all_restrictions ();
+            bool quit = true;
+            foreach (var restrict in restricts) {
+                if (restrict.user == current_user.get_user_name ()) {
+                    quit = false;
 
-                        switch (restrict.day_id) {
-                            case Vars.WEEKDAYS_ID:
-                                if (current_date.get_day_of_week () < 6) {
-                                    int estimated_time = int.parse (restrict.to);
-                                    var span = get_difference_span (estimated_time, current_date);
-                                    start_loop ((int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * 60);
-                                }
+                    var current_date = new DateTime.now_local ();
+                    string minute = current_date.get_minute ().to_string ();
+                    if (int.parse (minute) < 10) {
+                        minute = "0" + minute;
+                    }
 
-                                break;
-                            case Vars.WEEKENDS_ID:
-                                if (current_date.get_day_of_week () >= 6) {
-                                    int estimated_time = int.parse (restrict.to);
-                                    var span = get_difference_span (estimated_time, current_date);
-                                    start_loop ((int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * 60);
-                                }
-
-                                break;
-                            case Vars.ALL_ID:
-                                int estimated_time = 2400;
-                                if (current_date.get_day_of_week () < 6) {
-                                    estimated_time = int.parse (restrict.weekday_hours.split ("-")[1]);
-                                } else if (current_date.get_day_of_week () >= 6) {
-                                    estimated_time = int.parse (restrict.weekend_hours.split ("-")[1]);
-                                }
-                                
+                    switch (restrict.day_id) {
+                        case Vars.WEEKDAYS_ID:
+                            if (current_date.get_day_of_week () < 6) {
+                                int estimated_time = int.parse (restrict.to);
                                 var span = get_difference_span (estimated_time, current_date);
-                                int minutes = (int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * 60;
-                                if (minutes > 0) {
-                                    start_loop (minutes);
-                                } else {
-                                    this.lock ();
-                                    loop.quit ();
-                                }
+                                start_loop ((int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * 60);
+                            }
 
-                                break;
-                            default:
+                            break;
+                        case Vars.WEEKENDS_ID:
+                            if (current_date.get_day_of_week () >= 6) {
+                                int estimated_time = int.parse (restrict.to);
+                                var span = get_difference_span (estimated_time, current_date);
+                                start_loop ((int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * 60);
+                            }
+
+                            break;
+                        case Vars.ALL_ID:
+                            int estimated_time = 2400;
+                            if (current_date.get_day_of_week () < 6) {
+                                estimated_time = int.parse (restrict.weekday_hours.split ("-")[1]);
+                            } else if (current_date.get_day_of_week () >= 6) {
+                                estimated_time = int.parse (restrict.weekend_hours.split ("-")[1]);
+                            }
+                            
+                            var span = get_difference_span (estimated_time, current_date);
+                            int minutes = (int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * 60;
+                            if (minutes > 0) {
+                                start_loop (minutes);
+                            } else {
+                                this.lock ();
                                 loop.quit ();
-                                break;
-                        }
+                            }
+
+                            break;
+                        default:
+                            loop.quit ();
+                            break;
                     }
                 }
-            });
+            }  
 
-            loop.run ();
+            if (quit) {
+                loop.quit ();
+            }        
         }
 
         private TimeSpan get_difference_span (int estimated_time, DateTime current_date) {
@@ -177,8 +187,8 @@ namespace PC.Daemon {
                 seat_path = "/org/freedesktop/DisplayManager/Seat0";
             }
 
-            Seat? seat = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.DisplayManager", seat_path); 
             try {
+                Seat? seat = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.DisplayManager", seat_path); 
                 seat.switch_to_greeter ();
             } catch (Error e) {
                 warning ("%s\n", e.message);

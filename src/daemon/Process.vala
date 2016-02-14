@@ -27,34 +27,10 @@ namespace PC.Daemon.AppLock {
 
         public Process (int pid) {
             this.pid = pid;
-            update ();
-        }
-
-        public int get_pid () {
-            return pid;
-        }
-
-        public string get_command () {
-            return command;
-        }
-
-        public bool exists () {
-            return update ();
-        }
-
-        public void kill () {
-            Posix.kill (pid, Posix.SIGINT);
-        }
-
-        private bool update () {
-            if (!File.new_for_path ("/proc/%d/stat".printf (pid)).query_exists ()) {
-                return false;
-            }
 
             var cmd_file = File.new_for_path ("/proc/%d/cmdline".printf (pid));
             if (!cmd_file.query_exists ()) {
                 command = "";
-                return true;
             }
 
             try {
@@ -64,7 +40,6 @@ namespace PC.Daemon.AppLock {
 
                 if (size <= 0) {
                     command = "";
-                    return true;
                 }
 
                 for (int pos = 0; pos < size; pos++) {
@@ -77,8 +52,14 @@ namespace PC.Daemon.AppLock {
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
+        }
 
-            return true;
+        public string get_command () {
+            return command;
+        }
+
+        public void kill () {
+            Posix.kill (pid, Posix.SIGINT);
         }
     }
 }

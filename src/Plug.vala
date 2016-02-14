@@ -116,6 +116,7 @@ namespace PC {
             list.fill ();
 
             usermanager.user_added.connect (on_user_added);
+            usermanager.user_changed.connect (on_user_changed);
             usermanager.user_removed.connect (on_user_removed);            
             update_ui_state ();
         }
@@ -133,6 +134,11 @@ namespace PC {
             update_ui_state ();
         }
 
+        private void on_user_changed (Act.User user) {
+            list.update_user (user);
+            update_ui_state ();
+        }
+
         private void on_user_removed (Act.User user) {
             list.remove_user (user);
             update_ui_state ();
@@ -140,7 +146,8 @@ namespace PC {
     }
 
     public class Plug : Switchboard.Plug {
-        MainBox? main_box = null;
+        private MainBox? main_box = null;
+
         public Plug () {
             Object (category: Category.SYSTEM,
                     code_name: Build.PLUGCODENAME,

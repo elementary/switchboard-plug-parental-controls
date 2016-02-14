@@ -1,4 +1,13 @@
-vala_precompile (VALA_C parental-control-cli
+find_package (PkgConfig)
+
+pkg_check_modules (CLI_DEPS REQUIRED glib-2.0 gio-2.0 polkit-gobject-1 accountsservice)
+add_definitions (${CLI_DEPS_CFLAGS})
+link_directories (${CLI_DEPS_LIBRARY_DIRS})
+
+set (DAEMON_EXEC_NAME pantheon-parental-controls-daemon)
+set (EXEC_MONITOR_NAME pantheon-exec-monitor)
+
+vala_precompile (VALA_C ${DAEMON_EXEC_NAME}
     Daemon.vala
     ProcessWatcher.vala
     Process.vala
@@ -10,16 +19,20 @@ PACKAGES
     posix
     accountsservice
     polkit-gobject-1
-    granite
     gtk+-3.0
     gio-2.0
+    exec-monitor
 OPTIONS
-    --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../../vapi/
-    --thread  
+    --vapidir=${CMAKE_SOURCE_DIR}/vapi/
+    --thread
 )
 
-add_executable (parental-control-daemon ${VALA_C})
-target_link_libraries (parental-control-daemon ${DEPS_LIBRARIES}) 
+include_directories (${CMAKE_SOURCE_DIR}/lib/)
+add_library (${EXEC_MONITOR_NAME} SHARED ${CMAKE_SOURCE_DIR}/lib/exec-monitor.c)
+
+add_executable (${DAEMON_EXEC_NAME} ${VALA_C})
+target_link_libraries (${DAEMON_EXEC_NAME} ${DEPS_LIBRARIES} ${EXEC_MONITOR_NAME}) 
 
 # Installation
-install (TARGETS parental-control-daemon RUNTIME DESTINATION bin)
+install (TARGETS ${DAEMON_EXEC_NAME} RUNTIME DESTINATION bin)
+install (TARGETS ${EXEC_MONITOR_NAME} DESTINATION ${CMAKE_INSTALL_LIBDIR})

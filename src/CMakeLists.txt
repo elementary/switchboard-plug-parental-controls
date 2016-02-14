@@ -34,13 +34,9 @@ PACKAGES
     switchboard-2.0
     granite
 OPTIONS
-    --vapidir=${CMAKE_CURRENT_SOURCE_DIR}/../vapi/
+    --vapidir=${CMAKE_SOURCE_DIR}/vapi/
     --thread
 )
-
-configure_file (${CMAKE_SOURCE_DIR}/data/org.pantheon.switchboard.parental-controls.policy.cmake ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.parental-controls.policy)
-install (FILES ${CMAKE_BINARY_DIR}/data/org.pantheon.switchboard.parental-controls.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
-install (FILES ${CMAKE_SOURCE_DIR}/data/parental-control.desktop DESTINATION /etc/xdg/autostart)
 
 add_subdirectory (cli)
 add_subdirectory (daemon)

@@ -22,85 +22,60 @@
 
 namespace PC.Daemon.AppLock {
     public class ProcessWatcher : Object {
-        private List<Process> process_list;
         private Act.User user;
-
-        // Represents current running pids that were unlocked by admin permission
-        private Gee.ArrayList<Pid> locked_pids;
-        private File proc_dir;
 
         // Config info
         private string[] targets = {};
         private bool admin = false;
 
+        // Allowed pids
+        private List<int> allowed_pids;
+
         // If ProcessWatcher needs to watch specific user
-        private bool valid = false;
+        public bool valid = true;
 
         public ProcessWatcher (Act.User _user) {
             this.user = _user;
-            process_list = new List<Process> ();
-            locked_pids = new Gee.ArrayList<Pid> ();
+            this.allowed_pids = new List<Pid> ();
 
-            if (user != null) {
-                string lock_path = user.get_home_dir () + Vars.APP_LOCK_CONF_DIR;
-                if (FileUtils.test (lock_path, FileTest.EXISTS)) {
-                    var key_file = new KeyFile ();
-                    try {
-                        key_file.load_from_file (Utils.build_app_lock_path (user), 0);
-
-                        targets = key_file.get_string_list (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_TARGETS);
-                        admin = key_file.get_boolean (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_ADMIN);
-                    } catch (FileError e) {
-                        warning ("%s\n", e.message);
-                        return;
-                    } catch (Error e) {
-                        warning ("%s\n", e.message);
-                        return;
-                    }
-
-                    valid = true;
-                    proc_dir = File.new_for_path ("/proc/");
-                    Timeout.add (1000, update);
-                }
+            if (user == null) {
+                valid = false;
+                return;
             }
-        }
 
-        public bool update () {
-            if (valid) {
+            string lock_path = user.get_home_dir () + Vars.APP_LOCK_CONF_DIR;
+            if (FileUtils.test (lock_path, FileTest.EXISTS)) {
+                var key_file = new KeyFile ();
                 try {
-                    var dir_enumerator = proc_dir.enumerate_children ("standard::*", 0);
+                    key_file.load_from_file (Utils.build_app_lock_path (user), 0);
 
-                    FileInfo info;
-
-                    while ((info = dir_enumerator.next_file ()) != null) {
-                        int pid = 0;
-
-                        if ((info.get_file_type () == FileType.DIRECTORY)
-                            && ((pid = int.parse (info.get_name ())) != 0)) {
-                            bool has_pid = false;
-                            foreach (var process in process_list) {
-                                if (process.get_pid () == pid) {
-                                    has_pid = true;
-                                    break;
-                                }
-                            }
-
-                            if (!has_pid && !locked_pids.contains (pid)) {
-                                process_pid (pid);
-                            }
-                        }
-                    }
+                    targets = key_file.get_string_list (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_TARGETS);
+                    admin = key_file.get_boolean (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_ADMIN);
+                } catch (FileError e) {
+                    warning ("%s\n", e.message);
                 } catch (Error e) {
                     warning ("%s\n", e.message);
                 }
-            }
+            }        
+        }
 
-            return valid;
+        public void start () {
+            var exec_monitor = new ExecMonitor ();
+            exec_monitor.pid_exec.connect (process_pid);
+
+            Idle.add (() => {
+                exec_monitor.start ();
+                return false;
+            });    
         }
 
         private void process_pid (int pid) {
+            if (allowed_pids.find ((Pid)pid) != null) {
+                allowed_pids.remove (pid);
+                return;
+            }
+
             var process = new Process (pid);
-            process_list.append (process);
 
             if (process.get_command () == "") {
                 return;
@@ -116,55 +91,60 @@ namespace PC.Daemon.AppLock {
             if (executable != null && executable != "") {
                 if (executable in targets) {
                     process.kill ();
-                    process_list.remove (process);
 
                     if (admin) {
                         try {
-                            if (Utils.get_permission ().get_can_release ()) {
-                                Utils.get_permission ().release ();
+                            var permission = Utils.get_permission ();
+                            if (permission.get_can_release ()) {
+                                permission.release ();
                             }
 
                             Utils.permission = null;
-                            if (Utils.get_permission ().get_can_acquire ()) {
-                                Utils.get_permission ().acquire_async.begin ();
+                            permission = Utils.get_permission ();
+                            if (permission.get_can_acquire ()) {
+                                permission.acquire_async.begin ();
                             }
 
-                            Utils.get_permission ().notify["allowed"].connect (() => {
-                                if (Utils.get_permission ().get_allowed ()) {
-                                    try {
-                                        string[] spawn_env = Environ.get ();
-                                        Pid child_pid;
-
-                                        GLib.Process.spawn_async ("/",
-                                                                args,
-                                                                spawn_env,
-                                                                SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
-                                                                null,
-                                                                out child_pid);
-                                        locked_pids.add (child_pid);
-
-                                        ChildWatch.add (child_pid, (pid, status) => {
-                                            locked_pids.remove (pid);
-                                            GLib.Process.close_pid (pid);
-                                        });
-                                    } catch (SpawnError e) {
-                                        warning ("%s\n", e.message);
-                                    }
-                                }
+                            permission.notify["allowed"].connect (() => {
+                                process_permission (permission, args);
+                                return;
                             });
                         } catch (Error e) {
                             warning ("%s\n", e.message);
                         }
                     } else {
-                        var lock_dialog = new AppLockDialog ();
-                        lock_dialog.response.connect (() => {
-                            lock_dialog.destroy ();
-                        });
-
-                        lock_dialog.show_all ();
+                        show_app_lock_dialog ();
                     }
                 }
             }
+        }
+
+        private void process_permission (Polkit.Permission permission, string[] args) {
+            if (permission.get_allowed ()) {
+                try {
+                    string[] spawn_env = Environ.get ();
+                    Pid child_pid;
+
+                    GLib.Process.spawn_async ("/",
+                                            args,
+                                            spawn_env,
+                                            SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
+                                            null,
+                                            out child_pid);
+                    allowed_pids.append ((int)child_pid);
+                } catch (SpawnError e) {
+                    warning ("%s\n", e.message);
+                }
+            }
+        }
+
+        private void show_app_lock_dialog () {
+            var lock_dialog = new AppLockDialog ();
+            lock_dialog.response.connect (() => {
+                lock_dialog.destroy ();
+            });
+
+            lock_dialog.show_all ();            
         }
     }
 }

@@ -46,15 +46,6 @@ namespace PC.Widgets {
             other_accounts_label = new Gtk.Label (_("Other Accounts"));
             other_accounts_label.halign = Gtk.Align.START;
             other_accounts_label.get_style_context ().add_class ("h4");
-
-            /*if (Utils.get_current_user ().get_account_type () != Act.UserAccountType.ADMINISTRATOR) {
-                var page = new ControlPage (Utils.get_current_user ());
-                var useritem = new UserItem (page);
-            
-                insert (useritem, 0);
-                items.append (useritem);
-                pos++;
-            }*/
         }
 
         public void fill () {
@@ -65,18 +56,9 @@ namespace PC.Widgets {
             select_first ();            
         }
 
-        public void remove_user (Act.User user) {
-            foreach (var item in items) {
-                if (item.user == user) {
-                    item.page.destroy ();
-                    item.destroy ();
-                    items.remove (item);
-                }
-            }
-        }
-
         public void add_user (Act.User user) {
-            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
+            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR
+                || has_user (user)) {
                 return;
             }
 
@@ -93,6 +75,39 @@ namespace PC.Widgets {
             }
 
             show_all ();
+        }
+
+        public void update_user (Act.User user) {
+            foreach (var item in items) {
+                if (item.user == user) {
+                    item.update_ui ();
+                    if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
+                        remove_user (user);
+                    } else {
+                        add_user (user);
+                    }
+                }
+            }            
+        }
+
+        private bool has_user (Act.User user) {
+            foreach (var item in items) {
+                if (item.user == user) {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        public void remove_user (Act.User user) {
+            foreach (var item in items) {
+                if (item.user == user) {
+                    item.page.destroy ();
+                    item.destroy ();
+                    items.remove (item);
+                }
+            }
         }
 
         private void select_first () {

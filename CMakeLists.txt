@@ -42,7 +42,11 @@ set (CPACK_SOURCE_IGNORE_FILES "/build/;/.bzr/;/.bzrignore;~$;${CPACK_SOURCE_IGN
 include (CPack)
 add_custom_target (dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
 
+# Comment this out to enable C compiler warnings
+add_definitions (-w)
+
 # Traslation stuff
 add_subdirectory (po)
 
+add_subdirectory (data)
 add_subdirectory (src)
