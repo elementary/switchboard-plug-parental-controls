@@ -54,12 +54,12 @@ namespace PC.Widgets {
             main_label.margin_end = 12;
             allow_box.add (main_label);
 
-            dock_btn = new Gtk.CheckButton.with_label ("Modify the dock");
+            dock_btn = new Gtk.CheckButton.with_label (_("Modify the dock"));
             dock_btn.notify["active"].connect (on_dock_btn_activate);
             dock_btn.margin_end = 82;
             allow_box.add (dock_btn);
 
-            print_btn = new Gtk.CheckButton.with_label ("Configure printing");
+            print_btn = new Gtk.CheckButton.with_label (_("Configure printing"));
             print_btn.notify["active"].connect (on_print_conf_activate);
             allow_box.add (print_btn);
 
