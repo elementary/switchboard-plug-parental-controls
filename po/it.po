@@ -7,19 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-21 12:29-0200\n"
+"POT-Creation-Date: 2016-02-15 16:10-0200\n"
 "PO-Revision-Date: 2015-12-23 19:44+0000\n"
 "Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
 "Language-Team: Italian <it@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2015-12-24 05:42+0000\n"
-"X-Generator: Launchpad (build 17865)\n"
+"X-Launchpad-Export-Date: 2016-02-16 05:44+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 
 #: ../src/Widgets/GeneralBox.vala:53
 msgid "Allow this user to:"
 msgstr "Permetti a questo utente di:"
+
+#: ../src/Widgets/GeneralBox.vala:57
+msgid "Modify the dock"
+msgstr ""
+
+#: ../src/Widgets/GeneralBox.vala:62
+msgid "Configure printing"
+msgstr ""
 
 #: ../src/Widgets/GeneralBox.vala:69
 msgid "Limit computer use:"
@@ -45,7 +53,7 @@ msgstr "Giorni feriali"
 msgid "Weekends"
 msgstr "Fine settimana"
 
-#: ../src/Widgets/AppChooser.vala:69
+#: ../src/Widgets/AppChooser.vala:74
 msgid "Search Applications"
 msgstr "Cerca nelle applicazioni"
 
@@ -73,36 +81,32 @@ msgstr "Internet"
 msgid "Applications"
 msgstr "Applicazioni"
 
-#: ../src/Widgets/UserItem.vala:61
-msgid "Administrator"
-msgstr "Amministratore"
-
-#: ../src/Widgets/UserList.vala:44
+#: ../src/Widgets/UserList.vala:42
 msgid "My Account"
 msgstr "Account personale"
 
-#: ../src/Widgets/UserList.vala:48
+#: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
 msgstr "Altri account"
 
-#: ../src/Widgets/AppsBox.vala:80
+#: ../src/Widgets/AppsBox.vala:86
 msgid "Allow access to these apps with admin permission"
 msgstr ""
 "Permetti l'accesso a queste applicazioni con permessi di amministratore"
 
-#: ../src/Widgets/AppsBox.vala:111
+#: ../src/Widgets/AppsBox.vala:117
 msgid "Add Prevented Apps…"
 msgstr "Aggiungi applicazioni bloccate ..."
 
-#: ../src/Widgets/AppsBox.vala:117
+#: ../src/Widgets/AppsBox.vala:121
 msgid "Remove Selected App"
 msgstr "Rimuovi le applicazioni selezionate"
 
-#: ../src/Plug.vala:83
+#: ../src/Plug.vala:90
 msgid "No users to edit"
 msgstr "Nessun utente da modificare"
 
-#: ../src/Plug.vala:83
+#: ../src/Plug.vala:90
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -114,19 +118,19 @@ msgstr ""
 "Puoi cambiare il tipo di account di un utente da \"Amministratore\" a "
 "\"Standard\" nel pannello Account Utente."
 
-#: ../src/Plug.vala:85
+#: ../src/Plug.vala:92
 msgid "Configure User Accounts"
 msgstr "Configura gli account utente"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:94
 msgid "Open Users settings"
 msgstr "Apri impostazioni utente"
 
-#: ../src/Plug.vala:116
+#: ../src/Plug.vala:154
 msgid "Parental Control"
 msgstr "Filtro Famiglia"
 
-#: ../src/Plug.vala:117
+#: ../src/Plug.vala:155
 msgid "Configure time limits and restrict application usage"
 msgstr "Configura i limiti di tempo e limita l'utilizzo delle applicazioni"
 
@@ -138,45 +142,45 @@ msgstr "Non puoi avviare quest'applicazione"
 msgid "You are not permitted to run this application."
 msgstr "Non ti è permesso avviare quest'applicazione."
 
-#: ../src/daemon/Daemon.vala:191
+#: ../src/daemon/Daemon.vala:201
 msgid "%ld hour"
 msgstr "%ld ora"
 
-#: ../src/daemon/Daemon.vala:191
+#: ../src/daemon/Daemon.vala:201
 msgid "%ld hours"
 msgstr "%ld ore"
 
-#: ../src/daemon/Daemon.vala:194
+#: ../src/daemon/Daemon.vala:204
 msgid "and"
 msgstr "e"
 
-#: ../src/daemon/Daemon.vala:194
+#: ../src/daemon/Daemon.vala:204
 msgid "minute"
 msgstr "minuto"
 
-#: ../src/daemon/Daemon.vala:194
+#: ../src/daemon/Daemon.vala:204
 msgid "minutes"
 msgstr "minuti"
 
-#: ../src/daemon/Daemon.vala:198
+#: ../src/daemon/Daemon.vala:208
 msgid "%ld minute"
 msgstr "%ld minuto"
 
-#: ../src/daemon/Daemon.vala:198
+#: ../src/daemon/Daemon.vala:208
 msgid "%ld minutes"
 msgstr "%ld minuti"
 
-#: ../src/daemon/Daemon.vala:201
+#: ../src/daemon/Daemon.vala:211
 msgid "The computer will lock after %s."
 msgstr "Il computer verrà bloccato dopo %s."
 
-#: ../src/daemon/Daemon.vala:203
+#: ../src/daemon/Daemon.vala:213
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Assicurati di chiudere tutte le applicazioni prima che il computer venga "
 "bloccato."
 
-#: ../src/daemon/Daemon.vala:206
+#: ../src/daemon/Daemon.vala:216
 msgid "Time left"
 msgstr "Tempo rimanente"

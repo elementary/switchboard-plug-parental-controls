@@ -7,19 +7,27 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2015-12-21 12:29-0200\n"
+"POT-Creation-Date: 2016-02-15 16:10-0200\n"
 "PO-Revision-Date: 2016-01-17 21:47+0000\n"
 "Last-Translator: Ľubomír Hlavko <5lubo555@azet.sk>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-01-18 05:56+0000\n"
-"X-Generator: Launchpad (build 17886)\n"
+"X-Launchpad-Export-Date: 2016-02-16 05:44+0000\n"
+"X-Generator: Launchpad (build 17925)\n"
 
 #: ../src/Widgets/GeneralBox.vala:53
 msgid "Allow this user to:"
 msgstr "Povoliť tomuto užívateľovi:"
+
+#: ../src/Widgets/GeneralBox.vala:57
+msgid "Modify the dock"
+msgstr ""
+
+#: ../src/Widgets/GeneralBox.vala:62
+msgid "Configure printing"
+msgstr ""
 
 #: ../src/Widgets/GeneralBox.vala:69
 msgid "Limit computer use:"
@@ -45,7 +53,7 @@ msgstr "Pracovné dni"
 msgid "Weekends"
 msgstr "Víkendy"
 
-#: ../src/Widgets/AppChooser.vala:69
+#: ../src/Widgets/AppChooser.vala:74
 msgid "Search Applications"
 msgstr "Hľadať aplikácie"
 
@@ -73,35 +81,31 @@ msgstr "Internet"
 msgid "Applications"
 msgstr "Aplikácie"
 
-#: ../src/Widgets/UserItem.vala:61
-msgid "Administrator"
-msgstr "Administrátor"
-
-#: ../src/Widgets/UserList.vala:44
+#: ../src/Widgets/UserList.vala:42
 msgid "My Account"
 msgstr "Môj účet"
 
-#: ../src/Widgets/UserList.vala:48
+#: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
 msgstr "Ostatné účty"
 
-#: ../src/Widgets/AppsBox.vala:80
+#: ../src/Widgets/AppsBox.vala:86
 msgid "Allow access to these apps with admin permission"
 msgstr "Povoliť prístup k týmto aplikáciam s administrátorskými právami"
 
-#: ../src/Widgets/AppsBox.vala:111
+#: ../src/Widgets/AppsBox.vala:117
 msgid "Add Prevented Apps…"
 msgstr "Pridať obmedzené aplikácie..."
 
-#: ../src/Widgets/AppsBox.vala:117
+#: ../src/Widgets/AppsBox.vala:121
 msgid "Remove Selected App"
 msgstr "Odstrániť vybranú aplikáciu"
 
-#: ../src/Plug.vala:83
+#: ../src/Plug.vala:90
 msgid "No users to edit"
 msgstr "Žiadny používatelia na úpravu"
 
-#: ../src/Plug.vala:83
+#: ../src/Plug.vala:90
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -113,19 +117,19 @@ msgstr ""
 "Môžete zmeniť typ účtu užívateľa zo \"Správcu\" na \"Štandardný\" v paneli "
 "Používateľských Účtov."
 
-#: ../src/Plug.vala:85
+#: ../src/Plug.vala:92
 msgid "Configure User Accounts"
 msgstr "Konfigurácia používateľských účtov"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:94
 msgid "Open Users settings"
 msgstr "Otvoriť nastavenia používateľa"
 
-#: ../src/Plug.vala:116
+#: ../src/Plug.vala:154
 msgid "Parental Control"
 msgstr "Rodičovská kontrola"
 
-#: ../src/Plug.vala:117
+#: ../src/Plug.vala:155
 msgid "Configure time limits and restrict application usage"
 msgstr "Konfigurovať časové limity a obmedzené použitie aplikácii"
 
@@ -137,45 +141,45 @@ msgstr "Nemôžete spustiť tuto aplikáciu"
 msgid "You are not permitted to run this application."
 msgstr "Nie ste oprávnený spustiť túto aplikáciu."
 
-#: ../src/daemon/Daemon.vala:191
+#: ../src/daemon/Daemon.vala:201
 msgid "%ld hour"
 msgstr "%ld hodina"
 
-#: ../src/daemon/Daemon.vala:191
+#: ../src/daemon/Daemon.vala:201
 msgid "%ld hours"
 msgstr "%ld hodín"
 
-#: ../src/daemon/Daemon.vala:194
+#: ../src/daemon/Daemon.vala:204
 msgid "and"
 msgstr "a"
 
-#: ../src/daemon/Daemon.vala:194
+#: ../src/daemon/Daemon.vala:204
 msgid "minute"
 msgstr "minúta"
 
-#: ../src/daemon/Daemon.vala:194
+#: ../src/daemon/Daemon.vala:204
 msgid "minutes"
 msgstr "minúty"
 
-#: ../src/daemon/Daemon.vala:198
+#: ../src/daemon/Daemon.vala:208
 msgid "%ld minute"
 msgstr "%ld minúta"
 
-#: ../src/daemon/Daemon.vala:198
+#: ../src/daemon/Daemon.vala:208
 msgid "%ld minutes"
 msgstr "%ld minút"
 
-#: ../src/daemon/Daemon.vala:201
+#: ../src/daemon/Daemon.vala:211
 msgid "The computer will lock after %s."
 msgstr "Počítač sa zamkne  po %s."
 
-#: ../src/daemon/Daemon.vala:203
+#: ../src/daemon/Daemon.vala:213
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Uistite sa že ste zatvorili všetky aplikácie predtým než sa váš počítač "
 "zamkne."
 
-#: ../src/daemon/Daemon.vala:206
+#: ../src/daemon/Daemon.vala:216
 msgid "Time left"
 msgstr "Zostávajúci čas"
