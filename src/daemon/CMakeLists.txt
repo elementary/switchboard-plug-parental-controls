@@ -1,15 +1,15 @@
 find_package (PkgConfig)
 
-pkg_check_modules (CLI_DEPS REQUIRED glib-2.0 gio-2.0 polkit-gobject-1 accountsservice)
-add_definitions (${CLI_DEPS_CFLAGS})
-link_directories (${CLI_DEPS_LIBRARY_DIRS})
+pkg_check_modules (DAEMON_DEPS REQUIRED glib-2.0 gio-2.0 polkit-gobject-1 accountsservice gtk+-3.0)
+add_definitions (${DAEMON_DEPS_CFLAGS})
+link_directories (${DAEMON_DEPS_LIBRARY_DIRS})
 
 set (DAEMON_EXEC_NAME pantheon-parental-controls-daemon)
 set (EXEC_MONITOR_NAME pantheon-exec-monitor)
 
 vala_precompile (VALA_C ${DAEMON_EXEC_NAME}
     Daemon.vala
-    ProcessWatcher.vala
+    AppLockCore.vala
     Process.vala
     AppLockDialog.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Vars.vala

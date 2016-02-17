@@ -2,7 +2,7 @@
 Name=Parental Control Daemon
 Comment=Pantheon Parental Control Daemon
 Icon=preferences-system-parental-controls
-Exec=pantheon-parental-controls-daemon
+Exec=@CMAKE_INSTALL_PREFIX@/bin/parental-controls-daemon.sh
 Terminal=false
 Type=Application
 Categories=System

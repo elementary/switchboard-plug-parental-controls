@@ -8,6 +8,7 @@
 #include <glib-object.h>
 #include <sys/socket.h>
 #include <sys/types.h>
+#include <gio/gio.h>
 
 #include <linux/connector.h>
 #include <linux/netlink.h>
@@ -34,28 +35,29 @@ G_BEGIN_DECLS
 
 #define EXEC_MONITOR_TYPE (exec_monitor_get_type ())
 #define EXEC_MONITOR(obj) (G_TYPE_CHECK_INSTANCE_CAST ((obj), EXEC_MONITOR_TYPE, ExecMonitor))
-#define EXEC_MONITOR_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EXEC_MONITOR_TYPE, ExecMonitorClass))
+#define EXEC_MONITOR_CLASS(klass) (G_TYPE_CHECK_CLASS_CAST ((klass), EXEC_MONITOR_TYPE, ExecMonitorIface))
 #define IS_EXEC_MONITOR(obj) (G_TYPE_CHECK_INSTANCE_TYPE ((obj), EXEC_MONITOR_TYPE))
-#define IS_EXEC_MONITOR_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), EXEC_MONITOR_TYPE))
-#define EXEC_MONITOR_GET_CLASS(obj) (G_TYPE_INSTANCE_GET_CLASS ((obj), EXEC_MONITOR_TYPE, ExecMonitorClass))
+#define EXEC_MONITOR_GET_IFACE(obj) (G_TYPE_INSTANCE_GET_INTERFACE ((obj), EXEC_MONITOR_TYPE, ExecMonitorIface))
 
-typedef struct ExecMonitor
+typedef struct _ExecMonitor       ExecMonitor;
+typedef struct _ExecMonitorIface  ExecMonitorIface;
+
+typedef void (*HandlePidExecFunc) (gint pid);
+
+struct _ExecMonitorIface
 {
-  GObject parent_instance;
+  GTypeInterface parent_iface;
   gboolean monitor_started;
   gboolean monitor_events;
-} ExecMonitor;
 
-typedef struct
-{
-  GObjectClass parent_class;
+  void (* handle_pid)   (ExecMonitor *exec_monitor,
+                        gint pid);
+};
 
-  void (* pid_exec)(ExecMonitor *exec_monitor, gint pid);
-} ExecMonitorClass;
-
-GType                   exec_monitor_get_type     (void);
-ExecMonitor            *exec_monitor_new          (void);
-void 					exec_monitor_start        (ExecMonitor *exec_monitor);
+GType           exec_monitor_get_type       (void);
+void            exec_monitor_start          (ExecMonitor *exec_monitor, GAsyncReadyCallback callback, gpointer user_data);
+void            exec_monitor_start_internal (ExecMonitor *exec_monitor);
+static void     start_task_thread           (GTask *task, gpointer task_data, GCancellable *cancellable);
 
 G_END_DECLS
 

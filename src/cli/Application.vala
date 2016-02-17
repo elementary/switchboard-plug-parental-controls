@@ -30,11 +30,6 @@ namespace Cli {
         }
         
         public static int main (string[] args) {
-            if (Environment.get_user_name () != "root") {
-                stdout.printf ("Error: To run this program you need root privigiles\n\n");
-                return 1;
-            } 
-
             var app = new App ();
             return app.run (args);
         }
@@ -56,7 +51,7 @@ namespace Cli {
             options[3] = { "restrict-pam-line", 0, 0, OptionArg.STRING, ref restrict_pam_line, "Add specified line to pam configuration", null };
             options[4] = { "remove-restrict", 0, 0, OptionArg.NONE, ref remove_restrict, "Remove all time restrictions for specified user", null };
             options[5] = { "set-contents", 0, 0, OptionArg.STRING, ref set_contents, "Set contents of specified filename", null };
-            options[6] = { "file", 0, 0, OptionArg.FILENAME, ref file, "A file to use", null };
+            options[6] = { "file", 0, 0, OptionArg.FILENAME, ref file, "A file to write contents to", null };
 
             string[] args = command_line.get_arguments ();
             string*[] _args = new string[args.length];
@@ -66,7 +61,7 @@ namespace Cli {
 
             try {
                 var opt_context = new OptionContext ("context");
-                opt_context.set_help_enabled (false);
+                opt_context.set_help_enabled (true);
                 opt_context.add_main_entries (options, null);
                 unowned string[] tmp = _args;
                 opt_context.parse (ref tmp);
@@ -75,6 +70,11 @@ namespace Cli {
                 command_line.print ("Run '%s --help' to see a full list of available command line options.\n", args[0]);
                 return 1;
             }   
+
+            if (Posix.getuid () != 0) {
+                command_line.print ("Error: To run this program you need root privigiles\n\n");
+                Process.exit (1);
+            } 
 
             if (remove_restrict && user != "") {
             	var pam_writer = new PAMWriter (File.new_for_path ("/etc/security/time.conf"));
@@ -142,7 +142,7 @@ namespace Cli {
             conf_dir = home_dir + PLANK_CONF_DIR;
             if (conf_dir != "" && File.new_for_path (conf_dir).query_exists ()) {
                 var key_file = new KeyFile ();
-                var flags = KeyFileFlags.KEEP_COMMENTS|KeyFileFlags.KEEP_TRANSLATIONS;
+                var flags = KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS;
                 try {
                     key_file.load_from_file (conf_dir, flags);
                 } catch (KeyFileError e) {

@@ -21,17 +21,19 @@
  */
 
 namespace PC.Daemon.AppLock {
-	public class AppLockDialog : Gtk.MessageDialog {
-		public AppLockDialog () {
-			deletable = false;
-			text = _("You cannot run this application");
-			secondary_text = _("You are not permitted to run this application.");
-		}
+    public class AppLockDialog : Gtk.MessageDialog {
+        public AppLockDialog () {
+            deletable = false;
+            text = _("You cannot run this application");
+            secondary_text = _("You are not permitted to run this application.");
+            response.connect (() => {
+                destroy ();
+            });
+        }
 
-		construct {
-			buttons = Gtk.ButtonsType.CLOSE;
-			message_type = Gtk.MessageType.ERROR;
-		}
-	}
-
+        construct {
+            buttons = Gtk.ButtonsType.CLOSE;
+            message_type = Gtk.MessageType.ERROR;
+        }
+    }
 }

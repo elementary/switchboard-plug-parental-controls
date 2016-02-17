@@ -21,7 +21,7 @@
  */
 
 namespace PC.Daemon.AppLock {
-    public class ProcessWatcher : Object {
+    public class AppLockCore : GLib.Object, ExecMonitor {
         private Act.User user;
 
         // Config info
@@ -31,10 +31,10 @@ namespace PC.Daemon.AppLock {
         // Allowed pids
         private List<int> allowed_pids;
 
-        // If ProcessWatcher needs to watch specific user
+        // If AppLock needs to watch specific user
         public bool valid = true;
 
-        public ProcessWatcher (Act.User _user) {
+        public AppLockCore (Act.User _user) {
             this.user = _user;
             this.allowed_pids = new List<Pid> ();
 
@@ -43,7 +43,7 @@ namespace PC.Daemon.AppLock {
                 return;
             }
 
-            string lock_path = user.get_home_dir () + Vars.APP_LOCK_CONF_DIR;
+            string lock_path = Path.build_filename (user.get_home_dir (), Vars.APP_LOCK_CONF_DIR);
             if (FileUtils.test (lock_path, FileTest.EXISTS)) {
                 var key_file = new KeyFile ();
                 try {
@@ -59,17 +59,7 @@ namespace PC.Daemon.AppLock {
             }        
         }
 
-        public void start () {
-            var exec_monitor = new ExecMonitor ();
-            exec_monitor.pid_exec.connect (process_pid);
-
-            Idle.add (() => {
-                exec_monitor.start ();
-                return false;
-            });    
-        }
-
-        private void process_pid (int pid) {
+        private void handle_pid (int pid) {
             if (allowed_pids.find ((Pid)pid) != null) {
                 allowed_pids.remove (pid);
                 return;
@@ -93,30 +83,23 @@ namespace PC.Daemon.AppLock {
                     process.kill ();
 
                     if (admin) {
-                        try {
-                            var permission = Utils.get_permission ();
-                            if (permission.get_can_release ()) {
-                                permission.release ();
-                            }
+                        Utils.permission = null;
 
-                            Utils.permission = null;
-                            permission = Utils.get_permission ();
-                            if (permission.get_can_acquire ()) {
-                                permission.acquire_async.begin ();
-                            }
-
-                            permission.notify["allowed"].connect (() => {
-                                process_permission (permission, args);
-                                return;
-                            });
-                        } catch (Error e) {
-                            warning ("%s\n", e.message);
+                        var permission = Utils.get_permission ();
+                        permission = Utils.get_permission ();
+                        if (permission.get_can_acquire ()) {
+                            permission.acquire_async.begin ();
                         }
+
+                        permission.notify["allowed"].connect (() => {
+                            process_permission (permission, args);
+                            return;
+                        });
                     } else {
                         show_app_lock_dialog ();
                     }
                 }
-            }
+            }  
         }
 
         private void process_permission (Polkit.Permission permission, string[] args) {
@@ -139,12 +122,11 @@ namespace PC.Daemon.AppLock {
         }
 
         private void show_app_lock_dialog () {
-            var lock_dialog = new AppLockDialog ();
-            lock_dialog.response.connect (() => {
-                lock_dialog.destroy ();
+            Idle.add (() => {
+                var lock_dialog = new AppLockDialog ();
+                lock_dialog.run ();
+                return false;
             });
-
-            lock_dialog.show_all ();            
         }
     }
 }

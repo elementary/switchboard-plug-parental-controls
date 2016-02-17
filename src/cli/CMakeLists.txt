@@ -1,17 +1,25 @@
-vala_precompile (VALA_C parental-controls-cli
+find_package (PkgConfig)
+
+pkg_check_modules (CLI_DEPS REQUIRED glib-2.0 gio-2.0)
+add_definitions (${CLI_DEPS_CFLAGS})
+link_directories (${CLI_DEPS_LIBRARY_DIRS})
+
+set (CLI_EXEC_NAME pantheon-parental-controls-cli)
+
+vala_precompile (VALA_C ${CLI_EXEC_NAME}
     Application.vala
     FileReader.vala
     PAMWriter.vala
 PACKAGES
-    posix
     gio-2.0
+    posix
 OPTIONS
     --vapidir=${CMAKE_SOURCE_DIR}/vapi/
     --thread  
 )
 
-add_executable (parental-controls-cli ${VALA_C})
-target_link_libraries (parental-controls-cli ${DEPS_LIBRARIES}) 
+add_executable (${CLI_EXEC_NAME} ${VALA_C})
+target_link_libraries (${CLI_EXEC_NAME} ${DEPS_LIBRARIES}) 
 
 # Installation
-install (TARGETS parental-controls-cli RUNTIME DESTINATION bin)
+install (TARGETS ${CLI_EXEC_NAME} RUNTIME DESTINATION bin)

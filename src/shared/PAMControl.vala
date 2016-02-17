@@ -21,13 +21,13 @@
  */
 
 namespace PC {
-    public struct PAMRestrictInfo {
-        string user;
-        string day_id;
-        string weekday_hours;
-        string weekend_hours;  
-        string from;
-        string to;
+    public class PAMRestrictInfo : Object {
+        public string user;
+        public string day_id;
+        public string weekday_hours;
+        public string weekend_hours;  
+        public string from;
+        public string to;
     }
 
     public class PAMControl : Object {
@@ -69,7 +69,7 @@ namespace PC {
 
             foreach (string line in conf.split ("\n")) {
                 if (!line.has_prefix ("#")) {
-                    var restrict_info = PAMRestrictInfo ();
+                    var restrict_info = new PAMRestrictInfo ();
                     string[] units = line.split (";");
                     if (units.length >= 4) {
                         restrict_info.user = units[2];

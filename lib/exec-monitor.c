@@ -30,32 +30,29 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include <fcntl.h>
-#include <signal.h>
+#include <glib.h>
+#include <gio/gio.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
 
 #include "exec-monitor.h"
-#include <glib.h>
 
-enum
-{
-    PID_EXEC,
-    LAST_SIGNAL
-};
+typedef ExecMonitorIface ExecMonitorInterface;
+G_DEFINE_INTERFACE(ExecMonitor, exec_monitor, G_TYPE_OBJECT);
 
-static guint exec_monitor_signals[LAST_SIGNAL];
-
-G_DEFINE_TYPE(ExecMonitor, exec_monitor, G_TYPE_OBJECT);
-
-static void
-exec_monitor_handle_msg (ExecMonitor *self, struct cn_msg *cn_hdr)
+void
+exec_monitor_handle_msg (ExecMonitor  *self,
+                        struct cn_msg *cn_hdr)
 {
     g_return_if_fail (IS_EXEC_MONITOR (self));
 
     struct proc_event *ev = (struct proc_event *)cn_hdr->data;
 
-    switch(ev->what){
+    gint _pid;
+    switch (ev->what){
         case PROC_EVENT_EXEC:
-            g_signal_emit (self, exec_monitor_signals[PID_EXEC], 0, ev->event_data.exec.process_pid);
+            _pid = ev->event_data.exec.process_pid;
+            EXEC_MONITOR_GET_IFACE (self)->handle_pid (self, _pid);
             break;
         case PROC_EVENT_FORK:            
         case PROC_EVENT_EXIT:
@@ -66,52 +63,50 @@ exec_monitor_handle_msg (ExecMonitor *self, struct cn_msg *cn_hdr)
     }
 }
 
-static void
-exec_monitor_dispose (GObject *object)
+void
+exec_monitor_handle_pid (ExecMonitor *self,
+                        gint pid)
 {
-    ExecMonitor *exec_monitor;
-    exec_monitor = EXEC_MONITOR (object);
-    exec_monitor->monitor_events = FALSE;
+}
+
+static void
+exec_monitor_default_init (ExecMonitorInterface *exec_monitor)
+{
     exec_monitor->monitor_started = FALSE;
-}
-
-static void
-exec_monitor_finalize (GObject *object)
-{
-    ExecMonitor *exec_monitor;
-    exec_monitor = EXEC_MONITOR (object);
-    g_free (exec_monitor->monitor_started);
-    g_free (exec_monitor->monitor_events);
-}
-
-static void
-exec_monitor_class_init (ExecMonitorClass *klass)
-{
-    GObjectClass *object_class;
-
-    object_class = (GObjectClass *)klass;
-    object_class->finalize = exec_monitor_finalize;
-    object_class->dispose = exec_monitor_dispose;
-
-    exec_monitor_signals[PID_EXEC] =
-        g_signal_new ("pid-exec",
-                G_TYPE_FROM_CLASS (klass),
-                G_SIGNAL_RUN_LAST,
-                G_STRUCT_OFFSET (ExecMonitorClass, pid_exec),
-                NULL,
-                NULL,
-                g_cclosure_marshal_VOID__INT,
-                G_TYPE_NONE,
-                1,
-                G_TYPE_INT);
+    exec_monitor->monitor_events = TRUE;
 }
 
 void
-exec_monitor_start (ExecMonitor *self)
+exec_monitor_start (ExecMonitor *self,
+                    GAsyncReadyCallback callback,
+                    gpointer            user_data)
 {
-    g_return_if_fail (IS_EXEC_MONITOR (self));
-    g_return_if_fail (!self->monitor_started);
+    ExecMonitorInterface *iface;
+    GTask *task;
 
+    g_return_if_fail (IS_EXEC_MONITOR (self));
+
+    iface = EXEC_MONITOR_GET_IFACE (self);
+
+    g_return_if_fail (!iface->monitor_started);
+    
+    task = g_task_new (self, NULL, callback, user_data);
+    g_task_run_in_thread (task, start_task_thread);
+    g_object_unref (task);
+}
+
+static void
+start_task_thread (GTask     *task,
+                gpointer     task_data,
+                GCancellable *cancellable)
+{
+    ExecMonitor* self = EXEC_MONITOR (task_data);
+    exec_monitor_start_internal (self);
+}
+
+void
+exec_monitor_start_internal (ExecMonitor *self)
+{
     int sk_nl;
     int err;
     struct sockaddr_nl my_nla, kern_nla, from_nla;
@@ -123,11 +118,16 @@ exec_monitor_start (ExecMonitor *self)
     enum proc_cn_mcast_op *mcop_msg;
     size_t recv_len = 0;
 
+    g_return_if_fail (IS_EXEC_MONITOR (self));
+
+    ExecMonitorInterface *iface;
+    iface = EXEC_MONITOR_GET_IFACE (self);
+
     if (getuid () != 0) {
         return;
     }
 
-    sk_nl = socket(PF_NETLINK, SOCK_DGRAM, NETLINK_CONNECTOR);
+    sk_nl = socket (PF_NETLINK, SOCK_DGRAM, NETLINK_CONNECTOR);
     if (sk_nl == -1) {
         return;
     }
@@ -169,14 +169,13 @@ exec_monitor_start (ExecMonitor *self)
     }
 
     if (*mcop_msg == PROC_CN_MCAST_IGNORE) {
-        rc = 0;
         return;
     }
 
-    for(memset(buff, 0, sizeof (buff)), from_nla_len = sizeof (from_nla);
-      ; memset(buff, 0, sizeof (buff)), from_nla_len = sizeof (from_nla)) {
+    while (iface->monitor_events) {
         struct nlmsghdr *nlh = (struct nlmsghdr*)buff;
         memcpy (&from_nla, &kern_nla, sizeof (from_nla));
+
         recv_len = recvfrom (sk_nl, buff, BUFF_SIZE, 0,
                 (struct sockaddr*)&from_nla, &from_nla_len);
         if (from_nla.nl_pid != 0) {
@@ -198,29 +197,12 @@ exec_monitor_start (ExecMonitor *self)
                 break;
             }
 
-            exec_monitor_handle_msg(self, cn_hdr);
+            exec_monitor_handle_msg (self, cn_hdr);
             if (nlh->nlmsg_type == NLMSG_DONE) {
                 break;
             }
 
-            if (!self->monitor_events) {
-                return;
-            }
-
-            nlh = NLMSG_NEXT(nlh, recv_len);
+            nlh = NLMSG_NEXT (nlh, recv_len);
         }
     }
-}
-
-static void
-exec_monitor_init (ExecMonitor *exec_monitor)
-{
-    exec_monitor->monitor_started = FALSE;
-    exec_monitor->monitor_events = TRUE;
-}
-
-ExecMonitor*
-exec_monitor_new (void)
-{
-    return g_object_new (EXEC_MONITOR_TYPE, 0);
 }

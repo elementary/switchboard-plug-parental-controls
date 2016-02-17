@@ -45,7 +45,7 @@ namespace PC.Utils {
     }
 
     public static void call_cli (string[] args) {
-        string[] spawn_args = { "pkexec", "parental-controls-cli" };
+        string[] spawn_args = { "pkexec", "pantheon-parental-controls-cli" };
         foreach (string arg in args) {
             spawn_args += arg;
         }

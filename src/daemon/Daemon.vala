@@ -27,19 +27,46 @@ public interface Seat : Object {
 }
 
 namespace PC.Daemon {
-    public class Daemon : Application {
-        private MainLoop loop;
+    public class Daemon : Gtk.Application {
+        private string? user_name = null;
 
         public static int main (string[] args) {
             Gtk.init (ref args);
+
             var app = new Daemon ();
+            app.flags = ApplicationFlags.HANDLES_COMMAND_LINE;
             return app.run (args);
         }
 
+        public override int command_line (ApplicationCommandLine command_line) {
+            string[] args = command_line.get_arguments ();
+            string*[] _args = new string[args.length];
+            for (int i = 0; i < args.length; i++) {
+                _args[i] = args[i];
+            }
+
+            if (_args.length != 2) {
+                command_line.print ("Usage: %s user\n", _args[0]);
+            } else {
+                if (Posix.getuid () != 0) {
+                    command_line.print ("Error: To run this program you need root privigiles.\n\n");
+                    Process.exit (1);
+                }
+
+                user_name = _args[1];
+                command_line.print ("Initializing Parental Controls Daemon for %s.\n", user_name);
+                activate ();
+            }
+
+            return 0;
+        }
+
         public override void activate () {
-            loop = new MainLoop ();
-            PC.Utils.get_usermanager ().notify["is-loaded"].connect (on_usermanager_loaded);
-            loop.run ();
+            if (user_name != null && user_name != "") {
+                PC.Utils.get_usermanager ().notify["is-loaded"].connect (on_usermanager_loaded);
+            }
+
+            Gtk.main ();
         }
 
         private void on_usermanager_loaded () {
@@ -47,17 +74,27 @@ namespace PC.Daemon {
                 return;
             }
 
-            var current_user = Utils.get_current_user ();
-            var watcher = new AppLock.ProcessWatcher (current_user);
-            if (watcher.valid) {
-                watcher.start ();
+            print ("Loading user configuration...\n");
+
+            bool pam_lock = false;
+
+            var current_user = Utils.get_usermanager ().get_user (user_name);
+            if (current_user == null) {
+                print ("Error: Could not load user. Aborting...\n");
+                terminate (1);
+            }
+
+            var app_lock_core = new AppLock.AppLockCore (current_user);
+            bool app_lock = app_lock_core.valid;
+
+            if (app_lock_core.valid) {
+                app_lock_core.start.begin ();
             }
 
             var restricts = PAMControl.get_all_restrictions ();
-            bool quit = true;
             foreach (var restrict in restricts) {
                 if (restrict.user == current_user.get_user_name ()) {
-                    quit = false;
+                    pam_lock = true;
 
                     var current_date = new DateTime.now_local ();
                     string minute = current_date.get_minute ().to_string ();
@@ -96,20 +133,27 @@ namespace PC.Daemon {
                                 start_loop (minutes);
                             } else {
                                 this.lock ();
-                                loop.quit ();
                             }
 
                             break;
                         default:
-                            loop.quit ();
                             break;
                     }
                 }
             }  
 
-            if (quit) {
-                loop.quit ();
+            if (!app_lock && !pam_lock) {
+                print ("User %s does not have any restrictions. Aborting...\n", user_name);
+                terminate ();
             }        
+
+            print ("AppLock events: %s\n", app_lock.to_string ());
+            print ("PAM restrict events: %s\n", pam_lock.to_string ());
+        }
+
+        private void terminate (int exit_code = 0) {
+            Gtk.main_quit ();
+            Process.exit (exit_code);            
         }
 
         private TimeSpan get_difference_span (int estimated_time, DateTime current_date) {
