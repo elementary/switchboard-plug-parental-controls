@@ -15,7 +15,7 @@
       <allow_inactive>no</allow_inactive>
       <allow_active>auth_admin_keep</allow_active>
     </defaults>
-    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/parental-controls-cli</annotate>
+    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/pantheon-parental-controls-cli</annotate>
     <annotate key="org.freedesktop.policykit.imply">org.freedesktop.parental-controls.user-administration</annotate>
   </action>
 
