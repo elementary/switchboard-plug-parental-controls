@@ -21,22 +21,25 @@
  */
 
 namespace PC {
-    public class Utils {
+    public class Utils : Object {
         public static Polkit.Permission? permission = null;
-        public static string user_name = Environment.get_user_name ();
+        public static string user_name;
 
         public static Polkit.Permission? get_permission () {
-                if (permission != null)
-                    return permission;
-                try {
-                    var user = Polkit.UnixUser.new_for_name (user_name) as Polkit.UnixUser;
-                    permission = new Polkit.Permission.sync ("org.pantheon.switchboard.parental-controls.administration",
-                                                            Polkit.UnixProcess.new_for_owner (Posix.getpid (), 0, user.get_uid ()));
-                    return permission;
-                } catch (Error e) {
-                    critical (e.message);
-                    return null;
-                }
+            if (permission != null) {
+                return permission;
+            }
+
+            try {
+                print (user_name + "\n");
+                var user = Polkit.UnixUser.new_for_name (user_name) as Polkit.UnixUser;
+                permission = new Polkit.Permission.sync ("org.pantheon.switchboard.parental-controls.administration",
+                                                        Polkit.UnixProcess.new_for_owner (Posix.getpid (), 0, user.get_uid ()));
+                return permission;
+            } catch (Error e) {
+                critical (e.message);
+                return null;
+            }
         }
 
         public static string create_markup (string name, string comment) {
@@ -88,7 +91,7 @@ namespace PC {
         }
 
         public static string? build_app_lock_path (Act.User user) {
-            return user.get_home_dir () + Vars.APP_LOCK_CONF_DIR;
+            return Path.build_filename (user.get_home_dir (), Vars.DAEMON_CONF_DIR);
         }
 
         public static string get_display_manager () {

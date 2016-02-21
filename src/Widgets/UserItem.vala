@@ -30,6 +30,7 @@ namespace PC.Widgets {
         private Granite.Widgets.Avatar avatar;
         private Gtk.Label full_name_label;
         private Gtk.Label username_label;
+        private Gtk.Switch master_switch;
 
         public weak Act.User user { public get; private set; }
 
@@ -37,6 +38,20 @@ namespace PC.Widgets {
             this.page = page;
             this.user = page.user;
             user.changed.connect (update_ui);
+
+            master_switch.notify["active"].connect (() => {
+                bool active = master_switch.active;
+                page.sensitive = active;
+                page.set_active (active);
+
+                if (Utils.get_permission ().get_allowed ()) {
+                    if (active) {
+                        Utils.call_cli ({"--user", user.get_user_name (), "--enable-restrict"});
+                    } else {
+                        Utils.call_cli ({"--user", user.get_user_name (), "--disable-restrict"});
+                    }
+                }
+            });
 
             update_ui ();
         }
@@ -46,7 +61,6 @@ namespace PC.Widgets {
             grid.margin = 6;
             grid.margin_left = 12;
             grid.column_spacing = 6;
-            add (grid);
 
             full_name_label = new Gtk.Label ("");
             full_name_label.halign = Gtk.Align.START;
@@ -57,14 +71,31 @@ namespace PC.Widgets {
             username_label.use_markup = true;
             username_label.ellipsize = Pango.EllipsizeMode.END;
 
+            var switch_grid = new Gtk.Grid ();
+            switch_grid.margin_end = 6;
+            switch_grid.valign = Gtk.Align.CENTER;
+
+            master_switch = new Gtk.Switch ();
+            switch_grid.add (master_switch);
+
+            var main_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
+
             avatar = new Granite.Widgets.Avatar ();
 
             grid.attach (avatar, 0, 0, 1, 2);
             grid.attach (full_name_label, 1, 0, 2, 1);
             grid.attach (username_label, 1, 1, 1, 1);        
+
+            main_box.add (grid);
+            main_box.pack_end (switch_grid, false, false, 0);
+            add (main_box);
         }
 
         public void update_ui () {
+            bool active = page.get_active ();
+            master_switch.active = active;
+            page.sensitive = active;
+
             try {
                 var avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 32, 32, true);
                 avatar.pixbuf = avatar_pixbuf;

@@ -88,6 +88,14 @@ namespace PC.Daemon {
             }
 
             var app_lock_core = new AppLock.AppLockCore (current_user);
+            try {
+                if (!app_lock_core.key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_ACTIVE)) {
+                    terminate (0);
+                }
+            } catch (Error e) {
+                warning ("%s\n", e.message);
+            }
+
             bool app_lock = app_lock_core.valid;
 
             if (app_lock_core.valid) {

@@ -22,8 +22,9 @@
  
 namespace PC.Vars {
     public const string PLANK_CONF_DIR = "/.config/plank/dock1/settings";
-    public const string APP_LOCK_CONF_DIR = "/.config/app-lock.conf";
-    public const string APP_LOCK_GROUP = "AppLock";
+    public const string DAEMON_CONF_DIR = "/.config/pantheon-parental-controls-daemon.conf";
+    public const string DAEMON_GROUP = "PCDaemon";
+    public const string DAEMON_ACTIVE = "Active";
     public const string APP_LOCK_TYPE = "Type";
     public const string APP_LOCK_TARGETS = "Targets";
     public const string APP_LOCK_ADMIN = "Admin";

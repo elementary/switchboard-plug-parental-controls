@@ -34,6 +34,7 @@ namespace PC {
         private Act.UserManager usermanager;
 
         public MainBox () {
+            Utils.set_user_name (Environment.get_user_name ());
             usermanager = Utils.get_usermanager ();
 
             stack = new Gtk.Stack ();
@@ -73,8 +74,9 @@ namespace PC {
             infobar_action.add (lock_button);
 
             Utils.get_permission ().notify["allowed"].connect (() => {
-                paned.sensitive = Utils.get_permission ().get_allowed ();
-                if (Utils.get_permission ().get_allowed ()) {
+                bool allowed = Utils.get_permission ().get_allowed ();
+                sidebar.sensitive = allowed;
+                if (allowed) {
                     infobar.no_show_all = true;
                     infobar.hide ();
                 } else {
@@ -106,6 +108,8 @@ namespace PC {
 
             this.add (stack);
             this.show_all ();
+
+            sidebar.sensitive = Utils.get_permission ().get_allowed ();
         }
 
         private void on_usermanager_loaded () {

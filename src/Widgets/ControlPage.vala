@@ -24,6 +24,9 @@ namespace PC.Widgets {
     public class ControlPage : Gtk.Box {
         public Act.User user;
 
+        private GeneralBox general;
+        private AppsBox apps;
+
         public ControlPage (Act.User user) {
             this.user = user;
 
@@ -32,13 +35,16 @@ namespace PC.Widgets {
             hexpand = true;
             orientation = Gtk.Orientation.VERTICAL;
 
-            var general = new GeneralBox (user);
+            general = new GeneralBox (user);
             general.expand = true;
+
+            apps = new AppsBox (user);
+            apps.expand = true;
 
             var stack = new Gtk.Stack ();
             stack.add_titled (general, "general", _("General"));
             stack.add_titled (new InternetBox (), "internet", _("Internet"));
-            stack.add_titled (new AppsBox (user), "apps", _("Applications"));
+            stack.add_titled (apps, "apps", _("Applications"));
 
             var switcher = new Gtk.StackSwitcher ();
             switcher.halign = Gtk.Align.CENTER;
@@ -46,13 +52,15 @@ namespace PC.Widgets {
             add (switcher);
             add (stack);
 
-            Utils.get_permission ().notify["allowed"].connect (update);
-            update ();
             show_all ();
         }
 
-        private void update () {
-            sensitive = Utils.get_permission ().allowed;
+        public bool get_active () {
+            return apps.get_active ();    
+        }
+
+        public void set_active (bool active) {
+            apps.set_active (active);
         }
     }
 }

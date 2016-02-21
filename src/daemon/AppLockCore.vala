@@ -34,6 +34,9 @@ namespace PC.Daemon.AppLock {
         // If AppLock needs to watch specific user
         public bool valid = true;
 
+        // Key file
+        public KeyFile key_file;
+
         public AppLockCore (Act.User _user) {
             this.user = _user;
             this.allowed_executables = new List<string> ();
@@ -43,24 +46,26 @@ namespace PC.Daemon.AppLock {
                 return;
             }
 
-            string lock_path = Path.build_filename (user.get_home_dir (), Vars.APP_LOCK_CONF_DIR);
+            string lock_path = Utils.build_app_lock_path (user);
             if (FileUtils.test (lock_path, FileTest.EXISTS)) {
-                var key_file = new KeyFile ();
+                key_file = new KeyFile ();
                 try {
                     key_file.load_from_file (Utils.build_app_lock_path (user), 0);
 
-                    targets = key_file.get_string_list (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_TARGETS);
+                    targets = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.APP_LOCK_TARGETS);
                     if (targets.length == 0) {
                         valid = false;
                     }
 
-                    admin = key_file.get_boolean (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_ADMIN);
+                    admin = key_file.get_boolean (Vars.DAEMON_GROUP, Vars.APP_LOCK_ADMIN);
                 } catch (FileError e) {
                     warning ("%s\n", e.message);
                 } catch (Error e) {
                     warning ("%s\n", e.message);
                 }
-            }        
+            } else {
+                valid = false;
+            }       
         }
 
         private void handle_pid (int pid) {

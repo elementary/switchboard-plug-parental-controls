@@ -94,6 +94,43 @@ namespace PC.Cli {
             }            
         } 
 
+        public void modify_user_restrictions (string user, bool enable) {
+            string contents = this.read_contents (file);
+            string conf_section = get_conf_section ();
+
+            string new_conf = "";
+            if (conf_section != "" && user != "") {
+                int i = 0;
+                string[] split = conf_section.split ("\n");
+                foreach (string section_line in split) {
+                    if (i > 0) {
+                        new_conf += "\n";
+                    }
+
+                    bool contains = (user in section_line);
+                    if (!contains) {
+                        new_conf += section_line;
+                    } else {
+                        string prefix = "#";
+                        if (enable) {
+                            prefix = "";
+                            section_line = section_line.replace ("#", "");
+                        }
+
+                        new_conf += prefix + section_line;
+                    }
+
+                    i++;
+                }
+
+                try {
+                    FileUtils.set_contents (file.get_path (), contents.replace (conf_section, new_conf));
+                } catch (FileError e) {
+                    warning ("%s\n", e.message);
+                }
+            }            
+        } 
+
         public void add_conf_line (string line, string? user = null) {
             string contents = this.read_contents (file);
             string conf_section = get_conf_section ();

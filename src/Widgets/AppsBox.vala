@@ -31,6 +31,8 @@ namespace PC.Widgets {
         private Gtk.ToolButton remove_button;
         private Gtk.ToolButton clear_button;
 
+        private bool daemon_active = false;
+
         protected class AppEntry : Gtk.ListBoxRow {
             public signal void deleted ();
 
@@ -147,6 +149,16 @@ namespace PC.Widgets {
             load_existing ();
         }
 
+        public bool get_active () {
+            print (daemon_active.to_string () + "\n");
+            return daemon_active;
+        } 
+
+        public void set_active (bool active) {
+            daemon_active = active;
+            on_changed ();
+        }
+
         private void on_add_button_clicked () {
             apps_popover.show_all ();
         }
@@ -206,18 +218,20 @@ namespace PC.Widgets {
                     targets += Environment.find_program_in_path (entry.get_executable ());
                 }
 
-                key_file.set_string_list (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_TARGETS, targets);
-                key_file.set_boolean (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_ADMIN, admin_check_btn.get_active ());
+                key_file.set_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_ACTIVE, daemon_active);
+                key_file.set_string_list (Vars.DAEMON_GROUP, Vars.APP_LOCK_TARGETS, targets);
+                key_file.set_boolean (Vars.DAEMON_GROUP, Vars.APP_LOCK_ADMIN, admin_check_btn.get_active ());
 
                 Utils.call_cli ({ "--set-contents", key_file.to_data (), "--file", Utils.build_app_lock_path (user) });
-            }   
+            }
         }
 
         private void load_existing () {
             var key_file = new KeyFile ();
             try {
                 key_file.load_from_file (Utils.build_app_lock_path (user), 0);
-                string[] targets = key_file.get_string_list (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_TARGETS);
+                string[] targets = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.APP_LOCK_TARGETS);
+                daemon_active = key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_ACTIVE);
                 foreach (var info in AppInfo.get_all ()) {
                     if (info.should_show ()
                         && Environment.find_program_in_path (info.get_executable ()) in targets) {

@@ -23,6 +23,7 @@
 namespace PC.Cli {
     public class App : Application {
         private const string PLANK_CONF_DIR = "/.config/plank/dock1/settings";
+        private const string TIME_CONF_FILE = "/etc/security/time.conf";
         private string conf_dir = "";
 
         public App () {
@@ -43,8 +44,10 @@ namespace PC.Cli {
             string? file = null;
 
             bool remove_restrict = false;
+            bool enable_restrict = false;
+            bool disable_restrict = false;
 
-            var options = new OptionEntry[7];
+            var options = new OptionEntry[9];
             options[0] = { "user", 0, 0, OptionArg.STRING, ref user, "Use specific user", null };
             options[1] = { "home-dir", 0, 0, OptionArg.FILENAME, ref home_dir, "Use specific home directory", null };
             options[2] = { "lock-dock", 0, 0, OptionArg.STRING, ref lock_dock, "Lock the given user dock", null };
@@ -52,6 +55,8 @@ namespace PC.Cli {
             options[4] = { "remove-restrict", 0, 0, OptionArg.NONE, ref remove_restrict, "Remove all time restrictions for specified user", null };
             options[5] = { "set-contents", 0, 0, OptionArg.STRING, ref set_contents, "Set contents of specified filename", null };
             options[6] = { "file", 0, 0, OptionArg.FILENAME, ref file, "A file to write contents to", null };
+            options[7] = { "enable-restrict", 0, 0, OptionArg.NONE, ref enable_restrict, "Enable PAM restrictions for the user", null };
+            options[8] = { "disable-restrict", 0, 0, OptionArg.NONE, ref disable_restrict, "Disable PAM restrictions for the user", null };
 
             string[] args = command_line.get_arguments ();
             string*[] _args = new string[args.length];
@@ -77,14 +82,24 @@ namespace PC.Cli {
             } 
 
             if (remove_restrict && user != "") {
-            	var pam_writer = new PAMWriter (File.new_for_path ("/etc/security/time.conf"));
+            	var pam_writer = new PAMWriter (File.new_for_path (TIME_CONF_FILE));
             	pam_writer.remove_user_restrictions (user);
+            }
+
+            if (enable_restrict && user != "") {
+                var pam_writer = new PAMWriter (File.new_for_path (TIME_CONF_FILE));
+                pam_writer.modify_user_restrictions (user, true);
+            }
+
+            if (disable_restrict && user != "") {
+                var pam_writer = new PAMWriter (File.new_for_path (TIME_CONF_FILE));
+                pam_writer.modify_user_restrictions (user, false);
             }
 
             if (restrict_pam_line != null && user != null) {
                 ensure_pam_lightdm_enabled ();
 
-                var pam_writer = new PAMWriter (File.new_for_path ("/etc/security/time.conf"));
+                var pam_writer = new PAMWriter (File.new_for_path (TIME_CONF_FILE));
                 pam_writer.add_conf_line (restrict_pam_line, user);
             }
 
