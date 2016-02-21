@@ -10,6 +10,7 @@ vala_precompile (VALA_C ${CLI_EXEC_NAME}
     Application.vala
     FileReader.vala
     PAMWriter.vala
+    ${CMAKE_SOURCE_DIR}/src/shared/Vars.vala
 PACKAGES
     gio-2.0
     posix

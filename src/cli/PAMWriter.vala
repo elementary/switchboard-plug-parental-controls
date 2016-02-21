@@ -20,12 +20,9 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace Cli {
+namespace PC.Cli {
     public class PAMWriter : FileReader {
         public File file;
-        private const string CONF_START = "## PANTHEON_PARENTAL_CONTROL_START";
-        private const string CONF_END = "## PANTHEON_PARENTAL_CONTROL_END";
-        private const string CONF_REGEX = CONF_START + "|" + CONF_END;
 
         public PAMWriter (File file) {
             this.file = file;
@@ -34,7 +31,7 @@ namespace Cli {
         public string get_conf_section () {
             string contents = this.read_contents (file);
             try {
-                var regex = new Regex (CONF_REGEX);
+                var regex = new Regex (Vars.PAM_CONF_REGEX);
 
                 if (regex.match (contents)) {
                     int i = 0;
@@ -134,14 +131,14 @@ namespace Cli {
             if (conf_section == "") {
                 final_contents = contents +
                                     "\n" +
-                                    CONF_START +
+                                    Vars.PAM_CONF_START +
                                     "\n" +
                                     line +
                                     "\n" +
-                                    CONF_END;
+                                    Vars.PAM_CONF_END;
             } else {
-                final_contents = conf_section.replace (CONF_END, "");
-                final_contents += line + "\n" + CONF_END;
+                final_contents = conf_section.replace (Vars.PAM_CONF_END, "");
+                final_contents += line + "\n" + Vars.PAM_CONF_END;
                 final_contents = contents.replace (conf_section, final_contents);
             }
 

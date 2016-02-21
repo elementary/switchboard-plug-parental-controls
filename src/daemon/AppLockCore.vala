@@ -28,15 +28,15 @@ namespace PC.Daemon.AppLock {
         private string[] targets = {};
         private bool admin = false;
 
-        // Allowed pids
-        private List<int> allowed_pids;
+        // Allowed executables
+        private List<string> allowed_executables;
 
         // If AppLock needs to watch specific user
         public bool valid = true;
 
         public AppLockCore (Act.User _user) {
             this.user = _user;
-            this.allowed_pids = new List<Pid> ();
+            this.allowed_executables = new List<string> ();
 
             if (user == null) {
                 valid = false;
@@ -50,6 +50,10 @@ namespace PC.Daemon.AppLock {
                     key_file.load_from_file (Utils.build_app_lock_path (user), 0);
 
                     targets = key_file.get_string_list (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_TARGETS);
+                    if (targets.length == 0) {
+                        valid = false;
+                    }
+
                     admin = key_file.get_boolean (Vars.APP_LOCK_GROUP, Vars.APP_LOCK_ADMIN);
                 } catch (FileError e) {
                     warning ("%s\n", e.message);
@@ -60,11 +64,6 @@ namespace PC.Daemon.AppLock {
         }
 
         private void handle_pid (int pid) {
-            if (allowed_pids.find ((Pid)pid) != null) {
-                allowed_pids.remove (pid);
-                return;
-            }
-
             var process = new Process (pid);
 
             if (process.get_command () == "") {
@@ -73,6 +72,12 @@ namespace PC.Daemon.AppLock {
 
             string[] args = process.get_command ().split (" ");
             string executable = args[0];
+            foreach (string _executable in allowed_executables) {
+                if (_executable == executable) {
+                    allowed_executables.remove (_executable);
+                    return;
+                }
+            }
 
             if (executable != null && !executable.has_prefix ("/")) {
                 executable = Environment.find_program_in_path (executable);
@@ -82,18 +87,17 @@ namespace PC.Daemon.AppLock {
                 if (executable in targets) {
                     process.kill ();
 
-                    if (admin) {
-                        Utils.permission = null;
-
+                    if (admin && Utils.get_permission () != null) {
                         var permission = Utils.get_permission ();
-                        permission = Utils.get_permission ();
+
                         if (permission.get_can_acquire ()) {
                             permission.acquire_async.begin ();
                         }
 
-                        permission.notify["allowed"].connect (() => {
+                        ulong signal_id = 0;
+                        signal_id = permission.notify["allowed"].connect (() => {
                             process_permission (permission, args);
-                            return;
+                            permission.disconnect (signal_id);
                         });
                     } else {
                         show_app_lock_dialog ();
@@ -104,19 +108,31 @@ namespace PC.Daemon.AppLock {
 
         private void process_permission (Polkit.Permission permission, string[] args) {
             if (permission.get_allowed ()) {
-                try {
-                    string[] spawn_env = Environ.get ();
-                    Pid child_pid;
+                string[] _args = {};
+                for (int i = 0; i < args.length; i++) {
+                    if (args[i].strip () != "") {
+                        _args[i] = args[i];
+                    }
+                }
 
+                try {
                     GLib.Process.spawn_async ("/",
-                                            args,
-                                            spawn_env,
+                                            _args,
+                                            Environ.get (),
                                             SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
                                             null,
-                                            out child_pid);
-                    allowed_pids.append ((int)child_pid);
-                } catch (SpawnError e) {
+                                            null);
+                    allowed_executables.append (args[0]);
+                } catch (Error e) {
                     warning ("%s\n", e.message);
+                }
+            }
+
+            if (permission.get_can_release ()) {
+                try {
+                    permission.release ();
+                } catch (Error e) {
+                    warning ("%s\n", e.message);    
                 }
             }
         }

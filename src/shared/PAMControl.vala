@@ -40,7 +40,7 @@ namespace PC {
             }
             
             try {
-                var regex = new Regex ("## PANTHEON_PARENTAL_CONTROL_START|## PANTHEON_PARENTAL_CONTROL_END");
+                var regex = new Regex (Vars.PAM_CONF_REGEX);
 
                 if (regex.match (contents)) {
                     int i = 0;

@@ -20,7 +20,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace Cli {
+namespace PC.Cli {
     public enum ReaderType {
         PAM = 0,
         HOSTS

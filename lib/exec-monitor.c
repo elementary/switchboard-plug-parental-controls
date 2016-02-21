@@ -72,12 +72,11 @@ exec_monitor_handle_pid (ExecMonitor *self,
 static void
 exec_monitor_default_init (ExecMonitorInterface *exec_monitor)
 {
-    exec_monitor->monitor_started = FALSE;
     exec_monitor->monitor_events = TRUE;
 }
 
 void
-exec_monitor_start (ExecMonitor *self,
+exec_monitor_start (ExecMonitor         *self,
                     GAsyncReadyCallback callback,
                     gpointer            user_data)
 {
@@ -88,7 +87,7 @@ exec_monitor_start (ExecMonitor *self,
 
     iface = EXEC_MONITOR_GET_IFACE (self);
 
-    g_return_if_fail (!iface->monitor_started);
+    g_return_if_fail (iface->monitor_events);
     
     task = g_task_new (self, NULL, callback, user_data);
     g_task_run_in_thread (task, start_task_thread);
@@ -102,6 +101,17 @@ start_task_thread (GTask     *task,
 {
     ExecMonitor* self = EXEC_MONITOR (task_data);
     exec_monitor_start_internal (self);
+}
+
+void
+exec_monitor_stop (ExecMonitor *self)
+{
+    ExecMonitorInterface *iface;
+
+    g_return_if_fail (IS_EXEC_MONITOR (self));    
+
+    iface = EXEC_MONITOR_GET_IFACE (self);
+    iface->monitor_events = FALSE;
 }
 
 void
@@ -119,13 +129,10 @@ exec_monitor_start_internal (ExecMonitor *self)
     size_t recv_len = 0;
 
     g_return_if_fail (IS_EXEC_MONITOR (self));
+    g_return_if_fail (getuid () == 0);
 
     ExecMonitorInterface *iface;
     iface = EXEC_MONITOR_GET_IFACE (self);
-
-    if (getuid () != 0) {
-        return;
-    }
 
     sk_nl = socket (PF_NETLINK, SOCK_DGRAM, NETLINK_CONNECTOR);
     if (sk_nl == -1) {

@@ -47,7 +47,7 @@ namespace PC {
             var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             list = new Widgets.UserListBox ();
             list.row_activated.connect ((row) => {
-                if (!Utils.list_contains (content.get_children (), ((Widgets.UserItem) row).page)) {
+                if (content.get_children ().find (((Widgets.UserItem) row).page) == null) {
                     content.add (((Widgets.UserItem) row).page);
                 }
 

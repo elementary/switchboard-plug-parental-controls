@@ -20,7 +20,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace Cli {
+namespace PC.Cli {
     public class App : Application {
         private const string PLANK_CONF_DIR = "/.config/plank/dock1/settings";
         private string conf_dir = "";

@@ -28,7 +28,9 @@ public interface Seat : Object {
 
 namespace PC.Daemon {
     public class Daemon : Gtk.Application {
-        private string? user_name = null;
+        private const int MINUTE_INTERVAL = 60;
+        private const int HOUR_INTERVAL = 3600;
+        private string user_name = "";
 
         public static int main (string[] args) {
             Gtk.init (ref args);
@@ -50,7 +52,7 @@ namespace PC.Daemon {
             } else {
                 if (Posix.getuid () != 0) {
                     command_line.print ("Error: To run this program you need root privigiles.\n\n");
-                    Process.exit (1);
+                    terminate (1);
                 }
 
                 user_name = _args[1];
@@ -63,22 +65,23 @@ namespace PC.Daemon {
 
         public override void activate () {
             if (user_name != null && user_name != "") {
-                PC.Utils.get_usermanager ().notify["is-loaded"].connect (on_usermanager_loaded);
+                Utils.get_usermanager ().notify["is-loaded"].connect (on_usermanager_loaded);
             }
 
             Gtk.main ();
         }
 
         private void on_usermanager_loaded () {
-            if (!PC.Utils.get_usermanager ().is_loaded) {
+            if (!Utils.get_usermanager ().is_loaded) {
                 return;
             }
 
+            Utils.set_user_name (user_name);
             print ("Loading user configuration...\n");
 
             bool pam_lock = false;
 
-            var current_user = Utils.get_usermanager ().get_user (user_name);
+            var current_user = Utils.get_current_user ();
             if (current_user == null) {
                 print ("Error: Could not load user. Aborting...\n");
                 terminate (1);
@@ -107,7 +110,7 @@ namespace PC.Daemon {
                             if (current_date.get_day_of_week () < 6) {
                                 int estimated_time = int.parse (restrict.to);
                                 var span = get_difference_span (estimated_time, current_date);
-                                start_loop ((int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * 60);
+                                start_loop ((int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * MINUTE_INTERVAL);
                             }
 
                             break;
@@ -115,7 +118,7 @@ namespace PC.Daemon {
                             if (current_date.get_day_of_week () >= 6) {
                                 int estimated_time = int.parse (restrict.to);
                                 var span = get_difference_span (estimated_time, current_date);
-                                start_loop ((int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * 60);
+                                start_loop ((int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * MINUTE_INTERVAL);
                             }
 
                             break;
@@ -128,7 +131,7 @@ namespace PC.Daemon {
                             }
                             
                             var span = get_difference_span (estimated_time, current_date);
-                            int minutes = (int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * 60;
+                            int minutes = (int)((span / GLib.TimeSpan.MINUTE * -1) + 1) - 24 * MINUTE_INTERVAL;
                             if (minutes > 0) {
                                 start_loop (minutes);
                             } else {
@@ -143,6 +146,8 @@ namespace PC.Daemon {
             }  
 
             if (!app_lock && !pam_lock) {
+                app_lock_core.stop ();
+
                 print ("User %s does not have any restrictions. Aborting...\n", user_name);
                 terminate ();
             }        
@@ -181,8 +186,8 @@ namespace PC.Daemon {
         }
 
         private int get_estimated_hours (int minutes) {
-            if (minutes >= 60) {
-                return minutes / 60;
+            if (minutes >= MINUTE_INTERVAL) {
+                return minutes / MINUTE_INTERVAL;
             }
 
             return 0;
@@ -190,22 +195,13 @@ namespace PC.Daemon {
 
         private void start_loop (int minutes) {
             int _hours = get_estimated_hours (minutes);
-            int remaining_minutes = minutes - (60 * _hours);
+            int remaining_minutes = minutes - (MINUTE_INTERVAL * _hours);
             send_notification (_hours, remaining_minutes);
 
-            Timeout.add_seconds ((remaining_minutes - 5) * 60, () => {
-                send_notification (0, 5);
+            schedule_notification (remaining_minutes, 5);
+            schedule_notification (remaining_minutes, 1);
 
-                return false;
-            });
-
-            Timeout.add_seconds ((remaining_minutes - 1) * 60, () => {
-                send_notification (0, 1);
-
-                return false;
-            });
-
-            Timeout.add_seconds (60, () => {
+            Timeout.add_seconds (MINUTE_INTERVAL, () => {
                 remaining_minutes--;
                 if (remaining_minutes == 0) {
                     this.lock ();
@@ -214,14 +210,22 @@ namespace PC.Daemon {
                 return (remaining_minutes != 0);
             });
 
-            Timeout.add_seconds (3600, () => {
+            Timeout.add_seconds (HOUR_INTERVAL, () => {
                 int hours = get_estimated_hours (minutes);
                 if (hours > 0) {
-                    int tmp = minutes - (60 * hours);
+                    int tmp = minutes - (MINUTE_INTERVAL * hours);
                     send_notification (hours, tmp);
                 }   
 
                 return (hours != 0 || minutes != 0);
+            });
+        }
+
+        private void schedule_notification (int remaining_minutes, int minutes) {
+            Timeout.add_seconds ((remaining_minutes - minutes) * MINUTE_INTERVAL, () => {
+                send_notification (0, minutes);
+
+                return false;
             });
         }
 

@@ -23,7 +23,7 @@
 namespace PC.Widgets {
     public class GeneralBox : Gtk.Box {
         private enum WeekType {
-            DAYS = 0,
+            DAYS,
             END
         }
 

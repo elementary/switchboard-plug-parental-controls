@@ -1,7 +1,3 @@
-/*
- * Copyright/Licensing information.
- */
-
 #ifndef EXEC_MONITOR_H
 #define EXEC_MONITOR_H
 
@@ -42,12 +38,9 @@ G_BEGIN_DECLS
 typedef struct _ExecMonitor       ExecMonitor;
 typedef struct _ExecMonitorIface  ExecMonitorIface;
 
-typedef void (*HandlePidExecFunc) (gint pid);
-
 struct _ExecMonitorIface
 {
   GTypeInterface parent_iface;
-  gboolean monitor_started;
   gboolean monitor_events;
 
   void (* handle_pid)   (ExecMonitor *exec_monitor,
@@ -58,6 +51,7 @@ GType           exec_monitor_get_type       (void);
 void            exec_monitor_start          (ExecMonitor *exec_monitor, GAsyncReadyCallback callback, gpointer user_data);
 void            exec_monitor_start_internal (ExecMonitor *exec_monitor);
 static void     start_task_thread           (GTask *task, gpointer task_data, GCancellable *cancellable);
+void            exec_monitor_stop           (ExecMonitor *exec_monitor);
 
 G_END_DECLS
 
