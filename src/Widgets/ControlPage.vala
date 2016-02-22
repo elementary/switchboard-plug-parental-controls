@@ -23,28 +23,36 @@
 namespace PC.Widgets {
     public class ControlPage : Gtk.Box {
         public Act.User user;
-
-        private GeneralBox general;
-        private AppsBox apps;
+        private AppsBox apps_box;
+        private InternetBox internet_box;
+        private KeyFile key_file;
 
         public ControlPage (Act.User user) {
             this.user = user;
+
+            key_file = new KeyFile ();
+            key_file.set_list_separator (';');
 
             margin = 24;
             spacing = margin;
             hexpand = true;
             orientation = Gtk.Orientation.VERTICAL;
 
-            general = new GeneralBox (user);
+            var general = new GeneralBox (user);
             general.expand = true;
 
-            apps = new AppsBox (user);
-            apps.expand = true;
+            apps_box = new AppsBox (user);
+            apps_box.expand = true;
+            apps_box.update_key_file.connect (on_update_key_file);
+
+            internet_box = new InternetBox (user);
+            internet_box.expand = true;
+            internet_box.update_key_file.connect (on_update_key_file);
 
             var stack = new Gtk.Stack ();
             stack.add_titled (general, "general", _("General"));
-            stack.add_titled (new InternetBox (), "internet", _("Internet"));
-            stack.add_titled (apps, "apps", _("Applications"));
+            stack.add_titled (internet_box, "internet", _("Internet"));
+            stack.add_titled (apps_box, "apps", _("Applications"));
 
             var switcher = new Gtk.StackSwitcher ();
             switcher.halign = Gtk.Align.CENTER;
@@ -56,11 +64,24 @@ namespace PC.Widgets {
         }
 
         public bool get_active () {
-            return apps.get_active ();    
+            return apps_box.get_active ();
         }
 
         public void set_active (bool active) {
-            apps.set_active (active);
+            apps_box.set_active (active);
+        }
+
+        private void on_update_key_file () {
+            if (!Utils.get_permission ().get_allowed ()) {
+                return;
+            }
+
+            key_file.set_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_ACTIVE, apps_box.daemon_active);
+            key_file.set_string_list (Vars.DAEMON_GROUP, Vars.APP_LOCK_TARGETS, apps_box.targets);
+            key_file.set_boolean (Vars.DAEMON_GROUP, Vars.APP_LOCK_ADMIN, apps_box.admin);
+            key_file.set_string_list (Vars.DAEMON_GROUP, Vars.BLOCK_URLS, internet_box.urls);
+
+            Utils.call_cli ({ "--set-contents", key_file.to_data (), "--file", Utils.build_app_lock_path (user) });
         }
     }
 }

@@ -28,6 +28,7 @@ namespace PC.Vars {
     public const string APP_LOCK_TYPE = "Type";
     public const string APP_LOCK_TARGETS = "Targets";
     public const string APP_LOCK_ADMIN = "Admin";
+    public const string BLOCK_URLS = "BlockUrls";
     public const string PAM_CONF_START = "## PANTHEON_PARENTAL_CONTROLS_START";
     public const string PAM_CONF_END = "## PANTHEON_PARENTAL_CONTROLS_END";
     public const string PAM_CONF_REGEX = PAM_CONF_START + "|" + PAM_CONF_END;

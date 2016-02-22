@@ -22,6 +22,12 @@
 
 namespace PC.Widgets {
     public class AppsBox : Gtk.Box {
+        public signal void update_key_file ();
+
+        public string[] targets = {};
+        public bool admin = false;
+        public bool daemon_active = false;
+
         private List<AppEntry> entries;
         private Act.User user;
 
@@ -31,7 +37,6 @@ namespace PC.Widgets {
         private Gtk.ToolButton remove_button;
         private Gtk.ToolButton clear_button;
 
-        private bool daemon_active = false;
 
         protected class AppEntry : Gtk.ListBoxRow {
             public signal void deleted ();
@@ -147,10 +152,10 @@ namespace PC.Widgets {
             add (admin_check_btn);
 
             load_existing ();
+            show_all ();
         }
 
         public bool get_active () {
-            print (daemon_active.to_string () + "\n");
             return daemon_active;
         } 
 
@@ -209,32 +214,25 @@ namespace PC.Widgets {
             remove_button.sensitive = (list_box.get_selected_row () != null);
             clear_button.sensitive = (entries.length () > 0);
 
-            if (Utils.get_permission ().get_allowed ()) {
-                var key_file = new KeyFile ();
-                key_file.set_list_separator (';');
-
-                string[] targets = {};
-                foreach (var entry in entries) {
-                    targets += Environment.find_program_in_path (entry.get_executable ());
-                }
-
-                key_file.set_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_ACTIVE, daemon_active);
-                key_file.set_string_list (Vars.DAEMON_GROUP, Vars.APP_LOCK_TARGETS, targets);
-                key_file.set_boolean (Vars.DAEMON_GROUP, Vars.APP_LOCK_ADMIN, admin_check_btn.get_active ());
-
-                Utils.call_cli ({ "--set-contents", key_file.to_data (), "--file", Utils.build_app_lock_path (user) });
+            string[] _targets = {};
+            foreach (var entry in entries) {
+                _targets += Environment.find_program_in_path (entry.get_executable ());
             }
+
+            admin = admin_check_btn.get_active ();
+            targets = _targets;
+            update_key_file ();
         }
 
         private void load_existing () {
             var key_file = new KeyFile ();
             try {
                 key_file.load_from_file (Utils.build_app_lock_path (user), 0);
-                string[] targets = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.APP_LOCK_TARGETS);
+                string[] _targets = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.APP_LOCK_TARGETS);
                 daemon_active = key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_ACTIVE);
                 foreach (var info in AppInfo.get_all ()) {
                     if (info.should_show ()
-                        && Environment.find_program_in_path (info.get_executable ()) in targets) {
+                        && Environment.find_program_in_path (info.get_executable ()) in _targets) {
                         load_info (info);
                     }
                 }

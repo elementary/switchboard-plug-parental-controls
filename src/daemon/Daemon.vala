@@ -32,6 +32,8 @@ namespace PC.Daemon {
         private const int HOUR_INTERVAL = 3600;
         private string user_name = "";
 
+        private IptablesHelper iptables_helper;
+
         public static int main (string[] args) {
             Gtk.init (ref args);
 
@@ -88,6 +90,17 @@ namespace PC.Daemon {
             }
 
             var app_lock_core = new AppLock.AppLockCore (current_user);
+
+            string[] block_urls = {};
+            try {
+                block_urls = app_lock_core.key_file.get_string_list (Vars.DAEMON_GROUP, Vars.BLOCK_URLS);
+            } catch (KeyFileError e) {
+                warning ("%s\n", e.message);
+            }
+
+            iptables_helper = new IptablesHelper (block_urls);
+            bool iptables = iptables_helper.valid;
+
             try {
                 if (!app_lock_core.key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_ACTIVE)) {
                     terminate (0);
@@ -100,6 +113,10 @@ namespace PC.Daemon {
 
             if (app_lock_core.valid) {
                 app_lock_core.start.begin ();
+            }
+
+            if (iptables) {
+                iptables_helper.add_rules ();
             }
 
             var restricts = PAMControl.get_all_restrictions ();
@@ -153,7 +170,7 @@ namespace PC.Daemon {
                 }
             }  
 
-            if (!app_lock && !pam_lock) {
+            if (!app_lock && !pam_lock && !iptables) {
                 app_lock_core.stop ();
 
                 print ("User %s does not have any restrictions. Aborting...\n", user_name);
@@ -162,6 +179,12 @@ namespace PC.Daemon {
 
             print ("AppLock events: %s\n", app_lock.to_string ());
             print ("PAM restrict events: %s\n", pam_lock.to_string ());
+            print ("Iptables events: %s\n", iptables.to_string ());
+        }
+
+        public override void shutdown () {
+            iptables_helper.reset ();
+            base.shutdown ();
         }
 
         private void terminate (int exit_code = 0) {

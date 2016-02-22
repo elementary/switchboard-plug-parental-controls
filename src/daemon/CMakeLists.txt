@@ -12,6 +12,7 @@ vala_precompile (VALA_C ${DAEMON_EXEC_NAME}
     AppLockCore.vala
     Process.vala
     AppLockDialog.vala
+    IptablesHelper.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Vars.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Utils.vala
     ${CMAKE_SOURCE_DIR}/src/shared/PAMControl.vala

@@ -31,7 +31,6 @@ namespace PC {
             }
 
             try {
-                print (user_name + "\n");
                 var user = Polkit.UnixUser.new_for_name (user_name) as Polkit.UnixUser;
                 permission = new Polkit.Permission.sync ("org.pantheon.switchboard.parental-controls.administration",
                                                         Polkit.UnixProcess.new_for_owner (Posix.getpid (), 0, user.get_uid ()));
