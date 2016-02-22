@@ -75,7 +75,7 @@ namespace PC {
 
             Utils.get_permission ().notify["allowed"].connect (() => {
                 bool allowed = Utils.get_permission ().get_allowed ();
-                sidebar.sensitive = allowed;
+                paned.sensitive = allowed;
                 if (allowed) {
                     infobar.no_show_all = true;
                     infobar.hide ();
@@ -109,7 +109,7 @@ namespace PC {
             this.add (stack);
             this.show_all ();
 
-            sidebar.sensitive = Utils.get_permission ().get_allowed ();
+            paned.sensitive = Utils.get_permission ().get_allowed ();
         }
 
         private void on_usermanager_loaded () {
