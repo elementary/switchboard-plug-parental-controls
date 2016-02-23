@@ -25,6 +25,10 @@ namespace PC {
         public static Polkit.Permission? permission = null;
         public static string user_name;
 
+        private const string WHO_EXEC = "who";
+        private const int USER_INDEX = 0;
+        private const int DISPLAY_INDEX = 1;
+
         public static Polkit.Permission? get_permission () {
             if (permission != null) {
                 return permission;
@@ -59,7 +63,7 @@ namespace PC {
                 Process.spawn_async ("/",
                                     spawn_args,
                                     spawn_env,
-                                    SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
+                                    SpawnFlags.SEARCH_PATH,
                                     null,
                                     null);
             } catch (SpawnError e) {
@@ -89,24 +93,40 @@ namespace PC {
             return current_user;
         }
 
-        public static string? build_app_lock_path (Act.User user) {
-            return Path.build_filename (user.get_home_dir (), Vars.DAEMON_CONF_DIR);
-        }
+        public static string? detect_logged_user () {
+            string display = Environment.get_variable ("DISPLAY");
 
-        public static string get_display_manager () {
-            //TODO: add file location for different, non-debian-based distros
-            string file = "/etc/X11/default-display-manager";
-            string output = "";
+            string output;
+            int status;
 
             try {
-                FileUtils.get_contents (file, out output);
-            } catch (Error e) {
-                warning (e.message);
-                return "";
+                Process.spawn_sync ("/",
+                                { WHO_EXEC, "-s" },
+                                Environ.get (),
+                                SpawnFlags.SEARCH_PATH,
+                                null,
+                                out output,
+                                null,
+                                out status);
+                if (status != 0) {
+                    return null;
+                }
+
+                foreach (string line in output.split ("\n")) {
+                    string[] elements = line.split (" ");
+                    if (elements[DISPLAY_INDEX] == display) {
+                        return elements[USER_INDEX];
+                    } 
+                }
+            } catch (SpawnError e) {
+                warning ("%s\n", e.message);
             }
 
-            output = output.slice (output.last_index_of ("/") + 1, output.length).chomp ();
-            return output;
+            return null;
+        }
+
+        public static string? build_app_lock_path (Act.User user) {
+            return Path.build_filename (user.get_home_dir (), Vars.DAEMON_CONF_DIR);
         }
 
         public static void try_lock_dock_for_user (string user_name, bool lock) {

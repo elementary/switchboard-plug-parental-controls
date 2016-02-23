@@ -30,9 +30,9 @@ namespace PC.Daemon {
     public class Daemon : Gtk.Application {
         private const int MINUTE_INTERVAL = 60;
         private const int HOUR_INTERVAL = 3600;
-        private string user_name = "";
+        private string? user_name = null;
 
-        private IptablesHelper iptables_helper;
+        private IptablesHelper? iptables_helper = null;
 
         public static int main (string[] args) {
             Gtk.init (ref args);
@@ -49,16 +49,20 @@ namespace PC.Daemon {
                 _args[i] = args[i];
             }
 
-            if (_args.length != 2) {
+            if (_args.length > 2) {
                 command_line.print ("Usage: %s user\n", _args[0]);
             } else {
                 if (Posix.getuid () != 0) {
                     command_line.print ("Error: To run this program you need root privigiles.\n\n");
-                    terminate (1);
+                    terminate (2);
                 }
 
-                user_name = _args[1];
-                command_line.print ("Initializing Parental Controls Daemon for %s.\n", user_name);
+                if (_args.length == 2) {
+                    user_name = _args[1];
+                } else {
+                    user_name = Utils.detect_logged_user ();
+                }
+
                 activate ();
             }
 
@@ -66,10 +70,7 @@ namespace PC.Daemon {
         }
 
         public override void activate () {
-            if (user_name != null && user_name != "") {
-                Utils.get_usermanager ().notify["is-loaded"].connect (on_usermanager_loaded);
-            }
-
+            Utils.get_usermanager ().notify["is-loaded"].connect (on_usermanager_loaded);
             Gtk.main ();
         }
 
@@ -78,7 +79,15 @@ namespace PC.Daemon {
                 return;
             }
 
+            if (user_name == null || user_name == "") {
+                print ("Could not determine logged user. Aborting...");
+                terminate (1);
+            }
+
+            print ("Initializing Parental Controls Daemon for %s.\n", user_name);
+
             Utils.set_user_name (user_name);
+
             print ("Loading user configuration...\n");
 
             bool pam_lock = false;
@@ -183,7 +192,10 @@ namespace PC.Daemon {
         }
 
         public override void shutdown () {
-            iptables_helper.reset ();
+            if (iptables_helper != null) {
+                iptables_helper.reset ();
+            }
+
             base.shutdown ();
         }
 

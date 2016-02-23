@@ -28,7 +28,7 @@ namespace PC.Widgets {
         private const string URL_REGEX_RULE = "[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)";
 
         private Act.User user;
-        private Regex url_regex;
+        private Regex? url_regex = null;
         private List<UrlEntry> url_list;
 
         private Gtk.ListBox list_box;
@@ -67,7 +67,12 @@ namespace PC.Widgets {
         public InternetBox (Act.User user) {
             this.user = user;
 
-            url_regex = new Regex (URL_REGEX_RULE, RegexCompileFlags.OPTIMIZE);
+            try {
+                url_regex = new Regex (URL_REGEX_RULE, RegexCompileFlags.OPTIMIZE);
+            } catch (RegexError e) {
+                warning ("%s\n", e.message);
+            }
+
             url_list = new List<UrlEntry> ();
 
             orientation = Gtk.Orientation.VERTICAL;
@@ -136,7 +141,7 @@ namespace PC.Widgets {
                 foreach (string url in urls) {
                     add_entry (new UrlEntry (url));
                 }
-            } catch (KeyFileError e) {
+            } catch (Error e) {
                 warning ("%s\n", e.message);
             }         
         }
@@ -152,6 +157,10 @@ namespace PC.Widgets {
         }
 
         private void on_entry_changed () {
+            if (url_regex == null) {
+                return;
+            }
+
             bool valid = url_regex.match (entry.get_text ());
             add_button.sensitive = valid;
             if (valid || entry.get_text ().strip () == "") {
@@ -162,6 +171,10 @@ namespace PC.Widgets {
         }
 
         private void on_entry_activate () {
+            if (url_regex == null) {
+                return;
+            }
+
             string url = entry.get_text ().strip ();
             if (!url_regex.match (url)) {
                 return;

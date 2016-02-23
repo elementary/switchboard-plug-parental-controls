@@ -121,13 +121,13 @@ namespace PC.Daemon.AppLock {
                 }
 
                 try {
+                    allowed_executables.append (args[0]);
                     GLib.Process.spawn_async ("/",
                                             _args,
                                             Environ.get (),
                                             SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
                                             null,
                                             null);
-                    allowed_executables.append (args[0]);
                 } catch (Error e) {
                     warning ("%s\n", e.message);
                 }
