@@ -1,4 +1,5 @@
 etc/
+lib/systemd/system
 usr/bin
 usr/lib
 usr/share
