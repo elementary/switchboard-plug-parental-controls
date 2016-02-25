@@ -35,9 +35,9 @@ namespace PC {
             }
 
             try {
-                var user = Polkit.UnixUser.new_for_name (user_name) as Polkit.UnixUser;
-                permission = new Polkit.Permission.sync ("org.pantheon.switchboard.parental-controls.administration",
-                                                        Polkit.UnixProcess.new_for_owner (Posix.getpid (), 0, user.get_uid ()));
+                var user = (Polkit.UnixUser)Polkit.UnixUser.new_for_name (user_name);
+                permission = new Polkit.Permission.sync (Vars.PARENTAL_CONTROLS_ACTION_ID,
+                                        Polkit.UnixProcess.new_for_owner (Posix.getpid (), 0, user.get_uid ()));
                 return permission;
             } catch (Error e) {
                 critical (e.message);
@@ -91,38 +91,6 @@ namespace PC {
 
             current_user = get_usermanager ().get_user (user_name);
             return current_user;
-        }
-
-        public static string? detect_logged_user () {
-            string display = Environment.get_variable ("DISPLAY");
-
-            string output;
-            int status;
-
-            try {
-                Process.spawn_sync ("/",
-                                { WHO_EXEC, "-s" },
-                                Environ.get (),
-                                SpawnFlags.SEARCH_PATH,
-                                null,
-                                out output,
-                                null,
-                                out status);
-                if (status != 0) {
-                    return null;
-                }
-
-                foreach (string line in output.split ("\n")) {
-                    string[] elements = line.split (" ");
-                    if (elements[DISPLAY_INDEX] == display) {
-                        return elements[USER_INDEX];
-                    } 
-                }
-            } catch (SpawnError e) {
-                warning ("%s\n", e.message);
-            }
-
-            return null;
         }
 
         public static string? build_app_lock_path (Act.User user) {

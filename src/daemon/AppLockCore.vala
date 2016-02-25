@@ -22,42 +22,45 @@
 
 namespace PC.Daemon.AppLock {
     public class AppLockCore : GLib.Object, ExecMonitor {
+        public bool valid = true;
+        public KeyFile key_file;
+
         private Act.User user;
 
-        // Config info
         private string[] targets = {};
         private bool admin = false;
 
-        // Allowed executables
         private List<string> allowed_executables;
 
-        // If AppLock needs to watch specific user
-        public bool valid = true;
+        private Polkit.Authority authority;
+        private Server server;
 
-        // Key file
-        public KeyFile key_file;
-
-        public AppLockCore (Act.User _user) {
-            this.user = _user;
-            this.allowed_executables = new List<string> ();
+        public AppLockCore (Act.User _user, Server _server) {
+            user = _user;
+            server = _server;
+            allowed_executables = new List<string> ();
+            try {
+                authority = Polkit.Authority.get_sync ();
+            } catch (Error e) {
+                warning ("%s\n", e.message);
+            }
 
             if (user == null) {
                 valid = false;
                 return;
             }
 
+            key_file = new KeyFile ();
+
             string lock_path = Utils.build_app_lock_path (user);
             if (FileUtils.test (lock_path, FileTest.EXISTS)) {
-                key_file = new KeyFile ();
                 try {
                     key_file.load_from_file (Utils.build_app_lock_path (user), 0);
 
                     targets = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.APP_LOCK_TARGETS);
-                    if (targets.length == 0) {
-                        valid = false;
-                    }
-
                     admin = key_file.get_boolean (Vars.DAEMON_GROUP, Vars.APP_LOCK_ADMIN);
+
+                    valid = targets.length > 0;
                 } catch (FileError e) {
                     warning ("%s\n", e.message);
                 } catch (Error e) {
@@ -92,62 +95,30 @@ namespace PC.Daemon.AppLock {
                 if (executable in targets) {
                     process.kill ();
 
-                    if (admin && Utils.get_permission () != null) {
-                        var permission = Utils.get_permission ();
-
-                        if (permission.get_can_acquire ()) {
-                            permission.acquire_async.begin ();
-                        }
-
+                    if (admin && authority != null) {
+                        server.authorize (user.get_user_name (), Vars.PARENTAL_CONTROLS_ACTION_ID);
                         ulong signal_id = 0;
-                        signal_id = permission.notify["allowed"].connect (() => {
-                            process_permission (permission, args);
-                            permission.disconnect (signal_id);
+                        signal_id = server.authorization_ended.connect ((client_pid) => {
+                            try {
+                                var result = authority.check_authorization_sync (Polkit.UnixProcess.new_for_owner (client_pid, 0, (int)user.get_uid ()),
+                                                                                Vars.PARENTAL_CONTROLS_ACTION_ID,
+                                                                                null,
+                                                                                Polkit.CheckAuthorizationFlags.ALLOW_USER_INTERACTION);
+                                if (result.get_is_authorized ()) {
+                                    allowed_executables.append (args[0]);                                
+                                    server.launch (args);
+                                }   
+                            } catch (Error e) {
+                                warning ("%s\n", e.message);
+                            }
+
+                            server.disconnect (signal_id);
                         });
                     } else {
-                        show_app_lock_dialog ();
+                        server.show_app_lock_dialog ();
                     }
                 }
             }  
-        }
-
-        private void process_permission (Polkit.Permission permission, string[] args) {
-            if (permission.get_allowed ()) {
-                string[] _args = {};
-                for (int i = 0; i < args.length; i++) {
-                    if (args[i].strip () != "") {
-                        _args[i] = args[i];
-                    }
-                }
-
-                try {
-                    allowed_executables.append (args[0]);
-                    GLib.Process.spawn_async ("/",
-                                            _args,
-                                            Environ.get (),
-                                            SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
-                                            null,
-                                            null);
-                } catch (Error e) {
-                    warning ("%s\n", e.message);
-                }
-            }
-
-            if (permission.get_can_release ()) {
-                try {
-                    permission.release ();
-                } catch (Error e) {
-                    warning ("%s\n", e.message);    
-                }
-            }
-        }
-
-        private void show_app_lock_dialog () {
-            Idle.add (() => {
-                var lock_dialog = new AppLockDialog ();
-                lock_dialog.run ();
-                return false;
-            });
         }
     }
 }

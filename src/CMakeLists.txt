@@ -39,6 +39,7 @@ OPTIONS
 )
 
 add_subdirectory (cli)
+add_subdirectory (client)
 add_subdirectory (daemon)
 
 add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C})

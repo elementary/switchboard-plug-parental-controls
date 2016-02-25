@@ -20,20 +20,30 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace PC.Daemon.AppLock {
-    public class AppLockDialog : Gtk.MessageDialog {
-        public AppLockDialog () {
-            deletable = false;
-            text = _("You cannot run this application");
-            secondary_text = _("You are not permitted to run this application.");
-            response.connect (() => {
-                destroy ();
-            });
-        }
+namespace PC.Daemon {
+    [DBus (name = "org.pantheon.ParentalControls")]
+    public class Server : Object {
+        private static Server? instance = null;
 
-        construct {
-            buttons = Gtk.ButtonsType.CLOSE;
-            message_type = Gtk.MessageType.ERROR;
+        [DBus (visible = false)]
+        public static Server get_default () {
+            if (instance == null) {
+                instance = new Server ();
+            }
+
+            return instance;
+        }
+        
+        [DBus (visible = false)]
+        public signal void authorization_ended (int client_pid);
+
+        public signal void show_app_lock_dialog ();
+        public signal void authorize (string user, string action_id);
+        public signal void launch (string[] args);
+        public signal void send_time_notification (int hours, int minutes);
+
+        public void end_authorization (int client_pid) {
+            authorization_ended (client_pid);
         }
     }
 }

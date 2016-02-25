@@ -1,6 +1,6 @@
 find_package (PkgConfig)
 
-pkg_check_modules (DAEMON_DEPS REQUIRED glib-2.0 gio-2.0 polkit-gobject-1 accountsservice gtk+-3.0)
+pkg_check_modules (DAEMON_DEPS REQUIRED glib-2.0 gio-2.0 polkit-gobject-1 accountsservice)
 add_definitions (${DAEMON_DEPS_CFLAGS})
 link_directories (${DAEMON_DEPS_LIBRARY_DIRS})
 
@@ -11,8 +11,12 @@ vala_precompile (VALA_C ${DAEMON_EXEC_NAME}
     Daemon.vala
     AppLockCore.vala
     Process.vala
-    AppLockDialog.vala
+    #AppLockDialog.vala
     IptablesHelper.vala
+    SessionManager.vala
+    SessionHandler.vala
+    Interfaces.vala
+    Server.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Vars.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Utils.vala
     ${CMAKE_SOURCE_DIR}/src/shared/PAMControl.vala
@@ -20,7 +24,6 @@ PACKAGES
     posix
     accountsservice
     polkit-gobject-1
-    gtk+-3.0
     gio-2.0
     exec-monitor
 OPTIONS

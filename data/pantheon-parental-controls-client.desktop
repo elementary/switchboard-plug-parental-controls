@@ -1,0 +1,4 @@
+[Desktop Entry]
+Name=Parental Controls Client
+Exec=pantheon-parental-controls-client
+Icon=preferences-system-parental-controls
