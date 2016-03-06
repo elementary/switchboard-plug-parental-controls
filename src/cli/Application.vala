@@ -61,8 +61,6 @@ namespace PC.Cli {
                 _args[i] = args[i];
             }
 
-            print ("called it\n");
-
             try {
                 var opt_context = new OptionContext ("context");
                 opt_context.set_help_enabled (true);
@@ -172,8 +170,7 @@ namespace PC.Cli {
                 } catch (FileError e) {
                     warning ("%s\n", e.message);
                 }  
-                
-                print ("setting boolean: %s\n", lock.to_string ());                              
+                                           
                 key_file.set_boolean ("PlankDockPreferences", "LockItems", lock);
 
                 try {
