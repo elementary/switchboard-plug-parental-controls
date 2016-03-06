@@ -8,7 +8,6 @@ set (CLI_EXEC_NAME pantheon-parental-controls-cli)
 
 vala_precompile (VALA_C ${CLI_EXEC_NAME}
     Application.vala
-    FileReader.vala
     PAMWriter.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Vars.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Utils.vala

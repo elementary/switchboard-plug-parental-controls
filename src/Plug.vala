@@ -189,7 +189,7 @@ namespace PC {
 }
 
 public Switchboard.Plug get_plug (Module module) {
-    debug ("Activating Parental Control plug");
+    debug ("Activating Parental Controls plug");
 
     var plug = new PC.Plug ();
     return plug;

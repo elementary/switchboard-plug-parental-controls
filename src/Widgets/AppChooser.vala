@@ -54,7 +54,7 @@ namespace PC.Widgets {
             }
         }
 
-        private Gtk.ListBox list;
+        private Gtk.ListBox listbox;
         private Gtk.SearchEntry search_entry;
 
         public signal void app_chosen (AppInfo info);
@@ -62,10 +62,7 @@ namespace PC.Widgets {
         public AppChooser (Gtk.Widget widget) {
             Object (relative_to: widget);
             modal = true;
-            setup_gui ();
-        }
 
-        void setup_gui () {
             var grid = new Gtk.Grid ();
             grid.margin = 12;
             grid.row_spacing = 6;
@@ -79,21 +76,21 @@ namespace PC.Widgets {
             scrolled.vscrollbar_policy = Gtk.PolicyType.AUTOMATIC;
             scrolled.shadow_type = Gtk.ShadowType.IN;
 
-            list = new Gtk.ListBox ();
-            list.expand = true;
-            list.height_request = 250;
-            list.width_request = 200;
-            list.set_sort_func (sort_function);
-            list.set_filter_func (filter_function);
-            scrolled.add (list);
+            listbox = new Gtk.ListBox ();
+            listbox.expand = true;
+            listbox.height_request = 250;
+            listbox.width_request = 200;
+            listbox.set_sort_func (sort_function);
+            listbox.set_filter_func (filter_function);
+            scrolled.add (listbox);
 
-            list.row_activated.connect (on_app_selected);
-            search_entry.search_changed.connect (apply_filter);
+            listbox.row_activated.connect (on_app_selected);
 
             grid.attach (search_entry, 0, 0, 1, 1);
             grid.attach (scrolled, 0, 1, 1, 1);
 
             add (grid);
+            grid.show_all ();
 
             init_list ();
         }
@@ -102,7 +99,7 @@ namespace PC.Widgets {
             foreach (var _info in AppInfo.get_all ()) {
                 if (_info.should_show ()) {
                     var row = new AppRow (_info);
-                    list.prepend (row);
+                    listbox.prepend (row);
                 }
             }
         }
@@ -127,10 +124,6 @@ namespace PC.Widgets {
             var app_row = (AppRow)row.get_child ();
             app_chosen (app_row.info);
             hide ();
-        }
-
-        private void apply_filter () {
-            list.set_filter_func (filter_function);
         }
     }
 }

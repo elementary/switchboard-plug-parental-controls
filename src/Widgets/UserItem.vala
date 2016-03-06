@@ -39,16 +39,6 @@ namespace PC.Widgets {
             this.user = page.user;
             user.changed.connect (update_ui);
 
-            master_switch.notify["active"].connect (() => {
-                bool active = master_switch.get_active ();
-                page.sensitive = active;
-                page.set_active (active);
-            });
-
-            update_ui ();
-        }
-
-        construct {
             grid = new Gtk.Grid ();
             grid.margin = 6;
             grid.margin_left = 12;
@@ -80,7 +70,17 @@ namespace PC.Widgets {
 
             main_box.add (grid);
             main_box.pack_end (switch_grid, false, false, 0);
+
+            master_switch.notify["active"].connect (() => {
+                bool active = master_switch.get_active ();
+                page.sensitive = active;
+                page.set_active (active);
+            });
+
+            update_ui ();
+
             add (main_box);
+            show_all ();
         }
 
         public void update_ui () {

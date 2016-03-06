@@ -21,7 +21,7 @@
  */
 
 namespace PC.Cli {
-    public class PAMWriter : FileReader {
+    public class PAMWriter : Object {
         public File file;
 
         public PAMWriter (File file) {
@@ -29,7 +29,7 @@ namespace PC.Cli {
         }    
 
         public string get_conf_section () {
-            string contents = this.read_contents (file);
+            string contents = read_contents (file);
             try {
                 var regex = new Regex (Vars.PAM_CONF_REGEX);
 
@@ -55,7 +55,7 @@ namespace PC.Cli {
         }
 
         public void remove_conf_section () {
-            string contents = this.read_contents (file);
+            string contents = read_contents (file);
             string final_contents = contents.replace (get_conf_section (), "");
 
             try {
@@ -66,7 +66,7 @@ namespace PC.Cli {
         }
 
         public void remove_user_restrictions (string user) {
-            string contents = this.read_contents (file);
+            string contents = read_contents (file);
             string conf_section = get_conf_section ();
 
             string new_conf = "";
@@ -95,7 +95,7 @@ namespace PC.Cli {
         } 
 
         public void modify_user_restrictions (string user, bool enable) {
-            string contents = this.read_contents (file);
+            string contents = read_contents (file);
             string conf_section = get_conf_section ();
 
             string new_conf = "";
@@ -132,7 +132,7 @@ namespace PC.Cli {
         } 
 
         public void add_conf_line (string line, string? user = null) {
-            string contents = this.read_contents (file);
+            string contents = read_contents (file);
             string conf_section = get_conf_section ();
 
             string new_conf = "";
@@ -158,7 +158,7 @@ namespace PC.Cli {
                     warning ("%s\n", e.message);
                 }
 
-                contents = this.read_contents (file);
+                contents = read_contents (file);
                 conf_section = get_conf_section ();
             }
 
@@ -186,8 +186,19 @@ namespace PC.Cli {
             }
         }  
 
-        public override ReaderType get_reader_type () {
-            return ReaderType.PAM;
+        private string read_contents (File file) {
+            string data = "";
+            if (!file.query_exists ()) {
+                return "";
+            }
+
+            try {
+                FileUtils.get_contents (file.get_path (), out data);
+            } catch (FileError e) {
+                warning ("%s\n", e.message);
+            }
+
+            return data;
         }
     }
 }

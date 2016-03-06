@@ -25,9 +25,7 @@ namespace PC {
         public static Polkit.Permission? permission = null;
         public static string user_name;
 
-        private const string WHO_EXEC = "who";
-        private const int USER_INDEX = 0;
-        private const int DISPLAY_INDEX = 1;
+        private static Act.UserManager? usermanager = null;
 
         public static Polkit.Permission? get_permission () {
             if (permission != null) {
@@ -74,8 +72,6 @@ namespace PC {
                 warning ("%s\n", e.message);
             }
         }
-
-        private static Act.UserManager? usermanager = null;
 
         public static unowned Act.UserManager? get_usermanager () {
             if (usermanager != null && usermanager.is_loaded) {

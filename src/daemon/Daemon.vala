@@ -54,13 +54,13 @@ namespace PC.Daemon {
             Bus.own_name (BusType.SYSTEM, Vars.PARENTAL_CONTROLS_IFACE, BusNameOwnerFlags.REPLACE,
                           on_bus_aquired,
                           () => {},
-                          on_bust_lost);
+                          on_bus_lost);
             Utils.get_usermanager ().notify["is-loaded"].connect (on_usermanager_loaded);
 
             loop.run ();
         }
 
-        private void on_bust_lost (DBusConnection connection, string name) {
+        private void on_bus_lost (DBusConnection connection, string name) {
             warning ("Could not acquire name: %s\n", name);
         }
 
