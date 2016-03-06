@@ -20,8 +20,8 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace PC.Daemon.AppLock {
-    public class AppLockCore : GLib.Object, ExecMonitor {
+namespace PC.Daemon {
+    public class Core : GLib.Object, ExecMonitor {
         public bool valid = true;
         public KeyFile key_file;
 
@@ -35,7 +35,7 @@ namespace PC.Daemon.AppLock {
         private Polkit.Authority authority;
         private Server server;
 
-        public AppLockCore (Act.User _user, Server _server) {
+        public Core (Act.User _user, Server _server) {
             user = _user;
             server = _server;
             allowed_executables = new List<string> ();
@@ -52,13 +52,13 @@ namespace PC.Daemon.AppLock {
 
             key_file = new KeyFile ();
 
-            string lock_path = Utils.build_app_lock_path (user);
+            string lock_path = Utils.build_daemon_conf_path (user);
             if (FileUtils.test (lock_path, FileTest.EXISTS)) {
                 try {
-                    key_file.load_from_file (Utils.build_app_lock_path (user), 0);
+                    key_file.load_from_file (Utils.build_daemon_conf_path (user), 0);
 
-                    targets = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.APP_LOCK_TARGETS);
-                    admin = key_file.get_boolean (Vars.DAEMON_GROUP, Vars.APP_LOCK_ADMIN);
+                    targets = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_TARGETS);
+                    admin = key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ADMIN);
 
                     valid = targets.length > 0;
                 } catch (FileError e) {

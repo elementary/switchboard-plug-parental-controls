@@ -33,8 +33,8 @@ namespace PC.Daemon {
         }
 
         public static int main (string[] args) {
-            Process.signal (ProcessSignal.INT, on_exit);
-            Process.signal (ProcessSignal.TERM, on_exit);
+            GLib.Process.signal (ProcessSignal.INT, on_exit);
+            GLib.Process.signal (ProcessSignal.TERM, on_exit);
 
             instance = new Daemon ();
             return instance.run (args);
@@ -83,7 +83,7 @@ namespace PC.Daemon {
 
         private static void terminate (int exit_code = 0) {
             loop.quit ();
-            Process.exit (exit_code);            
+            GLib.Process.exit (exit_code);            
         }
     }
 }

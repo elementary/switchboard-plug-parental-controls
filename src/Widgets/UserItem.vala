@@ -40,17 +40,9 @@ namespace PC.Widgets {
             user.changed.connect (update_ui);
 
             master_switch.notify["active"].connect (() => {
-                bool active = master_switch.active;
+                bool active = master_switch.get_active ();
                 page.sensitive = active;
                 page.set_active (active);
-
-                if (Utils.get_permission ().get_allowed ()) {
-                    if (active) {
-                        Utils.call_cli ({"--user", user.get_user_name (), "--enable-restrict"});
-                    } else {
-                        Utils.call_cli ({"--user", user.get_user_name (), "--disable-restrict"});
-                    }
-                }
             });
 
             update_ui ();

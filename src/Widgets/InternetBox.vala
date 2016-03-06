@@ -136,8 +136,8 @@ namespace PC.Widgets {
         private void load_existing () {
             var key_file = new KeyFile ();
             try {
-                key_file.load_from_file (Utils.build_app_lock_path (user), 0);
-                urls = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.BLOCK_URLS);
+                key_file.load_from_file (Utils.build_daemon_conf_path (user), 0);
+                urls = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_BLOCK_URLS);
                 foreach (string url in urls) {
                     add_entry (new UrlEntry (url));
                 }

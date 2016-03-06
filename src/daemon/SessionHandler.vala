@@ -25,7 +25,7 @@
         private const int MINUTE_INTERVAL = 60;
         private const int HOUR_INTERVAL = 3600;
 
-        public AppLock.AppLockCore app_lock_core;
+        public Core core;
         public IptablesHelper iptables_helper;
 
         private Session session;
@@ -36,11 +36,11 @@
             server = Server.get_default ();
             Utils.set_user_name (session.name);
 
-            app_lock_core = new AppLock.AppLockCore (Utils.get_current_user (), server);    
+            core = new Core (Utils.get_current_user (), server);    
 
             string[] block_urls = {};
             try {
-                block_urls = app_lock_core.key_file.get_string_list (Vars.DAEMON_GROUP, Vars.BLOCK_URLS);
+                block_urls = core.key_file.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_BLOCK_URLS);
             } catch (KeyFileError e) {
                 warning ("%s\n", e.message);
             }
@@ -50,15 +50,15 @@
 
         public void start () {
             try {
-                if (!app_lock_core.key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_ACTIVE)) {
+                if (!core.key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ACTIVE)) {
                     return;
                 }
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
 
-            if (app_lock_core.valid) {
-                app_lock_core.start.begin ();
+            if (core.valid) {
+                core.start.begin ();
             }
 
             if (iptables_helper.valid) {
@@ -116,7 +116,7 @@
         }
 
         public void stop () {
-            app_lock_core.stop ();
+            core.stop ();
             iptables_helper.reset ();
         }
 

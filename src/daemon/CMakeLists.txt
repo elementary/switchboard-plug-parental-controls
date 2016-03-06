@@ -9,9 +9,8 @@ set (EXEC_MONITOR_NAME pantheon-exec-monitor)
 
 vala_precompile (VALA_C ${DAEMON_EXEC_NAME}
     Daemon.vala
-    AppLockCore.vala
+    Core.vala
     Process.vala
-    #AppLockDialog.vala
     IptablesHelper.vala
     SessionManager.vala
     SessionHandler.vala

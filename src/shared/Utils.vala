@@ -59,13 +59,17 @@ namespace PC {
             }
 
             try {
-                string[] spawn_env = Environ.get ();
+                Pid child_pid;
                 Process.spawn_async ("/",
                                     spawn_args,
-                                    spawn_env,
-                                    SpawnFlags.SEARCH_PATH,
+                                    Environ.get (),
+                                    SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
                                     null,
-                                    null);
+                                    out child_pid);
+                ChildWatch.add (child_pid, (pid, status) => {
+                    Process.close_pid (pid);
+                });
+
             } catch (SpawnError e) {
                 warning ("%s\n", e.message);
             }
@@ -93,14 +97,8 @@ namespace PC {
             return current_user;
         }
 
-        public static string? build_app_lock_path (Act.User user) {
+        public static string? build_daemon_conf_path (Act.User user) {
             return Path.build_filename (user.get_home_dir (), Vars.DAEMON_CONF_DIR);
-        }
-
-        public static void try_lock_dock_for_user (string user_name, bool lock) {
-            if (Utils.get_permission ().allowed) {
-                Utils.call_cli ({"--home-dir", user_name, "--lock-dock", (!lock).to_string ()});
-            }
         }
 
         public static void set_user_name (string _user_name) {

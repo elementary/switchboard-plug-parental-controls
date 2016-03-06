@@ -23,6 +23,7 @@
 namespace PC.Widgets {
     public class ControlPage : Gtk.Box {
         public Act.User user;
+        private GeneralBox general_box;
         private AppsBox apps_box;
         private InternetBox internet_box;
         private KeyFile key_file;
@@ -38,8 +39,8 @@ namespace PC.Widgets {
             hexpand = true;
             orientation = Gtk.Orientation.VERTICAL;
 
-            var general = new GeneralBox (user);
-            general.expand = true;
+            general_box = new GeneralBox (user);
+            general_box.expand = true;
 
             apps_box = new AppsBox (user);
             apps_box.expand = true;
@@ -50,7 +51,7 @@ namespace PC.Widgets {
             internet_box.update_key_file.connect (on_update_key_file);
 
             var stack = new Gtk.Stack ();
-            stack.add_titled (general, "general", _("General"));
+            stack.add_titled (general_box, "general", _("General"));
             stack.add_titled (internet_box, "internet", _("Internet"));
             stack.add_titled (apps_box, "apps", _("Applications"));
 
@@ -69,6 +70,17 @@ namespace PC.Widgets {
 
         public void set_active (bool active) {
             apps_box.set_active (active);
+
+            if (Utils.get_permission ().get_allowed ()) {
+                if (active) {
+                    general_box.refresh ();
+                    Utils.call_cli ({"--user", user.get_user_name (), "--enable-restrict"});
+                } else {
+                    general_box.set_lock_dock_active (false);
+                    general_box.set_printer_active (true);                    
+                    Utils.call_cli ({"--user", user.get_user_name (), "--disable-restrict"});
+                }
+            }            
         }
 
         private void on_update_key_file () {
@@ -76,12 +88,12 @@ namespace PC.Widgets {
                 return;
             }
 
-            key_file.set_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_ACTIVE, apps_box.daemon_active);
-            key_file.set_string_list (Vars.DAEMON_GROUP, Vars.APP_LOCK_TARGETS, apps_box.targets);
-            key_file.set_boolean (Vars.DAEMON_GROUP, Vars.APP_LOCK_ADMIN, apps_box.admin);
-            key_file.set_string_list (Vars.DAEMON_GROUP, Vars.BLOCK_URLS, internet_box.urls);
+            key_file.set_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ACTIVE, apps_box.daemon_active);
+            key_file.set_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_TARGETS, apps_box.targets);
+            key_file.set_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ADMIN, apps_box.admin);
+            key_file.set_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_BLOCK_URLS, internet_box.urls);
 
-            Utils.call_cli ({ "--set-contents", key_file.to_data (), "--file", Utils.build_app_lock_path (user) });
+            Utils.call_cli ({ "--set-contents", key_file.to_data (), "--file", Utils.build_daemon_conf_path (user) });
         }
     }
 }

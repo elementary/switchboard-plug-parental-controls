@@ -22,12 +22,7 @@
 
 namespace PC.Widgets {
     public class GeneralBox : Gtk.Box {
-        private enum WeekType {
-            DAYS,
-            END
-        }
-
-        private string conf_dir = "";
+        private string plank_conf_file_path = "";
         private Act.User user;
         private Gtk.CheckButton dock_btn;
         private Gtk.CheckButton print_btn;
@@ -41,7 +36,7 @@ namespace PC.Widgets {
 
         public GeneralBox (Act.User user) {
             this.user = user;
-            conf_dir = user.get_home_dir () + Vars.PLANK_CONF_DIR;
+            plank_conf_file_path = Path.build_filename (user.get_home_dir (), Vars.PLANK_CONF_DIR);
 
             margin_start = margin_end = 12;
             spacing = 12;
@@ -113,6 +108,11 @@ namespace PC.Widgets {
             this.add (limit_box);
             this.add (frame);
             this.show_all ();
+        }
+
+        public void refresh () {
+            on_dock_btn_activate ();
+            on_print_conf_activate ();
         }
 
         public void reset () {
@@ -196,7 +196,7 @@ namespace PC.Widgets {
 
         private void monitor_updates () {
             try {
-                var monitor = File.new_for_path (conf_dir).monitor_file (FileMonitorFlags.NONE);
+                var monitor = File.new_for_path (plank_conf_file_path).monitor_file (FileMonitorFlags.NONE);
                 monitor.changed.connect (update);
             } catch (IOError e) {
                 warning ("%s\n", e.message);
@@ -206,7 +206,7 @@ namespace PC.Widgets {
         private void update () {
             var key_file = new KeyFile ();
             try {
-                key_file.load_from_file (conf_dir, KeyFileFlags.NONE);
+                key_file.load_from_file (plank_conf_file_path, KeyFileFlags.NONE);
                 dock_btn.active = !key_file.get_boolean ("PlankDockPreferences", "LockItems");
             } catch (FileError e) {
                 warning ("%s\n", e.message);
@@ -225,34 +225,40 @@ namespace PC.Widgets {
         }
 
         private void on_dock_btn_activate () {
-            Utils.try_lock_dock_for_user (user.get_user_name (), dock_btn.get_active ());
+            set_lock_dock_active (!dock_btn.get_active ());
+        }
+
+        public void set_lock_dock_active (bool active) {
+            if (Utils.get_permission ().get_allowed ()) {
+                Utils.call_cli ({"--user", user.get_user_name (), "--lock-dock", active.to_string ()});
+            }
         }
 
         private void on_print_conf_activate () {
+            set_printer_active (print_btn.get_active ());
+        }
+
+        public void set_printer_active (bool active) {
             var builder = new VariantBuilder (new VariantType ("as"));
             builder.add ("s", user.get_user_name ());
 
             string method = "PrinterSetUsersDenied";
-            if (print_btn.get_active ()) {
+            if (active) {
                 method = "PrinterSetUsersAllowed";
             }
 
             try {
                 var conn = Bus.get_sync (BusType.SYSTEM);
                 foreach (string printer in get_printers ()) {
-                    try {
-                        conn.call_sync ("org.opensuse.CupsPkHelper.Mechanism",
+                    conn.call_sync ("org.opensuse.CupsPkHelper.Mechanism",
                                     "/",
                                     "org.opensuse.CupsPkHelper.Mechanism",
                                     method,
                                     new Variant ("(sas)", printer, builder),
                                     null,
                                     0, -1);
-                    } catch (Error e) {
-                        warning ("%s\n", e.message);
-                    } 
                 }
-            } catch (IOError e) {
+            } catch (Error e) {
                 warning ("%s\n", e.message);
             } 
         }  
@@ -287,7 +293,6 @@ namespace PC.Widgets {
         }
 
         private string[] get_printers () {
-            /* Less hacky way other than using cups vapi? */
             string[] retval = {};
             string path = "/etc/cups/ppd";
             var file = File.new_for_path (path);

@@ -29,11 +29,10 @@ namespace PC.Vars {
     public const string PLANK_CONF_DIR = "/.config/plank/dock1/settings";
     public const string DAEMON_CONF_DIR = "/.config/pantheon-parental-controls-daemon.conf";
     public const string DAEMON_GROUP = "PCDaemon";
-    public const string DAEMON_ACTIVE = "Active";
-    public const string APP_LOCK_TYPE = "Type";
-    public const string APP_LOCK_TARGETS = "Targets";
-    public const string APP_LOCK_ADMIN = "Admin";
-    public const string BLOCK_URLS = "BlockUrls";
+    public const string DAEMON_KEY_ACTIVE = "Active";
+    public const string DAEMON_KEY_TARGETS = "Targets";
+    public const string DAEMON_KEY_ADMIN = "Admin";
+    public const string DAEMON_KEY_BLOCK_URLS = "BlockUrls";
     public const string PAM_CONF_START = "## PANTHEON_PARENTAL_CONTROLS_START";
     public const string PAM_CONF_END = "## PANTHEON_PARENTAL_CONTROLS_END";
     public const string PAM_CONF_REGEX = PAM_CONF_START + "|" + PAM_CONF_END;

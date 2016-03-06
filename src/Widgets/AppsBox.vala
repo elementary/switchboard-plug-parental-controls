@@ -227,9 +227,9 @@ namespace PC.Widgets {
         private void load_existing () {
             var key_file = new KeyFile ();
             try {
-                key_file.load_from_file (Utils.build_app_lock_path (user), 0);
-                string[] _targets = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.APP_LOCK_TARGETS);
-                daemon_active = key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_ACTIVE);
+                key_file.load_from_file (Utils.build_daemon_conf_path (user), 0);
+                string[] _targets = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_TARGETS);
+                daemon_active = key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ACTIVE);
                 foreach (var info in AppInfo.get_all ()) {
                     if (info.should_show ()
                         && Environment.find_program_in_path (info.get_executable ()) in _targets) {

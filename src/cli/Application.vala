@@ -22,9 +22,8 @@
 
 namespace PC.Cli {
     public class App : Application {
-        private const string PLANK_CONF_DIR = "/.config/plank/dock1/settings";
         private const string TIME_CONF_FILE = "/etc/security/time.conf";
-        private string conf_dir = "";
+        private string plank_conf_file_path = "";
 
         public App () {
             Object (flags: ApplicationFlags.HANDLES_COMMAND_LINE);
@@ -37,7 +36,6 @@ namespace PC.Cli {
 
         private int _command_line (ApplicationCommandLine command_line) {
             string? user = null;
-            string? home_dir = null;
             string? restrict_pam_line = null;
             string? lock_dock = null;
             string? set_contents = null;
@@ -49,20 +47,21 @@ namespace PC.Cli {
 
             var options = new OptionEntry[9];
             options[0] = { "user", 0, 0, OptionArg.STRING, ref user, "Use specific user", null };
-            options[1] = { "home-dir", 0, 0, OptionArg.FILENAME, ref home_dir, "Use specific home directory", null };
-            options[2] = { "lock-dock", 0, 0, OptionArg.STRING, ref lock_dock, "Lock the given user dock", null };
-            options[3] = { "restrict-pam-line", 0, 0, OptionArg.STRING, ref restrict_pam_line, "Add specified line to pam configuration", null };
-            options[4] = { "remove-restrict", 0, 0, OptionArg.NONE, ref remove_restrict, "Remove all time restrictions for specified user", null };
-            options[5] = { "set-contents", 0, 0, OptionArg.STRING, ref set_contents, "Set contents of specified filename", null };
-            options[6] = { "file", 0, 0, OptionArg.FILENAME, ref file, "A file to write contents to", null };
-            options[7] = { "enable-restrict", 0, 0, OptionArg.NONE, ref enable_restrict, "Enable PAM restrictions for the user", null };
-            options[8] = { "disable-restrict", 0, 0, OptionArg.NONE, ref disable_restrict, "Disable PAM restrictions for the user", null };
+            options[1] = { "lock-dock", 0, 0, OptionArg.STRING, ref lock_dock, "Lock the given user dock", null };
+            options[2] = { "restrict-pam-line", 0, 0, OptionArg.STRING, ref restrict_pam_line, "Add specified line to pam configuration", null };
+            options[3] = { "remove-restrict", 0, 0, OptionArg.NONE, ref remove_restrict, "Remove all time restrictions for specified user", null };
+            options[4] = { "set-contents", 0, 0, OptionArg.STRING, ref set_contents, "Set contents of specified filename", null };
+            options[5] = { "file", 0, 0, OptionArg.FILENAME, ref file, "A file to write contents to", null };
+            options[6] = { "enable-restrict", 0, 0, OptionArg.NONE, ref enable_restrict, "Enable PAM restrictions for the user", null };
+            options[7] = { "disable-restrict", 0, 0, OptionArg.NONE, ref disable_restrict, "Disable PAM restrictions for the user", null };
 
             string[] args = command_line.get_arguments ();
             string*[] _args = new string[args.length];
             for (int i = 0; i < args.length; i++) {
                 _args[i] = args[i];
             }
+
+            print ("called it\n");
 
             try {
                 var opt_context = new OptionContext ("context");
@@ -103,8 +102,17 @@ namespace PC.Cli {
                 pam_writer.add_conf_line (restrict_pam_line, user);
             }
 
-            if (home_dir != null && lock_dock != null) {
-               lock_dock_for_user (home_dir, bool.parse (lock_dock.to_string ()));
+            if (user != null && lock_dock != null) {
+                var loop = new MainLoop ();
+
+                Utils.get_usermanager ().notify["is-loaded"].connect (() => {
+                    if (Utils.get_usermanager ().is_loaded) {
+                        lock_dock_for_user (user, bool.parse (lock_dock));
+                        loop.quit ();
+                    }
+                });
+
+                loop.run ();
             }
 
             if (set_contents != null && file != null) {
@@ -153,31 +161,27 @@ namespace PC.Cli {
             }
         }
 
-        private void lock_dock_for_user (string home_dir, bool lock) {
-            conf_dir = home_dir + PLANK_CONF_DIR;
-            if (conf_dir != "" && File.new_for_path (conf_dir).query_exists ()) {
+        private void lock_dock_for_user (string user, bool lock) {
+            plank_conf_file_path = Path.build_filename (Utils.get_usermanager ().get_user (user).get_home_dir (), Vars.PLANK_CONF_DIR);
+            if (plank_conf_file_path != "" && File.new_for_path (plank_conf_file_path).query_exists ()) {
                 var key_file = new KeyFile ();
-                var flags = KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS;
                 try {
-                    key_file.load_from_file (conf_dir, flags);
+                    key_file.load_from_file (plank_conf_file_path, KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS);
                 } catch (KeyFileError e) {
                     warning ("%s\n", e.message);
                 } catch (FileError e) {
                     warning ("%s\n", e.message);
                 }  
-                              
+                
+                print ("setting boolean: %s\n", lock.to_string ());                              
                 key_file.set_boolean ("PlankDockPreferences", "LockItems", lock);
 
                 try {
-                    key_file.save_to_file (conf_dir);
+                    key_file.save_to_file (plank_conf_file_path);
                 } catch (FileError e) {
                     warning ("%s\n", e.message);
                 }       
             }
-        }
-
-        public override void activate () {
-
         }
 
         public override int command_line (ApplicationCommandLine command_line) {

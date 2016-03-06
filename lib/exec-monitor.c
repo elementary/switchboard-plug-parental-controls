@@ -1,6 +1,4 @@
 /*
- * Requires some 2.6.x Linux kernel with proc connector enabled.
- *
  * (C) 2007-2010 Sebastian Krahmer <krahmer@suse.de> original netlink handling
  * stolen from an proc-connector example, copyright folows:
  *
@@ -9,7 +7,7 @@
  * Original copyright notice follows:
  *
  * Copyright (C) 2005 BULL SA.
- * Written by Guillaume Thouvenin <guillaume.thouvenin@bull.net>
+ * Written by Guillaume Thouvenin <guillaume.thouvenin@bull.net> and Adam Bieńkowski <donadigos159@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
