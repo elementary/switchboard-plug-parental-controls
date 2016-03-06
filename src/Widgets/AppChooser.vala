@@ -69,6 +69,7 @@ namespace PC.Widgets {
 
             search_entry = new Gtk.SearchEntry ();
             search_entry.placeholder_text = _("Search Applications");
+            search_entry.search_changed.connect (apply_filter);
 
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.height_request = 200;
@@ -81,7 +82,7 @@ namespace PC.Widgets {
             listbox.height_request = 250;
             listbox.width_request = 200;
             listbox.set_sort_func (sort_function);
-            listbox.set_filter_func (filter_function);
+            apply_filter ();
             scrolled.add (listbox);
 
             listbox.row_activated.connect (on_app_selected);
@@ -124,6 +125,10 @@ namespace PC.Widgets {
             var app_row = (AppRow)row.get_child ();
             app_chosen (app_row.info);
             hide ();
+        }
+
+        private void apply_filter () {
+            listbox.set_filter_func (filter_function);
         }
     }
 }
