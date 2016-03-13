@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-02-15 16:10-0200\n"
-"PO-Revision-Date: 2015-11-04 16:57+0000\n"
+"PO-Revision-Date: 2016-03-12 15:30+0000\n"
 "Last-Translator: ProsjektX <Unknown>\n"
 "Language-Team: Norwegian Bokmal <nb@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-29 06:06+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-03-13 05:58+0000\n"
+"X-Generator: Launchpad (build 17939)\n"
 
 #: ../src/Widgets/GeneralBox.vala:53
 msgid "Allow this user to:"
@@ -23,11 +23,11 @@ msgstr "Tillat denne bruker å:"
 
 #: ../src/Widgets/GeneralBox.vala:57
 msgid "Modify the dock"
-msgstr ""
+msgstr "Modifisere dokken"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Configure printing"
-msgstr ""
+msgstr "Konfigurere utskrifter"
 
 #: ../src/Widgets/GeneralBox.vala:69
 msgid "Limit computer use:"
@@ -131,7 +131,7 @@ msgstr "Foreldrekontroll"
 
 #: ../src/Plug.vala:155
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "Konfigurere tidsbegrensninger og begrens applikasjonsbruk"
 
 #: ../src/daemon/AppLockDialog.vala:27
 msgid "You cannot run this application"
@@ -143,11 +143,11 @@ msgstr "Du har ikke rettigheter for å kjøre denne applikasjonen."
 
 #: ../src/daemon/Daemon.vala:201
 msgid "%ld hour"
-msgstr ""
+msgstr "%ld time"
 
 #: ../src/daemon/Daemon.vala:201
 msgid "%ld hours"
-msgstr ""
+msgstr "%ld timer"
 
 #: ../src/daemon/Daemon.vala:204
 msgid "and"
@@ -163,11 +163,11 @@ msgstr "minutter"
 
 #: ../src/daemon/Daemon.vala:208
 msgid "%ld minute"
-msgstr ""
+msgstr "%ld minutt"
 
 #: ../src/daemon/Daemon.vala:208
 msgid "%ld minutes"
-msgstr ""
+msgstr "%ld minutter"
 
 #: ../src/daemon/Daemon.vala:211
 msgid "The computer will lock after %s."
@@ -176,8 +176,8 @@ msgstr "Datamaskinen vil låses etter %s."
 #: ../src/daemon/Daemon.vala:213
 msgid ""
 "Make sure to close all applications before your computer will be locked."
-msgstr ""
+msgstr "Sørg for å lukke alle applikasjoner før datamaskinen vil bli låst."
 
 #: ../src/daemon/Daemon.vala:216
 msgid "Time left"
-msgstr ""
+msgstr "Gjenværende tid"
