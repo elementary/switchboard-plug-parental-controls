@@ -70,7 +70,7 @@ namespace PC {
             var infobar = new Gtk.InfoBar ();
             var infobar_content = infobar.get_content_area ();
             var infobar_action = (Gtk.Container) infobar.get_action_area ();
-            infobar_content.add (new Gtk.Label ("Some settings require administrator rights to be changed"));
+            infobar_content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
             infobar_action.add (lock_button);
 
             Utils.get_permission ().notify["allowed"].connect (() => {
