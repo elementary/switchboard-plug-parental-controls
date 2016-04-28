@@ -105,7 +105,7 @@ namespace PC.Widgets {
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.hexpand = scrolled.vexpand = true;
 
-            var plabel = new Gtk.Label ("Add apps to prevent %s from using them:".printf (user.get_real_name ()));
+            var plabel = new Gtk.Label (_("Add apps to prevent %s from using them:").printf (user.get_real_name ()));
             plabel.margin_start = 6;
             plabel.halign = Gtk.Align.START;
             plabel.get_style_context ().add_class ("h4");
