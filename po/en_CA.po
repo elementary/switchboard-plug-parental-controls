@@ -7,55 +7,71 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-02-15 16:10-0200\n"
-"PO-Revision-Date: 2016-03-20 18:11+0000\n"
-"Last-Translator: Daniel Fore <Unknown>\n"
+"POT-Creation-Date: 2016-04-24 10:53-0300\n"
+"PO-Revision-Date: 2016-03-19 19:58+0000\n"
+"Last-Translator: chilledfrogs <Unknown>\n"
 "Language-Team: English (Canada) <en_CA@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-03-21 06:11+0000\n"
-"X-Generator: Launchpad (build 17947)\n"
+"X-Launchpad-Export-Date: 2016-04-28 06:06+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 
-#: ../src/Widgets/GeneralBox.vala:53
+#: ../src/Translation.vala:23
+msgid "Manage parental control settings"
+msgstr ""
+
+#: ../src/Translation.vala:24
+msgid "Authentication is required to change parental control settings"
+msgstr ""
+
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Search Applications"
+
+#: ../src/Widgets/UserList.vala:42
+msgid "My Account"
+msgstr "My Account"
+
+#: ../src/Widgets/UserList.vala:46
+msgid "Other Accounts"
+msgstr "Other Accounts"
+
+#: ../src/Widgets/GeneralBox.vala:48
 msgid "Allow this user to:"
 msgstr "Allow this user to:"
 
-#: ../src/Widgets/GeneralBox.vala:57
+#: ../src/Widgets/GeneralBox.vala:52
 msgid "Modify the dock"
 msgstr "Modify the dock"
 
-#: ../src/Widgets/GeneralBox.vala:62
+#: ../src/Widgets/GeneralBox.vala:57
 msgid "Configure printing"
 msgstr "Configure printing"
 
-#: ../src/Widgets/GeneralBox.vala:69
+#: ../src/Widgets/GeneralBox.vala:64
 msgid "Limit computer use:"
 msgstr "Limit computer use:"
 
-#: ../src/Widgets/GeneralBox.vala:74
+#: ../src/Widgets/GeneralBox.vala:69
 msgid "On weekdays and weekends"
 msgstr "On weekdays and weekends"
 
-#: ../src/Widgets/GeneralBox.vala:75
+#: ../src/Widgets/GeneralBox.vala:70
 msgid "Only on weekdays"
 msgstr "Only on weekdays"
 
-#: ../src/Widgets/GeneralBox.vala:76
+#: ../src/Widgets/GeneralBox.vala:71
 msgid "Only on weekends"
 msgstr "Only on weekends"
 
-#: ../src/Widgets/GeneralBox.vala:92
+#: ../src/Widgets/GeneralBox.vala:87
 msgid "Weekdays"
 msgstr "Weekdays"
 
-#: ../src/Widgets/GeneralBox.vala:96
+#: ../src/Widgets/GeneralBox.vala:91
 msgid "Weekends"
 msgstr "Weekends"
-
-#: ../src/Widgets/AppChooser.vala:74
-msgid "Search Applications"
-msgstr "Search Applications"
 
 #: ../src/Widgets/WeekSpinBox.vala:65
 msgid "From:"
@@ -69,43 +85,59 @@ msgstr "To:"
 msgid ":"
 msgstr ":"
 
-#: ../src/Widgets/ControlPage.vala:39
+#: ../src/Widgets/ControlPage.vala:54
 msgid "General"
 msgstr "General"
 
-#: ../src/Widgets/ControlPage.vala:40
+#: ../src/Widgets/ControlPage.vala:55
 msgid "Internet"
 msgstr "Internet"
 
-#: ../src/Widgets/ControlPage.vala:41
+#: ../src/Widgets/ControlPage.vala:56
 msgid "Applications"
 msgstr "Applications"
 
-#: ../src/Widgets/UserList.vala:42
-msgid "My Account"
-msgstr "My Account"
-
-#: ../src/Widgets/UserList.vala:46
-msgid "Other Accounts"
-msgstr "Other Accounts"
-
-#: ../src/Widgets/AppsBox.vala:86
+#: ../src/Widgets/AppsBox.vala:93
 msgid "Allow access to these apps with admin permission"
 msgstr "Allow access to these apps with admin permission"
 
-#: ../src/Widgets/AppsBox.vala:117
+#: ../src/Widgets/AppsBox.vala:108
+msgid "Add apps to prevent %s from using them:"
+msgstr ""
+
+#: ../src/Widgets/AppsBox.vala:124
 msgid "Add Prevented Apps…"
 msgstr "Add Prevented Apps…"
 
-#: ../src/Widgets/AppsBox.vala:121
+#: ../src/Widgets/AppsBox.vala:128
 msgid "Remove Selected App"
 msgstr "Remove Selected App"
 
-#: ../src/Plug.vala:90
+#: ../src/Widgets/InternetBox.vala:92
+msgid "Blacklist the following sites:"
+msgstr ""
+
+#: ../src/Widgets/InternetBox.vala:108
+msgid "Add URL"
+msgstr ""
+
+#: ../src/Widgets/InternetBox.vala:115
+msgid "Add a new URL, for example: google.com"
+msgstr ""
+
+#: ../src/Widgets/InternetBox.vala:116
+msgid "Invalid URL"
+msgstr ""
+
+#: ../src/Plug.vala:73
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+
+#: ../src/Plug.vala:92
 msgid "No users to edit"
 msgstr "No users to edit"
 
-#: ../src/Plug.vala:90
+#: ../src/Plug.vala:92
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -117,68 +149,68 @@ msgstr ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 
-#: ../src/Plug.vala:92
+#: ../src/Plug.vala:94
 msgid "Configure User Accounts"
 msgstr "Configure User Accounts"
 
-#: ../src/Plug.vala:94
+#: ../src/Plug.vala:96
 msgid "Open Users settings"
 msgstr "Open Users settings"
 
-#: ../src/Plug.vala:154
+#: ../src/Plug.vala:158
 msgid "Parental Control"
 msgstr "Parental Control"
 
-#: ../src/Plug.vala:155
+#: ../src/Plug.vala:159
 msgid "Configure time limits and restrict application usage"
 msgstr "Configure time limits and restrict application usage"
 
-#: ../src/daemon/AppLockDialog.vala:27
-msgid "You cannot run this application"
-msgstr "You cannot run this application"
-
-#: ../src/daemon/AppLockDialog.vala:28
-msgid "You are not permitted to run this application."
-msgstr "You are not permitted to run this application."
-
-#: ../src/daemon/Daemon.vala:201
-msgid "%ld hour"
-msgstr "%ld hour"
-
-#: ../src/daemon/Daemon.vala:201
-msgid "%ld hours"
-msgstr "%ld hours"
-
-#: ../src/daemon/Daemon.vala:204
-msgid "and"
-msgstr "and"
-
-#: ../src/daemon/Daemon.vala:204
-msgid "minute"
-msgstr "minute"
-
-#: ../src/daemon/Daemon.vala:204
-msgid "minutes"
-msgstr "minutes"
-
-#: ../src/daemon/Daemon.vala:208
-msgid "%ld minute"
-msgstr "%ld minute"
-
-#: ../src/daemon/Daemon.vala:208
-msgid "%ld minutes"
-msgstr "%ld minutes"
-
-#: ../src/daemon/Daemon.vala:211
-msgid "The computer will lock after %s."
-msgstr "The computer will lock after %s."
-
-#: ../src/daemon/Daemon.vala:213
+#: ../src/client/Client.vala:125
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Make sure to close all applications before your computer will be locked."
 
-#: ../src/daemon/Daemon.vala:216
+#: ../src/client/Client.vala:129
+msgid "%ld hour"
+msgstr "%ld hour"
+
+#: ../src/client/Client.vala:129
+msgid "%ld hours"
+msgstr "%ld hours"
+
+#: ../src/client/Client.vala:133
+msgid "%ld minute"
+msgstr "%ld minute"
+
+#: ../src/client/Client.vala:133
+msgid "%ld minutes"
+msgstr "%ld minutes"
+
+#: ../src/client/Client.vala:136
+msgid "This computer will lock after %s %s. %s"
+msgstr ""
+
+#: ../src/client/Client.vala:138
 msgid "Time left"
 msgstr "Time left"
+
+#: ../src/client/AppLockDialog.vala:27
+msgid "You cannot run this application"
+msgstr "You cannot run this application"
+
+#: ../src/client/AppLockDialog.vala:28
+msgid "You are not permitted to run this application."
+msgstr "You are not permitted to run this application."
+
+#~ msgid "The computer will lock after %s."
+#~ msgstr "The computer will lock after %s."
+
+#~ msgid "minute"
+#~ msgstr "minute"
+
+#~ msgid "and"
+#~ msgstr "and"
+
+#~ msgid "minutes"
+#~ msgstr "minutes"

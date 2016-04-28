@@ -7,55 +7,71 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-02-15 16:10-0200\n"
+"POT-Creation-Date: 2016-04-24 10:53-0300\n"
 "PO-Revision-Date: 2016-02-19 19:15+0000\n"
 "Last-Translator: kay van der Zander <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-02-29 06:06+0000\n"
-"X-Generator: Launchpad (build 17925)\n"
+"X-Launchpad-Export-Date: 2016-04-28 06:06+0000\n"
+"X-Generator: Launchpad (build 17995)\n"
 
-#: ../src/Widgets/GeneralBox.vala:53
+#: ../src/Translation.vala:23
+msgid "Manage parental control settings"
+msgstr ""
+
+#: ../src/Translation.vala:24
+msgid "Authentication is required to change parental control settings"
+msgstr ""
+
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Zoek programma's"
+
+#: ../src/Widgets/UserList.vala:42
+msgid "My Account"
+msgstr "Mijn account"
+
+#: ../src/Widgets/UserList.vala:46
+msgid "Other Accounts"
+msgstr "Andere accounts"
+
+#: ../src/Widgets/GeneralBox.vala:48
 msgid "Allow this user to:"
 msgstr "Geef deze gebruiker toegang tot:"
 
-#: ../src/Widgets/GeneralBox.vala:57
+#: ../src/Widgets/GeneralBox.vala:52
 msgid "Modify the dock"
 msgstr "aanpassingen maken aan het dock"
 
-#: ../src/Widgets/GeneralBox.vala:62
+#: ../src/Widgets/GeneralBox.vala:57
 msgid "Configure printing"
 msgstr "printers configureren"
 
-#: ../src/Widgets/GeneralBox.vala:69
+#: ../src/Widgets/GeneralBox.vala:64
 msgid "Limit computer use:"
 msgstr "limiteer het computer gebruik"
 
-#: ../src/Widgets/GeneralBox.vala:74
+#: ../src/Widgets/GeneralBox.vala:69
 msgid "On weekdays and weekends"
 msgstr "Op werkdagen en weekenden"
 
-#: ../src/Widgets/GeneralBox.vala:75
+#: ../src/Widgets/GeneralBox.vala:70
 msgid "Only on weekdays"
 msgstr "alleen op werkdagen"
 
-#: ../src/Widgets/GeneralBox.vala:76
+#: ../src/Widgets/GeneralBox.vala:71
 msgid "Only on weekends"
 msgstr "alleen op weekenden"
 
-#: ../src/Widgets/GeneralBox.vala:92
+#: ../src/Widgets/GeneralBox.vala:87
 msgid "Weekdays"
 msgstr "Werkdagen"
 
-#: ../src/Widgets/GeneralBox.vala:96
+#: ../src/Widgets/GeneralBox.vala:91
 msgid "Weekends"
 msgstr "Weekenden"
-
-#: ../src/Widgets/AppChooser.vala:74
-msgid "Search Applications"
-msgstr "Zoek programma's"
 
 #: ../src/Widgets/WeekSpinBox.vala:65
 msgid "From:"
@@ -69,43 +85,59 @@ msgstr "Tot:"
 msgid ":"
 msgstr ":"
 
-#: ../src/Widgets/ControlPage.vala:39
+#: ../src/Widgets/ControlPage.vala:54
 msgid "General"
 msgstr "Algemeen"
 
-#: ../src/Widgets/ControlPage.vala:40
+#: ../src/Widgets/ControlPage.vala:55
 msgid "Internet"
 msgstr "Internet"
 
-#: ../src/Widgets/ControlPage.vala:41
+#: ../src/Widgets/ControlPage.vala:56
 msgid "Applications"
 msgstr "Programma's"
 
-#: ../src/Widgets/UserList.vala:42
-msgid "My Account"
-msgstr "Mijn account"
-
-#: ../src/Widgets/UserList.vala:46
-msgid "Other Accounts"
-msgstr "Andere accounts"
-
-#: ../src/Widgets/AppsBox.vala:86
+#: ../src/Widgets/AppsBox.vala:93
 msgid "Allow access to these apps with admin permission"
 msgstr "Toegang tot deze programma's vereist administrator rechten"
 
-#: ../src/Widgets/AppsBox.vala:117
+#: ../src/Widgets/AppsBox.vala:108
+msgid "Add apps to prevent %s from using them:"
+msgstr ""
+
+#: ../src/Widgets/AppsBox.vala:124
 msgid "Add Prevented Apps…"
 msgstr "Voeg blockerende programma's toe"
 
-#: ../src/Widgets/AppsBox.vala:121
+#: ../src/Widgets/AppsBox.vala:128
 msgid "Remove Selected App"
 msgstr "Verwijder geselecteerde programma"
 
-#: ../src/Plug.vala:90
+#: ../src/Widgets/InternetBox.vala:92
+msgid "Blacklist the following sites:"
+msgstr ""
+
+#: ../src/Widgets/InternetBox.vala:108
+msgid "Add URL"
+msgstr ""
+
+#: ../src/Widgets/InternetBox.vala:115
+msgid "Add a new URL, for example: google.com"
+msgstr ""
+
+#: ../src/Widgets/InternetBox.vala:116
+msgid "Invalid URL"
+msgstr ""
+
+#: ../src/Plug.vala:73
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+
+#: ../src/Plug.vala:92
 msgid "No users to edit"
 msgstr "Geen gebruikers te configureren"
 
-#: ../src/Plug.vala:90
+#: ../src/Plug.vala:92
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -117,69 +149,69 @@ msgstr ""
 "U kunt een gebruiker type veranderen van \"administrator\" naar "
 "\"standaard\" in de gebruikers account instellingen"
 
-#: ../src/Plug.vala:92
+#: ../src/Plug.vala:94
 msgid "Configure User Accounts"
 msgstr "Configureer gebruikers account"
 
-#: ../src/Plug.vala:94
+#: ../src/Plug.vala:96
 msgid "Open Users settings"
 msgstr "Open gebruikers instellingen"
 
-#: ../src/Plug.vala:154
+#: ../src/Plug.vala:158
 msgid "Parental Control"
 msgstr "Ouderlijk toezicht"
 
-#: ../src/Plug.vala:155
+#: ../src/Plug.vala:159
 msgid "Configure time limits and restrict application usage"
 msgstr "Configureer tijds limiten en limiteer programma gebruik"
 
-#: ../src/daemon/AppLockDialog.vala:27
-msgid "You cannot run this application"
-msgstr "U kan dit programm niet uitvoeren"
-
-#: ../src/daemon/AppLockDialog.vala:28
-msgid "You are not permitted to run this application."
-msgstr "U hebt niet de rechten om dit programma uit te voeren"
-
-#: ../src/daemon/Daemon.vala:201
-msgid "%ld hour"
-msgstr "%ld uur"
-
-#: ../src/daemon/Daemon.vala:201
-msgid "%ld hours"
-msgstr "%ld uren"
-
-#: ../src/daemon/Daemon.vala:204
-msgid "and"
-msgstr "en"
-
-#: ../src/daemon/Daemon.vala:204
-msgid "minute"
-msgstr "minuut"
-
-#: ../src/daemon/Daemon.vala:204
-msgid "minutes"
-msgstr "minuten"
-
-#: ../src/daemon/Daemon.vala:208
-msgid "%ld minute"
-msgstr "%ld minuut"
-
-#: ../src/daemon/Daemon.vala:208
-msgid "%ld minutes"
-msgstr "%ld minuten"
-
-#: ../src/daemon/Daemon.vala:211
-msgid "The computer will lock after %s."
-msgstr "Deze computer vergrendeld zich zelf na %s"
-
-#: ../src/daemon/Daemon.vala:213
+#: ../src/client/Client.vala:125
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Zorg ervoor dat alle programma's afgesloten zijn, voordat deze computer zich "
 "zelf vergrendeld"
 
-#: ../src/daemon/Daemon.vala:216
+#: ../src/client/Client.vala:129
+msgid "%ld hour"
+msgstr "%ld uur"
+
+#: ../src/client/Client.vala:129
+msgid "%ld hours"
+msgstr "%ld uren"
+
+#: ../src/client/Client.vala:133
+msgid "%ld minute"
+msgstr "%ld minuut"
+
+#: ../src/client/Client.vala:133
+msgid "%ld minutes"
+msgstr "%ld minuten"
+
+#: ../src/client/Client.vala:136
+msgid "This computer will lock after %s %s. %s"
+msgstr ""
+
+#: ../src/client/Client.vala:138
 msgid "Time left"
 msgstr "Resterende tijd"
+
+#: ../src/client/AppLockDialog.vala:27
+msgid "You cannot run this application"
+msgstr "U kan dit programm niet uitvoeren"
+
+#: ../src/client/AppLockDialog.vala:28
+msgid "You are not permitted to run this application."
+msgstr "U hebt niet de rechten om dit programma uit te voeren"
+
+#~ msgid "The computer will lock after %s."
+#~ msgstr "Deze computer vergrendeld zich zelf na %s"
+
+#~ msgid "minute"
+#~ msgstr "minuut"
+
+#~ msgid "and"
+#~ msgstr "en"
+
+#~ msgid "minutes"
+#~ msgstr "minuten"
