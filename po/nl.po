@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 06:06+0000\n"
+"X-Launchpad-Export-Date: 2016-04-29 06:36+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 
 #: ../src/Translation.vala:23
@@ -203,15 +203,3 @@ msgstr "U kan dit programm niet uitvoeren"
 #: ../src/client/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "U hebt niet de rechten om dit programma uit te voeren"
-
-#~ msgid "The computer will lock after %s."
-#~ msgstr "Deze computer vergrendeld zich zelf na %s"
-
-#~ msgid "minute"
-#~ msgstr "minuut"
-
-#~ msgid "and"
-#~ msgstr "en"
-
-#~ msgid "minutes"
-#~ msgstr "minuten"

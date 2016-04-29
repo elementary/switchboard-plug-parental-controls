@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 06:06+0000\n"
+"X-Launchpad-Export-Date: 2016-04-29 06:36+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 
 #: ../src/Translation.vala:23
@@ -204,15 +204,3 @@ msgstr "Vous ne pouvez pas démarrer cette application"
 #: ../src/client/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Vous n'êtes pas autorisé à démarrer cette application."
-
-#~ msgid "minutes"
-#~ msgstr "minutes"
-
-#~ msgid "and"
-#~ msgstr "et"
-
-#~ msgid "minute"
-#~ msgstr "minute"
-
-#~ msgid "The computer will lock after %s."
-#~ msgstr "L'ordinateur se vérrouillera après %s."

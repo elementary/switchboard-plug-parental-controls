@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-28 06:06+0000\n"
+"X-Launchpad-Export-Date: 2016-04-29 06:36+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 
 #: ../src/Translation.vala:23
@@ -203,15 +203,3 @@ msgstr "Nemôžete spustiť tuto aplikáciu"
 #: ../src/client/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Nie ste oprávnený spustiť túto aplikáciu."
-
-#~ msgid "The computer will lock after %s."
-#~ msgstr "Počítač sa zamkne  po %s."
-
-#~ msgid "minute"
-#~ msgstr "minúta"
-
-#~ msgid "and"
-#~ msgstr "a"
-
-#~ msgid "minutes"
-#~ msgstr "minúty"
