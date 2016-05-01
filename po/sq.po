@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-04-24 10:53-0300\n"
-"PO-Revision-Date: 2015-11-07 18:10+0000\n"
+"PO-Revision-Date: 2016-05-01 01:49+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-29 06:35+0000\n"
+"X-Launchpad-Export-Date: 2016-05-01 05:55+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 
 #: ../src/Translation.vala:23
@@ -172,15 +172,15 @@ msgstr ""
 
 #: ../src/client/Client.vala:129
 msgid "%ld hours"
-msgstr ""
+msgstr "%ld orë"
 
 #: ../src/client/Client.vala:133
 msgid "%ld minute"
-msgstr ""
+msgstr "%ld minutë"
 
 #: ../src/client/Client.vala:133
 msgid "%ld minutes"
-msgstr ""
+msgstr "%ld minuta"
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"
@@ -188,7 +188,7 @@ msgstr ""
 
 #: ../src/client/Client.vala:138
 msgid "Time left"
-msgstr ""
+msgstr "Koha e mbetur"
 
 #: ../src/client/AppLockDialog.vala:27
 msgid "You cannot run this application"

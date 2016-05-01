@@ -8,22 +8,22 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-04-24 10:53-0300\n"
-"PO-Revision-Date: 2016-03-06 07:33+0000\n"
+"PO-Revision-Date: 2016-04-30 11:16+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-04-29 06:36+0000\n"
+"X-Launchpad-Export-Date: 2016-05-01 05:55+0000\n"
 "X-Generator: Launchpad (build 17995)\n"
 
 #: ../src/Translation.vala:23
 msgid "Manage parental control settings"
-msgstr ""
+msgstr "จัดการค่าตั้งการควบคุมโดยผู้ปกครอง"
 
 #: ../src/Translation.vala:24
 msgid "Authentication is required to change parental control settings"
-msgstr ""
+msgstr "ต้องยืนยันตัวตนเพื่อเปลี่ยนแปลงค่าตั้งการควบคุมโดยผู้ปกครอง"
 
 #: ../src/Widgets/AppChooser.vala:71
 msgid "Search Applications"
@@ -103,7 +103,7 @@ msgstr "อนุญาตการเข้าถึงแอพเหล่า
 
 #: ../src/Widgets/AppsBox.vala:108
 msgid "Add apps to prevent %s from using them:"
-msgstr ""
+msgstr "เพิ่มโปรแกรมที่ต้องการป้องกัน %s ไม่ให้ใช้:"
 
 #: ../src/Widgets/AppsBox.vala:124
 msgid "Add Prevented Apps…"
@@ -115,23 +115,23 @@ msgstr "ลบแอพที่เลือกไว้"
 
 #: ../src/Widgets/InternetBox.vala:92
 msgid "Blacklist the following sites:"
-msgstr ""
+msgstr "บล็อกไซต์ดังต่อไปนี้:"
 
 #: ../src/Widgets/InternetBox.vala:108
 msgid "Add URL"
-msgstr ""
+msgstr "เพิ่ม URL"
 
 #: ../src/Widgets/InternetBox.vala:115
 msgid "Add a new URL, for example: google.com"
-msgstr ""
+msgstr "เพิ่ม URL ใหม่ เช่น: google.com"
 
 #: ../src/Widgets/InternetBox.vala:116
 msgid "Invalid URL"
-msgstr ""
+msgstr "URL ไม่ถูกต้อง"
 
 #: ../src/Plug.vala:73
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "ค่าตั้งบางอย่างต้องใช้สิทธิ์ขั้นผู้ดูแลระบบจึงจะสามารถเปลี่ยนแปลงได้"
 
 #: ../src/Plug.vala:92
 msgid "No users to edit"
@@ -187,7 +187,7 @@ msgstr "%ld นาที"
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"
-msgstr ""
+msgstr "คอมพิวเตอร์เครื่องนี้จะล็อคหลังจาก %s %s. %s"
 
 #: ../src/client/Client.vala:138
 msgid "Time left"
