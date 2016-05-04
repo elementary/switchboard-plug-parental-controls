@@ -104,7 +104,8 @@ namespace PC {
             stack.add (main_grid);
             stack.add (alert);
 
-            usermanager.notify["is-loaded"].connect (on_usermanager_loaded);
+            usermanager.notify["is-loaded"].connect (update_user_handling);
+            update_user_handling ();
 
             this.add (stack);
             this.show_all ();
@@ -112,11 +113,7 @@ namespace PC {
             paned.sensitive = Utils.get_permission ().get_allowed ();
         }
 
-        private void on_usermanager_loaded () {
-            if (!usermanager.is_loaded) {
-                return;
-            }
-
+        private void update_user_handling () {
             list.fill ();
 
             usermanager.user_added.connect (on_user_added);

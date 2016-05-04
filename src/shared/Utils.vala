@@ -74,7 +74,7 @@ namespace PC {
         }
 
         public static unowned Act.UserManager? get_usermanager () {
-            if (usermanager != null && usermanager.is_loaded) {
+            if (usermanager != null) {
                 return usermanager;
             }
 

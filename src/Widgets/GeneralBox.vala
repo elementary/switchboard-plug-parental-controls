@@ -73,6 +73,7 @@ namespace PC.Widgets {
             limit_combobox.changed.connect (on_limit_combobox_changed);
 
             limit_switch = new Gtk.Switch ();
+            limit_switch.valign = Gtk.Align.CENTER;
             limit_switch.active = false;
             limit_switch.notify["active"].connect (on_limit_switch_changed);
             limit_method_box.add (limit_switch);
