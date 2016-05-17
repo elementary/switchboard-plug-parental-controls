@@ -42,7 +42,7 @@
             foreach (string url in urls) {
                 string[] addresses = get_addresses_from_url (url);
                 foreach (string address in addresses) {
-                    block_address (address, "-A");
+                    process_adress (address, "-A");
                 }
             }        
         }
@@ -82,7 +82,7 @@
             return result;
         }
 
-        private void block_address (string address, string option) {
+        private void process_adress (string address, string option) {
             try {
                 GLib.Process.spawn_sync ("/",
                                     { IPTABLES_EXEC, option, "OUTPUT", "-p", "tcp", "-d", address, "--dport", DPORT.to_string (), "-j", "REJECT" },
@@ -101,7 +101,7 @@
             foreach (string url in urls) {
                 string[] addresses = get_addresses_from_url (url);
                 foreach (string address in addresses) {
-                    block_address (address, "-D");
+                    process_adress (address, "-D");
                 }
             }  
         }

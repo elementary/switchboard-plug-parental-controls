@@ -35,7 +35,7 @@ namespace PC.Daemon {
         public static int main (string[] args) {
             GLib.Process.signal (ProcessSignal.INT, on_exit);
             GLib.Process.signal (ProcessSignal.TERM, on_exit);
-
+            
             instance = new Daemon ();
             return instance.run (args);
         }

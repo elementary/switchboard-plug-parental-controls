@@ -64,9 +64,11 @@
             }
 
             var current_session = get_current_session ();
-            current_session.unlock.connect (update_session);
-            current_handler = new SessionHandler (current_session);
-            current_handler.start ();
+            if (current_session != null) {
+                current_session.unlock.connect (update_session);
+                current_handler = new SessionHandler (current_session);
+                current_handler.start ();
+            }
         }
     }
  }
