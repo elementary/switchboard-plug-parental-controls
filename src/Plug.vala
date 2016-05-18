@@ -40,7 +40,6 @@ namespace PC {
             stack = new Gtk.Stack ();
 
             var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
-            paned.width_request = 250;
 
             content = new Gtk.Stack ();
             content.hexpand = true;
@@ -56,13 +55,14 @@ namespace PC {
             });
 
             scrolled_window = new Gtk.ScrolledWindow (null, null);
+            scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
             scrolled_window.add (list);
             scrolled_window.vexpand = true;
 
             sidebar.pack_start (scrolled_window, true, true);
 
-            paned.pack1 (sidebar, true, false);
-            paned.pack2 (content, true, true);
+            paned.pack1 (sidebar, false, false);
+            paned.pack2 (content, true, false);
             paned.set_position (240);
 
             var lock_button = new Gtk.LockButton (Utils.get_permission ());
