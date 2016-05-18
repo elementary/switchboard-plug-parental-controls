@@ -33,7 +33,7 @@ namespace PC.Widgets {
 
         private Gtk.ListBox list_box;
         private AppChooser apps_popover;
-        private Gtk.CheckButton admin_check_btn;
+        private Gtk.Switch admin_switch_btn;
         private Gtk.ToolButton remove_button;
         private Gtk.ToolButton clear_button;
 
@@ -90,8 +90,14 @@ namespace PC.Widgets {
             orientation = Gtk.Orientation.VERTICAL;
             spacing = 12;
 
-            admin_check_btn = new Gtk.CheckButton.with_label (_("Allow access to these apps with admin permission"));
-            admin_check_btn.notify["active"].connect (on_changed);
+            var admin_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
+
+            var admin_label = new Gtk.Label (_("Allow access to these apps with admin permission:"));
+            admin_box.add (admin_label);
+
+            admin_switch_btn = new Gtk.Switch ();
+            admin_switch_btn.notify["active"].connect (on_changed);
+            admin_box.add (admin_switch_btn);
 
             var frame = new Gtk.Frame (null);
             frame.hexpand = frame.vexpand = true;
@@ -105,12 +111,12 @@ namespace PC.Widgets {
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.hexpand = scrolled.vexpand = true;
 
-            var plabel = new Gtk.Label (_("Add apps to prevent %s from using them:").printf (user.get_real_name ()));
-            plabel.margin_start = 6;
-            plabel.halign = Gtk.Align.START;
-            plabel.get_style_context ().add_class ("h4");
+            var header_label = new Gtk.Label (_("Add apps to prevent %s from using them:").printf (user.get_real_name ()));
+            header_label.margin_start = 6;
+            header_label.halign = Gtk.Align.START;
+            header_label.get_style_context ().add_class ("h4");
 
-            main_box.add (plabel);
+            main_box.add (header_label);
 
             list_box = new Gtk.ListBox ();
             list_box.row_selected.connect (on_changed);
@@ -149,7 +155,7 @@ namespace PC.Widgets {
             main_box.add (toolbar);
 
             add (frame);
-            add (admin_check_btn);
+            add (admin_box);
 
             load_existing ();
             show_all ();
@@ -219,7 +225,7 @@ namespace PC.Widgets {
                 _targets += Environment.find_program_in_path (entry.get_executable ());
             }
 
-            admin = admin_check_btn.get_active ();
+            admin = admin_switch_btn.get_active ();
             targets = _targets;
             update_key_file ();
         }
