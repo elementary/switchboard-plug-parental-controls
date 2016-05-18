@@ -58,7 +58,7 @@
             try {
                 string? seat_path = get_current_seat_path ();
                 if (seat_path != null) {
-                    ISeat? seat = Bus.get_proxy_sync (BusType.SYSTEM, Vars.LOGIN_IFACE, get_current_seat_path ());
+                    ISeat? seat = Bus.get_proxy_sync (BusType.SYSTEM, Vars.LOGIN_IFACE, seat_path);
                     return Bus.get_proxy_sync (BusType.SYSTEM, Vars.LOGIN_IFACE, seat.active_session.object_path);
                 }
             } catch (IOError e) {

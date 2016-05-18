@@ -28,12 +28,6 @@ public struct SessionStruct {
     GLib.ObjectPath object_path;
 }
 
-public struct UserStruct {
-    uint32 uid;
-    string name;
-    GLib.ObjectPath object_path;
-}
-
 public struct ActiveSessionStruct {
     string session_id;
     GLib.ObjectPath object_path;
@@ -41,7 +35,6 @@ public struct ActiveSessionStruct {
 
 [DBus (name = "org.freedesktop.login1.Manager")]
 public interface IManager : Object {
-    public abstract UserStruct[] list_users () throws IOError;
     public abstract SessionStruct[] list_sessions () throws IOError;
     public abstract GLib.ObjectPath get_seat (string seat) throws IOError;
     public signal void session_new (string user, GLib.ObjectPath object_path);
@@ -50,8 +43,6 @@ public interface IManager : Object {
 
 [DBus (name = "org.freedesktop.login1.Session")]
 public interface ISession : Object {
-    public abstract bool active { owned get; }
-    public abstract string display { owned get; }
     public abstract string name { owned get; }
 
     public abstract void lock () throws IOError;
