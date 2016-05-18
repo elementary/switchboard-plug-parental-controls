@@ -46,17 +46,21 @@ namespace PC.Widgets {
             allow_box.halign = Gtk.Align.CENTER;
 
             var main_label = new Gtk.Label (_("Allow this user to:"));
+            main_label.valign = Gtk.Align.START;
             main_label.margin_end = 12;
             allow_box.add (main_label);
+
+            var checkbutton_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
+            allow_box.add (checkbutton_box);
 
             dock_btn = new Gtk.CheckButton.with_label (_("Modify the dock"));
             dock_btn.notify["active"].connect (on_dock_btn_activate);
             dock_btn.margin_end = 82;
-            allow_box.add (dock_btn);
+            checkbutton_box.add (dock_btn);
 
             print_btn = new Gtk.CheckButton.with_label (_("Configure printing"));
             print_btn.notify["active"].connect (on_print_conf_activate);
-            allow_box.add (print_btn);
+            checkbutton_box.add (print_btn);
 
             var limit_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
 
