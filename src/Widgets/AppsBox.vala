@@ -133,7 +133,7 @@ namespace PC.Widgets {
             expander.set_expand (true);
             expander.visible_vertical = false;
 
-            clear_button = new Gtk.ToolButton (null, "Clear");
+            clear_button = new Gtk.ToolButton (null, _("Clear"));
             clear_button.sensitive = false;
             clear_button.clicked.connect (on_clear_button_clicked);
 
