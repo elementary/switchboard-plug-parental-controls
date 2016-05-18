@@ -76,7 +76,7 @@ namespace PC.Widgets {
             url_list = new List<UrlEntry> ();
 
             orientation = Gtk.Orientation.VERTICAL;
-            margin_start = margin_end = 128;
+            margin_start = margin_end = 12;
             margin_bottom = 32;
 
             Gdk.RGBA bg = { 1, 1, 1, 1 };
