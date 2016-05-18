@@ -212,15 +212,20 @@ namespace PC.Widgets {
             var key_file = new KeyFile ();
             try {
                 key_file.load_from_file (plank_conf_file_path, KeyFileFlags.NONE);
-                dock_btn.active = !key_file.get_boolean ("PlankDockPreferences", "LockItems");
+                dock_btn.active = !key_file.get_boolean (Vars.PLANK_CONF_GROUP, Vars.PLANK_CONF_LOCK_ITEMS_KEY);
             } catch (FileError e) {
+                dock_btn.active = true;
                 warning ("%s\n", e.message);
             } catch (Error e) {
+                dock_btn.active = true;
                 warning ("%s\n", e.message);
             }
 
             update_sensitivity ();
             /* TODO: Get denied users for printing configuration */
+
+            /* For now, we assume that printing is enabled */
+            print_btn.active = true;
         }
 
         private void update_sensitivity () {

@@ -169,9 +169,9 @@ namespace PC.Cli {
                     warning ("%s\n", e.message);
                 } catch (FileError e) {
                     warning ("%s\n", e.message);
-                }  
+                }
                                            
-                key_file.set_boolean ("PlankDockPreferences", "LockItems", lock);
+                key_file.set_boolean (Vars.PLANK_CONF_GROUP, Vars.PLANK_CONF_LOCK_ITEMS_KEY, lock);
 
                 try {
                     key_file.save_to_file (plank_conf_file_path);
