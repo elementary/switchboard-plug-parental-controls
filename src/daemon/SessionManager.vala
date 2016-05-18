@@ -24,32 +24,43 @@
     public class SessionManager : Object {
         public SessionHandler? current_handler = null;
         
-        private Manager? manager = null;
+        private IManager? manager = null;
+        private DBusConnection? conn = null;
 
         public SessionManager () {
             try {
-                manager = Bus.get_proxy_sync (BusType.SYSTEM, Vars.LOGIN_IFACE, Vars.LOGIN_OBJECT_PATH); 
+                manager = Bus.get_proxy_sync (BusType.SYSTEM, Vars.LOGIN_IFACE, Vars.LOGIN_OBJECT_PATH);
+                conn = Bus.get_sync (BusType.SYSTEM, null);
             } catch (IOError e) {
                 warning ("%s\n", e.message);
             }
         }
 
         public void start () {
-            manager.session_new.connect (() => {
-                update_session ();
-            });
+            if (manager == null || conn == null) {
+                return;
+            }
 
+            manager.session_new.connect (() => update_session ());
+            manager.session_removed.connect (() => update_session ());
+
+            conn.signal_subscribe (null,
+                                Vars.DBUS_PROPERTIES_IFACE,
+                                "PropertiesChanged",
+                                get_current_seat_path (),
+                                null,
+                                0,
+                                () => update_session ());
             update_session ();
         }
 
-        private Session? get_current_session () {
+        private ISession? get_current_session () {
             try {
-                foreach (var struct_session in manager.list_sessions ()) {
-                    Session session = Bus.get_proxy_sync (BusType.SYSTEM, Vars.LOGIN_IFACE, struct_session.object_path);
-                    if (session.active) {
-                        return session;
-                    }
-                } 
+                string? seat_path = get_current_seat_path ();
+                if (seat_path != null) {
+                    ISeat? seat = Bus.get_proxy_sync (BusType.SYSTEM, Vars.LOGIN_IFACE, get_current_seat_path ());
+                    return Bus.get_proxy_sync (BusType.SYSTEM, Vars.LOGIN_IFACE, seat.active_session.object_path);
+                }
             } catch (IOError e) {
                 warning ("%s\n", e.message);
             }
@@ -57,18 +68,37 @@
             return null;         
         }
 
+        private string? get_current_seat_path () {
+            try {
+                string seat_id = "seat0";
+                string? seat_variable = Environment.get_variable ("XDG_SEAT");
+                if (seat_variable != null && seat_variable.has_prefix ("seat")) {
+                    seat_id = seat_variable;
+                }
+
+                return manager.get_seat (seat_id);                
+            } catch (Error e) {
+                warning ("%s\n", e.message);
+            }
+
+            return null;
+        }
+
         private void update_session () {
             if (current_handler != null) {
                 current_handler.stop ();
+                current_handler.unref ();
                 current_handler = null;
             }
 
             var current_session = get_current_session ();
-            if (current_session != null) {
-                current_session.unlock.connect (update_session);
+            if (current_session != null &&
+                current_session.name != null &&
+                current_session.name.strip () != "" &&
+                !(current_session.name in Vars.DAEMON_IGNORED_USERS)) {
                 current_handler = new SessionHandler (current_session);
                 current_handler.start ();
             }
         }
     }
- }
+}

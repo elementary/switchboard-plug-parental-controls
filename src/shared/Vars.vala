@@ -23,11 +23,13 @@
 namespace PC.Vars {
     public const string LOGIN_IFACE = "org.freedesktop.login1";
     public const string LOGIN_OBJECT_PATH = "/org/freedesktop/login1";
+    public const string DBUS_PROPERTIES_IFACE = "org.freedesktop.DBus.Properties";
     public const string PARENTAL_CONTROLS_IFACE = "org.pantheon.ParentalControls";
     public const string PARENTAL_CONTROLS_OBJECT_PATH = "/org/pantheon/ParentalControls";
     public const string PARENTAL_CONTROLS_ACTION_ID = "org.pantheon.switchboard.parental-controls.administration";
     public const string PLANK_CONF_DIR = "/.config/plank/dock1/settings";
     public const string DAEMON_CONF_DIR = "/.config/pantheon-parental-controls-daemon.conf";
+    public const string[] DAEMON_IGNORED_USERS = { "lightdm" };
     public const string DAEMON_GROUP = "PCDaemon";
     public const string DAEMON_KEY_ACTIVE = "Active";
     public const string DAEMON_KEY_TARGETS = "Targets";

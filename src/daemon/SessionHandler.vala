@@ -28,15 +28,25 @@
         public Core core;
         public IptablesHelper iptables_helper;
 
-        private Session session;
+        private ISession session;
         private Server server;
 
-        public SessionHandler (Session _session) {
+        private bool can_start = true;
+
+        public SessionHandler (ISession _session) {
             session = _session;
             server = Server.get_default ();
             Utils.set_user_name (session.name);
 
-            core = new Core (Utils.get_current_user (), server);    
+            core = new Core (Utils.get_current_user (), server);
+
+            try {
+                if (!core.key_file.has_group (Vars.DAEMON_GROUP) || !core.key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ACTIVE)) {
+                    can_start = false;
+                }
+            } catch (Error e) {
+                warning ("%s\n", e.message);
+            }
 
             string[] block_urls = {};
             try {
@@ -45,16 +55,12 @@
                 warning ("%s\n", e.message);
             }
 
-            iptables_helper = new IptablesHelper (block_urls);        
+            iptables_helper = new IptablesHelper (block_urls);
         }
 
         public void start () {
-            try {
-                if (!core.key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ACTIVE)) {
-                    return;
-                }
-            } catch (Error e) {
-                warning ("%s\n", e.message);
+            if (!can_start) {
+                return;
             }
 
             if (core.valid) {

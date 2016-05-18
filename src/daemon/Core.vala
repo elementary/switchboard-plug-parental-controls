@@ -35,6 +35,7 @@ namespace PC.Daemon {
         private Polkit.Authority authority;
         private Server server;
 
+
         public Core (Act.User _user, Server _server) {
             user = _user;
             server = _server;
@@ -52,10 +53,10 @@ namespace PC.Daemon {
 
             key_file = new KeyFile ();
 
-            string lock_path = Utils.build_daemon_conf_path (user);
-            if (FileUtils.test (lock_path, FileTest.EXISTS)) {
+            string conf_path = Utils.build_daemon_conf_path (user);
+            if (conf_path.strip () != "" && FileUtils.test (conf_path, FileTest.EXISTS)) {
                 try {
-                    key_file.load_from_file (Utils.build_daemon_conf_path (user), 0);
+                    key_file.load_from_file (conf_path, 0);
 
                     targets = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_TARGETS);
                     admin = key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ADMIN);
@@ -74,11 +75,16 @@ namespace PC.Daemon {
         private void handle_pid (int pid) {
             var process = new Process (pid);
 
-            if (process.get_command () == "") {
+            string command = process.get_command ();
+            if (command == null || command == "") {
                 return;
             }
 
-            string[] args = process.get_command ().split (" ");
+            string[] args = command.split (" ");
+            if (args.length < 1) {
+                return;
+            }
+
             string executable = args[0];
             foreach (string _executable in allowed_executables) {
                 if (_executable == executable) {

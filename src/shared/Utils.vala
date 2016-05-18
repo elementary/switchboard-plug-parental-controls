@@ -82,18 +82,11 @@ namespace PC {
             return usermanager;
         }
 
-        private static Act.User? current_user = null;
-
         public static unowned Act.User? get_current_user () {
-            if (current_user != null) {
-                return current_user;
-            }
-
-            current_user = get_usermanager ().get_user (user_name);
-            return current_user;
+            return get_usermanager ().get_user (user_name);
         }
 
-        public static string? build_daemon_conf_path (Act.User user) {
+        public static string build_daemon_conf_path (Act.User user) {
             return Path.build_filename (user.get_home_dir (), Vars.DAEMON_CONF_DIR);
         }
 

@@ -23,14 +23,14 @@
 namespace PC.Daemon {
     public class Process : Object {
         private int pid;
-        private string command;
+        private string command = "";
 
         public Process (int pid) {
             this.pid = pid;
 
             var cmd_file = File.new_for_path ("/proc/%d/cmdline".printf (pid));
             if (!cmd_file.query_exists ()) {
-                command = "";
+                return;
             }
 
             try {
