@@ -21,7 +21,7 @@
  */
 
 namespace PC.Widgets {
-    public class AppsBox : Gtk.Box {
+    public class AppsBox : Gtk.Grid {
         public signal void update_key_file ();
 
         public string[] targets = {};
@@ -34,8 +34,8 @@ namespace PC.Widgets {
         private Gtk.ListBox list_box;
         private AppChooser apps_popover;
         private Gtk.Switch admin_switch_btn;
-        private Gtk.ToolButton remove_button;
-        private Gtk.ToolButton clear_button;
+        private Gtk.Button remove_button;
+        private Gtk.Button clear_button;
 
 
         protected class AppEntry : Gtk.ListBoxRow {
@@ -52,6 +52,7 @@ namespace PC.Widgets {
                 main_grid.orientation = Gtk.Orientation.HORIZONTAL;
 
                 main_grid.margin = 6;
+                main_grid.margin_start = 12;
                 main_grid.column_spacing = 12;
 
                 var image = new Gtk.Image.from_gicon (info.get_icon (), Gtk.IconSize.LARGE_TOOLBAR);
@@ -87,75 +88,65 @@ namespace PC.Widgets {
             this.user = user;
             entries = new List<AppEntry> ();
 
-            orientation = Gtk.Orientation.VERTICAL;
-            spacing = 12;
-
-            var admin_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-
-            var admin_label = new Gtk.Label (_("Allow access to these apps with admin permission:"));
-            admin_box.add (admin_label);
-
-            admin_switch_btn = new Gtk.Switch ();
-            admin_switch_btn.notify["active"].connect (on_changed);
-            admin_box.add (admin_switch_btn);
-
-            var frame = new Gtk.Frame (null);
-            frame.hexpand = frame.vexpand = true;
-
-            Gdk.RGBA bg = { 1, 1, 1, 1 };
-            frame.override_background_color (0, bg);
-
-            var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-            frame.add (main_box);
+            column_spacing = 12;
+            row_spacing = 12;
 
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.hexpand = scrolled.vexpand = true;
 
-            var header_label = new Gtk.Label (_("Add apps to prevent %s from using them:").printf (user.get_real_name ()));
-            header_label.margin_start = 6;
+            var header_label = new Gtk.Label (_("Prevent %s from using these apps:").printf (user.get_real_name ()));
+            header_label.margin_start = 12;
+            header_label.margin_top = 6;
             header_label.halign = Gtk.Align.START;
             header_label.get_style_context ().add_class ("h4");
-
-            main_box.add (header_label);
 
             list_box = new Gtk.ListBox ();
             list_box.row_selected.connect (on_changed);
             scrolled.add (list_box);
 
-            var toolbar = new Gtk.Toolbar ();
-            toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
-            toolbar.icon_size = Gtk.IconSize.SMALL_TOOLBAR;
-
-            var add_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-add-symbolic", Gtk.IconSize.BUTTON), null);
+            var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.MENU);
             add_button.tooltip_text = _("Add Prevented Apps…");
             add_button.clicked.connect (on_add_button_clicked);
 
-            remove_button = new Gtk.ToolButton (new Gtk.Image.from_icon_name ("list-remove-symbolic", Gtk.IconSize.BUTTON), null);
+            remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.MENU);
             remove_button.tooltip_text = _("Remove Selected App");
             remove_button.sensitive = false;
             remove_button.clicked.connect (on_remove_button_clicked);
 
-            var expander = new Gtk.ToolItem ();
-            expander.set_expand (true);
-            expander.visible_vertical = false;
-
-            clear_button = new Gtk.ToolButton (null, _("Clear"));
+            clear_button = new Gtk.Button.from_icon_name ("edit-clear-all-symbolic", Gtk.IconSize.MENU);
+            clear_button.tooltip_text = _("Clear All");
             clear_button.sensitive = false;
             clear_button.clicked.connect (on_clear_button_clicked);
 
             apps_popover = new AppChooser (add_button);
             apps_popover.app_chosen.connect (load_info);
 
+            var toolbar = new Gtk.ActionBar ();
+            toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
             toolbar.add (add_button);
             toolbar.add (remove_button);
-            toolbar.add (expander);
-            toolbar.add (clear_button);
+            toolbar.pack_end (clear_button);
 
+            var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
+            main_box.add (header_label);
+            main_box.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
             main_box.add (scrolled);
             main_box.add (toolbar);
 
-            add (frame);
-            add (admin_box);
+            var frame = new Gtk.Frame (null);
+            frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+            frame.add (main_box);
+
+            var admin_label = new Gtk.Label (_("Allow access to these apps with admin permission:"));
+            admin_label.halign = Gtk.Align.END;
+
+            admin_switch_btn = new Gtk.Switch ();
+            admin_switch_btn.halign = Gtk.Align.START;
+            admin_switch_btn.notify["active"].connect (on_changed);
+
+            attach (frame, 0, 0, 2, 1);
+            attach (admin_label, 0, 1, 1, 1);
+            attach (admin_switch_btn, 1, 1, 1, 1);
 
             load_existing ();
             show_all ();

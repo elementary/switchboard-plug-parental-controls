@@ -44,7 +44,6 @@ namespace PC {
             content = new Gtk.Stack ();
             content.hexpand = true;
 
-            var sidebar = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
             list = new Widgets.UserListBox ();
             list.row_activated.connect ((row) => {
                 if (content.get_children ().find (((Widgets.UserItem) row).page) == null) {
@@ -59,9 +58,7 @@ namespace PC {
             scrolled_window.add (list);
             scrolled_window.vexpand = true;
 
-            sidebar.pack_start (scrolled_window, true, true);
-
-            paned.pack1 (sidebar, false, false);
+            paned.pack1 (scrolled_window, true, true);
             paned.pack2 (content, true, false);
             paned.set_position (240);
 

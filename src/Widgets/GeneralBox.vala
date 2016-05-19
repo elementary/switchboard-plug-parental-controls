@@ -21,7 +21,7 @@
  */
 
 namespace PC.Widgets {
-    public class GeneralBox : Gtk.Box {
+    public class GeneralBox : Gtk.Grid {
         private string plank_conf_file_path = "";
         private Act.User user;
         private Gtk.CheckButton dock_btn;
@@ -38,54 +38,53 @@ namespace PC.Widgets {
             this.user = user;
             plank_conf_file_path = Path.build_filename (user.get_home_dir (), Vars.PLANK_CONF_DIR);
 
-            margin_start = margin_end = 12;
-            spacing = 12;
-            orientation = Gtk.Orientation.VERTICAL;
+            dock_btn.notify["active"].connect (on_dock_btn_activate);
 
-            var allow_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            allow_box.halign = Gtk.Align.CENTER;
+            print_btn.notify["active"].connect (on_print_conf_activate);
+
+            limit_switch.notify["active"].connect (on_limit_switch_changed);
+            limit_switch.bind_property ("active", limit_combobox, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+            limit_switch.bind_property ("active", frame, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+
+            limit_combobox.changed.connect (on_limit_combobox_changed);
+
+            weekday_box.changed.connect (update_pam);
+            weekend_box.changed.connect (update_pam);
+
+            monitor_updates ();
+            update ();
+            load_restrictions ();
+        }
+
+        construct {
+            column_spacing = 12;
+            row_spacing = 6;
 
             var main_label = new Gtk.Label (_("Allow this user to:"));
-            main_label.valign = Gtk.Align.START;
-            main_label.margin_end = 12;
-            allow_box.add (main_label);
-
-            var checkbutton_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-            allow_box.add (checkbutton_box);
+            main_label.halign = Gtk.Align.END;
 
             dock_btn = new Gtk.CheckButton.with_label (_("Modify the dock"));
-            dock_btn.notify["active"].connect (on_dock_btn_activate);
-            dock_btn.margin_end = 82;
-            checkbutton_box.add (dock_btn);
+            dock_btn.halign = Gtk.Align.START;
 
             print_btn = new Gtk.CheckButton.with_label (_("Configure printing"));
-            print_btn.notify["active"].connect (on_print_conf_activate);
-            checkbutton_box.add (print_btn);
+            print_btn.halign = Gtk.Align.START;
+            print_btn.margin_bottom = 18;
 
-            var limit_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 12);
+            var limit_method_label = new Gtk.Label (_("Limit computer use:"));
+            limit_method_label.halign = Gtk.Align.END;
 
-            var limit_method_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            limit_method_box.add (new Gtk.Label (_("Limit computer use:")));
+            limit_switch = new Gtk.Switch ();
+            limit_switch.valign = Gtk.Align.CENTER;
 
             limit_combobox = new Gtk.ComboBoxText ();
             limit_combobox.hexpand = true;
-            limit_combobox.margin_end = 64;
             limit_combobox.append (Vars.ALL_ID, _("On weekdays and weekends"));
             limit_combobox.append (Vars.WEEKDAYS_ID, _("Only on weekdays"));
             limit_combobox.append (Vars.WEEKENDS_ID, _("Only on weekends"));
             limit_combobox.active_id = "all";
-            limit_combobox.changed.connect (on_limit_combobox_changed);
-
-            limit_switch = new Gtk.Switch ();
-            limit_switch.valign = Gtk.Align.CENTER;
-            limit_switch.active = false;
-            limit_switch.notify["active"].connect (on_limit_switch_changed);
-            limit_method_box.add (limit_switch);
-            limit_method_box.add (limit_combobox);
-            limit_box.add (limit_method_box);
 
             frame = new Gtk.Frame (null);
-            frame.override_background_color (0, { 1, 1, 1, 1 });
+            frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
 
             var frame_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
 
@@ -97,22 +96,19 @@ namespace PC.Widgets {
             weekend_box.margin = 12;
             weekend_box.halign = Gtk.Align.CENTER;
 
-            weekday_box.changed.connect (update_pam);
-            weekend_box.changed.connect (update_pam);
-
             frame_box.add (weekday_box);
             frame_box.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
             frame_box.add (weekend_box);
             frame.add (frame_box);
 
-            monitor_updates ();
-            update ();
-            load_restrictions ();
-
-            this.add (allow_box);
-            this.add (limit_box);
-            this.add (frame);
-            this.show_all ();
+            attach (main_label, 0, 0, 1, 1);
+            attach (dock_btn, 1, 0, 2, 1);
+            attach (print_btn, 1, 1, 2, 1);
+            attach (limit_method_label, 0, 2, 1, 1);
+            attach (limit_switch, 1, 2, 1, 1);
+            attach (limit_combobox, 2, 2, 1, 1);
+            attach (frame, 0, 3, 3, 1);
+            show_all ();
         }
 
         public void refresh () {
@@ -221,17 +217,10 @@ namespace PC.Widgets {
                 warning ("%s\n", e.message);
             }
 
-            update_sensitivity ();
             /* TODO: Get denied users for printing configuration */
 
             /* For now, we assume that printing is enabled */
             print_btn.active = true;
-        }
-
-        private void update_sensitivity () {
-            bool active = limit_switch.get_active ();
-            limit_combobox.sensitive = active;
-            frame.sensitive = active;            
         }
 
         private void on_dock_btn_activate () {
@@ -279,8 +268,6 @@ namespace PC.Widgets {
             } else {
                 PAMControl.try_remove_user_restrict (user.get_user_name ());
             }
-
-            update_sensitivity ();
         }
 
         private void on_limit_combobox_changed () {
