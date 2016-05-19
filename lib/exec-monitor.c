@@ -70,7 +70,7 @@ exec_monitor_handle_pid (ExecMonitor *self,
 static void
 exec_monitor_default_init (ExecMonitorInterface *exec_monitor)
 {
-    exec_monitor->monitor_events = TRUE;
+    exec_monitor->monitor_events = FALSE;
 }
 
 void
@@ -85,7 +85,7 @@ exec_monitor_start (ExecMonitor         *self,
 
     iface = EXEC_MONITOR_GET_IFACE (self);
 
-    g_return_if_fail (iface->monitor_events);
+    g_return_if_fail (!iface->monitor_events);
     
     task = g_task_new (self, NULL, callback, user_data);
     g_task_run_in_thread (task, start_task_thread);
@@ -177,6 +177,7 @@ exec_monitor_start_internal (ExecMonitor *self)
         return;
     }
 
+    iface->monitor_events = TRUE;
     while (iface->monitor_events) {
         struct nlmsghdr *nlh = (struct nlmsghdr*)buff;
         memcpy (&from_nla, &kern_nla, sizeof (from_nla));

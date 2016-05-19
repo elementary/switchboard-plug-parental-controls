@@ -29,6 +29,10 @@ namespace PC.Daemon {
         private static MainLoop loop;
 
         public static Daemon get_instance () {
+            if (instance == null) {
+                instance = new Daemon ();
+            }
+
             return instance;
         }
 
@@ -36,8 +40,7 @@ namespace PC.Daemon {
             GLib.Process.signal (ProcessSignal.INT, on_exit);
             GLib.Process.signal (ProcessSignal.TERM, on_exit);
             
-            instance = new Daemon ();
-            return instance.run (args);
+            return Daemon.get_instance ().run (args);
         }
 
         public static void on_exit (int signum) {

@@ -35,7 +35,6 @@ namespace PC.Daemon {
         private Polkit.Authority authority;
         private Server server;
 
-
         public Core (Act.User _user, Server _server) {
             user = _user;
             server = _server;
@@ -80,10 +79,15 @@ namespace PC.Daemon {
                 return;
             }
 
-            string[] args = command.split (" ");
-            if (args.length < 1) {
-                return;
-            }
+            string[]? args = {};
+            try {
+                bool success = Shell.parse_argv (command, out args);
+                if (!success || args == null) {
+                    return;
+                }
+            } catch (ShellError e) {
+                warning ("%s\n", e.message);
+            }                
 
             string executable = args[0];
             foreach (string _executable in allowed_executables) {
@@ -93,7 +97,7 @@ namespace PC.Daemon {
                 }
             }
 
-            if (executable != null && !executable.has_prefix ("/")) {
+            if (executable != null && !executable.has_prefix (Path.DIR_SEPARATOR_S)) {
                 executable = Environment.find_program_in_path (executable);
             }
 
