@@ -82,7 +82,7 @@ namespace PC.Daemon {
             string[]? args = {};
             try {
                 bool success = Shell.parse_argv (command, out args);
-                if (!success || args == null) {
+                if (!success || args == null || args.length < 1) {
                     return;
                 }
             } catch (ShellError e) {
