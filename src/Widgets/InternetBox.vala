@@ -21,7 +21,7 @@
  */
 
 namespace PC.Widgets {
-    public class InternetBox : Gtk.Box {
+    public class InternetBox : Gtk.Grid {
         public signal void update_key_file ();
         public string[] urls;
 
@@ -75,20 +75,6 @@ namespace PC.Widgets {
 
             url_list = new List<UrlEntry> ();
 
-            orientation = Gtk.Orientation.VERTICAL;
-            margin_start = margin_end = 12;
-            margin_bottom = 32;
-
-            Gdk.RGBA bg = { 1, 1, 1, 1 };
-
-            var frame = new Gtk.Frame (null);
-            frame.hexpand = frame.vexpand = true;
-            frame.override_background_color (0, bg);
-
-            var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-            main_box.hexpand = main_box.vexpand = true;
-            main_box.margin_top = main_box.margin_bottom = 6;
-
             var info_label = new Gtk.Label (_("Blacklist the following sites:"));
             info_label.halign = Gtk.Align.START;
             info_label.margin_start = 12;
@@ -102,30 +88,33 @@ namespace PC.Widgets {
 
             scrolled.add (list_box);
 
-            var bottom_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 6);
-            bottom_box.margin_start = bottom_box.margin_end = 6;
-
             add_button = new Gtk.Button.with_label (_("Add URL"));
             add_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+            add_button.margin_end = 6;
             add_button.sensitive = false;
             add_button.clicked.connect (on_entry_activate);
 
             entry = new Gtk.Entry ();
             entry.hexpand = true;
+            entry.margin_start = 6;
             entry.set_placeholder_text (_("Add a new URL, for example: google.com"));
             entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Invalid URL"));
             entry.changed.connect (on_entry_changed);
             entry.activate.connect (on_entry_activate);
 
-            bottom_box.add (entry);
-            bottom_box.pack_end (add_button, false, false, 0);
+            var main_box = new Gtk.Grid ();
+            main_box.column_spacing = 6;
+            main_box.row_spacing = 6;
+            main_box.margin_top = main_box.margin_bottom = 6;
+            main_box.attach (info_label, 0, 0, 2, 1);
+            main_box.attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 1, 2, 1);
+            main_box.attach (scrolled, 0, 2, 2, 1);
+            main_box.attach (new Gtk.Separator (Gtk.Orientation.HORIZONTAL), 0, 3, 2, 1);
+            main_box.attach (entry, 0, 4, 1, 1);
+            main_box.attach (add_button, 1, 4, 1, 1);
 
-            main_box.add (info_label);
-            main_box.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-            main_box.add (scrolled);
-            main_box.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-            main_box.add (bottom_box);
-
+            var frame = new Gtk.Frame (null);
+            frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
             frame.add (main_box);
 
             add (frame);
