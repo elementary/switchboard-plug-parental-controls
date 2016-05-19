@@ -75,7 +75,7 @@ namespace PC.Widgets {
 
             url_list = new List<UrlEntry> ();
 
-            var info_label = new Gtk.Label (_("Blacklist the following sites:"));
+            var info_label = new Gtk.Label (_("Prevent %s from visiting these websites:").printf (user.get_real_name ()));
             info_label.halign = Gtk.Align.START;
             info_label.margin_start = 12;
             info_label.get_style_context ().add_class ("h4");
