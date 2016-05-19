@@ -38,6 +38,25 @@ namespace PC.Widgets {
             this.user = user;
             plank_conf_file_path = Path.build_filename (user.get_home_dir (), Vars.PLANK_CONF_DIR);
 
+            dock_btn.notify["active"].connect (on_dock_btn_activate);
+
+            print_btn.notify["active"].connect (on_print_conf_activate);
+
+            limit_switch.notify["active"].connect (on_limit_switch_changed);
+            limit_switch.bind_property ("active", limit_combobox, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+            limit_switch.bind_property ("active", frame, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+
+            limit_combobox.changed.connect (on_limit_combobox_changed);
+
+            weekday_box.changed.connect (update_pam);
+            weekend_box.changed.connect (update_pam);
+
+            monitor_updates ();
+            update ();
+            load_restrictions ();
+        }
+
+        construct {
             column_spacing = 12;
             row_spacing = 6;
 
@@ -46,15 +65,16 @@ namespace PC.Widgets {
 
             dock_btn = new Gtk.CheckButton.with_label (_("Modify the dock"));
             dock_btn.halign = Gtk.Align.START;
-            dock_btn.notify["active"].connect (on_dock_btn_activate);
 
             print_btn = new Gtk.CheckButton.with_label (_("Configure printing"));
             print_btn.halign = Gtk.Align.START;
             print_btn.margin_bottom = 18;
-            print_btn.notify["active"].connect (on_print_conf_activate);
 
             var limit_method_label = new Gtk.Label (_("Limit computer use:"));
             limit_method_label.halign = Gtk.Align.END;
+
+            limit_switch = new Gtk.Switch ();
+            limit_switch.valign = Gtk.Align.CENTER;
 
             limit_combobox = new Gtk.ComboBoxText ();
             limit_combobox.hexpand = true;
@@ -62,12 +82,6 @@ namespace PC.Widgets {
             limit_combobox.append (Vars.WEEKDAYS_ID, _("Only on weekdays"));
             limit_combobox.append (Vars.WEEKENDS_ID, _("Only on weekends"));
             limit_combobox.active_id = "all";
-            limit_combobox.changed.connect (on_limit_combobox_changed);
-
-            limit_switch = new Gtk.Switch ();
-            limit_switch.valign = Gtk.Align.CENTER;
-            limit_switch.active = false;
-            limit_switch.notify["active"].connect (on_limit_switch_changed);
 
             frame = new Gtk.Frame (null);
             frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
@@ -82,17 +96,10 @@ namespace PC.Widgets {
             weekend_box.margin = 12;
             weekend_box.halign = Gtk.Align.CENTER;
 
-            weekday_box.changed.connect (update_pam);
-            weekend_box.changed.connect (update_pam);
-
             frame_box.add (weekday_box);
             frame_box.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
             frame_box.add (weekend_box);
             frame.add (frame_box);
-
-            monitor_updates ();
-            update ();
-            load_restrictions ();
 
             attach (main_label, 0, 0, 1, 1);
             attach (dock_btn, 1, 0, 2, 1);
@@ -101,7 +108,6 @@ namespace PC.Widgets {
             attach (limit_switch, 1, 2, 1, 1);
             attach (limit_combobox, 2, 2, 1, 1);
             attach (frame, 0, 3, 3, 1);
-
             show_all ();
         }
 
@@ -211,17 +217,10 @@ namespace PC.Widgets {
                 warning ("%s\n", e.message);
             }
 
-            update_sensitivity ();
             /* TODO: Get denied users for printing configuration */
 
             /* For now, we assume that printing is enabled */
             print_btn.active = true;
-        }
-
-        private void update_sensitivity () {
-            bool active = limit_switch.get_active ();
-            limit_combobox.sensitive = active;
-            frame.sensitive = active;            
         }
 
         private void on_dock_btn_activate () {
@@ -269,8 +268,6 @@ namespace PC.Widgets {
             } else {
                 PAMControl.try_remove_user_restrict (user.get_user_name ());
             }
-
-            update_sensitivity ();
         }
 
         private void on_limit_combobox_changed () {
