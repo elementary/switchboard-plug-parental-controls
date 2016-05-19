@@ -41,11 +41,13 @@ namespace PC.Widgets {
 
             grid = new Gtk.Grid ();
             grid.margin = 6;
-            grid.margin_left = 12;
             grid.column_spacing = 6;
+
+            avatar = new Granite.Widgets.Avatar ();
 
             full_name_label = new Gtk.Label ("");
             full_name_label.halign = Gtk.Align.START;
+            full_name_label.ellipsize = Pango.EllipsizeMode.END;
             full_name_label.get_style_context ().add_class ("h3");
 
             username_label = new Gtk.Label ("");
@@ -53,23 +55,13 @@ namespace PC.Widgets {
             username_label.use_markup = true;
             username_label.ellipsize = Pango.EllipsizeMode.END;
 
-            var switch_grid = new Gtk.Grid ();
-            switch_grid.margin_end = 6;
-            switch_grid.valign = Gtk.Align.CENTER;
-
             master_switch = new Gtk.Switch ();
-            switch_grid.add (master_switch);
-
-            var main_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
-
-            avatar = new Granite.Widgets.Avatar ();
+            master_switch.valign = Gtk.Align.CENTER;
 
             grid.attach (avatar, 0, 0, 1, 2);
-            grid.attach (full_name_label, 1, 0, 2, 1);
-            grid.attach (username_label, 1, 1, 1, 1);        
-
-            main_box.add (grid);
-            main_box.pack_end (switch_grid, false, false, 0);
+            grid.attach (full_name_label, 1, 0, 1, 1);
+            grid.attach (username_label, 1, 1, 1, 1); 
+            grid.attach (master_switch, 2, 0, 1, 2);       
 
             master_switch.notify["active"].connect (() => {
                 bool active = master_switch.get_active ();
@@ -79,7 +71,7 @@ namespace PC.Widgets {
 
             update_ui ();
 
-            add (main_box);
+            add (grid);
             show_all ();
         }
 
