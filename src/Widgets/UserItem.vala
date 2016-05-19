@@ -47,6 +47,7 @@ namespace PC.Widgets {
 
             full_name_label = new Gtk.Label ("");
             full_name_label.halign = Gtk.Align.START;
+            full_name_label.hexpand = true;
             full_name_label.ellipsize = Pango.EllipsizeMode.END;
             full_name_label.get_style_context ().add_class ("h3");
 
