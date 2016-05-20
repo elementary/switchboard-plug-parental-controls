@@ -43,4 +43,6 @@ namespace PC.Vars {
     public const string ALL_ID = "all";
     public const string WEEKDAYS_ID = "weekdays";
     public const string WEEKENDS_ID = "weekends";
+    public const string GNOME_CLOCK_SETTINGS_SCHEMA_ID = "org.gnome.desktop.interface";
+    public const string GNOME_CLOCK_FORMAT_KEY = "clock-format";
 }
