@@ -32,10 +32,7 @@ namespace PC.Widgets {
             spacing = 12;
 
             picker_from = new Granite.Widgets.TimePicker ();
-            picker_from.margin_start = 12;
-
             picker_to = new Granite.Widgets.TimePicker ();
-            picker_to.margin_start = 12;
 
             var label = new Gtk.Label (title);
             label.get_style_context ().add_class ("h4");
