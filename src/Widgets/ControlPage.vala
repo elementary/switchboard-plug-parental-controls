@@ -23,6 +23,7 @@
 namespace PC.Widgets {
     public class ControlPage : Gtk.Box {
         public Act.User user;
+        public Gtk.Stack stack;
         private GeneralBox general_box;
         private AppsBox apps_box;
         private InternetBox internet_box;
@@ -50,7 +51,7 @@ namespace PC.Widgets {
             internet_box.expand = true;
             internet_box.update_key_file.connect (on_update_key_file);
 
-            var stack = new Gtk.Stack ();
+            stack = new Gtk.Stack ();
             stack.add_titled (general_box, "general", _("General"));
             stack.add_titled (internet_box, "internet", _("Internet"));
             stack.add_titled (apps_box, "apps", _("Applications"));

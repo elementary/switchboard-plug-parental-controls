@@ -65,7 +65,7 @@ namespace PC.Widgets {
             grid.attach (master_switch, 2, 0, 1, 2);  
 
             master_switch.bind_property ("active", page, "active", BindingFlags.SYNC_CREATE);
-            master_switch.bind_property ("active", page, "sensitive", BindingFlags.SYNC_CREATE);     
+            master_switch.bind_property ("active", page.stack, "sensitive", BindingFlags.SYNC_CREATE);
 
             update_ui ();
 
