@@ -64,23 +64,25 @@ namespace PC.Widgets {
             show_all ();
         }
 
-        public bool get_active () {
-            return apps_box.get_active ();
-        }
+        public bool active {
+            get {
+                return apps_box.get_active ();
+            }
 
-        public void set_active (bool active) {
-            apps_box.set_active (active);
+            set {
+                apps_box.set_active (active);
 
-            if (Utils.get_permission ().get_allowed ()) {
-                if (active) {
-                    general_box.refresh ();
-                    Utils.call_cli ({"--user", user.get_user_name (), "--enable-restrict"});
-                } else {
-                    general_box.set_lock_dock_active (false);
-                    general_box.set_printer_active (true);                    
-                    Utils.call_cli ({"--user", user.get_user_name (), "--disable-restrict"});
-                }
-            }            
+                if (Utils.get_permission ().get_allowed ()) {
+                    if (value) {
+                        general_box.refresh ();
+                        Utils.call_cli ({"--user", user.get_user_name (), "--enable-restrict"});
+                    } else {
+                        general_box.set_lock_dock_active (false);
+                        general_box.set_printer_active (true);                    
+                        Utils.call_cli ({"--user", user.get_user_name (), "--disable-restrict"});
+                    }
+                }            
+            }
         }
 
         private void on_update_key_file () {

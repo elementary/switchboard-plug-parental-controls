@@ -67,7 +67,7 @@ namespace PC.Widgets {
             master_switch.notify["active"].connect (() => {
                 bool active = master_switch.get_active ();
                 page.sensitive = active;
-                page.set_active (active);
+                page.active = active;
             });
 
             update_ui ();
@@ -77,7 +77,7 @@ namespace PC.Widgets {
         }
 
         public void update_ui () {
-            bool active = page.get_active ();
+            bool active = page.active;
             master_switch.active = active;
             page.sensitive = active;
 
