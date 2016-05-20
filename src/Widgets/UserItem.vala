@@ -68,7 +68,6 @@ namespace PC.Widgets {
             master_switch.bind_property ("active", page.stack, "sensitive", BindingFlags.SYNC_CREATE);
 
             Utils.get_permission ().notify["allowed"].connect (update_view);
-
             update_view ();
 
             add (grid);
