@@ -25,45 +25,9 @@ namespace PC.Widgets {
         public Act.User user;
         public Gtk.Stack stack;
         private GeneralBox general_box;
-        private AppsBox apps_box;
         private InternetBox internet_box;
+        private AppsBox apps_box;
         private KeyFile key_file;
-
-        public ControlPage (Act.User user) {
-            this.user = user;
-
-            key_file = new KeyFile ();
-            key_file.set_list_separator (';');
-
-            margin = 24;
-            spacing = margin;
-            hexpand = true;
-            orientation = Gtk.Orientation.VERTICAL;
-
-            general_box = new GeneralBox (user);
-            general_box.expand = true;
-
-            apps_box = new AppsBox (user);
-            apps_box.expand = true;
-            apps_box.update_key_file.connect (on_update_key_file);
-
-            internet_box = new InternetBox (user);
-            internet_box.expand = true;
-            internet_box.update_key_file.connect (on_update_key_file);
-
-            stack = new Gtk.Stack ();
-            stack.add_titled (general_box, "general", _("General"));
-            stack.add_titled (internet_box, "internet", _("Internet"));
-            stack.add_titled (apps_box, "apps", _("Applications"));
-
-            var switcher = new Gtk.StackSwitcher ();
-            switcher.halign = Gtk.Align.CENTER;
-            switcher.stack = stack;
-            add (switcher);
-            add (stack);
-
-            show_all ();
-        }
 
         public bool active {
             get {
@@ -82,6 +46,52 @@ namespace PC.Widgets {
                     }
                 }            
             }
+        }
+
+        public ControlPage (Act.User user) {
+            this.user = user;
+
+            key_file = new KeyFile ();
+            key_file.set_list_separator (';');
+
+            margin = 24;
+            spacing = margin;
+            hexpand = true;
+            orientation = Gtk.Orientation.VERTICAL;
+
+            general_box = new GeneralBox (user);
+            general_box.expand = true;
+
+            internet_box = new InternetBox (user);
+            internet_box.expand = true;
+            internet_box.update_key_file.connect (on_update_key_file);
+
+            apps_box = new AppsBox (user);
+            apps_box.expand = true;
+            apps_box.update_key_file.connect (on_update_key_file);
+
+            stack = new Gtk.Stack ();
+            stack.add_titled (general_box, "general", _("General"));
+            stack.add_titled (internet_box, "internet", _("Internet"));
+            stack.add_titled (apps_box, "apps", _("Applications"));
+
+            Utils.get_permission ().notify["allowed"].connect (update_view_state);
+
+            var switcher = new Gtk.StackSwitcher ();
+            switcher.halign = Gtk.Align.CENTER;
+            switcher.stack = stack;
+            add (switcher);
+            add (stack);
+
+            update_view_state ();
+            show_all ();
+        }
+
+        private void update_view_state () {
+            bool allowed = Utils.get_permission ().get_allowed ();
+            general_box.sensitive = allowed;
+            internet_box.sensitive = allowed;
+            apps_box.sensitive = allowed;
         }
 
         private void on_update_key_file () {

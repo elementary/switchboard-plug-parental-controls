@@ -30,6 +30,7 @@ namespace PC {
         private Gtk.ScrolledWindow scrolled_window;
         private Gtk.Grid main_grid;
         private Granite.Widgets.AlertView alert;
+        private Gtk.InfoBar infobar;
 
         private Act.UserManager usermanager;
 
@@ -64,23 +65,14 @@ namespace PC {
 
             var lock_button = new Gtk.LockButton (Utils.get_permission ());
 
-            var infobar = new Gtk.InfoBar ();
-            var infobar_content = infobar.get_content_area ();
-            var infobar_action = (Gtk.Container) infobar.get_action_area ();
-            infobar_content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
-            infobar_action.add (lock_button);
+            infobar = new Gtk.InfoBar ();
 
-            Utils.get_permission ().notify["allowed"].connect (() => {
-                bool allowed = Utils.get_permission ().get_allowed ();
-                paned.sensitive = allowed;
-                if (allowed) {
-                    infobar.no_show_all = true;
-                    infobar.hide ();
-                } else {
-                    infobar.no_show_all = false;
-                    infobar.show_all ();
-                }
-            });
+            var infobar_content = infobar.get_content_area ();
+            var infobar_action_area = (Gtk.Container) infobar.get_action_area ();
+            infobar_content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
+            infobar_action_area.add (lock_button);
+
+            Utils.get_permission ().notify["allowed"].connect (update_view_state);
 
             main_grid = new Gtk.Grid ();
             main_grid.attach (infobar, 0, 1, 1, 1);
@@ -106,8 +98,6 @@ namespace PC {
 
             this.add (stack);
             this.show_all ();
-
-            paned.sensitive = Utils.get_permission ().get_allowed ();
         }
 
         private void update_user_handling () {
@@ -116,30 +106,38 @@ namespace PC {
             usermanager.user_added.connect (on_user_added);
             usermanager.user_changed.connect (on_user_changed);
             usermanager.user_removed.connect (on_user_removed);            
-            update_ui_state ();
+            update_view_state ();
         }
 
-        private void update_ui_state () {
+        private void update_view_state () {
             if (list.get_has_users ()) {
                 stack.visible_child = main_grid;
             } else {
                 stack.visible_child = alert;
-            }    
+            }
+
+            if (Utils.get_permission ().get_allowed ()) {
+                infobar.no_show_all = true;
+                infobar.hide ();
+            } else {
+                infobar.no_show_all = false;
+                infobar.show_all ();
+            }
         }
 
         private void on_user_added (Act.User user) {
             list.add_user (user);
-            update_ui_state ();
+            update_view_state ();
         }
 
         private void on_user_changed (Act.User user) {
             list.update_user (user);
-            update_ui_state ();
+            update_view_state ();
         }
 
         private void on_user_removed (Act.User user) {
             list.remove_user (user);
-            update_ui_state ();
+            update_view_state ();
         }
     }
 

@@ -34,11 +34,11 @@ namespace PC.Widgets {
             selection_mode = Gtk.SelectionMode.SINGLE;
             this.set_header_func (update_headers);
 
-            build_ui ();
+            build_view ();
             this.show_all ();
         }
 
-        private void build_ui () {
+        private void build_view () {
             my_account_label = new Gtk.Label (_("My Account"));
             my_account_label.halign = Gtk.Align.START;
             my_account_label.get_style_context ().add_class ("h4");
@@ -57,8 +57,7 @@ namespace PC.Widgets {
         }
 
         public void add_user (Act.User user) {
-            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR
-                || has_user (user)) {
+            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR || has_user (user)) {
                 return;
             }
 
@@ -80,7 +79,7 @@ namespace PC.Widgets {
         public void update_user (Act.User user) {
             foreach (var item in items) {
                 if (item.user == user) {
-                    item.update_ui ();
+                    item.update_view ();
                     if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
                         remove_user (user);
                     } else {
@@ -88,16 +87,6 @@ namespace PC.Widgets {
                     }
                 }
             }            
-        }
-
-        private bool has_user (Act.User user) {
-            foreach (var item in items) {
-                if (item.user == user) {
-                    return true;
-                }
-            }
-
-            return false;
         }
 
         public void remove_user (Act.User user) {
@@ -120,12 +109,22 @@ namespace PC.Widgets {
             return (items.length () > 0);
         }
 
-        public void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
+        private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
             if (row is UserItem && ((UserItem) row).user == Utils.get_current_user ()) {
                 row.set_header (my_account_label);
             } else {
                 row.set_header (null);
             }
         }
+
+        private bool has_user (Act.User user) {
+            foreach (var item in items) {
+                if (item.user == user) {
+                    return true;
+                }
+            }
+
+            return false;
+        }        
     }
 }

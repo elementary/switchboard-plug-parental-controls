@@ -37,7 +37,7 @@ namespace PC.Widgets {
         public UserItem (ControlPage page) {
             this.page = page;
             this.user = page.user;
-            user.changed.connect (update_ui);
+            user.changed.connect (update_view);
 
             grid = new Gtk.Grid ();
             grid.margin = 6;
@@ -64,16 +64,21 @@ namespace PC.Widgets {
             grid.attach (username_label, 1, 1, 1, 1); 
             grid.attach (master_switch, 2, 0, 1, 2);  
 
-            master_switch.bind_property ("active", page, "active", BindingFlags.SYNC_CREATE);
+            master_switch.bind_property ("active", page, "active", BindingFlags.DEFAULT);
             master_switch.bind_property ("active", page.stack, "sensitive", BindingFlags.SYNC_CREATE);
 
-            update_ui ();
+            Utils.get_permission ().notify["allowed"].connect (update_view);
+
+            update_view ();
 
             add (grid);
             show_all ();
         }
 
-        public void update_ui () {
+        public void update_view () {
+            master_switch.active = page.active;
+            master_switch.sensitive = Utils.get_permission ().get_allowed ();
+
             try {
                 var avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 32, 32, true);
                 avatar.pixbuf = avatar_pixbuf;
