@@ -7,27 +7,49 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-04-24 10:53-0300\n"
+"POT-Creation-Date: 2016-05-19 17:17-0700\n"
 "PO-Revision-Date: 2016-04-30 11:16+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-01 05:55+0000\n"
-"X-Generator: Launchpad (build 17995)\n"
+"X-Launchpad-Export-Date: 2016-05-20 05:44+0000\n"
+"X-Generator: Launchpad (build 18025)\n"
 
-#: ../src/Translation.vala:23
-msgid "Manage parental control settings"
-msgstr "จัดการค่าตั้งการควบคุมโดยผู้ปกครอง"
+#: ../src/Plug.vala:70
+msgid "Some settings require administrator rights to be changed"
+msgstr "ค่าตั้งบางอย่างต้องใช้สิทธิ์ขั้นผู้ดูแลระบบจึงจะสามารถเปลี่ยนแปลงได้"
 
-#: ../src/Translation.vala:24
-msgid "Authentication is required to change parental control settings"
-msgstr "ต้องยืนยันตัวตนเพื่อเปลี่ยนแปลงค่าตั้งการควบคุมโดยผู้ปกครอง"
+#: ../src/Plug.vala:89
+msgid "No users to edit"
+msgstr "ไม่มีผู้ใช้ที่จะแก้"
 
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "ค้นหาโปรแกรม"
+#: ../src/Plug.vala:89
+msgid ""
+"Parental Controls can only be applied to user accounts that don't have "
+"administrative permissions.\n"
+"You can change a user's account type from \"Administrator\" to \"Standard\" "
+"in the User Accounts pane."
+msgstr ""
+"การควบคุมโดยผู้ปกครองสามารถนำไปใช้กับบัญชีผู้ใช้ที่ไม่มีสิทธิ์ขั้นผู้ดูแลเท่า"
+"นั้น"
+
+#: ../src/Plug.vala:91
+msgid "Configure User Accounts"
+msgstr "ตั้งค่าบัญชีผู้ใช้"
+
+#: ../src/Plug.vala:93
+msgid "Open Users settings"
+msgstr "เปิดค่าตั้งผู้ใช้"
+
+#: ../src/Plug.vala:152
+msgid "Parental Control"
+msgstr "การควบคุมโดยผู้ปกครอง"
+
+#: ../src/Plug.vala:153
+msgid "Configure time limits and restrict application usage"
+msgstr "ตั้งค่าการจำกัดเวลาและการห้ามการใช้แอพพลิเคชั่น"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -36,54 +58,6 @@ msgstr "บัญชีของฉัน"
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
 msgstr "บัญชีอื่นๆ"
-
-#: ../src/Widgets/GeneralBox.vala:48
-msgid "Allow this user to:"
-msgstr "อนุญาตให้ผู้ใช้นี้:"
-
-#: ../src/Widgets/GeneralBox.vala:52
-msgid "Modify the dock"
-msgstr "ปรับเปลี่ยน dock"
-
-#: ../src/Widgets/GeneralBox.vala:57
-msgid "Configure printing"
-msgstr "ตั้งค่าการพิมพ์งาน"
-
-#: ../src/Widgets/GeneralBox.vala:64
-msgid "Limit computer use:"
-msgstr "จำกัดการใช้คอมพิวเตอร์:"
-
-#: ../src/Widgets/GeneralBox.vala:69
-msgid "On weekdays and weekends"
-msgstr "ในวันทำงานและวันหยุดสุดสัปดาห์"
-
-#: ../src/Widgets/GeneralBox.vala:70
-msgid "Only on weekdays"
-msgstr "เฉพาะในวันทำงาน"
-
-#: ../src/Widgets/GeneralBox.vala:71
-msgid "Only on weekends"
-msgstr "เฉพาะในวันหยุดสุดสัปดาห์"
-
-#: ../src/Widgets/GeneralBox.vala:87
-msgid "Weekdays"
-msgstr "วันธรรมดา"
-
-#: ../src/Widgets/GeneralBox.vala:91
-msgid "Weekends"
-msgstr "วันหยุดสุดสัปดาห์"
-
-#: ../src/Widgets/WeekSpinBox.vala:65
-msgid "From:"
-msgstr "จาก:"
-
-#: ../src/Widgets/WeekSpinBox.vala:69
-msgid "To:"
-msgstr "ถึง:"
-
-#: ../src/Widgets/WeekSpinBox.vala:71
-msgid ":"
-msgstr ":"
 
 #: ../src/Widgets/ControlPage.vala:54
 msgid "General"
@@ -97,71 +71,93 @@ msgstr "อินเตอร์เน็ต"
 msgid "Applications"
 msgstr "โปรแกรม"
 
-#: ../src/Widgets/AppsBox.vala:93
-msgid "Allow access to these apps with admin permission"
-msgstr "อนุญาตการเข้าถึงแอพเหล่านี้โดยใช้สิทธิ์ขั้นผู้ดูแลระบบ"
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "ค้นหาโปรแกรม"
+
+#: ../src/Widgets/WeekSpinBox.vala:65
+msgid "From:"
+msgstr "จาก:"
+
+#: ../src/Widgets/WeekSpinBox.vala:69
+msgid "To:"
+msgstr "ถึง:"
+
+#: ../src/Widgets/WeekSpinBox.vala:71
+msgid ":"
+msgstr ":"
+
+#: ../src/Widgets/AppsBox.vala:97
+msgid "Prevent %s from using these apps:"
+msgstr ""
 
 #: ../src/Widgets/AppsBox.vala:108
-msgid "Add apps to prevent %s from using them:"
-msgstr "เพิ่มโปรแกรมที่ต้องการป้องกัน %s ไม่ให้ใช้:"
-
-#: ../src/Widgets/AppsBox.vala:124
 msgid "Add Prevented Apps…"
 msgstr "เพิ่มแอพที่ถูกจำกัด..ซ"
 
-#: ../src/Widgets/AppsBox.vala:128
+#: ../src/Widgets/AppsBox.vala:112
 msgid "Remove Selected App"
 msgstr "ลบแอพที่เลือกไว้"
 
-#: ../src/Widgets/InternetBox.vala:92
-msgid "Blacklist the following sites:"
-msgstr "บล็อกไซต์ดังต่อไปนี้:"
+#: ../src/Widgets/AppsBox.vala:117
+msgid "Clear All"
+msgstr ""
 
-#: ../src/Widgets/InternetBox.vala:108
+#: ../src/Widgets/AppsBox.vala:140
+msgid "Allow access to these apps with admin permission:"
+msgstr ""
+
+#: ../src/Widgets/InternetBox.vala:78
+msgid "Prevent %s from visiting these websites:"
+msgstr ""
+
+#: ../src/Widgets/InternetBox.vala:91
 msgid "Add URL"
 msgstr "เพิ่ม URL"
 
-#: ../src/Widgets/InternetBox.vala:115
+#: ../src/Widgets/InternetBox.vala:100
 msgid "Add a new URL, for example: google.com"
 msgstr "เพิ่ม URL ใหม่ เช่น: google.com"
 
-#: ../src/Widgets/InternetBox.vala:116
+#: ../src/Widgets/InternetBox.vala:101
 msgid "Invalid URL"
 msgstr "URL ไม่ถูกต้อง"
 
-#: ../src/Plug.vala:73
-msgid "Some settings require administrator rights to be changed"
-msgstr "ค่าตั้งบางอย่างต้องใช้สิทธิ์ขั้นผู้ดูแลระบบจึงจะสามารถเปลี่ยนแปลงได้"
+#: ../src/Widgets/GeneralBox.vala:63
+msgid "Allow this user to:"
+msgstr "อนุญาตให้ผู้ใช้นี้:"
 
-#: ../src/Plug.vala:92
-msgid "No users to edit"
-msgstr "ไม่มีผู้ใช้ที่จะแก้"
+#: ../src/Widgets/GeneralBox.vala:66
+msgid "Modify the dock"
+msgstr "ปรับเปลี่ยน dock"
 
-#: ../src/Plug.vala:92
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"การควบคุมโดยผู้ปกครองสามารถนำไปใช้กับบัญชีผู้ใช้ที่ไม่มีสิทธิ์ขั้นผู้ดูแลเท่า"
-"นั้น"
+#: ../src/Widgets/GeneralBox.vala:69
+msgid "Configure printing"
+msgstr "ตั้งค่าการพิมพ์งาน"
 
-#: ../src/Plug.vala:94
-msgid "Configure User Accounts"
-msgstr "ตั้งค่าบัญชีผู้ใช้"
+#: ../src/Widgets/GeneralBox.vala:73
+msgid "Limit computer use:"
+msgstr "จำกัดการใช้คอมพิวเตอร์:"
 
-#: ../src/Plug.vala:96
-msgid "Open Users settings"
-msgstr "เปิดค่าตั้งผู้ใช้"
+#: ../src/Widgets/GeneralBox.vala:81
+msgid "On weekdays and weekends"
+msgstr "ในวันทำงานและวันหยุดสุดสัปดาห์"
 
-#: ../src/Plug.vala:158
-msgid "Parental Control"
-msgstr "การควบคุมโดยผู้ปกครอง"
+#: ../src/Widgets/GeneralBox.vala:82
+msgid "Only on weekdays"
+msgstr "เฉพาะในวันทำงาน"
 
-#: ../src/Plug.vala:159
-msgid "Configure time limits and restrict application usage"
-msgstr "ตั้งค่าการจำกัดเวลาและการห้ามการใช้แอพพลิเคชั่น"
+#: ../src/Widgets/GeneralBox.vala:83
+msgid "Only on weekends"
+msgstr "เฉพาะในวันหยุดสุดสัปดาห์"
+
+#: ../src/Widgets/GeneralBox.vala:91
+msgid "Weekdays"
+msgstr "วันธรรมดา"
+
+#: ../src/Widgets/GeneralBox.vala:95
+msgid "Weekends"
+msgstr "วันหยุดสุดสัปดาห์"
 
 #: ../src/client/Client.vala:125
 msgid ""
@@ -200,3 +196,39 @@ msgstr "คุณไม่สามารถเรียกใช้แอพพ
 #: ../src/client/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "คุณไม่ได้รับอนุญาตให้เรียกใช้แอพพลิเคชั่นนี้"
+
+#. //launchpad.net/switchboard-plug-parental-controls)
+#. *
+#. * This library is free software; you can redistribute it and/or
+#. * modify it under the terms of the GNU Library General Public
+#. * License as published by the Free Software Foundation; either
+#. * version 3 of the License, or (at your option) any later version.
+#. *
+#. * This library is distributed in the hope that it will be useful,
+#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#. * Library General Public License for more details.
+#. *
+#. * You should have received a copy of the GNU Library General Public
+#. * License along with this library; if not, write to the
+#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+#. * Boston, MA 02111-1307, USA.
+#. *
+#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
+#. 
+#: ../src/Translation.vala:23
+msgid "Manage parental control settings"
+msgstr "จัดการค่าตั้งการควบคุมโดยผู้ปกครอง"
+
+#: ../src/Translation.vala:24
+msgid "Authentication is required to change parental control settings"
+msgstr "ต้องยืนยันตัวตนเพื่อเปลี่ยนแปลงค่าตั้งการควบคุมโดยผู้ปกครอง"
+
+#~ msgid "Allow access to these apps with admin permission"
+#~ msgstr "อนุญาตการเข้าถึงแอพเหล่านี้โดยใช้สิทธิ์ขั้นผู้ดูแลระบบ"
+
+#~ msgid "Blacklist the following sites:"
+#~ msgstr "บล็อกไซต์ดังต่อไปนี้:"
+
+#~ msgid "Add apps to prevent %s from using them:"
+#~ msgstr "เพิ่มโปรแกรมที่ต้องการป้องกัน %s ไม่ให้ใช้:"
