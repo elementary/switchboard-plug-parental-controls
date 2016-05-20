@@ -68,10 +68,8 @@ namespace PC.Widgets {
             get {
                 return apps_box.get_active ();
             }
-
             set {
-                apps_box.set_active (active);
-
+                apps_box.set_active (value);
                 if (Utils.get_permission ().get_allowed ()) {
                     if (value) {
                         general_box.refresh ();
