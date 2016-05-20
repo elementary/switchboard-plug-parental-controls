@@ -62,13 +62,10 @@ namespace PC.Widgets {
             grid.attach (avatar, 0, 0, 1, 2);
             grid.attach (full_name_label, 1, 0, 1, 1);
             grid.attach (username_label, 1, 1, 1, 1); 
-            grid.attach (master_switch, 2, 0, 1, 2);       
+            grid.attach (master_switch, 2, 0, 1, 2);  
 
-            master_switch.notify["active"].connect (() => {
-                bool active = master_switch.get_active ();
-                page.sensitive = active;
-                page.set_active (active);
-            });
+            master_switch.bind_property ("active", page, "active", BindingFlags.SYNC_CREATE);
+            master_switch.bind_property ("active", page.stack, "sensitive", BindingFlags.SYNC_CREATE);
 
             update_ui ();
 
@@ -77,10 +74,6 @@ namespace PC.Widgets {
         }
 
         public void update_ui () {
-            bool active = page.get_active ();
-            master_switch.active = active;
-            page.sensitive = active;
-
             try {
                 var avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 32, 32, true);
                 avatar.pixbuf = avatar_pixbuf;

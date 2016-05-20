@@ -23,6 +23,7 @@
 namespace PC.Widgets {
     public class ControlPage : Gtk.Box {
         public Act.User user;
+        public Gtk.Stack stack;
         private GeneralBox general_box;
         private AppsBox apps_box;
         private InternetBox internet_box;
@@ -50,7 +51,7 @@ namespace PC.Widgets {
             internet_box.expand = true;
             internet_box.update_key_file.connect (on_update_key_file);
 
-            var stack = new Gtk.Stack ();
+            stack = new Gtk.Stack ();
             stack.add_titled (general_box, "general", _("General"));
             stack.add_titled (internet_box, "internet", _("Internet"));
             stack.add_titled (apps_box, "apps", _("Applications"));
@@ -64,23 +65,23 @@ namespace PC.Widgets {
             show_all ();
         }
 
-        public bool get_active () {
-            return apps_box.get_active ();
-        }
-
-        public void set_active (bool active) {
-            apps_box.set_active (active);
-
-            if (Utils.get_permission ().get_allowed ()) {
-                if (active) {
-                    general_box.refresh ();
-                    Utils.call_cli ({"--user", user.get_user_name (), "--enable-restrict"});
-                } else {
-                    general_box.set_lock_dock_active (false);
-                    general_box.set_printer_active (true);                    
-                    Utils.call_cli ({"--user", user.get_user_name (), "--disable-restrict"});
-                }
-            }            
+        public bool active {
+            get {
+                return apps_box.get_active ();
+            }
+            set {
+                apps_box.set_active (value);
+                if (Utils.get_permission ().get_allowed ()) {
+                    if (value) {
+                        general_box.refresh ();
+                        Utils.call_cli ({"--user", user.get_user_name (), "--enable-restrict"});
+                    } else {
+                        general_box.set_lock_dock_active (false);
+                        general_box.set_printer_active (true);                    
+                        Utils.call_cli ({"--user", user.get_user_name (), "--disable-restrict"});
+                    }
+                }            
+            }
         }
 
         private void on_update_key_file () {
