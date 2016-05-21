@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-20 05:44+0000\n"
+"X-Launchpad-Export-Date: 2016-05-21 05:51+0000\n"
 "X-Generator: Launchpad (build 18025)\n"
 
 #: ../src/Plug.vala:70
@@ -230,13 +230,3 @@ msgid "Authentication is required to change parental control settings"
 msgstr ""
 "A autenticação é necessária para realizar alterações nas configurações de "
 "controle dos pais."
-
-#~ msgid "Allow access to these apps with admin permission"
-#~ msgstr ""
-#~ "Permitir acesso para esses aplicativos com permissão do administrador"
-
-#~ msgid "Blacklist the following sites:"
-#~ msgstr "Bloquear os seguintes sites:"
-
-#~ msgid "Add apps to prevent %s from using them:"
-#~ msgstr "Adicionar aplicativos para prevenir que %s utilize-os:"

@@ -14,7 +14,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-05-20 05:44+0000\n"
+"X-Launchpad-Export-Date: 2016-05-21 05:51+0000\n"
 "X-Generator: Launchpad (build 18025)\n"
 
 #: ../src/Plug.vala:70
@@ -222,12 +222,3 @@ msgstr "管理家长控制选项"
 #: ../src/Translation.vala:24
 msgid "Authentication is required to change parental control settings"
 msgstr "家长控制选项需要管理员权限才能更改"
-
-#~ msgid "Allow access to these apps with admin permission"
-#~ msgstr "允许以管理员身份打开这些应用"
-
-#~ msgid "Blacklist the following sites:"
-#~ msgstr "将以下网站加入黑名单："
-
-#~ msgid "Add apps to prevent %s from using them:"
-#~ msgstr "禁止账户 %s 使用的应用："
