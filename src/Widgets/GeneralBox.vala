@@ -39,7 +39,6 @@ namespace PC.Widgets {
             plank_conf_file_path = Path.build_filename (user.get_home_dir (), Vars.PLANK_CONF_DIR);
 
             dock_btn.notify["active"].connect (on_dock_btn_activate);
-
             print_btn.notify["active"].connect (on_print_conf_activate);
 
             limit_switch.notify["active"].connect (on_limit_switch_changed);
@@ -69,6 +68,18 @@ namespace PC.Widgets {
             print_btn = new Gtk.CheckButton.with_label (_("Configure printing"));
             print_btn.halign = Gtk.Align.START;
             print_btn.margin_bottom = 18;
+
+            // Temporarily disabled for beta release
+            // Remove after both options are finished
+            main_label.no_show_all = true;
+            main_label.visible = false;
+
+            dock_btn.no_show_all = true;
+            dock_btn.visible = false;
+
+            print_btn.no_show_all = true;
+            print_btn.visible = false;
+            // Temporarily disabled for beta release
 
             var limit_method_label = new Gtk.Label (_("Limit computer use:"));
             limit_method_label.halign = Gtk.Align.END;
