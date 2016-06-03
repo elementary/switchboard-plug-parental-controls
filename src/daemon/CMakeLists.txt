@@ -31,7 +31,7 @@ OPTIONS
 )
 
 include_directories (${CMAKE_SOURCE_DIR}/lib/)
-add_library (${EXEC_MONITOR_NAME} SHARED ${CMAKE_SOURCE_DIR}/lib/exec-monitor.c)
+add_library (${EXEC_MONITOR_NAME} STATIC ${CMAKE_SOURCE_DIR}/lib/exec-monitor.c)
 
 add_executable (${DAEMON_EXEC_NAME} ${VALA_C})
 target_link_libraries (${DAEMON_EXEC_NAME} ${DEPS_LIBRARIES} ${EXEC_MONITOR_NAME}) 
