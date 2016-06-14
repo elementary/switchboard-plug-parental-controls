@@ -8,18 +8,18 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-05-19 17:17-0700\n"
-"PO-Revision-Date: 2016-02-10 22:29+0000\n"
+"PO-Revision-Date: 2016-06-13 16:44+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-11 05:46+0000\n"
+"X-Launchpad-Export-Date: 2016-06-14 06:29+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 
 #: ../src/Plug.vala:70
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Mõningate seadete muutmiseks on vaja administraatori õigusi…"
 
 #: ../src/Plug.vala:89
 msgid "No users to edit"
@@ -91,7 +91,7 @@ msgstr ":"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "Kasutajal %s takistatakse nende rakenduste kasutamist:"
 
 #: ../src/Widgets/AppsBox.vala:108
 msgid "Add Prevented Apps…"
@@ -103,27 +103,27 @@ msgstr "Eemalda valitud rakendus"
 
 #: ../src/Widgets/AppsBox.vala:117
 msgid "Clear All"
-msgstr ""
+msgstr "Puhasta kõik"
 
 #: ../src/Widgets/AppsBox.vala:140
 msgid "Allow access to these apps with admin permission:"
-msgstr ""
+msgstr "Administraatorõigustega lubatud rakendused:"
 
 #: ../src/Widgets/InternetBox.vala:78
 msgid "Prevent %s from visiting these websites:"
-msgstr ""
+msgstr "Kasutajal %s keelatakse nende veebilehtede külastamine:"
 
 #: ../src/Widgets/InternetBox.vala:91
 msgid "Add URL"
-msgstr ""
+msgstr "Lisa URL"
 
 #: ../src/Widgets/InternetBox.vala:100
 msgid "Add a new URL, for example: google.com"
-msgstr ""
+msgstr "Uue URL-i lisamine, nagu näiteks: google.ee"
 
 #: ../src/Widgets/InternetBox.vala:101
 msgid "Invalid URL"
-msgstr ""
+msgstr "Vigane URL"
 
 #: ../src/Widgets/GeneralBox.vala:63
 msgid "Allow this user to:"
@@ -131,11 +131,11 @@ msgstr "Sellele kasutajale on lubatud:"
 
 #: ../src/Widgets/GeneralBox.vala:66
 msgid "Modify the dock"
-msgstr ""
+msgstr "Doki muutmine"
 
 #: ../src/Widgets/GeneralBox.vala:69
 msgid "Configure printing"
-msgstr ""
+msgstr "Printimise seadistamine"
 
 #: ../src/Widgets/GeneralBox.vala:73
 msgid "Limit computer use:"
@@ -184,7 +184,7 @@ msgstr "%ld minutit"
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"
-msgstr ""
+msgstr "Süsteem lukustatakse pärast %s %s. %s"
 
 #: ../src/client/Client.vala:138
 msgid "Time left"
