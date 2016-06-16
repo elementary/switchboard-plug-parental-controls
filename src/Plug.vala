@@ -29,8 +29,8 @@ namespace PC {
         private Widgets.UserListBox list;
         private Gtk.ScrolledWindow scrolled_window;
         private Gtk.Grid main_grid;
-        private Granite.Widgets.AlertView alert;
         private Gtk.InfoBar infobar;
+        private Gtk.Grid alert_view_grid;
 
         private Act.UserManager usermanager;
 
@@ -78,20 +78,34 @@ namespace PC {
             main_grid.attach (infobar, 0, 1, 1, 1);
             main_grid.attach (paned, 0, 2, 1, 1);
 
-            alert = new Granite.Widgets.AlertView (_("No users to edit"), _("Parental Controls can only be applied to user accounts that don't have administrative permissions.\nYou can change a user's account type from \"Administrator\" to \"Standard\" in the User Accounts pane."), "preferences-system-parental-controls");
+            var alert_view = new Granite.Widgets.AlertView (_("No users to edit"), _("Parental Controls can only be applied to user accounts that don't have administrative permissions.\nYou can change a user's account type from \"Administrator\" to \"Standard\" in the User Accounts pane."), "preferences-system-parental-controls");
+            alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
             var link_button = new Gtk.LinkButton.with_label ("", _("Configure User Accounts"));
-            link_button.halign = Gtk.Align.START;
+            link_button.halign = Gtk.Align.END;
+            link_button.valign = Gtk.Align.END;
             link_button.tooltip_text = _("Open Users settings");
             link_button.activate_link.connect (() => {
-                new Granite.Services.SimpleCommand ("/usr/bin", "switchboard user-accounts").run ();
+				var list = new List<string> ();
+		        list.append ("user-accounts");
+
+		        try {
+		            var appinfo = AppInfo.create_from_commandline ("switchboard", null, AppInfoCreateFlags.SUPPORTS_URIS);
+		            appinfo.launch_uris (list, null);
+		        } catch (Error e) {
+		            warning ("%s\n", e.message);
+		        }
+
                 return true;
             });
 
-            alert.attach (link_button, 2, 3, 1, 1);
+            alert_view_grid = new Gtk.Grid ();
+            alert_view_grid.margin = 24;
+            alert_view_grid.attach (alert_view, 0, 0, 1, 1);
+            alert_view_grid.attach (link_button, 0, 1, 1, 1);
 
             stack.add (main_grid);
-            stack.add (alert);
+            stack.add (alert_view_grid);
 
             usermanager.notify["is-loaded"].connect (update_user_handling);
             update_user_handling ();
@@ -113,7 +127,7 @@ namespace PC {
             if (list.get_has_users ()) {
                 stack.visible_child = main_grid;
             } else {
-                stack.visible_child = alert;
+                stack.visible_child = alert_view_grid;
             }
 
             if (Utils.get_permission ().get_allowed ()) {
