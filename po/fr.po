@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-05-19 17:17-0700\n"
-"PO-Revision-Date: 2016-04-29 21:54+0000\n"
-"Last-Translator: Nikos <Unknown>\n"
+"PO-Revision-Date: 2016-06-17 11:54+0000\n"
+"Last-Translator: Olivier Vopat <olivier.vopat@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-11 05:46+0000\n"
+"X-Launchpad-Export-Date: 2016-06-18 06:12+0000\n"
 "X-Generator: Launchpad (build 18097)\n"
 
 #: ../src/Plug.vala:70
@@ -92,7 +92,7 @@ msgstr ":"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "Interdire à %s d'utiliser ces programmes :"
 
 #: ../src/Widgets/AppsBox.vala:108
 msgid "Add Prevented Apps…"
@@ -104,15 +104,16 @@ msgstr "Supprimer l'application sélectionnée"
 
 #: ../src/Widgets/AppsBox.vala:117
 msgid "Clear All"
-msgstr ""
+msgstr "Tout retirer"
 
 #: ../src/Widgets/AppsBox.vala:140
 msgid "Allow access to these apps with admin permission:"
 msgstr ""
+"Permettre l'utilisation de ces programmes avec des droits d'administrateur :"
 
 #: ../src/Widgets/InternetBox.vala:78
 msgid "Prevent %s from visiting these websites:"
-msgstr ""
+msgstr "Interdire à %s la visite de ces sites internet :"
 
 #: ../src/Widgets/InternetBox.vala:91
 msgid "Add URL"
@@ -187,7 +188,7 @@ msgstr "%ld minutes"
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"
-msgstr ""
+msgstr "Cet ordinateur se verrouillera dans %s %s. %s"
 
 #: ../src/client/Client.vala:138
 msgid "Time left"
@@ -227,3 +228,5 @@ msgstr "Gestion de la configuration du contrôle parental"
 #: ../src/Translation.vala:24
 msgid "Authentication is required to change parental control settings"
 msgstr ""
+"Une authentification est requise pour modifier le paramétrage du contrôle "
+"parental"
