@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-05-19 17:17-0700\n"
-"PO-Revision-Date: 2016-05-01 01:49+0000\n"
+"PO-Revision-Date: 2016-06-23 16:12+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-11 05:46+0000\n"
-"X-Generator: Launchpad (build 18097)\n"
+"X-Launchpad-Export-Date: 2016-06-26 06:30+0000\n"
+"X-Generator: Launchpad (build 18111)\n"
 
 #: ../src/Plug.vala:70
 msgid "Some settings require administrator rights to be changed"
@@ -47,7 +47,7 @@ msgstr ""
 
 #: ../src/Plug.vala:153
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "Konfiguro limitet e orarit dhe kufizo përdorimin e programeve"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -87,7 +87,7 @@ msgstr ":"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "Parandalo %s nga përdorimi i këtyre programeve:"
 
 #: ../src/Widgets/AppsBox.vala:108
 msgid "Add Prevented Apps…"
@@ -99,7 +99,7 @@ msgstr "Hiq programin e përzgjedhur"
 
 #: ../src/Widgets/AppsBox.vala:117
 msgid "Clear All"
-msgstr ""
+msgstr "Pastro gjithçka"
 
 #: ../src/Widgets/AppsBox.vala:140
 msgid "Allow access to these apps with admin permission:"
