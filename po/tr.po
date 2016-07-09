@@ -8,13 +8,13 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-05-19 17:17-0700\n"
-"PO-Revision-Date: 2016-06-28 00:55+0000\n"
+"PO-Revision-Date: 2016-07-08 20:55+0000\n"
 "Last-Translator: Melih Güçlü <melihguclu@hotmail.com>\n"
 "Language-Team: Turkish <tr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-29 05:51+0000\n"
+"X-Launchpad-Export-Date: 2016-07-09 06:44+0000\n"
 "X-Generator: Launchpad (build 18115)\n"
 
 #: ../src/Plug.vala:70
@@ -81,11 +81,11 @@ msgstr "Uygulamaları Ara"
 
 #: ../src/Widgets/WeekSpinBox.vala:65
 msgid "From:"
-msgstr "Gönderen:"
+msgstr "Şu saatten:"
 
 #: ../src/Widgets/WeekSpinBox.vala:69
 msgid "To:"
-msgstr "Alıcı:"
+msgstr "Şu saate:"
 
 #: ../src/Widgets/WeekSpinBox.vala:71
 msgid ":"
@@ -109,7 +109,7 @@ msgstr "Hepsini Temizle"
 
 #: ../src/Widgets/AppsBox.vala:140
 msgid "Allow access to these apps with admin permission:"
-msgstr "Şu uygulamalara yönetici izinleri ile erişime izin ver:"
+msgstr "Bu uygulamalara yönetici izinleri ile erişime izin ver"
 
 #: ../src/Widgets/InternetBox.vala:78
 msgid "Prevent %s from visiting these websites:"
@@ -145,23 +145,23 @@ msgstr "Bilgisayar kullanımını sınırla:"
 
 #: ../src/Widgets/GeneralBox.vala:81
 msgid "On weekdays and weekends"
-msgstr "Haftaiçleri ve haftasonları"
+msgstr "Hafta içi ve hafta sonu"
 
 #: ../src/Widgets/GeneralBox.vala:82
 msgid "Only on weekdays"
-msgstr "Sadece haftaiçleri"
+msgstr "Sadece hafta içi"
 
 #: ../src/Widgets/GeneralBox.vala:83
 msgid "Only on weekends"
-msgstr "Sadece haftasonları"
+msgstr "Sadece hafta sonu"
 
 #: ../src/Widgets/GeneralBox.vala:91
 msgid "Weekdays"
-msgstr "Haftaiçi günler"
+msgstr "Hafta içi"
 
 #: ../src/Widgets/GeneralBox.vala:95
 msgid "Weekends"
-msgstr "Haftasonları"
+msgstr "Hafta sonu"
 
 #: ../src/client/Client.vala:125
 msgid ""
