@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-05-19 17:17-0700\n"
-"PO-Revision-Date: 2016-07-06 20:49+0000\n"
-"Last-Translator: Lukáš Papík <stereo839@gmail.com>\n"
+"PO-Revision-Date: 2016-07-17 21:22+0000\n"
+"Last-Translator: Igor Štefanko <istefanko@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-07 05:59+0000\n"
-"X-Generator: Launchpad (build 18115)\n"
+"X-Launchpad-Export-Date: 2016-07-18 05:40+0000\n"
+"X-Generator: Launchpad (build 18140)\n"
 
 #: ../src/Plug.vala:70
 msgid "Some settings require administrator rights to be changed"
@@ -34,7 +34,7 @@ msgid ""
 msgstr ""
 "Rodičovskú kontrolu je možné použiť iba na používateľské účty, ktoré nemajú "
 "oprávnenie správcu.\n"
-"Môžete zmeniť typ účtu užívateľa zo \"Správcu\" na \"Štandardný\" v paneli "
+"Typ účtu užívateľa zo \"Správcu\" na \"Štandardný\" môžete zmeniť v paneli "
 "Používateľských Účtov."
 
 #: ../src/Plug.vala:91
@@ -131,7 +131,7 @@ msgstr "Povoliť tomuto užívateľovi:"
 
 #: ../src/Widgets/GeneralBox.vala:66
 msgid "Modify the dock"
-msgstr ""
+msgstr "Upraviť dock"
 
 #: ../src/Widgets/GeneralBox.vala:69
 msgid "Configure printing"
@@ -186,7 +186,7 @@ msgstr "%ld minút"
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"
-msgstr ""
+msgstr "Tento počítač sa uzamkne po %s %s. %s"
 
 #: ../src/client/Client.vala:138
 msgid "Time left"
@@ -221,8 +221,8 @@ msgstr "Nie ste oprávnený spustiť túto aplikáciu."
 #. 
 #: ../src/Translation.vala:23
 msgid "Manage parental control settings"
-msgstr ""
+msgstr "Spravovať nastavenia rodičovskej kontroly"
 
 #: ../src/Translation.vala:24
 msgid "Authentication is required to change parental control settings"
-msgstr ""
+msgstr "Na zmenu rodičovskej kontroly je potrebná autentifikácia"
