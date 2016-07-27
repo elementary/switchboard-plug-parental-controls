@@ -24,6 +24,7 @@ namespace PC.Vars {
     public const string LOGIN_IFACE = "org.freedesktop.login1";
     public const string LOGIN_OBJECT_PATH = "/org/freedesktop/login1";
     public const string DBUS_PROPERTIES_IFACE = "org.freedesktop.DBus.Properties";
+    public const string CUPS_PK_HELPER_IFACE = "org.opensuse.CupsPkHelper.Mechanism";
     public const string PARENTAL_CONTROLS_IFACE = "org.pantheon.ParentalControls";
     public const string PARENTAL_CONTROLS_OBJECT_PATH = "/org/pantheon/ParentalControls";
     public const string PARENTAL_CONTROLS_ACTION_ID = "org.pantheon.switchboard.parental-controls.administration";

@@ -249,24 +249,20 @@ namespace PC.Widgets {
         }
 
         public void set_printer_active (bool active) {
-            var builder = new VariantBuilder (new VariantType ("as"));
-            builder.add ("s", user.get_user_name ());
-
-            string method = "PrinterSetUsersDenied";
-            if (active) {
-                method = "PrinterSetUsersAllowed";
-            }
+            string[] users = { user.get_user_name () };
 
             try {
-                var conn = Bus.get_sync (BusType.SYSTEM);
+                CupsPkHelper? helper = Bus.get_proxy_sync (BusType.SYSTEM, Vars.CUPS_PK_HELPER_IFACE, "/");
+                if (helper == null) {
+                    return;
+                }
+
                 foreach (string printer in get_printers ()) {
-                    conn.call_sync ("org.opensuse.CupsPkHelper.Mechanism",
-                                    "/",
-                                    "org.opensuse.CupsPkHelper.Mechanism",
-                                    method,
-                                    new Variant ("(sas)", printer, builder),
-                                    null,
-                                    0, -1);
+                    if (active) {
+                        helper.printer_set_users_allowed (printer, users);
+                    } else {
+                        helper.printer_set_users_denied (printer, users);
+                    }
                 }
             } catch (Error e) {
                 warning ("%s\n", e.message);

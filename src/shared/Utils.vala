@@ -21,6 +21,12 @@
  */
 
 namespace PC {
+    [DBus (name = "org.opensuse.CupsPkHelper.Mechanism")]
+    public interface CupsPkHelper : Object {
+        public abstract void printer_set_users_allowed (string printer, string[] users) throws IOError;
+        public abstract void printer_set_users_denied (string printer, string[] users) throws IOError;
+    }
+
     public class Utils : Object {
         public static Polkit.Permission? permission = null;
         public static string user_name;
