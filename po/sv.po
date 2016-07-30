@@ -7,51 +7,54 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-19 17:17-0700\n"
+"POT-Creation-Date: 2016-07-29 15:18-0700\n"
 "PO-Revision-Date: 2016-07-20 13:30+0000\n"
 "Last-Translator: Mikael Nyberg <mikanybe@gmail.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-21 06:07+0000\n"
-"X-Generator: Launchpad (build 18147)\n"
+"X-Launchpad-Export-Date: 2016-07-30 06:20+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 
-#: ../src/Plug.vala:70
-msgid "Some settings require administrator rights to be changed"
-msgstr "Vissa inställningar kräver administratörsrättigheter för att ändras"
+#. //launchpad.net/switchboard-plug-parental-controls)
+#. *
+#. * This library is free software; you can redistribute it and/or
+#. * modify it under the terms of the GNU Library General Public
+#. * License as published by the Free Software Foundation; either
+#. * version 3 of the License, or (at your option) any later version.
+#. *
+#. * This library is distributed in the hope that it will be useful,
+#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#. * Library General Public License for more details.
+#. *
+#. * You should have received a copy of the GNU Library General Public
+#. * License along with this library; if not, write to the
+#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+#. * Boston, MA 02111-1307, USA.
+#. *
+#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
+#. 
+#: ../src/Translation.vala:23
+msgid "Manage parental control settings"
+msgstr "Hantera inställningar för föräldrakontroll"
 
-#: ../src/Plug.vala:89
-msgid "No users to edit"
-msgstr "Inga användare att ändra"
+#: ../src/Translation.vala:24
+msgid "Authentication is required to change parental control settings"
+msgstr "Autentisering krävs för att ställa in föräldrakontroll"
 
-#: ../src/Plug.vala:89
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Föräldrakontroll kan bara appliceras på användarkonton som inte har "
-"administratörsrättigheter.\n"
-"Du kan ändra en användares kontotyp från \"Administratör\" till \"Standard\" "
-"i Användarkonton."
+#: ../src/Widgets/ControlPage.vala:74
+msgid "General"
+msgstr "Allmänt"
 
-#: ../src/Plug.vala:91
-msgid "Configure User Accounts"
-msgstr "Ställ in användarkonton"
+#: ../src/Widgets/ControlPage.vala:75
+msgid "Internet"
+msgstr "Internet"
 
-#: ../src/Plug.vala:93
-msgid "Open Users settings"
-msgstr "Öppna Användarkonton"
-
-#: ../src/Plug.vala:152
-msgid "Parental Control"
-msgstr "Föräldrakontroll"
-
-#: ../src/Plug.vala:153
-msgid "Configure time limits and restrict application usage"
-msgstr "Ställ in tidsbegränsningar och förhindra åtkomst till program"
+#: ../src/Widgets/ControlPage.vala:76
+msgid "Applications"
+msgstr "Program"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -61,33 +64,69 @@ msgstr "Mitt konto"
 msgid "Other Accounts"
 msgstr "Övriga konton"
 
-#: ../src/Widgets/ControlPage.vala:54
-msgid "General"
-msgstr "Allmänt"
+#: ../src/Widgets/WeekSpinBox.vala:44
+msgid "From:"
+msgstr "Från:"
 
-#: ../src/Widgets/ControlPage.vala:55
-msgid "Internet"
-msgstr "Internet"
+#: ../src/Widgets/WeekSpinBox.vala:46
+msgid "To:"
+msgstr "Till:"
 
-#: ../src/Widgets/ControlPage.vala:56
-msgid "Applications"
-msgstr "Program"
+#: ../src/Widgets/InternetBox.vala:78
+msgid "Prevent %s from visiting these websites:"
+msgstr "Förhindra %s från att besöka dessa hemsidor:"
+
+#: ../src/Widgets/InternetBox.vala:91
+msgid "Add URL"
+msgstr "Lägg till URL"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Add a new URL, for example: google.com"
+msgstr "Lägg till en ny URL, t.ex: google.se"
+
+#: ../src/Widgets/InternetBox.vala:101
+msgid "Invalid URL"
+msgstr "Felaktig URL"
+
+#: ../src/Widgets/GeneralBox.vala:62
+msgid "Allow this user to:"
+msgstr "Tillåt den här användaren att:"
+
+#: ../src/Widgets/GeneralBox.vala:65
+msgid "Modify the dock"
+msgstr "Ändra dockan"
+
+#: ../src/Widgets/GeneralBox.vala:68
+msgid "Configure printing"
+msgstr "Ställa in skrivare"
+
+#: ../src/Widgets/GeneralBox.vala:84
+msgid "Limit computer use:"
+msgstr "Begränsa datoranvändning"
+
+#: ../src/Widgets/GeneralBox.vala:92
+msgid "On weekdays and weekends"
+msgstr "På veckodagar och helger"
+
+#: ../src/Widgets/GeneralBox.vala:93
+msgid "Only on weekdays"
+msgstr "Endast på veckodagar"
+
+#: ../src/Widgets/GeneralBox.vala:94
+msgid "Only on weekends"
+msgstr "Endast på helger"
+
+#: ../src/Widgets/GeneralBox.vala:102
+msgid "Weekdays"
+msgstr "Veckodagar"
+
+#: ../src/Widgets/GeneralBox.vala:106
+msgid "Weekends"
+msgstr "Helger"
 
 #: ../src/Widgets/AppChooser.vala:71
 msgid "Search Applications"
 msgstr "Sök efter program"
-
-#: ../src/Widgets/WeekSpinBox.vala:65
-msgid "From:"
-msgstr "Från:"
-
-#: ../src/Widgets/WeekSpinBox.vala:69
-msgid "To:"
-msgstr "Till:"
-
-#: ../src/Widgets/WeekSpinBox.vala:71
-msgid ":"
-msgstr ":"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
@@ -109,57 +148,41 @@ msgstr "Rensa allt"
 msgid "Allow access to these apps with admin permission:"
 msgstr "Tillåt åtkomst till dessa program med administratörsrättigheter:"
 
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Förhindra %s från att besöka dessa hemsidor:"
+#: ../src/Plug.vala:72
+msgid "Some settings require administrator rights to be changed"
+msgstr "Vissa inställningar kräver administratörsrättigheter för att ändras"
 
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "Lägg till URL"
+#: ../src/Plug.vala:81
+msgid "No users to edit"
+msgstr "Inga användare att ändra"
 
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Lägg till en ny URL, t.ex: google.se"
+#: ../src/Plug.vala:81
+msgid ""
+"Parental Controls can only be applied to user accounts that don't have "
+"administrative permissions.\n"
+"You can change a user's account type from \"Administrator\" to \"Standard\" "
+"in the User Accounts pane."
+msgstr ""
+"Föräldrakontroll kan bara appliceras på användarkonton som inte har "
+"administratörsrättigheter.\n"
+"Du kan ändra en användares kontotyp från \"Administratör\" till \"Standard\" "
+"i Användarkonton."
 
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "Felaktig URL"
+#: ../src/Plug.vala:84
+msgid "Configure User Accounts"
+msgstr "Ställ in användarkonton"
 
-#: ../src/Widgets/GeneralBox.vala:63
-msgid "Allow this user to:"
-msgstr "Tillåt den här användaren att:"
+#: ../src/Plug.vala:87
+msgid "Open Users settings"
+msgstr "Öppna Användarkonton"
 
-#: ../src/Widgets/GeneralBox.vala:66
-msgid "Modify the dock"
-msgstr "Ändra dockan"
+#: ../src/Plug.vala:164
+msgid "Parental Control"
+msgstr "Föräldrakontroll"
 
-#: ../src/Widgets/GeneralBox.vala:69
-msgid "Configure printing"
-msgstr "Ställa in skrivare"
-
-#: ../src/Widgets/GeneralBox.vala:73
-msgid "Limit computer use:"
-msgstr "Begränsa datoranvändning"
-
-#: ../src/Widgets/GeneralBox.vala:81
-msgid "On weekdays and weekends"
-msgstr "På veckodagar och helger"
-
-#: ../src/Widgets/GeneralBox.vala:82
-msgid "Only on weekdays"
-msgstr "Endast på veckodagar"
-
-#: ../src/Widgets/GeneralBox.vala:83
-msgid "Only on weekends"
-msgstr "Endast på helger"
-
-#: ../src/Widgets/GeneralBox.vala:91
-msgid "Weekdays"
-msgstr "Veckodagar"
-
-#: ../src/Widgets/GeneralBox.vala:95
-msgid "Weekends"
-msgstr "Helger"
+#: ../src/Plug.vala:165
+msgid "Configure time limits and restrict application usage"
+msgstr "Ställ in tidsbegränsningar och förhindra åtkomst till program"
 
 #: ../src/client/Client.vala:125
 msgid ""
@@ -197,30 +220,3 @@ msgstr "Du kan inte köra detta program"
 #: ../src/client/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Du har inte tillåtelse att köra detta program."
-
-#. //launchpad.net/switchboard-plug-parental-controls)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 3 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
-#. 
-#: ../src/Translation.vala:23
-msgid "Manage parental control settings"
-msgstr "Hantera inställningar för föräldrakontroll"
-
-#: ../src/Translation.vala:24
-msgid "Authentication is required to change parental control settings"
-msgstr "Autentisering krävs för att ställa in föräldrakontroll"

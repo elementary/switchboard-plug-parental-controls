@@ -7,53 +7,56 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-19 17:17-0700\n"
+"POT-Creation-Date: 2016-07-29 15:18-0700\n"
 "PO-Revision-Date: 2016-05-26 15:58+0000\n"
 "Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-06-11 05:46+0000\n"
-"X-Generator: Launchpad (build 18097)\n"
+"X-Launchpad-Export-Date: 2016-07-30 06:20+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 
-#: ../src/Plug.vala:70
-msgid "Some settings require administrator rights to be changed"
+#. //launchpad.net/switchboard-plug-parental-controls)
+#. *
+#. * This library is free software; you can redistribute it and/or
+#. * modify it under the terms of the GNU Library General Public
+#. * License as published by the Free Software Foundation; either
+#. * version 3 of the License, or (at your option) any later version.
+#. *
+#. * This library is distributed in the hope that it will be useful,
+#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#. * Library General Public License for more details.
+#. *
+#. * You should have received a copy of the GNU Library General Public
+#. * License along with this library; if not, write to the
+#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+#. * Boston, MA 02111-1307, USA.
+#. *
+#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
+#. 
+#: ../src/Translation.vala:23
+msgid "Manage parental control settings"
+msgstr "Gerenciar configurações de controle dos pais"
+
+#: ../src/Translation.vala:24
+msgid "Authentication is required to change parental control settings"
 msgstr ""
-"Algumas configurações precisam de direitos administrativos para serem "
-"modificadas"
+"A autenticação é necessária para realizar alterações nas configurações de "
+"controle dos pais."
 
-#: ../src/Plug.vala:89
-msgid "No users to edit"
-msgstr "Nenhum usuário para editar"
+#: ../src/Widgets/ControlPage.vala:74
+msgid "General"
+msgstr "Geral"
 
-#: ../src/Plug.vala:89
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Controle dos pais só pode ser aplicado à um usuário que não tenha permissões "
-"de administrador.\n"
-"Você pode mudar o tipo de uma conta de \"Administrador\" para \"Padrão\" no "
-"painel de contas de usuário."
+#: ../src/Widgets/ControlPage.vala:75
+msgid "Internet"
+msgstr "Internet"
 
-#: ../src/Plug.vala:91
-msgid "Configure User Accounts"
-msgstr "Configurar contas de usuários"
-
-#: ../src/Plug.vala:93
-msgid "Open Users settings"
-msgstr "Abrir configurações de usuários"
-
-#: ../src/Plug.vala:152
-msgid "Parental Control"
-msgstr "Controle dos pais"
-
-#: ../src/Plug.vala:153
-msgid "Configure time limits and restrict application usage"
-msgstr "Configure limites de tempo e restrinja o uso de aplicativos"
+#: ../src/Widgets/ControlPage.vala:76
+msgid "Applications"
+msgstr "Aplicativos"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -63,33 +66,69 @@ msgstr "Minha conta"
 msgid "Other Accounts"
 msgstr "Outras contas"
 
-#: ../src/Widgets/ControlPage.vala:54
-msgid "General"
-msgstr "Geral"
+#: ../src/Widgets/WeekSpinBox.vala:44
+msgid "From:"
+msgstr "De:"
 
-#: ../src/Widgets/ControlPage.vala:55
-msgid "Internet"
-msgstr "Internet"
+#: ../src/Widgets/WeekSpinBox.vala:46
+msgid "To:"
+msgstr "Até:"
 
-#: ../src/Widgets/ControlPage.vala:56
-msgid "Applications"
-msgstr "Aplicativos"
+#: ../src/Widgets/InternetBox.vala:78
+msgid "Prevent %s from visiting these websites:"
+msgstr "Impedir %s de visitar estes websites:"
+
+#: ../src/Widgets/InternetBox.vala:91
+msgid "Add URL"
+msgstr "Adicionar URL"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Add a new URL, for example: google.com"
+msgstr "Adicionar uma nova URL, por exemplo: google.com"
+
+#: ../src/Widgets/InternetBox.vala:101
+msgid "Invalid URL"
+msgstr "URL inválida"
+
+#: ../src/Widgets/GeneralBox.vala:62
+msgid "Allow this user to:"
+msgstr "Permitir esse usuário à:"
+
+#: ../src/Widgets/GeneralBox.vala:65
+msgid "Modify the dock"
+msgstr "Modificar o dock"
+
+#: ../src/Widgets/GeneralBox.vala:68
+msgid "Configure printing"
+msgstr "Configurar impressão"
+
+#: ../src/Widgets/GeneralBox.vala:84
+msgid "Limit computer use:"
+msgstr "Limitar uso do computador:"
+
+#: ../src/Widgets/GeneralBox.vala:92
+msgid "On weekdays and weekends"
+msgstr "Na semana e nos fins de semana"
+
+#: ../src/Widgets/GeneralBox.vala:93
+msgid "Only on weekdays"
+msgstr "Somente na semana"
+
+#: ../src/Widgets/GeneralBox.vala:94
+msgid "Only on weekends"
+msgstr "Somente nos fins de semana"
+
+#: ../src/Widgets/GeneralBox.vala:102
+msgid "Weekdays"
+msgstr "Semana"
+
+#: ../src/Widgets/GeneralBox.vala:106
+msgid "Weekends"
+msgstr "Fins de semana"
 
 #: ../src/Widgets/AppChooser.vala:71
 msgid "Search Applications"
 msgstr "Pesquisar por aplicativos"
-
-#: ../src/Widgets/WeekSpinBox.vala:65
-msgid "From:"
-msgstr "De:"
-
-#: ../src/Widgets/WeekSpinBox.vala:69
-msgid "To:"
-msgstr "Até:"
-
-#: ../src/Widgets/WeekSpinBox.vala:71
-msgid ":"
-msgstr ":"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
@@ -111,57 +150,43 @@ msgstr "Limpar tudo"
 msgid "Allow access to these apps with admin permission:"
 msgstr "Acessar estes aplicativos com permissão do administrador"
 
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Impedir %s de visitar estes websites:"
+#: ../src/Plug.vala:72
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+"Algumas configurações precisam de direitos administrativos para serem "
+"modificadas"
 
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "Adicionar URL"
+#: ../src/Plug.vala:81
+msgid "No users to edit"
+msgstr "Nenhum usuário para editar"
 
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Adicionar uma nova URL, por exemplo: google.com"
+#: ../src/Plug.vala:81
+msgid ""
+"Parental Controls can only be applied to user accounts that don't have "
+"administrative permissions.\n"
+"You can change a user's account type from \"Administrator\" to \"Standard\" "
+"in the User Accounts pane."
+msgstr ""
+"Controle dos pais só pode ser aplicado à um usuário que não tenha permissões "
+"de administrador.\n"
+"Você pode mudar o tipo de uma conta de \"Administrador\" para \"Padrão\" no "
+"painel de contas de usuário."
 
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "URL inválida"
+#: ../src/Plug.vala:84
+msgid "Configure User Accounts"
+msgstr "Configurar contas de usuários"
 
-#: ../src/Widgets/GeneralBox.vala:63
-msgid "Allow this user to:"
-msgstr "Permitir esse usuário à:"
+#: ../src/Plug.vala:87
+msgid "Open Users settings"
+msgstr "Abrir configurações de usuários"
 
-#: ../src/Widgets/GeneralBox.vala:66
-msgid "Modify the dock"
-msgstr "Modificar o dock"
+#: ../src/Plug.vala:164
+msgid "Parental Control"
+msgstr "Controle dos pais"
 
-#: ../src/Widgets/GeneralBox.vala:69
-msgid "Configure printing"
-msgstr "Configurar impressão"
-
-#: ../src/Widgets/GeneralBox.vala:73
-msgid "Limit computer use:"
-msgstr "Limitar uso do computador:"
-
-#: ../src/Widgets/GeneralBox.vala:81
-msgid "On weekdays and weekends"
-msgstr "Na semana e nos fins de semana"
-
-#: ../src/Widgets/GeneralBox.vala:82
-msgid "Only on weekdays"
-msgstr "Somente na semana"
-
-#: ../src/Widgets/GeneralBox.vala:83
-msgid "Only on weekends"
-msgstr "Somente nos fins de semana"
-
-#: ../src/Widgets/GeneralBox.vala:91
-msgid "Weekdays"
-msgstr "Semana"
-
-#: ../src/Widgets/GeneralBox.vala:95
-msgid "Weekends"
-msgstr "Fins de semana"
+#: ../src/Plug.vala:165
+msgid "Configure time limits and restrict application usage"
+msgstr "Configure limites de tempo e restrinja o uso de aplicativos"
 
 #: ../src/client/Client.vala:125
 msgid ""
@@ -201,32 +226,3 @@ msgstr "Você não pode abrir este aplicativo"
 #: ../src/client/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Você não tem permissão para abrir este aplicativo."
-
-#. //launchpad.net/switchboard-plug-parental-controls)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 3 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
-#. 
-#: ../src/Translation.vala:23
-msgid "Manage parental control settings"
-msgstr "Gerenciar configurações de controle dos pais"
-
-#: ../src/Translation.vala:24
-msgid "Authentication is required to change parental control settings"
-msgstr ""
-"A autenticação é necessária para realizar alterações nas configurações de "
-"controle dos pais."

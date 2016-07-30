@@ -7,53 +7,56 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-05-19 17:17-0700\n"
-"PO-Revision-Date: 2016-07-23 23:36+0000\n"
-"Last-Translator: Daniel Fore <Unknown>\n"
+"POT-Creation-Date: 2016-07-29 15:18-0700\n"
+"PO-Revision-Date: 2016-07-22 16:07+0000\n"
+"Last-Translator: kay van der Zander <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-24 05:41+0000\n"
-"X-Generator: Launchpad (build 18147)\n"
+"X-Launchpad-Export-Date: 2016-07-30 06:20+0000\n"
+"X-Generator: Launchpad (build 18169)\n"
 
-#: ../src/Plug.vala:70
-msgid "Some settings require administrator rights to be changed"
+#. //launchpad.net/switchboard-plug-parental-controls)
+#. *
+#. * This library is free software; you can redistribute it and/or
+#. * modify it under the terms of the GNU Library General Public
+#. * License as published by the Free Software Foundation; either
+#. * version 3 of the License, or (at your option) any later version.
+#. *
+#. * This library is distributed in the hope that it will be useful,
+#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#. * Library General Public License for more details.
+#. *
+#. * You should have received a copy of the GNU Library General Public
+#. * License along with this library; if not, write to the
+#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+#. * Boston, MA 02111-1307, USA.
+#. *
+#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
+#. 
+#: ../src/Translation.vala:23
+msgid "Manage parental control settings"
+msgstr "Beheer ouderlijk toezicht instellingen"
+
+#: ../src/Translation.vala:24
+msgid "Authentication is required to change parental control settings"
 msgstr ""
-"Voor sommige instellingen zijn administrator bevoegdheden nodig om ze te "
+"administrator rechten zijn nodig om ouderlijk toezichts instellingen te "
 "verranderen"
 
-#: ../src/Plug.vala:89
-msgid "No users to edit"
-msgstr "Geen gebruikers te configureren"
+#: ../src/Widgets/ControlPage.vala:74
+msgid "General"
+msgstr "Algemeen"
 
-#: ../src/Plug.vala:89
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Ouderlijk toezicht kan alleen aangezet worden bij gebruikers die geen "
-"administratieve rechten hebben.\n"
-"U kunt een gebruiker type veranderen van \"administrator\" naar "
-"\"standaard\" in de gebruikers account instellingen"
+#: ../src/Widgets/ControlPage.vala:75
+msgid "Internet"
+msgstr "Internet"
 
-#: ../src/Plug.vala:91
-msgid "Configure User Accounts"
-msgstr "Configureer gebruikers account"
-
-#: ../src/Plug.vala:93
-msgid "Open Users settings"
-msgstr "Open gebruikers instellingen"
-
-#: ../src/Plug.vala:152
-msgid "Parental Control"
-msgstr "Ouderlijk toezicht"
-
-#: ../src/Plug.vala:153
-msgid "Configure time limits and restrict application usage"
-msgstr "Configureer tijds limiten en limiteer programma gebruik"
+#: ../src/Widgets/ControlPage.vala:76
+msgid "Applications"
+msgstr "Programma's"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -63,33 +66,69 @@ msgstr "Mijn account"
 msgid "Other Accounts"
 msgstr "Andere accounts"
 
-#: ../src/Widgets/ControlPage.vala:54
-msgid "General"
-msgstr "Algemeen"
+#: ../src/Widgets/WeekSpinBox.vala:44
+msgid "From:"
+msgstr "Vanaf:"
 
-#: ../src/Widgets/ControlPage.vala:55
-msgid "Internet"
-msgstr "Internet"
+#: ../src/Widgets/WeekSpinBox.vala:46
+msgid "To:"
+msgstr "Tot:"
 
-#: ../src/Widgets/ControlPage.vala:56
-msgid "Applications"
-msgstr "Programma's"
+#: ../src/Widgets/InternetBox.vala:78
+msgid "Prevent %s from visiting these websites:"
+msgstr "Voorkom toegang voor het bezoeken van de volgende websites aan %s."
+
+#: ../src/Widgets/InternetBox.vala:91
+msgid "Add URL"
+msgstr "URL Toevoegen"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Add a new URL, for example: google.com"
+msgstr "Voeg nieuwe URL toe, bijvoorbeeld: google.com"
+
+#: ../src/Widgets/InternetBox.vala:101
+msgid "Invalid URL"
+msgstr "Ongeldige URL"
+
+#: ../src/Widgets/GeneralBox.vala:62
+msgid "Allow this user to:"
+msgstr "Geef deze gebruiker toegang tot:"
+
+#: ../src/Widgets/GeneralBox.vala:65
+msgid "Modify the dock"
+msgstr "aanpassingen maken aan het dock"
+
+#: ../src/Widgets/GeneralBox.vala:68
+msgid "Configure printing"
+msgstr "printers configureren"
+
+#: ../src/Widgets/GeneralBox.vala:84
+msgid "Limit computer use:"
+msgstr "limiteer het computer gebruik"
+
+#: ../src/Widgets/GeneralBox.vala:92
+msgid "On weekdays and weekends"
+msgstr "Op werkdagen en weekenden"
+
+#: ../src/Widgets/GeneralBox.vala:93
+msgid "Only on weekdays"
+msgstr "alleen op werkdagen"
+
+#: ../src/Widgets/GeneralBox.vala:94
+msgid "Only on weekends"
+msgstr "alleen op weekenden"
+
+#: ../src/Widgets/GeneralBox.vala:102
+msgid "Weekdays"
+msgstr "Werkdagen"
+
+#: ../src/Widgets/GeneralBox.vala:106
+msgid "Weekends"
+msgstr "Weekenden"
 
 #: ../src/Widgets/AppChooser.vala:71
 msgid "Search Applications"
 msgstr "Zoek programma's"
-
-#: ../src/Widgets/WeekSpinBox.vala:65
-msgid "From:"
-msgstr "Vanaf:"
-
-#: ../src/Widgets/WeekSpinBox.vala:69
-msgid "To:"
-msgstr "Tot:"
-
-#: ../src/Widgets/WeekSpinBox.vala:71
-msgid ":"
-msgstr ":"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
@@ -113,57 +152,43 @@ msgstr ""
 "Toegang verlenen aan de volgende applicaties, alleen met administrators "
 "goedkeuring"
 
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Voorkom toegang voor het bezoeken van de volgende websites aan %s."
+#: ../src/Plug.vala:72
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+"Voor sommige instellingen zijn administrator bevoegdheden nodig om ze te "
+"verranderen"
 
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "URL Toevoegen"
+#: ../src/Plug.vala:81
+msgid "No users to edit"
+msgstr "Geen gebruikers te configureren"
 
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Voeg nieuwe URL toe, bijvoorbeeld: google.com"
+#: ../src/Plug.vala:81
+msgid ""
+"Parental Controls can only be applied to user accounts that don't have "
+"administrative permissions.\n"
+"You can change a user's account type from \"Administrator\" to \"Standard\" "
+"in the User Accounts pane."
+msgstr ""
+"Ouderlijk toezicht kan alleen aangezet worden bij gebruikers die geen "
+"administratieve rechten hebben.\n"
+"U kunt een gebruiker type veranderen van \"administrator\" naar "
+"\"standaard\" in de gebruikers account instellingen"
 
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "Ongeldige URL"
+#: ../src/Plug.vala:84
+msgid "Configure User Accounts"
+msgstr "Configureer gebruikers account"
 
-#: ../src/Widgets/GeneralBox.vala:63
-msgid "Allow this user to:"
-msgstr "Geef deze gebruiker toegang tot:"
+#: ../src/Plug.vala:87
+msgid "Open Users settings"
+msgstr "Open gebruikers instellingen"
 
-#: ../src/Widgets/GeneralBox.vala:66
-msgid "Modify the dock"
-msgstr "aanpassingen maken aan het dock"
+#: ../src/Plug.vala:164
+msgid "Parental Control"
+msgstr "Ouderlijk toezicht"
 
-#: ../src/Widgets/GeneralBox.vala:69
-msgid "Configure printing"
-msgstr "printers configureren"
-
-#: ../src/Widgets/GeneralBox.vala:73
-msgid "Limit computer use:"
-msgstr "limiteer het computer gebruik"
-
-#: ../src/Widgets/GeneralBox.vala:81
-msgid "On weekdays and weekends"
-msgstr "Op werkdagen en weekenden"
-
-#: ../src/Widgets/GeneralBox.vala:82
-msgid "Only on weekdays"
-msgstr "alleen op werkdagen"
-
-#: ../src/Widgets/GeneralBox.vala:83
-msgid "Only on weekends"
-msgstr "alleen op weekenden"
-
-#: ../src/Widgets/GeneralBox.vala:91
-msgid "Weekdays"
-msgstr "Werkdagen"
-
-#: ../src/Widgets/GeneralBox.vala:95
-msgid "Weekends"
-msgstr "Weekenden"
+#: ../src/Plug.vala:165
+msgid "Configure time limits and restrict application usage"
+msgstr "Configureer tijds limiten en limiteer programma gebruik"
 
 #: ../src/client/Client.vala:125
 msgid ""
@@ -203,32 +228,3 @@ msgstr "U kan dit programm niet uitvoeren"
 #: ../src/client/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "U hebt niet de rechten om dit programma uit te voeren"
-
-#. //launchpad.net/switchboard-plug-parental-controls)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 3 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
-#. 
-#: ../src/Translation.vala:23
-msgid "Manage parental control settings"
-msgstr "Beheer ouderlijk toezicht instellingen"
-
-#: ../src/Translation.vala:24
-msgid "Authentication is required to change parental control settings"
-msgstr ""
-"administrator rechten zijn nodig om ouderlijk toezichts instellingen te "
-"verranderen"
