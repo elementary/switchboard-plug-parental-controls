@@ -64,7 +64,7 @@
 
         private void on_show_app_lock_dialog () {
             var app_lock_dialog = new AppLock.AppLockDialog ();
-            app_lock_dialog.show_all ();            
+            app_lock_dialog.show_all ();
         }
 
         private void on_authorize (string user_name, string action_id) {
@@ -93,7 +93,7 @@
                         warning ("%s\n", e.message);
                     }
                 }
-            });            
+            });
         }
 
         private void on_launch (string[] args) {
@@ -126,12 +126,12 @@
             }
 
             if (hours > 0) {
-                hours_str = ngettext (_("%ld hour"), _("%ld hours"), (ulong)hours).printf ((ulong)hours);
+                hours_str = ngettext ("%ld hour", "%ld hours", (ulong)hours).printf ((ulong)hours);
             }
 
             if (minutes > 0) {
-                minutes_str = ngettext (_("%ld minute"), _("%ld minutes"), (ulong)minutes).printf ((ulong)minutes);
-            }  
+                minutes_str = ngettext ("%ld minute", "%ld minutes", (ulong)minutes).printf ((ulong)minutes);
+            }
 
             string body = _("This computer will lock after %s %s. %s".printf (hours_str, minutes_str, info));
 
