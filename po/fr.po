@@ -7,14 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-29 15:18-0700\n"
+"POT-Creation-Date: 2016-07-30 21:16-0300\n"
 "PO-Revision-Date: 2016-07-17 17:24+0000\n"
 "Last-Translator: Olivier Vopat <olivier.vopat@gmail.com>\n"
 "Language-Team: French <fr@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-30 06:20+0000\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Launchpad-Export-Date: 2016-08-01 05:41+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
@@ -46,17 +47,9 @@ msgstr ""
 "Une authentification est requise pour modifier le paramétrage du contrôle "
 "parental"
 
-#: ../src/Widgets/ControlPage.vala:74
-msgid "General"
-msgstr "Général"
-
-#: ../src/Widgets/ControlPage.vala:75
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:76
-msgid "Applications"
-msgstr "Applications"
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Rechercher des applications"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -65,30 +58,6 @@ msgstr "Mon compte"
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
 msgstr "Autres comptes"
-
-#: ../src/Widgets/WeekSpinBox.vala:44
-msgid "From:"
-msgstr "De :"
-
-#: ../src/Widgets/WeekSpinBox.vala:46
-msgid "To:"
-msgstr "À :"
-
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Interdire à %s la visite de ces sites internet :"
-
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "Ajouter une URL"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Ajouter une nouvelle URL, par exemple : www.google.fr"
-
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "URL non valide"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -126,9 +95,25 @@ msgstr "La semaine"
 msgid "Weekends"
 msgstr "Les week-ends"
 
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Rechercher des applications"
+#: ../src/Widgets/WeekSpinBox.vala:44
+msgid "From:"
+msgstr "De :"
+
+#: ../src/Widgets/WeekSpinBox.vala:46
+msgid "To:"
+msgstr "À :"
+
+#: ../src/Widgets/ControlPage.vala:74
+msgid "General"
+msgstr "Général"
+
+#: ../src/Widgets/ControlPage.vala:75
+msgid "Internet"
+msgstr "Internet"
+
+#: ../src/Widgets/ControlPage.vala:76
+msgid "Applications"
+msgstr "Applications"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
@@ -150,6 +135,22 @@ msgstr "Tout retirer"
 msgid "Allow access to these apps with admin permission:"
 msgstr ""
 "Permettre l'utilisation de ces programmes avec des droits d'administrateur :"
+
+#: ../src/Widgets/InternetBox.vala:78
+msgid "Prevent %s from visiting these websites:"
+msgstr "Interdire à %s la visite de ces sites internet :"
+
+#: ../src/Widgets/InternetBox.vala:91
+msgid "Add URL"
+msgstr "Ajouter une URL"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Add a new URL, for example: google.com"
+msgstr "Ajouter une nouvelle URL, par exemple : www.google.fr"
+
+#: ../src/Widgets/InternetBox.vala:101
+msgid "Invalid URL"
+msgstr "URL non valide"
 
 #: ../src/Plug.vala:72
 msgid "Some settings require administrator rights to be changed"
@@ -197,19 +198,15 @@ msgstr ""
 
 #: ../src/client/Client.vala:129
 msgid "%ld hour"
-msgstr "%ld heure"
-
-#: ../src/client/Client.vala:129
-msgid "%ld hours"
-msgstr "%ld heures"
+msgid_plural "%ld hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/client/Client.vala:133
 msgid "%ld minute"
-msgstr "%ld minute"
-
-#: ../src/client/Client.vala:133
-msgid "%ld minutes"
-msgstr "%ld minutes"
+msgid_plural "%ld minutes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"

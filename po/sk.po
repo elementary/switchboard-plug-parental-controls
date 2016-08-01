@@ -7,14 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-29 15:18-0700\n"
+"POT-Creation-Date: 2016-07-30 21:16-0300\n"
 "PO-Revision-Date: 2016-07-17 21:22+0000\n"
 "Last-Translator: Igor Štefanko <istefanko@gmail.com>\n"
 "Language-Team: Slovak <sk@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-30 06:20+0000\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
+"X-Launchpad-Export-Date: 2016-08-01 05:41+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
@@ -44,17 +45,9 @@ msgstr "Spravovať nastavenia rodičovskej kontroly"
 msgid "Authentication is required to change parental control settings"
 msgstr "Na zmenu rodičovskej kontroly je potrebná autentifikácia"
 
-#: ../src/Widgets/ControlPage.vala:74
-msgid "General"
-msgstr "Všeobecné"
-
-#: ../src/Widgets/ControlPage.vala:75
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:76
-msgid "Applications"
-msgstr "Aplikácie"
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Hľadať aplikácie"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -63,30 +56,6 @@ msgstr "Môj účet"
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
 msgstr "Ostatné účty"
-
-#: ../src/Widgets/WeekSpinBox.vala:44
-msgid "From:"
-msgstr "Od:"
-
-#: ../src/Widgets/WeekSpinBox.vala:46
-msgid "To:"
-msgstr "Do:"
-
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Zabrániť %s navštevovať tieto webové stránky:"
-
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "Pridať adresu URL"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Pridať novú URL, napríklad: google.com"
-
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "Neplatná adresa URL"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -124,9 +93,25 @@ msgstr "Pracovné dni"
 msgid "Weekends"
 msgstr "Víkendy"
 
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Hľadať aplikácie"
+#: ../src/Widgets/WeekSpinBox.vala:44
+msgid "From:"
+msgstr "Od:"
+
+#: ../src/Widgets/WeekSpinBox.vala:46
+msgid "To:"
+msgstr "Do:"
+
+#: ../src/Widgets/ControlPage.vala:74
+msgid "General"
+msgstr "Všeobecné"
+
+#: ../src/Widgets/ControlPage.vala:75
+msgid "Internet"
+msgstr "Internet"
+
+#: ../src/Widgets/ControlPage.vala:76
+msgid "Applications"
+msgstr "Aplikácie"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
@@ -147,6 +132,22 @@ msgstr "Vymazať všetko"
 #: ../src/Widgets/AppsBox.vala:140
 msgid "Allow access to these apps with admin permission:"
 msgstr "Povoliť prístup k týmto aplikáciam s administrátorským povolením:"
+
+#: ../src/Widgets/InternetBox.vala:78
+msgid "Prevent %s from visiting these websites:"
+msgstr "Zabrániť %s navštevovať tieto webové stránky:"
+
+#: ../src/Widgets/InternetBox.vala:91
+msgid "Add URL"
+msgstr "Pridať adresu URL"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Add a new URL, for example: google.com"
+msgstr "Pridať novú URL, napríklad: google.com"
+
+#: ../src/Widgets/InternetBox.vala:101
+msgid "Invalid URL"
+msgstr "Neplatná adresa URL"
 
 #: ../src/Plug.vala:72
 msgid "Some settings require administrator rights to be changed"
@@ -193,19 +194,15 @@ msgstr ""
 
 #: ../src/client/Client.vala:129
 msgid "%ld hour"
-msgstr "%ld hodina"
-
-#: ../src/client/Client.vala:129
-msgid "%ld hours"
-msgstr "%ld hodín"
+msgid_plural "%ld hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/client/Client.vala:133
 msgid "%ld minute"
-msgstr "%ld minúta"
-
-#: ../src/client/Client.vala:133
-msgid "%ld minutes"
-msgstr "%ld minút"
+msgid_plural "%ld minutes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"

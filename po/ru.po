@@ -7,14 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-29 15:18-0700\n"
-"PO-Revision-Date: 2016-05-25 10:46+0000\n"
-"Last-Translator: Yuly Nesterov <crow@rikka.io>\n"
+"POT-Creation-Date: 2016-07-30 21:16-0300\n"
+"PO-Revision-Date: 2016-07-31 20:22+0000\n"
+"Last-Translator: Maxim Taranov <png2378@gmail.com>\n"
 "Language-Team: Russian <ru@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-30 06:20+0000\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Launchpad-Export-Date: 2016-08-01 05:41+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
@@ -45,17 +47,9 @@ msgid "Authentication is required to change parental control settings"
 msgstr ""
 "Для изменения параметров родительского контроля требуется аутентификация"
 
-#: ../src/Widgets/ControlPage.vala:74
-msgid "General"
-msgstr "Общие"
-
-#: ../src/Widgets/ControlPage.vala:75
-msgid "Internet"
-msgstr "Интернет"
-
-#: ../src/Widgets/ControlPage.vala:76
-msgid "Applications"
-msgstr "Приложения"
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Поиск приложений"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -64,30 +58,6 @@ msgstr "Моя учётная запись"
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
 msgstr "Другие учётные записи"
-
-#: ../src/Widgets/WeekSpinBox.vala:44
-msgid "From:"
-msgstr "C"
-
-#: ../src/Widgets/WeekSpinBox.vala:46
-msgid "To:"
-msgstr "До:"
-
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Запретить %s посещать эти сайты:"
-
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "Добавить URL"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Добавьте новый URL, например google.com"
-
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "Недопустимый URL"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -125,9 +95,25 @@ msgstr "Будние дни"
 msgid "Weekends"
 msgstr "Выходные дни"
 
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Поиск приложений"
+#: ../src/Widgets/WeekSpinBox.vala:44
+msgid "From:"
+msgstr "C"
+
+#: ../src/Widgets/WeekSpinBox.vala:46
+msgid "To:"
+msgstr "До:"
+
+#: ../src/Widgets/ControlPage.vala:74
+msgid "General"
+msgstr "Общие"
+
+#: ../src/Widgets/ControlPage.vala:75
+msgid "Internet"
+msgstr "Интернет"
+
+#: ../src/Widgets/ControlPage.vala:76
+msgid "Applications"
+msgstr "Приложения"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
@@ -148,6 +134,22 @@ msgstr "Очистить всё"
 #: ../src/Widgets/AppsBox.vala:140
 msgid "Allow access to these apps with admin permission:"
 msgstr "Разрешить доступ к этим приложениям с правами доступа:"
+
+#: ../src/Widgets/InternetBox.vala:78
+msgid "Prevent %s from visiting these websites:"
+msgstr "Запретить %s посещать эти сайты:"
+
+#: ../src/Widgets/InternetBox.vala:91
+msgid "Add URL"
+msgstr "Добавить URL"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Add a new URL, for example: google.com"
+msgstr "Добавьте новый URL, например google.com"
+
+#: ../src/Widgets/InternetBox.vala:101
+msgid "Invalid URL"
+msgstr "Недопустимый URL"
 
 #: ../src/Plug.vala:72
 msgid "Some settings require administrator rights to be changed"
@@ -194,19 +196,17 @@ msgstr ""
 
 #: ../src/client/Client.vala:129
 msgid "%ld hour"
-msgstr "%ld час"
-
-#: ../src/client/Client.vala:129
-msgid "%ld hours"
-msgstr "%ld часов"
+msgid_plural "%ld hours"
+msgstr[0] "%ld час"
+msgstr[1] "%ld часа"
+msgstr[2] "%ld часов"
 
 #: ../src/client/Client.vala:133
 msgid "%ld minute"
-msgstr "%ld минута"
-
-#: ../src/client/Client.vala:133
-msgid "%ld minutes"
-msgstr "%ld минут"
+msgid_plural "%ld minutes"
+msgstr[0] "%ld минута"
+msgstr[1] "%ld минуты"
+msgstr[2] "%ld минут"
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"

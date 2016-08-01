@@ -7,14 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-29 15:18-0700\n"
+"POT-Creation-Date: 2016-07-30 21:16-0300\n"
 "PO-Revision-Date: 2016-06-20 22:25+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-30 06:20+0000\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-08-01 05:41+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
@@ -44,17 +45,9 @@ msgstr "Vanemliku kontrolli seadete muutmine"
 msgid "Authentication is required to change parental control settings"
 msgstr "Vanemliku kontrolli seadete muutmiseks on vajalik autentimine."
 
-#: ../src/Widgets/ControlPage.vala:74
-msgid "General"
-msgstr "Üldine"
-
-#: ../src/Widgets/ControlPage.vala:75
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:76
-msgid "Applications"
-msgstr "Rakendused"
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Otsi rakendusi…"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -63,30 +56,6 @@ msgstr "Minu konto"
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
 msgstr "Teised kontod"
-
-#: ../src/Widgets/WeekSpinBox.vala:44
-msgid "From:"
-msgstr "Alates:"
-
-#: ../src/Widgets/WeekSpinBox.vala:46
-msgid "To:"
-msgstr "Kuni:"
-
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Kasutajal %s keelatakse nende veebilehtede külastamine:"
-
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "Lisa URL"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Uue URL-i lisamine, nagu näiteks: google.ee"
-
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "Vigane URL"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -124,9 +93,25 @@ msgstr "Tööpäevadel"
 msgid "Weekends"
 msgstr "Nädalavahetusel"
 
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Otsi rakendusi…"
+#: ../src/Widgets/WeekSpinBox.vala:44
+msgid "From:"
+msgstr "Alates:"
+
+#: ../src/Widgets/WeekSpinBox.vala:46
+msgid "To:"
+msgstr "Kuni:"
+
+#: ../src/Widgets/ControlPage.vala:74
+msgid "General"
+msgstr "Üldine"
+
+#: ../src/Widgets/ControlPage.vala:75
+msgid "Internet"
+msgstr "Internet"
+
+#: ../src/Widgets/ControlPage.vala:76
+msgid "Applications"
+msgstr "Rakendused"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
@@ -147,6 +132,22 @@ msgstr "Puhasta kõik"
 #: ../src/Widgets/AppsBox.vala:140
 msgid "Allow access to these apps with admin permission:"
 msgstr "Administraatorõigustega lubatud rakendused:"
+
+#: ../src/Widgets/InternetBox.vala:78
+msgid "Prevent %s from visiting these websites:"
+msgstr "Kasutajal %s keelatakse nende veebilehtede külastamine:"
+
+#: ../src/Widgets/InternetBox.vala:91
+msgid "Add URL"
+msgstr "Lisa URL"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Add a new URL, for example: google.com"
+msgstr "Uue URL-i lisamine, nagu näiteks: google.ee"
+
+#: ../src/Widgets/InternetBox.vala:101
+msgid "Invalid URL"
+msgstr "Vigane URL"
 
 #: ../src/Plug.vala:72
 msgid "Some settings require administrator rights to be changed"
@@ -191,19 +192,15 @@ msgstr "Enne arvuti sulgemist veendu, et kõik rakendused oleksid suletud."
 
 #: ../src/client/Client.vala:129
 msgid "%ld hour"
-msgstr "%ld tund"
-
-#: ../src/client/Client.vala:129
-msgid "%ld hours"
-msgstr "%ld tundi"
+msgid_plural "%ld hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/client/Client.vala:133
 msgid "%ld minute"
-msgstr "%ld minut"
-
-#: ../src/client/Client.vala:133
-msgid "%ld minutes"
-msgstr "%ld minutit"
+msgid_plural "%ld minutes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"

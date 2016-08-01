@@ -7,14 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-29 15:18-0700\n"
+"POT-Creation-Date: 2016-07-30 21:16-0300\n"
 "PO-Revision-Date: 2016-05-26 15:58+0000\n"
 "Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-30 06:20+0000\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Launchpad-Export-Date: 2016-08-01 05:42+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
@@ -46,17 +47,9 @@ msgstr ""
 "A autenticação é necessária para realizar alterações nas configurações de "
 "controle dos pais."
 
-#: ../src/Widgets/ControlPage.vala:74
-msgid "General"
-msgstr "Geral"
-
-#: ../src/Widgets/ControlPage.vala:75
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:76
-msgid "Applications"
-msgstr "Aplicativos"
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Pesquisar por aplicativos"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -65,30 +58,6 @@ msgstr "Minha conta"
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
 msgstr "Outras contas"
-
-#: ../src/Widgets/WeekSpinBox.vala:44
-msgid "From:"
-msgstr "De:"
-
-#: ../src/Widgets/WeekSpinBox.vala:46
-msgid "To:"
-msgstr "Até:"
-
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Impedir %s de visitar estes websites:"
-
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "Adicionar URL"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Adicionar uma nova URL, por exemplo: google.com"
-
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "URL inválida"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -126,9 +95,25 @@ msgstr "Semana"
 msgid "Weekends"
 msgstr "Fins de semana"
 
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Pesquisar por aplicativos"
+#: ../src/Widgets/WeekSpinBox.vala:44
+msgid "From:"
+msgstr "De:"
+
+#: ../src/Widgets/WeekSpinBox.vala:46
+msgid "To:"
+msgstr "Até:"
+
+#: ../src/Widgets/ControlPage.vala:74
+msgid "General"
+msgstr "Geral"
+
+#: ../src/Widgets/ControlPage.vala:75
+msgid "Internet"
+msgstr "Internet"
+
+#: ../src/Widgets/ControlPage.vala:76
+msgid "Applications"
+msgstr "Aplicativos"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
@@ -149,6 +134,22 @@ msgstr "Limpar tudo"
 #: ../src/Widgets/AppsBox.vala:140
 msgid "Allow access to these apps with admin permission:"
 msgstr "Acessar estes aplicativos com permissão do administrador"
+
+#: ../src/Widgets/InternetBox.vala:78
+msgid "Prevent %s from visiting these websites:"
+msgstr "Impedir %s de visitar estes websites:"
+
+#: ../src/Widgets/InternetBox.vala:91
+msgid "Add URL"
+msgstr "Adicionar URL"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Add a new URL, for example: google.com"
+msgstr "Adicionar uma nova URL, por exemplo: google.com"
+
+#: ../src/Widgets/InternetBox.vala:101
+msgid "Invalid URL"
+msgstr "URL inválida"
 
 #: ../src/Plug.vala:72
 msgid "Some settings require administrator rights to be changed"
@@ -197,19 +198,15 @@ msgstr ""
 
 #: ../src/client/Client.vala:129
 msgid "%ld hour"
-msgstr "%ld hora"
-
-#: ../src/client/Client.vala:129
-msgid "%ld hours"
-msgstr "%ld horas"
+msgid_plural "%ld hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/client/Client.vala:133
 msgid "%ld minute"
-msgstr "%ld minuto"
-
-#: ../src/client/Client.vala:133
-msgid "%ld minutes"
-msgstr "%ld minutos"
+msgid_plural "%ld minutes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"

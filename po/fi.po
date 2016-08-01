@@ -7,14 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-29 15:18-0700\n"
+"POT-Creation-Date: 2016-07-30 21:16-0300\n"
 "PO-Revision-Date: 2016-05-20 06:52+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-30 06:20+0000\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-08-01 05:41+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
@@ -44,17 +45,9 @@ msgstr "Hallitse käytönvalvonnan asetuksia"
 msgid "Authentication is required to change parental control settings"
 msgstr "Käytönvalvonnan asetusten muuttaminen vaatii tunnistautumisen"
 
-#: ../src/Widgets/ControlPage.vala:74
-msgid "General"
-msgstr "Yleiset"
-
-#: ../src/Widgets/ControlPage.vala:75
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:76
-msgid "Applications"
-msgstr "Sovellukset"
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Etsi sovelluksia"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -63,30 +56,6 @@ msgstr "Oma tili"
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
 msgstr "Muut tilit"
-
-#: ../src/Widgets/WeekSpinBox.vala:44
-msgid "From:"
-msgstr "Alkaa:"
-
-#: ../src/Widgets/WeekSpinBox.vala:46
-msgid "To:"
-msgstr "Päättyy:"
-
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Estä käyttäjää %s käymästä seuraavilla sivustoilla:"
-
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "Lisää verkko-osoite"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Lisää uusi osoite, esim. google.com"
-
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "Virheellinen osoite"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -124,9 +93,25 @@ msgstr "Arkipäivinä"
 msgid "Weekends"
 msgstr "Viikonloppuisin"
 
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Etsi sovelluksia"
+#: ../src/Widgets/WeekSpinBox.vala:44
+msgid "From:"
+msgstr "Alkaa:"
+
+#: ../src/Widgets/WeekSpinBox.vala:46
+msgid "To:"
+msgstr "Päättyy:"
+
+#: ../src/Widgets/ControlPage.vala:74
+msgid "General"
+msgstr "Yleiset"
+
+#: ../src/Widgets/ControlPage.vala:75
+msgid "Internet"
+msgstr "Internet"
+
+#: ../src/Widgets/ControlPage.vala:76
+msgid "Applications"
+msgstr "Sovellukset"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
@@ -147,6 +132,22 @@ msgstr "Tyhjennä kaikki"
 #: ../src/Widgets/AppsBox.vala:140
 msgid "Allow access to these apps with admin permission:"
 msgstr "Salli seuraavien sovellusten käyttö ylläpito-oikeuksin:"
+
+#: ../src/Widgets/InternetBox.vala:78
+msgid "Prevent %s from visiting these websites:"
+msgstr "Estä käyttäjää %s käymästä seuraavilla sivustoilla:"
+
+#: ../src/Widgets/InternetBox.vala:91
+msgid "Add URL"
+msgstr "Lisää verkko-osoite"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Add a new URL, for example: google.com"
+msgstr "Lisää uusi osoite, esim. google.com"
+
+#: ../src/Widgets/InternetBox.vala:101
+msgid "Invalid URL"
+msgstr "Virheellinen osoite"
 
 #: ../src/Plug.vala:72
 msgid "Some settings require administrator rights to be changed"
@@ -192,19 +193,15 @@ msgstr ""
 
 #: ../src/client/Client.vala:129
 msgid "%ld hour"
-msgstr "%ld tunti"
-
-#: ../src/client/Client.vala:129
-msgid "%ld hours"
-msgstr "%ld tuntia"
+msgid_plural "%ld hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/client/Client.vala:133
 msgid "%ld minute"
-msgstr "%ld minuutti"
-
-#: ../src/client/Client.vala:133
-msgid "%ld minutes"
-msgstr "%ld minuuttia"
+msgid_plural "%ld minutes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"

@@ -7,14 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-29 15:18-0700\n"
+"POT-Creation-Date: 2016-07-30 21:16-0300\n"
 "PO-Revision-Date: 2016-07-22 16:07+0000\n"
 "Last-Translator: kay van der Zander <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2016-07-30 06:20+0000\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Launchpad-Export-Date: 2016-08-01 05:41+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
@@ -46,17 +47,9 @@ msgstr ""
 "administrator rechten zijn nodig om ouderlijk toezichts instellingen te "
 "verranderen"
 
-#: ../src/Widgets/ControlPage.vala:74
-msgid "General"
-msgstr "Algemeen"
-
-#: ../src/Widgets/ControlPage.vala:75
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:76
-msgid "Applications"
-msgstr "Programma's"
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Zoek programma's"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -65,30 +58,6 @@ msgstr "Mijn account"
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
 msgstr "Andere accounts"
-
-#: ../src/Widgets/WeekSpinBox.vala:44
-msgid "From:"
-msgstr "Vanaf:"
-
-#: ../src/Widgets/WeekSpinBox.vala:46
-msgid "To:"
-msgstr "Tot:"
-
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Voorkom toegang voor het bezoeken van de volgende websites aan %s."
-
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "URL Toevoegen"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Voeg nieuwe URL toe, bijvoorbeeld: google.com"
-
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "Ongeldige URL"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -126,9 +95,25 @@ msgstr "Werkdagen"
 msgid "Weekends"
 msgstr "Weekenden"
 
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Zoek programma's"
+#: ../src/Widgets/WeekSpinBox.vala:44
+msgid "From:"
+msgstr "Vanaf:"
+
+#: ../src/Widgets/WeekSpinBox.vala:46
+msgid "To:"
+msgstr "Tot:"
+
+#: ../src/Widgets/ControlPage.vala:74
+msgid "General"
+msgstr "Algemeen"
+
+#: ../src/Widgets/ControlPage.vala:75
+msgid "Internet"
+msgstr "Internet"
+
+#: ../src/Widgets/ControlPage.vala:76
+msgid "Applications"
+msgstr "Programma's"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
@@ -151,6 +136,22 @@ msgid "Allow access to these apps with admin permission:"
 msgstr ""
 "Toegang verlenen aan de volgende applicaties, alleen met administrators "
 "goedkeuring"
+
+#: ../src/Widgets/InternetBox.vala:78
+msgid "Prevent %s from visiting these websites:"
+msgstr "Voorkom toegang voor het bezoeken van de volgende websites aan %s."
+
+#: ../src/Widgets/InternetBox.vala:91
+msgid "Add URL"
+msgstr "URL Toevoegen"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Add a new URL, for example: google.com"
+msgstr "Voeg nieuwe URL toe, bijvoorbeeld: google.com"
+
+#: ../src/Widgets/InternetBox.vala:101
+msgid "Invalid URL"
+msgstr "Ongeldige URL"
 
 #: ../src/Plug.vala:72
 msgid "Some settings require administrator rights to be changed"
@@ -199,19 +200,15 @@ msgstr ""
 
 #: ../src/client/Client.vala:129
 msgid "%ld hour"
-msgstr "%ld uur"
-
-#: ../src/client/Client.vala:129
-msgid "%ld hours"
-msgstr "%ld uren"
+msgid_plural "%ld hours"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/client/Client.vala:133
 msgid "%ld minute"
-msgstr "%ld minuut"
-
-#: ../src/client/Client.vala:133
-msgid "%ld minutes"
-msgstr "%ld minuten"
+msgid_plural "%ld minutes"
+msgstr[0] ""
+msgstr[1] ""
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"
