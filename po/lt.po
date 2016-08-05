@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-30 21:16-0300\n"
-"PO-Revision-Date: 2016-08-03 12:40+0000\n"
+"PO-Revision-Date: 2016-08-04 14:35+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <lt@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "(n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-08-04 05:49+0000\n"
+"X-Launchpad-Export-Date: 2016-08-05 05:48+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
@@ -40,12 +40,12 @@ msgstr ""
 #. 
 #: ../src/Translation.vala:23
 msgid "Manage parental control settings"
-msgstr "Tvarkyti tėvų kontrolė nustatymus"
+msgstr "Tvarkyti tėvų valdymo nustatymus"
 
 #: ../src/Translation.vala:24
 msgid "Authentication is required to change parental control settings"
 msgstr ""
-"Norint keisti tėvų kontrolės nustatymus, reikalingas tapatybės nustatymas"
+"Norint keisti tėvų valdymo nustatymus, reikalingas tapatybės nustatymas"
 
 #: ../src/Widgets/AppChooser.vala:71
 msgid "Search Applications"
@@ -166,7 +166,7 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
-"Tevų kontrolė gali būti taikoma tik toms naudotojų paskyroms, kurios neturi "
+"Tevų valdymas gali būti taikomas tik toms naudotojų paskyroms, kurios neturi "
 "administratoriaus teisių.\n"
 "Jūs galite pakeisti naudotojo paskyros tipą iš \"Administratoriaus\" į "
 "\"Standartinę\" naudotojų paskyrų polangyje."
@@ -181,7 +181,7 @@ msgstr "Atverti naudotojų nustatymus"
 
 #: ../src/Plug.vala:164
 msgid "Parental Control"
-msgstr "Tėvų kontrolė"
+msgstr "Tėvų valdymas"
 
 #: ../src/Plug.vala:165
 msgid "Configure time limits and restrict application usage"
@@ -191,26 +191,30 @@ msgstr "Konfigūruoti laiko apribojimus ir riboti naudojimąsi programomis"
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
+"Prieš tai, kai jūsų kompiuteris bus užrakintas, nepamirškite užverti visas "
+"programas."
 
 #: ../src/client/Client.vala:129
 msgid "%ld hour"
 msgid_plural "%ld hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%ld valandos"
+msgstr[1] "%ld valandų"
+msgstr[2] "%ld valandų"
 
 #: ../src/client/Client.vala:133
 msgid "%ld minute"
 msgid_plural "%ld minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%ld minutės"
+msgstr[1] "%ld minučių"
+msgstr[2] "%ld minučių"
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"
-msgstr ""
+msgstr "Šis kompiuteris bus užrakintas po %s %s. %s"
 
 #: ../src/client/Client.vala:138
 msgid "Time left"
-msgstr ""
+msgstr "Liko laiko"
 
 #: ../src/client/AppLockDialog.vala:27
 msgid "You cannot run this application"
