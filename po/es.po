@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-30 21:16-0300\n"
-"PO-Revision-Date: 2016-07-29 22:17+0000\n"
-"Last-Translator: Kenneth Mauricio Acuña Lago <kmal.kenneth@live.com>\n"
+"PO-Revision-Date: 2016-08-06 01:43+0000\n"
+"Last-Translator: Jose Luis Tirado <Unknown>\n"
 "Language-Team: Spanish <es@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-08-01 05:41+0000\n"
+"X-Launchpad-Export-Date: 2016-08-06 05:51+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
@@ -147,7 +147,7 @@ msgstr ""
 
 #: ../src/Widgets/InternetBox.vala:101
 msgid "Invalid URL"
-msgstr ""
+msgstr "URL no válido"
 
 #: ../src/Plug.vala:72
 msgid "Some settings require administrator rights to be changed"
@@ -155,7 +155,7 @@ msgstr ""
 
 #: ../src/Plug.vala:81
 msgid "No users to edit"
-msgstr ""
+msgstr "No hay ningún usuario que editar"
 
 #: ../src/Plug.vala:81
 msgid ""
@@ -189,14 +189,14 @@ msgstr ""
 #: ../src/client/Client.vala:129
 msgid "%ld hour"
 msgid_plural "%ld hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%ld hora"
+msgstr[1] "%ld horas"
 
 #: ../src/client/Client.vala:133
 msgid "%ld minute"
 msgid_plural "%ld minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%ld minuto"
+msgstr[1] "%ld minutos"
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"
@@ -204,12 +204,12 @@ msgstr ""
 
 #: ../src/client/Client.vala:138
 msgid "Time left"
-msgstr ""
+msgstr "Tiempo restante"
 
 #: ../src/client/AppLockDialog.vala:27
 msgid "You cannot run this application"
-msgstr ""
+msgstr "No puede ejecutar esta aplicación"
 
 #: ../src/client/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
-msgstr ""
+msgstr "No se le permite ejecutar esta aplicación."
