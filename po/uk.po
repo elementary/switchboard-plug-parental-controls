@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-30 21:16-0300\n"
-"PO-Revision-Date: 2016-06-14 22:14+0000\n"
+"PO-Revision-Date: 2016-08-10 18:15+0000\n"
 "Last-Translator: Roman Sytnyk <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-08-01 05:41+0000\n"
+"X-Launchpad-Export-Date: 2016-08-11 06:12+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
@@ -64,7 +64,7 @@ msgstr "Дозволити цьому користувачеві:"
 
 #: ../src/Widgets/GeneralBox.vala:65
 msgid "Modify the dock"
-msgstr ""
+msgstr "Змінити Dock"
 
 #: ../src/Widgets/GeneralBox.vala:68
 msgid "Configure printing"
@@ -196,14 +196,16 @@ msgstr ""
 #: ../src/client/Client.vala:129
 msgid "%ld hour"
 msgid_plural "%ld hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%ld година"
+msgstr[1] "%ld години"
+msgstr[2] "%ld годин"
 
 #: ../src/client/Client.vala:133
 msgid "%ld minute"
 msgid_plural "%ld minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%ld хвилина"
+msgstr[1] "%ld хвилини"
+msgstr[2] "%ld хвилин"
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"
