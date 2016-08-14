@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-30 21:16-0300\n"
-"PO-Revision-Date: 2016-07-24 11:01+0000\n"
-"Last-Translator: Jernej Virag <Unknown>\n"
+"PO-Revision-Date: 2016-08-13 21:20+0000\n"
+"Last-Translator: MarkoD <Unknown>\n"
 "Language-Team: Slovenian <sl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || "
 "n%100==4 ? 3 : 0);\n"
-"X-Launchpad-Export-Date: 2016-08-01 05:41+0000\n"
+"X-Launchpad-Export-Date: 2016-08-14 05:42+0000\n"
 "X-Generator: Launchpad (build 18169)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
@@ -40,7 +40,7 @@ msgstr ""
 #. 
 #: ../src/Translation.vala:23
 msgid "Manage parental control settings"
-msgstr ""
+msgstr "Upravljajte nastavitve starševskega nadzora"
 
 #: ../src/Translation.vala:24
 msgid "Authentication is required to change parental control settings"
@@ -194,14 +194,18 @@ msgstr "Zapri vse aplikacije preden bo računalnik zaklenjen."
 #: ../src/client/Client.vala:129
 msgid "%ld hour"
 msgid_plural "%ld hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%ld ur"
+msgstr[1] "%ld ura"
+msgstr[2] "%ld uri"
+msgstr[3] "%ld ure"
 
 #: ../src/client/Client.vala:133
 msgid "%ld minute"
 msgid_plural "%ld minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%ld minut"
+msgstr[1] "%ld minuta"
+msgstr[2] "%ld minuti"
+msgstr[3] "%ld minute"
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"
