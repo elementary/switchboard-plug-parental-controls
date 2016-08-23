@@ -25,6 +25,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     shared/Vars.vala
     shared/PAMControl.vala
     shared/Utils.vala
+    shared/PAM/Token.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0

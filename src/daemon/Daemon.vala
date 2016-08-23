@@ -53,14 +53,9 @@ namespace PC.Daemon {
         }
 
         public override void activate () {
-            loop = new MainLoop ();
-
-            Bus.own_name (BusType.SYSTEM, Vars.PARENTAL_CONTROLS_IFACE, BusNameOwnerFlags.REPLACE,
-                          on_bus_aquired,
-                          () => {},
-                          on_bus_lost);
             Utils.get_usermanager ().notify["is-loaded"].connect (on_usermanager_loaded);
-
+            
+            loop = new MainLoop ();
             loop.run ();
         }
 
@@ -80,6 +75,11 @@ namespace PC.Daemon {
             if (!Utils.get_usermanager ().is_loaded) {
                 return;
             }
+
+            Bus.own_name (BusType.SYSTEM, Vars.PARENTAL_CONTROLS_IFACE, BusNameOwnerFlags.REPLACE,
+                          on_bus_aquired,
+                          () => {},
+                          on_bus_lost);
 
             session_manager = new SessionManager ();
             session_manager.start ();

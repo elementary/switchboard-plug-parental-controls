@@ -79,24 +79,24 @@ namespace PC.Cli {
             } 
 
             if (remove_restrict && user != "") {
-            	var pam_writer = new PAMWriter (File.new_for_path (TIME_CONF_FILE));
+            	var pam_writer = PAMWriter.new_for_time ();
             	pam_writer.remove_user_restrictions (user);
             }
 
             if (enable_restrict && user != "") {
-                var pam_writer = new PAMWriter (File.new_for_path (TIME_CONF_FILE));
+                var pam_writer = PAMWriter.new_for_time ();
                 pam_writer.modify_user_restrictions (user, true);
             }
 
             if (disable_restrict && user != "") {
-                var pam_writer = new PAMWriter (File.new_for_path (TIME_CONF_FILE));
+                var pam_writer = PAMWriter.new_for_time ();
                 pam_writer.modify_user_restrictions (user, false);
             }
 
             if (restrict_pam_line != null && user != null) {
                 ensure_pam_lightdm_enabled ();
 
-                var pam_writer = new PAMWriter (File.new_for_path (TIME_CONF_FILE));
+                var pam_writer = PAMWriter.new_for_time ();
                 pam_writer.add_conf_line (restrict_pam_line, user);
             }
 

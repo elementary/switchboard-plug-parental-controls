@@ -15,6 +15,7 @@ vala_precompile (VALA_C ${DAEMON_EXEC_NAME}
     SessionManager.vala
     SessionHandler.vala
     Interfaces.vala
+    UserConfig.vala
     Server.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Vars.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Utils.vala

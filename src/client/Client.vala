@@ -23,12 +23,19 @@
  namespace PC.Client {
     [DBus (name = "org.pantheon.ParentalControls")]
     public interface ParentalControls : Object {
-        public signal void show_app_lock_dialog ();
-        public signal void authorize (string user, string action_id);
+        public signal void show_app_unavailable (string path);
+        public signal void app_authorize (string user, string path, string action_id);
         public signal void launch (string[] args);
-        public signal void send_time_notification (int hours, int minutes);
+        public signal void show_timeout (int hours, int minutes);
 
-        public abstract void end_authorization (int client_pid) throws IOError;
+        public abstract void end_app_authorization () throws IOError;
+
+        public abstract void enable_restriction (string username, bool enable) throws IOError;
+        public abstract bool get_user_daemon_active (string username) throws IOError;
+        public abstract bool get_user_daemon_admin (string username) throws IOError;
+        public abstract string[] get_user_daemon_targets (string username) throws IOError;
+        public abstract string[] get_user_daemon_block_urls (string username) throws IOError;
+        public abstract void set_user_daemon_active (string username, bool active) throws IOError;
     }
 
     public class Client : Gtk.Application {
@@ -54,20 +61,20 @@
                 return;
             }
 
-            parental_controls.show_app_lock_dialog.connect (on_show_app_lock_dialog);
-            parental_controls.authorize.connect (on_authorize);
+            parental_controls.show_app_unavailable.connect (on_show_app_lock_dialog);
+            parental_controls.app_authorize.connect (on_authorize);
             parental_controls.launch.connect (on_launch);
-            parental_controls.send_time_notification.connect (on_send_time_notification);
+            parental_controls.show_timeout.connect (on_send_time_notification);
 
             Gtk.main ();
         }
 
-        private void on_show_app_lock_dialog () {
+        private void on_show_app_lock_dialog (string path) {
             var app_lock_dialog = new AppLock.AppLockDialog ();
             app_lock_dialog.show_all ();
         }
 
-        private void on_authorize (string user_name, string action_id) {
+        private void on_authorize (string user_name, string path, string action_id) {
             if (permission != null && permission.get_can_release ()) {
                 try {
                     permission.release ();
@@ -84,16 +91,17 @@
                 warning ("%s\n", e.message);
             }
 
-            permission.acquire_async.begin ();
             permission.notify["allowed"].connect (() => {
                 if (parental_controls != null) {
                     try {
-                        parental_controls.end_authorization (Posix.getpid ());
+                        parental_controls.end_app_authorization ();
                     } catch (IOError e) {
                         warning ("%s\n", e.message);
                     }
                 }
             });
+
+            permission.acquire_async.begin ();
         }
 
         private void on_launch (string[] args) {

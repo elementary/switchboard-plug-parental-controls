@@ -134,8 +134,7 @@ namespace PC.Widgets {
         }
 
         private void load_restrictions () {
-            var restricts = PAMControl.get_all_restrictions ();
-            foreach (var restrict in restricts) {
+            foreach (PAMRestrictInfo restrict in PAMControl.get_all_restrictions ()) {
                 if (restrict.user == user.get_user_name ()) {
                     limit_switch.active = true;
 

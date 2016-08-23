@@ -21,7 +21,7 @@
  */
 
 namespace PC {
-    public class PAMRestrictInfo : Object {
+    public struct PAMRestrictInfo {
         public string user;
         public string day_id;
         public string weekday_hours;
@@ -64,12 +64,12 @@ namespace PC {
         }
 
         public static List<PAMRestrictInfo?> get_all_restrictions () {
-            var retval = new List<PAMRestrictInfo?> ();
+            var restrictions = new List<PAMRestrictInfo?> ();
             string conf = get_conf_section ();
 
             foreach (string line in conf.split ("\n")) {
                 if (!line.has_prefix ("#")) {
-                    var restrict_info = new PAMRestrictInfo ();
+                    var restrict_info = PAMRestrictInfo ();
                     string[] units = line.split (";");
                     if (units.length >= 4) {
                         restrict_info.user = units[2];
@@ -105,12 +105,12 @@ namespace PC {
                             restrict_info.to = tmp[1];
                         }
 
-                        retval.append (restrict_info);
+                        restrictions.append (restrict_info);
                     }
                 }
             }
 
-            return retval;
+            return restrictions;
         }
 
         public static void try_add_restrict_line (string user_name, string restrict) {

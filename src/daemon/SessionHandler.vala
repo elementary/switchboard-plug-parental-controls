@@ -161,7 +161,7 @@
         private void start_loop (int minutes) {
             int _hours = get_estimated_hours (minutes);
             int remaining_minutes = minutes - (MINUTE_INTERVAL * _hours);
-            server.send_time_notification (_hours, remaining_minutes);
+            server.show_timeout (_hours, remaining_minutes);
 
             schedule_notification (remaining_minutes, 5);
             schedule_notification (remaining_minutes, 1);
@@ -178,7 +178,7 @@
             Timeout.add_seconds (HOUR_INTERVAL, () => {
                 int hours = get_estimated_hours (minutes);
                 if (hours > 0) {
-                    server.send_time_notification (hours, minutes - (MINUTE_INTERVAL * hours));
+                    server.show_timeout (hours, minutes - (MINUTE_INTERVAL * hours));
                 }   
 
                 return (hours != 0 || minutes != 0);
@@ -187,7 +187,7 @@
 
         private void schedule_notification (int remaining_minutes, int minutes) {
             Timeout.add_seconds ((remaining_minutes - minutes) * MINUTE_INTERVAL, () => {
-                server.send_time_notification (0, minutes);
+                server.show_timeout (0, minutes);
 
                 return false;
             });

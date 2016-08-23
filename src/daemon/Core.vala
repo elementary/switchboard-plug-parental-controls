@@ -107,9 +107,9 @@ namespace PC.Daemon {
                     process.kill ();
 
                     if (admin && authority != null) {
-                        server.authorize (user.get_user_name (), Vars.PARENTAL_CONTROLS_ACTION_ID);
+                        server.app_authorize (user.get_user_name (), executable, Vars.PARENTAL_CONTROLS_ACTION_ID);
                         ulong signal_id = 0;
-                        signal_id = server.authorization_ended.connect ((client_pid) => {
+                        signal_id = server.app_authorization_ended.connect ((client_pid) => {
                             try {
                                 var result = authority.check_authorization_sync (Polkit.UnixProcess.new_for_owner (client_pid, 0, (int)user.get_uid ()),
                                                                                 Vars.PARENTAL_CONTROLS_ACTION_ID,
@@ -126,7 +126,7 @@ namespace PC.Daemon {
                             server.disconnect (signal_id);
                         });
                     } else {
-                        server.show_app_lock_dialog ();
+                        server.show_app_unavailable (executable);
                     }
                 }
             }  

@@ -22,51 +22,60 @@
 
 namespace PC.Cli {
     public class PAMWriter : Object {
-        public File file;
+        private const string TIME_CONF_PATH = "/etc/security/time.conf";
+        private const int REGEX_MATCH_INDEX = 1;
 
-        public PAMWriter (File file) {
-            this.file = file;
+        private string filename;
+
+        public static PAMWriter new_for_time () {
+            return new PAMWriter (TIME_CONF_PATH);
+        }
+
+        public PAMWriter (string filename) {
+            this.filename = filename;
         }    
 
-        public string get_conf_section () {
-            string contents = read_contents (file);
-            try {
-                var regex = new Regex (Vars.PAM_CONF_REGEX);
+        public string get_conf_section (bool ignore_comments = true) {
+            string config_section = "";
 
-                if (regex.match (contents)) {
-                    int i = 0;
-                    foreach (string str in regex.split (contents)) {
-                        // Do not replace the contents of the PC plug section
-                        if (i != 1) {
-                            contents = contents.replace (str, "");
-                        }
+            string contents;
+            FileUtils.get_contents (filename, out contents);
 
-                        i++;
-                    }
-                } else {
-                    return "";
-                }
-            } catch (RegexError e) {
-                warning ("%s\n", e.message);
+            int start_idx = contents.index_of (Vars.PAM_CONF_START);
+            int end_idx = contents.index_of (Vars.PAM_CONF_END);
+            if (start_idx == -1 || end_idx == -1) {
+                return config_section;
             }
 
+            config_section = contents.slice (start_idx, end_idx);
 
-            return contents;
+            if (ignore_comments) {
+                string tmp_buffer = "";
+                foreach (string line in config_section.split ("\n")) {
+                    if (!line.strip ().has_prefix ("#")) {
+                        tmp_buffer += line;
+                    }
+                }
+
+                return tmp_buffer;
+            }
+
+            return config_section;
         }
 
         public void remove_conf_section () {
-            string contents = read_contents (file);
-            string final_contents = contents.replace (get_conf_section (), "");
+            string contents = read_contents ();
+            string final_contents = contents.replace (filename, "");
 
             try {
-                FileUtils.set_contents (file.get_path (), final_contents);
+                FileUtils.set_contents (filename, final_contents);
             } catch (FileError e) {
                 warning ("%s\n", e.message);
             }
         }
 
         public void remove_user_restrictions (string user) {
-            string contents = read_contents (file);
+            string contents = read_contents ();
             string conf_section = get_conf_section ();
 
             string new_conf = "";
@@ -87,7 +96,7 @@ namespace PC.Cli {
                 }
 
                 try {
-                    FileUtils.set_contents (file.get_path (), contents.replace (conf_section, new_conf));
+                    FileUtils.set_contents (filename, contents.replace (conf_section, new_conf));
                 } catch (FileError e) {
                     warning ("%s\n", e.message);
                 }
@@ -95,7 +104,7 @@ namespace PC.Cli {
         } 
 
         public void modify_user_restrictions (string user, bool enable) {
-            string contents = read_contents (file);
+            string contents = read_contents ();
             string conf_section = get_conf_section ();
 
             string new_conf = "";
@@ -124,7 +133,7 @@ namespace PC.Cli {
                 }
 
                 try {
-                    FileUtils.set_contents (file.get_path (), contents.replace (conf_section, new_conf));
+                    FileUtils.set_contents (filename, contents.replace (conf_section, new_conf));
                 } catch (FileError e) {
                     warning ("%s\n", e.message);
                 }
@@ -132,7 +141,7 @@ namespace PC.Cli {
         } 
 
         public void add_conf_line (string line, string? user = null) {
-            string contents = read_contents (file);
+            string contents = read_contents ();
             string conf_section = get_conf_section ();
 
             string new_conf = "";
@@ -153,12 +162,12 @@ namespace PC.Cli {
                 }
 
                 try {
-                    FileUtils.set_contents (file.get_path (), contents.replace (conf_section, new_conf));
+                    FileUtils.set_contents (filename, contents.replace (conf_section, new_conf));
                 } catch (FileError e) {
                     warning ("%s\n", e.message);
                 }
 
-                contents = read_contents (file);
+                contents = read_contents ();
                 conf_section = get_conf_section ();
             }
 
@@ -180,20 +189,20 @@ namespace PC.Cli {
             }
 
             try {
-                FileUtils.set_contents (file.get_path (), final_contents);
+                FileUtils.set_contents (filename, final_contents);
             } catch (FileError e) {
                 warning ("%s\n", e.message);
             }
         }  
 
-        private string read_contents (File file) {
+        private string read_contents () {
             string data = "";
-            if (!file.query_exists ()) {
+            if (!FileUtils.test (filename, FileTest.EXISTS)) {
                 return "";
             }
 
             try {
-                FileUtils.get_contents (file.get_path (), out data);
+                FileUtils.get_contents (filename, out data);
             } catch (FileError e) {
                 warning ("%s\n", e.message);
             }
