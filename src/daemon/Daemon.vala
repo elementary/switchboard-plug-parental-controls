@@ -63,7 +63,7 @@ namespace PC.Daemon {
             warning ("Could not acquire name: %s\n", name);
         }
 
-        private void on_bus_aquired (DBusConnection connection) {
+        private void on_bus_acquired (DBusConnection connection) {
             try {
                 connection.register_object (Vars.PARENTAL_CONTROLS_OBJECT_PATH, Server.get_default ());
             } catch (IOError e) {
@@ -77,7 +77,7 @@ namespace PC.Daemon {
             }
 
             Bus.own_name (BusType.SYSTEM, Vars.PARENTAL_CONTROLS_IFACE, BusNameOwnerFlags.REPLACE,
-                          on_bus_aquired,
+                          on_bus_acquired,
                           () => {},
                           on_bus_lost);
 

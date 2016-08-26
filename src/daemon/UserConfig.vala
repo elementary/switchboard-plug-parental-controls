@@ -42,7 +42,6 @@ namespace PC.Daemon {
             config_list = new List<UserConfig> ();
 
             foreach (Act.User user in Utils.get_usermanager ().list_users ()) {
-                print (user.get_user_name () + "\n");
                 string config_path = Utils.build_daemon_conf_path (user);
                 if (!FileUtils.test (config_path, FileTest.IS_REGULAR)) {
                     continue;

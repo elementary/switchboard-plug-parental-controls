@@ -23,9 +23,10 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/AppChooser.vala
     Widgets/WeekSpinBox.vala
     shared/Vars.vala
-    shared/PAMControl.vala
     shared/Utils.vala
     shared/PAM/Token.vala
+    shared/PAM/Reader.vala
+    shared/PAM/Writer.vala
     ${CMAKE_CURRENT_BINARY_DIR}/config.vala
 PACKAGES
     gtk+-3.0
@@ -39,7 +40,6 @@ OPTIONS
     --thread
 )
 
-add_subdirectory (cli)
 add_subdirectory (client)
 add_subdirectory (daemon)
 

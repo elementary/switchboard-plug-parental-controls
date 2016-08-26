@@ -134,7 +134,7 @@ namespace PC.Widgets {
         }
 
         private void load_restrictions () {
-            foreach (PAMRestrictInfo restrict in PAMControl.get_all_restrictions ()) {
+            /*foreach (PAMRestrictInfo restrict in PAMControl.get_all_restrictions ()) {
                 if (restrict.user == user.get_user_name ()) {
                     limit_switch.active = true;
 
@@ -164,7 +164,7 @@ namespace PC.Widgets {
                             break;
                     }
                 }
-            }
+            }*/
         }
 
         private void update_pam () {
@@ -183,7 +183,7 @@ namespace PC.Widgets {
                     break;
             }
 
-            PAMControl.try_add_restrict_line (user.get_user_name (), restrict);
+            //PAMControl.try_add_restrict_line (user.get_user_name (), restrict);
         }
 
         private string generate_pam_conf_restriction (string id, string from, string to) {
@@ -272,7 +272,7 @@ namespace PC.Widgets {
             if (limit_switch.get_active ()) {
                 update_pam ();
             } else {
-                PAMControl.try_remove_user_restrict (user.get_user_name ());
+                //PAMControl.try_remove_user_restrict (user.get_user_name ());
             }
         }
 

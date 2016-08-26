@@ -60,6 +60,8 @@ namespace PC.Daemon {
             }
 
             UserConfig.init ();
+
+            var tokens = PAM.Reader.get_tokens (PAM.Writer.TIME_CONF_PATH);
         }
 
         [DBus (visible = false)]
@@ -76,22 +78,22 @@ namespace PC.Daemon {
             app_authorization_ended ((int)pid);
         }
 
-        public void enable_restriction (string username, bool enable, BusName sender) throws ParentalControlsError {
+        public void add_restriction_for_user (string input, BusName sender) throws ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
+
+            var writer = PAM.Writer.new_for_time ();
+            writer.add_restriction_for_user (input);
         }
 
-        public void remove_restriction (string username, BusName sender) throws ParentalControlsError {
+        public void remove_restriction_for_user (string username, BusName sender) throws ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
-        }
 
-        public void add_pam_restriction (string input, BusName sender) throws ParentalControlsError {
-            if (!get_sender_is_authorized (sender)) {
-                throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
-            }            
+            var writer = PAM.Writer.new_for_time ();
+            writer.remove_restriction_for_user (username);
         }
 
         public void lock_dock_icons (string username, bool lock, BusName sender) throws ParentalControlsError {

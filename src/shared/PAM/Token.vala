@@ -50,10 +50,10 @@ namespace PC.PAM {
         private const string TYPE_SEPARATOR = ";";
         private const string LIST_SEPARATOR = "|";
 
-        public string[] services { get; set; }
-        public string[] ttys { get; set; }
-        public string[] users { get; set; }
-        public string[] times { get; set; }
+        public string[] services;
+        public string[] ttys;
+        public string[] users;
+        public string[] times;
 
         public static Token? parse_line (string line) {
             string[] strv = line.split (TYPE_SEPARATOR);
@@ -83,12 +83,12 @@ namespace PC.PAM {
         }
 
         private static string construct_pam_restriction (string[] services, string[] ttys, string users[], string[] times) {
-            string services_list = string.join (LIST_SEPARATOR, services);
-            string ttys_list = string.join (LIST_SEPARATOR, ttys);
-            string users_list = string.join (LIST_SEPARATOR, users);
-            string times_list = string.join (LIST_SEPARATOR, times);
+            string services_str = string.joinv (LIST_SEPARATOR, services);
+            string ttys_str = string.joinv (LIST_SEPARATOR, ttys);
+            string users_str = string.joinv (LIST_SEPARATOR, users);
+            string times_str = string.joinv (LIST_SEPARATOR, times);
 
-            return "%s;%s;%s;%s".printf (services_list, ttys_list, users_list, times_list);
+            return "%s;%s;%s;%s".printf (services_str, ttys_str, users_str, times_str);
         }
 
         public static string construct_pam_restriction_simple (string user, string[] times) {
@@ -111,14 +111,42 @@ namespace PC.PAM {
             return users[0];
         }
 
+        public string to_string () {
+            return construct_pam_restriction (services, ttys, users, times);
+        }
+
         public void get_weekday_hours (out int from, out int to) {
-            string[] bounds = times[0].slice (2, -1).split ("-");
+            if (times.length < 1) {
+                from = 0;
+                to = 0;
+                return;
+            }
+
+            string[] bounds = times[0].substring (2).split ("-");
+            if (bounds.length < 2) {
+                from = 0;
+                to = 0;                
+                return;
+            }
+
             from = int.parse (bounds[0]);
             to = int.parse (bounds[1]);
         }
 
         public void get_weekend_hours (out int from, out int to) {
+            if (times.length < 2) {
+                from = 0;
+                to = 0;
+                return;
+            }
+
             string[] bounds = times[1].split ("-");
+            if (bounds.length < 2) {
+                from = 0;
+                to = 0;
+                return;                
+            }
+
             from = int.parse (bounds[0]);
             to = int.parse (bounds[1]);
         }

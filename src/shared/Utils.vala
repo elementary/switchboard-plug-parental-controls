@@ -88,6 +88,34 @@ namespace PC {
             return usermanager;
         }
 
+        public static string read_contents (string filename) {
+            string contents = "";
+            if (!FileUtils.test (filename, FileTest.EXISTS)) {
+                return "";
+            }
+
+            try {
+                FileUtils.get_contents (filename, out contents);
+            } catch (FileError e) {
+                warning ("%s\n", e.message);
+            }
+
+            return contents;
+        } 
+
+        public static string remove_comments (string str) {
+            string buffer = "";
+
+            foreach (string line in str.split ("\n")) {
+                if (!line.strip ().has_prefix ("#")) {
+                    buffer += line;
+                    buffer += "\n";
+                }
+            }
+
+            return buffer;
+        }
+
         public static unowned Act.User? get_current_user () {
             return get_usermanager ().get_user (user_name);
         }

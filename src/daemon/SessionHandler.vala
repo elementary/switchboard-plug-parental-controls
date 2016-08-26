@@ -71,7 +71,7 @@
                 iptables_helper.add_rules ();
             }
 
-            var restricts = PAMControl.get_all_restrictions ();
+            /*var restricts = PAMControl.get_all_restrictions ();
             foreach (var restrict in restricts) {
                 if (restrict.user == Utils.get_current_user ().get_user_name ()) {
                     var current_date = new DateTime.now_local ();
@@ -118,7 +118,7 @@
                             break;
                     }
                 }
-            } 
+            } */
         }
 
         public void stop () {
