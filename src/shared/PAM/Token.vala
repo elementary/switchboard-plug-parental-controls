@@ -41,6 +41,12 @@ namespace PC.PAM {
         }
     }
 
+    public class TimeInfo {
+        public DayType day_type = DayType.UNKNOWN;
+        public string from = "";
+        public string to = "";
+    }
+
     public class Token : Object {
         private const int SERVICES_INDEX = 0;
         private const int TTYS_INDEX = 1;
@@ -95,12 +101,31 @@ namespace PC.PAM {
             return construct_pam_restriction ({ "*" }, { "*" }, { user }, times);
         }
 
-        public DayType get_day_type () {
+        public List<TimeInfo> get_times_info () {
+            var list = new List<TimeInfo> ();
+
             if (times.length == 0) {
-                return DayType.UNKNOWN;
+                return list;
             }
 
-            return DayType.to_enum (times[0].slice (0, 2));
+            foreach (string time in times) {
+                string[] bounds = time.substring (2).split ("-");
+                if (bounds.length < 2) {
+                    continue;
+                }
+
+                var info = new TimeInfo ();
+                info.day_type = DayType.to_enum (time.slice (0, 2));
+                info.from = bounds[0];
+                info.to = bounds[1];
+
+                print (info.from + "\n");
+                print (info.to + "\n");
+                print (info.day_type.to_string () + "\n");
+                list.append (info);
+            }
+
+            return list;
         }
 
         public string get_user_arg0 () {

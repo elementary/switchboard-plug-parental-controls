@@ -60,8 +60,6 @@ namespace PC.Daemon {
             }
 
             UserConfig.init ();
-
-            var tokens = PAM.Reader.get_tokens (PAM.Writer.TIME_CONF_PATH);
         }
 
         [DBus (visible = false)]
@@ -78,13 +76,15 @@ namespace PC.Daemon {
             app_authorization_ended ((int)pid);
         }
 
-        public void add_restriction_for_user (string input, BusName sender) throws ParentalControlsError {
+        public void add_restriction_for_user (string input, bool clean, BusName sender) throws ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
 
+            ensure_pam_lightdm_enabled ();
+            
             var writer = PAM.Writer.new_for_time ();
-            writer.add_restriction_for_user (input);
+            writer.add_restriction_for_user (input, clean);
         }
 
         public void remove_restriction_for_user (string username, BusName sender) throws ParentalControlsError {
@@ -184,6 +184,24 @@ namespace PC.Daemon {
             }
 
             return config.get_admin ();
+        }
+
+        private void ensure_pam_lightdm_enabled () {
+            string path = "/etc/pam.d/lightdm";
+            string contents = Utils.read_contents (path);
+            
+            string conf_line = "\naccount required pam_time.so";
+            if (conf_line in contents) {
+                return;
+            }
+
+            contents += conf_line;
+
+            try {
+                FileUtils.set_contents (path, contents);
+            } catch (FileError e) {
+                warning ("%s\n", e.message);
+            }
         }
 
         private bool get_sender_is_authorized (BusName sender) {

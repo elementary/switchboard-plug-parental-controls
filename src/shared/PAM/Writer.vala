@@ -22,30 +22,29 @@
 
 namespace PC.PAM {
     public class Writer : Object {
-        public const string TIME_CONF_PATH = "/etc/security/time.conf";
-        private const int REGEX_MATCH_INDEX = 1;
-
         private string filename;
 
         public static Writer new_for_time () {
-            return new Writer (TIME_CONF_PATH);
+            return new Writer (Vars.PAM_TIME_CONF_PATH);
         }
 
         public Writer (string filename) {
             this.filename = filename;
         }
 
-        public void add_restriction_for_user (string input) {
+        public void add_restriction_for_user (string input, bool clean) {
+            if (clean) {
+                var token = Token.parse_line (input);
+                if (token != null) {
+                    string username = token.get_user_arg0 ();
+                    if (Reader.get_token_for_user (filename, username) != null) {
+                        remove_restriction_for_user (username);
+                    }
+                }   
+            }
+
             string contents = Utils.read_contents (filename);
             string config = Reader.get_config (contents, false);
-
-            var token = Token.parse_line (input);
-            if (token != null) {
-                string username = token.get_user_arg0 ();
-                if (Reader.get_token_for_user (filename, username) != null) {
-                    remove_restriction_for_user (username);
-                }
-            }
 
             var builder = new StringBuilder (Vars.PAM_CONF_START);
             if (config != "") {

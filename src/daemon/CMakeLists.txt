@@ -12,6 +12,7 @@ vala_precompile (VALA_C ${DAEMON_EXEC_NAME}
     Core.vala
     Process.vala
     IptablesHelper.vala
+    Timer.vala
     SessionManager.vala
     SessionHandler.vala
     Interfaces.vala

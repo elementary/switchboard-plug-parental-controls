@@ -21,68 +21,34 @@
  */
 
 namespace PC.Daemon {
-    public class Core : GLib.Object, ExecMonitor {
-        public bool valid = true;
-        public KeyFile key_file;
-
-        private Act.User user;
-
-        private string[] targets = {};
-        private bool admin = false;
-
+    public class ProcessWatcher : GLib.Object, ExecMonitor {
+        private UserConfig config;
         private List<string> allowed_executables;
-
         private Polkit.Authority authority;
-        private Server server;
 
-        public Core (Act.User _user, Server _server) {
-            user = _user;
-            server = _server;
+        public ProcessWatcher (UserConfig config) {
+            this.config = config;
             allowed_executables = new List<string> ();
+
             try {
                 authority = Polkit.Authority.get_sync ();
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
-
-            if (user == null) {
-                valid = false;
-                return;
-            }
-
-            key_file = new KeyFile ();
-
-            string conf_path = Utils.build_daemon_conf_path (user);
-            if (conf_path.strip () != "" && FileUtils.test (conf_path, FileTest.EXISTS)) {
-                try {
-                    key_file.load_from_file (conf_path, 0);
-
-                    targets = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_TARGETS);
-                    admin = key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ADMIN);
-
-                    valid = targets.length > 0;
-                } catch (FileError e) {
-                    warning ("%s\n", e.message);
-                } catch (Error e) {
-                    warning ("%s\n", e.message);
-                }
-            } else {
-                valid = false;
-            }       
         }
 
         private void handle_pid (int pid) {
             var process = new Process (pid);
 
             string command = process.get_command ();
-            if (command == null || command == "") {
+            if (command == null) {
                 return;
             }
 
             string[]? args = {};
             try {
-                bool success = Shell.parse_argv (command, out args);
-                if (!success || args == null || args.length < 1) {
+                Shell.parse_argv (command, out args);
+                if (args == null || args.length < 1) {
                     return;
                 }
             } catch (ShellError e) {
@@ -91,43 +57,42 @@ namespace PC.Daemon {
             }                
 
             string executable = args[0];
-            foreach (string _executable in allowed_executables) {
-                if (_executable == executable) {
-                    allowed_executables.remove (_executable);
-                    return;
-                }
+            unowned List<string> link = allowed_executables.find_custom (executable, strcmp);
+            if (link != null) {
+                allowed_executables.remove_link (link);
             }
 
-            if (executable != null && !executable.has_prefix (Path.DIR_SEPARATOR_S)) {
+            if (!executable.has_prefix (Path.DIR_SEPARATOR_S)) {
                 executable = Environment.find_program_in_path (executable);
             }
 
-            if (executable != null && executable != "") {
-                if (executable in targets) {
-                    process.kill ();
+            if (executable != null && executable in config.get_targets ()) {
+                process.kill ();
 
-                    if (admin && authority != null) {
-                        server.app_authorize (user.get_user_name (), executable, Vars.PARENTAL_CONTROLS_ACTION_ID);
-                        ulong signal_id = 0;
-                        signal_id = server.app_authorization_ended.connect ((client_pid) => {
-                            try {
-                                var result = authority.check_authorization_sync (Polkit.UnixProcess.new_for_owner (client_pid, 0, (int)user.get_uid ()),
-                                                                                Vars.PARENTAL_CONTROLS_ACTION_ID,
-                                                                                null,
-                                                                                Polkit.CheckAuthorizationFlags.ALLOW_USER_INTERACTION);
-                                if (result.get_is_authorized ()) {
-                                    allowed_executables.append (args[0]);                                
-                                    server.launch (args);
-                                }   
-                            } catch (Error e) {
-                                warning ("%s\n", e.message);
-                            }
+                var server = Server.get_default ();
+                if (config.get_admin () && authority != null) {
+                    ulong signal_id = 0;
+                    signal_id = server.app_authorization_ended.connect ((client_pid) => {
+                        try {
+                            var unix_user = (Polkit.UnixUser)Polkit.UnixUser.new_for_name (config.username);
+                            var result = authority.check_authorization_sync (Polkit.UnixProcess.new_for_owner (client_pid, 0, unix_user.get_uid ()),
+                                                                            Vars.PARENTAL_CONTROLS_ACTION_ID,
+                                                                            null,
+                                                                            Polkit.CheckAuthorizationFlags.ALLOW_USER_INTERACTION);
+                            if (result.get_is_authorized ()) {
+                                allowed_executables.append (executable);
+                                server.launch (args);
+                            }   
+                        } catch (Error e) {
+                            warning ("%s\n", e.message);
+                        }
 
-                            server.disconnect (signal_id);
-                        });
-                    } else {
-                        server.show_app_unavailable (executable);
-                    }
+                        server.disconnect (signal_id);
+                    });
+
+                    server.app_authorize (config.username, executable, Vars.PARENTAL_CONTROLS_ACTION_ID);
+                } else {
+                    server.show_app_unavailable (executable);
                 }
             }  
         }

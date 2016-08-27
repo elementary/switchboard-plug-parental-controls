@@ -20,26 +20,45 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
- namespace PC {
+ namespace PC.Daemon {
     public class IptablesHelper : Object {
-        public bool valid = false;
-
         private const string IPTABLES_EXEC = "iptables";
         private const string HOST_EXEC = "host";
         private const int ADDRESS_INDEX = 3;
         private const int DPORT = 80;
 
-        private string[] urls;
+        private UserConfig config;
+        private string[] current_urls;
+        private ulong changed_signal_id;
 
-        public IptablesHelper (string[] urls) {
-            this.urls = urls;
-            valid = Environment.find_program_in_path (IPTABLES_EXEC) != null &&
-                    Environment.find_program_in_path (HOST_EXEC) != null &&
-                    urls.length > 0;
+        public static bool get_can_start () {
+            return Environment.find_program_in_path (IPTABLES_EXEC) != null &&
+                    Environment.find_program_in_path (HOST_EXEC) != null;
         }
 
-        public void add_rules () {
-            foreach (string url in urls) {
+        public IptablesHelper (UserConfig config) {
+            this.config = config;
+        }
+
+        public void start () {
+            this.current_urls = config.get_block_urls ();
+            add_rules ();
+
+            changed_signal_id = config.changed.connect (() => {
+                remove_rules ();
+
+                current_urls = config.get_block_urls ();
+                add_rules ();
+            });
+        }
+
+        public void stop () {
+            remove_rules ();
+            disconnect (changed_signal_id);
+        }
+
+        private void add_rules () {
+            foreach (string url in current_urls) {
                 string[] addresses = get_addresses_from_url (url);
                 foreach (string address in addresses) {
                     process_adress (address, "-A");
@@ -97,8 +116,8 @@
             }
         }
 
-        public void reset () {
-            foreach (string url in urls) {
+        private void remove_rules () {
+            foreach (string url in current_urls) {
                 string[] addresses = get_addresses_from_url (url);
                 foreach (string address in addresses) {
                     process_adress (address, "-D");

@@ -29,8 +29,6 @@ namespace PC {
 
     public class Utils : Object {
         public static Polkit.Permission? permission = null;
-        public static string user_name;
-
         private static Act.UserManager? usermanager = null;
 
         public static Polkit.Permission? get_permission () {
@@ -39,9 +37,9 @@ namespace PC {
             }
 
             try {
-                var user = (Polkit.UnixUser)Polkit.UnixUser.new_for_name (user_name);
+                var user = (Polkit.UnixUser)Polkit.UnixUser.new_for_name (Environment.get_user_name ());
                 permission = new Polkit.Permission.sync (Vars.PARENTAL_CONTROLS_ACTION_ID,
-                                        Polkit.UnixProcess.new_for_owner (Posix.getpid (), 0, user.get_uid ()));
+                                Polkit.UnixProcess.new_for_owner (Posix.getpid (), 0, user.get_uid ()));
                 return permission;
             } catch (Error e) {
                 critical (e.message);
@@ -88,6 +86,10 @@ namespace PC {
             return usermanager;
         }
 
+        public static unowned Act.User? get_current_user () {
+            return get_usermanager ().get_user (Environment.get_user_name ());
+        }
+
         public static string read_contents (string filename) {
             string contents = "";
             if (!FileUtils.test (filename, FileTest.EXISTS)) {
@@ -116,16 +118,8 @@ namespace PC {
             return buffer;
         }
 
-        public static unowned Act.User? get_current_user () {
-            return get_usermanager ().get_user (user_name);
-        }
-
         public static string build_daemon_conf_path (Act.User user) {
             return Path.build_filename (user.get_home_dir (), Vars.DAEMON_CONF_DIR);
-        }
-
-        public static void set_user_name (string _user_name) {
-            user_name = _user_name;
         }
     }
 }

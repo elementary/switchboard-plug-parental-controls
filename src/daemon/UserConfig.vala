@@ -22,6 +22,12 @@
 
 namespace PC.Daemon {
     public class UserConfig : Object {
+        public string username;
+        public signal void changed ();
+
+        private KeyFile key;
+        private string config_path;
+
         private static List<UserConfig> config_list;
 
         public static UserConfig? get_for_username (string username) {
@@ -57,11 +63,6 @@ namespace PC.Daemon {
                 config_list.append (user_config);
             }
         }
-
-        private KeyFile key;
-        private string config_path;
-
-        public string username { get; set; }
 
         public UserConfig (string config_path, string username, KeyFile key) {
             this.username = username;
@@ -112,7 +113,9 @@ namespace PC.Daemon {
             monitor.changed.connect ((src, dest, event) => {
                 if (event == FileMonitorEvent.CHANGES_DONE_HINT) {
                     update_key ();
+
                     Server.get_default ().user_config_changed (username);
+                    changed ();
                 }
             });
         } 
@@ -123,6 +126,9 @@ namespace PC.Daemon {
 
         private void save () {
             key.save_to_file (config_path);
+
+            Server.get_default ().user_config_changed (username);
+            changed ();
         }
     }
 }
