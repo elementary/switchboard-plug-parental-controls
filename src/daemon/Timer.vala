@@ -110,8 +110,6 @@ namespace PC.Daemon {
         }
 
         private void start_loop (int minutes) {
-            print ("start\n\n");
-
             int _hours = get_estimated_hours (minutes);
             int remaining_minutes = minutes - (MINUTE_INTERVAL * _hours);
             Server.get_default ().show_timeout (_hours, remaining_minutes);
