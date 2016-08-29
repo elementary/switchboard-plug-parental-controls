@@ -65,7 +65,7 @@ namespace PC.Daemon {
         [DBus (visible = false)]
         public signal void app_authorization_ended (int client_pid);
 
-        public signal void app_authorize (string user, string path, string action_id);
+        public signal void app_authorize (string username, string path, string action_id);
         public signal void launch (string[] args);
         public signal void show_app_unavailable (string path);
         public signal void show_timeout (int hours, int minutes);
@@ -96,7 +96,7 @@ namespace PC.Daemon {
             writer.remove_restriction_for_user (username);
         }
 
-        public void lock_dock_icons (string username, bool lock, BusName sender) throws ParentalControlsError {
+        public void lock_dock_icons_for_user (string username, bool lock, BusName sender) throws ParentalControlsError {
             throw new ParentalControlsError.NOT_IMPLEMENTED ("Error: not implemented");
         }
 
@@ -126,7 +126,7 @@ namespace PC.Daemon {
             config.set_targets (targets);
         }
 
-        public void set_user_daemon_block_urls (string username, string[] urls, BusName sender) throws ParentalControlsError {
+        public void set_user_daemon_block_urls (string username, string[] block_urls, BusName sender) throws ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }  
@@ -134,7 +134,9 @@ namespace PC.Daemon {
             var config = UserConfig.get_for_username (username);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
-            }                         
+            }
+
+            config.set_block_urls (block_urls);
         }
 
         public void set_user_daemon_admin (string username, bool admin, BusName sender) throws ParentalControlsError {
@@ -188,7 +190,9 @@ namespace PC.Daemon {
 
         private void ensure_pam_lightdm_enabled () {
             string path = "/etc/pam.d/lightdm";
-            string contents = Utils.read_contents (path);
+            
+            string contents;
+            FileUtils.get_contents (path, out contents);
             
             string conf_line = "\naccount required pam_time.so";
             if (conf_line in contents) {

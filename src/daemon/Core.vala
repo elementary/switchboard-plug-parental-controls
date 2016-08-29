@@ -22,12 +22,11 @@
 
 namespace PC.Daemon {
     public class ProcessWatcher : GLib.Object, ExecMonitor {
-        private UserConfig config;
+        public UserConfig? config = null;
         private List<string> allowed_executables;
         private Polkit.Authority authority;
 
-        public ProcessWatcher (UserConfig config) {
-            this.config = config;
+        public ProcessWatcher () {
             allowed_executables = new List<string> ();
 
             try {
@@ -37,11 +36,20 @@ namespace PC.Daemon {
             }
         }
 
+        public void set_config (UserConfig? config) {
+            this.config = config;
+            allowed_executables = new List<string> ();
+        }
+
         private void handle_pid (int pid) {
+            if (config == null) {
+                return;
+            }
+
             var process = new Process (pid);
 
-            string command = process.get_command ();
-            if (command == null) {
+            string? command = process.get_command ();
+            if (command == null || command == "") {
                 return;
             }
 
@@ -57,13 +65,15 @@ namespace PC.Daemon {
             }                
 
             string executable = args[0];
-            unowned List<string> link = allowed_executables.find_custom (executable, strcmp);
-            if (link != null) {
-                allowed_executables.remove_link (link);
-            }
 
             if (!executable.has_prefix (Path.DIR_SEPARATOR_S)) {
                 executable = Environment.find_program_in_path (executable);
+            }
+
+            unowned List<string> link = allowed_executables.find_custom (executable, strcmp);
+            if (link != null) {
+                allowed_executables.remove_link (link);
+                return;
             }
 
             if (executable != null && executable in config.get_targets ()) {
@@ -78,11 +88,11 @@ namespace PC.Daemon {
                             var result = authority.check_authorization_sync (Polkit.UnixProcess.new_for_owner (client_pid, 0, unix_user.get_uid ()),
                                                                             Vars.PARENTAL_CONTROLS_ACTION_ID,
                                                                             null,
-                                                                            Polkit.CheckAuthorizationFlags.ALLOW_USER_INTERACTION);
+                                                                            Polkit.CheckAuthorizationFlags.NONE);
                             if (result.get_is_authorized ()) {
                                 allowed_executables.append (executable);
                                 server.launch (args);
-                            }   
+                            }
                         } catch (Error e) {
                             warning ("%s\n", e.message);
                         }

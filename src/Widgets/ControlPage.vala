@@ -29,25 +29,6 @@ namespace PC.Widgets {
         private AppsBox apps_box;
         private KeyFile key_file;
 
-        public bool active {
-            get {
-                return apps_box.get_active ();
-            }
-            set {
-                apps_box.set_active (value);
-                if (Utils.get_permission ().get_allowed ()) {
-                    if (value) {
-                        general_box.refresh ();
-                        Utils.call_cli ({"--user", user.get_user_name (), "--enable-restrict"});
-                    } else {
-                        general_box.set_lock_dock_active (false);
-                        general_box.set_printer_active (true);                    
-                        Utils.call_cli ({"--user", user.get_user_name (), "--disable-restrict"});
-                    }
-                }            
-            }
-        }
-
         public ControlPage (Act.User user) {
             this.user = user;
 
@@ -64,11 +45,9 @@ namespace PC.Widgets {
 
             internet_box = new InternetBox (user);
             internet_box.expand = true;
-            internet_box.update_key_file.connect (on_update_key_file);
 
             apps_box = new AppsBox (user);
             apps_box.expand = true;
-            apps_box.update_key_file.connect (on_update_key_file);
 
             stack = new Gtk.Stack ();
             stack.add_titled (general_box, "general", _("General"));
@@ -87,24 +66,29 @@ namespace PC.Widgets {
             show_all ();
         }
 
+        public void set_active (bool active) {
+            apps_box.set_active (active);
+            if (Utils.get_permission ().get_allowed ()) {
+                if (active) {
+                    general_box.refresh ();
+                    general_box.update_pam ();
+                } else {
+                    general_box.set_lock_dock_active (false);
+                    general_box.set_printer_active (true);
+                    Utils.get_api ().remove_restriction_for_user.begin (user.get_user_name ());
+                }
+            }  
+        }
+
+        public async bool get_active () {
+            return yield apps_box.get_active ();
+        }
+
         private void update_view_state () {
             bool allowed = Utils.get_permission ().get_allowed ();
             general_box.sensitive = allowed;
             internet_box.sensitive = allowed;
             apps_box.sensitive = allowed;
-        }
-
-        private void on_update_key_file () {
-            if (!Utils.get_permission ().get_allowed ()) {
-                return;
-            }
-
-            key_file.set_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ACTIVE, apps_box.daemon_active);
-            key_file.set_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_TARGETS, apps_box.targets);
-            key_file.set_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ADMIN, apps_box.admin);
-            key_file.set_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_BLOCK_URLS, internet_box.urls);
-
-            Utils.call_cli ({ "--set-contents", key_file.to_data (), "--file", Utils.build_daemon_conf_path (user) });
         }
     }
 }

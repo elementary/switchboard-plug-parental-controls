@@ -21,25 +21,7 @@
  */
 
  namespace PC.Client {
-    [DBus (name = "org.pantheon.ParentalControls")]
-    public interface ParentalControls : Object {
-        public signal void show_app_unavailable (string path);
-        public signal void app_authorize (string user, string path, string action_id);
-        public signal void launch (string[] args);
-        public signal void show_timeout (int hours, int minutes);
-
-        public abstract void end_app_authorization () throws IOError;
-
-        public abstract void enable_restriction (string username, bool enable) throws IOError;
-        public abstract bool get_user_daemon_active (string username) throws IOError;
-        public abstract bool get_user_daemon_admin (string username) throws IOError;
-        public abstract string[] get_user_daemon_targets (string username) throws IOError;
-        public abstract string[] get_user_daemon_block_urls (string username) throws IOError;
-        public abstract void set_user_daemon_active (string username, bool active) throws IOError;
-    }
-
     public class Client : Gtk.Application {
-        private ParentalControls? parental_controls;
         private Polkit.Permission? permission = null;
 
         public static int main (string[] args) {
@@ -50,31 +32,22 @@
         }
 
         public override void activate () {
-            try {
-                parental_controls = Bus.get_proxy_sync (BusType.SYSTEM, Vars.PARENTAL_CONTROLS_IFACE, Vars.PARENTAL_CONTROLS_OBJECT_PATH);
-            } catch (Error e) {
-                warning ("%s\n", e.message);
-                return;
-            }
+            var api = Utils.get_api ();
 
-            if (parental_controls == null) {
-                return;
-            }
-
-            parental_controls.show_app_unavailable.connect (on_show_app_lock_dialog);
-            parental_controls.app_authorize.connect (on_authorize);
-            parental_controls.launch.connect (on_launch);
-            parental_controls.show_timeout.connect (on_send_time_notification);
+            api.show_app_unavailable.connect (on_show_app_unavailable);
+            api.app_authorize.connect (on_authorize);
+            api.launch.connect (on_launch);
+            api.show_timeout.connect (on_show_timeout);
 
             Gtk.main ();
         }
 
-        private void on_show_app_lock_dialog (string path) {
+        private void on_show_app_unavailable (string path) {
             var app_lock_dialog = new AppLock.AppLockDialog ();
             app_lock_dialog.show_all ();
         }
 
-        private void on_authorize (string user_name, string path, string action_id) {
+        private void on_authorize (string username, string path, string action_id) {
             if (permission != null && permission.get_can_release ()) {
                 try {
                     permission.release ();
@@ -84,7 +57,7 @@
             }
 
             try {
-                var user = (Polkit.UnixUser)Polkit.UnixUser.new_for_name (user_name);
+                var user = (Polkit.UnixUser)Polkit.UnixUser.new_for_name (username);
                 permission = new Polkit.Permission.sync (action_id,
                                         Polkit.UnixProcess.new_for_owner (Posix.getpid (), 0, user.get_uid ()));
             } catch (Error e) {
@@ -92,12 +65,11 @@
             }
 
             permission.notify["allowed"].connect (() => {
-                if (parental_controls != null) {
-                    try {
-                        parental_controls.end_app_authorization ();
-                    } catch (IOError e) {
-                        warning ("%s\n", e.message);
-                    }
+                try {
+                    Utils.get_api ().end_app_authorization ();
+                    return;
+                } catch (IOError e) {
+                    warning ("%s\n", e.message);
                 }
             });
 
@@ -125,7 +97,7 @@
         }
 
 
-        private void on_send_time_notification (int hours, int minutes) {
+        private void on_show_timeout (int hours, int minutes) {
             string hours_str = "";
             string minutes_str = "";
             string info = "";
@@ -146,8 +118,8 @@
             var notification = new Notification (_("Time left"));
             var icon = new ThemedIcon ("dialog-warning");
             notification.set_icon (icon);
-
             notification.set_body (body);
+
             send_notification (null, notification);
         }
     }

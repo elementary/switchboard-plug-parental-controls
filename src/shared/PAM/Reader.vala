@@ -41,7 +41,9 @@ namespace PC.PAM {
         }
 
         public static List<Token> get_tokens (string filename) {
-            string contents = Utils.read_contents (filename);
+            string contents;
+            FileUtils.get_contents (filename, out contents);
+            
             string config = get_config (contents);
             return Token.parse (config);
         }

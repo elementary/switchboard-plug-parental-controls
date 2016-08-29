@@ -23,8 +23,6 @@
  namespace PC.Daemon {
     public class IptablesHelper : Object {
         private const string IPTABLES_EXEC = "iptables";
-        private const string HOST_EXEC = "host";
-        private const int ADDRESS_INDEX = 3;
         private const int DPORT = 80;
 
         private UserConfig config;
@@ -32,8 +30,7 @@
         private ulong changed_signal_id;
 
         public static bool get_can_start () {
-            return Environment.find_program_in_path (IPTABLES_EXEC) != null &&
-                    Environment.find_program_in_path (HOST_EXEC) != null;
+            return Environment.find_program_in_path (IPTABLES_EXEC) != null;
         }
 
         public IptablesHelper (UserConfig config) {
@@ -59,46 +56,24 @@
 
         private void add_rules () {
             foreach (string url in current_urls) {
-                string[] addresses = get_addresses_from_url (url);
+                string[] addresses = get_addresses_from_name (url);
                 foreach (string address in addresses) {
                     process_adress (address, "-A");
                 }
             }        
         }
 
-        private string[] get_addresses_from_url (string url) {
-            string[] result = {};
-
-            string output;
-            int status;
-
-            try {
-                GLib.Process.spawn_sync ("/",
-                                    { HOST_EXEC, url },
-                                    Environ.get (),
-                                    SpawnFlags.SEARCH_PATH,
-                                    null,
-                                    out output,
-                                    null,
-                                    out status);
-            } catch (SpawnError e) {
-                warning ("%s\n", e.message);
-            }
-
-            if (status != 0) {
-                return result;
-            }
-
-            foreach (string line in output.split ("\n")) {
-                if (line.contains ("has address")) {
-                    string[] elements = line.split (" ");
-                    if (elements.length >= 3) {
-                        result += elements[ADDRESS_INDEX];
-                    }
+        private string[] get_addresses_from_name (string name) {
+            string[] address_list = {};
+            var resolver = GLib.Resolver.get_default ();
+            var addresses = resolver.lookup_by_name (name, null);
+            foreach (InetAddress address in addresses) {
+                if (address.get_family () == GLib.SocketFamily.IPV4) {
+                    address_list += address.to_string ();
                 }
             }
 
-            return result;
+            return address_list;
         }
 
         private void process_adress (string address, string option) {
@@ -118,7 +93,7 @@
 
         private void remove_rules () {
             foreach (string url in current_urls) {
-                string[] addresses = get_addresses_from_url (url);
+                string[] addresses = get_addresses_from_name (url);
                 foreach (string address in addresses) {
                     process_adress (address, "-D");
                 }

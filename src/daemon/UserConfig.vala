@@ -73,22 +73,22 @@ namespace PC.Daemon {
 
         public void set_active (bool active) {
             key.set_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ACTIVE, active);
-            save ();
+            save.begin ();
         }
 
         public void set_targets (string[] targets) {
             key.set_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_TARGETS, targets);
-            save ();
+            save.begin ();
         }
 
         public void set_block_urls (string[] block_urls) {
             key.set_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_BLOCK_URLS, block_urls);
-            save ();
+            save.begin ();
         }
 
         public void set_admin (bool admin) {
             key.set_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ADMIN, admin);
-            save ();
+            save.begin ();
         }
 
         public bool get_active () {
@@ -124,7 +124,7 @@ namespace PC.Daemon {
             key.load_from_file (config_path, KeyFileFlags.NONE);
         }
 
-        private void save () {
+        private async void save () {
             key.save_to_file (config_path);
 
             Server.get_default ().user_config_changed (username);

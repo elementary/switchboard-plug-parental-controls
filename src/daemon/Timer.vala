@@ -110,38 +110,22 @@ namespace PC.Daemon {
         }
 
         private void start_loop (int minutes) {
-            int _hours = get_estimated_hours (minutes);
-            int remaining_minutes = minutes - (MINUTE_INTERVAL * _hours);
-            Server.get_default ().show_timeout (_hours, remaining_minutes);
-
-            schedule_notification (remaining_minutes, 5);
-            schedule_notification (remaining_minutes, 1);
-
+            Server.get_default ().show_timeout (minutes / MINUTE_INTERVAL, minutes % MINUTE_INTERVAL);
             timeout_ids += Timeout.add_seconds (MINUTE_INTERVAL, () => {
-                remaining_minutes--;
-                if (remaining_minutes == 0) {
+                minutes--;
+                if (minutes == MINUTE_INTERVAL ||
+                    minutes == 10 ||
+                    minutes == 5 ||
+                    minutes == 1) {
+                    Server.get_default ().show_timeout (minutes / MINUTE_INTERVAL, minutes % MINUTE_INTERVAL);
+                }
+
+                if (minutes == 0) {
                     terminate ();
                 }
 
-                return (remaining_minutes != 0);
+                return (minutes > 0);
             });
-
-            timeout_ids += Timeout.add_seconds (HOUR_INTERVAL, () => {
-                int hours = get_estimated_hours (minutes);
-                if (hours > 0) {
-                    Server.get_default ().show_timeout (hours, minutes - (MINUTE_INTERVAL * hours));
-                }   
-
-                return (hours != 0 || minutes != 0);
-            });
-        }
-
-        private void schedule_notification (int remaining_minutes, int minutes) {
-            timeout_ids += Timeout.add_seconds ((remaining_minutes - minutes) * MINUTE_INTERVAL, () => {
-                Server.get_default ().show_timeout (0, minutes);
-
-                return false;
-            });
-        }      
+        }   
     }
 }

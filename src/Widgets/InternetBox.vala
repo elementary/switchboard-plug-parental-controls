@@ -22,7 +22,6 @@
 
 namespace PC.Widgets {
     public class InternetBox : Gtk.Grid {
-        public signal void update_key_file ();
         public string[] urls;
 
         private const string URL_REGEX_RULE = "[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)";
@@ -118,16 +117,14 @@ namespace PC.Widgets {
             frame.add (main_box);
 
             add (frame);
-            load_existing ();
+            load_existing.begin ();
             show_all ();
         }
 
-        private void load_existing () {
-            var key_file = new KeyFile ();
+        private async void load_existing () {
             try {
-                key_file.load_from_file (Utils.build_daemon_conf_path (user), 0);
-                urls = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_BLOCK_URLS);
-                foreach (string url in urls) {
+                string[] block_urls = yield Utils.get_api ().get_user_daemon_block_urls (user.get_user_name ());
+                foreach (string url in block_urls) {
                     add_entry (new UrlEntry (url));
                 }
             } catch (Error e) {
@@ -135,14 +132,17 @@ namespace PC.Widgets {
             }         
         }
 
-        private void update () {
-            string[] _urls = {};
-            foreach (var url_entry in url_list) {
-                _urls += url_entry.get_url ();
+        private void update_block_urls () {
+            if (!Utils.get_permission ().get_allowed ()) {
+                return;
             }
 
-            urls = _urls;
-            update_key_file ();
+            string[] block_urls = {};
+            foreach (var url_entry in url_list) {
+                block_urls += url_entry.get_url ();
+            }
+
+            Utils.get_api ().set_user_daemon_block_urls (user.get_user_name (), block_urls);
         }
 
         private void on_entry_changed () {
@@ -173,7 +173,7 @@ namespace PC.Widgets {
             add_entry (url_entry);
 
             entry.text = "";
-            update ();
+            update_block_urls ();
         }
 
         private void add_entry (UrlEntry url_entry) {
@@ -186,7 +186,7 @@ namespace PC.Widgets {
         private void on_url_entry_deleted (UrlEntry url_entry) {
             url_list.remove (url_entry);
             list_box.remove (url_entry);
-            update ();
+            update_block_urls ();
         }
     }
 }

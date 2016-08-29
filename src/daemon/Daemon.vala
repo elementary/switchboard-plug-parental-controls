@@ -45,8 +45,7 @@ namespace PC.Daemon {
 
         public static void on_exit (int signum) {
             if (session_manager != null) {
-                session_manager.current_handler.stop ();
-                session_manager.current_handler.unref ();
+                session_manager.stop ();
             }
 
             terminate ();

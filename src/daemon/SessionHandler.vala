@@ -22,10 +22,10 @@
 
  namespace PC.Daemon {
     public class SessionHandler : Object {
-        public ProcessWatcher core;
-        public IptablesHelper iptables_helper;
-        public Timer? timer;
+        private IptablesHelper iptables_helper;
+        private Timer? timer;
 
+        private UserConfig config;
         private ISession session;
         private Server server;
 
@@ -35,13 +35,12 @@
             this.session = session;
             server = Server.get_default ();
 
-            var config = UserConfig.get_for_username (session.name);
+            config = UserConfig.get_for_username (session.name);
             if (config == null || !config.get_active ()) {
                 can_start = false;
                 return;
             }
 
-            core = new ProcessWatcher (config);
             iptables_helper = new IptablesHelper (config);
 
             var token = PAM.Reader.get_token_for_user (Vars.PAM_TIME_CONF_PATH, session.name);
@@ -50,15 +49,17 @@
                 timer.terminate.connect (() => {
                     session.terminate ();
                 });
-            }
+            }            
+        }
+
+        public UserConfig get_config () {
+            return config;
         }
 
         public void start () {
             if (!can_start) {
                 return;
             }
-
-            core.start.begin ();
 
             if (IptablesHelper.get_can_start ()) {
                 iptables_helper.start ();
@@ -70,7 +71,6 @@
         }
 
         public void stop () {
-            core.stop ();
             iptables_helper.stop ();
             if (timer != null) {
                 timer.stop ();

@@ -31,12 +31,26 @@ namespace PC.PAM {
             switch (str) {
                 case "Al":
                     return ALL;
-                case "Wd":
-                    return WEEKDAY;
                 case "Wk":
+                    return WEEKDAY;
+                case "Wd":
                     return WEEKEND;
                 default:
                     return UNKNOWN;
+            }
+        }
+
+        public string to_string () {
+            switch (this) {
+                case ALL:
+                    return "Al";
+                case WEEKDAY:
+                    return "Wk";
+                case WEEKEND:
+                    return "Wd";
+                default:
+                case UNKNOWN:
+                    return "unknown";                
             }
         }
     }
@@ -88,7 +102,7 @@ namespace PC.PAM {
             return list;
         }
 
-        private static string construct_pam_restriction (string[] services, string[] ttys, string users[], string[] times) {
+        public static string construct_pam_restriction (string[] services, string[] ttys, string users[], string[] times) {
             string services_str = string.joinv (LIST_SEPARATOR, services);
             string ttys_str = string.joinv (LIST_SEPARATOR, ttys);
             string users_str = string.joinv (LIST_SEPARATOR, users);
@@ -97,8 +111,8 @@ namespace PC.PAM {
             return "%s;%s;%s;%s".printf (services_str, ttys_str, users_str, times_str);
         }
 
-        public static string construct_pam_restriction_simple (string user, string[] times) {
-            return construct_pam_restriction ({ "*" }, { "*" }, { user }, times);
+        public static string construct_pam_restriction_simple (string[] users, string[] times) {
+            return construct_pam_restriction ({ "*" }, { "*" }, users, times);
         }
 
         public List<TimeInfo> get_times_info () {

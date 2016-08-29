@@ -43,13 +43,15 @@ namespace PC.PAM {
                 }   
             }
 
-            string contents = Utils.read_contents (filename);
+            string contents;
+            FileUtils.get_contents (filename, out contents);
+            
             string config = Reader.get_config (contents, false);
 
             var builder = new StringBuilder (Vars.PAM_CONF_START);
             if (config != "") {
                 builder.append ("\n");
-                builder.append (Utils.remove_comments (config)); 
+                builder.append (Utils.remove_comments (config));
             } else {
                 builder.append ("\n");
             }
@@ -70,7 +72,9 @@ namespace PC.PAM {
         }
 
         public void remove_restriction_for_user (string username) {
-            string contents = Utils.read_contents (filename);
+            string contents;
+            FileUtils.get_contents (filename, out contents);
+
             string config = Reader.get_config (contents);
 
             if (config == "") {
@@ -86,13 +90,7 @@ namespace PC.PAM {
                 }
             }
 
-            buffer += "\n";
-
-            try {
-                FileUtils.set_contents (filename, contents.replace (config, buffer));
-            } catch (FileError e) {
-                warning ("%s\n", e.message);
-            }
+            FileUtils.set_contents (filename, contents.replace (config, buffer));
         }        
     }
 }
