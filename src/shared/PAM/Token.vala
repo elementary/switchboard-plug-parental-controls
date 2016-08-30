@@ -132,10 +132,7 @@ namespace PC.PAM {
                 info.day_type = DayType.to_enum (time.slice (0, 2));
                 info.from = bounds[0];
                 info.to = bounds[1];
-
-                print (info.from + "\n");
-                print (info.to + "\n");
-                print (info.day_type.to_string () + "\n");
+                
                 list.append (info);
             }
 
