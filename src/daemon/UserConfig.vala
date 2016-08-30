@@ -30,13 +30,17 @@ namespace PC.Daemon {
 
         private static List<UserConfig> config_list;
 
-        public static UserConfig? get_for_username (string username) {
+        public static UserConfig? get_for_username (string username, bool create) {
             foreach (UserConfig config in config_list) {
                 if (config.username == username) {
                     return config;
                 }
             }
 
+            if (create) {
+                return create_for_username (username);    
+            }
+            
             return null;
         }
 
@@ -55,16 +59,47 @@ namespace PC.Daemon {
 
                 var key = new KeyFile ();
                 key.set_list_separator (';');
-                if (!key.load_from_file (config_path, KeyFileFlags.NONE)) {
+                try {
+                    if (!key.load_from_file (config_path, KeyFileFlags.NONE)) {
+                        continue;
+                    }
+                } catch (KeyFileError e) {
+                    warning (e.message);
+                    continue;
+                } catch (FileError e) {
+                    warning (e.message);
                     continue;
                 }
-
-                var user_config = new UserConfig (config_path, user.get_user_name (), key);;
+                
+                var user_config = new UserConfig (config_path, user.get_user_name (), key);
                 config_list.append (user_config);
             }
         }
 
-        public UserConfig (string config_path, string username, KeyFile key) {
+        private static UserConfig? create_for_username (string username) {
+            var user = Utils.get_usermanager ().get_user (username);
+            if (user == null) {
+                return null;
+            }
+
+            string config_path = Utils.build_daemon_conf_path (user);
+            var file = File.new_for_path (config_path);
+            try {
+                file.create (FileCreateFlags.PRIVATE);    
+            } catch (FileError e) {
+                warning (e.message);
+                return null;
+            } catch (Error e) {
+                warning (e.message);
+                return null;
+            }
+
+            var config = new UserConfig (config_path, username, new KeyFile ());
+            config_list.append (config);
+            return config;
+        }
+
+        private UserConfig (string config_path, string username, KeyFile key) {
             this.username = username;
             this.key = key;
             this.config_path = config_path;
@@ -92,40 +127,79 @@ namespace PC.Daemon {
         }
 
         public bool get_active () {
-            return key.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ACTIVE);
+            try {
+                return key.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ACTIVE);
+            } catch (KeyFileError e) {
+                warning (e.message);
+            }
+
+            return false;
         }
 
         public string[] get_targets () {
-            return key.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_TARGETS);
+            try {            
+                return key.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_TARGETS);
+            } catch (KeyFileError e) {
+                warning (e.message);
+            }   
+
+            return {};         
         }
 
         public string[] get_block_urls () {
-            return key.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_BLOCK_URLS);
+            try {
+                return key.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_BLOCK_URLS);
+            } catch (KeyFileError e) {
+                warning (e.message);
+            }
+
+            return {};                
         }
 
         public bool get_admin () {
-            return key.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ADMIN);
+            try {
+                return key.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ADMIN);
+            } catch (KeyFileError e) {
+                warning (e.message);
+            }
+
+            return false;
         }
 
         private void monitor_file () {
             var file = File.new_for_path (config_path);
-            var monitor = file.monitor (FileMonitorFlags.NONE, null);
-            monitor.changed.connect ((src, dest, event) => {
-                if (event == FileMonitorEvent.CHANGES_DONE_HINT) {
-                    update_key ();
+            try {
+                var monitor = file.monitor (FileMonitorFlags.NONE, null);
+                monitor.changed.connect ((src, dest, event) => {
+                    if (event == FileMonitorEvent.CHANGES_DONE_HINT) {
+                        update_key ();
 
-                    Server.get_default ().user_config_changed (username);
-                    changed ();
-                }
-            });
+                        Server.get_default ().user_config_changed (username);
+                        changed ();
+                    }
+                });
+            } catch (Error e) {
+                warning (e.message);
+            }
         } 
 
         private void update_key () {
-            key.load_from_file (config_path, KeyFileFlags.NONE);
+            try {
+                key.load_from_file (config_path, KeyFileFlags.NONE);
+            } catch (KeyFileError e) {
+                warning (e.message);
+            } catch (FileError e) {
+                warning (e.message);
+            }
         }
 
         private void save () {
-            key.save_to_file (config_path);
+            try {
+                key.save_to_file (config_path);
+            } catch (FileError e) {
+                warning (e.message);
+                return;
+            }
 
             Server.get_default ().user_config_changed (username);
             changed ();

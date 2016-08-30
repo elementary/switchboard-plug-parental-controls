@@ -29,6 +29,7 @@ namespace PC.Daemon {
         public abstract uint32 get_connection_unix_user (string name) throws IOError;
     }
 
+    [DBus (name = "org.pantheon.ParentalControls")]
     public errordomain ParentalControlsError {
         NOT_AUTHORIZED,
         NOT_IMPLEMENTED,
@@ -38,7 +39,6 @@ namespace PC.Daemon {
 
     [DBus (name = "org.pantheon.ParentalControls")]
     public class Server : Object {
-
         private static Server? instance = null;
         private DBus? bus_proxy = null;
 
@@ -105,9 +105,9 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
 
-            var config = UserConfig.get_for_username (username);
+            var config = UserConfig.get_for_username (username, true);
             if (config == null) {
-                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created".printf (username));
             }
 
             config.set_active (active);
@@ -118,9 +118,9 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
 
-            var config = UserConfig.get_for_username (username);
+            var config = UserConfig.get_for_username (username, true);
             if (config == null) {
-                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created".printf (username));
             }
 
             config.set_targets (targets);
@@ -131,9 +131,9 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }  
 
-            var config = UserConfig.get_for_username (username);
+            var config = UserConfig.get_for_username (username, true);
             if (config == null) {
-                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created".printf (username));
             }
 
             config.set_block_urls (block_urls);
@@ -144,16 +144,16 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
 
-            var config = UserConfig.get_for_username (username);
+            var config = UserConfig.get_for_username (username, true);
             if (config == null) {
-                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created".printf (username));
             }
 
             config.set_admin (admin);
         }
 
         public bool get_user_daemon_active (string username) throws ParentalControlsError {
-            var config = UserConfig.get_for_username (username);
+            var config = UserConfig.get_for_username (username, false);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
             }
@@ -162,7 +162,7 @@ namespace PC.Daemon {
         }
 
         public string[] get_user_daemon_targets (string username) throws ParentalControlsError {
-            var config = UserConfig.get_for_username (username);
+            var config = UserConfig.get_for_username (username, false);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
             }
@@ -171,7 +171,7 @@ namespace PC.Daemon {
         }
 
         public string[] get_user_daemon_block_urls (string username) throws ParentalControlsError {
-            var config = UserConfig.get_for_username (username);
+            var config = UserConfig.get_for_username (username, false);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
             }
@@ -180,7 +180,7 @@ namespace PC.Daemon {
         }
 
         public bool get_user_daemon_admin (string username) throws ParentalControlsError {
-            var config = UserConfig.get_for_username (username);
+            var config = UserConfig.get_for_username (username, false);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
             }
@@ -192,7 +192,12 @@ namespace PC.Daemon {
             string path = "/etc/pam.d/lightdm";
             
             string contents;
-            FileUtils.get_contents (path, out contents);
+            try {
+                FileUtils.get_contents (path, out contents);
+            } catch (FileError e) {
+                warning (e.message);
+                return;
+            }
             
             string conf_line = "\naccount required pam_time.so";
             if (conf_line in contents) {
@@ -208,7 +213,7 @@ namespace PC.Daemon {
             }
         }
 
-        private bool get_sender_is_authorized (BusName sender) {
+        private bool get_sender_is_authorized (BusName sender) throws ParentalControlsError {
             if (bus_proxy == null) {
                 throw new ParentalControlsError.DBUS_CONNECTION_FAILED ("Error: connecting to org.freedesktop.DBus failed.");
             }
@@ -224,10 +229,15 @@ namespace PC.Daemon {
 
             var subject = Polkit.UnixProcess.new_for_owner ((int)pid, 0, (int)user);
 
-            var authority = Polkit.Authority.get_sync (null);
-            var auth_result = authority.check_authorization_sync (subject, Vars.PARENTAL_CONTROLS_ACTION_ID, null, Polkit.CheckAuthorizationFlags.NONE);
+            try {
+                var authority = Polkit.Authority.get_sync (null);
+                var auth_result = authority.check_authorization_sync (subject, Vars.PARENTAL_CONTROLS_ACTION_ID, null, Polkit.CheckAuthorizationFlags.NONE);
+                return auth_result.get_is_authorized ();     
+            } catch (Error e) {
+                warning (e.message);
+            }
 
-            return auth_result.get_is_authorized ();
+            return false;
         }
 
         private uint32 get_pid_from_sender (BusName sender) {

@@ -78,35 +78,20 @@ namespace PC.Daemon {
         }
 
         private TimeSpan get_difference_span (string estimated_time_str) {
-            int estimated_time = int.parse (estimated_time_str);
-
-            bool end_day = estimated_time == 2400 || estimated_time == 0;
-            if (end_day) {
-                estimated_time = 2359;
-            }
-
             int hour = int.parse (estimated_time_str.slice (0, 2));
             int minute = int.parse (estimated_time_str.substring (2));
 
+            if (hour == 24) {
+                hour = 0;
+            }
+
             var current_date = new DateTime.now_local ();
-            var estimated_date = current_date.add_full (0, 0, 0,
-                                                        hour - current_date.get_hour (),
-                                                        minute - current_date.get_minute (),
-                                                        0);
-            var span = estimated_date.difference (current_date);
-            if (end_day) {
-                span -= GLib.TimeSpan.MINUTE;
-            }
-
-            return span;
-        }
-
-        private int get_estimated_hours (int minutes) {
-            if (minutes >= MINUTE_INTERVAL) {
-                return minutes / MINUTE_INTERVAL;
-            }
-
-            return 0;
+            var estimated_date = current_date.add_full (0, 0,
+                                                    (hour < current_date.get_hour ()) ? 1 : 0,
+                                                    hour - current_date.get_hour (),
+                                                    minute - current_date.get_minute (),
+                                                    0);
+            return estimated_date.difference (current_date);
         }
 
         private void start_loop (int minutes) {

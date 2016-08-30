@@ -46,6 +46,7 @@ namespace PC.Daemon {
     public interface ISession : Object {
         public abstract bool active { owned get; }
         public abstract string name { owned get; }
+        public abstract string id { owned get; }
         public abstract void terminate () throws IOError;
     }
 }

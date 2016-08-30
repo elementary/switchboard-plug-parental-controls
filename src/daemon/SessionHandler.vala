@@ -26,7 +26,7 @@
         private Timer? timer;
 
         private UserConfig config;
-        private ISession session;
+        public ISession session;
         private Server server;
 
         private bool can_start = true;
@@ -35,7 +35,7 @@
             this.session = session;
             server = Server.get_default ();
 
-            config = UserConfig.get_for_username (session.name);
+            config = UserConfig.get_for_username (session.name, false);
             if (config == null || !config.get_active ()) {
                 can_start = false;
                 return;
@@ -47,9 +47,17 @@
             if (token != null) {
                 timer = new Timer (token);
                 timer.terminate.connect (() => {
-                    session.terminate ();
+                    try {
+                        session.terminate ();
+                    } catch (IOError e) {
+                        warning (e.message);
+                    }                    
                 });
             }            
+        }
+
+        public string get_id () {
+            return session.id;
         }
 
         public UserConfig get_config () {

@@ -44,8 +44,13 @@ namespace PC.PAM {
             }
 
             string contents;
-            FileUtils.get_contents (filename, out contents);
-            
+            try {
+                FileUtils.get_contents (filename, out contents);
+            } catch (FileError e) {
+                warning (e.message);
+                return;
+            }
+
             string config = Reader.get_config (contents, false);
 
             var builder = new StringBuilder (Vars.PAM_CONF_START);
@@ -73,7 +78,12 @@ namespace PC.PAM {
 
         public void remove_restriction_for_user (string username) {
             string contents;
-            FileUtils.get_contents (filename, out contents);
+            try {
+                FileUtils.get_contents (filename, out contents);
+            } catch (FileError e) {
+                warning (e.message);
+                return;
+            }
 
             string config = Reader.get_config (contents);
 
@@ -90,7 +100,11 @@ namespace PC.PAM {
                 }
             }
 
-            FileUtils.set_contents (filename, contents.replace (config, buffer));
+            try {
+                FileUtils.set_contents (filename, contents.replace (config, buffer));
+            } catch (FileError e) {
+                warning ("%s\n", e.message);
+            }
         }        
     }
 }

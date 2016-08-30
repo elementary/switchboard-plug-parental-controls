@@ -38,7 +38,7 @@
             }
 
             pwatcher = new ProcessWatcher ();
-            pwatcher.start ();
+            pwatcher.start.begin ();
         }
 
         public void start () {
@@ -49,14 +49,18 @@
             manager.session_new.connect (() => update_session ());
             manager.session_removed.connect (() => update_session ());
 
-            foreach (SeatStruct seat_s in manager.list_seats ()) {
-                signal_ids += conn.signal_subscribe (null,
-                                Vars.DBUS_PROPERTIES_IFACE,
-                                "PropertiesChanged",
-                                seat_s.object_path,
-                                null,
-                                0,
-                                () => update_session ());
+            try {
+                foreach (SeatStruct seat_s in manager.list_seats ()) {
+                    signal_ids += conn.signal_subscribe (null,
+                                    Vars.DBUS_PROPERTIES_IFACE,
+                                    "PropertiesChanged",
+                                    seat_s.object_path,
+                                    null,
+                                    0,
+                                    () => update_session ());
+                }
+            } catch (IOError e) {
+                warning (e.message);
             }
 
             update_session ();
@@ -87,9 +91,13 @@
         }
 
         private void update_session () {
+            var session = get_current_session ();
+            if (session.id == current_handler.get_id ()) {
+                return;
+            }
+
             stop_current_handler ();
 
-            var session = get_current_session ();
             if (session != null &&
                 session.name != null &&
                 !(session.name in Vars.DAEMON_IGNORED_USERS)) {

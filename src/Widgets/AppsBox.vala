@@ -22,8 +22,6 @@
 
 namespace PC.Widgets {
     public class AppsBox : Gtk.Grid {
-        private bool daemon_active = false;
-
         private List<AppEntry> entries;
         private Act.User user;
 
@@ -146,10 +144,6 @@ namespace PC.Widgets {
             load_existing.begin ();
             show_all ();
         }
-
-        public async bool get_active () {
-            return yield Utils.get_api ().get_user_daemon_active (user.get_user_name ());
-        } 
 
         public void set_active (bool active) {
             if (Utils.get_permission ().get_allowed ()) {

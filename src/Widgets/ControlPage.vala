@@ -66,6 +66,7 @@ namespace PC.Widgets {
             show_all ();
         }
 
+
         public void set_active (bool active) {
             apps_box.set_active (active);
             if (Utils.get_permission ().get_allowed ()) {
@@ -81,8 +82,14 @@ namespace PC.Widgets {
         }
 
         public async bool get_active () {
-            return yield apps_box.get_active ();
-        }
+            try {
+                return yield Utils.get_api ().get_user_daemon_active (user.get_user_name ());    
+            } catch (IOError e) {
+                warning (e.message);
+            }
+            
+            return false;
+        } 
 
         private void update_view_state () {
             bool allowed = Utils.get_permission ().get_allowed ();

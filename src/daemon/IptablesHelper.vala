@@ -65,12 +65,16 @@
 
         private string[] get_addresses_from_name (string name) {
             string[] address_list = {};
-            var resolver = GLib.Resolver.get_default ();
-            var addresses = resolver.lookup_by_name (name, null);
-            foreach (InetAddress address in addresses) {
-                if (address.get_family () == GLib.SocketFamily.IPV4) {
-                    address_list += address.to_string ();
+            var resolver = Resolver.get_default ();
+            try {
+                var addresses = resolver.lookup_by_name (name, null);
+                foreach (InetAddress address in addresses) {
+                    if (address.get_family () == SocketFamily.IPV4) {
+                        address_list += address.to_string ();
+                    }
                 }
+            } catch (Error e) {
+                warning (e.message);
             }
 
             return address_list;

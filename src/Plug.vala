@@ -35,6 +35,7 @@ namespace PC {
         private Act.UserManager usermanager;
 
         public MainBox () {
+            print ("");
             usermanager = Utils.get_usermanager ();
 
             stack = new Gtk.Stack ();

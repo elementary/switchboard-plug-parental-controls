@@ -20,7 +20,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
- namespace PC.Client {
+namespace PC.Client {
     public class Client : Gtk.Application {
         private Polkit.Permission? permission = null;
 
@@ -43,7 +43,7 @@
         }
 
         private void on_show_app_unavailable (string path) {
-            var app_lock_dialog = new AppLock.AppLockDialog ();
+            var app_lock_dialog = new AppUnavailableDialog ();
             app_lock_dialog.show_all ();
         }
 
@@ -64,29 +64,19 @@
                 warning ("%s\n", e.message);
             }
 
-            permission.notify["allowed"].connect (() => {
-                try {
-                    Utils.get_api ().end_app_authorization ();
-                    return;
-                } catch (IOError e) {
-                    warning ("%s\n", e.message);
-                }
+            ulong signal_id = 0;
+            signal_id = permission.notify["allowed"].connect (() => {
+                Utils.get_api ().end_app_authorization.begin ();
+                permission.disconnect (signal_id);
             });
 
             permission.acquire_async.begin ();
         }
 
         private void on_launch (string[] args) {
-            string[] _args = {};
-            for (int i = 0; i < args.length; i++) {
-                if (args[i].strip () != "") {
-                    _args[i] = args[i];
-                }
-            }
-
             try {
                 GLib.Process.spawn_async ("/",
-                                        _args,
+                                        args,
                                         Environ.get (),
                                         SpawnFlags.SEARCH_PATH | SpawnFlags.DO_NOT_REAP_CHILD,
                                         null,

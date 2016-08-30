@@ -142,7 +142,7 @@ namespace PC.Widgets {
                 block_urls += url_entry.get_url ();
             }
 
-            Utils.get_api ().set_user_daemon_block_urls (user.get_user_name (), block_urls);
+            Utils.get_api ().set_user_daemon_block_urls.begin (user.get_user_name (), block_urls);
         }
 
         private void on_entry_changed () {
