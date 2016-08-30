@@ -66,10 +66,9 @@ namespace PC.Widgets {
             show_all ();
         }
 
-
         public void set_active (bool active) {
-            apps_box.set_active (active);
             if (Utils.get_permission ().get_allowed ()) {
+                Utils.get_api ().set_user_daemon_active.begin (user.get_user_name (), active);
                 if (active) {
                     general_box.refresh ();
                     general_box.update_pam ();

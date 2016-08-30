@@ -145,12 +145,6 @@ namespace PC.Widgets {
             show_all ();
         }
 
-        public void set_active (bool active) {
-            if (Utils.get_permission ().get_allowed ()) {
-                Utils.get_api ().set_user_daemon_active.begin (user.get_user_name (), active);
-            }
-        }
-
         private void on_add_button_clicked () {
             apps_popover.show_all ();
         }
