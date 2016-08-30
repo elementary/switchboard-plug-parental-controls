@@ -9,7 +9,7 @@ set (EXEC_MONITOR_NAME pantheon-exec-monitor)
 
 vala_precompile (VALA_C ${DAEMON_EXEC_NAME}
     Daemon.vala
-    Core.vala
+    ProcessWatcher.vala
     Process.vala
     IptablesHelper.vala
     Timer.vala
