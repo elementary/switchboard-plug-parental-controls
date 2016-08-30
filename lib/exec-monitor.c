@@ -147,7 +147,6 @@ exec_monitor_start_internal (ExecMonitor *self)
 
     err = bind (iface->sk_nl, (struct sockaddr *)&my_nla, sizeof (my_nla));
     if (err == -1) {
-        printf ("error???\n");
         return;
     }
 
@@ -171,12 +170,10 @@ exec_monitor_start_internal (ExecMonitor *self)
     cn_hdr->len = sizeof (enum proc_cn_mcast_op);
 
     if (send (iface->sk_nl, nl_hdr, nl_hdr->nlmsg_len, 0) != nl_hdr->nlmsg_len) {
-        printf ("could not send????\n");
         return;
     }
 
     if (*mcop_msg == PROC_CN_MCAST_IGNORE) {
-        printf("ignored????\n");
         return;
     }
 
