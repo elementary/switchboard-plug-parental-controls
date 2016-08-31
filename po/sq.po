@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-30 21:16-0300\n"
-"PO-Revision-Date: 2016-06-23 16:12+0000\n"
+"PO-Revision-Date: 2016-08-29 23:25+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-08-01 05:41+0000\n"
-"X-Generator: Launchpad (build 18169)\n"
+"X-Launchpad-Export-Date: 2016-08-31 06:44+0000\n"
+"X-Generator: Launchpad (build 18179)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
 #. *
@@ -39,11 +39,12 @@ msgstr ""
 #. 
 #: ../src/Translation.vala:23
 msgid "Manage parental control settings"
-msgstr ""
+msgstr "Menaxho parametrat e kontrollit prindëror"
 
 #: ../src/Translation.vala:24
 msgid "Authentication is required to change parental control settings"
 msgstr ""
+"Nevojitet identifikimi për të ndryshuar parametrat e kontrollit prindëror"
 
 #: ../src/Widgets/AppChooser.vala:71
 msgid "Search Applications"
@@ -139,23 +140,24 @@ msgstr ""
 
 #: ../src/Widgets/InternetBox.vala:91
 msgid "Add URL"
-msgstr ""
+msgstr "Shto URL"
 
 #: ../src/Widgets/InternetBox.vala:100
 msgid "Add a new URL, for example: google.com"
-msgstr ""
+msgstr "Shto një URL të re, psh: google.com"
 
 #: ../src/Widgets/InternetBox.vala:101
 msgid "Invalid URL"
-msgstr ""
+msgstr "URL e pavlefshme"
 
 #: ../src/Plug.vala:72
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
+"Disa parametra kërkojnë të drejtat e administratorit për tu ndryshuar"
 
 #: ../src/Plug.vala:81
 msgid "No users to edit"
-msgstr "Asnjë përdorues për të ndryshuar"
+msgstr "S'ka përdorues për të ndryshuar"
 
 #: ../src/Plug.vala:81
 msgid ""
@@ -167,7 +169,7 @@ msgstr ""
 
 #: ../src/Plug.vala:84
 msgid "Configure User Accounts"
-msgstr ""
+msgstr "Konfiguro llogaritë e përdoruesit"
 
 #: ../src/Plug.vala:87
 msgid "Open Users settings"
@@ -175,7 +177,7 @@ msgstr ""
 
 #: ../src/Plug.vala:164
 msgid "Parental Control"
-msgstr ""
+msgstr "Kontrolli Prindëror"
 
 #: ../src/Plug.vala:165
 msgid "Configure time limits and restrict application usage"
@@ -189,18 +191,18 @@ msgstr ""
 #: ../src/client/Client.vala:129
 msgid "%ld hour"
 msgid_plural "%ld hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%ld orë"
+msgstr[1] "%ld orë"
 
 #: ../src/client/Client.vala:133
 msgid "%ld minute"
 msgid_plural "%ld minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%ld minutë"
+msgstr[1] "%ld minuta"
 
 #: ../src/client/Client.vala:136
 msgid "This computer will lock after %s %s. %s"
-msgstr ""
+msgstr "Ky kompjuter do të bllokohet pas %s %s. %s"
 
 #: ../src/client/Client.vala:138
 msgid "Time left"
