@@ -22,12 +22,6 @@
 
 namespace PC.Widgets {
     public class AppsBox : Gtk.Grid {
-        public signal void update_key_file ();
-
-        public string[] targets = {};
-        public bool admin = false;
-        public bool daemon_active = false;
-
         private List<AppEntry> entries;
         private Act.User user;
 
@@ -36,7 +30,6 @@ namespace PC.Widgets {
         private Gtk.Switch admin_switch_btn;
         private Gtk.Button remove_button;
         private Gtk.Button clear_button;
-
 
         protected class AppEntry : Gtk.ListBoxRow {
             public signal void deleted ();
@@ -101,7 +94,7 @@ namespace PC.Widgets {
             header_label.get_style_context ().add_class ("h4");
 
             list_box = new Gtk.ListBox ();
-            list_box.row_selected.connect (on_changed);
+            list_box.row_selected.connect (update_sensitivity);
             scrolled.add (list_box);
 
             var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.MENU);
@@ -142,23 +135,14 @@ namespace PC.Widgets {
 
             admin_switch_btn = new Gtk.Switch ();
             admin_switch_btn.halign = Gtk.Align.START;
-            admin_switch_btn.notify["active"].connect (on_changed);
+            admin_switch_btn.notify["active"].connect (update_admin);
 
             attach (frame, 0, 0, 2, 1);
             attach (admin_label, 0, 1, 1, 1);
             attach (admin_switch_btn, 1, 1, 1, 1);
 
-            load_existing ();
+            load_existing.begin ();
             show_all ();
-        }
-
-        public bool get_active () {
-            return daemon_active;
-        } 
-
-        public void set_active (bool active) {
-            daemon_active = active;
-            on_changed ();
         }
 
         private void on_add_button_clicked () {
@@ -180,15 +164,17 @@ namespace PC.Widgets {
         }
 
         private void load_info (AppInfo info) {
-            if (!get_info_loaded (info)) {
-                var row = new AppEntry (info);
-                row.deleted.connect (on_deleted);
-
-                entries.append (row);
-                list_box.add (row);
-                list_box.show_all ();
-                on_changed ();
+            if (get_info_loaded (info)) {
+                return;
             }
+
+            var row = new AppEntry (info);
+            row.deleted.connect (on_deleted);
+
+            entries.append (row);
+            list_box.add (row);
+            list_box.show_all ();
+            update_targets ();
         }
 
         private bool get_info_loaded (AppInfo info) {
@@ -204,39 +190,50 @@ namespace PC.Widgets {
         private void on_deleted (AppEntry row) {
             entries.remove (row);
             row.destroy ();
-            on_changed ();
+            update_targets ();
         }
 
-        private void on_changed () {
-            remove_button.sensitive = (list_box.get_selected_row () != null);
-            clear_button.sensitive = (entries.length () > 0);
+        private void update_admin () {
+            update_sensitivity ();
 
-            string[] _targets = {};
-            foreach (var entry in entries) {
-                _targets += Environment.find_program_in_path (entry.get_executable ());
+            if (Utils.get_permission ().get_allowed ()) {
+                Utils.get_api ().set_user_daemon_admin.begin (user.get_user_name (), admin_switch_btn.get_active ());
+            }
+        }
+
+        private void update_targets () {
+            update_sensitivity ();
+
+            if (!Utils.get_permission ().get_allowed ()) {
+                return;
             }
 
-            admin = admin_switch_btn.get_active ();
-            targets = _targets;
-            update_key_file ();
+            string[] targets = {};
+            foreach (var entry in entries) {
+                targets += Environment.find_program_in_path (entry.get_executable ());
+            }            
+            
+            Utils.get_api ().set_user_daemon_targets.begin (user.get_user_name (), targets); 
         }
 
-        private void load_existing () {
-            var key_file = new KeyFile ();
+        private void update_sensitivity () {
+            remove_button.sensitive = (list_box.get_selected_row () != null);
+            clear_button.sensitive = (entries.length () > 0);
+        }
+
+        private async void load_existing () {
             try {
-                key_file.load_from_file (Utils.build_daemon_conf_path (user), 0);
-                string[] _targets = key_file.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_TARGETS);
-                daemon_active = key_file.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ACTIVE);
+                string[] targets = yield Utils.get_api ().get_user_daemon_targets (user.get_user_name ());
+                bool admin = yield Utils.get_api ().get_user_daemon_admin (user.get_user_name ());
+                admin_switch_btn.set_active (admin);
+
                 foreach (var info in AppInfo.get_all ()) {
-                    if (info.should_show ()
-                        && Environment.find_program_in_path (info.get_executable ()) in _targets) {
+                    if (info.should_show () && Environment.find_program_in_path (info.get_executable ()) in targets) {
                         load_info (info);
                     }
                 }
-            } catch (KeyFileError e) {
-                warning ("%s\n", e.message);
-            } catch (FileError e) {
-                warning ("%s\n", e.message);
+            } catch (Error e) {
+                warning (e.message);
             }
         }
     }

@@ -8,11 +8,13 @@ set (CLIENT_EXEC_NAME pantheon-parental-controls-client)
 
 vala_precompile (VALA_C ${CLIENT_EXEC_NAME}
     Client.vala
-    AppLockDialog.vala
+    AppUnavailableDialog.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Vars.vala
+    ${CMAKE_SOURCE_DIR}/src/shared/Utils.vala
 PACKAGES
     posix
     polkit-gobject-1
+    accountsservice
     gio-2.0
     gtk+-3.0
 OPTIONS

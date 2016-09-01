@@ -110,12 +110,12 @@ exec_monitor_stop (ExecMonitor *self)
 
     iface = EXEC_MONITOR_GET_IFACE (self);
     iface->monitor_events = FALSE;
+    close (iface->sk_nl);
 }
 
 void
 exec_monitor_start_internal (ExecMonitor *self)
 {
-    int sk_nl;
     int err;
     struct sockaddr_nl my_nla, kern_nla, from_nla;
     socklen_t from_nla_len;
@@ -132,8 +132,8 @@ exec_monitor_start_internal (ExecMonitor *self)
     ExecMonitorInterface *iface;
     iface = EXEC_MONITOR_GET_IFACE (self);
 
-    sk_nl = socket (PF_NETLINK, SOCK_DGRAM, NETLINK_CONNECTOR);
-    if (sk_nl == -1) {
+    iface->sk_nl = socket (PF_NETLINK, SOCK_DGRAM, NETLINK_CONNECTOR);
+    if (iface->sk_nl == -1) {
         return;
     }
 
@@ -145,7 +145,7 @@ exec_monitor_start_internal (ExecMonitor *self)
     kern_nla.nl_groups = CN_IDX_PROC;
     kern_nla.nl_pid = 1;
 
-    err = bind (sk_nl, (struct sockaddr *)&my_nla, sizeof (my_nla));
+    err = bind (iface->sk_nl, (struct sockaddr *)&my_nla, sizeof (my_nla));
     if (err == -1) {
         return;
     }
@@ -169,7 +169,7 @@ exec_monitor_start_internal (ExecMonitor *self)
     cn_hdr->ack = 0;
     cn_hdr->len = sizeof (enum proc_cn_mcast_op);
 
-    if (send (sk_nl, nl_hdr, nl_hdr->nlmsg_len, 0) != nl_hdr->nlmsg_len) {
+    if (send (iface->sk_nl, nl_hdr, nl_hdr->nlmsg_len, 0) != nl_hdr->nlmsg_len) {
         return;
     }
 
@@ -182,7 +182,7 @@ exec_monitor_start_internal (ExecMonitor *self)
         struct nlmsghdr *nlh = (struct nlmsghdr*)buff;
         memcpy (&from_nla, &kern_nla, sizeof (from_nla));
 
-        recv_len = recvfrom (sk_nl, buff, BUFF_SIZE, 0,
+        recv_len = recvfrom (iface->sk_nl, buff, BUFF_SIZE, 0,
                 (struct sockaddr*)&from_nla, &from_nla_len);
         if (from_nla.nl_pid != 0) {
             continue;

@@ -20,66 +20,64 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
- namespace PC {
+ namespace PC.Daemon {
     public class IptablesHelper : Object {
-        public bool valid = false;
-
         private const string IPTABLES_EXEC = "iptables";
-        private const string HOST_EXEC = "host";
-        private const int ADDRESS_INDEX = 3;
         private const int DPORT = 80;
 
-        private string[] urls;
+        private UserConfig config;
+        private string[] current_urls;
+        private ulong changed_signal_id;
 
-        public IptablesHelper (string[] urls) {
-            this.urls = urls;
-            valid = Environment.find_program_in_path (IPTABLES_EXEC) != null &&
-                    Environment.find_program_in_path (HOST_EXEC) != null &&
-                    urls.length > 0;
+        public static bool get_can_start () {
+            return Environment.find_program_in_path (IPTABLES_EXEC) != null;
         }
 
-        public void add_rules () {
-            foreach (string url in urls) {
-                string[] addresses = get_addresses_from_url (url);
+        public IptablesHelper (UserConfig config) {
+            this.config = config;
+        }
+
+        public void start () {
+            this.current_urls = config.get_block_urls ();
+            add_rules ();
+
+            changed_signal_id = config.changed.connect (() => {
+                remove_rules ();
+
+                current_urls = config.get_block_urls ();
+                add_rules ();
+            });
+        }
+
+        public void stop () {
+            remove_rules ();
+            disconnect (changed_signal_id);
+        }
+
+        private void add_rules () {
+            foreach (string url in current_urls) {
+                string[] addresses = get_addresses_from_name (url);
                 foreach (string address in addresses) {
                     process_adress (address, "-A");
                 }
             }        
         }
 
-        private string[] get_addresses_from_url (string url) {
-            string[] result = {};
-
-            string output;
-            int status;
-
+        private string[] get_addresses_from_name (string name) {
+            string[] address_list = {};
+            var resolver = Resolver.get_default ();
             try {
-                GLib.Process.spawn_sync ("/",
-                                    { HOST_EXEC, url },
-                                    Environ.get (),
-                                    SpawnFlags.SEARCH_PATH,
-                                    null,
-                                    out output,
-                                    null,
-                                    out status);
-            } catch (SpawnError e) {
-                warning ("%s\n", e.message);
-            }
-
-            if (status != 0) {
-                return result;
-            }
-
-            foreach (string line in output.split ("\n")) {
-                if (line.contains ("has address")) {
-                    string[] elements = line.split (" ");
-                    if (elements.length >= 3) {
-                        result += elements[ADDRESS_INDEX];
+                var addresses = resolver.lookup_by_name (name, null);
+                foreach (InetAddress address in addresses) {
+                    if (address.get_family () == SocketFamily.IPV4) {
+                        address_list += address.to_string ();
                     }
                 }
+            } catch (Error e) {
+                warning (e.message);
             }
 
-            return result;
+            return address_list;
         }
 
         private void process_adress (string address, string option) {
@@ -97,9 +95,9 @@
             }
         }
 
-        public void reset () {
-            foreach (string url in urls) {
-                string[] addresses = get_addresses_from_url (url);
+        private void remove_rules () {
+            foreach (string url in current_urls) {
+                string[] addresses = get_addresses_from_name (url);
                 foreach (string address in addresses) {
                     process_adress (address, "-D");
                 }

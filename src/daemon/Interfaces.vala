@@ -19,38 +19,34 @@
  *
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
+namespace PC.Daemon {
+    public struct SessionStruct {
+        string name;
+        uint32 uid;
+        string user;
+        string seat;
+        GLib.ObjectPath object_path;
+    }
 
-public struct SessionStruct {
-    string name;
-    uint32 uid;
-    string user;
-    string seat;
-    GLib.ObjectPath object_path;
-}
+    public struct SeatStruct {
+        string seat_id;
+        GLib.ObjectPath object_path;
+    }
 
-public struct ActiveSessionStruct {
-    string session_id;
-    GLib.ObjectPath object_path;
-}
+    [DBus (name = "org.freedesktop.login1.Manager")]
+    public interface IManager : Object {
+        public abstract SessionStruct[] list_sessions () throws IOError;
+        public abstract SeatStruct[] list_seats () throws IOError;
+        public abstract GLib.ObjectPath get_seat (string seat) throws IOError;
+        public signal void session_new (string session, GLib.ObjectPath object_path);
+        public signal void session_removed (string session, GLib.ObjectPath object_path);
+    }
 
-[DBus (name = "org.freedesktop.login1.Manager")]
-public interface IManager : Object {
-    public abstract SessionStruct[] list_sessions () throws IOError;
-    public abstract GLib.ObjectPath get_seat (string seat) throws IOError;
-    public signal void session_new (string user, GLib.ObjectPath object_path);
-    public signal void session_removed (string user, GLib.ObjectPath object_path);
-}
-
-[DBus (name = "org.freedesktop.login1.Session")]
-public interface ISession : Object {
-    public abstract string name { owned get; }
-
-    public abstract void lock () throws IOError;
-
-    public signal void unlock ();
-}
-
-[DBus (name = "org.freedesktop.login1.Seat")]
-public interface ISeat : Object {
-    public abstract ActiveSessionStruct active_session { owned get; }
+    [DBus (name = "org.freedesktop.login1.Session")]
+    public interface ISession : Object {
+        public abstract bool active { owned get; }
+        public abstract string name { owned get; }
+        public abstract string id { owned get; }
+        public abstract void terminate () throws IOError;
+    }
 }

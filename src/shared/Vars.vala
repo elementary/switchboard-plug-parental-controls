@@ -41,7 +41,5 @@ namespace PC.Vars {
     public const string PAM_CONF_START = "## PANTHEON_PARENTAL_CONTROLS_START";
     public const string PAM_CONF_END = "## PANTHEON_PARENTAL_CONTROLS_END";
     public const string PAM_CONF_REGEX = PAM_CONF_START + "|" + PAM_CONF_END;
-    public const string ALL_ID = "all";
-    public const string WEEKDAYS_ID = "weekdays";
-    public const string WEEKENDS_ID = "weekends";
+    public const string PAM_TIME_CONF_PATH = "/etc/security/time.conf";
 }

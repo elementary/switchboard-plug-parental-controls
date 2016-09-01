@@ -64,7 +64,10 @@ namespace PC.Widgets {
             grid.attach (username_label, 1, 1, 1, 1); 
             grid.attach (master_switch, 2, 0, 1, 2);  
 
-            master_switch.bind_property ("active", page, "active", BindingFlags.DEFAULT);
+            master_switch.notify["active"].connect (() => {
+                page.set_active (master_switch.get_active ());
+            });
+
             master_switch.bind_property ("active", page.stack, "sensitive", BindingFlags.SYNC_CREATE);
 
             Utils.get_permission ().notify["allowed"].connect (update_view);
@@ -75,7 +78,10 @@ namespace PC.Widgets {
         }
 
         public void update_view () {
-            master_switch.active = page.active;
+            page.get_active.begin ((obj, res) => {
+                master_switch.active = page.get_active.end (res);
+            });
+
             master_switch.sensitive = Utils.get_permission ().get_allowed ();
 
             try {

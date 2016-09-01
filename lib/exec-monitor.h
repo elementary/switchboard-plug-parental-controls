@@ -42,6 +42,7 @@ struct _ExecMonitorIface
 {
   GTypeInterface parent_iface;
   gboolean monitor_events;
+  int sk_nl;
 
   void (* handle_pid)   (ExecMonitor *exec_monitor,
                         gint pid);

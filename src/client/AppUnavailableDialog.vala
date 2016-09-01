@@ -20,9 +20,9 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace AppLock {
-    public class AppLockDialog : Gtk.MessageDialog {
-        public AppLockDialog () {
+namespace PC.Client {
+    public class AppUnavailableDialog : Gtk.MessageDialog {
+        public AppUnavailableDialog () {
             deletable = false;
             text = _("You cannot run this application");
             secondary_text = _("You are not permitted to run this application.");

@@ -32,13 +32,13 @@ namespace PC.Widgets {
             spacing = 12;
 
             picker_from = new Granite.Widgets.TimePicker ();
+            picker_from.time_changed.connect (() => changed ());
+
             picker_to = new Granite.Widgets.TimePicker ();
+            picker_to.time_changed.connect (() => changed ());
 
             var label = new Gtk.Label (title);
             label.get_style_context ().add_class ("h4");
-
-            picker_from.time_changed.connect (_changed);
-            picker_to.time_changed.connect (_changed);
 
             add (label);
             add (new Gtk.Label (_("From:")));
@@ -59,25 +59,19 @@ namespace PC.Widgets {
         }
 
         public void set_from (string from) {
-            char[] data = from.to_utf8 ();
-            string hours = data[0].to_string () + data[1].to_string ();
-            string minutes = data[2].to_string () + data[3].to_string ();
+            string hours = from.slice (0, 2);
+            string minutes = from.substring (2);
 
             var time = new DateTime.local (new DateTime.now_local ().get_year (), 1, 1, int.parse (hours), int.parse (minutes), 0);
             picker_from.time = time;
         }
 
         public void set_to (string to) {
-            char[] data = to.to_utf8 ();
-            string hours = data[0].to_string () + data[1].to_string ();
-            string minutes = data[2].to_string () + data[3].to_string ();
+            string hours = to.slice (0, 2);
+            string minutes = to.substring (2);
 
             var time = new DateTime.local (new DateTime.now_local ().get_year (), 1, 1, int.parse (hours), int.parse (minutes), 0);
             picker_to.time = time;
-        }
-
-        private void _changed () {
-            changed ();
         }
 
         private string format_time_string (int val) {

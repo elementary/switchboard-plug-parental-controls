@@ -50,8 +50,6 @@ namespace PC.Widgets {
             weekday_box.changed.connect (update_pam);
             weekend_box.changed.connect (update_pam);
 
-            monitor_updates ();
-            update ();
             load_restrictions ();
         }
 
@@ -89,10 +87,10 @@ namespace PC.Widgets {
 
             limit_combobox = new Gtk.ComboBoxText ();
             limit_combobox.hexpand = true;
-            limit_combobox.append (Vars.ALL_ID, _("On weekdays and weekends"));
-            limit_combobox.append (Vars.WEEKDAYS_ID, _("Only on weekdays"));
-            limit_combobox.append (Vars.WEEKENDS_ID, _("Only on weekends"));
-            limit_combobox.active_id = "all";
+            limit_combobox.append (PAM.DayType.WEEKDAY.to_string () + PAM.DayType.WEEKEND.to_string (), _("On weekdays and weekends"));
+            limit_combobox.append (PAM.DayType.WEEKDAY.to_string (), _("Only on weekdays"));
+            limit_combobox.append (PAM.DayType.WEEKEND.to_string (), _("Only on weekends"));
+            limit_combobox.active = 0;
 
             frame = new Gtk.Frame (null);
             frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
@@ -134,104 +132,54 @@ namespace PC.Widgets {
         }
 
         private void load_restrictions () {
-            var restricts = PAMControl.get_all_restrictions ();
-            foreach (var restrict in restricts) {
-                if (restrict.user == user.get_user_name ()) {
-                    limit_switch.active = true;
+            var token = PAM.Reader.get_token_for_user (Vars.PAM_TIME_CONF_PATH, user.get_user_name ());
+            if (token == null) {
+                return;
+            }
 
-                    limit_combobox.active_id = restrict.day_id;
-                    switch (restrict.day_id) {
-                        case Vars.ALL_ID:
-                            string from_weekday = restrict.weekday_hours.split ("-")[0];
-                            string to_weekday = restrict.weekday_hours.split ("-")[1];
-                            string from_weekend = restrict.weekend_hours.split ("-")[0];
-                            string to_weekend = restrict.weekend_hours.split ("-")[1];
+            limit_switch.active = true;
 
-                            weekday_box.set_from (from_weekday);
-                            weekday_box.set_to (to_weekday);
-
-                            weekend_box.set_from (from_weekend);
-                            weekend_box.set_to (to_weekend);
-                            break;
-                        case Vars.WEEKDAYS_ID:
-                            weekday_box.set_from (restrict.from);
-                            weekday_box.set_to (restrict.to);
-                            break;
-                        case Vars.WEEKENDS_ID:
-                            weekend_box.set_from (restrict.from);
-                            weekend_box.set_to (restrict.to);
-                            break;
-                        default:
-                            break;
-                    }
+            string[] ids = {};
+            foreach (PAM.TimeInfo info in token.get_times_info ()) {
+                ids += info.day_type.to_string ();
+                switch (info.day_type) {
+                    case PAM.DayType.WEEKDAY:
+                        weekday_box.set_from (info.from);
+                        weekday_box.set_to (info.to);
+                        break;
+                    case PAM.DayType.WEEKEND:
+                        weekend_box.set_from (info.from);
+                        weekend_box.set_to (info.to);
+                        break;
+                    default:
+                        break;
                 }
             }
+
+            if (ids.length > 0) {
+                limit_combobox.active_id = string.joinv ("|", ids);    
+            }
         }
 
-        private void update_pam () {
-            string restrict = "";
+        public void update_pam () {
+            if (!Utils.get_permission ().get_allowed ()) {
+                return;
+            }
+
+            string[] times = {};
+            string[] users = { user.get_user_name () };
             string id = limit_combobox.get_active_id ();
-            switch (id) {
-                case Vars.ALL_ID:
-                    restrict = generate_pam_conf_restriction (id, weekday_box.get_from (), weekday_box.get_to ());
-                    restrict += "|" + weekend_box.get_from () + "-" + weekend_box.get_to ();
-                    break;
-                case Vars.WEEKDAYS_ID:
-                    restrict = generate_pam_conf_restriction (id, weekday_box.get_from (), weekday_box.get_to ());
-                    break;
-                case Vars.WEEKENDS_ID:
-                    restrict = generate_pam_conf_restriction (id, weekend_box.get_from (), weekend_box.get_to ());
-                    break;
+
+            if (PAM.DayType.WEEKDAY.to_string () in id) {
+                times += PAM.DayType.WEEKDAY.to_string () + weekday_box.get_from () + "-" + weekday_box.get_to ();
             }
 
-            PAMControl.try_add_restrict_line (user.get_user_name (), restrict);
-        }
-
-        private string generate_pam_conf_restriction (string id, string from, string to) {
-            string retval = "*;*;";
-            string days = "";
-            switch (id) {
-                case Vars.ALL_ID:
-                    days = "Al";
-                    break;
-                case Vars.WEEKDAYS_ID:
-                    days = "Wk";
-                    break;
-                case Vars.WEEKENDS_ID:
-                    days = "Wd";
-                    break;
+            if (PAM.DayType.WEEKEND.to_string () in id) {
+                times += PAM.DayType.WEEKEND.to_string () + weekend_box.get_from () + "-" + weekend_box.get_to ();
             }
 
-            retval += user.get_user_name () + ";" + days + from + "-" + to;
-            return retval;
-        }
-
-        private void monitor_updates () {
-            try {
-                var monitor = File.new_for_path (plank_conf_file_path).monitor_file (FileMonitorFlags.NONE);
-                monitor.changed.connect (update);
-            } catch (IOError e) {
-                warning ("%s\n", e.message);
-            }
-        }
-
-        private void update () {
-            var key_file = new KeyFile ();
-            try {
-                key_file.load_from_file (plank_conf_file_path, KeyFileFlags.NONE);
-                dock_btn.active = !key_file.get_boolean (Vars.PLANK_CONF_GROUP, Vars.PLANK_CONF_LOCK_ITEMS_KEY);
-            } catch (FileError e) {
-                dock_btn.active = true;
-                warning ("%s\n", e.message);
-            } catch (Error e) {
-                dock_btn.active = true;
-                warning ("%s\n", e.message);
-            }
-
-            /* TODO: Get denied users for printing configuration */
-
-            /* For now, we assume that printing is enabled */
-            print_btn.active = true;
+            string input = PAM.Token.construct_pam_restriction_simple (users, times);
+            Utils.get_api ().add_restriction_for_user.begin (input, true);
         }
 
         private void on_dock_btn_activate () {
@@ -240,7 +188,7 @@ namespace PC.Widgets {
 
         public void set_lock_dock_active (bool active) {
             if (Utils.get_permission ().get_allowed ()) {
-                Utils.call_cli ({"--user", user.get_user_name (), "--lock-dock", active.to_string ()});
+                Utils.get_api ().lock_dock_icons_for_user.begin (user.get_user_name (), active);
             }
         }
 
@@ -272,25 +220,23 @@ namespace PC.Widgets {
         private void on_limit_switch_changed () {
             if (limit_switch.get_active ()) {
                 update_pam ();
-            } else {
-                PAMControl.try_remove_user_restrict (user.get_user_name ());
+            } else if (Utils.get_permission ().get_allowed ()) {
+                Utils.get_api ().remove_restriction_for_user.begin (user.get_user_name ());
             }
         }
 
         private void on_limit_combobox_changed () {
-            switch (limit_combobox.get_active_id ()) {
-                case Vars.ALL_ID:
-                    weekday_box.sensitive = true;
-                    weekend_box.sensitive = true;
-                    break;
-                case Vars.WEEKDAYS_ID:
-                    weekday_box.sensitive = true;
-                    weekend_box.sensitive = false;      
-                    break;
-                case Vars.WEEKENDS_ID:
-                    weekday_box.sensitive = false;
-                    weekend_box.sensitive = true;
-                    break;                                
+            string id = limit_combobox.get_active_id ();
+
+            if (PAM.DayType.WEEKDAY.to_string () in id && PAM.DayType.WEEKEND.to_string () in id) {
+                weekday_box.sensitive = true;
+                weekend_box.sensitive = true;
+            } else if (PAM.DayType.WEEKDAY.to_string () in id) {
+                weekday_box.sensitive = true;
+                weekend_box.sensitive = false;
+            } else if (PAM.DayType.WEEKEND.to_string () in id) {
+                weekday_box.sensitive = false;
+                weekend_box.sensitive = true;
             }
 
             update_pam ();

@@ -45,22 +45,16 @@ namespace PC.Daemon {
 
         public static void on_exit (int signum) {
             if (session_manager != null) {
-                session_manager.current_handler.stop ();
-                session_manager.current_handler.unref ();
+                session_manager.stop ();
             }
 
             terminate ();
         }
 
         public override void activate () {
-            loop = new MainLoop ();
-
-            Bus.own_name (BusType.SYSTEM, Vars.PARENTAL_CONTROLS_IFACE, BusNameOwnerFlags.REPLACE,
-                          on_bus_aquired,
-                          () => {},
-                          on_bus_lost);
             Utils.get_usermanager ().notify["is-loaded"].connect (on_usermanager_loaded);
-
+            
+            loop = new MainLoop ();
             loop.run ();
         }
 
@@ -68,7 +62,7 @@ namespace PC.Daemon {
             warning ("Could not acquire name: %s\n", name);
         }
 
-        private void on_bus_aquired (DBusConnection connection) {
+        private void on_bus_acquired (DBusConnection connection) {
             try {
                 connection.register_object (Vars.PARENTAL_CONTROLS_OBJECT_PATH, Server.get_default ());
             } catch (IOError e) {
@@ -80,6 +74,11 @@ namespace PC.Daemon {
             if (!Utils.get_usermanager ().is_loaded) {
                 return;
             }
+
+            Bus.own_name (BusType.SYSTEM, Vars.PARENTAL_CONTROLS_IFACE, BusNameOwnerFlags.REPLACE,
+                          on_bus_acquired,
+                          () => {},
+                          on_bus_lost);
 
             session_manager = new SessionManager ();
             session_manager.start ();

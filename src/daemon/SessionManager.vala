@@ -22,10 +22,12 @@
 
  namespace PC.Daemon {
     public class SessionManager : Object {
-        public SessionHandler? current_handler = null;
-        
+        private SessionHandler? current_handler = null;
         private IManager? manager = null;
         private DBusConnection? conn = null;
+        private ProcessWatcher pwatcher;
+
+        private uint[] signal_ids;
 
         public SessionManager () {
             try {
@@ -34,6 +36,9 @@
             } catch (IOError e) {
                 warning ("%s\n", e.message);
             }
+
+            pwatcher = new ProcessWatcher ();
+            pwatcher.start.begin ();
         }
 
         public void start () {
@@ -44,22 +49,39 @@
             manager.session_new.connect (() => update_session ());
             manager.session_removed.connect (() => update_session ());
 
-            conn.signal_subscribe (null,
-                                Vars.DBUS_PROPERTIES_IFACE,
-                                "PropertiesChanged",
-                                get_current_seat_path (),
-                                null,
-                                0,
-                                () => update_session ());
+            try {
+                foreach (SeatStruct seat_s in manager.list_seats ()) {
+                    signal_ids += conn.signal_subscribe (null,
+                                    Vars.DBUS_PROPERTIES_IFACE,
+                                    "PropertiesChanged",
+                                    seat_s.object_path,
+                                    null,
+                                    0,
+                                    () => update_session ());
+                }
+            } catch (IOError e) {
+                warning (e.message);
+            }
+
             update_session ();
+        }
+
+        public void stop () {
+            foreach (uint signal_id in signal_ids) {
+                conn.signal_unsubscribe (signal_id);
+            }
+
+            stop_current_handler ();
         }
 
         private ISession? get_current_session () {
             try {
-                string? seat_path = get_current_seat_path ();
-                if (seat_path != null) {
-                    ISeat? seat = Bus.get_proxy_sync (BusType.SYSTEM, Vars.LOGIN_IFACE, seat_path);
-                    return Bus.get_proxy_sync (BusType.SYSTEM, Vars.LOGIN_IFACE, seat.active_session.object_path);
+                var structs = manager.list_sessions ();
+                foreach (SessionStruct session_s in structs) {
+                    ISession? session = Bus.get_proxy_sync (BusType.SYSTEM, Vars.LOGIN_IFACE, session_s.object_path);
+                    if (session != null && session.active) {
+                        return session;
+                    }
                 }
             } catch (IOError e) {
                 warning ("%s\n", e.message);
@@ -68,37 +90,30 @@
             return null;         
         }
 
-        private string? get_current_seat_path () {
-            try {
-                string seat_id = "seat0";
-                string? seat_variable = Environment.get_variable ("XDG_SEAT");
-                if (seat_variable != null && seat_variable.has_prefix ("seat")) {
-                    seat_id = seat_variable;
-                }
-
-                return manager.get_seat (seat_id);                
-            } catch (Error e) {
-                warning ("%s\n", e.message);
+        private void update_session () {
+            var session = get_current_session ();
+            if (session.id == current_handler.get_id ()) {
+                return;
             }
 
-            return null;
+            stop_current_handler ();
+
+            if (session != null &&
+                session.name != null &&
+                !(session.name in Vars.DAEMON_IGNORED_USERS)) {
+                current_handler = new SessionHandler (session);
+                current_handler.start ();
+                pwatcher.set_config (current_handler.get_config ());
+            }
         }
 
-        private void update_session () {
+        private void stop_current_handler () {
             if (current_handler != null) {
                 current_handler.stop ();
-                current_handler.unref ();
                 current_handler = null;
             }
 
-            var current_session = get_current_session ();
-            if (current_session != null &&
-                current_session.name != null &&
-                current_session.name.strip () != "" &&
-                !(current_session.name in Vars.DAEMON_IGNORED_USERS)) {
-                current_handler = new SessionHandler (current_session);
-                current_handler.start ();
-            }
+            pwatcher.set_config (null);
         }
     }
 }
