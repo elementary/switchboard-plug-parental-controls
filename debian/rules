@@ -10,7 +10,13 @@
 #export DH_VERBOSE=1
 
 %:
-	dh $@ 
+	dh $@ --with systemd
+
+override_dh_systemd_enable:
+	dh_systemd_enable -ppantheon-parental-controls
+
+override_dh_systemd_start:
+	dh_systemd_start -ppantheon-parental-controls
 
 override_dh_strip:
 	dh_strip --dbg-package=switchboard-plug-parental-controls-dbg
