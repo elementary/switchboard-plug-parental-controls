@@ -25,7 +25,7 @@ namespace PC.PAM {
         private string filename;
 
         public static Writer new_for_time () {
-            return new Writer (Vars.PAM_TIME_CONF_PATH);
+            return new Writer (Constants.PAM_TIME_CONF_PATH);
         }
 
         public Writer (string filename) {
@@ -53,7 +53,7 @@ namespace PC.PAM {
 
             string config = Reader.get_config (contents, false);
 
-            var builder = new StringBuilder (Vars.PAM_CONF_START);
+            var builder = new StringBuilder (Constants.PAM_CONF_START);
             if (config != "") {
                 builder.append ("\n");
                 builder.append (Utils.remove_comments (config));
@@ -63,7 +63,7 @@ namespace PC.PAM {
 
             builder.append (input);
             builder.append ("\n");
-            builder.append (Vars.PAM_CONF_END);
+            builder.append (Constants.PAM_CONF_END);
 
             try {
                 if (config != "") {

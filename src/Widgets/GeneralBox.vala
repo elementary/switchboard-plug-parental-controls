@@ -36,7 +36,7 @@ namespace PC.Widgets {
 
         public GeneralBox (Act.User user) {
             this.user = user;
-            plank_conf_file_path = Path.build_filename (user.get_home_dir (), Vars.PLANK_CONF_DIR);
+            plank_conf_file_path = Path.build_filename (user.get_home_dir (), Constants.PLANK_CONF_DIR);
 
             dock_btn.notify["active"].connect (on_dock_btn_activate);
             print_btn.notify["active"].connect (on_print_conf_activate);
@@ -132,7 +132,7 @@ namespace PC.Widgets {
         }
 
         private void load_restrictions () {
-            var token = PAM.Reader.get_token_for_user (Vars.PAM_TIME_CONF_PATH, user.get_user_name ());
+            var token = PAM.Reader.get_token_for_user (Constants.PAM_TIME_CONF_PATH, user.get_user_name ());
             if (token == null) {
                 return;
             }
@@ -200,7 +200,7 @@ namespace PC.Widgets {
             string[] users = { user.get_user_name () };
 
             try {
-                CupsPkHelper? helper = Bus.get_proxy_sync (BusType.SYSTEM, Vars.CUPS_PK_HELPER_IFACE, "/");
+                CupsPkHelper? helper = Bus.get_proxy_sync (BusType.SYSTEM, Constants.CUPS_PK_HELPER_IFACE, "/");
                 if (helper == null) {
                     return;
                 }

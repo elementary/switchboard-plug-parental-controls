@@ -60,6 +60,8 @@ namespace PC.Daemon {
             }
 
             UserConfig.init ();
+
+            config_changed.connect (on_config_changed);
         }
 
         [DBus (visible = false)]
@@ -69,7 +71,7 @@ namespace PC.Daemon {
         public signal void launch (string[] args);
         public signal void show_app_unavailable (string path);
         public signal void show_timeout (int hours, int minutes);
-        public signal void user_config_changed (string username);
+        public signal void config_changed ();
 
         public void end_app_authorization (BusName sender) {
             uint32 pid = get_pid_from_sender (sender);
@@ -188,6 +190,13 @@ namespace PC.Daemon {
             return config.get_admin ();
         }
 
+        private void on_config_changed () {
+            var current_handler = SessionManager.get_default ().current_handler;
+            if (current_handler != null) {
+                current_handler.update ();
+            }
+        }
+
         private void ensure_pam_lightdm_enabled () {
             string path = "/etc/pam.d/lightdm";
             
@@ -231,7 +240,7 @@ namespace PC.Daemon {
 
             try {
                 var authority = Polkit.Authority.get_sync (null);
-                var auth_result = authority.check_authorization_sync (subject, Vars.PARENTAL_CONTROLS_ACTION_ID, null, Polkit.CheckAuthorizationFlags.NONE);
+                var auth_result = authority.check_authorization_sync (subject, Constants.PARENTAL_CONTROLS_ACTION_ID, null, Polkit.CheckAuthorizationFlags.NONE);
                 return auth_result.get_is_authorized ();     
             } catch (Error e) {
                 warning (e.message);

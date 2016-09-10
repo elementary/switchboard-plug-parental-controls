@@ -25,8 +25,8 @@ namespace PC.PAM {
         public static string get_config (string contents, bool ignore_comments = true) {
             string config = "";
 
-            int start_idx = contents.index_of (Vars.PAM_CONF_START);
-            int end_idx = contents.index_of (Vars.PAM_CONF_END) + Vars.PAM_CONF_END.char_count ();
+            int start_idx = contents.index_of (Constants.PAM_CONF_START);
+            int end_idx = contents.index_of (Constants.PAM_CONF_END) + Constants.PAM_CONF_END.char_count ();
             if (start_idx == -1 || end_idx == -1) {
                 return config;
             }

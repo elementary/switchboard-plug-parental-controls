@@ -23,11 +23,8 @@
 namespace PC.Daemon {
     public class UserConfig : Object {
         public string username;
-        public signal void changed ();
 
-        private KeyFile key;
-        private string config_path;
-
+        private static KeyFile key;
         private static List<UserConfig> config_list;
 
         public static UserConfig? get_for_username (string username, bool create) {
@@ -38,9 +35,9 @@ namespace PC.Daemon {
             }
 
             if (create) {
-                return create_for_username (username);    
-            }
-            
+                return create_for_username (username);
+            }            
+
             return null;
         }
 
@@ -51,29 +48,55 @@ namespace PC.Daemon {
         public static void init () {
             config_list = new List<UserConfig> ();
 
+            key = new KeyFile ();
+            key.set_list_separator (';');
+
+            if (!init_config_file ()) {
+                return;
+            }
+
+            try {
+                key.load_from_file (Constants.DAEMON_CONF_FILE, KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS);
+            } catch (KeyFileError e) {
+                warning (e.message);
+            } catch (FileError e) {
+                warning (e.message);
+            }
+            
             foreach (Act.User user in Utils.get_usermanager ().list_users ()) {
-                string config_path = Utils.build_daemon_conf_path (user);
-                if (!FileUtils.test (config_path, FileTest.IS_REGULAR)) {
+                string username = user.get_user_name ();
+                if (!key.has_group (username)) {
                     continue;
                 }
 
-                var key = new KeyFile ();
-                key.set_list_separator (';');
-                try {
-                    if (!key.load_from_file (config_path, KeyFileFlags.NONE)) {
-                        continue;
-                    }
-                } catch (KeyFileError e) {
-                    warning (e.message);
-                    continue;
-                } catch (FileError e) {
-                    warning (e.message);
-                    continue;
-                }
-                
-                var user_config = new UserConfig (config_path, user.get_user_name (), key);
+                var user_config = new UserConfig (username);
                 config_list.append (user_config);
             }
+        }
+
+        private static bool init_config_file () {
+            var file = File.new_for_path (Constants.DAEMON_CONF_FILE);
+            if (!file.query_exists ()) {
+                critical ("Could not found daemon config file: %s does not exist".printf (file.get_path ()));
+                return false;
+            }
+
+            try {
+                var monitor = file.monitor (FileMonitorFlags.NONE, null);
+                monitor.changed.connect ((src, dest, event) => {
+                    if (event == FileMonitorEvent.CHANGES_DONE_HINT) {
+                        foreach (UserConfig config in config_list) {
+                            config.update_key ();
+                        }
+
+                        Server.get_default ().config_changed ();
+                    }
+                });
+            } catch (Error e) {
+                warning (e.message);
+            }
+
+            return true;
         }
 
         private static UserConfig? create_for_username (string username) {
@@ -82,53 +105,39 @@ namespace PC.Daemon {
                 return null;
             }
 
-            string config_path = Utils.build_daemon_conf_path (user);
-            var file = File.new_for_path (config_path);
-            try {
-                file.create (FileCreateFlags.PRIVATE);    
-            } catch (FileError e) {
-                warning (e.message);
-                return null;
-            } catch (Error e) {
-                warning (e.message);
-                return null;
-            }
-
-            var config = new UserConfig (config_path, username, new KeyFile ());
+            var config = new UserConfig (username);
+            config.set_active (false);
             config_list.append (config);
             return config;
         }
 
-        private UserConfig (string config_path, string username, KeyFile key) {
+        private UserConfig (string username) {
             this.username = username;
-            this.key = key;
-            this.config_path = config_path;
-            monitor_file ();
         }
 
         public void set_active (bool active) {
-            key.set_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ACTIVE, active);
+            key.set_boolean (username, Constants.DAEMON_KEY_ACTIVE, active);
             save ();
         }
 
         public void set_targets (string[] targets) {
-            key.set_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_TARGETS, targets);
+            key.set_string_list (username, Constants.DAEMON_KEY_TARGETS, targets);
             save ();
         }
 
         public void set_block_urls (string[] block_urls) {
-            key.set_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_BLOCK_URLS, block_urls);
+            key.set_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS, block_urls);
             save ();
         }
 
         public void set_admin (bool admin) {
-            key.set_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ADMIN, admin);
+            key.set_boolean (username, Constants.DAEMON_KEY_ADMIN, admin);
             save ();
         }
 
         public bool get_active () {
             try {
-                return key.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ACTIVE);
+                return key.get_boolean (username, Constants.DAEMON_KEY_ACTIVE);
             } catch (KeyFileError e) {
                 warning (e.message);
             }
@@ -138,7 +147,7 @@ namespace PC.Daemon {
 
         public string[] get_targets () {
             try {            
-                return key.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_TARGETS);
+                return key.get_string_list (username, Constants.DAEMON_KEY_TARGETS);
             } catch (KeyFileError e) {
                 warning (e.message);
             }   
@@ -148,7 +157,7 @@ namespace PC.Daemon {
 
         public string[] get_block_urls () {
             try {
-                return key.get_string_list (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_BLOCK_URLS);
+                return key.get_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS);
             } catch (KeyFileError e) {
                 warning (e.message);
             }
@@ -158,7 +167,7 @@ namespace PC.Daemon {
 
         public bool get_admin () {
             try {
-                return key.get_boolean (Vars.DAEMON_GROUP, Vars.DAEMON_KEY_ADMIN);
+                return key.get_boolean (username, Constants.DAEMON_KEY_ADMIN);
             } catch (KeyFileError e) {
                 warning (e.message);
             }
@@ -166,26 +175,9 @@ namespace PC.Daemon {
             return false;
         }
 
-        private void monitor_file () {
-            var file = File.new_for_path (config_path);
+        public void update_key () {
             try {
-                var monitor = file.monitor (FileMonitorFlags.NONE, null);
-                monitor.changed.connect ((src, dest, event) => {
-                    if (event == FileMonitorEvent.CHANGES_DONE_HINT) {
-                        update_key ();
-
-                        Server.get_default ().user_config_changed (username);
-                        changed ();
-                    }
-                });
-            } catch (Error e) {
-                warning (e.message);
-            }
-        } 
-
-        private void update_key () {
-            try {
-                key.load_from_file (config_path, KeyFileFlags.NONE);
+                key.load_from_file (Constants.DAEMON_CONF_FILE, KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS);
             } catch (KeyFileError e) {
                 warning (e.message);
             } catch (FileError e) {
@@ -195,14 +187,13 @@ namespace PC.Daemon {
 
         private void save () {
             try {
-                key.save_to_file (config_path);
+                key.save_to_file (Constants.DAEMON_CONF_FILE);
             } catch (FileError e) {
                 warning (e.message);
                 return;
             }
 
-            Server.get_default ().user_config_changed (username);
-            changed ();
+            Server.get_default ().config_changed ();
         }
     }
 }

@@ -20,7 +20,7 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
  
-namespace PC.Vars {
+namespace PC.Constants {
     public const string LOGIN_IFACE = "org.freedesktop.login1";
     public const string LOGIN_OBJECT_PATH = "/org/freedesktop/login1";
     public const string DBUS_PROPERTIES_IFACE = "org.freedesktop.DBus.Properties";
@@ -31,7 +31,7 @@ namespace PC.Vars {
     public const string PLANK_CONF_DIR = "/.config/plank/dock1/settings";
     public const string PLANK_CONF_GROUP = "PlankDockPreferences";
     public const string PLANK_CONF_LOCK_ITEMS_KEY = "LockItems";
-    public const string DAEMON_CONF_DIR = "/.config/pantheon-parental-controls-daemon.conf";
+    public const string DAEMON_CONF_FILE = "@CMAKE_INSTALL_PREFIX@/share/pantheon-parental-controls/daemon.conf";
     public const string[] DAEMON_IGNORED_USERS = { "lightdm" };
     public const string DAEMON_GROUP = "PCDaemon";
     public const string DAEMON_KEY_ACTIVE = "Active";

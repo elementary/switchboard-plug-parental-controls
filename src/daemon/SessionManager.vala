@@ -22,16 +22,25 @@
 
  namespace PC.Daemon {
     public class SessionManager : Object {
-        private SessionHandler? current_handler = null;
+        public SessionHandler? current_handler = null;
         private IManager? manager = null;
         private DBusConnection? conn = null;
         private ProcessWatcher pwatcher;
 
         private uint[] signal_ids;
 
+        private static SessionManager? instance = null;
+        public static SessionManager get_default () {
+            if (instance == null) {
+                instance = new SessionManager ();
+            }
+
+            return instance;
+        }
+
         public SessionManager () {
             try {
-                manager = Bus.get_proxy_sync (BusType.SYSTEM, Vars.LOGIN_IFACE, Vars.LOGIN_OBJECT_PATH);
+                manager = Bus.get_proxy_sync (BusType.SYSTEM, Constants.LOGIN_IFACE, Constants.LOGIN_OBJECT_PATH);
                 conn = Bus.get_sync (BusType.SYSTEM, null);
             } catch (IOError e) {
                 warning ("%s\n", e.message);
@@ -52,7 +61,7 @@
             try {
                 foreach (SeatStruct seat_s in manager.list_seats ()) {
                     signal_ids += conn.signal_subscribe (null,
-                                    Vars.DBUS_PROPERTIES_IFACE,
+                                    Constants.DBUS_PROPERTIES_IFACE,
                                     "PropertiesChanged",
                                     seat_s.object_path,
                                     null,
@@ -78,7 +87,7 @@
             try {
                 var structs = manager.list_sessions ();
                 foreach (SessionStruct session_s in structs) {
-                    ISession? session = Bus.get_proxy_sync (BusType.SYSTEM, Vars.LOGIN_IFACE, session_s.object_path);
+                    ISession? session = Bus.get_proxy_sync (BusType.SYSTEM, Constants.LOGIN_IFACE, session_s.object_path);
                     if (session != null && session.active) {
                         return session;
                     }
@@ -100,7 +109,7 @@
 
             if (session != null &&
                 session.name != null &&
-                !(session.name in Vars.DAEMON_IGNORED_USERS)) {
+                !(session.name in Constants.DAEMON_IGNORED_USERS)) {
                 current_handler = new SessionHandler (session);
                 current_handler.start ();
                 pwatcher.set_config (current_handler.get_config ());

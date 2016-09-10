@@ -42,7 +42,7 @@ namespace PC.Daemon {
         }
 
         private void handle_pid (int pid) {
-            if (config == null) {
+            if (config == null || !config.get_active ()) {
                 return;
             }
 
@@ -86,7 +86,7 @@ namespace PC.Daemon {
                         try {
                             var unix_user = (Polkit.UnixUser)Polkit.UnixUser.new_for_name (config.username);
                             var result = authority.check_authorization_sync (Polkit.UnixProcess.new_for_owner (client_pid, 0, unix_user.get_uid ()),
-                                                                            Vars.PARENTAL_CONTROLS_ACTION_ID,
+                                                                            Constants.PARENTAL_CONTROLS_ACTION_ID,
                                                                             null,
                                                                             Polkit.CheckAuthorizationFlags.NONE);
                             if (result.get_is_authorized ()) {
@@ -100,7 +100,7 @@ namespace PC.Daemon {
                         server.disconnect (signal_id);
                     });
 
-                    server.app_authorize (config.username, executable, Vars.PARENTAL_CONTROLS_ACTION_ID);
+                    server.app_authorize (config.username, executable, Constants.PARENTAL_CONTROLS_ACTION_ID);
                 } else {
                     server.show_app_unavailable (executable);
                 }
