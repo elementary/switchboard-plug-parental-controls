@@ -4,6 +4,7 @@ Priority: optional
 Maintainer: Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
 Build-Depends: cmake,
                debhelper (>= 9),
+               dh-systemd (>= 1.5),
                libaccountsservice-dev,
                libgranite-dev,
                libglib2.0-dev,
