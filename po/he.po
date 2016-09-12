@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2016-07-30 21:16-0300\n"
-"PO-Revision-Date: 2016-09-10 01:19+0000\n"
+"PO-Revision-Date: 2016-09-11 18:59+0000\n"
 "Last-Translator: Niv Baehr <Unknown>\n"
 "Language-Team: Hebrew <he@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-09-10 07:35+0000\n"
+"X-Launchpad-Export-Date: 2016-09-12 06:19+0000\n"
 "X-Generator: Launchpad (build 18186)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
@@ -63,11 +63,11 @@ msgstr "מותר למשתמש זה:"
 
 #: ../src/Widgets/GeneralBox.vala:65
 msgid "Modify the dock"
-msgstr ""
+msgstr "שינוי המעגן"
 
 #: ../src/Widgets/GeneralBox.vala:68
 msgid "Configure printing"
-msgstr ""
+msgstr "הגדרת הדפסה"
 
 #: ../src/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
@@ -115,7 +115,7 @@ msgstr "יישומים"
 
 #: ../src/Widgets/AppsBox.vala:97
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "%s מנוע מלהשתמש ביישומונים אלו:"
 
 #: ../src/Widgets/AppsBox.vala:108
 msgid "Add Prevented Apps…"
@@ -151,7 +151,7 @@ msgstr "כתובת לא חוקית"
 
 #: ../src/Plug.vala:72
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "הגדרות מסוימות דורשות הרשאות מנהל לשינוי"
 
 #: ../src/Plug.vala:81
 msgid "No users to edit"
@@ -164,6 +164,8 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
+"ניתן ליישם בקרת הורים רק עבור משתמשים שאינם בעלי הרשאות מנהל.\n"
+"ניתן לשנות את סוג המשתמש בלוח חשבונות משתמשים."
 
 #: ../src/Plug.vala:84
 msgid "Configure User Accounts"
@@ -184,7 +186,7 @@ msgstr "הגדרת מגבלות זמן והגבלת השימוש ביישומי�
 #: ../src/client/Client.vala:125
 msgid ""
 "Make sure to close all applications before your computer will be locked."
-msgstr ""
+msgstr "נא לוודא שכל היישומים נסגרו לפני שהמחשב ינעל."
 
 #: ../src/client/Client.vala:129
 msgid "%ld hour"
@@ -208,8 +210,8 @@ msgstr "זמן שנותר"
 
 #: ../src/client/AppLockDialog.vala:27
 msgid "You cannot run this application"
-msgstr ""
+msgstr "לא ניתן להריץ יישום זה"
 
 #: ../src/client/AppLockDialog.vala:28
 msgid "You are not permitted to run this application."
-msgstr ""
+msgstr "אין הרשאה להריץ יישום זה."
