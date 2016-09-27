@@ -31,6 +31,8 @@ namespace PC.Widgets {
 
         private Gtk.Frame frame;
 
+        private Gtk.SizeGroup title_group;
+
         private WeekSpinBox weekday_box;
         private WeekSpinBox weekend_box;
 
@@ -97,11 +99,13 @@ namespace PC.Widgets {
 
             var frame_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
 
-            weekday_box = new WeekSpinBox (_("Weekdays"));
+            title_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+
+            weekday_box = new WeekSpinBox (_("Weekdays"), title_group);
             weekday_box.margin = 12;
             weekday_box.halign = Gtk.Align.CENTER;
 
-            weekend_box = new WeekSpinBox (_("Weekends"));
+            weekend_box = new WeekSpinBox (_("Weekends"), title_group);
             weekend_box.margin = 12;
             weekend_box.halign = Gtk.Align.CENTER;
 
