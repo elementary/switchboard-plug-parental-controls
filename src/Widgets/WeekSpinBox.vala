@@ -27,7 +27,7 @@ namespace PC.Widgets {
         private Granite.Widgets.TimePicker picker_from;
         private Granite.Widgets.TimePicker picker_to;
 
-        public WeekSpinBox (string title) {
+        public WeekSpinBox (string title, Gtk.SizeGroup size_group) {
             orientation = Gtk.Orientation.HORIZONTAL;
             spacing = 12;
 
@@ -39,6 +39,7 @@ namespace PC.Widgets {
 
             var label = new Gtk.Label (title);
             label.get_style_context ().add_class ("h4");
+            size_group.add_widget (label);
 
             add (label);
             add (new Gtk.Label (_("From:")));
