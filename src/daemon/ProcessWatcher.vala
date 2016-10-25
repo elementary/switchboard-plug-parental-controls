@@ -84,8 +84,8 @@ namespace PC.Daemon {
                     ulong signal_id = 0;
                     signal_id = server.app_authorization_ended.connect ((client_pid) => {
                         try {
-                            var unix_user = (Polkit.UnixUser)Polkit.UnixUser.new_for_name (config.username);
-                            var result = authority.check_authorization_sync (Polkit.UnixProcess.new_for_owner (client_pid, 0, unix_user.get_uid ()),
+                            var unix_user = new Polkit.UnixUser.for_name (config.username);
+                            var result = authority.check_authorization_sync (new Polkit.UnixProcess.for_owner (client_pid, 0, unix_user.get_uid ()),
                                                                             Vars.PARENTAL_CONTROLS_ACTION_ID,
                                                                             null,
                                                                             Polkit.CheckAuthorizationFlags.NONE);

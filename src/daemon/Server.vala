@@ -227,7 +227,7 @@ namespace PC.Daemon {
                 warning (e.message);
             }            
 
-            var subject = Polkit.UnixProcess.new_for_owner ((int)pid, 0, (int)user);
+            var subject = new Polkit.UnixProcess.for_owner ((int)pid, 0, (int)user);
 
             try {
                 var authority = Polkit.Authority.get_sync (null);
