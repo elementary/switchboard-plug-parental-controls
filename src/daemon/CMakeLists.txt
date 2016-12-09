@@ -18,6 +18,8 @@ vala_precompile (VALA_C ${DAEMON_EXEC_NAME}
     Interfaces.vala
     UserConfig.vala
     Server.vala
+    Restrictions/Restriction.vala
+    Restrictions/AppRestriction.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Constants.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Utils.vala
     ${CMAKE_SOURCE_DIR}/src/shared/PAM/Token.vala
