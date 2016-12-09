@@ -90,9 +90,10 @@ namespace PC {
             }
 
             try {
-                var user = (Polkit.UnixUser)Polkit.UnixUser.new_for_name (Environment.get_user_name ());
+
+                var user = new Polkit.UnixUser.for_name (Environment.get_user_name ());
                 permission = new Polkit.Permission.sync (Constants.PARENTAL_CONTROLS_ACTION_ID,
-                                Polkit.UnixProcess.new_for_owner (Posix.getpid (), 0, user.get_uid ()));
+                                new Polkit.UnixProcess.for_owner (Posix.getpid (), 0, user.get_uid ()));
                 return permission;
             } catch (Error e) {
                 critical (e.message);

@@ -57,9 +57,9 @@ namespace PC.Client {
             }
 
             try {
-                var user = (Polkit.UnixUser)Polkit.UnixUser.new_for_name (username);
+                var user = new Polkit.UnixUser.for_name (username);
                 permission = new Polkit.Permission.sync (action_id,
-                                        Polkit.UnixProcess.new_for_owner (Posix.getpid (), 0, user.get_uid ()));
+                                        new Polkit.UnixProcess.for_owner (Posix.getpid (), 0, user.get_uid ()));
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
