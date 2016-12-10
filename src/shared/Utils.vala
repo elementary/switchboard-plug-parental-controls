@@ -75,7 +75,7 @@ namespace PC {
             }
 
             try {
-                api = Bus.get_proxy_sync (BusType.SYSTEM, Vars.PARENTAL_CONTROLS_IFACE, Vars.PARENTAL_CONTROLS_OBJECT_PATH);
+                api = Bus.get_proxy_sync (BusType.SYSTEM, Constants.PARENTAL_CONTROLS_IFACE, Constants.PARENTAL_CONTROLS_OBJECT_PATH);
             } catch (Error e) {
                 critical ("%s, using dummy parental controls backend", e.message);
                 api = new DummyParentalControls ();
@@ -90,8 +90,9 @@ namespace PC {
             }
 
             try {
+
                 var user = new Polkit.UnixUser.for_name (Environment.get_user_name ());
-                permission = new Polkit.Permission.sync (Vars.PARENTAL_CONTROLS_ACTION_ID,
+                permission = new Polkit.Permission.sync (Constants.PARENTAL_CONTROLS_ACTION_ID,
                                 new Polkit.UnixProcess.for_owner (Posix.getpid (), 0, user.get_uid ()));
                 return permission;
             } catch (Error e) {
@@ -131,10 +132,6 @@ namespace PC {
             }
 
             return buffer;
-        }
-
-        public static string build_daemon_conf_path (Act.User user) {
-            return Path.build_filename (user.get_home_dir (), Vars.DAEMON_CONF_DIR);
         }
     }
 }

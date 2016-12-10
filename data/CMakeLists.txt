@@ -1,6 +1,7 @@
 configure_file (org.pantheon.switchboard.parental-controls.policy.cmake ${CMAKE_CURRENT_BINARY_DIR}/data/org.pantheon.switchboard.parental-controls.policy)
 configure_file (org.pantheon.ParentalControls.service.cmake ${CMAKE_CURRENT_BINARY_DIR}/org.pantheon.ParentalControls.service)
 
+install (FILES daemon.conf DESTINATION ${CMAKE_INSTALL_PREFIX}/share/pantheon-parental-controls)
 install (FILES ${CMAKE_CURRENT_BINARY_DIR}/data/org.pantheon.switchboard.parental-controls.policy DESTINATION ${CMAKE_INSTALL_FULL_DATAROOTDIR}/polkit-1/actions/)
 install (FILES ${CMAKE_CURRENT_BINARY_DIR}/org.pantheon.ParentalControls.service DESTINATION share/dbus-1/system-services)
 install (FILES org.pantheon.ParentalControls.conf DESTINATION /etc/dbus-1/system.d)

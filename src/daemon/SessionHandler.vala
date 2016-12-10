@@ -43,7 +43,7 @@
 
             iptables_helper = new IptablesHelper (config);
 
-            var token = PAM.Reader.get_token_for_user (Vars.PAM_TIME_CONF_PATH, session.name);
+            var token = PAM.Reader.get_token_for_user (Constants.PAM_TIME_CONF_PATH, session.name);
             if (token != null) {
                 timer = new Timer (token);
                 timer.terminate.connect (() => {
@@ -53,7 +53,7 @@
                         warning (e.message);
                     }                    
                 });
-            }            
+            }
         }
 
         public string get_id () {
@@ -75,6 +75,21 @@
 
             if (timer != null) {
                 timer.start ();
+            }
+        }
+
+        public void update () {
+            if (!config.get_active ()) {
+                iptables_helper.stop ();
+                if (timer != null) {
+                    timer.stop ();
+                }
+
+                return;
+            }
+
+            if (IptablesHelper.get_can_start ()) {
+                iptables_helper.restart ();
             }
         }
 

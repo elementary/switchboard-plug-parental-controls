@@ -25,7 +25,7 @@ namespace PC.PAM {
         private string filename;
 
         public static Writer new_for_time () {
-            return new Writer (Vars.PAM_TIME_CONF_PATH);
+            return new Writer (Constants.PAM_TIME_CONF_PATH);
         }
 
         public Writer (string filename) {
@@ -33,13 +33,11 @@ namespace PC.PAM {
         }
 
         public void add_restriction_for_user (string input, bool clean) {
+            string? clean_username = null;
             if (clean) {
                 var token = Token.parse_line (input);
                 if (token != null) {
-                    string username = token.get_user_arg0 ();
-                    if (Reader.get_token_for_user (filename, username) != null) {
-                        remove_restriction_for_user (username);
-                    }
+                    clean_username = token.get_user_arg0 ();
                 }   
             }
 
@@ -51,26 +49,32 @@ namespace PC.PAM {
                 return;
             }
 
-            string config = Reader.get_config (contents, false);
+            int start_idx;
+            int end_idx;
+            string config = Reader.get_config (contents, out start_idx, out end_idx);
 
-            var builder = new StringBuilder (Vars.PAM_CONF_START);
-            if (config != "") {
-                builder.append ("\n");
-                builder.append (Utils.remove_comments (config));
-            } else {
+            if (start_idx != -1 && end_idx != -1) {
+                contents = contents.splice (start_idx - 1, end_idx);
+            }
+
+            var builder = new StringBuilder (Constants.PAM_CONF_START);
+            builder.append ("\n");
+
+            foreach (var token in Token.parse (config)) {
+                if (token.get_user_arg0 () == clean_username) {
+                    continue;
+                }
+
+                builder.append (token.to_string ());
                 builder.append ("\n");
             }
 
             builder.append (input);
             builder.append ("\n");
-            builder.append (Vars.PAM_CONF_END);
+            builder.append (Constants.PAM_CONF_END);
 
             try {
-                if (config != "") {
-                    FileUtils.set_contents (filename, contents.replace (config, builder.str));
-                } else {
-                    FileUtils.set_contents (filename, "\n%s\n%s\n".printf (contents, builder.str));
-                }
+                FileUtils.set_contents (filename, "%s\n%s".printf (contents, builder.str));
             } catch (FileError e) {
                 warning ("%s\n", e.message);
             }
@@ -85,26 +89,35 @@ namespace PC.PAM {
                 return;
             }
 
-            string config = Reader.get_config (contents);
+            int start_idx;
+            int end_idx;
+            string config = Reader.get_config (contents, out start_idx, out end_idx);
 
-            if (config == "") {
+            if (start_idx != -1 && end_idx != -1) {
+                contents = contents.splice (start_idx - 1, end_idx);
+            } else {
                 return;
             }
 
-            string buffer = "";
+            var builder = new StringBuilder (Constants.PAM_CONF_START);
+            builder.append ("\n");
 
-            foreach (string line in config.split ("\n")) {
-                var token = Token.parse_line (line);
-                if (token != null && token.get_user_arg0 () != username) {
-                    buffer += line;
+            foreach (var token in Token.parse (config)) {
+                if (token.get_user_arg0 () == username) {
+                    continue;
                 }
+
+                builder.append (token.to_string ());
+                builder.append ("\n");
             }
 
+            builder.append (Constants.PAM_CONF_END);
+
             try {
-                FileUtils.set_contents (filename, contents.replace (config, buffer));
+                FileUtils.set_contents (filename, "%s\n%s".printf (contents, builder.str));
             } catch (FileError e) {
                 warning ("%s\n", e.message);
             }
-        }        
+        }
     }
 }

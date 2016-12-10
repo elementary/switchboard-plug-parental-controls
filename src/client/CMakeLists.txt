@@ -9,7 +9,7 @@ set (CLIENT_EXEC_NAME pantheon-parental-controls-client)
 vala_precompile (VALA_C ${CLIENT_EXEC_NAME}
     Client.vala
     AppUnavailableDialog.vala
-    ${CMAKE_SOURCE_DIR}/src/shared/Vars.vala
+    ${CMAKE_SOURCE_DIR}/src/shared/Constants.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Utils.vala
 PACKAGES
     posix

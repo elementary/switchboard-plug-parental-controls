@@ -27,7 +27,6 @@
 
         private UserConfig config;
         private string[] current_urls;
-        private ulong changed_signal_id;
 
         public static bool get_can_start () {
             return Environment.find_program_in_path (IPTABLES_EXEC) != null;
@@ -40,18 +39,17 @@
         public void start () {
             this.current_urls = config.get_block_urls ();
             add_rules ();
+        }
 
-            changed_signal_id = config.changed.connect (() => {
-                remove_rules ();
+        public void restart () {
+            remove_rules ();
 
-                current_urls = config.get_block_urls ();
-                add_rules ();
-            });
+            current_urls = config.get_block_urls ();
+            add_rules ();            
         }
 
         public void stop () {
             remove_rules ();
-            disconnect (changed_signal_id);
         }
 
         private void add_rules () {

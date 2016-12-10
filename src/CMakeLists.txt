@@ -22,7 +22,7 @@ vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
     Widgets/AppsBox.vala
     Widgets/AppChooser.vala
     Widgets/WeekSpinBox.vala
-    shared/Vars.vala
+    shared/Constants.vala
     shared/Utils.vala
     shared/PAM/Token.vala
     shared/PAM/Reader.vala

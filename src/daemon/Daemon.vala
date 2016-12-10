@@ -64,7 +64,7 @@ namespace PC.Daemon {
 
         private void on_bus_acquired (DBusConnection connection) {
             try {
-                connection.register_object (Vars.PARENTAL_CONTROLS_OBJECT_PATH, Server.get_default ());
+                connection.register_object (Constants.PARENTAL_CONTROLS_OBJECT_PATH, Server.get_default ());
             } catch (IOError e) {
                 warning ("%s\n", e.message);
             }
@@ -75,12 +75,12 @@ namespace PC.Daemon {
                 return;
             }
 
-            Bus.own_name (BusType.SYSTEM, Vars.PARENTAL_CONTROLS_IFACE, BusNameOwnerFlags.REPLACE,
+            Bus.own_name (BusType.SYSTEM, Constants.PARENTAL_CONTROLS_IFACE, BusNameOwnerFlags.REPLACE,
                           on_bus_acquired,
                           () => {},
                           on_bus_lost);
 
-            session_manager = new SessionManager ();
+            session_manager = SessionManager.get_default ();
             session_manager.start ();
         }
 
