@@ -22,7 +22,7 @@
 
 namespace PC.Daemon {
     public class UserConfig : Object {
-        public string username;
+        public string username { get; set; }
 
         private static KeyFile key;
         private static List<UserConfig> config_list;
@@ -63,12 +63,7 @@ namespace PC.Daemon {
                 warning (e.message);
             }
             
-            foreach (Act.User user in Utils.get_usermanager ().list_users ()) {
-                string username = user.get_user_name ();
-                if (!key.has_group (username)) {
-                    continue;
-                }
-
+            foreach (string username in key.get_groups ()) {
                 var user_config = new UserConfig (username);
                 config_list.append (user_config);
             }
@@ -77,23 +72,8 @@ namespace PC.Daemon {
         private static bool init_config_file () {
             var file = File.new_for_path (Constants.DAEMON_CONF_FILE);
             if (!file.query_exists ()) {
-                critical ("Could not found daemon config file: %s does not exist".printf (file.get_path ()));
+                critical ("Could not find daemon config file: %s does not exist".printf (file.get_path ()));
                 return false;
-            }
-
-            try {
-                var monitor = file.monitor (FileMonitorFlags.NONE, null);
-                monitor.changed.connect ((src, dest, event) => {
-                    if (event == FileMonitorEvent.CHANGES_DONE_HINT) {
-                        foreach (UserConfig config in config_list) {
-                            config.update_key ();
-                        }
-
-                        Server.get_default ().config_changed ();
-                    }
-                });
-            } catch (Error e) {
-                warning (e.message);
             }
 
             return true;
@@ -173,16 +153,6 @@ namespace PC.Daemon {
             }
 
             return false;
-        }
-
-        public void update_key () {
-            try {
-                key.load_from_file (Constants.DAEMON_CONF_FILE, KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS);
-            } catch (KeyFileError e) {
-                warning (e.message);
-            } catch (FileError e) {
-                warning (e.message);
-            }
         }
 
         private void save () {

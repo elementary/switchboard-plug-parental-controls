@@ -16,28 +16,33 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Felipe Escoto <felescoto95@hotmail.com>
+ * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-public abstract class PC.Daemon.Restriction <R> : Object {
-    public List<R> restrictions;
+namespace PC.Daemon {
+    public class RestrictionController : Object {
+        private Gee.ArrayList<Restriction> restrictions;
 
-    construct {
-        restrictions = new List<R>();
-    }
-
-    public abstract string serialize ();
-    public abstract void parse_line (string line);
-   
-    public void add_restriction (R item) {
-        if (restrictions.index (item) == -1) {
-            restrictions.append (item);
+        construct {
+            restrictions = new Gee.ArrayList<Restriction> ();
         }
-    }
 
-    public void remove_restriction (R item) {
-        if (restrictions.index (item) != -1) {
-            restrictions.remove (item);
+        public void add_restriction (Restriction restriction) {
+            if (restrictions.contains (restriction)) {
+                return;
+            }
+
+            restrictions.add (restriction);
+            restriction.start ();
+        }
+
+        public void remove_restriction (Restriction restriction) {
+            if (!restrictions.contains (restriction)) {
+                return;
+            }
+
+            restrictions.remove (restriction);
+            restriction.stop ();
         }
     }
 }

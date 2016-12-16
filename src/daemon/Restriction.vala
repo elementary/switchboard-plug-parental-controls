@@ -1,0 +1,60 @@
+/*-
+ * Copyright (c) 2016 elementary LLC (https://elementary.io)
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Library General Public
+ * License as published by the Free Software Foundation; either
+ * version 3 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Library General Public License for more details.
+ *
+ * You should have received a copy of the GNU Library General Public
+ * License along with this library; if not, write to the
+ * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+ * Boston, MA 02111-1307, USA.
+ *
+ * Authored by: Felipe Escoto <felescoto95@hotmail.com>
+ */
+
+namespace PC.Daemon {
+    public abstract class Restriction<T> : Object {
+        public GLib.List<T> targets;
+
+        construct {
+            targets = new GLib.List<T> ();
+        }
+
+        public static bool get_supported () {
+            return true;
+        }
+
+        public abstract void start ();
+        public abstract void stop ();
+
+        public void add_target (T item) {
+            targets.append (item);
+        }
+
+        public void remove_target (T item) {
+            targets.remove (item);
+        }
+
+        public void update_targets (GLib.List<T> new_targets) {
+            stop ();
+            clear_targets ();
+
+            foreach (T target in new_targets) {
+                add_target (target);
+            }    
+
+            start ();        
+        }
+
+        public void clear_targets () {
+            targets.remove (targets.data);
+        }
+    }
+}

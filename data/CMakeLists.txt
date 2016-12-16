@@ -8,9 +8,3 @@ install (FILES ${CMAKE_CURRENT_BINARY_DIR}/org.pantheon.ParentalControls.service
 install (FILES ${CMAKE_CURRENT_BINARY_DIR}/pantheon-parental-controls.service DESTINATION /lib/systemd/system)
 install (FILES org.pantheon.ParentalControls.conf DESTINATION /etc/dbus-1/system.d)
 install (FILES pantheon-parental-controls-client.desktop DESTINATION share/applications)
-
-if (ENABLE_DAEMON_STARTUP)
-    set (TARGET_NAME "${CMAKE_CURRENT_BINARY_DIR}/pantheon-parental-controls.service")
-    set (DESTINATION_PATH "/etc/systemd/system/multi-user.target.wants/")
-    execute_process(COMMAND sudo ln -sf ${TARGET_NAME} ${DESTINATION_PATH})
-ENDIF ()

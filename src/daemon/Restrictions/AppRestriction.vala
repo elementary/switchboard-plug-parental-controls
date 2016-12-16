@@ -1,5 +1,6 @@
+// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2016 elementary LLC (https://elementary.io)
+ * Copyright (c) 2015 Adam Bieńkowski (https://launchpad.net/switchboard-plug-parental-controls)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -16,31 +17,98 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA 02111-1307, USA.
  *
- * Authored by: Felipe Escoto <felescoto95@hotmail.com>
+ * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-public class PC.Daemon.AppRestriction : Restriction <string> {
-    private const string key = "Targets=";
+namespace PC.Daemon {
+    public class AppRestriction : Restriction<string>, ExecMonitor {
+        public string username { get; set; }
+        public bool admin { get; set; }
 
-    public override string serialize () {
-        string output = "";
+        private Gee.ArrayList<string> allowed_executables;
+        private Polkit.Authority authority;
 
-        foreach (var app_name in restrictions) {
-            if (output == "") {
-                output = app_name;
-            } else {
-                output = ";" + app_name;
+        construct {
+            allowed_executables = new Gee.ArrayList<string> ();
+
+            try {
+                authority = Polkit.Authority.get_sync ();
+            } catch (Error e) {
+                warning ("%s\n", e.message);
             }
         }
 
-        return key + output;
-    }
+        public override void start () {
+            start_monitor.begin ();
+        }
 
-    public override void parse_line (string line) {
-        var apps = line.replace (key, "").split (";");
+        public override void stop () {
+            stop_monitor ();
+            allowed_executables.clear ();
+        }
 
-        foreach (var app in apps) {
-            add_restriction (app);
+        private void handle_pid (int pid) {
+            var process = new Process (pid);
+
+            string? command = process.get_command ();
+            if (command == null || command == "") {
+                return;
+            }
+
+            string[]? args = {};
+            try {
+                Shell.parse_argv (command, out args);
+                if (args == null || args.length < 1) {
+                    return;
+                }
+            } catch (ShellError e) {
+                warning ("%s\n", e.message);
+                return;
+            }                
+
+            string executable = args[0];
+
+            if (!executable.has_prefix (Path.DIR_SEPARATOR_S)) {
+                executable = Environment.find_program_in_path (executable);
+            }
+
+            if (allowed_executables.contains (executable)) {
+                allowed_executables.remove (executable);
+                return;
+            }
+
+            if (executable == null || targets.find_custom (executable, strcmp) == null) {
+                return;
+            }
+
+            process.kill ();
+
+            var server = Server.get_default ();
+            if (!admin || authority == null) {
+                server.show_app_unavailable (executable);
+                return;
+            }
+
+            ulong signal_id = 0;
+            signal_id = server.app_authorization_ended.connect ((client_pid) => {
+                try {
+                    var unix_user = (Polkit.UnixUser)Polkit.UnixUser.new_for_name (username);
+                    var result = authority.check_authorization_sync (Polkit.UnixProcess.new_for_owner (client_pid, 0, unix_user.get_uid ()),
+                                                                    Constants.PARENTAL_CONTROLS_ACTION_ID,
+                                                                    null,
+                                                                    Polkit.CheckAuthorizationFlags.NONE);
+                    if (result.get_is_authorized ()) {
+                        allowed_executables.add (executable);
+                        server.launch (args);
+                    }
+                } catch (Error e) {
+                    warning ("%s\n", e.message);
+                }
+
+                server.disconnect (signal_id);
+            });
+
+            server.app_authorize (username, executable, Constants.PARENTAL_CONTROLS_ACTION_ID);
         }
     }
 }

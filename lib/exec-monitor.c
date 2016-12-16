@@ -74,7 +74,7 @@ exec_monitor_default_init (ExecMonitorInterface *exec_monitor)
 }
 
 void
-exec_monitor_start (ExecMonitor         *self,
+exec_monitor_start_monitor (ExecMonitor         *self,
                     GAsyncReadyCallback callback,
                     gpointer            user_data)
 {
@@ -102,7 +102,7 @@ start_task_thread (GTask     *task,
 }
 
 void
-exec_monitor_stop (ExecMonitor *self)
+exec_monitor_stop_monitor (ExecMonitor *self)
 {
     ExecMonitorInterface *iface;
 
