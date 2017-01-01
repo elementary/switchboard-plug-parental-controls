@@ -6,3 +6,4 @@ install (FILES ${CMAKE_CURRENT_BINARY_DIR}/data/org.pantheon.switchboard.parenta
 install (FILES ${CMAKE_CURRENT_BINARY_DIR}/org.pantheon.ParentalControls.service DESTINATION share/dbus-1/system-services)
 install (FILES org.pantheon.ParentalControls.conf DESTINATION /etc/dbus-1/system.d)
 install (FILES pantheon-parental-controls-client.desktop DESTINATION share/applications)
+install (FILES pantheon-parental-controls.service DESTINATION /lib/systemd/system)
