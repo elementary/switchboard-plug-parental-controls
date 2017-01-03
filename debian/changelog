@@ -1,3 +1,9 @@
+switchboard-plug-parental-controls (0.1.2) xenial; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Mon, 02 Jan 2017 19:53:33 -0600
+
 switchboard-plug-parental-controls (0.1.1) xenial; urgency=medium
 
   * New upstream release.
