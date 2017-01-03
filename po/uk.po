@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-30 21:16-0300\n"
+"POT-Creation-Date: 2017-01-02 19:52-0600\n"
 "PO-Revision-Date: 2016-08-10 18:15+0000\n"
 "Last-Translator: Roman Sytnyk <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2016-10-05 06:26+0000\n"
-"X-Generator: Launchpad (build 18217)\n"
+"X-Launchpad-Export-Date: 2017-01-03 06:19+0000\n"
+"X-Generator: Launchpad (build 18298)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
 #. *
@@ -46,9 +46,86 @@ msgstr ""
 msgid "Authentication is required to change parental control settings"
 msgstr "Вхід необхідний для зміни налаштувань батьківського контролю"
 
+#: ../src/client/AppUnavailableDialog.vala:27
+msgid "You cannot run this application"
+msgstr "Ви не можете запустити цю програму"
+
+#: ../src/client/AppUnavailableDialog.vala:28
+msgid "You are not permitted to run this application."
+msgstr "Ви не маєте права запускати цю програму."
+
+#: ../src/client/Client.vala:95
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr ""
+"Переконайтеся в тому, що всі програми закрити, перш ніж ваш комп'ютер буде "
+"заблокований."
+
+#: ../src/client/Client.vala:99
+msgid "%ld hour"
+msgid_plural "%ld hours"
+msgstr[0] "%ld година"
+msgstr[1] "%ld години"
+msgstr[2] "%ld годин"
+
+#: ../src/client/Client.vala:103
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "%ld хвилина"
+msgstr[1] "%ld хвилини"
+msgstr[2] "%ld хвилин"
+
+#: ../src/client/Client.vala:106
+msgid "This computer will lock after %s %s. %s"
+msgstr "Цей компʼютер буде заблокований через %s %s. %s"
+
+#: ../src/client/Client.vala:108
+msgid "Time left"
+msgstr "Часу залишилось"
+
+#: ../src/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "Від:"
+
+#: ../src/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "До:"
+
 #: ../src/Widgets/AppChooser.vala:71
 msgid "Search Applications"
 msgstr "Пошук додатків"
+
+#: ../src/Widgets/ControlPage.vala:53
+msgid "General"
+msgstr "Загальне"
+
+#: ../src/Widgets/ControlPage.vala:54
+msgid "Internet"
+msgstr "Інтернет"
+
+#: ../src/Widgets/ControlPage.vala:55
+msgid "Applications"
+msgstr "Додатки"
+
+#: ../src/Widgets/AppsBox.vala:90
+msgid "Prevent %s from using these apps:"
+msgstr "Запобіжати %s від використання цих додатків:"
+
+#: ../src/Widgets/AppsBox.vala:101
+msgid "Add Prevented Apps…"
+msgstr "Додати заборонені додатки..."
+
+#: ../src/Widgets/AppsBox.vala:105
+msgid "Remove Selected App"
+msgstr "Видалити вибрані додатки"
+
+#: ../src/Widgets/AppsBox.vala:110
+msgid "Clear All"
+msgstr "Очистити все"
+
+#: ../src/Widgets/AppsBox.vala:133
+msgid "Allow access to these apps with admin permission:"
+msgstr "Дозволити доступ до цих програм з дозволу адміністратора:"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -57,6 +134,22 @@ msgstr "Мій обліковий запис"
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
 msgstr "Інші облікові записи"
+
+#: ../src/Widgets/InternetBox.vala:77
+msgid "Prevent %s from visiting these websites:"
+msgstr "Захистити %s від відвідування цих сайтів:"
+
+#: ../src/Widgets/InternetBox.vala:90
+msgid "Add URL"
+msgstr "Додати URL"
+
+#: ../src/Widgets/InternetBox.vala:99
+msgid "Add a new URL, for example: google.com"
+msgstr "Додати новий URL, наприклад: google.com"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Invalid URL"
+msgstr "Некоректна адреса"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -86,79 +179,23 @@ msgstr "Тільки в будні"
 msgid "Only on weekends"
 msgstr "Тільки у вихідні"
 
-#: ../src/Widgets/GeneralBox.vala:102
+#: ../src/Widgets/GeneralBox.vala:104
 msgid "Weekdays"
 msgstr "Будні"
 
-#: ../src/Widgets/GeneralBox.vala:106
+#: ../src/Widgets/GeneralBox.vala:108
 msgid "Weekends"
 msgstr "Вихідні"
 
-#: ../src/Widgets/WeekSpinBox.vala:44
-msgid "From:"
-msgstr "Від:"
-
-#: ../src/Widgets/WeekSpinBox.vala:46
-msgid "To:"
-msgstr "До:"
-
-#: ../src/Widgets/ControlPage.vala:74
-msgid "General"
-msgstr "Загальне"
-
-#: ../src/Widgets/ControlPage.vala:75
-msgid "Internet"
-msgstr "Інтернет"
-
-#: ../src/Widgets/ControlPage.vala:76
-msgid "Applications"
-msgstr "Додатки"
-
-#: ../src/Widgets/AppsBox.vala:97
-msgid "Prevent %s from using these apps:"
-msgstr "Запобіжати %s від використання цих додатків:"
-
-#: ../src/Widgets/AppsBox.vala:108
-msgid "Add Prevented Apps…"
-msgstr "Додати заборонені додатки..."
-
-#: ../src/Widgets/AppsBox.vala:112
-msgid "Remove Selected App"
-msgstr "Видалити вибрані додатки"
-
-#: ../src/Widgets/AppsBox.vala:117
-msgid "Clear All"
-msgstr "Очистити все"
-
-#: ../src/Widgets/AppsBox.vala:140
-msgid "Allow access to these apps with admin permission:"
-msgstr "Дозволити доступ до цих програм з дозволу адміністратора:"
-
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Захистити %s від відвідування цих сайтів:"
-
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "Додати URL"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Додати новий URL, наприклад: google.com"
-
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "Некоректна адреса"
-
-#: ../src/Plug.vala:72
+#: ../src/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
 msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"
 
-#: ../src/Plug.vala:81
+#: ../src/Plug.vala:80
 msgid "No users to edit"
 msgstr "Немає користувачів для редагування"
 
-#: ../src/Plug.vala:81
+#: ../src/Plug.vala:80
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -170,55 +207,18 @@ msgstr ""
 "Ви можете змінити тип облікового запису користувача від \"Адміністратор\" на "
 "\"Стандарт\" в панелі \"Облікові записи користувачів\"."
 
-#: ../src/Plug.vala:84
+#: ../src/Plug.vala:83
 msgid "Configure User Accounts"
 msgstr "Налаштовувати облікових записів користувачів"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:86
 msgid "Open Users settings"
 msgstr "Відкрити параметри користувача"
 
-#: ../src/Plug.vala:164
+#: ../src/Plug.vala:163
 msgid "Parental Control"
 msgstr "Батьківський контроль"
 
-#: ../src/Plug.vala:165
+#: ../src/Plug.vala:164
 msgid "Configure time limits and restrict application usage"
 msgstr "Налаштовувати обмеження за часом і обмеження використання додатків"
-
-#: ../src/client/Client.vala:125
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr ""
-"Переконайтеся в тому, що всі програми закрити, перш ніж ваш комп'ютер буде "
-"заблокований."
-
-#: ../src/client/Client.vala:129
-msgid "%ld hour"
-msgid_plural "%ld hours"
-msgstr[0] "%ld година"
-msgstr[1] "%ld години"
-msgstr[2] "%ld годин"
-
-#: ../src/client/Client.vala:133
-msgid "%ld minute"
-msgid_plural "%ld minutes"
-msgstr[0] "%ld хвилина"
-msgstr[1] "%ld хвилини"
-msgstr[2] "%ld хвилин"
-
-#: ../src/client/Client.vala:136
-msgid "This computer will lock after %s %s. %s"
-msgstr "Цей компʼютер буде заблокований через %s %s. %s"
-
-#: ../src/client/Client.vala:138
-msgid "Time left"
-msgstr "Часу залишилось"
-
-#: ../src/client/AppLockDialog.vala:27
-msgid "You cannot run this application"
-msgstr "Ви не можете запустити цю програму"
-
-#: ../src/client/AppLockDialog.vala:28
-msgid "You are not permitted to run this application."
-msgstr "Ви не маєте права запускати цю програму."

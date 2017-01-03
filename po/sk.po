@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-30 21:16-0300\n"
+"POT-Creation-Date: 2017-01-02 19:52-0600\n"
 "PO-Revision-Date: 2016-12-12 20:18+0000\n"
 "Last-Translator: Martin Korpala <Unknown>\n"
 "Language-Team: Slovak <>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
-"X-Launchpad-Export-Date: 2016-12-13 05:58+0000\n"
-"X-Generator: Launchpad (build 18293)\n"
+"X-Launchpad-Export-Date: 2017-01-03 06:19+0000\n"
+"X-Generator: Launchpad (build 18298)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
 #. *
@@ -46,9 +46,85 @@ msgstr "Spravovať nastavenia rodičovskej kontroly"
 msgid "Authentication is required to change parental control settings"
 msgstr "Na zmenu rodičovskej kontroly je potrebná autentifikácia"
 
+#: ../src/client/AppUnavailableDialog.vala:27
+msgid "You cannot run this application"
+msgstr "Nemôžete spustiť tuto aplikáciu"
+
+#: ../src/client/AppUnavailableDialog.vala:28
+msgid "You are not permitted to run this application."
+msgstr "Nie ste oprávnený spustiť túto aplikáciu."
+
+#: ../src/client/Client.vala:95
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr ""
+"Uistite sa že ste zatvorili všetky aplikácie predtým než sa váš počítač "
+"zamkne."
+
+#: ../src/client/Client.vala:99
+msgid "%ld hour"
+msgid_plural "%ld hours"
+msgstr[0] "hodín"
+msgstr[1] "hodina"
+
+#: ../src/client/Client.vala:103
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "minút"
+msgstr[1] "minúta"
+msgstr[2] "minúty"
+
+#: ../src/client/Client.vala:106
+msgid "This computer will lock after %s %s. %s"
+msgstr "Tento počítač sa uzamkne po %s %s. %s"
+
+#: ../src/client/Client.vala:108
+msgid "Time left"
+msgstr "Zostávajúci čas"
+
+#: ../src/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "Od:"
+
+#: ../src/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Do:"
+
 #: ../src/Widgets/AppChooser.vala:71
 msgid "Search Applications"
 msgstr "Hľadať aplikácie"
+
+#: ../src/Widgets/ControlPage.vala:53
+msgid "General"
+msgstr "Všeobecné"
+
+#: ../src/Widgets/ControlPage.vala:54
+msgid "Internet"
+msgstr "Internet"
+
+#: ../src/Widgets/ControlPage.vala:55
+msgid "Applications"
+msgstr "Aplikácie"
+
+#: ../src/Widgets/AppsBox.vala:90
+msgid "Prevent %s from using these apps:"
+msgstr "Zabrániť %s používať tieto aplikácie:"
+
+#: ../src/Widgets/AppsBox.vala:101
+msgid "Add Prevented Apps…"
+msgstr "Pridať obmedzené aplikácie..."
+
+#: ../src/Widgets/AppsBox.vala:105
+msgid "Remove Selected App"
+msgstr "Odstrániť vybranú aplikáciu"
+
+#: ../src/Widgets/AppsBox.vala:110
+msgid "Clear All"
+msgstr "Vymazať všetko"
+
+#: ../src/Widgets/AppsBox.vala:133
+msgid "Allow access to these apps with admin permission:"
+msgstr "Povoliť prístup k týmto aplikáciam s administrátorským povolením:"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -57,6 +133,22 @@ msgstr "Môj účet"
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
 msgstr "Ostatné účty"
+
+#: ../src/Widgets/InternetBox.vala:77
+msgid "Prevent %s from visiting these websites:"
+msgstr "Zabrániť %s navštevovať tieto webové stránky:"
+
+#: ../src/Widgets/InternetBox.vala:90
+msgid "Add URL"
+msgstr "Pridať adresu URL"
+
+#: ../src/Widgets/InternetBox.vala:99
+msgid "Add a new URL, for example: google.com"
+msgstr "Pridať novú URL, napríklad: google.com"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Invalid URL"
+msgstr "Neplatná adresa URL"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -86,79 +178,23 @@ msgstr "Iba vo všedné dni"
 msgid "Only on weekends"
 msgstr "Iba cez víkendy"
 
-#: ../src/Widgets/GeneralBox.vala:102
+#: ../src/Widgets/GeneralBox.vala:104
 msgid "Weekdays"
 msgstr "Pracovné dni"
 
-#: ../src/Widgets/GeneralBox.vala:106
+#: ../src/Widgets/GeneralBox.vala:108
 msgid "Weekends"
 msgstr "Víkendy"
 
-#: ../src/Widgets/WeekSpinBox.vala:44
-msgid "From:"
-msgstr "Od:"
-
-#: ../src/Widgets/WeekSpinBox.vala:46
-msgid "To:"
-msgstr "Do:"
-
-#: ../src/Widgets/ControlPage.vala:74
-msgid "General"
-msgstr "Všeobecné"
-
-#: ../src/Widgets/ControlPage.vala:75
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:76
-msgid "Applications"
-msgstr "Aplikácie"
-
-#: ../src/Widgets/AppsBox.vala:97
-msgid "Prevent %s from using these apps:"
-msgstr "Zabrániť %s používať tieto aplikácie:"
-
-#: ../src/Widgets/AppsBox.vala:108
-msgid "Add Prevented Apps…"
-msgstr "Pridať obmedzené aplikácie..."
-
-#: ../src/Widgets/AppsBox.vala:112
-msgid "Remove Selected App"
-msgstr "Odstrániť vybranú aplikáciu"
-
-#: ../src/Widgets/AppsBox.vala:117
-msgid "Clear All"
-msgstr "Vymazať všetko"
-
-#: ../src/Widgets/AppsBox.vala:140
-msgid "Allow access to these apps with admin permission:"
-msgstr "Povoliť prístup k týmto aplikáciam s administrátorským povolením:"
-
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Zabrániť %s navštevovať tieto webové stránky:"
-
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "Pridať adresu URL"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Pridať novú URL, napríklad: google.com"
-
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "Neplatná adresa URL"
-
-#: ../src/Plug.vala:72
+#: ../src/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
 msgstr "Na zmenu niektorých nastavení sú potrebné administrátorské práva"
 
-#: ../src/Plug.vala:81
+#: ../src/Plug.vala:80
 msgid "No users to edit"
 msgstr "Žiadny používatelia na úpravu"
 
-#: ../src/Plug.vala:81
+#: ../src/Plug.vala:80
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -170,54 +206,18 @@ msgstr ""
 "Typ účtu užívateľa zo \"Správcu\" na \"Štandardný\" môžete zmeniť v paneli "
 "Používateľských Účtov."
 
-#: ../src/Plug.vala:84
+#: ../src/Plug.vala:83
 msgid "Configure User Accounts"
 msgstr "Konfigurácia používateľských účtov"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:86
 msgid "Open Users settings"
 msgstr "Otvoriť nastavenia používateľa"
 
-#: ../src/Plug.vala:164
+#: ../src/Plug.vala:163
 msgid "Parental Control"
 msgstr "Rodičovská kontrola"
 
-#: ../src/Plug.vala:165
+#: ../src/Plug.vala:164
 msgid "Configure time limits and restrict application usage"
 msgstr "Konfigurovať časové limity a obmedzené použitie aplikácii"
-
-#: ../src/client/Client.vala:125
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr ""
-"Uistite sa že ste zatvorili všetky aplikácie predtým než sa váš počítač "
-"zamkne."
-
-#: ../src/client/Client.vala:129
-msgid "%ld hour"
-msgid_plural "%ld hours"
-msgstr[0] "hodín"
-msgstr[1] "hodina"
-
-#: ../src/client/Client.vala:133
-msgid "%ld minute"
-msgid_plural "%ld minutes"
-msgstr[0] "minút"
-msgstr[1] "minúta"
-msgstr[2] "minúty"
-
-#: ../src/client/Client.vala:136
-msgid "This computer will lock after %s %s. %s"
-msgstr "Tento počítač sa uzamkne po %s %s. %s"
-
-#: ../src/client/Client.vala:138
-msgid "Time left"
-msgstr "Zostávajúci čas"
-
-#: ../src/client/AppLockDialog.vala:27
-msgid "You cannot run this application"
-msgstr "Nemôžete spustiť tuto aplikáciu"
-
-#: ../src/client/AppLockDialog.vala:28
-msgid "You are not permitted to run this application."
-msgstr "Nie ste oprávnený spustiť túto aplikáciu."

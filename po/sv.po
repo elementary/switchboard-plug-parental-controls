@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-30 21:16-0300\n"
+"POT-Creation-Date: 2017-01-02 19:52-0600\n"
 "PO-Revision-Date: 2016-08-02 10:10+0000\n"
 "Last-Translator: Mikael Nyberg <mikanybe@gmail.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2016-10-05 06:26+0000\n"
-"X-Generator: Launchpad (build 18217)\n"
+"X-Launchpad-Export-Date: 2017-01-03 06:19+0000\n"
+"X-Generator: Launchpad (build 18298)\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
 #. *
@@ -45,9 +45,82 @@ msgstr "Hantera inställningar för föräldrakontroll"
 msgid "Authentication is required to change parental control settings"
 msgstr "Autentisering krävs för att ställa in föräldrakontroll"
 
+#: ../src/client/AppUnavailableDialog.vala:27
+msgid "You cannot run this application"
+msgstr "Du kan inte köra detta program"
+
+#: ../src/client/AppUnavailableDialog.vala:28
+msgid "You are not permitted to run this application."
+msgstr "Du har inte tillåtelse att köra detta program."
+
+#: ../src/client/Client.vala:95
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr "Glöm inte att stänga alla dina program innan datorn låser sig."
+
+#: ../src/client/Client.vala:99
+msgid "%ld hour"
+msgid_plural "%ld hours"
+msgstr[0] "%ld timme"
+msgstr[1] "%ld timmar"
+
+#: ../src/client/Client.vala:103
+msgid "%ld minute"
+msgid_plural "%ld minutes"
+msgstr[0] "%ld minut"
+msgstr[1] "%ld minuter"
+
+#: ../src/client/Client.vala:106
+msgid "This computer will lock after %s %s. %s"
+msgstr "Den här datorn låses om %s %s. %s"
+
+#: ../src/client/Client.vala:108
+msgid "Time left"
+msgstr "Återstående tid"
+
+#: ../src/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "Från:"
+
+#: ../src/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Till:"
+
 #: ../src/Widgets/AppChooser.vala:71
 msgid "Search Applications"
 msgstr "Sök efter program"
+
+#: ../src/Widgets/ControlPage.vala:53
+msgid "General"
+msgstr "Allmänt"
+
+#: ../src/Widgets/ControlPage.vala:54
+msgid "Internet"
+msgstr "Internet"
+
+#: ../src/Widgets/ControlPage.vala:55
+msgid "Applications"
+msgstr "Program"
+
+#: ../src/Widgets/AppsBox.vala:90
+msgid "Prevent %s from using these apps:"
+msgstr "Förhindra %s från att använda dessa program:"
+
+#: ../src/Widgets/AppsBox.vala:101
+msgid "Add Prevented Apps…"
+msgstr "Lägg till program…"
+
+#: ../src/Widgets/AppsBox.vala:105
+msgid "Remove Selected App"
+msgstr "Ta bort markerat program"
+
+#: ../src/Widgets/AppsBox.vala:110
+msgid "Clear All"
+msgstr "Rensa allt"
+
+#: ../src/Widgets/AppsBox.vala:133
+msgid "Allow access to these apps with admin permission:"
+msgstr "Tillåt åtkomst till dessa program med administratörsrättigheter:"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
@@ -56,6 +129,22 @@ msgstr "Mitt konto"
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
 msgstr "Övriga konton"
+
+#: ../src/Widgets/InternetBox.vala:77
+msgid "Prevent %s from visiting these websites:"
+msgstr "Förhindra %s från att besöka dessa hemsidor:"
+
+#: ../src/Widgets/InternetBox.vala:90
+msgid "Add URL"
+msgstr "Lägg till URL"
+
+#: ../src/Widgets/InternetBox.vala:99
+msgid "Add a new URL, for example: google.com"
+msgstr "Lägg till en ny URL, t.ex: google.se"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Invalid URL"
+msgstr "Felaktig URL"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -85,79 +174,23 @@ msgstr "Endast på veckodagar"
 msgid "Only on weekends"
 msgstr "Endast på helger"
 
-#: ../src/Widgets/GeneralBox.vala:102
+#: ../src/Widgets/GeneralBox.vala:104
 msgid "Weekdays"
 msgstr "Veckodagar"
 
-#: ../src/Widgets/GeneralBox.vala:106
+#: ../src/Widgets/GeneralBox.vala:108
 msgid "Weekends"
 msgstr "Helger"
 
-#: ../src/Widgets/WeekSpinBox.vala:44
-msgid "From:"
-msgstr "Från:"
-
-#: ../src/Widgets/WeekSpinBox.vala:46
-msgid "To:"
-msgstr "Till:"
-
-#: ../src/Widgets/ControlPage.vala:74
-msgid "General"
-msgstr "Allmänt"
-
-#: ../src/Widgets/ControlPage.vala:75
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:76
-msgid "Applications"
-msgstr "Program"
-
-#: ../src/Widgets/AppsBox.vala:97
-msgid "Prevent %s from using these apps:"
-msgstr "Förhindra %s från att använda dessa program:"
-
-#: ../src/Widgets/AppsBox.vala:108
-msgid "Add Prevented Apps…"
-msgstr "Lägg till program…"
-
-#: ../src/Widgets/AppsBox.vala:112
-msgid "Remove Selected App"
-msgstr "Ta bort markerat program"
-
-#: ../src/Widgets/AppsBox.vala:117
-msgid "Clear All"
-msgstr "Rensa allt"
-
-#: ../src/Widgets/AppsBox.vala:140
-msgid "Allow access to these apps with admin permission:"
-msgstr "Tillåt åtkomst till dessa program med administratörsrättigheter:"
-
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Förhindra %s från att besöka dessa hemsidor:"
-
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "Lägg till URL"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Lägg till en ny URL, t.ex: google.se"
-
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "Felaktig URL"
-
-#: ../src/Plug.vala:72
+#: ../src/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
 msgstr "Vissa inställningar kräver administratörsrättigheter för att ändras"
 
-#: ../src/Plug.vala:81
+#: ../src/Plug.vala:80
 msgid "No users to edit"
 msgstr "Inga användare att ändra"
 
-#: ../src/Plug.vala:81
+#: ../src/Plug.vala:80
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -169,51 +202,18 @@ msgstr ""
 "Du kan ändra en användares kontotyp från \"Administratör\" till \"Standard\" "
 "i Användarkonton."
 
-#: ../src/Plug.vala:84
+#: ../src/Plug.vala:83
 msgid "Configure User Accounts"
 msgstr "Ställ in användarkonton"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:86
 msgid "Open Users settings"
 msgstr "Öppna Användarkonton"
 
-#: ../src/Plug.vala:164
+#: ../src/Plug.vala:163
 msgid "Parental Control"
 msgstr "Föräldrakontroll"
 
-#: ../src/Plug.vala:165
+#: ../src/Plug.vala:164
 msgid "Configure time limits and restrict application usage"
 msgstr "Ställ in tidsbegränsningar och förhindra åtkomst till program"
-
-#: ../src/client/Client.vala:125
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr "Glöm inte att stänga alla dina program innan datorn låser sig."
-
-#: ../src/client/Client.vala:129
-msgid "%ld hour"
-msgid_plural "%ld hours"
-msgstr[0] "%ld timme"
-msgstr[1] "%ld timmar"
-
-#: ../src/client/Client.vala:133
-msgid "%ld minute"
-msgid_plural "%ld minutes"
-msgstr[0] "%ld minut"
-msgstr[1] "%ld minuter"
-
-#: ../src/client/Client.vala:136
-msgid "This computer will lock after %s %s. %s"
-msgstr "Den här datorn låses om %s %s. %s"
-
-#: ../src/client/Client.vala:138
-msgid "Time left"
-msgstr "Återstående tid"
-
-#: ../src/client/AppLockDialog.vala:27
-msgid "You cannot run this application"
-msgstr "Du kan inte köra detta program"
-
-#: ../src/client/AppLockDialog.vala:28
-msgid "You are not permitted to run this application."
-msgstr "Du har inte tillåtelse att köra detta program."
