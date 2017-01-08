@@ -1,23 +1,23 @@
 # Serbian translation for switchboard-plug-parental-controls
 # Copyright (c) 2016 Rosetta Contributors and Canonical Ltd 2016
 # This file is distributed under the same license as the switchboard-plug-parental-controls package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
-#
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2017.
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-01-02 19:52-0600\n"
-"PO-Revision-Date: 2016-10-20 07:34+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Serbian <sr@li.org>\n"
+"PO-Revision-Date: 2017-01-07 09:13+0000\n"
+"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"Language-Team: Serbian <(nothing)>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
 "n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-01-04 06:25+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
+"X-Launchpad-Export-Date: 2017-01-08 06:01+0000\n"
+"X-Generator: Launchpad (build 18302)\n"
+"Language: sr\n"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
 #. *
@@ -40,156 +40,160 @@ msgstr ""
 #. 
 #: ../src/Translation.vala:23
 msgid "Manage parental control settings"
-msgstr ""
+msgstr "Управљајте подешавањима родитељске контроле"
 
 #: ../src/Translation.vala:24
 msgid "Authentication is required to change parental control settings"
 msgstr ""
+"Потребно је потврђивање идентитета за промену подешавања родитељске контроле"
 
 #: ../src/client/AppUnavailableDialog.vala:27
 msgid "You cannot run this application"
-msgstr ""
+msgstr "Не можете покренути овај програм"
 
 #: ../src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
-msgstr ""
+msgstr "Немате овлашћења да покренете овај програм."
 
 #: ../src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
+"Уверите се да сте затворили све програме пре него ваш рачунар буде закључан."
 
 #: ../src/client/Client.vala:99
 msgid "%ld hour"
 msgid_plural "%ld hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%ld сат"
+msgstr[1] "%ld сата"
+msgstr[2] "%ld сати"
 
 #: ../src/client/Client.vala:103
 msgid "%ld minute"
 msgid_plural "%ld minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%ld минут"
+msgstr[1] "%ld минута"
+msgstr[2] "%ld минута"
 
 #: ../src/client/Client.vala:106
 msgid "This computer will lock after %s %s. %s"
-msgstr ""
+msgstr "Овај рачунар ће се закључати након %s %s. %s"
 
 #: ../src/client/Client.vala:108
 msgid "Time left"
-msgstr ""
+msgstr "Престало време"
 
 #: ../src/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr ""
+msgstr "Од:"
 
 #: ../src/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr ""
+msgstr "До:"
 
 #: ../src/Widgets/AppChooser.vala:71
 msgid "Search Applications"
-msgstr ""
+msgstr "Тражите програме"
 
 #: ../src/Widgets/ControlPage.vala:53
 msgid "General"
-msgstr ""
+msgstr "Опште"
 
 #: ../src/Widgets/ControlPage.vala:54
 msgid "Internet"
-msgstr ""
+msgstr "Интернет"
 
 #: ../src/Widgets/ControlPage.vala:55
 msgid "Applications"
-msgstr ""
+msgstr "Програми"
 
 #: ../src/Widgets/AppsBox.vala:90
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "Не дозволи да „%s“ користи ове програме:"
 
 #: ../src/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
-msgstr ""
+msgstr "Додај спречене програме…"
 
 #: ../src/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
-msgstr ""
+msgstr "Уклони изабрани програм"
 
 #: ../src/Widgets/AppsBox.vala:110
 msgid "Clear All"
-msgstr ""
+msgstr "Очисти све"
 
 #: ../src/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
-msgstr ""
+msgstr "Дозволи приступ овим програмима уз допуштење админа:"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
-msgstr ""
+msgstr "Мој налог"
 
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
-msgstr ""
+msgstr "Остали налози"
 
 #: ../src/Widgets/InternetBox.vala:77
 msgid "Prevent %s from visiting these websites:"
-msgstr ""
+msgstr "Не дозволи да „%s“ посети ове веб сајтове:"
 
 #: ../src/Widgets/InternetBox.vala:90
 msgid "Add URL"
-msgstr ""
+msgstr "Додај адресу"
 
 #: ../src/Widgets/InternetBox.vala:99
 msgid "Add a new URL, for example: google.com"
-msgstr ""
+msgstr "Додајте нову адресу, на пример: google.com"
 
 #: ../src/Widgets/InternetBox.vala:100
 msgid "Invalid URL"
-msgstr ""
+msgstr "Неисправна адреса"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
-msgstr ""
+msgstr "Дозволи овом кориснику да:"
 
 #: ../src/Widgets/GeneralBox.vala:65
 msgid "Modify the dock"
-msgstr ""
+msgstr "Измени луку"
 
 #: ../src/Widgets/GeneralBox.vala:68
 msgid "Configure printing"
-msgstr ""
+msgstr "Подеси штампање"
 
 #: ../src/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
-msgstr ""
+msgstr "Ограничи коришћење рачунара:"
 
 #: ../src/Widgets/GeneralBox.vala:92
 msgid "On weekdays and weekends"
-msgstr ""
+msgstr "Данима у недељи и викендом"
 
 #: ../src/Widgets/GeneralBox.vala:93
 msgid "Only on weekdays"
-msgstr ""
+msgstr "Само данима у недељи"
 
 #: ../src/Widgets/GeneralBox.vala:94
 msgid "Only on weekends"
-msgstr ""
+msgstr "Само викендом"
 
 #: ../src/Widgets/GeneralBox.vala:104
 msgid "Weekdays"
-msgstr ""
+msgstr "Данима у недељи"
 
 #: ../src/Widgets/GeneralBox.vala:108
 msgid "Weekends"
-msgstr ""
+msgstr "Викендима"
 
 #: ../src/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Нека подешавања захтевају администраторска права да би се изменила"
 
 #: ../src/Plug.vala:80
 msgid "No users to edit"
-msgstr ""
+msgstr "Нема корисника за уређивање"
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -198,19 +202,23 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
+"Родитељска контрола се може применити само на корисничке налоге који немају "
+"администраторска овлашћења.\n"
+"Можете да измените врсту корисничког налога из „Администратор“ у „Обичан“ у "
+"окну корисничких налога."
 
 #: ../src/Plug.vala:83
 msgid "Configure User Accounts"
-msgstr ""
+msgstr "Подеси корисничке налоге"
 
 #: ../src/Plug.vala:86
 msgid "Open Users settings"
-msgstr ""
+msgstr "Отвори подешавања корисника"
 
 #: ../src/Plug.vala:163
 msgid "Parental Control"
-msgstr ""
+msgstr "Родитељска контрола"
 
 #: ../src/Plug.vala:164
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "Подесите временска ограничења и ограничите коришћење програма"
