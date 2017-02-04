@@ -96,11 +96,11 @@ namespace PC.Client {
             }
 
             if (hours > 0) {
-                hours_str = ngettext ("%ld hour", "%ld hours", (ulong)hours).printf ((ulong)hours);
+                hours_str = ngettext ("%lu hour", "%lu hours", (ulong)hours).printf ((ulong)hours);
             }
 
             if (minutes > 0) {
-                minutes_str = ngettext ("%ld minute", "%ld minutes", (ulong)minutes).printf ((ulong)minutes);
+                minutes_str = ngettext ("%lu minute", "%lu minutes", (ulong)minutes).printf ((ulong)minutes);
             }
 
             string body = _("This computer will lock after %s %s. %s".printf (hours_str, minutes_str, info));
