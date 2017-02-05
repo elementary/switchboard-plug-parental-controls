@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-02 19:52-0600\n"
+"POT-Creation-Date: 2017-02-04 11:47+0100\n"
 "PO-Revision-Date: 2016-12-13 13:52+0000\n"
 "Last-Translator: Marius Albina <marius.albina@gmail.com>\n"
 "Language-Team: Romanian <ro@li.org>\n"
@@ -16,96 +16,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n == 1 ? 0: (((n % 100 > 19) || ((n % 100 "
 "== 0) && (n != 0))) ? 2: 1));\n"
-"X-Launchpad-Export-Date: 2017-01-04 06:25+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
-
-#. //launchpad.net/switchboard-plug-parental-controls)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 3 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
-#. 
-#: ../src/Translation.vala:23
-msgid "Manage parental control settings"
-msgstr "Administrează setările controlului parental"
-
-#: ../src/Translation.vala:24
-msgid "Authentication is required to change parental control settings"
-msgstr ""
-"Autentificarea este necesară pentru a modifica setările controlului parental"
-
-#: ../src/client/AppUnavailableDialog.vala:27
-msgid "You cannot run this application"
-msgstr "Nu poţi rula această aplicaţie"
-
-#: ../src/client/AppUnavailableDialog.vala:28
-msgid "You are not permitted to run this application."
-msgstr "Nu ai drepturi să rulezi această aplicaţie."
-
-#: ../src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr ""
-"Verifică că toate aplicaţiile sunt închise înaintea blocării calculatorului."
-
-#: ../src/client/Client.vala:99
-msgid "%ld hour"
-msgid_plural "%ld hours"
-msgstr[0] "%ld oră"
-msgstr[1] "%ld ore"
-msgstr[2] "%ld ore"
-
-#: ../src/client/Client.vala:103
-msgid "%ld minute"
-msgid_plural "%ld minutes"
-msgstr[0] "un minut"
-msgstr[1] "%ld minute"
-msgstr[2] "%ld minute"
-
-#: ../src/client/Client.vala:106
-msgid "This computer will lock after %s %s. %s"
-msgstr "Calculatorul se va bloca după %s %s. %s"
-
-#: ../src/client/Client.vala:108
-msgid "Time left"
-msgstr "Timp rămas"
-
-#: ../src/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "De la:"
-
-#: ../src/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Pâna la:"
-
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Caută aplicații"
-
-#: ../src/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "General"
-
-#: ../src/Widgets/ControlPage.vala:54
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:55
-msgid "Applications"
-msgstr "Aplicații"
+"X-Launchpad-Export-Date: 2017-02-05 05:58+0000\n"
+"X-Generator: Launchpad (build 18322)\n"
 
 #: ../src/Widgets/AppsBox.vala:90
 msgid "Prevent %s from using these apps:"
@@ -127,6 +39,18 @@ msgstr "Curăță tot"
 msgid "Allow access to these apps with admin permission:"
 msgstr "Permite accesul la aceste aplicaţii cu drepturi de administrator:"
 
+#: ../src/Widgets/ControlPage.vala:53
+msgid "General"
+msgstr "General"
+
+#: ../src/Widgets/ControlPage.vala:54
+msgid "Internet"
+msgstr "Internet"
+
+#: ../src/Widgets/ControlPage.vala:55
+msgid "Applications"
+msgstr "Aplicații"
+
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
 msgstr "Contul meu"
@@ -135,21 +59,13 @@ msgstr "Contul meu"
 msgid "Other Accounts"
 msgstr "Alte conturi"
 
-#: ../src/Widgets/InternetBox.vala:77
-msgid "Prevent %s from visiting these websites:"
-msgstr "Impiedică %s să viziteze aceste pagini web:"
+#: ../src/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "De la:"
 
-#: ../src/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr "Adaugă URL"
-
-#: ../src/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr "Adaugă un URL nou, de exemplu: google.com"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr "URL invalid"
+#: ../src/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Pâna la:"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -187,6 +103,54 @@ msgstr "Zilele săptămânii"
 msgid "Weekends"
 msgstr "Weekenduri"
 
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Caută aplicații"
+
+#: ../src/Widgets/InternetBox.vala:77
+msgid "Prevent %s from visiting these websites:"
+msgstr "Impiedică %s să viziteze aceste pagini web:"
+
+#: ../src/Widgets/InternetBox.vala:90
+msgid "Add URL"
+msgstr "Adaugă URL"
+
+#: ../src/Widgets/InternetBox.vala:99
+msgid "Add a new URL, for example: google.com"
+msgstr "Adaugă un URL nou, de exemplu: google.com"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Invalid URL"
+msgstr "URL invalid"
+
+#. //launchpad.net/switchboard-plug-parental-controls)
+#. *
+#. * This library is free software; you can redistribute it and/or
+#. * modify it under the terms of the GNU Library General Public
+#. * License as published by the Free Software Foundation; either
+#. * version 3 of the License, or (at your option) any later version.
+#. *
+#. * This library is distributed in the hope that it will be useful,
+#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#. * Library General Public License for more details.
+#. *
+#. * You should have received a copy of the GNU Library General Public
+#. * License along with this library; if not, write to the
+#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+#. * Boston, MA 02111-1307, USA.
+#. *
+#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
+#. 
+#: ../src/Translation.vala:23
+msgid "Manage parental control settings"
+msgstr "Administrează setările controlului parental"
+
+#: ../src/Translation.vala:24
+msgid "Authentication is required to change parental control settings"
+msgstr ""
+"Autentificarea este necesară pentru a modifica setările controlului parental"
+
 #: ../src/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
@@ -223,3 +187,37 @@ msgstr "Control parental"
 #: ../src/Plug.vala:164
 msgid "Configure time limits and restrict application usage"
 msgstr "Configură timpul limită şi restricţionează folosirea aplicaţiilor"
+
+#: ../src/client/AppUnavailableDialog.vala:27
+msgid "You cannot run this application"
+msgstr "Nu poţi rula această aplicaţie"
+
+#: ../src/client/AppUnavailableDialog.vala:28
+msgid "You are not permitted to run this application."
+msgstr "Nu ai drepturi să rulezi această aplicaţie."
+
+#: ../src/client/Client.vala:95
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr ""
+"Verifică că toate aplicaţiile sunt închise înaintea blocării calculatorului."
+
+#: ../src/client/Client.vala:99
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/client/Client.vala:103
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/client/Client.vala:106
+msgid "This computer will lock after %s %s. %s"
+msgstr "Calculatorul se va bloca după %s %s. %s"
+
+#: ../src/client/Client.vala:108
+msgid "Time left"
+msgstr "Timp rămas"

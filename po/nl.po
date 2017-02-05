@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-02 19:52-0600\n"
+"POT-Creation-Date: 2017-02-04 11:47+0100\n"
 "PO-Revision-Date: 2016-07-22 16:07+0000\n"
 "Last-Translator: kay van der Zander <Unknown>\n"
 "Language-Team: Dutch <nl@li.org>\n"
@@ -15,96 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-01-04 06:25+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
-
-#. //launchpad.net/switchboard-plug-parental-controls)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 3 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
-#. 
-#: ../src/Translation.vala:23
-msgid "Manage parental control settings"
-msgstr "Beheer ouderlijk toezicht instellingen"
-
-#: ../src/Translation.vala:24
-msgid "Authentication is required to change parental control settings"
-msgstr ""
-"administrator rechten zijn nodig om ouderlijk toezichts instellingen te "
-"verranderen"
-
-#: ../src/client/AppUnavailableDialog.vala:27
-msgid "You cannot run this application"
-msgstr "U kan dit programm niet uitvoeren"
-
-#: ../src/client/AppUnavailableDialog.vala:28
-msgid "You are not permitted to run this application."
-msgstr "U hebt niet de rechten om dit programma uit te voeren"
-
-#: ../src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr ""
-"Zorg ervoor dat alle programma's afgesloten zijn, voordat deze computer zich "
-"zelf vergrendeld"
-
-#: ../src/client/Client.vala:99
-msgid "%ld hour"
-msgid_plural "%ld hours"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../src/client/Client.vala:103
-msgid "%ld minute"
-msgid_plural "%ld minutes"
-msgstr[0] ""
-msgstr[1] ""
-
-#: ../src/client/Client.vala:106
-msgid "This computer will lock after %s %s. %s"
-msgstr "d"
-
-#: ../src/client/Client.vala:108
-msgid "Time left"
-msgstr "Resterende tijd"
-
-#: ../src/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Vanaf:"
-
-#: ../src/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Tot:"
-
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Zoek programma's"
-
-#: ../src/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "Algemeen"
-
-#: ../src/Widgets/ControlPage.vala:54
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:55
-msgid "Applications"
-msgstr "Programma's"
+"X-Launchpad-Export-Date: 2017-02-05 05:57+0000\n"
+"X-Generator: Launchpad (build 18322)\n"
 
 #: ../src/Widgets/AppsBox.vala:90
 msgid "Prevent %s from using these apps:"
@@ -128,6 +40,18 @@ msgstr ""
 "Toegang verlenen aan de volgende applicaties, alleen met administrators "
 "goedkeuring"
 
+#: ../src/Widgets/ControlPage.vala:53
+msgid "General"
+msgstr "Algemeen"
+
+#: ../src/Widgets/ControlPage.vala:54
+msgid "Internet"
+msgstr "Internet"
+
+#: ../src/Widgets/ControlPage.vala:55
+msgid "Applications"
+msgstr "Programma's"
+
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
 msgstr "Mijn account"
@@ -136,21 +60,13 @@ msgstr "Mijn account"
 msgid "Other Accounts"
 msgstr "Andere accounts"
 
-#: ../src/Widgets/InternetBox.vala:77
-msgid "Prevent %s from visiting these websites:"
-msgstr "Voorkom toegang voor het bezoeken van de volgende websites aan %s."
+#: ../src/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "Vanaf:"
 
-#: ../src/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr "URL Toevoegen"
-
-#: ../src/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr "Voeg nieuwe URL toe, bijvoorbeeld: google.com"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr "Ongeldige URL"
+#: ../src/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Tot:"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -187,6 +103,55 @@ msgstr "Werkdagen"
 #: ../src/Widgets/GeneralBox.vala:108
 msgid "Weekends"
 msgstr "Weekenden"
+
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Zoek programma's"
+
+#: ../src/Widgets/InternetBox.vala:77
+msgid "Prevent %s from visiting these websites:"
+msgstr "Voorkom toegang voor het bezoeken van de volgende websites aan %s."
+
+#: ../src/Widgets/InternetBox.vala:90
+msgid "Add URL"
+msgstr "URL Toevoegen"
+
+#: ../src/Widgets/InternetBox.vala:99
+msgid "Add a new URL, for example: google.com"
+msgstr "Voeg nieuwe URL toe, bijvoorbeeld: google.com"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Invalid URL"
+msgstr "Ongeldige URL"
+
+#. //launchpad.net/switchboard-plug-parental-controls)
+#. *
+#. * This library is free software; you can redistribute it and/or
+#. * modify it under the terms of the GNU Library General Public
+#. * License as published by the Free Software Foundation; either
+#. * version 3 of the License, or (at your option) any later version.
+#. *
+#. * This library is distributed in the hope that it will be useful,
+#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#. * Library General Public License for more details.
+#. *
+#. * You should have received a copy of the GNU Library General Public
+#. * License along with this library; if not, write to the
+#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+#. * Boston, MA 02111-1307, USA.
+#. *
+#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
+#. 
+#: ../src/Translation.vala:23
+msgid "Manage parental control settings"
+msgstr "Beheer ouderlijk toezicht instellingen"
+
+#: ../src/Translation.vala:24
+msgid "Authentication is required to change parental control settings"
+msgstr ""
+"administrator rechten zijn nodig om ouderlijk toezichts instellingen te "
+"verranderen"
 
 #: ../src/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
@@ -225,3 +190,38 @@ msgstr "Ouderlijk toezicht"
 #: ../src/Plug.vala:164
 msgid "Configure time limits and restrict application usage"
 msgstr "Configureer tijds limiten en limiteer programma gebruik"
+
+#: ../src/client/AppUnavailableDialog.vala:27
+msgid "You cannot run this application"
+msgstr "U kan dit programm niet uitvoeren"
+
+#: ../src/client/AppUnavailableDialog.vala:28
+msgid "You are not permitted to run this application."
+msgstr "U hebt niet de rechten om dit programma uit te voeren"
+
+#: ../src/client/Client.vala:95
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr ""
+"Zorg ervoor dat alle programma's afgesloten zijn, voordat deze computer zich "
+"zelf vergrendeld"
+
+#: ../src/client/Client.vala:99
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/client/Client.vala:103
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/client/Client.vala:106
+msgid "This computer will lock after %s %s. %s"
+msgstr "d"
+
+#: ../src/client/Client.vala:108
+msgid "Time left"
+msgstr "Resterende tijd"

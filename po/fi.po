@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2017-01-02 19:52-0600\n"
+"POT-Creation-Date: 2017-02-04 11:47+0100\n"
 "PO-Revision-Date: 2016-09-01 12:39+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -15,93 +15,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-01-04 06:25+0000\n"
-"X-Generator: Launchpad (build 18298)\n"
-
-#. //launchpad.net/switchboard-plug-parental-controls)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 3 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
-#. 
-#: ../src/Translation.vala:23
-msgid "Manage parental control settings"
-msgstr "Hallitse käytönvalvonnan asetuksia"
-
-#: ../src/Translation.vala:24
-msgid "Authentication is required to change parental control settings"
-msgstr "Käytönvalvonnan asetusten muuttaminen vaatii tunnistautumisen"
-
-#: ../src/client/AppUnavailableDialog.vala:27
-msgid "You cannot run this application"
-msgstr "Et voi suorittaa tätä sovellusta"
-
-#: ../src/client/AppUnavailableDialog.vala:28
-msgid "You are not permitted to run this application."
-msgstr "Sinulla ei ole oikeutta suorittaa tätä sovellusta."
-
-#: ../src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr ""
-"Varmista, että suljet kaikki sovellukset, ennen kuin tietokone lukitaan."
-
-#: ../src/client/Client.vala:99
-msgid "%ld hour"
-msgid_plural "%ld hours"
-msgstr[0] "%ld tunti"
-msgstr[1] "%ld tuntia"
-
-#: ../src/client/Client.vala:103
-msgid "%ld minute"
-msgid_plural "%ld minutes"
-msgstr[0] "%ld minuutti"
-msgstr[1] "%ld minuuttia"
-
-#: ../src/client/Client.vala:106
-msgid "This computer will lock after %s %s. %s"
-msgstr "Tämä tietokone lukkiutuu %s %s. %s"
-
-#: ../src/client/Client.vala:108
-msgid "Time left"
-msgstr "Aikaa jäljellä"
-
-#: ../src/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Alkaa:"
-
-#: ../src/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Päättyy:"
-
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Etsi sovelluksia"
-
-#: ../src/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "Yleiset"
-
-#: ../src/Widgets/ControlPage.vala:54
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:55
-msgid "Applications"
-msgstr "Sovellukset"
+"X-Launchpad-Export-Date: 2017-02-05 05:57+0000\n"
+"X-Generator: Launchpad (build 18322)\n"
 
 #: ../src/Widgets/AppsBox.vala:90
 msgid "Prevent %s from using these apps:"
@@ -123,6 +38,18 @@ msgstr "Tyhjennä kaikki"
 msgid "Allow access to these apps with admin permission:"
 msgstr "Salli seuraavien sovellusten käyttö ylläpito-oikeuksin:"
 
+#: ../src/Widgets/ControlPage.vala:53
+msgid "General"
+msgstr "Yleiset"
+
+#: ../src/Widgets/ControlPage.vala:54
+msgid "Internet"
+msgstr "Internet"
+
+#: ../src/Widgets/ControlPage.vala:55
+msgid "Applications"
+msgstr "Sovellukset"
+
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
 msgstr "Oma tili"
@@ -131,21 +58,13 @@ msgstr "Oma tili"
 msgid "Other Accounts"
 msgstr "Muut tilit"
 
-#: ../src/Widgets/InternetBox.vala:77
-msgid "Prevent %s from visiting these websites:"
-msgstr "Estä käyttäjää %s käymästä seuraavilla sivustoilla:"
+#: ../src/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "Alkaa:"
 
-#: ../src/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr "Lisää verkko-osoite"
-
-#: ../src/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr "Lisää uusi osoite, esim. google.com"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr "Virheellinen osoite"
+#: ../src/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Päättyy:"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -183,6 +102,53 @@ msgstr "Arkipäivinä"
 msgid "Weekends"
 msgstr "Viikonloppuisin"
 
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Etsi sovelluksia"
+
+#: ../src/Widgets/InternetBox.vala:77
+msgid "Prevent %s from visiting these websites:"
+msgstr "Estä käyttäjää %s käymästä seuraavilla sivustoilla:"
+
+#: ../src/Widgets/InternetBox.vala:90
+msgid "Add URL"
+msgstr "Lisää verkko-osoite"
+
+#: ../src/Widgets/InternetBox.vala:99
+msgid "Add a new URL, for example: google.com"
+msgstr "Lisää uusi osoite, esim. google.com"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Invalid URL"
+msgstr "Virheellinen osoite"
+
+#. //launchpad.net/switchboard-plug-parental-controls)
+#. *
+#. * This library is free software; you can redistribute it and/or
+#. * modify it under the terms of the GNU Library General Public
+#. * License as published by the Free Software Foundation; either
+#. * version 3 of the License, or (at your option) any later version.
+#. *
+#. * This library is distributed in the hope that it will be useful,
+#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+#. * Library General Public License for more details.
+#. *
+#. * You should have received a copy of the GNU Library General Public
+#. * License along with this library; if not, write to the
+#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+#. * Boston, MA 02111-1307, USA.
+#. *
+#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
+#. 
+#: ../src/Translation.vala:23
+msgid "Manage parental control settings"
+msgstr "Hallitse käytönvalvonnan asetuksia"
+
+#: ../src/Translation.vala:24
+msgid "Authentication is required to change parental control settings"
+msgstr "Käytönvalvonnan asetusten muuttaminen vaatii tunnistautumisen"
+
 #: ../src/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
 msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"
@@ -218,3 +184,37 @@ msgstr "Käytönvalvonta"
 #: ../src/Plug.vala:164
 msgid "Configure time limits and restrict application usage"
 msgstr "Hallitse aikarajoituksia ja rajoita sovellusten käyttöä"
+
+#: ../src/client/AppUnavailableDialog.vala:27
+msgid "You cannot run this application"
+msgstr "Et voi suorittaa tätä sovellusta"
+
+#: ../src/client/AppUnavailableDialog.vala:28
+msgid "You are not permitted to run this application."
+msgstr "Sinulla ei ole oikeutta suorittaa tätä sovellusta."
+
+#: ../src/client/Client.vala:95
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr ""
+"Varmista, että suljet kaikki sovellukset, ennen kuin tietokone lukitaan."
+
+#: ../src/client/Client.vala:99
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/client/Client.vala:103
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../src/client/Client.vala:106
+msgid "This computer will lock after %s %s. %s"
+msgstr "Tämä tietokone lukkiutuu %s %s. %s"
+
+#: ../src/client/Client.vala:108
+msgid "Time left"
+msgstr "Aikaa jäljellä"
