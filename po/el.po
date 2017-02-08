@@ -3,15 +3,15 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-04 11:47+0100\n"
-"PO-Revision-Date: 2017-02-04 13:40+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-02-07 15:18+0000\n"
+"Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-02-05 05:57+0000\n"
-"X-Generator: Launchpad (build 18322)\n"
+"X-Launchpad-Export-Date: 2017-02-08 05:15+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/Widgets/AppsBox.vala:90
 msgid "Prevent %s from using these apps:"
@@ -43,23 +43,23 @@ msgstr ""
 
 #: ../src/Widgets/ControlPage.vala:55
 msgid "Applications"
-msgstr ""
+msgstr "Εφαρμογές"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
-msgstr ""
+msgstr "Ο λογαριασμός μου"
 
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
-msgstr ""
+msgstr "Άλλοι λογαριασμοί"
 
 #: ../src/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr ""
+msgstr "Από:"
 
 #: ../src/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr ""
+msgstr "Προς:"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -99,7 +99,7 @@ msgstr ""
 
 #: ../src/Widgets/AppChooser.vala:71
 msgid "Search Applications"
-msgstr ""
+msgstr "Αναζήτηση εφαρμογών"
 
 #: ../src/Widgets/InternetBox.vala:77
 msgid "Prevent %s from visiting these websites:"
@@ -107,7 +107,7 @@ msgstr ""
 
 #: ../src/Widgets/InternetBox.vala:90
 msgid "Add URL"
-msgstr ""
+msgstr "Προσθήκη URL"
 
 #: ../src/Widgets/InternetBox.vala:99
 msgid "Add a new URL, for example: google.com"
@@ -143,6 +143,7 @@ msgstr ""
 #: ../src/Translation.vala:24
 msgid "Authentication is required to change parental control settings"
 msgstr ""
+"Απαιτείται επαλήθευση για να αλλάξετε τις ρυθμίσεις του γονικού ελέγχου"
 
 #: ../src/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
@@ -170,7 +171,7 @@ msgstr ""
 
 #: ../src/Plug.vala:163
 msgid "Parental Control"
-msgstr ""
+msgstr "Γονικός έλεγχος"
 
 #: ../src/Plug.vala:164
 msgid "Configure time limits and restrict application usage"
