@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-02-04 11:47+0100\n"
-"PO-Revision-Date: 2017-01-27 21:43+0000\n"
+"PO-Revision-Date: 2017-02-10 20:50+0000\n"
 "Last-Translator: Rokar <Unknown>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Launchpad-Export-Date: 2017-02-05 05:57+0000\n"
-"X-Generator: Launchpad (build 18322)\n"
+"X-Launchpad-Export-Date: 2017-02-11 05:56+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/Widgets/AppsBox.vala:90
 msgid "Prevent %s from using these apps:"
@@ -32,7 +32,7 @@ msgstr ""
 
 #: ../src/Widgets/AppsBox.vala:110
 msgid "Clear All"
-msgstr ""
+msgstr "Tevî Paqij Bike"
 
 #: ../src/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
@@ -40,23 +40,23 @@ msgstr ""
 
 #: ../src/Widgets/ControlPage.vala:53
 msgid "General"
-msgstr ""
+msgstr "Gîştî"
 
 #: ../src/Widgets/ControlPage.vala:54
 msgid "Internet"
-msgstr ""
+msgstr "Tor"
 
 #: ../src/Widgets/ControlPage.vala:55
 msgid "Applications"
-msgstr ""
+msgstr "Bername"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
-msgstr ""
+msgstr "Hesaba min"
 
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
-msgstr ""
+msgstr "Hesabên din"
 
 #: ../src/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -64,7 +64,7 @@ msgstr "Ji:"
 
 #: ../src/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr ""
+msgstr "Ji bo:"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
@@ -96,15 +96,15 @@ msgstr ""
 
 #: ../src/Widgets/GeneralBox.vala:104
 msgid "Weekdays"
-msgstr ""
+msgstr "Rojên navhefteyê"
 
 #: ../src/Widgets/GeneralBox.vala:108
 msgid "Weekends"
-msgstr ""
+msgstr "Rojên dawiya hefteyê"
 
 #: ../src/Widgets/AppChooser.vala:71
 msgid "Search Applications"
-msgstr ""
+msgstr "Li sepanan bigere"
 
 #: ../src/Widgets/InternetBox.vala:77
 msgid "Prevent %s from visiting these websites:"
@@ -120,7 +120,7 @@ msgstr ""
 
 #: ../src/Widgets/InternetBox.vala:100
 msgid "Invalid URL"
-msgstr ""
+msgstr "URL ya nederbasdar"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
 #. *
@@ -175,7 +175,7 @@ msgstr ""
 
 #: ../src/Plug.vala:163
 msgid "Parental Control"
-msgstr ""
+msgstr "Kontrola Malbatî"
 
 #: ../src/Plug.vala:164
 msgid "Configure time limits and restrict application usage"
@@ -197,14 +197,14 @@ msgstr ""
 #: ../src/client/Client.vala:99
 msgid "%lu hour"
 msgid_plural "%lu hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu saet"
+msgstr[1] "%lu saet"
 
 #: ../src/client/Client.vala:103
 msgid "%lu minute"
 msgid_plural "%lu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu deq"
+msgstr[1] "%lu deqe"
 
 #: ../src/client/Client.vala:106
 msgid "This computer will lock after %s %s. %s"
