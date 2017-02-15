@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
 "POT-Creation-Date: 2017-02-04 11:47+0100\n"
-"PO-Revision-Date: 2016-09-21 15:03+0000\n"
+"PO-Revision-Date: 2017-02-14 17:35+0000\n"
 "Last-Translator: Damian Woźniak <fiszet@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
+"X-Launchpad-Export-Date: 2017-02-15 06:49+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/Widgets/AppsBox.vala:90
@@ -204,14 +204,16 @@ msgstr ""
 #: ../src/client/Client.vala:99
 msgid "%lu hour"
 msgid_plural "%lu hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu godzina"
+msgstr[1] "%lu godziny"
+msgstr[2] "%lu godzin"
 
 #: ../src/client/Client.vala:103
 msgid "%lu minute"
 msgid_plural "%lu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu minuta"
+msgstr[1] "%lu minuty"
+msgstr[2] "%lu minut"
 
 #: ../src/client/Client.vala:106
 msgid "This computer will lock after %s %s. %s"
