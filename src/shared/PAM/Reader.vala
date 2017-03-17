@@ -22,22 +22,15 @@
 
 namespace PC.PAM {
     public class Reader : Object {
-        public static string get_config (string contents, bool ignore_comments = true) {
-            string config = "";
+        public static string get_config (string contents, out int start_idx, out int end_idx) {
+            start_idx = contents.index_of (Constants.PAM_CONF_START);
+            end_idx = contents.index_of (Constants.PAM_CONF_END) + Constants.PAM_CONF_END.char_count ();
 
-            int start_idx = contents.index_of (Constants.PAM_CONF_START);
-            int end_idx = contents.index_of (Constants.PAM_CONF_END) + Constants.PAM_CONF_END.char_count ();
             if (start_idx == -1 || end_idx == -1) {
-                return config;
+                return "";
             }
 
-            config = contents.slice (start_idx, end_idx);
-
-            if (ignore_comments) {
-                return Utils.remove_comments (config);
-            }
-
-            return config;
+            return contents.slice (start_idx, end_idx);
         }
 
         public static List<Token> get_tokens (string filename) {
@@ -49,7 +42,7 @@ namespace PC.PAM {
                 return new List<Token> ();
             }
 
-            string config = get_config (contents);
+            string config = get_config (contents, null, null);
             return Token.parse (config);
         }
 

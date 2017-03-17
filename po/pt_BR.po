@@ -7,16 +7,120 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2016-07-30 21:16-0300\n"
-"PO-Revision-Date: 2016-08-01 13:45+0000\n"
+"POT-Creation-Date: 2017-02-04 11:47+0100\n"
+"PO-Revision-Date: 2017-02-12 16:44+0000\n"
 "Last-Translator: Leonardo Lemos <Unknown>\n"
 "Language-Team: Brazilian Portuguese <pt_BR@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Launchpad-Export-Date: 2016-08-02 06:06+0000\n"
-"X-Generator: Launchpad (build 18169)\n"
+"X-Launchpad-Export-Date: 2017-02-13 06:02+0000\n"
+"X-Generator: Launchpad (build 18326)\n"
+
+#: ../src/Widgets/AppsBox.vala:90
+msgid "Prevent %s from using these apps:"
+msgstr "Impedir %s de usar estes aplicativos:"
+
+#: ../src/Widgets/AppsBox.vala:101
+msgid "Add Prevented Apps…"
+msgstr "Adicionar aplicativos impedidos"
+
+#: ../src/Widgets/AppsBox.vala:105
+msgid "Remove Selected App"
+msgstr "Remover aplicativo selecionado"
+
+#: ../src/Widgets/AppsBox.vala:110
+msgid "Clear All"
+msgstr "Limpar tudo"
+
+#: ../src/Widgets/AppsBox.vala:133
+msgid "Allow access to these apps with admin permission:"
+msgstr "Acessar estes aplicativos com permissão do administrador"
+
+#: ../src/Widgets/ControlPage.vala:53
+msgid "General"
+msgstr "Geral"
+
+#: ../src/Widgets/ControlPage.vala:54
+msgid "Internet"
+msgstr "Internet"
+
+#: ../src/Widgets/ControlPage.vala:55
+msgid "Applications"
+msgstr "Aplicativos"
+
+#: ../src/Widgets/UserList.vala:42
+msgid "My Account"
+msgstr "Minha conta"
+
+#: ../src/Widgets/UserList.vala:46
+msgid "Other Accounts"
+msgstr "Outras contas"
+
+#: ../src/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "De:"
+
+#: ../src/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Até:"
+
+#: ../src/Widgets/GeneralBox.vala:62
+msgid "Allow this user to:"
+msgstr "Permitir esse usuário à:"
+
+#: ../src/Widgets/GeneralBox.vala:65
+msgid "Modify the dock"
+msgstr "Modificar o dock"
+
+#: ../src/Widgets/GeneralBox.vala:68
+msgid "Configure printing"
+msgstr "Configurar impressão"
+
+#: ../src/Widgets/GeneralBox.vala:84
+msgid "Limit computer use:"
+msgstr "Limitar uso do computador:"
+
+#: ../src/Widgets/GeneralBox.vala:92
+msgid "On weekdays and weekends"
+msgstr "Na semana e nos fins de semana"
+
+#: ../src/Widgets/GeneralBox.vala:93
+msgid "Only on weekdays"
+msgstr "Somente na semana"
+
+#: ../src/Widgets/GeneralBox.vala:94
+msgid "Only on weekends"
+msgstr "Somente nos fins de semana"
+
+#: ../src/Widgets/GeneralBox.vala:104
+msgid "Weekdays"
+msgstr "Semana"
+
+#: ../src/Widgets/GeneralBox.vala:108
+msgid "Weekends"
+msgstr "Fins de semana"
+
+#: ../src/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Pesquisar por aplicativos"
+
+#: ../src/Widgets/InternetBox.vala:77
+msgid "Prevent %s from visiting these websites:"
+msgstr "Impedir %s de visitar estes websites:"
+
+#: ../src/Widgets/InternetBox.vala:90
+msgid "Add URL"
+msgstr "Adicionar URL"
+
+#: ../src/Widgets/InternetBox.vala:99
+msgid "Add a new URL, for example: google.com"
+msgstr "Adicionar uma nova URL, por exemplo: google.com"
+
+#: ../src/Widgets/InternetBox.vala:100
+msgid "Invalid URL"
+msgstr "URL inválida"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
 #. *
@@ -47,121 +151,17 @@ msgstr ""
 "A autenticação é necessária para realizar alterações nas configurações de "
 "controle dos pais."
 
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Pesquisar por aplicativos"
-
-#: ../src/Widgets/UserList.vala:42
-msgid "My Account"
-msgstr "Minha conta"
-
-#: ../src/Widgets/UserList.vala:46
-msgid "Other Accounts"
-msgstr "Outras contas"
-
-#: ../src/Widgets/GeneralBox.vala:62
-msgid "Allow this user to:"
-msgstr "Permitir esse usuário à:"
-
-#: ../src/Widgets/GeneralBox.vala:65
-msgid "Modify the dock"
-msgstr "Modificar o dock"
-
-#: ../src/Widgets/GeneralBox.vala:68
-msgid "Configure printing"
-msgstr "Configurar impressão"
-
-#: ../src/Widgets/GeneralBox.vala:84
-msgid "Limit computer use:"
-msgstr "Limitar uso do computador:"
-
-#: ../src/Widgets/GeneralBox.vala:92
-msgid "On weekdays and weekends"
-msgstr "Na semana e nos fins de semana"
-
-#: ../src/Widgets/GeneralBox.vala:93
-msgid "Only on weekdays"
-msgstr "Somente na semana"
-
-#: ../src/Widgets/GeneralBox.vala:94
-msgid "Only on weekends"
-msgstr "Somente nos fins de semana"
-
-#: ../src/Widgets/GeneralBox.vala:102
-msgid "Weekdays"
-msgstr "Semana"
-
-#: ../src/Widgets/GeneralBox.vala:106
-msgid "Weekends"
-msgstr "Fins de semana"
-
-#: ../src/Widgets/WeekSpinBox.vala:44
-msgid "From:"
-msgstr "De:"
-
-#: ../src/Widgets/WeekSpinBox.vala:46
-msgid "To:"
-msgstr "Até:"
-
-#: ../src/Widgets/ControlPage.vala:74
-msgid "General"
-msgstr "Geral"
-
-#: ../src/Widgets/ControlPage.vala:75
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:76
-msgid "Applications"
-msgstr "Aplicativos"
-
-#: ../src/Widgets/AppsBox.vala:97
-msgid "Prevent %s from using these apps:"
-msgstr "Impedir %s de usar estes aplicativos:"
-
-#: ../src/Widgets/AppsBox.vala:108
-msgid "Add Prevented Apps…"
-msgstr "Adicionar aplicativos impedidos"
-
-#: ../src/Widgets/AppsBox.vala:112
-msgid "Remove Selected App"
-msgstr "Remover aplicativo selecionado"
-
-#: ../src/Widgets/AppsBox.vala:117
-msgid "Clear All"
-msgstr "Limpar tudo"
-
-#: ../src/Widgets/AppsBox.vala:140
-msgid "Allow access to these apps with admin permission:"
-msgstr "Acessar estes aplicativos com permissão do administrador"
-
-#: ../src/Widgets/InternetBox.vala:78
-msgid "Prevent %s from visiting these websites:"
-msgstr "Impedir %s de visitar estes websites:"
-
-#: ../src/Widgets/InternetBox.vala:91
-msgid "Add URL"
-msgstr "Adicionar URL"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Add a new URL, for example: google.com"
-msgstr "Adicionar uma nova URL, por exemplo: google.com"
-
-#: ../src/Widgets/InternetBox.vala:101
-msgid "Invalid URL"
-msgstr "URL inválida"
-
-#: ../src/Plug.vala:72
+#: ../src/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Algumas configurações precisam de direitos administrativos para serem "
 "modificadas"
 
-#: ../src/Plug.vala:81
+#: ../src/Plug.vala:80
 msgid "No users to edit"
 msgstr "Nenhum usuário para editar"
 
-#: ../src/Plug.vala:81
+#: ../src/Plug.vala:80
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -173,53 +173,53 @@ msgstr ""
 "Você pode mudar o tipo de uma conta de \"Administrador\" para \"Padrão\" no "
 "painel de contas de usuário."
 
-#: ../src/Plug.vala:84
+#: ../src/Plug.vala:83
 msgid "Configure User Accounts"
 msgstr "Configurar contas de usuários"
 
-#: ../src/Plug.vala:87
+#: ../src/Plug.vala:86
 msgid "Open Users settings"
 msgstr "Abrir configurações de usuários"
 
-#: ../src/Plug.vala:164
+#: ../src/Plug.vala:163
 msgid "Parental Control"
 msgstr "Controle dos pais"
 
-#: ../src/Plug.vala:165
+#: ../src/Plug.vala:164
 msgid "Configure time limits and restrict application usage"
 msgstr "Configure limites de tempo e restrinja o uso de aplicativos"
 
-#: ../src/client/Client.vala:125
+#: ../src/client/AppUnavailableDialog.vala:27
+msgid "You cannot run this application"
+msgstr "Você não pode abrir este aplicativo"
+
+#: ../src/client/AppUnavailableDialog.vala:28
+msgid "You are not permitted to run this application."
+msgstr "Você não tem permissão para abrir este aplicativo."
+
+#: ../src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Tenha certeza de fechar todos os aplicativos antes de seu computador ser "
 "bloqueado."
 
-#: ../src/client/Client.vala:129
-msgid "%ld hour"
-msgid_plural "%ld hours"
-msgstr[0] "%ld hora"
-msgstr[1] "%ld horas"
+#: ../src/client/Client.vala:99
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] "%lu hora"
+msgstr[1] "%lu horas"
 
-#: ../src/client/Client.vala:133
-msgid "%ld minute"
-msgid_plural "%ld minutes"
-msgstr[0] "%ld minuto"
-msgstr[1] "%ld minutos"
+#: ../src/client/Client.vala:103
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] "%lu minuto"
+msgstr[1] "%lu minutos"
 
-#: ../src/client/Client.vala:136
+#: ../src/client/Client.vala:106
 msgid "This computer will lock after %s %s. %s"
 msgstr "Este computador será bloqueado após %s %s. %s"
 
-#: ../src/client/Client.vala:138
+#: ../src/client/Client.vala:108
 msgid "Time left"
 msgstr "Tempo restante"
-
-#: ../src/client/AppLockDialog.vala:27
-msgid "You cannot run this application"
-msgstr "Você não pode abrir este aplicativo"
-
-#: ../src/client/AppLockDialog.vala:28
-msgid "You are not permitted to run this application."
-msgstr "Você não tem permissão para abrir este aplicativo."

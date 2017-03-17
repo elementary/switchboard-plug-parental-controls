@@ -57,9 +57,9 @@ namespace PC.Client {
             }
 
             try {
-                var user = (Polkit.UnixUser)Polkit.UnixUser.new_for_name (username);
+                var user = new Polkit.UnixUser.for_name (username);
                 permission = new Polkit.Permission.sync (action_id,
-                                        Polkit.UnixProcess.new_for_owner (Posix.getpid (), 0, user.get_uid ()));
+                                        new Polkit.UnixProcess.for_owner (Posix.getpid (), 0, user.get_uid ()));
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }
@@ -96,11 +96,11 @@ namespace PC.Client {
             }
 
             if (hours > 0) {
-                hours_str = ngettext ("%ld hour", "%ld hours", (ulong)hours).printf ((ulong)hours);
+                hours_str = ngettext ("%lu hour", "%lu hours", (ulong)hours).printf ((ulong)hours);
             }
 
             if (minutes > 0) {
-                minutes_str = ngettext ("%ld minute", "%ld minutes", (ulong)minutes).printf ((ulong)minutes);
+                minutes_str = ngettext ("%lu minute", "%lu minutes", (ulong)minutes).printf ((ulong)minutes);
             }
 
             string body = _("This computer will lock after %s %s. %s".printf (hours_str, minutes_str, info));
