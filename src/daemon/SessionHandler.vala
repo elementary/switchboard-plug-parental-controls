@@ -22,8 +22,11 @@
 
  namespace PC.Daemon {
     public class SessionHandler : Object {
-        private IptablesHelper iptables_helper;
-        private Timer? timer;
+        private RestrictionController controller;
+
+        private AppRestriction app_restriction;
+        private WebRestriction web_restriction;
+        private TimeRestriction time_restriction;
 
         private UserConfig config;
         public ISession session;
@@ -41,19 +44,19 @@
                 return;
             }
 
-            iptables_helper = new IptablesHelper (config);
+            controller = new RestrictionController ();
 
-            var token = PAM.Reader.get_token_for_user (Constants.PAM_TIME_CONF_PATH, session.name);
-            if (token != null) {
-                timer = new Timer (token);
-                timer.terminate.connect (() => {
-                    try {
-                        session.terminate ();
-                    } catch (IOError e) {
-                        warning (e.message);
-                    }                    
-                });
-            }
+            app_restriction = new AppRestriction ();
+            web_restriction = new WebRestriction ();
+
+            time_restriction = new TimeRestriction ();
+            time_restriction.terminate.connect (() => {
+                try {
+                    session.terminate ();
+                } catch (IOError e) {
+                    warning (e.message);
+                }                    
+            });
         }
 
         public string get_id () {
@@ -69,35 +72,57 @@
                 return;
             }
 
-            if (IptablesHelper.get_can_start ()) {
-                iptables_helper.start ();
+            app_restriction.username = config.username;
+            app_restriction.admin = config.get_admin ();
+
+            foreach (string target in config.get_targets ()) {
+                app_restriction.add_target (target);
             }
 
-            if (timer != null) {
-                timer.start ();
+            controller.add_restriction (app_restriction);
+
+            if (WebRestriction.get_supported ()) {
+                foreach (string url in config.get_block_urls ()) {
+                    web_restriction.add_target (url);
+                }
+
+                controller.add_restriction (web_restriction);
             }
+
+            var token = PAM.Reader.get_token_for_user (Constants.PAM_TIME_CONF_PATH, session.name);
+            time_restriction.add_target (token);
+
+            controller.add_restriction (time_restriction);
         }
 
         public void update () {
             if (!config.get_active ()) {
-                iptables_helper.stop ();
-                if (timer != null) {
-                    timer.stop ();
-                }
-
+                stop ();
                 return;
             }
 
-            if (IptablesHelper.get_can_start ()) {
-                iptables_helper.restart ();
+            app_restriction.username = config.username;
+            app_restriction.admin = config.get_admin ();
+
+            var new_targets = new GLib.List<string> ();
+            foreach (string target in config.get_targets ()) {
+                new_targets.append (target);
             }
+
+            app_restriction.update_targets (new_targets);
+
+            new_targets = new GLib.List<string> ();
+            foreach (string url in config.get_block_urls ()) {
+                new_targets.append (url);
+            }
+
+            web_restriction.update_targets (new_targets);
         }
 
         public void stop () {
-            iptables_helper.stop ();
-            if (timer != null) {
-                timer.stop ();
-            }
+            controller.remove_restriction (app_restriction);
+            controller.remove_restriction (web_restriction);
+            controller.remove_restriction (time_restriction);
         }         
     }
 }

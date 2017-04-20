@@ -25,7 +25,6 @@
         public SessionHandler? current_handler = null;
         private IManager? manager = null;
         private DBusConnection? conn = null;
-        private ProcessWatcher pwatcher;
 
         private uint[] signal_ids;
 
@@ -45,9 +44,6 @@
             } catch (IOError e) {
                 warning ("%s\n", e.message);
             }
-
-            pwatcher = new ProcessWatcher ();
-            pwatcher.start.begin ();
         }
 
         public void start () {
@@ -107,13 +103,14 @@
 
             stop_current_handler ();
 
-            if (session != null &&
-                session.name != null &&
-                !(session.name in Constants.DAEMON_IGNORED_USERS)) {
-                current_handler = new SessionHandler (session);
-                current_handler.start ();
-                pwatcher.set_config (current_handler.get_config ());
+            if (session == null ||
+                session.name == null ||
+                session.name in Constants.DAEMON_IGNORED_USERS) {
+                return;
             }
+
+            current_handler = new SessionHandler (session);
+            current_handler.start ();
         }
 
         private void stop_current_handler () {
@@ -121,8 +118,6 @@
                 current_handler.stop ();
                 current_handler = null;
             }
-
-            pwatcher.set_config (null);
         }
     }
 }

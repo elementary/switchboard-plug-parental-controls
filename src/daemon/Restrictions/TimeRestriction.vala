@@ -21,20 +21,21 @@
  */
 
 namespace PC.Daemon {
-    public class Timer : Object {
+    public class TimeRestriction : Restriction<PAM.Token> {
         private const int MINUTE_INTERVAL = 60;
         private const int HOUR_INTERVAL = 3600;
 
         public signal void terminate ();
-
-        private PAM.Token token;
+        
         private uint[] timeout_ids;
 
-        public Timer (PAM.Token token) {
-            this.token = token;
+        public override void start () {
+            foreach (PAM.Token token in targets) {
+                process_token (token);
+            }
         }
 
-        public void start () {
+        private void process_token (PAM.Token token) {
             var times_info = token.get_times_info ();
             if (times_info.length () == 0) {
                 return;
@@ -66,12 +67,13 @@ namespace PC.Daemon {
             }  
 
             timeout_ids += Timeout.add_seconds (HOUR_INTERVAL * 24, () => {
+                stop ();
                 start ();
                 return true;
             });
         }
 
-        public void stop () {
+        public override void stop () {
             foreach (uint timeout_id in timeout_ids) {
                 GLib.Source.remove (timeout_id);
             }

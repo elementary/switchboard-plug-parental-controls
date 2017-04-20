@@ -9,15 +9,17 @@ set (EXEC_MONITOR_NAME pantheon-exec-monitor)
 
 vala_precompile (VALA_C ${DAEMON_EXEC_NAME}
     Daemon.vala
-    ProcessWatcher.vala
     Process.vala
-    IptablesHelper.vala
-    Timer.vala
     SessionManager.vala
     SessionHandler.vala
     Interfaces.vala
     UserConfig.vala
     Server.vala
+    Restriction.vala
+    Restrictions/AppRestriction.vala
+    Restrictions/TimeRestriction.vala
+    Restrictions/WebRestriction.vala
+    RestrictionController.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Constants.vala
     ${CMAKE_SOURCE_DIR}/src/shared/Utils.vala
     ${CMAKE_SOURCE_DIR}/src/shared/PAM/Token.vala
@@ -28,6 +30,7 @@ PACKAGES
     accountsservice
     polkit-gobject-1
     gio-2.0
+    gee-0.8
     exec-monitor
 OPTIONS
     --vapidir=${CMAKE_SOURCE_DIR}/vapi/

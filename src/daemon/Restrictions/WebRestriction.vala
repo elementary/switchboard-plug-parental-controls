@@ -21,44 +21,30 @@
  */
 
  namespace PC.Daemon {
-    public class IptablesHelper : Object {
+    public class WebRestriction : Restriction<string> {
         private const string IPTABLES_EXEC = "iptables";
         private const int DPORT = 80;
 
-        private UserConfig config;
-        private string[] current_urls;
-
-        public static bool get_can_start () {
+        public new static bool get_supported () {
             return Environment.find_program_in_path (IPTABLES_EXEC) != null;
         }
 
-        public IptablesHelper (UserConfig config) {
-            this.config = config;
-        }
-
-        public void start () {
-            this.current_urls = config.get_block_urls ();
-            add_rules ();
-        }
-
-        public void restart () {
-            remove_rules ();
-
-            current_urls = config.get_block_urls ();
-            add_rules ();            
-        }
-
-        public void stop () {
-            remove_rules ();
-        }
-
-        private void add_rules () {
-            foreach (string url in current_urls) {
+        public override void start () {
+            foreach (string url in targets) {
                 string[] addresses = get_addresses_from_name (url);
                 foreach (string address in addresses) {
                     process_adress (address, "-A");
                 }
-            }        
+            }      
+        }
+
+        public override void stop () {
+            foreach (string url in targets) {
+                string[] addresses = get_addresses_from_name (url);
+                foreach (string address in addresses) {
+                    process_adress (address, "-D");
+                }
+            }  
         }
 
         private string[] get_addresses_from_name (string name) {
@@ -91,15 +77,6 @@
             } catch (SpawnError e) {
                 warning ("%s\n", e.message);
             }
-        }
-
-        private void remove_rules () {
-            foreach (string url in current_urls) {
-                string[] addresses = get_addresses_from_name (url);
-                foreach (string address in addresses) {
-                    process_adress (address, "-D");
-                }
-            }  
         }
     }
 }
