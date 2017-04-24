@@ -5,7 +5,6 @@
 
 You'll need the following dependencies:
 * cmake
-* dh-systemd
 * libaccountsservice-dev
 * libglib2.0-dev
 * libgranite-dev
