@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-04 11:47+0100\n"
-"PO-Revision-Date: 2017-02-11 20:24+0000\n"
-"Last-Translator: Fabio Zaramella <FFabio.96.X@Gmail.com>\n"
-"Language-Team: Italian <it@li.org>\n"
+"PO-Revision-Date: 2017-05-04 21:41+0000\n"
+"Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
+"Language-Team: Italian <https://l10n.elementary.io/projects/switchboard"
+"/switchboard-plug-parental-controls/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/Widgets/AppsBox.vala:90
 msgid "Prevent %s from using these apps:"
@@ -25,7 +26,7 @@ msgstr "Impedisci a %s l'utilizzo di queste applicazioni:"
 
 #: ../src/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
-msgstr "Aggiungi applicazioni bloccate..."
+msgstr "Aggiungi applicazioni bloccate…"
 
 #: ../src/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
@@ -54,7 +55,7 @@ msgstr "Applicazioni"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
-msgstr "Il mio account"
+msgstr "Account personale"
 
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
@@ -62,11 +63,11 @@ msgstr "Altri account"
 
 #: ../src/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr "Dalle:"
+msgstr "Dal:"
 
 #: ../src/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr "Alle:"
+msgstr "al:"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
