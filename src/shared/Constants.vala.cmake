@@ -31,7 +31,7 @@ namespace PC.Constants {
     public const string PLANK_CONF_DIR = "/.config/plank/dock1/settings";
     public const string PLANK_CONF_GROUP = "PlankDockPreferences";
     public const string PLANK_CONF_LOCK_ITEMS_KEY = "LockItems";
-    public const string DAEMON_CONF_FILE = "@CMAKE_INSTALL_PREFIX@/share/pantheon-parental-controls/daemon.conf";
+    public const string DAEMON_CONF_FILE = "@DAEMON_CONF_DIR@/daemon.conf";
     public const string[] DAEMON_IGNORED_USERS = { "lightdm" };
     public const string DAEMON_GROUP = "PCDaemon";
     public const string DAEMON_KEY_ACTIVE = "Active";

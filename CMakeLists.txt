@@ -30,6 +30,8 @@ set (GETTEXT_PACKAGE "${CMAKE_PROJECT_NAME}-plug")
 
 list (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
+set (DAEMON_CONF_DIR "${CMAKE_INSTALL_FULL_SYSCONFDIR}/pantheon-parental-controls")
+
 # Configure file
 configure_file (${CMAKE_SOURCE_DIR}/config.vala.cmake ${CMAKE_BINARY_DIR}/src/config.vala)
 configure_file (${CMAKE_SOURCE_DIR}/src/shared/Constants.vala.cmake ${CMAKE_SOURCE_DIR}/src/shared/Constants.vala)
