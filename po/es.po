@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-04 11:47+0100\n"
-"PO-Revision-Date: 2017-06-01 13:48+0000\n"
+"PO-Revision-Date: 2017-06-01 14:02+0000\n"
 "Last-Translator: Jonathan GN <jonathan@jamdigitalstudio.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/es/>\n"
@@ -22,11 +22,11 @@ msgstr ""
 
 #: ../src/Widgets/AppsBox.vala:90
 msgid "Prevent %s from using these apps:"
-msgstr "Evitar que %s use estas aplicaciones:"
+msgstr "Evitar que %s utilice estas aplicaciones:"
 
 #: ../src/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
-msgstr "Añadir aplicaciones a evitar..."
+msgstr "Añadir aplicaciones a evitar…"
 
 #: ../src/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
@@ -34,11 +34,11 @@ msgstr "Eliminar la aplicación seleccionada"
 
 #: ../src/Widgets/AppsBox.vala:110
 msgid "Clear All"
-msgstr "Borrar todo"
+msgstr "Limpiar todo"
 
 #: ../src/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
-msgstr "Permitir el acceso a estas aplicaciones con permiso de administración:"
+msgstr "Permitir el acceso a estas aplicaciones con permiso de administrador:"
 
 #: ../src/Widgets/ControlPage.vala:53
 msgid "General"
@@ -70,11 +70,11 @@ msgstr "Hasta:"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
-msgstr "Permitir a este usuario:"
+msgstr "Permitir que este usuario:"
 
 #: ../src/Widgets/GeneralBox.vala:65
 msgid "Modify the dock"
-msgstr "Modificar el «dock»"
+msgstr "Modificar el dock"
 
 #: ../src/Widgets/GeneralBox.vala:68
 msgid "Configure printing"
@@ -110,7 +110,7 @@ msgstr "Buscar aplicaciones"
 
 #: ../src/Widgets/InternetBox.vala:77
 msgid "Prevent %s from visiting these websites:"
-msgstr "Prevenir que %s visite estos sitios web:"
+msgstr "Evitar que %s visite estos sitios web:"
 
 #: ../src/Widgets/InternetBox.vala:90
 msgid "Add URL"
@@ -118,11 +118,11 @@ msgstr "Añadir URL"
 
 #: ../src/Widgets/InternetBox.vala:99
 msgid "Add a new URL, for example: google.com"
-msgstr "Añadir una nueva dirección URL, por ejemplo: google.com"
+msgstr "Añadir una nueva URL, por ejemplo: google.com"
 
 #: ../src/Widgets/InternetBox.vala:100
 msgid "Invalid URL"
-msgstr "URL no válido"
+msgstr "URL no válida"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
 #. *
@@ -145,7 +145,7 @@ msgstr "URL no válido"
 #.
 #: ../src/Translation.vala:23
 msgid "Manage parental control settings"
-msgstr "Administra la configuración de control parental"
+msgstr "Administrar la configuración de control parental"
 
 #: ../src/Translation.vala:24
 msgid "Authentication is required to change parental control settings"
@@ -155,11 +155,11 @@ msgstr ""
 #: ../src/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"Algunos ajustes requieren privilegios de administrador para ser modificados"
+"Algunos ajustes requieren permisos de administrador para ser modificados"
 
 #: ../src/Plug.vala:80
 msgid "No users to edit"
-msgstr "No hay ningún usuario que editar"
+msgstr "Sin usuario para editar"
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -175,19 +175,19 @@ msgstr ""
 
 #: ../src/Plug.vala:83
 msgid "Configure User Accounts"
-msgstr "Configurar cuentas de usuario"
+msgstr "Configurar Cuentas de usuario"
 
 #: ../src/Plug.vala:86
 msgid "Open Users settings"
-msgstr "Abrir configuración de usuarios"
+msgstr "Abrir configuraciones de usuarios"
 
 #: ../src/Plug.vala:163
 msgid "Parental Control"
-msgstr "Control parental"
+msgstr "Control Parental"
 
 #: ../src/Plug.vala:164
 msgid "Configure time limits and restrict application usage"
-msgstr "Configurar límites de tiempo y restringir el uso de las aplicaciones"
+msgstr "Configurar límites de tiempo y restringir el uso de aplicaciones"
 
 #: ../src/client/AppUnavailableDialog.vala:27
 msgid "You cannot run this application"
