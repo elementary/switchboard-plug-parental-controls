@@ -158,11 +158,14 @@ namespace PC {
         private MainBox? main_box = null;
 
         public Plug () {
+	    var settings = new Gee.TreeMap<string, string?> (null, null);
+	    settings.set ("parental-controls", "null");
             Object (category: Category.SYSTEM,
                     code_name: Build.PLUGCODENAME,
                     display_name: _("Parental Control"),
                     description: _("Configure time limits and restrict application usage"),
-                    icon: "preferences-system-parental-controls");
+                    icon: "preferences-system-parental-controls",
+                    supported_settings: settings);
             plug = this;
         }
 
