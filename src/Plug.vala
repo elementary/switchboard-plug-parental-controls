@@ -159,7 +159,7 @@ namespace PC {
 
         public Plug () {
 	    var settings = new Gee.TreeMap<string, string?> (null, null);
-	    settings.set ("parental-controls", "null");
+	    settings.set ("parental-controls", null);
             Object (category: Category.SYSTEM,
                     code_name: Build.PLUGCODENAME,
                     display_name: _("Parental Control"),
