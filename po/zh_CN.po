@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-04 11:47+0100\n"
-"PO-Revision-Date: 2017-05-08 03:19+0000\n"
+"PO-Revision-Date: 2017-07-04 09:05+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) "
 "<https://l10n.elementary.io/projects/switchboard/switchboard-plug-parental-"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2017-03-14 07:34+0000\n"
 
 #: ../src/Widgets/AppsBox.vala:90
@@ -63,11 +63,11 @@ msgstr "其他账户"
 
 #: ../src/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr "起始："
+msgstr "起始日期："
 
 #: ../src/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr "结束："
+msgstr "结束日期："
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
