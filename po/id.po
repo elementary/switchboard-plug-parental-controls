@@ -1,122 +1,123 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-04 11:47+0100\n"
-"PO-Revision-Date: 2017-02-11 20:21+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2017-07-31 15:51+0700\n"
+"Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
+"Language-Team: Indonesian <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-parental-controls/id/>\n"
+"Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 2.0.3\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/Widgets/AppsBox.vala:90
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "Mencegah %s menggunakan aplikasi ini:"
 
 #: ../src/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
-msgstr ""
+msgstr "Tambahkan Aplikasi yang Dicegah…"
 
 #: ../src/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
-msgstr ""
+msgstr "Hapus Aplikasi yang Dipilih"
 
 #: ../src/Widgets/AppsBox.vala:110
 msgid "Clear All"
-msgstr ""
+msgstr "Bersihkan Semua"
 
 #: ../src/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
-msgstr ""
+msgstr "Izinkan akses ke aplikasi ini dengan izin admin:"
 
 #: ../src/Widgets/ControlPage.vala:53
 msgid "General"
-msgstr ""
+msgstr "Umum"
 
 #: ../src/Widgets/ControlPage.vala:54
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: ../src/Widgets/ControlPage.vala:55
 msgid "Applications"
-msgstr ""
+msgstr "Aplikasi"
 
 #: ../src/Widgets/UserList.vala:42
 msgid "My Account"
-msgstr ""
+msgstr "Akun Saya"
 
 #: ../src/Widgets/UserList.vala:46
 msgid "Other Accounts"
-msgstr ""
+msgstr "Akun Lain"
 
 #: ../src/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr ""
+msgstr "Dari:"
 
 #: ../src/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr ""
+msgstr "Ke:"
 
 #: ../src/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
-msgstr ""
+msgstr "Izinkan pengguna ini untuk:"
 
 #: ../src/Widgets/GeneralBox.vala:65
 msgid "Modify the dock"
-msgstr ""
+msgstr "Modifikasi dok"
 
 #: ../src/Widgets/GeneralBox.vala:68
 msgid "Configure printing"
-msgstr ""
+msgstr "Konfigurasikan pencetakan"
 
 #: ../src/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
-msgstr ""
+msgstr "Batasi penggunaan komputer:"
 
 #: ../src/Widgets/GeneralBox.vala:92
 msgid "On weekdays and weekends"
-msgstr ""
+msgstr "Pada hari kerja dan akhir pekan"
 
 #: ../src/Widgets/GeneralBox.vala:93
 msgid "Only on weekdays"
-msgstr ""
+msgstr "Hanya di hari kerja"
 
 #: ../src/Widgets/GeneralBox.vala:94
 msgid "Only on weekends"
-msgstr ""
+msgstr "Hanya di akhir pekan"
 
 #: ../src/Widgets/GeneralBox.vala:104
 msgid "Weekdays"
-msgstr ""
+msgstr "Hari kerja"
 
 #: ../src/Widgets/GeneralBox.vala:108
 msgid "Weekends"
-msgstr ""
+msgstr "Akhir pekan"
 
 #: ../src/Widgets/AppChooser.vala:71
 msgid "Search Applications"
-msgstr ""
+msgstr "Cari Aplikasi"
 
 #: ../src/Widgets/InternetBox.vala:77
 msgid "Prevent %s from visiting these websites:"
-msgstr ""
+msgstr "Mencegah %s mengunjungi situs web ini:"
 
 #: ../src/Widgets/InternetBox.vala:90
 msgid "Add URL"
-msgstr ""
+msgstr "Tambah URL"
 
 #: ../src/Widgets/InternetBox.vala:99
 msgid "Add a new URL, for example: google.com"
-msgstr ""
+msgstr "Tambahkan URL baru, misalnya: google.com"
 
 #: ../src/Widgets/InternetBox.vala:100
 msgid "Invalid URL"
-msgstr ""
+msgstr "URL tidak valid"
 
 #. //launchpad.net/switchboard-plug-parental-controls)
 #. *
@@ -139,19 +140,19 @@ msgstr ""
 #.
 #: ../src/Translation.vala:23
 msgid "Manage parental control settings"
-msgstr ""
+msgstr "Kelola pengaturan bimbingan orang tua"
 
 #: ../src/Translation.vala:24
 msgid "Authentication is required to change parental control settings"
-msgstr ""
+msgstr "Otentikasi diperlukan untuk mengubah pengaturan bimbingan orang tua"
 
 #: ../src/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Beberapa pengaturan memerlukan hak administrator untuk diubah"
 
 #: ../src/Plug.vala:80
 msgid "No users to edit"
-msgstr ""
+msgstr "Tidak ada pengguna yang bisa disunting"
 
 #: ../src/Plug.vala:80
 msgid ""
@@ -160,52 +161,54 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
+"Bimbingan Orang Tua hanya dapat diterapkan ke akun pengguna yang tidak "
+"memiliki izin administratif.\n"
+"Anda dapat mengubah jenis akun pengguna dari \"Administrator\" menjadi \""
+"Standar\" pada panel Akun Pengguna."
 
 #: ../src/Plug.vala:83
 msgid "Configure User Accounts"
-msgstr ""
+msgstr "Konfigurasikan Akun Pengguna"
 
 #: ../src/Plug.vala:86
 msgid "Open Users settings"
-msgstr ""
+msgstr "Pengaturan pengguna terbuka"
 
 #: ../src/Plug.vala:163
 msgid "Parental Control"
-msgstr ""
+msgstr "Bimbingan Orang Tua"
 
 #: ../src/Plug.vala:164
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "Mengkonfigurasi batas waktu dan membatasi penggunaan aplikasi"
 
 #: ../src/client/AppUnavailableDialog.vala:27
 msgid "You cannot run this application"
-msgstr ""
+msgstr "Anda tidak dapat menjalankan aplikasi ini"
 
 #: ../src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
-msgstr ""
+msgstr "Anda tidak diizinkan menjalankan aplikasi ini."
 
 #: ../src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
-msgstr ""
+msgstr "Pastikan untuk menutup semua aplikasi sebelum komputer Anda terkunci."
 
 #: ../src/client/Client.vala:99
 msgid "%lu hour"
 msgid_plural "%lu hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu jam"
 
 #: ../src/client/Client.vala:103
 msgid "%lu minute"
 msgid_plural "%lu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu menit"
 
 #: ../src/client/Client.vala:106
 msgid "This computer will lock after %s %s. %s"
-msgstr ""
+msgstr "Komputer ini akan terkunci setelah %s %s. %s"
 
 #: ../src/client/Client.vala:108
 msgid "Time left"
-msgstr ""
+msgstr "Waktu tersisa"
