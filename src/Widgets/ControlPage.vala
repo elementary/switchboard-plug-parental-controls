@@ -58,7 +58,9 @@ namespace PC.Widgets {
 
             var switcher = new Gtk.StackSwitcher ();
             switcher.halign = Gtk.Align.CENTER;
+            switcher.homogeneous = true;
             switcher.stack = stack;
+
             add (switcher);
             add (stack);
 
