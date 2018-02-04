@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-02-04 11:47+0100\n"
-"PO-Revision-Date: 2017-02-11 20:22+0000\n"
-"Last-Translator: Cody Garver <cody@elementaryos.org>\n"
-"Language-Team: Kurdish <ku@li.org>\n"
+"PO-Revision-Date: 2018-02-05 00:11+0000\n"
+"Last-Translator: Rokar <mail@rokar.de>\n"
+"Language-Team: Kurdish <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-parental-controls/ku/>\n"
 "Language: ku\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: ../src/Widgets/AppsBox.vala:90
 msgid "Prevent %s from using these apps:"
@@ -41,7 +42,7 @@ msgstr ""
 
 #: ../src/Widgets/ControlPage.vala:53
 msgid "General"
-msgstr "Gîştî"
+msgstr "Giştî"
 
 #: ../src/Widgets/ControlPage.vala:54
 msgid "Internet"
