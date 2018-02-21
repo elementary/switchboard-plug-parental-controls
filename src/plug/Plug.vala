@@ -161,7 +161,7 @@ namespace PC {
 	    var settings = new Gee.TreeMap<string, string?> (null, null);
 	    settings.set ("parental-controls", null);
             Object (category: Category.SYSTEM,
-                    code_name: Build.PLUGCODENAME,
+                    code_name: "pantheon-parental-controls",
                     display_name: _("Parental Control"),
                     description: _("Configure time limits and restrict application usage"),
                     icon: "preferences-system-parental-controls",

@@ -4,7 +4,7 @@
  "http://www.freedesktop.org/standards/PolicyKit/1.0/policyconfig.dtd">
 <policyconfig>
   <vendor>elementary</vendor>
-  <vendor_url>http://elementaryos.org/</vendor_url>
+  <vendor_url>https://elementary.io</vendor_url>
 
   <action id="org.pantheon.switchboard.parental-controls.administration">
     <description gettext-domain="@GETTEXT_PACKAGE@">Manage parental control settings</description>
@@ -15,7 +15,7 @@
       <allow_inactive>no</allow_inactive>
       <allow_active>auth_admin_keep</allow_active>
     </defaults>
-    <annotate key="org.freedesktop.policykit.exec.path">/usr/bin/pantheon-parental-controls-cli</annotate>
+    <annotate key="org.freedesktop.policykit.exec.path">@CLIENT_PATH@</annotate>
     <annotate key="org.freedesktop.policykit.imply">org.freedesktop.parental-controls.user-administration</annotate>
   </action>
 

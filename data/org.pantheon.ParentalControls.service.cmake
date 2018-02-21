@@ -1,5 +1,5 @@
 [D-BUS Service]
 Name=org.pantheon.ParentalControls
-Exec=@CMAKE_INSTALL_PREFIX@/bin/pantheon-parental-controls-daemon
+Exec=@DAEMON_PATH@
 User=root
 SystemdService=pantheon-parental-controls.service

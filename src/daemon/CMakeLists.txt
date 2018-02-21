@@ -37,10 +37,7 @@ OPTIONS
     --thread
 )
 
-include_directories (../lib/)
-add_library (${EXEC_MONITOR_NAME} STATIC ../lib/exec-monitor.c)
-
-add_executable (${DAEMON_EXEC_NAME} ${VALA_C})
+add_executable (${DAEMON_EXEC_NAME} ${VALA_C} exec-monitor.c)
 target_link_libraries (${DAEMON_EXEC_NAME} ${DEPS_LIBRARIES} ${EXEC_MONITOR_NAME}) 
 
 # Installation
