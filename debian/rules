@@ -19,7 +19,7 @@ override_dh_systemd_start:
 	dh_systemd_start -pswitchboard-plug-parental-controls
 
 override_dh_strip:
-	dh_strip --dbg-package=switchboard-plug-parental-controls-dbg
+	dh_strip --dbgsym-migration='switchboard-plug-parental-controls-dbg (<< 0.1.3)'
 
-override_dh_install:
-	dh_install --fail-missing
+override_dh_missing:
+	dh_missing --fail-missing
