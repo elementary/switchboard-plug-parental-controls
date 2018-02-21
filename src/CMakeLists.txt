@@ -11,41 +11,8 @@ include (ValaVersion)
 ensure_vala_version ("0.34.1" MINIMUM)
 
 include (ValaPrecompile)
-# Add all your vala files and requires packages to the List below to include them in the build
-vala_precompile (VALA_C ${CMAKE_PROJECT_NAME}
-    Plug.vala
-    Widgets/UserList.vala
-    Widgets/UserItem.vala
-    Widgets/ControlPage.vala
-    Widgets/GeneralBox.vala
-    Widgets/InternetBox.vala
-    Widgets/AppsBox.vala
-    Widgets/AppChooser.vala
-    Widgets/WeekSpinBox.vala
-    shared/Constants.vala
-    shared/Utils.vala
-    shared/PAM/Token.vala
-    shared/PAM/Reader.vala
-    shared/PAM/Writer.vala
-    ${CMAKE_CURRENT_BINARY_DIR}/config.vala
-PACKAGES
-    gtk+-3.0
-    posix
-    accountsservice
-    polkit-gobject-1
-    switchboard-2.0
-    granite
-OPTIONS
-    --vapidir=${CMAKE_SOURCE_DIR}/vapi/
-    --thread
-)
 
+add_subdirectory (plug)
 add_subdirectory (client)
 add_subdirectory (daemon)
-
-add_library (${CMAKE_PROJECT_NAME} MODULE ${VALA_C})
-target_link_libraries (${CMAKE_PROJECT_NAME} ${DEPS_LIBRARIES}) 
-
-# Installation
-install (TARGETS ${CMAKE_PROJECT_NAME} DESTINATION ${PKGDATADIR})
 

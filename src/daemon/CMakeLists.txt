@@ -20,11 +20,11 @@ vala_precompile (VALA_C ${DAEMON_EXEC_NAME}
     Restrictions/TimeRestriction.vala
     Restrictions/WebRestriction.vala
     RestrictionController.vala
-    ${CMAKE_SOURCE_DIR}/src/shared/Constants.vala
-    ${CMAKE_SOURCE_DIR}/src/shared/Utils.vala
-    ${CMAKE_SOURCE_DIR}/src/shared/PAM/Token.vala
-    ${CMAKE_SOURCE_DIR}/src/shared/PAM/Reader.vala
-    ${CMAKE_SOURCE_DIR}/src/shared/PAM/Writer.vala
+    ${CMAKE_SOURCE_DIR}/src/common/Constants.vala
+    ${CMAKE_SOURCE_DIR}/src/common/Utils.vala
+    ${CMAKE_SOURCE_DIR}/src/common/PAM/Token.vala
+    ${CMAKE_SOURCE_DIR}/src/common/PAM/Reader.vala
+    ${CMAKE_SOURCE_DIR}/src/common/PAM/Writer.vala
 PACKAGES
     posix
     accountsservice
@@ -37,8 +37,8 @@ OPTIONS
     --thread
 )
 
-include_directories (${CMAKE_SOURCE_DIR}/lib/)
-add_library (${EXEC_MONITOR_NAME} STATIC ${CMAKE_SOURCE_DIR}/lib/exec-monitor.c)
+include_directories (../lib/)
+add_library (${EXEC_MONITOR_NAME} STATIC ../lib/exec-monitor.c)
 
 add_executable (${DAEMON_EXEC_NAME} ${VALA_C})
 target_link_libraries (${DAEMON_EXEC_NAME} ${DEPS_LIBRARIES} ${EXEC_MONITOR_NAME}) 
