@@ -1,4 +1,4 @@
-data/org.pantheon.switchboard.parental-controls.policy.cmake
+data/org.pantheon.switchboard.parental-controls.policy.in
 data/pantheon-parental-controls-client.desktop
 src/plug/Plug.vala
 src/plug/Widgets/WeekSpinBox.vala
@@ -24,3 +24,8 @@ src/daemon/Daemon.vala
 src/daemon/Restrictions/WebRestriction.vala
 src/daemon/Restrictions/TimeRestriction.vala
 src/daemon/Restrictions/AppRestriction.vala
+src/common/Utils.vala
+src/common/Constants.vala.in
+src/common/PAM/Writer.vala
+src/common/PAM/Token.vala
+src/common/PAM/Reader.vala
