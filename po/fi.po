@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 11:47+0100\n"
+"POT-Creation-Date: 2018-02-21 16:46-0800\n"
 "PO-Revision-Date: 2017-02-16 07:18+0000\n"
 "Last-Translator: Jiri Grönroos <Unknown>\n"
 "Language-Team: Finnish <fi@li.org>\n"
@@ -19,146 +19,37 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-17 06:09+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../src/Widgets/AppsBox.vala:90
-msgid "Prevent %s from using these apps:"
-msgstr "Estä käyttäjää %s käyttämästä seuraavia sovelluksia:"
-
-#: ../src/Widgets/AppsBox.vala:101
-msgid "Add Prevented Apps…"
-msgstr "Lisää estetyt sovellukset…"
-
-#: ../src/Widgets/AppsBox.vala:105
-msgid "Remove Selected App"
-msgstr "Poista valittu sovellus"
-
-#: ../src/Widgets/AppsBox.vala:110
-msgid "Clear All"
-msgstr "Tyhjennä kaikki"
-
-#: ../src/Widgets/AppsBox.vala:133
-msgid "Allow access to these apps with admin permission:"
-msgstr "Salli seuraavien sovellusten käyttö ylläpito-oikeuksin:"
-
-#: ../src/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "Yleiset"
-
-#: ../src/Widgets/ControlPage.vala:54
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:55
-msgid "Applications"
-msgstr "Sovellukset"
-
-#: ../src/Widgets/UserList.vala:42
-msgid "My Account"
-msgstr "Oma tili"
-
-#: ../src/Widgets/UserList.vala:46
-msgid "Other Accounts"
-msgstr "Muut tilit"
-
-#: ../src/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Alkaa:"
-
-#: ../src/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Päättyy:"
-
-#: ../src/Widgets/GeneralBox.vala:62
-msgid "Allow this user to:"
-msgstr "Salli tämän käyttäjän:"
-
-#: ../src/Widgets/GeneralBox.vala:65
-msgid "Modify the dock"
-msgstr "Muokkaa telakkaa"
-
-#: ../src/Widgets/GeneralBox.vala:68
-msgid "Configure printing"
-msgstr "Muokkaa tulostusasetuksia"
-
-#: ../src/Widgets/GeneralBox.vala:84
-msgid "Limit computer use:"
-msgstr "Rajoita tietokoneen käyttöä:"
-
-#: ../src/Widgets/GeneralBox.vala:92
-msgid "On weekdays and weekends"
-msgstr "Arkipäivinä ja viikonloppuisin"
-
-#: ../src/Widgets/GeneralBox.vala:93
-msgid "Only on weekdays"
-msgstr "Vain arkipäivinä"
-
-#: ../src/Widgets/GeneralBox.vala:94
-msgid "Only on weekends"
-msgstr "Vain viikonloppuisin"
-
-#: ../src/Widgets/GeneralBox.vala:104
-msgid "Weekdays"
-msgstr "Arkipäivinä"
-
-#: ../src/Widgets/GeneralBox.vala:108
-msgid "Weekends"
-msgstr "Viikonloppuisin"
-
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Etsi sovelluksia"
-
-#: ../src/Widgets/InternetBox.vala:77
-msgid "Prevent %s from visiting these websites:"
-msgstr "Estä käyttäjää %s käymästä seuraavilla sivustoilla:"
-
-#: ../src/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr "Lisää verkko-osoite"
-
-#: ../src/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr "Lisää uusi osoite, esim. google.com"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr "Virheellinen osoite"
-
-#. //launchpad.net/switchboard-plug-parental-controls)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 3 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
-#.
-#: ../src/Translation.vala:23
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage parental control settings"
 msgstr "Hallitse käytönvalvonnan asetuksia"
 
-#: ../src/Translation.vala:24
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
 msgstr "Käytönvalvonnan asetusten muuttaminen vaatii tunnistautumisen"
 
-#: ../src/Plug.vala:71
+#: data/pantheon-parental-controls-client.desktop:3
+#, fuzzy
+msgid "Parental Controls Client"
+msgstr "Käytönvalvonta"
+
+#: data/pantheon-parental-controls-client.desktop:5
+#, fuzzy
+msgid "Show parental control restrictions"
+msgstr "Hallitse käytönvalvonnan asetuksia"
+
+#: data/pantheon-parental-controls-client.desktop:6
+msgid "preferences-system-parental-controls"
+msgstr ""
+
+#: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
 msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"
 
-#: ../src/Plug.vala:80
+#: src/plug/Plug.vala:80
 msgid "No users to edit"
 msgstr "Ei muokattavia käyttäjiä"
 
-#: ../src/Plug.vala:80
+#: src/plug/Plug.vala:80
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -170,52 +61,161 @@ msgstr ""
 "Voit vaihtaa käyttäjätilin tyyppiä ylläpitäjästä peruskäyttäjään "
 "käyttäjäpaneelin kautta."
 
-#: ../src/Plug.vala:83
+#: src/plug/Plug.vala:83
 msgid "Configure User Accounts"
 msgstr "Muokkaa käyttäjätilejä"
 
-#: ../src/Plug.vala:86
+#: src/plug/Plug.vala:86
 msgid "Open Users settings"
 msgstr "Avaa käyttäjäasetukset"
 
-#: ../src/Plug.vala:163
+#: src/plug/Plug.vala:165
 msgid "Parental Control"
 msgstr "Käytönvalvonta"
 
-#: ../src/Plug.vala:164
+#: src/plug/Plug.vala:166
 msgid "Configure time limits and restrict application usage"
 msgstr "Hallitse aikarajoituksia ja rajoita sovellusten käyttöä"
 
-#: ../src/client/AppUnavailableDialog.vala:27
-msgid "You cannot run this application"
-msgstr "Et voi suorittaa tätä sovellusta"
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "Alkaa:"
 
-#: ../src/client/AppUnavailableDialog.vala:28
-msgid "You are not permitted to run this application."
-msgstr "Sinulla ei ole oikeutta suorittaa tätä sovellusta."
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Päättyy:"
 
-#: ../src/client/Client.vala:95
+#: src/plug/Widgets/UserList.vala:42
+msgid "My Account"
+msgstr "Oma tili"
+
+#: src/plug/Widgets/UserList.vala:46
+msgid "Other Accounts"
+msgstr "Muut tilit"
+
+#: src/plug/Widgets/InternetBox.vala:77
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Estä käyttäjää %s käymästä seuraavilla sivustoilla:"
+
+#: src/plug/Widgets/InternetBox.vala:90
+msgid "Add URL"
+msgstr "Lisää verkko-osoite"
+
+#: src/plug/Widgets/InternetBox.vala:99
+msgid "Add a new URL, for example: google.com"
+msgstr "Lisää uusi osoite, esim. google.com"
+
+#: src/plug/Widgets/InternetBox.vala:100
+msgid "Invalid URL"
+msgstr "Virheellinen osoite"
+
+#: src/plug/Widgets/GeneralBox.vala:62
+msgid "Allow this user to:"
+msgstr "Salli tämän käyttäjän:"
+
+#: src/plug/Widgets/GeneralBox.vala:65
+msgid "Modify the dock"
+msgstr "Muokkaa telakkaa"
+
+#: src/plug/Widgets/GeneralBox.vala:68
+msgid "Configure printing"
+msgstr "Muokkaa tulostusasetuksia"
+
+#: src/plug/Widgets/GeneralBox.vala:84
+msgid "Limit computer use:"
+msgstr "Rajoita tietokoneen käyttöä:"
+
+#: src/plug/Widgets/GeneralBox.vala:92
+msgid "On weekdays and weekends"
+msgstr "Arkipäivinä ja viikonloppuisin"
+
+#: src/plug/Widgets/GeneralBox.vala:93
+msgid "Only on weekdays"
+msgstr "Vain arkipäivinä"
+
+#: src/plug/Widgets/GeneralBox.vala:94
+msgid "Only on weekends"
+msgstr "Vain viikonloppuisin"
+
+#: src/plug/Widgets/GeneralBox.vala:104
+msgid "Weekdays"
+msgstr "Arkipäivinä"
+
+#: src/plug/Widgets/GeneralBox.vala:108
+msgid "Weekends"
+msgstr "Viikonloppuisin"
+
+#: src/plug/Widgets/ControlPage.vala:53
+msgid "General"
+msgstr "Yleiset"
+
+#: src/plug/Widgets/ControlPage.vala:54
+msgid "Internet"
+msgstr "Internet"
+
+#: src/plug/Widgets/ControlPage.vala:55
+msgid "Applications"
+msgstr "Sovellukset"
+
+#: src/plug/Widgets/AppsBox.vala:90
+#, c-format
+msgid "Prevent %s from using these apps:"
+msgstr "Estä käyttäjää %s käyttämästä seuraavia sovelluksia:"
+
+#: src/plug/Widgets/AppsBox.vala:101
+msgid "Add Prevented Apps…"
+msgstr "Lisää estetyt sovellukset…"
+
+#: src/plug/Widgets/AppsBox.vala:105
+msgid "Remove Selected App"
+msgstr "Poista valittu sovellus"
+
+#: src/plug/Widgets/AppsBox.vala:110
+msgid "Clear All"
+msgstr "Tyhjennä kaikki"
+
+#: src/plug/Widgets/AppsBox.vala:133
+msgid "Allow access to these apps with admin permission:"
+msgstr "Salli seuraavien sovellusten käyttö ylläpito-oikeuksin:"
+
+#: src/plug/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Etsi sovelluksia"
+
+#: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Varmista, että suljet kaikki sovellukset, ennen kuin tietokone lukitaan."
 
-#: ../src/client/Client.vala:99
+#: src/client/Client.vala:99
+#, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu tunti"
 msgstr[1] "%lu tuntia"
 
-#: ../src/client/Client.vala:103
+#: src/client/Client.vala:103
+#, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu minuutti"
 msgstr[1] "%lu minuuttia"
 
-#: ../src/client/Client.vala:106
+#: src/client/Client.vala:106
+#, c-format
 msgid "This computer will lock after %s %s. %s"
 msgstr "Tämä tietokone lukkiutuu %s %s. %s"
 
-#: ../src/client/Client.vala:108
+#: src/client/Client.vala:108
 msgid "Time left"
 msgstr "Aikaa jäljellä"
+
+#: src/client/AppUnavailableDialog.vala:27
+msgid "You cannot run this application"
+msgstr "Et voi suorittaa tätä sovellusta"
+
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You are not permitted to run this application."
+msgstr "Sinulla ei ole oikeutta suorittaa tätä sovellusta."

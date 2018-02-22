@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 11:47+0100\n"
+"POT-Creation-Date: 2018-02-21 16:46-0800\n"
 "PO-Revision-Date: 2017-01-03 04:06+0000\n"
 "Last-Translator: Cody Garver <cody@elementaryos.org>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -19,147 +19,38 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../src/Widgets/AppsBox.vala:90
-msgid "Prevent %s from using these apps:"
-msgstr "Предотвратяване на използването на следните програми от %s:"
-
-#: ../src/Widgets/AppsBox.vala:101
-msgid "Add Prevented Apps…"
-msgstr "Добавяне на забранени програми"
-
-#: ../src/Widgets/AppsBox.vala:105
-msgid "Remove Selected App"
-msgstr "Премахване на избраната програма"
-
-#: ../src/Widgets/AppsBox.vala:110
-msgid "Clear All"
-msgstr "Изчистване на всичко"
-
-#: ../src/Widgets/AppsBox.vala:133
-msgid "Allow access to these apps with admin permission:"
-msgstr "Позволяване на достъп до програмите с администраторски права"
-
-#: ../src/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "Основни"
-
-#: ../src/Widgets/ControlPage.vala:54
-msgid "Internet"
-msgstr "Интернет"
-
-#: ../src/Widgets/ControlPage.vala:55
-msgid "Applications"
-msgstr "Програми"
-
-#: ../src/Widgets/UserList.vala:42
-msgid "My Account"
-msgstr "Моят профил"
-
-#: ../src/Widgets/UserList.vala:46
-msgid "Other Accounts"
-msgstr "Други профили"
-
-#: ../src/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "От:"
-
-#: ../src/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "До:"
-
-#: ../src/Widgets/GeneralBox.vala:62
-msgid "Allow this user to:"
-msgstr "Позволяване на потребителя да:"
-
-#: ../src/Widgets/GeneralBox.vala:65
-msgid "Modify the dock"
-msgstr "Променя лентата"
-
-#: ../src/Widgets/GeneralBox.vala:68
-msgid "Configure printing"
-msgstr "Настройва печатането"
-
-#: ../src/Widgets/GeneralBox.vala:84
-msgid "Limit computer use:"
-msgstr "Ограничаване на употребата на устройството:"
-
-#: ../src/Widgets/GeneralBox.vala:92
-msgid "On weekdays and weekends"
-msgstr "В делнични и неделнични дни"
-
-#: ../src/Widgets/GeneralBox.vala:93
-msgid "Only on weekdays"
-msgstr "Само в делнични дни"
-
-#: ../src/Widgets/GeneralBox.vala:94
-msgid "Only on weekends"
-msgstr "Само в неделнични дни"
-
-#: ../src/Widgets/GeneralBox.vala:104
-msgid "Weekdays"
-msgstr "Делнични дни"
-
-#: ../src/Widgets/GeneralBox.vala:108
-msgid "Weekends"
-msgstr "Неделнични дни"
-
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Търсене на програми"
-
-#: ../src/Widgets/InternetBox.vala:77
-msgid "Prevent %s from visiting these websites:"
-msgstr "Предотвратяване на отварянето на следните сайтове от %s:"
-
-#: ../src/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr "Добавяне на адрес"
-
-#: ../src/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr "Добавяне на нов адрес, например: abv.bg"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr "Недействителен адрес"
-
-#. //launchpad.net/switchboard-plug-parental-controls)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 3 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
-#.
-#: ../src/Translation.vala:23
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage parental control settings"
 msgstr "Настройки на родителския контрол"
 
-#: ../src/Translation.vala:24
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
 msgstr ""
 "За промяна на настройките на родителския контрол се изисква удостоверяване"
 
-#: ../src/Plug.vala:71
+#: data/pantheon-parental-controls-client.desktop:3
+#, fuzzy
+msgid "Parental Controls Client"
+msgstr "Родителски контрол"
+
+#: data/pantheon-parental-controls-client.desktop:5
+#, fuzzy
+msgid "Show parental control restrictions"
+msgstr "Настройки на родителския контрол"
+
+#: data/pantheon-parental-controls-client.desktop:6
+msgid "preferences-system-parental-controls"
+msgstr ""
+
+#: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
 msgstr "Някои настройки изискват администраторски права, за да бъдат променени"
 
-#: ../src/Plug.vala:80
+#: src/plug/Plug.vala:80
 msgid "No users to edit"
 msgstr "Няма потребители за настройване"
 
-#: ../src/Plug.vala:80
+#: src/plug/Plug.vala:80
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -170,51 +61,160 @@ msgstr ""
 "администраторски права.\n"
 "Можете да промените вида на профила в настройките на потребителите."
 
-#: ../src/Plug.vala:83
+#: src/plug/Plug.vala:83
 msgid "Configure User Accounts"
 msgstr "Настройване на потребителските профили"
 
-#: ../src/Plug.vala:86
+#: src/plug/Plug.vala:86
 msgid "Open Users settings"
 msgstr "Отваряне на настройките на потребителя"
 
-#: ../src/Plug.vala:163
+#: src/plug/Plug.vala:165
 msgid "Parental Control"
 msgstr "Родителски контрол"
 
-#: ../src/Plug.vala:164
+#: src/plug/Plug.vala:166
 msgid "Configure time limits and restrict application usage"
 msgstr "Настройване на ограниченията на времето и използването на програми"
 
-#: ../src/client/AppUnavailableDialog.vala:27
-msgid "You cannot run this application"
-msgstr "Не можете да отворите тази програма"
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "От:"
 
-#: ../src/client/AppUnavailableDialog.vala:28
-msgid "You are not permitted to run this application."
-msgstr "Нямате права да отворите тази програма."
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "До:"
 
-#: ../src/client/Client.vala:95
+#: src/plug/Widgets/UserList.vala:42
+msgid "My Account"
+msgstr "Моят профил"
+
+#: src/plug/Widgets/UserList.vala:46
+msgid "Other Accounts"
+msgstr "Други профили"
+
+#: src/plug/Widgets/InternetBox.vala:77
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Предотвратяване на отварянето на следните сайтове от %s:"
+
+#: src/plug/Widgets/InternetBox.vala:90
+msgid "Add URL"
+msgstr "Добавяне на адрес"
+
+#: src/plug/Widgets/InternetBox.vala:99
+msgid "Add a new URL, for example: google.com"
+msgstr "Добавяне на нов адрес, например: abv.bg"
+
+#: src/plug/Widgets/InternetBox.vala:100
+msgid "Invalid URL"
+msgstr "Недействителен адрес"
+
+#: src/plug/Widgets/GeneralBox.vala:62
+msgid "Allow this user to:"
+msgstr "Позволяване на потребителя да:"
+
+#: src/plug/Widgets/GeneralBox.vala:65
+msgid "Modify the dock"
+msgstr "Променя лентата"
+
+#: src/plug/Widgets/GeneralBox.vala:68
+msgid "Configure printing"
+msgstr "Настройва печатането"
+
+#: src/plug/Widgets/GeneralBox.vala:84
+msgid "Limit computer use:"
+msgstr "Ограничаване на употребата на устройството:"
+
+#: src/plug/Widgets/GeneralBox.vala:92
+msgid "On weekdays and weekends"
+msgstr "В делнични и неделнични дни"
+
+#: src/plug/Widgets/GeneralBox.vala:93
+msgid "Only on weekdays"
+msgstr "Само в делнични дни"
+
+#: src/plug/Widgets/GeneralBox.vala:94
+msgid "Only on weekends"
+msgstr "Само в неделнични дни"
+
+#: src/plug/Widgets/GeneralBox.vala:104
+msgid "Weekdays"
+msgstr "Делнични дни"
+
+#: src/plug/Widgets/GeneralBox.vala:108
+msgid "Weekends"
+msgstr "Неделнични дни"
+
+#: src/plug/Widgets/ControlPage.vala:53
+msgid "General"
+msgstr "Основни"
+
+#: src/plug/Widgets/ControlPage.vala:54
+msgid "Internet"
+msgstr "Интернет"
+
+#: src/plug/Widgets/ControlPage.vala:55
+msgid "Applications"
+msgstr "Програми"
+
+#: src/plug/Widgets/AppsBox.vala:90
+#, c-format
+msgid "Prevent %s from using these apps:"
+msgstr "Предотвратяване на използването на следните програми от %s:"
+
+#: src/plug/Widgets/AppsBox.vala:101
+msgid "Add Prevented Apps…"
+msgstr "Добавяне на забранени програми"
+
+#: src/plug/Widgets/AppsBox.vala:105
+msgid "Remove Selected App"
+msgstr "Премахване на избраната програма"
+
+#: src/plug/Widgets/AppsBox.vala:110
+msgid "Clear All"
+msgstr "Изчистване на всичко"
+
+#: src/plug/Widgets/AppsBox.vala:133
+msgid "Allow access to these apps with admin permission:"
+msgstr "Позволяване на достъп до програмите с администраторски права"
+
+#: src/plug/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Търсене на програми"
+
+#: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "Затворете всички програми преди системата да бъде заключена."
 
-#: ../src/client/Client.vala:99
+#: src/client/Client.vala:99
+#, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/client/Client.vala:103
+#: src/client/Client.vala:103
+#, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/client/Client.vala:106
+#: src/client/Client.vala:106
+#, c-format
 msgid "This computer will lock after %s %s. %s"
 msgstr "Системата ще се заключи след %s %s. %s"
 
-#: ../src/client/Client.vala:108
+#: src/client/Client.vala:108
 msgid "Time left"
 msgstr "Оставащо време"
+
+#: src/client/AppUnavailableDialog.vala:27
+msgid "You cannot run this application"
+msgstr "Не можете да отворите тази програма"
+
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You are not permitted to run this application."
+msgstr "Нямате права да отворите тази програма."

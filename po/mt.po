@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 11:47+0100\n"
+"POT-Creation-Date: 2018-02-21 16:46-0800\n"
 "PO-Revision-Date: 2017-02-11 20:20+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,146 +15,35 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
 
-#: ../src/Widgets/AppsBox.vala:90
-msgid "Prevent %s from using these apps:"
-msgstr ""
-
-#: ../src/Widgets/AppsBox.vala:101
-msgid "Add Prevented Apps…"
-msgstr ""
-
-#: ../src/Widgets/AppsBox.vala:105
-msgid "Remove Selected App"
-msgstr ""
-
-#: ../src/Widgets/AppsBox.vala:110
-msgid "Clear All"
-msgstr ""
-
-#: ../src/Widgets/AppsBox.vala:133
-msgid "Allow access to these apps with admin permission:"
-msgstr ""
-
-#: ../src/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr ""
-
-#: ../src/Widgets/ControlPage.vala:54
-msgid "Internet"
-msgstr ""
-
-#: ../src/Widgets/ControlPage.vala:55
-msgid "Applications"
-msgstr ""
-
-#: ../src/Widgets/UserList.vala:42
-msgid "My Account"
-msgstr ""
-
-#: ../src/Widgets/UserList.vala:46
-msgid "Other Accounts"
-msgstr ""
-
-#: ../src/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr ""
-
-#: ../src/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr ""
-
-#: ../src/Widgets/GeneralBox.vala:62
-msgid "Allow this user to:"
-msgstr ""
-
-#: ../src/Widgets/GeneralBox.vala:65
-msgid "Modify the dock"
-msgstr ""
-
-#: ../src/Widgets/GeneralBox.vala:68
-msgid "Configure printing"
-msgstr ""
-
-#: ../src/Widgets/GeneralBox.vala:84
-msgid "Limit computer use:"
-msgstr ""
-
-#: ../src/Widgets/GeneralBox.vala:92
-msgid "On weekdays and weekends"
-msgstr ""
-
-#: ../src/Widgets/GeneralBox.vala:93
-msgid "Only on weekdays"
-msgstr ""
-
-#: ../src/Widgets/GeneralBox.vala:94
-msgid "Only on weekends"
-msgstr ""
-
-#: ../src/Widgets/GeneralBox.vala:104
-msgid "Weekdays"
-msgstr ""
-
-#: ../src/Widgets/GeneralBox.vala:108
-msgid "Weekends"
-msgstr ""
-
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr ""
-
-#: ../src/Widgets/InternetBox.vala:77
-msgid "Prevent %s from visiting these websites:"
-msgstr ""
-
-#: ../src/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr ""
-
-#: ../src/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr ""
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr ""
-
-#. //launchpad.net/switchboard-plug-parental-controls)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 3 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
-#.
-#: ../src/Translation.vala:23
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage parental control settings"
 msgstr ""
 
-#: ../src/Translation.vala:24
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
 msgstr ""
 
-#: ../src/Plug.vala:71
+#: data/pantheon-parental-controls-client.desktop:3
+msgid "Parental Controls Client"
+msgstr ""
+
+#: data/pantheon-parental-controls-client.desktop:5
+msgid "Show parental control restrictions"
+msgstr ""
+
+#: data/pantheon-parental-controls-client.desktop:6
+msgid "preferences-system-parental-controls"
+msgstr ""
+
+#: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 
-#: ../src/Plug.vala:80
+#: src/plug/Plug.vala:80
 msgid "No users to edit"
 msgstr ""
 
-#: ../src/Plug.vala:80
+#: src/plug/Plug.vala:80
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -162,51 +51,160 @@ msgid ""
 "in the User Accounts pane."
 msgstr ""
 
-#: ../src/Plug.vala:83
+#: src/plug/Plug.vala:83
 msgid "Configure User Accounts"
 msgstr ""
 
-#: ../src/Plug.vala:86
+#: src/plug/Plug.vala:86
 msgid "Open Users settings"
 msgstr ""
 
-#: ../src/Plug.vala:163
+#: src/plug/Plug.vala:165
 msgid "Parental Control"
 msgstr ""
 
-#: ../src/Plug.vala:164
+#: src/plug/Plug.vala:166
 msgid "Configure time limits and restrict application usage"
 msgstr ""
 
-#: ../src/client/AppUnavailableDialog.vala:27
-msgid "You cannot run this application"
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
 msgstr ""
 
-#: ../src/client/AppUnavailableDialog.vala:28
-msgid "You are not permitted to run this application."
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
 msgstr ""
 
-#: ../src/client/Client.vala:95
+#: src/plug/Widgets/UserList.vala:42
+msgid "My Account"
+msgstr ""
+
+#: src/plug/Widgets/UserList.vala:46
+msgid "Other Accounts"
+msgstr ""
+
+#: src/plug/Widgets/InternetBox.vala:77
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr ""
+
+#: src/plug/Widgets/InternetBox.vala:90
+msgid "Add URL"
+msgstr ""
+
+#: src/plug/Widgets/InternetBox.vala:99
+msgid "Add a new URL, for example: google.com"
+msgstr ""
+
+#: src/plug/Widgets/InternetBox.vala:100
+msgid "Invalid URL"
+msgstr ""
+
+#: src/plug/Widgets/GeneralBox.vala:62
+msgid "Allow this user to:"
+msgstr ""
+
+#: src/plug/Widgets/GeneralBox.vala:65
+msgid "Modify the dock"
+msgstr ""
+
+#: src/plug/Widgets/GeneralBox.vala:68
+msgid "Configure printing"
+msgstr ""
+
+#: src/plug/Widgets/GeneralBox.vala:84
+msgid "Limit computer use:"
+msgstr ""
+
+#: src/plug/Widgets/GeneralBox.vala:92
+msgid "On weekdays and weekends"
+msgstr ""
+
+#: src/plug/Widgets/GeneralBox.vala:93
+msgid "Only on weekdays"
+msgstr ""
+
+#: src/plug/Widgets/GeneralBox.vala:94
+msgid "Only on weekends"
+msgstr ""
+
+#: src/plug/Widgets/GeneralBox.vala:104
+msgid "Weekdays"
+msgstr ""
+
+#: src/plug/Widgets/GeneralBox.vala:108
+msgid "Weekends"
+msgstr ""
+
+#: src/plug/Widgets/ControlPage.vala:53
+msgid "General"
+msgstr ""
+
+#: src/plug/Widgets/ControlPage.vala:54
+msgid "Internet"
+msgstr ""
+
+#: src/plug/Widgets/ControlPage.vala:55
+msgid "Applications"
+msgstr ""
+
+#: src/plug/Widgets/AppsBox.vala:90
+#, c-format
+msgid "Prevent %s from using these apps:"
+msgstr ""
+
+#: src/plug/Widgets/AppsBox.vala:101
+msgid "Add Prevented Apps…"
+msgstr ""
+
+#: src/plug/Widgets/AppsBox.vala:105
+msgid "Remove Selected App"
+msgstr ""
+
+#: src/plug/Widgets/AppsBox.vala:110
+msgid "Clear All"
+msgstr ""
+
+#: src/plug/Widgets/AppsBox.vala:133
+msgid "Allow access to these apps with admin permission:"
+msgstr ""
+
+#: src/plug/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr ""
+
+#: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 
-#: ../src/client/Client.vala:99
+#: src/client/Client.vala:99
+#, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/client/Client.vala:103
+#: src/client/Client.vala:103
+#, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ../src/client/Client.vala:106
+#: src/client/Client.vala:106
+#, c-format
 msgid "This computer will lock after %s %s. %s"
 msgstr ""
 
-#: ../src/client/Client.vala:108
+#: src/client/Client.vala:108
 msgid "Time left"
+msgstr ""
+
+#: src/client/AppUnavailableDialog.vala:27
+msgid "You cannot run this application"
+msgstr ""
+
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You are not permitted to run this application."
 msgstr ""

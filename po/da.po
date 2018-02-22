@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 11:47+0100\n"
+"POT-Creation-Date: 2018-02-21 16:46-0800\n"
 "PO-Revision-Date: 2018-02-09 00:10+0000\n"
 "Last-Translator: scootergrisen <scootergrisen@gmail.com>\n"
-"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard"
-"/switchboard-plug-parental-controls/da/>\n"
+"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-parental-controls/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,147 +20,38 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-03-19 06:51+0000\n"
 
-#: ../src/Widgets/AppsBox.vala:90
-msgid "Prevent %s from using these apps:"
-msgstr "Forhindre %s i at bruge disse programmer:"
-
-#: ../src/Widgets/AppsBox.vala:101
-msgid "Add Prevented Apps…"
-msgstr "Tilføj spærrede applikationer…"
-
-#: ../src/Widgets/AppsBox.vala:105
-msgid "Remove Selected App"
-msgstr "Fjern valgte applikation"
-
-#: ../src/Widgets/AppsBox.vala:110
-msgid "Clear All"
-msgstr "Ryd alt"
-
-#: ../src/Widgets/AppsBox.vala:133
-msgid "Allow access to these apps with admin permission:"
-msgstr "Tillad adgang til disse programmer med administratorrettigheder:"
-
-#: ../src/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "Generelt"
-
-#: ../src/Widgets/ControlPage.vala:54
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:55
-msgid "Applications"
-msgstr "Programmer"
-
-#: ../src/Widgets/UserList.vala:42
-msgid "My Account"
-msgstr "Min konto"
-
-#: ../src/Widgets/UserList.vala:46
-msgid "Other Accounts"
-msgstr "Andre konti"
-
-#: ../src/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Fra:"
-
-#: ../src/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Til:"
-
-#: ../src/Widgets/GeneralBox.vala:62
-msgid "Allow this user to:"
-msgstr "Tillad denne bruger at:"
-
-#: ../src/Widgets/GeneralBox.vala:65
-msgid "Modify the dock"
-msgstr "Rediger dokken"
-
-#: ../src/Widgets/GeneralBox.vala:68
-msgid "Configure printing"
-msgstr "Konfigurer udskrivning"
-
-#: ../src/Widgets/GeneralBox.vala:84
-msgid "Limit computer use:"
-msgstr "Begræns computerbrug:"
-
-#: ../src/Widgets/GeneralBox.vala:92
-msgid "On weekdays and weekends"
-msgstr "På hverdage og i weekender"
-
-#: ../src/Widgets/GeneralBox.vala:93
-msgid "Only on weekdays"
-msgstr "Kun på hverdage"
-
-#: ../src/Widgets/GeneralBox.vala:94
-msgid "Only on weekends"
-msgstr "Kun i weekender"
-
-#: ../src/Widgets/GeneralBox.vala:104
-msgid "Weekdays"
-msgstr "Hverdage"
-
-#: ../src/Widgets/GeneralBox.vala:108
-msgid "Weekends"
-msgstr "Weekender"
-
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Søg efter applikationer"
-
-#: ../src/Widgets/InternetBox.vala:77
-msgid "Prevent %s from visiting these websites:"
-msgstr "Forhindre %s i at besøge disse websteder:"
-
-#: ../src/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr "Tilføj URL"
-
-#: ../src/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr "Tilføj en ny URL , f.eks. google.dk"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr "Ugyldig URL"
-
-#. //launchpad.net/switchboard-plug-parental-controls)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 3 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
-#.
-#: ../src/Translation.vala:23
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage parental control settings"
 msgstr "Håndter forælderkontrolindstillinger"
 
-#: ../src/Translation.vala:24
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
 msgstr "Godkendelse er påkrævet for at ændre forældrekontrolindstillinger"
 
-#: ../src/Plug.vala:71
+#: data/pantheon-parental-controls-client.desktop:3
+#, fuzzy
+msgid "Parental Controls Client"
+msgstr "Forældrekontrol"
+
+#: data/pantheon-parental-controls-client.desktop:5
+#, fuzzy
+msgid "Show parental control restrictions"
+msgstr "Håndter forælderkontrolindstillinger"
+
+#: data/pantheon-parental-controls-client.desktop:6
+msgid "preferences-system-parental-controls"
+msgstr ""
+
+#: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Nogle indstillinger kræver administratorrettigheder for at blive ændret"
 
-#: ../src/Plug.vala:80
+#: src/plug/Plug.vala:80
 msgid "No users to edit"
 msgstr "Ingen brugere at redigere"
 
-#: ../src/Plug.vala:80
+#: src/plug/Plug.vala:80
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -172,51 +63,160 @@ msgstr ""
 "Du kan ændre en brugers kontotype fra \"Administrator\" til \"Standard\" i "
 "panelet for Brugere."
 
-#: ../src/Plug.vala:83
+#: src/plug/Plug.vala:83
 msgid "Configure User Accounts"
 msgstr "Konfigurer brugerkonti"
 
-#: ../src/Plug.vala:86
+#: src/plug/Plug.vala:86
 msgid "Open Users settings"
 msgstr "Åbn brugerens indstillinger"
 
-#: ../src/Plug.vala:163
+#: src/plug/Plug.vala:165
 msgid "Parental Control"
 msgstr "Forældrekontrol"
 
-#: ../src/Plug.vala:164
+#: src/plug/Plug.vala:166
 msgid "Configure time limits and restrict application usage"
 msgstr "Konfigurer tidsbegrænsninger, og begræns brug af applikationer"
 
-#: ../src/client/AppUnavailableDialog.vala:27
-msgid "You cannot run this application"
-msgstr "Du kan ikke køre denne applikation"
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "Fra:"
 
-#: ../src/client/AppUnavailableDialog.vala:28
-msgid "You are not permitted to run this application."
-msgstr "Du har ikke tilladelse til at køre denne applikation."
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Til:"
 
-#: ../src/client/Client.vala:95
+#: src/plug/Widgets/UserList.vala:42
+msgid "My Account"
+msgstr "Min konto"
+
+#: src/plug/Widgets/UserList.vala:46
+msgid "Other Accounts"
+msgstr "Andre konti"
+
+#: src/plug/Widgets/InternetBox.vala:77
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Forhindre %s i at besøge disse websteder:"
+
+#: src/plug/Widgets/InternetBox.vala:90
+msgid "Add URL"
+msgstr "Tilføj URL"
+
+#: src/plug/Widgets/InternetBox.vala:99
+msgid "Add a new URL, for example: google.com"
+msgstr "Tilføj en ny URL , f.eks. google.dk"
+
+#: src/plug/Widgets/InternetBox.vala:100
+msgid "Invalid URL"
+msgstr "Ugyldig URL"
+
+#: src/plug/Widgets/GeneralBox.vala:62
+msgid "Allow this user to:"
+msgstr "Tillad denne bruger at:"
+
+#: src/plug/Widgets/GeneralBox.vala:65
+msgid "Modify the dock"
+msgstr "Rediger dokken"
+
+#: src/plug/Widgets/GeneralBox.vala:68
+msgid "Configure printing"
+msgstr "Konfigurer udskrivning"
+
+#: src/plug/Widgets/GeneralBox.vala:84
+msgid "Limit computer use:"
+msgstr "Begræns computerbrug:"
+
+#: src/plug/Widgets/GeneralBox.vala:92
+msgid "On weekdays and weekends"
+msgstr "På hverdage og i weekender"
+
+#: src/plug/Widgets/GeneralBox.vala:93
+msgid "Only on weekdays"
+msgstr "Kun på hverdage"
+
+#: src/plug/Widgets/GeneralBox.vala:94
+msgid "Only on weekends"
+msgstr "Kun i weekender"
+
+#: src/plug/Widgets/GeneralBox.vala:104
+msgid "Weekdays"
+msgstr "Hverdage"
+
+#: src/plug/Widgets/GeneralBox.vala:108
+msgid "Weekends"
+msgstr "Weekender"
+
+#: src/plug/Widgets/ControlPage.vala:53
+msgid "General"
+msgstr "Generelt"
+
+#: src/plug/Widgets/ControlPage.vala:54
+msgid "Internet"
+msgstr "Internet"
+
+#: src/plug/Widgets/ControlPage.vala:55
+msgid "Applications"
+msgstr "Programmer"
+
+#: src/plug/Widgets/AppsBox.vala:90
+#, c-format
+msgid "Prevent %s from using these apps:"
+msgstr "Forhindre %s i at bruge disse programmer:"
+
+#: src/plug/Widgets/AppsBox.vala:101
+msgid "Add Prevented Apps…"
+msgstr "Tilføj spærrede applikationer…"
+
+#: src/plug/Widgets/AppsBox.vala:105
+msgid "Remove Selected App"
+msgstr "Fjern valgte applikation"
+
+#: src/plug/Widgets/AppsBox.vala:110
+msgid "Clear All"
+msgstr "Ryd alt"
+
+#: src/plug/Widgets/AppsBox.vala:133
+msgid "Allow access to these apps with admin permission:"
+msgstr "Tillad adgang til disse programmer med administratorrettigheder:"
+
+#: src/plug/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Søg efter applikationer"
+
+#: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "Husk at lukke alle applikationer inden din computer bliver låst."
 
-#: ../src/client/Client.vala:99
+#: src/client/Client.vala:99
+#, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu time"
 msgstr[1] "%lu timer"
 
-#: ../src/client/Client.vala:103
+#: src/client/Client.vala:103
+#, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu minut"
 msgstr[1] "%lu minutter"
 
-#: ../src/client/Client.vala:106
+#: src/client/Client.vala:106
+#, c-format
 msgid "This computer will lock after %s %s. %s"
 msgstr "Denne computer låses efter %s %s. %s"
 
-#: ../src/client/Client.vala:108
+#: src/client/Client.vala:108
 msgid "Time left"
 msgstr "Tid tilbage"
+
+#: src/client/AppUnavailableDialog.vala:27
+msgid "You cannot run this application"
+msgstr "Du kan ikke køre denne applikation"
+
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You are not permitted to run this application."
+msgstr "Du har ikke tilladelse til at køre denne applikation."

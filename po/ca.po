@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-02-04 11:47+0100\n"
+"POT-Creation-Date: 2018-02-21 16:46-0800\n"
 "PO-Revision-Date: 2017-05-04 15:15+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard"
-"/switchboard-plug-parental-controls/ca/>\n"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-parental-controls/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,147 +20,38 @@ msgstr ""
 "X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
-#: ../src/Widgets/AppsBox.vala:90
-msgid "Prevent %s from using these apps:"
-msgstr "Impedeix que %s usi aquestes aplicacions:"
-
-#: ../src/Widgets/AppsBox.vala:101
-msgid "Add Prevented Apps…"
-msgstr "Afegeix aplicacions protegides…"
-
-#: ../src/Widgets/AppsBox.vala:105
-msgid "Remove Selected App"
-msgstr "Elimina l'aplicació seleccionada"
-
-#: ../src/Widgets/AppsBox.vala:110
-msgid "Clear All"
-msgstr "Neteja-ho tot"
-
-#: ../src/Widgets/AppsBox.vala:133
-msgid "Allow access to these apps with admin permission:"
-msgstr "Permet accés a aquestes aplicacions amb permís d'administrador:"
-
-#: ../src/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "General"
-
-#: ../src/Widgets/ControlPage.vala:54
-msgid "Internet"
-msgstr "Internet"
-
-#: ../src/Widgets/ControlPage.vala:55
-msgid "Applications"
-msgstr "Aplicacions"
-
-#: ../src/Widgets/UserList.vala:42
-msgid "My Account"
-msgstr "El meu compte"
-
-#: ../src/Widgets/UserList.vala:46
-msgid "Other Accounts"
-msgstr "Altres comptes"
-
-#: ../src/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Des de:"
-
-#: ../src/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Fins a:"
-
-#: ../src/Widgets/GeneralBox.vala:62
-msgid "Allow this user to:"
-msgstr "Permet a aquest usuari el següent:"
-
-#: ../src/Widgets/GeneralBox.vala:65
-msgid "Modify the dock"
-msgstr "Modificar l'acoblador"
-
-#: ../src/Widgets/GeneralBox.vala:68
-msgid "Configure printing"
-msgstr "Configurar la impressió"
-
-#: ../src/Widgets/GeneralBox.vala:84
-msgid "Limit computer use:"
-msgstr "Limita l'ús de l'ordinador:"
-
-#: ../src/Widgets/GeneralBox.vala:92
-msgid "On weekdays and weekends"
-msgstr "Els dies feiners i els caps de setmana"
-
-#: ../src/Widgets/GeneralBox.vala:93
-msgid "Only on weekdays"
-msgstr "Només els caps de setmana"
-
-#: ../src/Widgets/GeneralBox.vala:94
-msgid "Only on weekends"
-msgstr "Només els dies feiners"
-
-#: ../src/Widgets/GeneralBox.vala:104
-msgid "Weekdays"
-msgstr "Dies feiners"
-
-#: ../src/Widgets/GeneralBox.vala:108
-msgid "Weekends"
-msgstr "Caps de setmana"
-
-#: ../src/Widgets/AppChooser.vala:71
-msgid "Search Applications"
-msgstr "Cerca aplicacions"
-
-#: ../src/Widgets/InternetBox.vala:77
-msgid "Prevent %s from visiting these websites:"
-msgstr "Impedeix que %s visiti aquests llocs web:"
-
-#: ../src/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr "Afegeix un URL"
-
-#: ../src/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr "Afegiu un URL nou, com ara google.com"
-
-#: ../src/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr "L'URL no és vàlid"
-
-#. //launchpad.net/switchboard-plug-parental-controls)
-#. *
-#. * This library is free software; you can redistribute it and/or
-#. * modify it under the terms of the GNU Library General Public
-#. * License as published by the Free Software Foundation; either
-#. * version 3 of the License, or (at your option) any later version.
-#. *
-#. * This library is distributed in the hope that it will be useful,
-#. * but WITHOUT ANY WARRANTY; without even the implied warranty of
-#. * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-#. * Library General Public License for more details.
-#. *
-#. * You should have received a copy of the GNU Library General Public
-#. * License along with this library; if not, write to the
-#. * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-#. * Boston, MA 02111-1307, USA.
-#. *
-#. * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
-#.
-#: ../src/Translation.vala:23
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage parental control settings"
 msgstr "Gestioneu els paràmetres del control parental"
 
-#: ../src/Translation.vala:24
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
 msgstr "Cal autenticació per canviar els paràmetres del control parental"
 
-#: ../src/Plug.vala:71
+#: data/pantheon-parental-controls-client.desktop:3
+#, fuzzy
+msgid "Parental Controls Client"
+msgstr "Control parental"
+
+#: data/pantheon-parental-controls-client.desktop:5
+#, fuzzy
+msgid "Show parental control restrictions"
+msgstr "Gestioneu els paràmetres del control parental"
+
+#: data/pantheon-parental-controls-client.desktop:6
+msgid "preferences-system-parental-controls"
+msgstr ""
+
+#: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Alguns paràmetres necessiten permisos d'administrador per ser modificats"
 
-#: ../src/Plug.vala:80
+#: src/plug/Plug.vala:80
 msgid "No users to edit"
 msgstr "No hi ha usuaris per editar"
 
-#: ../src/Plug.vala:80
+#: src/plug/Plug.vala:80
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -172,52 +63,161 @@ msgstr ""
 "Podeu canviar el tipus de compte d'un usuari d'administrador a estàndard a "
 "la secció de comptes d'usuari."
 
-#: ../src/Plug.vala:83
+#: src/plug/Plug.vala:83
 msgid "Configure User Accounts"
 msgstr "Configureu comptes d'usuari"
 
-#: ../src/Plug.vala:86
+#: src/plug/Plug.vala:86
 msgid "Open Users settings"
 msgstr "Obre els paràmetres dels usuaris"
 
-#: ../src/Plug.vala:163
+#: src/plug/Plug.vala:165
 msgid "Parental Control"
 msgstr "Control parental"
 
-#: ../src/Plug.vala:164
+#: src/plug/Plug.vala:166
 msgid "Configure time limits and restrict application usage"
 msgstr "Configureu límits de temps i restringiu l'ús d'aplicacions"
 
-#: ../src/client/AppUnavailableDialog.vala:27
-msgid "You cannot run this application"
-msgstr "No podeu executar aquesta aplicació."
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "Des de:"
 
-#: ../src/client/AppUnavailableDialog.vala:28
-msgid "You are not permitted to run this application."
-msgstr "No teniu permís per executar aquesta aplicació."
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Fins a:"
 
-#: ../src/client/Client.vala:95
+#: src/plug/Widgets/UserList.vala:42
+msgid "My Account"
+msgstr "El meu compte"
+
+#: src/plug/Widgets/UserList.vala:46
+msgid "Other Accounts"
+msgstr "Altres comptes"
+
+#: src/plug/Widgets/InternetBox.vala:77
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Impedeix que %s visiti aquests llocs web:"
+
+#: src/plug/Widgets/InternetBox.vala:90
+msgid "Add URL"
+msgstr "Afegeix un URL"
+
+#: src/plug/Widgets/InternetBox.vala:99
+msgid "Add a new URL, for example: google.com"
+msgstr "Afegiu un URL nou, com ara google.com"
+
+#: src/plug/Widgets/InternetBox.vala:100
+msgid "Invalid URL"
+msgstr "L'URL no és vàlid"
+
+#: src/plug/Widgets/GeneralBox.vala:62
+msgid "Allow this user to:"
+msgstr "Permet a aquest usuari el següent:"
+
+#: src/plug/Widgets/GeneralBox.vala:65
+msgid "Modify the dock"
+msgstr "Modificar l'acoblador"
+
+#: src/plug/Widgets/GeneralBox.vala:68
+msgid "Configure printing"
+msgstr "Configurar la impressió"
+
+#: src/plug/Widgets/GeneralBox.vala:84
+msgid "Limit computer use:"
+msgstr "Limita l'ús de l'ordinador:"
+
+#: src/plug/Widgets/GeneralBox.vala:92
+msgid "On weekdays and weekends"
+msgstr "Els dies feiners i els caps de setmana"
+
+#: src/plug/Widgets/GeneralBox.vala:93
+msgid "Only on weekdays"
+msgstr "Només els caps de setmana"
+
+#: src/plug/Widgets/GeneralBox.vala:94
+msgid "Only on weekends"
+msgstr "Només els dies feiners"
+
+#: src/plug/Widgets/GeneralBox.vala:104
+msgid "Weekdays"
+msgstr "Dies feiners"
+
+#: src/plug/Widgets/GeneralBox.vala:108
+msgid "Weekends"
+msgstr "Caps de setmana"
+
+#: src/plug/Widgets/ControlPage.vala:53
+msgid "General"
+msgstr "General"
+
+#: src/plug/Widgets/ControlPage.vala:54
+msgid "Internet"
+msgstr "Internet"
+
+#: src/plug/Widgets/ControlPage.vala:55
+msgid "Applications"
+msgstr "Aplicacions"
+
+#: src/plug/Widgets/AppsBox.vala:90
+#, c-format
+msgid "Prevent %s from using these apps:"
+msgstr "Impedeix que %s usi aquestes aplicacions:"
+
+#: src/plug/Widgets/AppsBox.vala:101
+msgid "Add Prevented Apps…"
+msgstr "Afegeix aplicacions protegides…"
+
+#: src/plug/Widgets/AppsBox.vala:105
+msgid "Remove Selected App"
+msgstr "Elimina l'aplicació seleccionada"
+
+#: src/plug/Widgets/AppsBox.vala:110
+msgid "Clear All"
+msgstr "Neteja-ho tot"
+
+#: src/plug/Widgets/AppsBox.vala:133
+msgid "Allow access to these apps with admin permission:"
+msgstr "Permet accés a aquestes aplicacions amb permís d'administrador:"
+
+#: src/plug/Widgets/AppChooser.vala:71
+msgid "Search Applications"
+msgstr "Cerca aplicacions"
+
+#: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Assegureu-vos de tancar totes les aplicacions abans de bloquejar l'ordinador."
 
-#: ../src/client/Client.vala:99
+#: src/client/Client.vala:99
+#, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu hora"
 msgstr[1] "%lu hores"
 
-#: ../src/client/Client.vala:103
+#: src/client/Client.vala:103
+#, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu minut"
 msgstr[1] "%lu minuts"
 
-#: ../src/client/Client.vala:106
+#: src/client/Client.vala:106
+#, c-format
 msgid "This computer will lock after %s %s. %s"
 msgstr "Aquest ordinador es bloquejarà al cap de %s %s. %s"
 
-#: ../src/client/Client.vala:108
+#: src/client/Client.vala:108
 msgid "Time left"
 msgstr "Temps restant"
+
+#: src/client/AppUnavailableDialog.vala:27
+msgid "You cannot run this application"
+msgstr "No podeu executar aquesta aplicació."
+
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You are not permitted to run this application."
+msgstr "No teniu permís per executar aquesta aplicació."
