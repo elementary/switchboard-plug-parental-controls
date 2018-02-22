@@ -5,7 +5,7 @@ Description=Pantheon Parental Controls Daemon
 Type=dbus
 Restart=always
 BusName=org.pantheon.ParentalControls
-ExecStart=@CMAKE_INSTALL_PREFIX@/bin/pantheon-parental-controls-daemon
+ExecStart=@DAEMON_PATH@
 
 [Install]
 WantedBy=multi-user.target
