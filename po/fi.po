@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-02-25 00:09+0000\n"
+"PO-Revision-Date: 2018-06-08 08:14+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-parental-controls/fi/>\n"
+"Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-parental-controls/fi/>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -183,9 +183,9 @@ msgid "Search Applications"
 msgstr "Etsi sovelluksia"
 
 #: src/client/Client.vala:89
-#, fuzzy, c-format
+#, c-format
 msgid "This computer will lock after %s."
-msgstr "Tämä tietokone lukkiutuu %s %s. %s"
+msgstr "Tämä tietokone lukkiutuu viiveellä %s."
 
 #: src/client/Client.vala:91
 #, c-format
