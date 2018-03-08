@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-21 16:46-0800\n"
-"PO-Revision-Date: 2018-02-21 00:08+0000\n"
+"PO-Revision-Date: 2018-03-09 00:06+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
-"Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-parental-controls/it/>\n"
+"Language-Team: Italian <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-parental-controls/it/>\n"
 "Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -31,7 +31,6 @@ msgstr ""
 "parentale"
 
 #: data/pantheon-parental-controls-client.desktop:3
-#, fuzzy
 msgid "Parental Controls Client"
 msgstr "Filtro famiglia"
 
