@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-21 16:46-0800\n"
-"PO-Revision-Date: 2018-03-10 00:04+0000\n"
+"PO-Revision-Date: 2018-03-22 17:01+0000\n"
 "Last-Translator: haggen svastian <h2gn@openmailbox.org>\n"
 "Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/es/>\n"
@@ -39,7 +39,7 @@ msgstr "Administrar la configuración de control parental"
 
 #: data/pantheon-parental-controls-client.desktop:6
 msgid "preferences-system-parental-controls"
-msgstr ""
+msgstr "preferencias-sistema-parental-controles"
 
 #: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
