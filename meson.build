@@ -22,6 +22,8 @@ daemon_path = join_paths(get_option('prefix'), get_option('bindir'))
 daemon_name = 'pantheon-parental-controls-daemon'
 daemon_conf_dir = join_paths(get_option('sysconfdir'), 'pantheon-parental-controls')
 
+systemd_dir = '/lib/systemd'
+
 glib_dep = dependency('glib-2.0')
 gio_dep = dependency('gio-2.0')
 gobject_dep = dependency('gobject-2.0')
