@@ -9,7 +9,7 @@ configure_file(
     input: 'pantheon-parental-controls.service.in',
     output: '@BASENAME@',
     configuration: configuration_data,
-    install_dir: join_paths('/', 'lib','systemd', 'system')
+    install_dir: join_paths(get_option('libdir'),'systemd', 'system')
 )
 
 configure_file(
