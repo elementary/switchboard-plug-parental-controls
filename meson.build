@@ -30,6 +30,7 @@ gtk_dep = dependency('gtk+-3.0')
 gee_dep = dependency ('gee-0.8')
 polkit_dep = dependency('polkit-gobject-1')
 accountsservice_dep = dependency('accountsservice')
+systemd_dep = dependency('systemd')
 posix_dep = meson.get_compiler('vala').find_library('posix')
 
 subdir('data')
