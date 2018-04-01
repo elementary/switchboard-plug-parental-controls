@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-21 16:46-0800\n"
-"PO-Revision-Date: 2017-05-12 16:28+0000\n"
+"PO-Revision-Date: 2018-04-02 00:05+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
-"Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
-"switchboard-plug-parental-controls/nl/>\n"
+"Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-parental-controls/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.13-dev\n"
+"X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
@@ -31,14 +31,12 @@ msgstr ""
 "verranderen"
 
 #: data/pantheon-parental-controls-client.desktop:3
-#, fuzzy
 msgid "Parental Controls Client"
-msgstr "Ouderlijk toezicht"
+msgstr "Ouderlijk toezicht cliënt"
 
 #: data/pantheon-parental-controls-client.desktop:5
-#, fuzzy
 msgid "Show parental control restrictions"
-msgstr "Beheer ouderlijk toezicht instellingen"
+msgstr "Beheer ouderlijk toezicht restricties"
 
 #: data/pantheon-parental-controls-client.desktop:6
 msgid "preferences-system-parental-controls"
@@ -210,9 +208,9 @@ msgstr[0] "%lu minuut"
 msgstr[1] "%lu minuten"
 
 #: src/client/Client.vala:106
-#, fuzzy, c-format
+#, c-format
 msgid "This computer will lock after %s %s. %s"
-msgstr "d"
+msgstr "Deze computer zal vergrendelen na %s %s. %s"
 
 #: src/client/Client.vala:108
 msgid "Time left"
