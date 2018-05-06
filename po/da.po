@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-21 16:46-0800\n"
-"PO-Revision-Date: 2018-03-25 00:09+0000\n"
+"PO-Revision-Date: 2018-05-07 00:03+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/da/>\n"
@@ -71,7 +71,7 @@ msgstr "Åbn brugerens indstillinger"
 
 #: src/plug/Plug.vala:165
 msgid "Parental Control"
-msgstr "Forældrekontrol"
+msgstr "Forældre Kontrol"
 
 #: src/plug/Plug.vala:166
 msgid "Configure time limits and restrict application usage"
@@ -156,7 +156,7 @@ msgstr "Internet"
 
 #: src/plug/Widgets/ControlPage.vala:55
 msgid "Applications"
-msgstr "Programmer"
+msgstr "Applikationer"
 
 #: src/plug/Widgets/AppsBox.vala:90
 #, c-format
