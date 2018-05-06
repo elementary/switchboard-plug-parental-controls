@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-21 16:46-0800\n"
-"PO-Revision-Date: 2018-02-23 06:34+0000\n"
+"PO-Revision-Date: 2018-05-07 00:03+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/ja/>\n"
@@ -111,7 +111,7 @@ msgstr "無効な URL"
 
 #: src/plug/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
-msgstr "ユーザーに許可する動作："
+msgstr "ユーザーに許可する動作:"
 
 #: src/plug/Widgets/GeneralBox.vala:65
 msgid "Modify the dock"
