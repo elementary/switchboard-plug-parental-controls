@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-21 16:46-0800\n"
-"PO-Revision-Date: 2018-05-07 00:03+0000\n"
+"PO-Revision-Date: 2018-05-13 00:11+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/ja/>\n"
@@ -78,11 +78,11 @@ msgstr "時間制限とアプリケーションの使用制限を設定します
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr "期間の起点:"
+msgstr "開始:"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr "終点:"
+msgstr "終了:"
 
 #: src/plug/Widgets/UserList.vala:42
 msgid "My Account"
