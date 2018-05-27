@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Parental Controls Client
-Exec=pantheon-parental-controls-client
+Exec=@CLIENT_PATH@
 Comment=Show parental control restrictions
 Icon=preferences-system-parental-controls
 Terminal=false
