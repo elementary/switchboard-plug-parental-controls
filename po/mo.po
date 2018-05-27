@@ -2,36 +2,45 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-21 16:46-0800\n"
+"PO-Revision-Date: 2018-05-28 00:00+0000\n"
+"Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
+"Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-parental-controls/mo/>\n"
+"Language: mo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 2.18\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage parental control settings"
-msgstr ""
+msgstr "Gestionați setările de control parental"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
 msgstr ""
+"Este necesară autentificarea pentru a modifica setările de control parental"
 
 #: data/pantheon-parental-controls-client.desktop:3
 msgid "Parental Controls Client"
-msgstr ""
+msgstr "Cont client de control parental"
 
 #: data/pantheon-parental-controls-client.desktop:5
 msgid "Show parental control restrictions"
-msgstr ""
+msgstr "Arătați restricții privind controlul parental"
 
 #: data/pantheon-parental-controls-client.desktop:6
 msgid "preferences-system-parental-controls"
-msgstr ""
+msgstr "Preferințe-sistem-control-parental"
 
 #: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Unele setări necesită modificarea drepturilor de administrator"
 
 #: src/plug/Plug.vala:80
 msgid "No users to edit"
-msgstr ""
+msgstr "Nu există utilizatori de editat"
 
 #: src/plug/Plug.vala:80
 msgid ""
@@ -40,161 +49,168 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
+"Controlul parental poate fi aplicat numai conturilor de utilizator care nu "
+"au permisiuni administrative.\n"
+"\n"
+"Puteți modifica tipul de cont al unui utilizator de la \"Administrator\" la "
+"\"Standard\" din panoul Conturi utilizator."
 
 #: src/plug/Plug.vala:83
 msgid "Configure User Accounts"
-msgstr ""
+msgstr "Configurați conturile de utilizator"
 
 #: src/plug/Plug.vala:86
 msgid "Open Users settings"
-msgstr ""
+msgstr "Deschideți setările pentru utilizatori"
 
 #: src/plug/Plug.vala:165
 msgid "Parental Control"
-msgstr ""
+msgstr "Control Parental"
 
 #: src/plug/Plug.vala:166
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "Configurați termenele și restricționați utilizarea aplicațiilor"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr ""
+msgstr "De la:"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr ""
+msgstr "Pentru:"
 
 #: src/plug/Widgets/UserList.vala:42
 msgid "My Account"
-msgstr ""
+msgstr "Contul meu"
 
 #: src/plug/Widgets/UserList.vala:46
 msgid "Other Accounts"
-msgstr ""
+msgstr "Alte conturi"
 
 #: src/plug/Widgets/InternetBox.vala:77
 #, c-format
 msgid "Prevent %s from visiting these websites:"
-msgstr ""
+msgstr "Împiedicați %s 1 să viziteze aceste site-uri web:"
 
 #: src/plug/Widgets/InternetBox.vala:90
 msgid "Add URL"
-msgstr ""
+msgstr "Adaugă URL"
 
 #: src/plug/Widgets/InternetBox.vala:99
 msgid "Add a new URL, for example: google.com"
-msgstr ""
+msgstr "Adaugă nou URL, de exemplu: Google.com"
 
 #: src/plug/Widgets/InternetBox.vala:100
 msgid "Invalid URL"
-msgstr ""
+msgstr "URL invalid"
 
 #: src/plug/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
-msgstr ""
+msgstr "Permiteți acestui utilizator să:"
 
 #: src/plug/Widgets/GeneralBox.vala:65
 msgid "Modify the dock"
-msgstr ""
+msgstr "Modificați docul"
 
 #: src/plug/Widgets/GeneralBox.vala:68
 msgid "Configure printing"
-msgstr ""
+msgstr "Configurați imprimarea"
 
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
-msgstr ""
+msgstr "Limitați utilizarea calculatorului:"
 
 #: src/plug/Widgets/GeneralBox.vala:92
 msgid "On weekdays and weekends"
-msgstr ""
+msgstr "În zilele lucrătoare și în weekend"
 
 #: src/plug/Widgets/GeneralBox.vala:93
 msgid "Only on weekdays"
-msgstr ""
+msgstr "Numai în timpul săptămânii"
 
 #: src/plug/Widgets/GeneralBox.vala:94
 msgid "Only on weekends"
-msgstr ""
+msgstr "Numai la sfârșit de săptămână"
 
 #: src/plug/Widgets/GeneralBox.vala:104
 msgid "Weekdays"
-msgstr ""
+msgstr "Zilele saptămânii"
 
 #: src/plug/Widgets/GeneralBox.vala:108
 msgid "Weekends"
-msgstr ""
+msgstr "Weekend-uri"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "General"
-msgstr ""
+msgstr "Generală"
 
 #: src/plug/Widgets/ControlPage.vala:54
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: src/plug/Widgets/ControlPage.vala:55
 msgid "Applications"
-msgstr ""
+msgstr "Aplicații"
 
 #: src/plug/Widgets/AppsBox.vala:90
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "Preveniți %s 1 să utilizați aceste aplicații:"
 
 #: src/plug/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
-msgstr ""
+msgstr "Adăugați aplicații prevenite …"
 
 #: src/plug/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
-msgstr ""
+msgstr "Eliminați aplicația selectată"
 
 #: src/plug/Widgets/AppsBox.vala:110
 msgid "Clear All"
-msgstr ""
+msgstr "Curăță tot"
 
 #: src/plug/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
-msgstr ""
+msgstr "Permiteți accesul la aceste aplicații cu permisiunea de administrator:"
 
 #: src/plug/Widgets/AppChooser.vala:71
 msgid "Search Applications"
-msgstr ""
+msgstr "Căutați aplicații"
 
 #: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
+"Asigurați-vă că ați închis toate aplicațiile înainte ca calculatorul dvs. să "
+"fie blocat."
 
 #: src/client/Client.vala:99
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%l 1 o oră"
+msgstr[1] "%l 2 ore"
 
 #: src/client/Client.vala:103
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%l 1 un minut"
+msgstr[1] "%l 2 minute"
 
 #: src/client/Client.vala:106
 #, c-format
 msgid "This computer will lock after %s %s. %s"
-msgstr ""
+msgstr "Acest computer se va bloca după %s 1 %s 2. %s 3"
 
 #: src/client/Client.vala:108
 msgid "Time left"
-msgstr ""
+msgstr "Timp rămas"
 
 #: src/client/AppUnavailableDialog.vala:27
 msgid "You cannot run this application"
-msgstr ""
+msgstr "Nu puteți rula această aplicație"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
-msgstr ""
+msgstr "Nu aveți permisiunea de a rula această aplicație."
