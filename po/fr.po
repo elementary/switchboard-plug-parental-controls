@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-21 16:46-0800\n"
-"PO-Revision-Date: 2018-02-23 00:42+0000\n"
+"PO-Revision-Date: 2018-05-29 00:12+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/fr/>\n"
@@ -81,11 +81,11 @@ msgstr "Configurez des limites de temps et des restrictions d'utilisation"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr "Du :"
+msgstr "De :"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr "Au :"
+msgstr "À :"
 
 #: src/plug/Widgets/UserList.vala:42
 msgid "My Account"
