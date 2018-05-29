@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-21 16:46-0800\n"
-"PO-Revision-Date: 2018-02-24 00:04+0000\n"
+"PO-Revision-Date: 2018-05-30 00:04+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/he/>\n"
@@ -76,11 +76,11 @@ msgstr "הגדרת מגבלות זמן והגבלת השימוש ביישומי�
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr "מ־:"
+msgstr "התחלה:"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr "עד:"
+msgstr "סיום:"
 
 #: src/plug/Widgets/UserList.vala:42
 msgid "My Account"
