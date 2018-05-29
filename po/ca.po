@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-05-30 00:04+0000\n"
+"PO-Revision-Date: 2018-06-04 16:46+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-parental-controls/ca/>\n"
+"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-parental-controls/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -184,9 +184,9 @@ msgid "Search Applications"
 msgstr "Cerca aplicacions"
 
 #: src/client/Client.vala:89
-#, fuzzy, c-format
+#, c-format
 msgid "This computer will lock after %s."
-msgstr "Aquest ordinador es bloquejarà al cap de %s %s. %s"
+msgstr "Aquest ordinador es bloquejarà al cap de %s."
 
 #: src/client/Client.vala:91
 #, c-format
