@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-21 16:46-0800\n"
-"PO-Revision-Date: 2018-05-30 14:53+0000\n"
+"PO-Revision-Date: 2018-06-01 00:08+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/hu/>\n"
@@ -147,7 +147,7 @@ msgstr "Hétvégén"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "General"
-msgstr "Általános"
+msgstr "Álatlános"
 
 #: src/plug/Widgets/ControlPage.vala:54
 msgid "Internet"
