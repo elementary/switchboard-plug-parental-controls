@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-02-21 16:46-0800\n"
-"PO-Revision-Date: 2018-06-01 00:08+0000\n"
+"PO-Revision-Date: 2018-06-02 00:06+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/hu/>\n"
@@ -42,7 +42,7 @@ msgstr "beállítások-rendszer-szülői-felügyelet"
 
 #: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
-msgstr "Egyes beállítások megváltoztatása adminisztrátori jogokat igényel"
+msgstr "Egyes beállítások megváltoztatása rendszergazdai jogokat igényel"
 
 #: src/plug/Plug.vala:80
 msgid "No users to edit"
@@ -95,7 +95,7 @@ msgstr "Egyéb fiókok"
 #: src/plug/Widgets/InternetBox.vala:77
 #, c-format
 msgid "Prevent %s from visiting these websites:"
-msgstr "%s megakadályozása abban, hogy az alábbi weblapokat meglátogassa:"
+msgstr "%s megakadályozása abban, hogy meglátogassa az alábbi weblapokat:"
 
 #: src/plug/Widgets/InternetBox.vala:90
 msgid "Add URL"
@@ -176,7 +176,7 @@ msgstr "Az összes törlése"
 
 #: src/plug/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
-msgstr "Adminisztrátori jóváhagyással engedélyezze a hozzáférést:"
+msgstr "Rendszergazdai jóváhagyással engedélyezze a hozzáférést:"
 
 #: src/plug/Widgets/AppChooser.vala:71
 msgid "Search Applications"
