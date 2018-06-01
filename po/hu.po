@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-06-02 00:06+0000\n"
+"PO-Revision-Date: 2018-06-04 12:33+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
-"Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-parental-controls/hu/>\n"
+"Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-parental-controls/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -184,9 +184,9 @@ msgid "Search Applications"
 msgstr "Alkalmazások keresése"
 
 #: src/client/Client.vala:89
-#, fuzzy, c-format
+#, c-format
 msgid "This computer will lock after %s."
-msgstr "A számítógép lezárásra kerül: %s %s. %s"
+msgstr "A számítógép lezárásra kerül: %s."
 
 #: src/client/Client.vala:91
 #, c-format
