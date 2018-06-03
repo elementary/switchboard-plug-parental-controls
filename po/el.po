@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 16:46-0800\n"
+"POT-Creation-Date: 2018-06-03 12:52+0100\n"
 "PO-Revision-Date: 2017-02-19 11:55+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,17 +23,17 @@ msgid "Authentication is required to change parental control settings"
 msgstr ""
 "Απαιτείται επαλήθευση για να αλλάξετε τις ρυθμίσεις του γονικού ελέγχου"
 
-#: data/pantheon-parental-controls-client.desktop:3
+#: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
 msgid "Parental Controls Client"
 msgstr "Γονικός έλεγχος"
 
-#: data/pantheon-parental-controls-client.desktop:5
+#: data/pantheon-parental-controls-client.desktop.in:5
 #, fuzzy
 msgid "Show parental control restrictions"
 msgstr "Διαχείριση ρυθμίσεων γονικού ελέγχου"
 
-#: data/pantheon-parental-controls-client.desktop:6
+#: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
@@ -180,6 +180,25 @@ msgstr ""
 msgid "Search Applications"
 msgstr "Αναζήτηση εφαρμογών"
 
+#: src/client/Client.vala:89
+#, fuzzy, c-format
+msgid "This computer will lock after %s."
+msgstr "Ο υπολογιστής θα κλειδώσει μετά από %s %s. %s"
+
+#: src/client/Client.vala:91
+#, c-format
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] "%lu ώρα"
+msgstr[1] "%lu ώρες"
+
+#: src/client/Client.vala:93
+#, c-format
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] "%lu λεπτό"
+msgstr[1] "%lu λεπτά"
+
 #: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
@@ -187,26 +206,7 @@ msgstr ""
 "Σιγουρευτείτε να κλείσετε όλες τις εφαρμογές πριν κλειδώσει ο υπολογιστής "
 "σας."
 
-#: src/client/Client.vala:99
-#, c-format
-msgid "%lu hour"
-msgid_plural "%lu hours"
-msgstr[0] "%lu ώρα"
-msgstr[1] "%lu ώρες"
-
-#: src/client/Client.vala:103
-#, c-format
-msgid "%lu minute"
-msgid_plural "%lu minutes"
-msgstr[0] "%lu λεπτό"
-msgstr[1] "%lu λεπτά"
-
-#: src/client/Client.vala:106
-#, c-format
-msgid "This computer will lock after %s %s. %s"
-msgstr "Ο υπολογιστής θα κλειδώσει μετά από %s %s. %s"
-
-#: src/client/Client.vala:108
+#: src/client/Client.vala:101
 msgid "Time left"
 msgstr "Χρόνος που απομένει"
 

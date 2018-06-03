@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 16:46-0800\n"
+"POT-Creation-Date: 2018-06-03 12:52+0100\n"
 "PO-Revision-Date: 2017-03-31 17:45+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -27,17 +27,17 @@ msgstr "Vanemliku kontrolli seadete muutmine"
 msgid "Authentication is required to change parental control settings"
 msgstr "Vanemliku kontrolli seadete muutmiseks on vajalik autentimine."
 
-#: data/pantheon-parental-controls-client.desktop:3
+#: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
 msgid "Parental Controls Client"
 msgstr "Vanemlik kontroll"
 
-#: data/pantheon-parental-controls-client.desktop:5
+#: data/pantheon-parental-controls-client.desktop.in:5
 #, fuzzy
 msgid "Show parental control restrictions"
 msgstr "Vanemliku kontrolli seadete muutmine"
 
-#: data/pantheon-parental-controls-client.desktop:6
+#: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
@@ -183,31 +183,31 @@ msgstr "Administraatorõigustega lubatud rakendused:"
 msgid "Search Applications"
 msgstr "Otsi rakendusi…"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr "Enne arvuti sulgemist veendu, et kõik rakendused oleksid suletud."
+#: src/client/Client.vala:89
+#, fuzzy, c-format
+msgid "This computer will lock after %s."
+msgstr "Süsteem lukustatakse pärast %s %s. %s"
 
-#: src/client/Client.vala:99
+#: src/client/Client.vala:91
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu tund"
 msgstr[1] "%lu tundi"
 
-#: src/client/Client.vala:103
+#: src/client/Client.vala:93
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu minut"
 msgstr[1] "%lu minutit"
 
-#: src/client/Client.vala:106
-#, c-format
-msgid "This computer will lock after %s %s. %s"
-msgstr "Süsteem lukustatakse pärast %s %s. %s"
+#: src/client/Client.vala:95
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr "Enne arvuti sulgemist veendu, et kõik rakendused oleksid suletud."
 
-#: src/client/Client.vala:108
+#: src/client/Client.vala:101
 msgid "Time left"
 msgstr "Aega jäänud"
 

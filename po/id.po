@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 16:46-0800\n"
+"POT-Creation-Date: 2018-06-03 12:52+0100\n"
 "PO-Revision-Date: 2017-07-31 15:51+0700\n"
 "Last-Translator: Kukuh Syafaat <syafaatkukuh@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
@@ -23,17 +23,17 @@ msgstr "Kelola pengaturan bimbingan orang tua"
 msgid "Authentication is required to change parental control settings"
 msgstr "Otentikasi diperlukan untuk mengubah pengaturan bimbingan orang tua"
 
-#: data/pantheon-parental-controls-client.desktop:3
+#: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
 msgid "Parental Controls Client"
 msgstr "Bimbingan Orang Tua"
 
-#: data/pantheon-parental-controls-client.desktop:5
+#: data/pantheon-parental-controls-client.desktop.in:5
 #, fuzzy
 msgid "Show parental control restrictions"
 msgstr "Kelola pengaturan bimbingan orang tua"
 
-#: data/pantheon-parental-controls-client.desktop:6
+#: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
@@ -179,29 +179,29 @@ msgstr "Izinkan akses ke aplikasi ini dengan izin admin:"
 msgid "Search Applications"
 msgstr "Cari Aplikasi"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr "Pastikan untuk menutup semua aplikasi sebelum komputer Anda terkunci."
+#: src/client/Client.vala:89
+#, fuzzy, c-format
+msgid "This computer will lock after %s."
+msgstr "Komputer ini akan terkunci setelah %s %s. %s"
 
-#: src/client/Client.vala:99
+#: src/client/Client.vala:91
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu jam"
 
-#: src/client/Client.vala:103
+#: src/client/Client.vala:93
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu menit"
 
-#: src/client/Client.vala:106
-#, c-format
-msgid "This computer will lock after %s %s. %s"
-msgstr "Komputer ini akan terkunci setelah %s %s. %s"
+#: src/client/Client.vala:95
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr "Pastikan untuk menutup semua aplikasi sebelum komputer Anda terkunci."
 
-#: src/client/Client.vala:108
+#: src/client/Client.vala:101
 msgid "Time left"
 msgstr "Waktu tersisa"
 

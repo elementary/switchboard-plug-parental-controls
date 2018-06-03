@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 16:46-0800\n"
+"POT-Creation-Date: 2018-06-03 12:52+0100\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -13,15 +13,15 @@ msgstr ""
 msgid "Authentication is required to change parental control settings"
 msgstr ""
 
-#: data/pantheon-parental-controls-client.desktop:3
+#: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
 msgstr ""
 
-#: data/pantheon-parental-controls-client.desktop:5
+#: data/pantheon-parental-controls-client.desktop.in:5
 msgid "Show parental control restrictions"
 msgstr ""
 
-#: data/pantheon-parental-controls-client.desktop:6
+#: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
@@ -163,31 +163,31 @@ msgstr ""
 msgid "Search Applications"
 msgstr ""
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
+#: src/client/Client.vala:89
+#, c-format
+msgid "This computer will lock after %s."
 msgstr ""
 
-#: src/client/Client.vala:99
+#: src/client/Client.vala:91
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:103
+#: src/client/Client.vala:93
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:106
-#, c-format
-msgid "This computer will lock after %s %s. %s"
+#: src/client/Client.vala:95
+msgid ""
+"Make sure to close all applications before your computer will be locked."
 msgstr ""
 
-#: src/client/Client.vala:108
+#: src/client/Client.vala:101
 msgid "Time left"
 msgstr ""
 

@@ -1,5 +1,5 @@
 data/org.pantheon.switchboard.parental-controls.policy.in
-data/pantheon-parental-controls-client.desktop
+data/pantheon-parental-controls-client.desktop.in
 src/plug/Plug.vala
 src/plug/Widgets/WeekSpinBox.vala
 src/plug/Widgets/UserList.vala

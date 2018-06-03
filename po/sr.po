@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 16:46-0800\n"
+"POT-Creation-Date: 2018-06-03 12:52+0100\n"
 "PO-Revision-Date: 2017-05-06 09:02+0000\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <https://l10n.elementary.io/projects/switchboard/"
@@ -29,17 +29,17 @@ msgid "Authentication is required to change parental control settings"
 msgstr ""
 "Потребно је потврђивање идентитета за промену подешавања родитељске контроле"
 
-#: data/pantheon-parental-controls-client.desktop:3
+#: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
 msgid "Parental Controls Client"
 msgstr "Родитељска контрола"
 
-#: data/pantheon-parental-controls-client.desktop:5
+#: data/pantheon-parental-controls-client.desktop.in:5
 #, fuzzy
 msgid "Show parental control restrictions"
 msgstr "Управљајте подешавањима родитељске контроле"
 
-#: data/pantheon-parental-controls-client.desktop:6
+#: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
@@ -185,32 +185,32 @@ msgstr "Дозволи приступ овим програмима уз доп�
 msgid "Search Applications"
 msgstr "Тражите програме"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr ""
-"Уверите се да сте затворили све програме пре него ваш рачунар буде закључан."
+#: src/client/Client.vala:89
+#, fuzzy, c-format
+msgid "This computer will lock after %s."
+msgstr "Овај рачунар ће се закључати након %s %s. %s"
 
-#: src/client/Client.vala:99
+#: src/client/Client.vala:91
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:103
+#: src/client/Client.vala:93
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:106
-#, c-format
-msgid "This computer will lock after %s %s. %s"
-msgstr "Овај рачунар ће се закључати након %s %s. %s"
+#: src/client/Client.vala:95
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr ""
+"Уверите се да сте затворили све програме пре него ваш рачунар буде закључан."
 
-#: src/client/Client.vala:108
+#: src/client/Client.vala:101
 msgid "Time left"
 msgstr "Престало време"
 

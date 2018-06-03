@@ -7,12 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 16:46-0800\n"
+"POT-Creation-Date: 2018-06-03 12:52+0100\n"
 "PO-Revision-Date: 2018-02-23 19:28+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
-"Language-Team: English (Canada) "
-"<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
-"parental-controls/en_CA/>\n"
+"Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-parental-controls/en_CA/>\n"
 "Language: en_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,15 +28,15 @@ msgstr "Manage parental control settings"
 msgid "Authentication is required to change parental control settings"
 msgstr "Authentication is required to change parental control settings"
 
-#: data/pantheon-parental-controls-client.desktop:3
+#: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
 msgstr "Parental Controls Client"
 
-#: data/pantheon-parental-controls-client.desktop:5
+#: data/pantheon-parental-controls-client.desktop.in:5
 msgid "Show parental control restrictions"
 msgstr "Show parental control restrictions"
 
-#: data/pantheon-parental-controls-client.desktop:6
+#: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
@@ -183,32 +182,32 @@ msgstr "Allow access to these apps with admin permission:"
 msgid "Search Applications"
 msgstr "Search Applications"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr ""
-"Make sure to close all applications before your computer will be locked."
+#: src/client/Client.vala:89
+#, fuzzy, c-format
+msgid "This computer will lock after %s."
+msgstr "This computer will lock after %s %s. %s"
 
-#: src/client/Client.vala:99
+#: src/client/Client.vala:91
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu hour"
 msgstr[1] "%lu hours"
 
-#: src/client/Client.vala:103
+#: src/client/Client.vala:93
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu minute"
 msgstr[1] "%lu minutes"
 
-#: src/client/Client.vala:106
-#, c-format
-msgid "This computer will lock after %s %s. %s"
-msgstr "This computer will lock after %s %s. %s"
+#: src/client/Client.vala:95
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr ""
+"Make sure to close all applications before your computer will be locked."
 
-#: src/client/Client.vala:108
+#: src/client/Client.vala:101
 msgid "Time left"
 msgstr "Time left"
 

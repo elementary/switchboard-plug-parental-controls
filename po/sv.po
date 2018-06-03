@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-21 16:46-0800\n"
+"POT-Creation-Date: 2018-06-03 12:52+0100\n"
 "PO-Revision-Date: 2016-08-03 21:42+0000\n"
 "Last-Translator: Mikael Nyberg <mikanybe@gmail.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -27,17 +27,17 @@ msgstr "Hantera inställningar för föräldrakontroll"
 msgid "Authentication is required to change parental control settings"
 msgstr "Autentisering krävs för att ställa in föräldrakontroll"
 
-#: data/pantheon-parental-controls-client.desktop:3
+#: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
 msgid "Parental Controls Client"
 msgstr "Föräldrakontroll"
 
-#: data/pantheon-parental-controls-client.desktop:5
+#: data/pantheon-parental-controls-client.desktop.in:5
 #, fuzzy
 msgid "Show parental control restrictions"
 msgstr "Hantera inställningar för föräldrakontroll"
 
-#: data/pantheon-parental-controls-client.desktop:6
+#: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
@@ -183,31 +183,31 @@ msgstr "Tillåt åtkomst till dessa program med administratörsrättigheter:"
 msgid "Search Applications"
 msgstr "Sök efter program"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr "Glöm inte att stänga alla dina program innan datorn låser sig."
+#: src/client/Client.vala:89
+#, fuzzy, c-format
+msgid "This computer will lock after %s."
+msgstr "Den här datorn låses om %s %s. %s"
 
-#: src/client/Client.vala:99
+#: src/client/Client.vala:91
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:103
+#: src/client/Client.vala:93
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:106
-#, c-format
-msgid "This computer will lock after %s %s. %s"
-msgstr "Den här datorn låses om %s %s. %s"
+#: src/client/Client.vala:95
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr "Glöm inte att stänga alla dina program innan datorn låser sig."
 
-#: src/client/Client.vala:108
+#: src/client/Client.vala:101
 msgid "Time left"
 msgstr "Återstående tid"
 
