@@ -23,24 +23,24 @@
 namespace PC {
     [DBus (name = "org.opensuse.CupsPkHelper.Mechanism")]
     public interface CupsPkHelper : Object {
-        public abstract void printer_set_users_allowed (string printer, string[] users) throws IOError;
-        public abstract void printer_set_users_denied (string printer, string[] users) throws IOError;
+        public abstract void printer_set_users_allowed (string printer, string[] users) throws GLib.Error;
+        public abstract void printer_set_users_denied (string printer, string[] users) throws GLib.Error;
     }
 
     [DBus (name = "org.pantheon.ParentalControls")]
     public interface IParentalControls : Object {
-        public abstract async void add_restriction_for_user (string input, bool clean) throws IOError;
-        public abstract async void remove_restriction_for_user (string username) throws IOError;
-        public abstract async void end_app_authorization () throws IOError;
-        public abstract async bool get_user_daemon_active (string username) throws IOError;
-        public abstract async bool get_user_daemon_admin (string username) throws IOError;
-        public abstract async string[] get_user_daemon_block_urls (string username) throws IOError;
-        public abstract async string[] get_user_daemon_targets (string username) throws IOError;
-        public abstract async void lock_dock_icons_for_user (string username, bool lock) throws IOError;
-        public abstract async void set_user_daemon_active (string username, bool active) throws IOError;
-        public abstract async void set_user_daemon_admin (string username, bool admin) throws IOError;
-        public abstract async void set_user_daemon_block_urls (string username, string[] block_urls) throws IOError;
-        public abstract async void set_user_daemon_targets (string username, string[] targets) throws IOError;
+        public abstract async void add_restriction_for_user (string input, bool clean) throws GLib.Error;
+        public abstract async void remove_restriction_for_user (string username) throws GLib.Error;
+        public abstract async void end_app_authorization () throws GLib.Error;
+        public abstract async bool get_user_daemon_active (string username) throws GLib.Error;
+        public abstract async bool get_user_daemon_admin (string username) throws GLib.Error;
+        public abstract async string[] get_user_daemon_block_urls (string username) throws GLib.Error;
+        public abstract async string[] get_user_daemon_targets (string username) throws GLib.Error;
+        public abstract async void lock_dock_icons_for_user (string username, bool lock) throws GLib.Error;
+        public abstract async void set_user_daemon_active (string username, bool active) throws GLib.Error;
+        public abstract async void set_user_daemon_admin (string username, bool admin) throws GLib.Error;
+        public abstract async void set_user_daemon_block_urls (string username, string[] block_urls) throws GLib.Error;
+        public abstract async void set_user_daemon_targets (string username, string[] targets) throws GLib.Error;
 
         public signal void app_authorize (string username, string path, string action_id);
         public signal void launch (string[] args);
@@ -51,25 +51,25 @@ namespace PC {
 
     public class Utils {
         public class DummyParentalControls : Object, IParentalControls  {
-            public async void add_restriction_for_user (string input, bool clean) throws IOError {}
-            public async void remove_restriction_for_user (string username) throws IOError {}
-            public async void end_app_authorization () throws IOError {}
-            public async bool get_user_daemon_active (string username) throws IOError { return false; }
-            public async bool get_user_daemon_admin (string username) throws IOError { return false; }
-            public async string[] get_user_daemon_block_urls (string username) throws IOError { return {}; }
-            public async string[] get_user_daemon_targets (string username) throws IOError { return {}; }
-            public async void lock_dock_icons_for_user (string username, bool lock) throws IOError {}
-            public async void set_user_daemon_active (string username, bool active) throws IOError {}
-            public async void set_user_daemon_admin (string username, bool admin) throws IOError {}
-            public async void set_user_daemon_block_urls (string username, string[] block_urls) throws IOError {}
-            public async void set_user_daemon_targets (string username, string[] targets) throws IOError {}    
+            public async void add_restriction_for_user (string input, bool clean) throws GLib.Error {}
+            public async void remove_restriction_for_user (string username) throws GLib.Error {}
+            public async void end_app_authorization () throws GLib.Error {}
+            public async bool get_user_daemon_active (string username) throws GLib.Error { return false; }
+            public async bool get_user_daemon_admin (string username) throws GLib.Error { return false; }
+            public async string[] get_user_daemon_block_urls (string username) throws GLib.Error { return {}; }
+            public async string[] get_user_daemon_targets (string username) throws GLib.Error { return {}; }
+            public async void lock_dock_icons_for_user (string username, bool lock) throws GLib.Error {}
+            public async void set_user_daemon_active (string username, bool active) throws GLib.Error {}
+            public async void set_user_daemon_admin (string username, bool admin) throws GLib.Error {}
+            public async void set_user_daemon_block_urls (string username, string[] block_urls) throws GLib.Error {}
+            public async void set_user_daemon_targets (string username, string[] targets) throws GLib.Error {}
         }
 
         private static Polkit.Permission? permission = null;
         private static Act.UserManager? usermanager = null;
         private static IParentalControls? api = null;
 
-        public static IParentalControls? get_api () {
+        public static unowned IParentalControls? get_api () {
             if (api != null) {
                 return api;
             }
@@ -84,16 +84,15 @@ namespace PC {
             return api;
         }
 
-        public static Polkit.Permission? get_permission () {
+        public static unowned Polkit.Permission? get_permission () {
             if (permission != null) {
                 return permission;
             }
 
             try {
-
                 var user = new Polkit.UnixUser.for_name (Environment.get_user_name ());
-                permission = new Polkit.Permission.sync (Constants.PARENTAL_CONTROLS_ACTION_ID,
-                                new Polkit.UnixProcess.for_owner (Posix.getpid (), 0, user.get_uid ()));
+                var unixuser = new Polkit.UnixProcess.for_owner (Posix.getpid (), 0, user.get_uid ());
+                permission = new Polkit.Permission.sync (Constants.PARENTAL_CONTROLS_ACTION_ID, unixuser);
                 return permission;
             } catch (Error e) {
                 critical (e.message);

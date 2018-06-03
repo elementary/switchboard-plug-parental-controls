@@ -24,9 +24,9 @@ namespace PC.Daemon {
     [DBus (name = "org.freedesktop.DBus")]
     private interface DBus : Object {
         [DBus (name = "GetConnectionUnixProcessID")]
-        public abstract uint32 get_connection_unix_process_id (string name) throws IOError;
+        public abstract uint32 get_connection_unix_process_id (string name) throws GLib.Error;
         
-        public abstract uint32 get_connection_unix_user (string name) throws IOError;
+        public abstract uint32 get_connection_unix_user (string name) throws GLib.Error;
     }
 
     [DBus (name = "org.pantheon.ParentalControls")]
@@ -73,12 +73,12 @@ namespace PC.Daemon {
         public signal void show_timeout (int hours, int minutes);
         public signal void config_changed ();
 
-        public void end_app_authorization (BusName sender) {
+        public void end_app_authorization (BusName sender) throws GLib.Error {
             uint32 pid = get_pid_from_sender (sender);
             app_authorization_ended ((int)pid);
         }
 
-        public void add_restriction_for_user (string input, bool clean, BusName sender) throws ParentalControlsError {
+        public void add_restriction_for_user (string input, bool clean, BusName sender) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
@@ -89,7 +89,7 @@ namespace PC.Daemon {
             writer.add_restriction_for_user (input, clean);
         }
 
-        public void remove_restriction_for_user (string username, BusName sender) throws ParentalControlsError {
+        public void remove_restriction_for_user (string username, BusName sender) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
@@ -98,11 +98,11 @@ namespace PC.Daemon {
             writer.remove_restriction_for_user (username);
         }
 
-        public void lock_dock_icons_for_user (string username, bool lock, BusName sender) throws ParentalControlsError {
+        public void lock_dock_icons_for_user (string username, bool lock, BusName sender) throws GLib.Error, ParentalControlsError {
             throw new ParentalControlsError.NOT_IMPLEMENTED ("Error: not implemented");
         }
 
-        public void set_user_daemon_active (string username, bool active, BusName sender) throws ParentalControlsError {
+        public void set_user_daemon_active (string username, bool active, BusName sender) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
@@ -115,7 +115,7 @@ namespace PC.Daemon {
             config.set_active (active);
         }
 
-        public void set_user_daemon_targets (string username, string[] targets, BusName sender) throws ParentalControlsError {
+        public void set_user_daemon_targets (string username, string[] targets, BusName sender) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
@@ -128,7 +128,7 @@ namespace PC.Daemon {
             config.set_targets (targets);
         }
 
-        public void set_user_daemon_block_urls (string username, string[] block_urls, BusName sender) throws ParentalControlsError {
+        public void set_user_daemon_block_urls (string username, string[] block_urls, BusName sender) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }  
@@ -141,7 +141,7 @@ namespace PC.Daemon {
             config.set_block_urls (block_urls);
         }
 
-        public void set_user_daemon_admin (string username, bool admin, BusName sender) throws ParentalControlsError {
+        public void set_user_daemon_admin (string username, bool admin, BusName sender) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
@@ -154,7 +154,7 @@ namespace PC.Daemon {
             config.set_admin (admin);
         }
 
-        public bool get_user_daemon_active (string username) throws ParentalControlsError {
+        public bool get_user_daemon_active (string username) throws GLib.Error, ParentalControlsError {
             var config = UserConfig.get_for_username (username, false);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
@@ -163,7 +163,7 @@ namespace PC.Daemon {
             return config.get_active ();
         }
 
-        public string[] get_user_daemon_targets (string username) throws ParentalControlsError {
+        public string[] get_user_daemon_targets (string username) throws GLib.Error, ParentalControlsError {
             var config = UserConfig.get_for_username (username, false);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
@@ -172,7 +172,7 @@ namespace PC.Daemon {
             return config.get_targets ();
         }
 
-        public string[] get_user_daemon_block_urls (string username) throws ParentalControlsError {
+        public string[] get_user_daemon_block_urls (string username) throws GLib.Error, ParentalControlsError {
             var config = UserConfig.get_for_username (username, false);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
@@ -181,7 +181,7 @@ namespace PC.Daemon {
             return config.get_block_urls ();
         }
 
-        public bool get_user_daemon_admin (string username) throws ParentalControlsError {
+        public bool get_user_daemon_admin (string username) throws GLib.Error, ParentalControlsError {
             var config = UserConfig.get_for_username (username, false);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));

@@ -35,9 +35,9 @@ namespace PC.Daemon {
 
     [DBus (name = "org.freedesktop.login1.Manager")]
     public interface IManager : Object {
-        public abstract SessionStruct[] list_sessions () throws IOError;
-        public abstract SeatStruct[] list_seats () throws IOError;
-        public abstract GLib.ObjectPath get_seat (string seat) throws IOError;
+        public abstract SessionStruct[] list_sessions () throws GLib.Error;
+        public abstract SeatStruct[] list_seats () throws GLib.Error;
+        public abstract GLib.ObjectPath get_seat (string seat) throws GLib.Error;
         public signal void session_new (string session, GLib.ObjectPath object_path);
         public signal void session_removed (string session, GLib.ObjectPath object_path);
     }
@@ -47,6 +47,6 @@ namespace PC.Daemon {
         public abstract bool active { owned get; }
         public abstract string name { owned get; }
         public abstract string id { owned get; }
-        public abstract void terminate () throws IOError;
+        public abstract void terminate () throws GLib.Error;
     }
 }

@@ -42,7 +42,7 @@
                 manager = Bus.get_proxy_sync (BusType.SYSTEM, Constants.LOGIN_IFACE, Constants.LOGIN_OBJECT_PATH);
                 conn = Bus.get_sync (BusType.SYSTEM, null);
             } catch (IOError e) {
-                warning ("%s\n", e.message);
+                critical (e.message);
             }
         }
 
@@ -64,8 +64,8 @@
                                     0,
                                     () => update_session ());
                 }
-            } catch (IOError e) {
-                warning (e.message);
+            } catch (GLib.Error e) {
+                critical (e.message);
             }
 
             update_session ();
@@ -88,29 +88,32 @@
                         return session;
                     }
                 }
-            } catch (IOError e) {
-                warning ("%s\n", e.message);
+            } catch (GLib.Error e) {
+                critical (e.message);
             }
-            
-            return null;         
+
+            return null;
         }
 
         private void update_session () {
             var session = get_current_session ();
-            if (session.id == current_handler.get_id ()) {
+            if (session != null || current_handler == null || session.id == current_handler.get_id ()) {
                 return;
             }
 
             stop_current_handler ();
 
-            if (session == null ||
-                session.name == null ||
+            if (session.name == null ||
                 session.name in Constants.DAEMON_IGNORED_USERS) {
                 return;
             }
 
-            current_handler = new SessionHandler (session);
-            current_handler.start ();
+            try {
+                current_handler = new SessionHandler (session);
+                current_handler.start ();
+            } catch (Error e) {
+                current_handler = null;
+            }
         }
 
         private void stop_current_handler () {

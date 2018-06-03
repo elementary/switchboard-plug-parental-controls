@@ -32,16 +32,13 @@
         public ISession session;
         private Server server;
 
-        private bool can_start = true;
-
-        public SessionHandler (ISession session) {
+        public SessionHandler (ISession session) throws GLib.Error {
             this.session = session;
             server = Server.get_default ();
 
             config = UserConfig.get_for_username (session.name, false);
             if (config == null || !config.get_active ()) {
-                can_start = false;
-                return;
+                throw new GLib.IOError.FAILED ("Unable to get userconfig");
             }
 
             controller = new RestrictionController ();
@@ -53,9 +50,9 @@
             time_restriction.terminate.connect (() => {
                 try {
                     session.terminate ();
-                } catch (IOError e) {
-                    warning (e.message);
-                }                    
+                } catch (GLib.Error e) {
+                    critical (e.message);
+                }
             });
         }
 
@@ -68,10 +65,6 @@
         }
 
         public void start () {
-            if (!can_start) {
-                return;
-            }
-
             app_restriction.username = config.username;
             app_restriction.admin = config.get_admin ();
 
@@ -123,6 +116,6 @@
             controller.remove_restriction (app_restriction);
             controller.remove_restriction (web_restriction);
             controller.remove_restriction (time_restriction);
-        }         
+        }
     }
 }

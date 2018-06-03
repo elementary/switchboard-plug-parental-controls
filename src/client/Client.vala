@@ -25,8 +25,6 @@ namespace PC.Client {
         private Polkit.Permission? permission = null;
 
         public static int main (string[] args) {
-            Gtk.init (ref args);
-
             var client = new Client ();
             return client.run (args);
         }
@@ -52,22 +50,22 @@ namespace PC.Client {
                 try {
                     permission.release ();
                 } catch (Error e) {
-                    warning ("%s\n", e.message);
+                    critical (e.message);
                 }
             }
 
             try {
                 var user = new Polkit.UnixUser.for_name (username);
-                permission = new Polkit.Permission.sync (action_id,
-                                        new Polkit.UnixProcess.for_owner (Posix.getpid (), 0, user.get_uid ()));
+                var unixprocess = new Polkit.UnixProcess.for_owner (Posix.getpid (), 0, user.get_uid ());
+                permission = new Polkit.Permission.sync (action_id, unixprocess);
             } catch (Error e) {
-                warning ("%s\n", e.message);
+                critical (e.message);
             }
 
             ulong signal_id = 0;
             signal_id = permission.notify["allowed"].connect (() => {
-                Utils.get_api ().end_app_authorization.begin ();
                 permission.disconnect (signal_id);
+                Utils.get_api ().end_app_authorization.begin ();
             });
 
             permission.acquire_async.begin ();
@@ -88,29 +86,24 @@ namespace PC.Client {
 
 
         private void on_show_timeout (int hours, int minutes) {
-            string hours_str = "";
-            string minutes_str = "";
-            string info = "";
-            if (hours == 0 && minutes <= 10) {
-                info = _("Make sure to close all applications before your computer will be locked.");
-            }
-
+            string body = _("This computer will lock after %s.");
             if (hours > 0) {
-                hours_str = ngettext ("%lu hour", "%lu hours", (ulong)hours).printf ((ulong)hours);
+                body = body.printf (ngettext ("%lu hour", "%lu hours", (ulong)hours).printf ((ulong)hours));
+            } else if (minutes > 0) {
+                body = body.printf (ngettext ("%lu minute", "%lu minutes", (ulong)minutes).printf ((ulong)minutes));
+                if (minutes < 10) {
+                    body += "\n" + _("Make sure to close all applications before your computer will be locked.");
+                }
+            } else {
+                return;
             }
-
-            if (minutes > 0) {
-                minutes_str = ngettext ("%lu minute", "%lu minutes", (ulong)minutes).printf ((ulong)minutes);
-            }
-
-            string body = _("This computer will lock after %s %s. %s".printf (hours_str, minutes_str, info));
 
             var notification = new Notification (_("Time left"));
             var icon = new ThemedIcon ("dialog-warning");
             notification.set_icon (icon);
             notification.set_body (body);
 
-            send_notification (null, notification);
+            send_notification ("time-reminder", notification);
         }
     }
  }

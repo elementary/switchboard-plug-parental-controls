@@ -26,9 +26,7 @@ namespace PC.Daemon {
 
         private static SessionManager? session_manager = null;
 
-        private static MainLoop loop;
-
-        public static Daemon get_instance () {
+        public static unowned Daemon get_instance () {
             if (instance == null) {
                 instance = new Daemon ();
             }
@@ -39,7 +37,7 @@ namespace PC.Daemon {
         public static int main (string[] args) {
             GLib.Process.signal (ProcessSignal.INT, on_exit);
             GLib.Process.signal (ProcessSignal.TERM, on_exit);
-            
+
             return Daemon.get_instance ().run (args);
         }
 
@@ -48,14 +46,12 @@ namespace PC.Daemon {
                 session_manager.stop ();
             }
 
-            terminate ();
+            GLib.Application.get_default ().release ();
         }
 
         public override void activate () {
             Utils.get_usermanager ().notify["is-loaded"].connect (on_usermanager_loaded);
-            
-            loop = new MainLoop ();
-            loop.run ();
+            hold ();
         }
 
         private void on_bus_lost (DBusConnection connection, string name) {
@@ -82,11 +78,6 @@ namespace PC.Daemon {
 
             session_manager = SessionManager.get_default ();
             session_manager.start ();
-        }
-
-        private static void terminate (int exit_code = 0) {
-            loop.quit ();
-            GLib.Process.exit (exit_code);            
         }
     }
 }
