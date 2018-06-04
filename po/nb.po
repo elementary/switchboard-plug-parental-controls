@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-06-04 00:40+0000\n"
+"PO-Revision-Date: 2018-06-06 00:09+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål "
 "<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
@@ -48,7 +48,7 @@ msgstr "Noen innstillinger krever administrasjonsrettigheter for å endres"
 
 #: src/plug/Plug.vala:80
 msgid "No users to edit"
-msgstr "Ingen bruker(e) å konfigurere"
+msgstr "Ingen bruker(e) å sette opp"
 
 #: src/plug/Plug.vala:80
 msgid ""
@@ -59,12 +59,12 @@ msgid ""
 msgstr ""
 "Foreldrekontroll kan kun brukes på brukerkontoer som ikke har administrative "
 "rettigheter.\n"
-"Du kan endre en brukers kontotype fra \"Administrator\" til \"Standard\" i "
-"Brukerkontoer i Systeminnstillinger."
+"Du kan endre en brukers kontotype fra \"Administrator\" til \"Forvalg\" i "
+"Brukerkontoer fra Systeminnstillinger."
 
 #: src/plug/Plug.vala:83
 msgid "Configure User Accounts"
-msgstr "Konfigurere brukerkontoer"
+msgstr "Sett opp brukerkontoer"
 
 #: src/plug/Plug.vala:86
 msgid "Open Users settings"
@@ -76,7 +76,7 @@ msgstr "Foreldrekontroll"
 
 #: src/plug/Plug.vala:166
 msgid "Configure time limits and restrict application usage"
-msgstr "Konfigurere tidsbegrensninger og begrens applikasjonsbruk"
+msgstr "Sett opp tidsbegrensninger og begrens programbruk"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -104,6 +104,7 @@ msgid "Add URL"
 msgstr "Legg til nettadresse"
 
 #: src/plug/Widgets/InternetBox.vala:99
+#, fuzzy
 msgid "Add a new URL, for example: google.com"
 msgstr "Legg til en ny nettadresse, for eksempel: startpage.com"
 
@@ -113,7 +114,7 @@ msgstr "Ugyldig nettadresse"
 
 #: src/plug/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
-msgstr "Tillat denne bruker å:"
+msgstr "Tillat denne brukeren å:"
 
 #: src/plug/Widgets/GeneralBox.vala:65
 msgid "Modify the dock"
@@ -121,11 +122,11 @@ msgstr "Modifisere dokken"
 
 #: src/plug/Widgets/GeneralBox.vala:68
 msgid "Configure printing"
-msgstr "Konfigurere utskrifter"
+msgstr "Sette opp utskriftsinnstillinger"
 
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
-msgstr "Begrens bruk av datamaskin:"
+msgstr "Begrens databruk:"
 
 #: src/plug/Widgets/GeneralBox.vala:92
 msgid "On weekdays and weekends"
@@ -162,7 +163,7 @@ msgstr "Programmer"
 #: src/plug/Widgets/AppsBox.vala:90
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr "Forhindre %s i å bruke disse programmene:"
+msgstr "Forhindre %s fra å bruke disse programmene:"
 
 #: src/plug/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
@@ -170,7 +171,7 @@ msgstr "Legg til programmer med begrensninger…"
 
 #: src/plug/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
-msgstr "Fjern valgte applikasjon"
+msgstr "Fjern valgt program"
 
 #: src/plug/Widgets/AppsBox.vala:110
 msgid "Clear All"
@@ -182,7 +183,7 @@ msgstr "Tillat tilgang til disse programmene gitt administratorrettigheter:"
 
 #: src/plug/Widgets/AppChooser.vala:71
 msgid "Search Applications"
-msgstr "Søk i applikasjoner"
+msgstr "Søk i programmer"
 
 #: src/client/Client.vala:89
 #, c-format
@@ -206,7 +207,7 @@ msgstr[1] "%lu minutter"
 #: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
-msgstr "Sørg for å lukke alle applikasjoner før datamaskinen vil bli låst."
+msgstr "Sørg for å lukke alle programmer før datamaskinen låses."
 
 #: src/client/Client.vala:101
 msgid "Time left"
@@ -214,8 +215,8 @@ msgstr "Gjenværende tid"
 
 #: src/client/AppUnavailableDialog.vala:27
 msgid "You cannot run this application"
-msgstr "Du kan ikke kjøre denne applikasjonen"
+msgstr "Du kan ikke kjøre dette programmet"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
-msgstr "Du har ikke rettigheter for å kjøre denne applikasjonen."
+msgstr "Du har ikke rettigheter til å kjøre dette programmet."
