@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-06-04 07:56+0000\n"
+"PO-Revision-Date: 2018-06-06 00:09+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/cs/>\n"
@@ -164,7 +164,7 @@ msgstr "Zabránit %s v používání těchto aplikací:"
 
 #: src/plug/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
-msgstr "Přidat zakázané aplikace..."
+msgstr "Přidat zakázané aplikace…"
 
 #: src/plug/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
