@@ -8,10 +8,10 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-04-02 00:05+0000\n"
+"PO-Revision-Date: 2018-06-07 00:09+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
-"Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard/"
-"switchboard-plug-parental-controls/nl/>\n"
+"Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard"
+"/switchboard-plug-parental-controls/nl/>\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -187,9 +187,9 @@ msgid "Search Applications"
 msgstr "Zoek programma's"
 
 #: src/client/Client.vala:89
-#, fuzzy, c-format
+#, c-format
 msgid "This computer will lock after %s."
-msgstr "Deze computer zal vergrendelen na %s %s. %s"
+msgstr "Deze computer zal vergrendelen na %s."
 
 #: src/client/Client.vala:91
 #, c-format
