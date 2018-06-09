@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-06-04 09:11+0000\n"
+"PO-Revision-Date: 2018-06-10 00:12+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/ja/>\n"
@@ -38,7 +38,7 @@ msgstr "ペアレンタルコントロールの制限を表示します"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
-msgstr "preferences-system-parental-controls"
+msgstr ""
 
 #: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
