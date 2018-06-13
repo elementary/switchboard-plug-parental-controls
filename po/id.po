@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-06-12 07:28+0000\n"
+"PO-Revision-Date: 2018-06-14 00:09+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/id/>\n"
@@ -77,7 +77,7 @@ msgstr "Dari:"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr "Ke:"
+msgstr "Kepada:"
 
 #: src/plug/Widgets/UserList.vala:42
 msgid "My Account"
