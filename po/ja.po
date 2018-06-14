@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-06-10 00:12+0000\n"
+"PO-Revision-Date: 2018-06-15 00:11+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/ja/>\n"
@@ -26,7 +26,7 @@ msgstr "ペアレンタルコントロールの設定を管理します"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
-msgstr "ペアレンタルコントロールの設定変更には認証が必要です"
+msgstr "ペアレンタルコントロールの設定を変更するには認証が必要です"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -176,7 +176,7 @@ msgstr "すべてをクリア"
 
 #: src/plug/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
-msgstr "管理者の許可でこれらのアプリにアクセスすることを許可する:"
+msgstr "管理者の許可でこれらのアプリにアクセスすることを許可:"
 
 #: src/plug/Widgets/AppChooser.vala:71
 msgid "Search Applications"
@@ -202,8 +202,7 @@ msgstr[0] "%lu 分"
 #: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
-msgstr ""
-"コンピューターがロックされる前にすべてのアプリケーションを閉じてください。"
+msgstr "コンピューターがロックされる前にすべてのアプリケーションを必ず閉じるようにしてください。"
 
 #: src/client/Client.vala:101
 msgid "Time left"
