@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-06-04 12:33+0000\n"
+"PO-Revision-Date: 2018-06-15 00:11+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/hu/>\n"
@@ -39,7 +39,7 @@ msgstr "A szülői felügyelet korlátozások megjelenítése"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
-msgstr "beállítások-rendszer-szülői-felügyelet"
+msgstr "preferences-system-parental-controls"
 
 #: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
@@ -116,7 +116,7 @@ msgstr "Engedélyezze ennek a felhasználónak:"
 
 #: src/plug/Widgets/GeneralBox.vala:65
 msgid "Modify the dock"
-msgstr "A dokkoló módosítása"
+msgstr "A dokk módosítása"
 
 #: src/plug/Widgets/GeneralBox.vala:68
 msgid "Configure printing"
