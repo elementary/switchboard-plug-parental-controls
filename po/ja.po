@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-06-15 00:11+0000\n"
+"PO-Revision-Date: 2018-06-17 00:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/ja/>\n"
@@ -55,18 +55,16 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
-"ペアレンタルコントロールは管理者ではないユーザーアカウントにのみ適用できま"
-"す。\n"
-"ユーザーアカウントの設定で、ユーザーのアカウントの種類を \"管理者\" から \"標"
-"準\" に変更してください。"
+"ペアレンタルコントロールは管理者権限を持たないユーザーアカウントにのみ適用できます。\n"
+"ユーザーアカウントの設定で、ユーザーのアカウントの種類を \"管理者\" から \"標準\" に変更できます。"
 
 #: src/plug/Plug.vala:83
 msgid "Configure User Accounts"
-msgstr "ユーザーアカウント設定"
+msgstr "ユーザーアカウントを設定"
 
 #: src/plug/Plug.vala:86
 msgid "Open Users settings"
-msgstr "ユーザー設定を開く"
+msgstr "ユーザー設定を開きます"
 
 #: src/plug/Plug.vala:165
 msgid "Parental Control"
