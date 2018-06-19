@@ -1,4 +1,8 @@
-project('parental-controls', 'vala', 'c')
+project(
+    'parental-controls',
+    'vala', 'c',
+    version: '0.1.4'
+)
 
 gettext_name = meson.project_name() + '-plug'
 gnome = import('gnome')
