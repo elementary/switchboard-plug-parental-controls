@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-06-22 20:51+0000\n"
+"PO-Revision-Date: 2018-06-23 00:11+0000\n"
 "Last-Translator: Kirill Romanov <djaler1@gmail.com>\n"
 "Language-Team: Russian <https://weblate.elementary.io/projects/switchboard"
 "/switchboard-plug-parental-controls/ru/>\n"
@@ -80,7 +80,7 @@ msgstr "Настройка ограничения времени и исполь
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr "Начиная с:"
+msgstr "С:"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
