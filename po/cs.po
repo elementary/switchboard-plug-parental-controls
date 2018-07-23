@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-07-22 00:03+0000\n"
+"PO-Revision-Date: 2018-07-24 00:05+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/cs/>\n"
@@ -180,7 +180,7 @@ msgstr "Povolit přístup k těmto aplikacím se svolením admina:"
 
 #: src/plug/Widgets/AppChooser.vala:71
 msgid "Search Applications"
-msgstr "Prohledat aplikace"
+msgstr "Hledat aplikace"
 
 #: src/client/Client.vala:89
 #, c-format
