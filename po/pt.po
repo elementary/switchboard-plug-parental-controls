@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-05-12 00:12+0000\n"
-"Last-Translator: Pedro Ferreira <pmaf.ferreira@gmail.com>\n"
+"PO-Revision-Date: 2018-07-27 00:09+0000\n"
+"Last-Translator: Christophe Silva <Christophesilva80@gmail.com>\n"
 "Language-Team: Portuguese <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/pt/>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
@@ -84,7 +84,7 @@ msgstr "De:"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr "Até:"
+msgstr "Para:"
 
 #: src/plug/Widgets/UserList.vala:42
 msgid "My Account"
