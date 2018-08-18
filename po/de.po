@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-05-04 00:06+0000\n"
+"PO-Revision-Date: 2018-08-18 13:56+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
@@ -29,7 +29,6 @@ msgid "Authentication is required to change parental control settings"
 msgstr "Sie müssen sich legitimieren, um die Kindersicherung einzurichten"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-#, fuzzy
 msgid "Parental Controls Client"
 msgstr "Parental Controls Client"
 
@@ -38,7 +37,6 @@ msgid "Show parental control restrictions"
 msgstr "Zeige Einschränkungen der Jugendschutzfunktion"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
-#, fuzzy
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
@@ -188,9 +186,9 @@ msgid "Search Applications"
 msgstr "Anwendungen suchen"
 
 #: src/client/Client.vala:89
-#, fuzzy, c-format
+#, c-format
 msgid "This computer will lock after %s."
-msgstr "Dieser Rechner wird in %s %s. %s gesperrt"
+msgstr "Dieser Rechner wird in %s gesperrt"
 
 #: src/client/Client.vala:91
 #, c-format
