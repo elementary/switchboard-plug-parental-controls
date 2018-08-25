@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-08-18 13:56+0000\n"
+"PO-Revision-Date: 2018-08-26 00:04+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/de/>\n"
@@ -38,7 +38,7 @@ msgstr "Zeige Einschränkungen der Jugendschutzfunktion"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
-msgstr "preferences-system-parental-controls"
+msgstr ""
 
 #: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
