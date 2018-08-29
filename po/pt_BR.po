@@ -9,7 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
 "PO-Revision-Date: 2018-08-29 16:34+0000\n"
-"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
+"Last-Translator: Israel Felipe de Lima Araújo S <israelita.felipe@gmail.com>"
+"\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -187,9 +188,9 @@ msgid "Search Applications"
 msgstr "Pesquisar por aplicativos"
 
 #: src/client/Client.vala:89
-#, fuzzy, c-format
+#, c-format
 msgid "This computer will lock after %s."
-msgstr "Este computador será bloqueado após %s %s. %s"
+msgstr "Este computador será bloqueado após %s."
 
 #: src/client/Client.vala:91
 #, c-format
