@@ -8,9 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-08-29 16:34+0000\n"
-"Last-Translator: Israel Felipe de Lima Araújo S <israelita.felipe@gmail.com>"
-"\n"
+"PO-Revision-Date: 2018-08-30 00:07+0000\n"
+"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -29,7 +28,7 @@ msgstr "Gerenciar configurações de controle dos pais"
 msgid "Authentication is required to change parental control settings"
 msgstr ""
 "A autenticação é necessária para realizar alterações nas configurações de "
-"controle dos pais."
+"controle dos pais"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -169,7 +168,7 @@ msgstr "Impedir %s de usar estes aplicativos:"
 
 #: src/plug/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
-msgstr "Adicionar aplicativos impedidos"
+msgstr "Adicionar aplicativos impedidos…"
 
 #: src/plug/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
@@ -181,7 +180,7 @@ msgstr "Limpar tudo"
 
 #: src/plug/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
-msgstr "Acessar estes aplicativos com permissão do administrador"
+msgstr "Acessar estes aplicativos com permissão do administrador:"
 
 #: src/plug/Widgets/AppChooser.vala:71
 msgid "Search Applications"
