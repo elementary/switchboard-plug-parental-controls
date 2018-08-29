@@ -9,7 +9,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
 "PO-Revision-Date: 2018-08-29 06:38+0000\n"
-"Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
+"Last-Translator: Israel Felipe de Lima Araújo S <israelita.felipe@gmail.com>"
+"\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -36,9 +37,8 @@ msgid "Parental Controls Client"
 msgstr "Controle dos pais"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-#, fuzzy
 msgid "Show parental control restrictions"
-msgstr "Gerenciar configurações de controle dos pais"
+msgstr "Mostrar restrições de controle dos pais"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
