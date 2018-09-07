@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-09-07 00:06+0000\n"
-"Last-Translator: strozzascotte <marco.depaolini@gmail.com>\n"
+"PO-Revision-Date: 2018-09-08 00:08+0000\n"
+"Last-Translator: Marco De Paolini <marco.depaolini@gmail.com>\n"
 "Language-Team: Italian <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/it/>\n"
 "Language: it\n"
@@ -118,7 +118,7 @@ msgstr "Permetti a questo utente di:"
 
 #: src/plug/Widgets/GeneralBox.vala:65
 msgid "Modify the dock"
-msgstr "Modificare la dock"
+msgstr "Modificare il Dock"
 
 #: src/plug/Widgets/GeneralBox.vala:68
 msgid "Configure printing"
