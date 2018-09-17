@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-07-27 00:09+0000\n"
-"Last-Translator: Christophe Silva <Christophesilva80@gmail.com>\n"
+"PO-Revision-Date: 2018-09-17 14:33+0000\n"
+"Last-Translator: Nuno Alexandre MS ribeiro <nuno.anarresti@gmail.com>\n"
 "Language-Team: Portuguese <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/pt/>\n"
 "Language: pt\n"
@@ -185,9 +185,9 @@ msgid "Search Applications"
 msgstr "Procurar Aplicações"
 
 #: src/client/Client.vala:89
-#, fuzzy, c-format
+#, c-format
 msgid "This computer will lock after %s."
-msgstr "Este computador irá ser bloqueado em %s %s. %s"
+msgstr "Este computador iserá bloqueado dentro de %s."
 
 #: src/client/Client.vala:91
 #, c-format
