@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-07-13 00:04+0000\n"
+"PO-Revision-Date: 2018-10-02 00:04+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ja/>\n"
@@ -72,7 +72,7 @@ msgstr "ペアレンタルコントロール"
 
 #: src/plug/Plug.vala:166
 msgid "Configure time limits and restrict application usage"
-msgstr "時間制限とアプリケーションの使用制限を設定します"
+msgstr "時間制限を設定し、アプリケーションの使用を制限します"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -93,7 +93,7 @@ msgstr "その他のアカウント"
 #: src/plug/Widgets/InternetBox.vala:77
 #, c-format
 msgid "Prevent %s from visiting these websites:"
-msgstr "%s が以下のWeb サイトを参照することを防ぐ:"
+msgstr "%s が以下の Web サイトを参照することを防ぐ:"
 
 #: src/plug/Widgets/InternetBox.vala:90
 msgid "Add URL"
