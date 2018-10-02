@@ -43,7 +43,7 @@ namespace PC.Widgets {
             grid.margin = 6;
             grid.column_spacing = 6;
 
-            avatar = new Granite.Widgets.Avatar ();
+            avatar = new Granite.Widgets.Avatar.from_file (user.get_icon_file (), 32);
 
             full_name_label = new Gtk.Label ("");
             full_name_label.halign = Gtk.Align.START;
@@ -83,13 +83,6 @@ namespace PC.Widgets {
             });
 
             master_switch.sensitive = Utils.get_permission ().get_allowed ();
-
-            try {
-                var avatar_pixbuf = new Gdk.Pixbuf.from_file_at_scale (user.get_icon_file (), 32, 32, true);
-                avatar.pixbuf = avatar_pixbuf;
-            } catch (Error e) {
-                avatar.show_default (32);
-            }
 
             full_name_label.label = user.get_real_name ();
             username_label.label = "<span font_size=\"small\">%s</span>".printf (GLib.Markup.escape_text (user.get_user_name ()));
