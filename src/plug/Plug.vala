@@ -118,7 +118,7 @@ namespace PC {
 
             usermanager.user_added.connect (on_user_added);
             usermanager.user_changed.connect (on_user_changed);
-            usermanager.user_removed.connect (on_user_removed);            
+            usermanager.user_removed.connect (on_user_removed);
             update_view_state ();
         }
 
@@ -191,7 +191,11 @@ namespace PC {
 
         // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
         public override async Gee.TreeMap<string, string> search (string search) {
-            return new Gee.TreeMap<string, string> (null, null);
+          var search_results = new Gee.TreeMap<string, string> ((GLib.CompareDataFunc<string>)strcmp, (Gee.EqualDataFunc<string>)str_equal);
+          search_results.set ("%s → %s".printf (display_name, _("Limit computer use")), "");
+          search_results.set ("%s → %s".printf (display_name, _("Prevent website access")), "");
+          search_results.set ("%s → %s".printf (display_name, _("Prevent application access")), "");
+          return search_results;
         }
     }
 }
