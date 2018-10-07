@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-06-03 12:52+0100\n"
-"PO-Revision-Date: 2018-10-07 02:40+0000\n"
+"PO-Revision-Date: 2018-10-08 00:05+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ja/>\n"
@@ -166,7 +166,7 @@ msgstr "制限するアプリの追加…"
 
 #: src/plug/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
-msgstr "選択したアプリを削除"
+msgstr "選択されたアプリを削除"
 
 #: src/plug/Widgets/AppsBox.vala:110
 msgid "Clear All"
