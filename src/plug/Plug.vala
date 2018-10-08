@@ -80,23 +80,10 @@ namespace PC {
             var alert_view = new Granite.Widgets.AlertView (_("No users to edit"), _("Parental Controls can only be applied to user accounts that don't have administrative permissions.\nYou can change a user's account type from \"Administrator\" to \"Standard\" in the User Accounts pane."), "preferences-system-parental-controls");
             alert_view.get_style_context ().remove_class (Gtk.STYLE_CLASS_VIEW);
 
-            var link_button = new Gtk.LinkButton.with_label ("", _("Configure User Accounts"));
+            var link_button = new Gtk.LinkButton.with_label ("settings://accounts", _("Configure User Accounts"));
             link_button.halign = Gtk.Align.END;
             link_button.valign = Gtk.Align.END;
             link_button.tooltip_text = _("Open Users settings");
-            link_button.activate_link.connect (() => {
-				var list = new List<string> ();
-		        list.append ("user-accounts");
-
-		        try {
-		            var appinfo = AppInfo.create_from_commandline ("switchboard", null, AppInfoCreateFlags.SUPPORTS_URIS);
-		            appinfo.launch_uris (list, null);
-		        } catch (Error e) {
-		            warning ("%s\n", e.message);
-		        }
-
-                return true;
-            });
 
             alert_view_grid = new Gtk.Grid ();
             alert_view_grid.margin = 24;
@@ -118,7 +105,7 @@ namespace PC {
 
             usermanager.user_added.connect (on_user_added);
             usermanager.user_changed.connect (on_user_changed);
-            usermanager.user_removed.connect (on_user_removed);            
+            usermanager.user_removed.connect (on_user_removed);
             update_view_state ();
         }
 
