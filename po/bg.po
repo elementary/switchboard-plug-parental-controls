@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-03 12:52+0100\n"
+"POT-Creation-Date: 2018-10-09 10:41-0500\n"
 "PO-Revision-Date: 2017-01-03 04:06+0000\n"
 "Last-Translator: Cody Garver <cody@elementaryos.org>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -18,15 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Настройки на родителския контрол"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
-msgstr ""
-"За промяна на настройките на родителския контрол се изисква удостоверяване"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
@@ -69,13 +60,26 @@ msgstr "Настройване на потребителските профил�
 msgid "Open Users settings"
 msgstr "Отваряне на настройките на потребителя"
 
-#: src/plug/Plug.vala:165
+#: src/plug/Plug.vala:152
 msgid "Parental Control"
 msgstr "Родителски контрол"
 
-#: src/plug/Plug.vala:166
+#: src/plug/Plug.vala:153
 msgid "Configure time limits and restrict application usage"
 msgstr "Настройване на ограниченията на времето и използването на програми"
+
+#: src/plug/Plug.vala:182
+#, fuzzy
+msgid "Limit computer use"
+msgstr "Ограничаване на употребата на устройството:"
+
+#: src/plug/Plug.vala:183
+msgid "Prevent website access"
+msgstr ""
+
+#: src/plug/Plug.vala:184
+msgid "Prevent application access"
+msgstr ""
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -218,3 +222,10 @@ msgstr "Не можете да отворите тази програма"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Нямате права да отворите тази програма."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Настройки на родителския контрол"
+
+#~ msgid "Authentication is required to change parental control settings"
+#~ msgstr ""
+#~ "За промяна на настройките на родителския контрол се изисква удостоверяване"

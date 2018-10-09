@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-03 12:52+0100\n"
+"POT-Creation-Date: 2018-10-09 10:41-0500\n"
 "PO-Revision-Date: 2017-04-24 23:04+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://l10n.elementary.io/projects/switchboard/"
@@ -20,14 +20,6 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.13-dev\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Upravljaj postavkama roditeljskog nadzora"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
-msgstr "Potrebna je ovjera za promjenu postavki roditeljskog nadzora"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
@@ -71,13 +63,26 @@ msgstr "Prilagodi korisničke račune"
 msgid "Open Users settings"
 msgstr "Otvori korisničke postavke"
 
-#: src/plug/Plug.vala:165
+#: src/plug/Plug.vala:152
 msgid "Parental Control"
 msgstr "Roditeljski nadzor"
 
-#: src/plug/Plug.vala:166
+#: src/plug/Plug.vala:153
 msgid "Configure time limits and restrict application usage"
 msgstr "Prilagodite vremensko ograničenje i ograničite upotrebu aplikacija"
+
+#: src/plug/Plug.vala:182
+#, fuzzy
+msgid "Limit computer use"
+msgstr "Ograniči korištenje računala:"
+
+#: src/plug/Plug.vala:183
+msgid "Prevent website access"
+msgstr ""
+
+#: src/plug/Plug.vala:184
+msgid "Prevent application access"
+msgstr ""
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -222,3 +227,9 @@ msgstr "Ne možete pokrenuti ovu aplikaciju"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Nemate dozvolu za pokretanje ove aplikacije."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Upravljaj postavkama roditeljskog nadzora"
+
+#~ msgid "Authentication is required to change parental control settings"
+#~ msgstr "Potrebna je ovjera za promjenu postavki roditeljskog nadzora"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-03 12:52+0100\n"
+"POT-Creation-Date: 2018-10-09 10:41-0500\n"
 "PO-Revision-Date: 2018-10-08 00:05+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
@@ -19,14 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-17 06:09+0000\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "ペアレンタルコントロールの設定を管理します"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
-msgstr "ペアレンタルコントロールの設定を変更するには認証が必要です"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -55,8 +47,10 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
-"ペアレンタルコントロールは管理者権限を持たないユーザーアカウントにのみ適用できます。\n"
-"ユーザーアカウントの設定で、ユーザーのアカウントの種類を \"管理者\" から \"標準\" に変更できます。"
+"ペアレンタルコントロールは管理者権限を持たないユーザーアカウントにのみ適用で"
+"きます。\n"
+"ユーザーアカウントの設定で、ユーザーのアカウントの種類を \"管理者\" から \"標"
+"準\" に変更できます。"
 
 #: src/plug/Plug.vala:83
 msgid "Configure User Accounts"
@@ -66,13 +60,26 @@ msgstr "ユーザーアカウントを設定"
 msgid "Open Users settings"
 msgstr "ユーザー設定を開きます"
 
-#: src/plug/Plug.vala:165
+#: src/plug/Plug.vala:152
 msgid "Parental Control"
 msgstr "ペアレンタルコントロール"
 
-#: src/plug/Plug.vala:166
+#: src/plug/Plug.vala:153
 msgid "Configure time limits and restrict application usage"
 msgstr "時間制限を設定し、アプリケーションの使用を制限します"
+
+#: src/plug/Plug.vala:182
+#, fuzzy
+msgid "Limit computer use"
+msgstr "コンピューター利用の制限:"
+
+#: src/plug/Plug.vala:183
+msgid "Prevent website access"
+msgstr ""
+
+#: src/plug/Plug.vala:184
+msgid "Prevent application access"
+msgstr ""
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -200,7 +207,9 @@ msgstr[0] "%lu 分"
 #: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
-msgstr "コンピューターがロックされる前にすべてのアプリケーションを必ず閉じるようにしてください。"
+msgstr ""
+"コンピューターがロックされる前にすべてのアプリケーションを必ず閉じるようにし"
+"てください。"
 
 #: src/client/Client.vala:101
 msgid "Time left"
@@ -213,3 +222,9 @@ msgstr "このアプリケーションを実行できません"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "このアプリケーションの実行は許可されていません。"
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "ペアレンタルコントロールの設定を管理します"
+
+#~ msgid "Authentication is required to change parental control settings"
+#~ msgstr "ペアレンタルコントロールの設定を変更するには認証が必要です"
