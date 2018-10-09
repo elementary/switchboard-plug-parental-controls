@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-03 12:52+0100\n"
+"POT-Creation-Date: 2018-10-09 10:41-0500\n"
 "PO-Revision-Date: 2017-02-11 20:21+0000\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,14 +13,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n!=1;\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr ""
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
-msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -58,12 +50,24 @@ msgstr ""
 msgid "Open Users settings"
 msgstr ""
 
-#: src/plug/Plug.vala:165
+#: src/plug/Plug.vala:152
 msgid "Parental Control"
 msgstr ""
 
-#: src/plug/Plug.vala:166
+#: src/plug/Plug.vala:153
 msgid "Configure time limits and restrict application usage"
+msgstr ""
+
+#: src/plug/Plug.vala:182
+msgid "Limit computer use"
+msgstr ""
+
+#: src/plug/Plug.vala:183
+msgid "Prevent website access"
+msgstr ""
+
+#: src/plug/Plug.vala:184
+msgid "Prevent application access"
 msgstr ""
 
 #: src/plug/Widgets/WeekSpinBox.vala:45

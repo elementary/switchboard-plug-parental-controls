@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-03 12:52+0100\n"
+"POT-Creation-Date: 2018-10-09 10:41-0500\n"
 "PO-Revision-Date: 2016-09-21 15:05+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -18,15 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Menaxho parametrat e kontrollit prindëror"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
-msgstr ""
-"Nevojitet identifikimi për të ndryshuar parametrat e kontrollit prindëror"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
@@ -66,13 +57,26 @@ msgstr "Konfiguro llogaritë e përdoruesit"
 msgid "Open Users settings"
 msgstr ""
 
-#: src/plug/Plug.vala:165
+#: src/plug/Plug.vala:152
 msgid "Parental Control"
 msgstr "Kontrolli Prindëror"
 
-#: src/plug/Plug.vala:166
+#: src/plug/Plug.vala:153
 msgid "Configure time limits and restrict application usage"
 msgstr "Konfiguro limitet e orarit dhe kufizo përdorimin e programeve"
+
+#: src/plug/Plug.vala:182
+#, fuzzy
+msgid "Limit computer use"
+msgstr "Kufizo përdorimin e kompjuterit:"
+
+#: src/plug/Plug.vala:183
+msgid "Prevent website access"
+msgstr ""
+
+#: src/plug/Plug.vala:184
+msgid "Prevent application access"
+msgstr ""
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -215,3 +219,10 @@ msgstr "Nuk mund të hapësh këtë program"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Nuk je i lejuar të hapësh këtë program."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Menaxho parametrat e kontrollit prindëror"
+
+#~ msgid "Authentication is required to change parental control settings"
+#~ msgstr ""
+#~ "Nevojitet identifikimi për të ndryshuar parametrat e kontrollit prindëror"

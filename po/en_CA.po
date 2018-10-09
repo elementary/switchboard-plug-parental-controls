@@ -7,12 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-03 12:52+0100\n"
+"POT-Creation-Date: 2018-10-09 10:41-0500\n"
 "PO-Revision-Date: 2018-06-22 12:51+0000\n"
 "Last-Translator: Shawn <syst3mfailur3@gmail.com>\n"
-"Language-Team: English (Canada) "
-"<https://weblate.elementary.io/projects/switchboard/switchboard-plug-"
-"parental-controls/en_CA/>\n"
+"Language-Team: English (Canada) <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-parental-controls/en_CA/>\n"
 "Language: en_CA\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,14 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Manage parental control settings"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
-msgstr "Authentication is required to change parental control settings"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -69,13 +60,26 @@ msgstr "Configure User Accounts"
 msgid "Open Users settings"
 msgstr "Open Users settings"
 
-#: src/plug/Plug.vala:165
+#: src/plug/Plug.vala:152
 msgid "Parental Control"
 msgstr "Parental Control"
 
-#: src/plug/Plug.vala:166
+#: src/plug/Plug.vala:153
 msgid "Configure time limits and restrict application usage"
 msgstr "Configure time limits and restrict application usage"
+
+#: src/plug/Plug.vala:182
+#, fuzzy
+msgid "Limit computer use"
+msgstr "Limit computer use:"
+
+#: src/plug/Plug.vala:183
+msgid "Prevent website access"
+msgstr ""
+
+#: src/plug/Plug.vala:184
+msgid "Prevent application access"
+msgstr ""
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -219,3 +223,9 @@ msgstr "You cannot run this application"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "You are not permitted to run this application."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Manage parental control settings"
+
+#~ msgid "Authentication is required to change parental control settings"
+#~ msgstr "Authentication is required to change parental control settings"

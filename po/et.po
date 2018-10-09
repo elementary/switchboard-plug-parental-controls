@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-06-03 12:52+0100\n"
+"POT-Creation-Date: 2018-10-09 10:41-0500\n"
 "PO-Revision-Date: 2017-03-31 17:45+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -18,14 +18,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 "X-Generator: Launchpad (build 18335)\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Vanemliku kontrolli seadete muutmine"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
-msgstr "Vanemliku kontrolli seadete muutmiseks on vajalik autentimine."
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
@@ -69,13 +61,26 @@ msgstr "Kasutajakontode konfigureerimine"
 msgid "Open Users settings"
 msgstr "Ava kasutajate seaded"
 
-#: src/plug/Plug.vala:165
+#: src/plug/Plug.vala:152
 msgid "Parental Control"
 msgstr "Vanemlik kontroll"
 
-#: src/plug/Plug.vala:166
+#: src/plug/Plug.vala:153
 msgid "Configure time limits and restrict application usage"
 msgstr "Rakenduste kasutuslimiitide ja piirangute haldamine"
+
+#: src/plug/Plug.vala:182
+#, fuzzy
+msgid "Limit computer use"
+msgstr "Arvuti kasutamise piiramine:"
+
+#: src/plug/Plug.vala:183
+msgid "Prevent website access"
+msgstr ""
+
+#: src/plug/Plug.vala:184
+msgid "Prevent application access"
+msgstr ""
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -218,3 +223,9 @@ msgstr "Seda rakendust pole võimalik avada"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Selle rakenduse käivitamiseks pole sul õigusi."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Vanemliku kontrolli seadete muutmine"
+
+#~ msgid "Authentication is required to change parental control settings"
+#~ msgstr "Vanemliku kontrolli seadete muutmiseks on vajalik autentimine."
