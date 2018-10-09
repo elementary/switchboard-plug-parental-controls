@@ -1,6 +1,8 @@
 # Switchboard Parental Controls Plug
 [![l10n](https://l10n.elementary.io/widgets/switchboard/switchboard-plug-parental-controls/svg-badge.svg)](https://l10n.elementary.io/projects/switchboard/switchboard-plug-parental-controls)
 
+![screenshot](data/screenshot.png?raw=true)
+
 ## Building and Installation
 
 You'll need the following dependencies:
