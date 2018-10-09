@@ -1,3 +1,9 @@
+switchboard-plug-parental-controls (2.1.5) bionic; urgency=medium
+
+  * New upstream release.
+
+ -- Cody Garver <cody@elementary.io>  Tue, 09 Oct 2018 04:19:24 -0500
+
 switchboard-plug-parental-controls (0.1.4) bionic; urgency=medium
 
   * New upstream release.
