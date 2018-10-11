@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-09 10:41-0500\n"
-"PO-Revision-Date: 2018-10-11 04:36+0000\n"
+"PO-Revision-Date: 2018-10-12 00:05+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ja/>\n"
@@ -38,7 +38,7 @@ msgstr "一部の設定変更には管理者権限が必要です"
 
 #: src/plug/Plug.vala:80
 msgid "No users to edit"
-msgstr "適用するユーザーがいません"
+msgstr "適用できるユーザーがいません"
 
 #: src/plug/Plug.vala:80
 msgid ""
@@ -99,11 +99,11 @@ msgstr "その他のアカウント"
 #: src/plug/Widgets/InternetBox.vala:77
 #, c-format
 msgid "Prevent %s from visiting these websites:"
-msgstr "%s が以下の Web サイトを参照することを防ぐ:"
+msgstr "%s が以下の Web サイトを参照することを防止:"
 
 #: src/plug/Widgets/InternetBox.vala:90
 msgid "Add URL"
-msgstr "URL の追加"
+msgstr "URL を追加"
 
 #: src/plug/Widgets/InternetBox.vala:99
 msgid "Add a new URL, for example: google.com"
@@ -127,7 +127,7 @@ msgstr "印刷の設定"
 
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
-msgstr "コンピューター利用の制限:"
+msgstr "コンピューターの利用を制限:"
 
 #: src/plug/Widgets/GeneralBox.vala:92
 msgid "On weekdays and weekends"
@@ -168,7 +168,7 @@ msgstr "%s が以下のアプリを使うことを防ぐ:"
 
 #: src/plug/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
-msgstr "制限するアプリの追加…"
+msgstr "制限するアプリを追加…"
 
 #: src/plug/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
@@ -189,7 +189,7 @@ msgstr "アプリケーションを検索"
 #: src/client/Client.vala:89
 #, c-format
 msgid "This computer will lock after %s."
-msgstr "このコンピューターは %s 後にロックされます。"
+msgstr "このコンピューターは %s後にロックされます。"
 
 #: src/client/Client.vala:91
 #, c-format
