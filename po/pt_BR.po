@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-09 10:41-0500\n"
-"PO-Revision-Date: 2018-10-11 01:33+0000\n"
+"PO-Revision-Date: 2018-10-12 00:05+0000\n"
 "Last-Translator: Deyvison Rocha <deyvison@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/pt_BR/>\n"
@@ -133,19 +133,19 @@ msgstr "Limitar uso do computador:"
 
 #: src/plug/Widgets/GeneralBox.vala:92
 msgid "On weekdays and weekends"
-msgstr "Na semana e nos fins de semana"
+msgstr "Nos dias de semana e nos finais de semana"
 
 #: src/plug/Widgets/GeneralBox.vala:93
 msgid "Only on weekdays"
-msgstr "Somente na semana"
+msgstr "Somente nos dias de semana"
 
 #: src/plug/Widgets/GeneralBox.vala:94
 msgid "Only on weekends"
-msgstr "Somente nos fins de semana"
+msgstr "Somente nos finais de semana"
 
 #: src/plug/Widgets/GeneralBox.vala:104
 msgid "Weekdays"
-msgstr "Semana"
+msgstr "Dia de Semana"
 
 #: src/plug/Widgets/GeneralBox.vala:108
 msgid "Weekends"
