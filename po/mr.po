@@ -3,36 +3,37 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-09 10:41-0500\n"
-"PO-Revision-Date: 2017-02-11 20:21+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2018-10-12 00:05+0000\n"
+"Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
+"Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-parental-controls/mr/>\n"
+"Language: mr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
-msgstr ""
+msgstr "पालक नियंत्रण क्लायंट"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
 msgid "Show parental control restrictions"
-msgstr ""
+msgstr "पालक नियंत्रण प्रतिबंध दाखवा"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
-msgstr ""
+msgstr "प्राधान्य-सिस्टम-पालक-नियंत्रणे"
 
 #: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "काही सेटिंग्जसाठी प्रशासकीय अधिकार बदलण्याची आवश्यकता आहे"
 
 #: src/plug/Plug.vala:80
 msgid "No users to edit"
-msgstr ""
+msgstr "संपादन करण्यासाठी कोणतेही युजर नाहीत"
 
 #: src/plug/Plug.vala:80
 msgid ""
@@ -41,50 +42,54 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
+"पालक नियंत्रणे (पॅरेंटल कंट्रोल) केवळ त्या वापरकर्ता(युजर)खात्यांमध्ये लागू "
+"केले जाऊ शकतात ज्याकडे प्रशासकीय(अॅडमिनिस्ट्रेटीव्ह)परवानग्या नाहीत.\n"
+"आपण वापरकर्ता खाती उपखंडात \"प्रशासक(अॅडमिनिस्ट्रेटर)\" पासून \""
+"मानक(स्टॅंडर्ड)\" पर्यंत वापरकर्ता खाते प्रकार बदलू शकता."
 
 #: src/plug/Plug.vala:83
 msgid "Configure User Accounts"
-msgstr ""
+msgstr "वापरकर्ता खाती कॉन्फिगर करा"
 
 #: src/plug/Plug.vala:86
 msgid "Open Users settings"
-msgstr ""
+msgstr "वापरकर्ता सेटिंग्स उघडा"
 
 #: src/plug/Plug.vala:152
 msgid "Parental Control"
-msgstr ""
+msgstr "पालक नियंत्रणे (पॅरेंटल कंट्रोल)"
 
 #: src/plug/Plug.vala:153
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "वेळ मर्यादा कॉन्फिगर करा आणि अप्लिकेशन वापर प्रतिबंधित करा"
 
 #: src/plug/Plug.vala:182
 msgid "Limit computer use"
-msgstr ""
+msgstr "संगणक वापर मर्यादित करा"
 
 #: src/plug/Plug.vala:183
 msgid "Prevent website access"
-msgstr ""
+msgstr "वेबसाइट प्रवेश प्रतिबंधित करा"
 
 #: src/plug/Plug.vala:184
 msgid "Prevent application access"
-msgstr ""
+msgstr "अप्लिकेशन प्रवेश प्रतिबंधित करा"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr ""
+msgstr "तर्फे :"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr ""
+msgstr "प्रति:"
 
 #: src/plug/Widgets/UserList.vala:42
 msgid "My Account"
-msgstr ""
+msgstr "माझे खाते"
 
 #: src/plug/Widgets/UserList.vala:46
 msgid "Other Accounts"
-msgstr ""
+msgstr "अन्य खाती"
 
 #: src/plug/Widgets/InternetBox.vala:77
 #, c-format
