@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-09 10:41-0500\n"
-"PO-Revision-Date: 2018-10-11 01:49+0000\n"
+"PO-Revision-Date: 2018-10-12 00:05+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/nb/>\n"
@@ -70,7 +70,7 @@ msgstr "Sett opp tidsbegrensninger og begrens programbruk"
 
 #: src/plug/Plug.vala:182
 msgid "Limit computer use"
-msgstr "Begrens datamaskinbruk:"
+msgstr "Begrens datamaskinbruk"
 
 #: src/plug/Plug.vala:183
 msgid "Prevent website access"
