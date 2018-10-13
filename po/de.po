@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-09 10:41-0500\n"
-"PO-Revision-Date: 2018-08-26 00:04+0000\n"
+"PO-Revision-Date: 2018-10-14 00:03+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/de/>\n"
@@ -72,17 +72,16 @@ msgstr ""
 "Zeitliche Beschränkungen einrichten und Anwendungsbenutzung einschränken"
 
 #: src/plug/Plug.vala:182
-#, fuzzy
 msgid "Limit computer use"
-msgstr "Rechnernutzung beschränken auf:"
+msgstr "Rechnernutzung beschränken"
 
 #: src/plug/Plug.vala:183
 msgid "Prevent website access"
-msgstr ""
+msgstr "Website-Zugriff verhindern"
 
 #: src/plug/Plug.vala:184
 msgid "Prevent application access"
-msgstr ""
+msgstr "Zugriff auf Anwendungen verhindern"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
