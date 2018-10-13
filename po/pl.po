@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-09 10:41-0500\n"
-"PO-Revision-Date: 2018-09-20 00:04+0000\n"
-"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
+"PO-Revision-Date: 2018-10-13 01:03+0000\n"
+"Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pl/>\n"
 "Language: pl\n"
@@ -70,17 +70,16 @@ msgid "Configure time limits and restrict application usage"
 msgstr "Konfiguruj ograniczenia czasowe i ogranicz korzystanie z programów"
 
 #: src/plug/Plug.vala:182
-#, fuzzy
 msgid "Limit computer use"
-msgstr "Ogranicz korzystanie z komputera:"
+msgstr "Ogranicz korzystanie z komputera"
 
 #: src/plug/Plug.vala:183
 msgid "Prevent website access"
-msgstr ""
+msgstr "Ogranicz dostęp do stron internetowych"
 
 #: src/plug/Plug.vala:184
 msgid "Prevent application access"
-msgstr ""
+msgstr "Ogranicz dostęp do programów"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
