@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-10-11 17:57+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
@@ -19,6 +19,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-17 06:09+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "Hallitse käytönvalvonnan asetuksia"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr "Käytönvalvonnan asetusten muuttaminen vaatii tunnistautumisen"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -125,6 +133,7 @@ msgstr "Muokkaa telakkaa"
 msgid "Configure printing"
 msgstr "Muokkaa tulostusasetuksia"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "Rajoita tietokoneen käyttöä:"
@@ -222,9 +231,3 @@ msgstr "Et voi suorittaa tätä sovellusta"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Sinulla ei ole oikeutta suorittaa tätä sovellusta."
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "Hallitse käytönvalvonnan asetuksia"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr "Käytönvalvonnan asetusten muuttaminen vaatii tunnistautumisen"

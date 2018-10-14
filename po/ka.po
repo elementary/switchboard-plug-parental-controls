@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-02-11 00:08+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -19,6 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+#, fuzzy
+msgid "Manage parental control settings"
+msgstr "მშობლებთა კონტროლი"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
@@ -127,6 +136,7 @@ msgstr ""
 msgid "Configure printing"
 msgstr ""
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "კომპიუტერის გამოყენების შეზღუდვა:"

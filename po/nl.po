@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-06-07 00:09+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard/"
@@ -19,6 +19,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "Beheer ouderlijk toezicht instellingen"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr ""
+"administrator rechten zijn nodig om ouderlijk toezichts instellingen te "
+"verranderen"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -126,6 +136,7 @@ msgstr "aanpassingen maken aan het dock"
 msgid "Configure printing"
 msgstr "printers configureren"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "Limiteer het computergebruik:"
@@ -226,11 +237,3 @@ msgstr "U kan dit programm niet uitvoeren"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "U heeft geen toestemming om deze applicatie uit te voeren."
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "Beheer ouderlijk toezicht instellingen"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr ""
-#~ "administrator rechten zijn nodig om ouderlijk toezichts instellingen te "
-#~ "verranderen"

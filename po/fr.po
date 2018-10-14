@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-06-04 08:03+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
@@ -19,6 +19,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-28 05:31+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "Gestion de la configuration du contrôle parental"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr ""
+"Une authentification est requise pour modifier le paramétrage du contrôle "
+"parental"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -127,6 +137,7 @@ msgstr "Modifier le dock"
 msgid "Configure printing"
 msgstr "Configurer l'impression"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "Limiter l'utilisation :"
@@ -226,11 +237,3 @@ msgstr "Vous ne pouvez pas démarrer cette application"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Vous n'êtes pas autorisé à démarrer cette application."
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "Gestion de la configuration du contrôle parental"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr ""
-#~ "Une authentification est requise pour modifier le paramétrage du contrôle "
-#~ "parental"

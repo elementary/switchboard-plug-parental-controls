@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2016-08-03 21:42+0000\n"
 "Last-Translator: Mikael Nyberg <mikanybe@gmail.com>\n"
 "Language-Team: Swedish <sv@li.org>\n"
@@ -18,6 +18,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "Hantera inställningar för föräldrakontroll"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr "Autentisering krävs för att ställa in föräldrakontroll"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
@@ -127,6 +135,7 @@ msgstr "Ändra dockan"
 msgid "Configure printing"
 msgstr "Ställa in skrivare"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "Begränsa datoranvändning"
@@ -223,9 +232,3 @@ msgstr "Du kan inte köra detta program"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Du har inte tillåtelse att köra detta program."
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "Hantera inställningar för föräldrakontroll"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr "Autentisering krävs för att ställa in föräldrakontroll"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2016-08-11 16:47+0000\n"
 "Last-Translator: Daniel Fore <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -19,6 +19,15 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+#, fuzzy
+msgid "Manage parental control settings"
+msgstr "Вхід необхідний для зміни налаштувань батьківського контролю"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr "Вхід необхідний для зміни налаштувань батьківського контролю"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
@@ -127,6 +136,7 @@ msgstr "Змінити Dock"
 msgid "Configure printing"
 msgstr "Налаштовувати друк"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "Обмежити використання комп'ютера:"
@@ -225,6 +235,3 @@ msgstr "Ви не можете запустити цю програму"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Ви не маєте права запускати цю програму."
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr "Вхід необхідний для зміни налаштувань батьківського контролю"

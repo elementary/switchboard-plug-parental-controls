@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-08-13 00:03+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
@@ -19,6 +19,14 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-03-14 07:34+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "管理家长控制选项"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr "家长控制选项需要管理员权限才能更改"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
@@ -126,6 +134,7 @@ msgstr "修改 Dock"
 msgid "Configure printing"
 msgstr "打印配置"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "限制使用："
@@ -220,9 +229,3 @@ msgstr "您无法运行此应用"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "您没有权限运行此应用。"
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "管理家长控制选项"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr "家长控制选项需要管理员权限才能更改"

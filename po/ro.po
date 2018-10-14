@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2017-05-23 12:23+0000\n"
 "Last-Translator: Sergiu Pruteanu <sergiup26@gmail.com>\n"
 "Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard/"
@@ -20,6 +20,15 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Weblate 2.14\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "Administrează setările controlului parental"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr ""
+"Autentificarea este necesară pentru a modifica setările controlului parental"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
@@ -130,6 +139,7 @@ msgstr "Modifică andocarea"
 msgid "Configure printing"
 msgstr "Configurează imprimarea"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "Limitează folosirea calculatorului:"
@@ -227,11 +237,3 @@ msgstr "Nu poţi rula această aplicaţie"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Nu ai drepturi să rulezi această aplicaţie."
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "Administrează setările controlului parental"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr ""
-#~ "Autentificarea este necesară pentru a modifica setările controlului "
-#~ "parental"

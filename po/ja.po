@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-10-12 00:05+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
@@ -19,6 +19,14 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-17 06:09+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "ペアレンタルコントロールの設定を管理します"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr "ペアレンタルコントロールの設定を変更するには認証が必要です"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -125,6 +133,7 @@ msgstr "ドックの編集"
 msgid "Configure printing"
 msgstr "印刷の設定"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "コンピューターの利用を制限:"
@@ -221,9 +230,3 @@ msgstr "このアプリケーションを実行できません"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "このアプリケーションの実行は許可されていません。"
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "ペアレンタルコントロールの設定を管理します"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr "ペアレンタルコントロールの設定を変更するには認証が必要です"

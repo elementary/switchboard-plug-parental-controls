@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-08-22 00:09+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -20,6 +20,14 @@ msgstr ""
 "%100==4 ? 2 : 3;\n"
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "Upravljajte nastavitve starševskega nadzora"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr "Skrbniške pravice so potrebne za spremembe starševskih nastavitev"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -127,6 +135,7 @@ msgstr "Spreminjanje sidrišča"
 msgid "Configure printing"
 msgstr "Nastavitve tiskanje"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "Omeji uporabo računalnika:"
@@ -227,9 +236,3 @@ msgstr "Ne morete zagnati te aplikacije"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Nimate dovoljenja za zagon te aplikacije."
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "Upravljajte nastavitve starševskega nadzora"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr "Skrbniške pravice so potrebne za spremembe starševskih nastavitev"

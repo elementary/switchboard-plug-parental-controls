@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-06-14 00:09+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
@@ -14,6 +14,14 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "Kelola pengaturan bimbingan orang tua"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr "Otentikasi diperlukan untuk mengubah pengaturan bimbingan orang tua"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -121,6 +129,7 @@ msgstr "Modifikasi dok"
 msgid "Configure printing"
 msgstr "Konfigurasikan pencetakan"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "Batasi penggunaan komputer:"
@@ -215,9 +224,3 @@ msgstr "Anda tidak dapat menjalankan aplikasi ini"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Anda tidak diizinkan menjalankan aplikasi ini."
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "Kelola pengaturan bimbingan orang tua"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr "Otentikasi diperlukan untuk mengubah pengaturan bimbingan orang tua"

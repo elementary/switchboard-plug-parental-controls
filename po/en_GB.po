@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-04-29 13:19+0000\n"
 "Last-Translator: Ciaran Ainsworth <cda@whistlingkappa.com>\n"
 "Language-Team: English (United Kingdom) <https://weblate.elementary.io/"
@@ -14,6 +14,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "Manage parental control settings"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr "Authentication is required to change parental control settings"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -121,6 +129,7 @@ msgstr "Modify the dock"
 msgid "Configure printing"
 msgstr "Configure printing"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "Limit computer use:"
@@ -218,9 +227,3 @@ msgstr "You cannot run this application"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "You are not permitted to run this application."
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "Manage parental control settings"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr "Authentication is required to change parental control settings"

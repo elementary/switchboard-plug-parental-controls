@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-05-25 20:39+0000\n"
 "Last-Translator: İbrahim Ethem Göl <ethem578@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
@@ -19,6 +19,16 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-19 06:00+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "Ebeveyn kontrolü ayarlarını yönet"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr ""
+"Ebeveyn kontrolü ayarlarını değiştirmek için kimliğinizi doğrulamanız "
+"gerekiyor"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -127,6 +137,7 @@ msgstr "Rıhtım'ı yapılandır"
 msgid "Configure printing"
 msgstr "Yazdırmayı yapılandır"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "Bilgisayar kullanımını sınırla:"
@@ -224,11 +235,3 @@ msgstr "Bu uygulamayı çalıştıramazsınız"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Bu uygulamayı çalıştırma yetkiniz yok."
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "Ebeveyn kontrolü ayarlarını yönet"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr ""
-#~ "Ebeveyn kontrolü ayarlarını değiştirmek için kimliğinizi doğrulamanız "
-#~ "gerekiyor"

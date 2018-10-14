@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2017-01-03 04:07+0000\n"
 "Last-Translator: Cody Garver <cody@elementaryos.org>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -18,6 +18,16 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "چوڭلارنىڭ باشقۇرۇش كونترول تەڭشەكلىرى"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr ""
+"چوڭلارنىڭ باشقۇرۇش تەڭشەكلىرىنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتىنى "
+"دەلىللەش زۆرۈر"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 #, fuzzy
@@ -127,6 +137,7 @@ msgstr "dock نى ئۆزگەرتىش"
 msgid "Configure printing"
 msgstr "بىسىشنى تەڭشەش"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "كومپىيۇتىر ئىشلىتىشكە چەكلىمىسى:"
@@ -223,11 +234,3 @@ msgstr "سىز بۇ ئەپنى ئىجرا قىلالمايسىز"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "سىزنىڭ بۇ ئەپنى ئىجرا قىلىش ھوقۇقىڭىز يوق."
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "چوڭلارنىڭ باشقۇرۇش كونترول تەڭشەكلىرى"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr ""
-#~ "چوڭلارنىڭ باشقۇرۇش تەڭشەكلىرىنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق "
-#~ "سالاھىيىتىنى دەلىللەش زۆرۈر"

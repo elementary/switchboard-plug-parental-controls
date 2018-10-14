@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-06-23 00:11+0000\n"
 "Last-Translator: Kirill Romanov <djaler1@gmail.com>\n"
 "Language-Team: Russian <https://weblate.elementary.io/projects/switchboard/"
@@ -20,6 +20,15 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "Управление настройками родительского контроля"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr ""
+"Для изменения параметров родительского контроля требуется аутентификация"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -127,6 +136,7 @@ msgstr "Изменение док-панели"
 msgid "Configure printing"
 msgstr "Настройку печати"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "Ограничение использования компьютера:"
@@ -227,10 +237,3 @@ msgstr "Вы не можете запустить это приложение"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "У вас нет разрешения на запуск этого приложения."
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "Управление настройками родительского контроля"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr ""
-#~ "Для изменения параметров родительского контроля требуется аутентификация"

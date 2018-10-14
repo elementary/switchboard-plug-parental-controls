@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-10-14 00:03+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
@@ -14,6 +14,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+#, fuzzy
+msgid "Manage parental control settings"
+msgstr "पालक नियंत्रण प्रतिबंध दाखवा"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -42,10 +51,10 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
-"पालक नियंत्रणे (पॅरेंटल कंट्रोल) केवळ त्या वापरकर्ता(युजर)खात्यांमध्ये लागू "
-"केले जाऊ शकतात ज्याकडे प्रशासकीय(अॅडमिनिस्ट्रेटीव्ह)परवानग्या नाहीत.\n"
-"आपण वापरकर्ता खाती उपखंडात \"प्रशासक(अॅडमिनिस्ट्रेटर)\" पासून \""
-"मानक(स्टॅंडर्ड)\" पर्यंत वापरकर्ता खाते प्रकार बदलू शकता."
+"पालक नियंत्रणे (पॅरेंटल कंट्रोल) केवळ त्या वापरकर्ता(युजर)खात्यांमध्ये लागू केले जाऊ शकतात "
+"ज्याकडे प्रशासकीय(अॅडमिनिस्ट्रेटीव्ह)परवानग्या नाहीत.\n"
+"आपण वापरकर्ता खाती उपखंडात \"प्रशासक(अॅडमिनिस्ट्रेटर)\" पासून \"मानक(स्टॅंडर्ड)\" पर्यंत "
+"वापरकर्ता खाते प्रकार बदलू शकता."
 
 #: src/plug/Plug.vala:83
 msgid "Configure User Accounts"
@@ -120,6 +129,7 @@ msgstr ""
 msgid "Configure printing"
 msgstr ""
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr ""

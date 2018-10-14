@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-05-28 00:00+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -12,6 +12,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.18\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "Gestionați setările de control parental"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr ""
+"Este necesară autentificarea pentru a modifica setările de control parental"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -120,6 +129,7 @@ msgstr "Modificați docul"
 msgid "Configure printing"
 msgstr "Configurați imprimarea"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "Limitați utilizarea calculatorului:"
@@ -218,11 +228,3 @@ msgstr "Nu puteți rula această aplicație"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Nu aveți permisiunea de a rula această aplicație."
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "Gestionați setările de control parental"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr ""
-#~ "Este necesară autentificarea pentru a modifica setările de control "
-#~ "parental"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-09 10:41-0500\n"
+"POT-Creation-Date: 2018-10-13 17:23-0700\n"
 "PO-Revision-Date: 2018-06-18 00:05+0000\n"
 "Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
 "Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
@@ -19,6 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 2.18\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:10
+msgid "Manage parental control settings"
+msgstr "Szülői felügyelet beállítások kezelése"
+
+#: data/org.pantheon.switchboard.parental-controls.policy.in:11
+msgid "Authentication is required to change parental control settings"
+msgstr ""
+"Hitelesítésre van szükség a szülői felügyelet beállítások módosításához"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -127,6 +136,7 @@ msgstr "A dokk módosítása"
 msgid "Configure printing"
 msgstr "Nyomtatás beállítása"
 
+#. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
 msgstr "Számítógép használat korlátozása:"
@@ -224,10 +234,3 @@ msgstr "Nem tudja futtatni ezt az alkalmazást"
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
 msgstr "Nincs engedélye futtatni ezt az alkalmazást."
-
-#~ msgid "Manage parental control settings"
-#~ msgstr "Szülői felügyelet beállítások kezelése"
-
-#~ msgid "Authentication is required to change parental control settings"
-#~ msgstr ""
-#~ "Hitelesítésre van szükség a szülői felügyelet beállítások módosításához"
