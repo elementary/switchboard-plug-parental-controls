@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:23-0700\n"
-"PO-Revision-Date: 2018-06-14 00:09+0000\n"
+"PO-Revision-Date: 2018-10-21 11:41+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/id/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
@@ -72,17 +72,16 @@ msgid "Configure time limits and restrict application usage"
 msgstr "Mengkonfigurasi batas waktu dan membatasi penggunaan aplikasi"
 
 #: src/plug/Plug.vala:182
-#, fuzzy
 msgid "Limit computer use"
-msgstr "Batasi penggunaan komputer:"
+msgstr "Batasi penggunaan komputer"
 
 #: src/plug/Plug.vala:183
 msgid "Prevent website access"
-msgstr ""
+msgstr "Cegah akses situs"
 
 #: src/plug/Plug.vala:184
 msgid "Prevent application access"
-msgstr ""
+msgstr "Cegah akses aplikasi"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
