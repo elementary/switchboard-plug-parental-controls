@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:23-0700\n"
-"PO-Revision-Date: 2016-08-03 21:42+0000\n"
-"Last-Translator: Mikael Nyberg <mikanybe@gmail.com>\n"
-"Language-Team: Swedish <sv@li.org>\n"
+"PO-Revision-Date: 2018-10-21 11:44+0000\n"
+"Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
+"Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-parental-controls/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage parental control settings"
@@ -28,18 +29,16 @@ msgid "Authentication is required to change parental control settings"
 msgstr "Autentisering krävs för att ställa in föräldrakontroll"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-#, fuzzy
 msgid "Parental Controls Client"
-msgstr "Föräldrakontroll"
+msgstr "Föräldrakontrollklient"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-#, fuzzy
 msgid "Show parental control restrictions"
-msgstr "Hantera inställningar för föräldrakontroll"
+msgstr "Visa begränsningar för föräldrakontroll"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
-msgstr ""
+msgstr "preferences-system-parental-controls"
 
 #: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
@@ -67,7 +66,7 @@ msgstr "Ställ in användarkonton"
 
 #: src/plug/Plug.vala:86
 msgid "Open Users settings"
-msgstr "Öppna Användarkonton"
+msgstr "Öppna användariställningar"
 
 #: src/plug/Plug.vala:152
 msgid "Parental Control"
@@ -78,17 +77,16 @@ msgid "Configure time limits and restrict application usage"
 msgstr "Ställ in tidsbegränsningar och förhindra åtkomst till program"
 
 #: src/plug/Plug.vala:182
-#, fuzzy
 msgid "Limit computer use"
 msgstr "Begränsa datoranvändning"
 
 #: src/plug/Plug.vala:183
 msgid "Prevent website access"
-msgstr ""
+msgstr "Förhindra webbsideåtkomst"
 
 #: src/plug/Plug.vala:184
 msgid "Prevent application access"
-msgstr ""
+msgstr "Förhindra programåtkomst"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -117,7 +115,7 @@ msgstr "Lägg till URL"
 
 #: src/plug/Widgets/InternetBox.vala:99
 msgid "Add a new URL, for example: google.com"
-msgstr "Lägg till en ny URL, t.ex: google.se"
+msgstr "Lägg till en ny URL, till exempel: google.se"
 
 #: src/plug/Widgets/InternetBox.vala:100
 msgid "Invalid URL"
@@ -138,7 +136,7 @@ msgstr "Ställa in skrivare"
 #. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
-msgstr "Begränsa datoranvändning"
+msgstr "Begränsa datoranvändning:"
 
 #: src/plug/Widgets/GeneralBox.vala:92
 msgid "On weekdays and weekends"
@@ -179,7 +177,7 @@ msgstr "Förhindra %s från att använda dessa program:"
 
 #: src/plug/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
-msgstr "Lägg till program…"
+msgstr "Lägg till spärrat program…"
 
 #: src/plug/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
@@ -198,23 +196,23 @@ msgid "Search Applications"
 msgstr "Sök efter program"
 
 #: src/client/Client.vala:89
-#, fuzzy, c-format
+#, c-format
 msgid "This computer will lock after %s."
-msgstr "Den här datorn låses om %s %s. %s"
+msgstr "Den här datorn låses efter %s."
 
 #: src/client/Client.vala:91
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu timme"
+msgstr[1] "%lu timmar"
 
 #: src/client/Client.vala:93
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu minut"
+msgstr[1] "%lu minuter"
 
 #: src/client/Client.vala:95
 msgid ""
