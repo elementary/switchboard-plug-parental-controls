@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:23-0700\n"
-"PO-Revision-Date: 2018-05-25 20:39+0000\n"
-"Last-Translator: İbrahim Ethem Göl <ethem578@gmail.com>\n"
+"PO-Revision-Date: 2018-10-27 23:20+0000\n"
+"Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/tr/>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-19 06:00+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
@@ -80,17 +80,16 @@ msgid "Configure time limits and restrict application usage"
 msgstr "Zaman sınırlamasını yapılandırın ve uygulama kullanımını kısıtlayın"
 
 #: src/plug/Plug.vala:182
-#, fuzzy
 msgid "Limit computer use"
-msgstr "Bilgisayar kullanımını sınırla:"
+msgstr "Bilgisayar kullanımını sınırla"
 
 #: src/plug/Plug.vala:183
 msgid "Prevent website access"
-msgstr ""
+msgstr "Web sitesi erişimini engelle"
 
 #: src/plug/Plug.vala:184
 msgid "Prevent application access"
-msgstr ""
+msgstr "Uygulama erişimini engelle"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -200,9 +199,9 @@ msgid "Search Applications"
 msgstr "Uygulamaları Ara"
 
 #: src/client/Client.vala:89
-#, fuzzy, c-format
+#, c-format
 msgid "This computer will lock after %s."
-msgstr "Bilgisayar şu süre sonunda kilitlenecek: %s %s. %s"
+msgstr "Bilgisayar şu süre sonunda kilitlenecek %s."
 
 #: src/client/Client.vala:91
 #, c-format
