@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:23-0700\n"
-"PO-Revision-Date: 2018-10-27 23:20+0000\n"
+"PO-Revision-Date: 2018-11-01 00:03+0000\n"
 "Last-Translator: Sinan Decron <intenfinitia@gmail.com>\n"
 "Language-Team: Turkish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/tr/>\n"
@@ -180,7 +180,7 @@ msgstr "%s kullanıcısının şu uygulamaları kullanmasını engelle:"
 
 #: src/plug/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
-msgstr "Engelli uygulama ekle..."
+msgstr "Engelli uygulama ekle…"
 
 #: src/plug/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
@@ -192,7 +192,7 @@ msgstr "Hepsini Temizle"
 
 #: src/plug/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
-msgstr "Bu uygulamalara yönetici izinleri ile erişime izin ver"
+msgstr "Bu uygulamalara yönetici izinleri ile erişime izin ver:"
 
 #: src/plug/Widgets/AppChooser.vala:71
 msgid "Search Applications"
