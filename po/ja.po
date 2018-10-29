@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:23-0700\n"
-"PO-Revision-Date: 2018-10-12 00:05+0000\n"
+"PO-Revision-Date: 2018-11-02 10:06+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ja/>\n"
@@ -185,7 +185,7 @@ msgstr "選択されたアプリを削除"
 
 #: src/plug/Widgets/AppsBox.vala:110
 msgid "Clear All"
-msgstr "すべてをクリア"
+msgstr "すべて消去"
 
 #: src/plug/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
