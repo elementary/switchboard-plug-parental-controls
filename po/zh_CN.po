@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:23-0700\n"
-"PO-Revision-Date: 2018-08-13 00:03+0000\n"
-"Last-Translator: colindemian <colindemian@outlook.com>\n"
+"PO-Revision-Date: 2018-10-31 01:52+0000\n"
+"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -178,7 +178,7 @@ msgstr "阻止 %s 使用以下应用："
 
 #: src/plug/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
-msgstr "添加阻止的应用..."
+msgstr "添加阻止的应用…"
 
 #: src/plug/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
