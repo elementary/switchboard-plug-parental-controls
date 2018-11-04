@@ -3,45 +3,48 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:23-0700\n"
-"PO-Revision-Date: 2017-02-11 20:20+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2018-11-05 23:31+0000\n"
+"Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
+"Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
+"switchboard-plug-parental-controls/bs/>\n"
+"Language: bs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage parental control settings"
-msgstr ""
+msgstr "Upravljajte podešavanjima roditeljskih kontrola"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
 msgstr ""
+"Autentifikacija je potrebna da biste mijenjali podešavanja roditeljskih "
+"kontrola"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
-msgstr ""
+msgstr "Klijent za roditeljske kontrole"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
 msgid "Show parental control restrictions"
-msgstr ""
+msgstr "Prikaži ograničenja roditeljskih kontrola"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
-msgstr ""
+msgstr "preferences-system-parental-controls"
 
 #: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Za izmjenu nekih podešavanja su potrebna administratorska prava"
 
 #: src/plug/Plug.vala:80
 msgid "No users to edit"
-msgstr ""
+msgstr "Nema korisnika za uređivanje"
 
 #: src/plug/Plug.vala:80
 msgid ""
@@ -50,174 +53,180 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
+"Roditeljske kontrole se mogu samo primijeniti na korisničke račune koji "
+"nemaju administratorske dozvole.\n"
+"Možete promijeniti vrstu korisnikovog računa iz \"Administrator\" u \""
+"Standardni\" u panelu Korisnički računi."
 
 #: src/plug/Plug.vala:83
 msgid "Configure User Accounts"
-msgstr ""
+msgstr "Podesi korisničke račune"
 
 #: src/plug/Plug.vala:86
 msgid "Open Users settings"
-msgstr ""
+msgstr "Otvori podešavanja korisnika"
 
 #: src/plug/Plug.vala:152
 msgid "Parental Control"
-msgstr ""
+msgstr "Roditeljska kontrola"
 
 #: src/plug/Plug.vala:153
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "Postavite vremenska ograničenja i ograničite korištenje aplikacija"
 
 #: src/plug/Plug.vala:182
 msgid "Limit computer use"
-msgstr ""
+msgstr "Ograničite korištenje računara"
 
 #: src/plug/Plug.vala:183
 msgid "Prevent website access"
-msgstr ""
+msgstr "Spriječite pristup web stranici"
 
 #: src/plug/Plug.vala:184
 msgid "Prevent application access"
-msgstr ""
+msgstr "Spriječite pristup aplikaciji"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr ""
+msgstr "Od:"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr ""
+msgstr "Do:"
 
 #: src/plug/Widgets/UserList.vala:42
 msgid "My Account"
-msgstr ""
+msgstr "Moj račun"
 
 #: src/plug/Widgets/UserList.vala:46
 msgid "Other Accounts"
-msgstr ""
+msgstr "Drugi računi"
 
 #: src/plug/Widgets/InternetBox.vala:77
 #, c-format
 msgid "Prevent %s from visiting these websites:"
-msgstr ""
+msgstr "Spriječi da %s posjećuje sljedeće web stranice:"
 
 #: src/plug/Widgets/InternetBox.vala:90
 msgid "Add URL"
-msgstr ""
+msgstr "Dodaj URL"
 
 #: src/plug/Widgets/InternetBox.vala:99
 msgid "Add a new URL, for example: google.com"
-msgstr ""
+msgstr "Dodaj novi URL, naprimjer: google.com"
 
 #: src/plug/Widgets/InternetBox.vala:100
 msgid "Invalid URL"
-msgstr ""
+msgstr "Nevažeći URL"
 
 #: src/plug/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
-msgstr ""
+msgstr "Dozvoli ovom korisniku da:"
 
 #: src/plug/Widgets/GeneralBox.vala:65
 msgid "Modify the dock"
-msgstr ""
+msgstr "Izmijeni dok"
 
 #: src/plug/Widgets/GeneralBox.vala:68
 msgid "Configure printing"
-msgstr ""
+msgstr "Podešava štampanje"
 
 #. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
-msgstr ""
+msgstr "Ograniči korištenje računara:"
 
 #: src/plug/Widgets/GeneralBox.vala:92
 msgid "On weekdays and weekends"
-msgstr ""
+msgstr "Radnim danima i vikendom"
 
 #: src/plug/Widgets/GeneralBox.vala:93
 msgid "Only on weekdays"
-msgstr ""
+msgstr "Samo radnim danima"
 
 #: src/plug/Widgets/GeneralBox.vala:94
 msgid "Only on weekends"
-msgstr ""
+msgstr "Samo vikendom"
 
 #: src/plug/Widgets/GeneralBox.vala:104
 msgid "Weekdays"
-msgstr ""
+msgstr "Radnim danima"
 
 #: src/plug/Widgets/GeneralBox.vala:108
 msgid "Weekends"
-msgstr ""
+msgstr "Vikendima"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "General"
-msgstr ""
+msgstr "Opće"
 
 #: src/plug/Widgets/ControlPage.vala:54
 msgid "Internet"
-msgstr ""
+msgstr "Internet"
 
 #: src/plug/Widgets/ControlPage.vala:55
 msgid "Applications"
-msgstr ""
+msgstr "Aplikacije"
 
 #: src/plug/Widgets/AppsBox.vala:90
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "Spriječi da %s koristi ove aplikacije:"
 
 #: src/plug/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
-msgstr ""
+msgstr "Dodaj spriječene aplikacije…"
 
 #: src/plug/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
-msgstr ""
+msgstr "Ukloni odabranu aplikaciju"
 
 #: src/plug/Widgets/AppsBox.vala:110
 msgid "Clear All"
-msgstr ""
+msgstr "Izbriši sve"
 
 #: src/plug/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
-msgstr ""
+msgstr "Dozvoli pristup ovim aplikacijama s administratorskim dozvolama:"
 
 #: src/plug/Widgets/AppChooser.vala:71
 msgid "Search Applications"
-msgstr ""
+msgstr "Pretraži aplikacije"
 
 #: src/client/Client.vala:89
 #, c-format
 msgid "This computer will lock after %s."
-msgstr ""
+msgstr "Ovaj će se računar zaključati nakon %s."
 
 #: src/client/Client.vala:91
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu sata"
+msgstr[1] "%lu sata"
+msgstr[2] "%lu sati"
 
 #: src/client/Client.vala:93
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu minute"
+msgstr[1] "%lu minute"
+msgstr[2] "%lu minuta"
 
 #: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
-msgstr ""
+msgstr "Zatvorite sve aplikacije prije nego što Vaš računar bude zaključan."
 
 #: src/client/Client.vala:101
 msgid "Time left"
-msgstr ""
+msgstr "Preostalo vrijeme"
 
 #: src/client/AppUnavailableDialog.vala:27
 msgid "You cannot run this application"
-msgstr ""
+msgstr "Ne možete pokrenuti ovu aplikaciju"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
-msgstr ""
+msgstr "Nemate dozvolu za pokretanje ove aplikacije."
