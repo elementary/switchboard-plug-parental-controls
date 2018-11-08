@@ -41,7 +41,7 @@ namespace PC.Daemon {
             return null;
         }
 
-        public static List<UserConfig> get_all () {
+        public static List<weak UserConfig> get_all () {
             return config_list.copy ();
         }
 
