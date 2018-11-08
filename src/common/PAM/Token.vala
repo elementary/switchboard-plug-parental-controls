@@ -102,7 +102,7 @@ namespace PC.PAM {
             return list;
         }
 
-        public static string construct_pam_restriction (string[] services, string[] ttys, string users[], string[] times) {
+        public static string construct_pam_restriction (string[] services, string[] ttys, string[] users, string[] times) {
             string services_str = string.joinv (LIST_SEPARATOR, services);
             string ttys_str = string.joinv (LIST_SEPARATOR, ttys);
             string users_str = string.joinv (LIST_SEPARATOR, users);
