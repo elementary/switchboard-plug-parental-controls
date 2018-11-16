@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:23-0700\n"
-"PO-Revision-Date: 2018-06-04 08:03+0000\n"
+"PO-Revision-Date: 2018-11-16 08:32+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-28 05:31+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
@@ -80,17 +80,16 @@ msgid "Configure time limits and restrict application usage"
 msgstr "Configurez des limites de temps et des restrictions d'utilisation"
 
 #: src/plug/Plug.vala:182
-#, fuzzy
 msgid "Limit computer use"
-msgstr "Limiter l'utilisation :"
+msgstr "Limiter l'utilisation"
 
 #: src/plug/Plug.vala:183
 msgid "Prevent website access"
-msgstr ""
+msgstr "Empêcher l'accès au site web"
 
 #: src/plug/Plug.vala:184
 msgid "Prevent application access"
-msgstr ""
+msgstr "Empêcher l'accès à l'application"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
