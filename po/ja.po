@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:23-0700\n"
-"PO-Revision-Date: 2018-11-02 10:06+0000\n"
+"PO-Revision-Date: 2018-11-24 13:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ja/>\n"
@@ -90,11 +90,11 @@ msgstr "アプリケーションへのアクセスを防止"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr "開始:"
+msgstr "開始："
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr "終了:"
+msgstr "終了："
 
 #: src/plug/Widgets/UserList.vala:42
 msgid "My Account"
@@ -107,7 +107,7 @@ msgstr "その他のアカウント"
 #: src/plug/Widgets/InternetBox.vala:77
 #, c-format
 msgid "Prevent %s from visiting these websites:"
-msgstr "%s が以下の Web サイトを参照することを防止:"
+msgstr "%s が以下の Web サイトを参照することを防止："
 
 #: src/plug/Widgets/InternetBox.vala:90
 msgid "Add URL"
@@ -115,7 +115,7 @@ msgstr "URL を追加"
 
 #: src/plug/Widgets/InternetBox.vala:99
 msgid "Add a new URL, for example: google.com"
-msgstr "新しい URL を追加してください。例: google.com"
+msgstr "新しい URL を追加してください。例：google.com"
 
 #: src/plug/Widgets/InternetBox.vala:100
 msgid "Invalid URL"
@@ -123,7 +123,7 @@ msgstr "無効な URL"
 
 #: src/plug/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
-msgstr "ユーザーに許可する動作:"
+msgstr "ユーザーに許可する動作："
 
 #: src/plug/Widgets/GeneralBox.vala:65
 msgid "Modify the dock"
@@ -136,7 +136,7 @@ msgstr "印刷の設定"
 #. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
-msgstr "コンピューターの利用を制限:"
+msgstr "コンピューターの利用を制限："
 
 #: src/plug/Widgets/GeneralBox.vala:92
 msgid "On weekdays and weekends"
@@ -173,7 +173,7 @@ msgstr "アプリケーション"
 #: src/plug/Widgets/AppsBox.vala:90
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr "%s が以下のアプリを使うことを防ぐ:"
+msgstr "%s が以下のアプリを使うことを防ぐ："
 
 #: src/plug/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
@@ -189,7 +189,7 @@ msgstr "すべて消去"
 
 #: src/plug/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
-msgstr "管理者の許可でこれらのアプリにアクセスすることを許可:"
+msgstr "管理者の許可でこれらのアプリにアクセスすることを許可："
 
 #: src/plug/Widgets/AppChooser.vala:71
 msgid "Search Applications"
