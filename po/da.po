@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:23-0700\n"
-"PO-Revision-Date: 2018-10-17 00:07+0000\n"
+"PO-Revision-Date: 2018-12-11 15:10+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/da/>\n"
@@ -174,7 +174,7 @@ msgstr "Applikationer"
 #: src/plug/Widgets/AppsBox.vala:90
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr "Forhindre %s i at bruge disse programmer:"
+msgstr "Forhindre %s i at bruge disse apps:"
 
 #: src/plug/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
@@ -190,7 +190,7 @@ msgstr "Ryd alt"
 
 #: src/plug/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
-msgstr "Tillad adgang til disse programmer med administratorrettigheder:"
+msgstr "Tillad adgang til disse apps med administratorrettigheder:"
 
 #: src/plug/Widgets/AppChooser.vala:71
 msgid "Search Applications"
@@ -218,7 +218,7 @@ msgstr[1] "%lu minutter"
 #: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
-msgstr "Husk at lukke alle applikationer inden din computer bliver låst."
+msgstr "Husk at lukke alle applikationer inden din computer låses."
 
 #: src/client/Client.vala:101
 msgid "Time left"
