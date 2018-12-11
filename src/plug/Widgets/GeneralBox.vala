@@ -23,7 +23,7 @@
 namespace PC.Widgets {
     public class GeneralBox : Gtk.Grid {
         private string plank_conf_file_path = "";
-        private Act.User user;
+        public weak Act.User user { get; construct; }
         private Gtk.CheckButton dock_btn;
         private Gtk.CheckButton print_btn;
         private Gtk.Switch limit_switch;
@@ -37,7 +37,7 @@ namespace PC.Widgets {
         private WeekSpinBox weekend_box;
 
         public GeneralBox (Act.User user) {
-            this.user = user;
+            Object (user: user);
             plank_conf_file_path = Path.build_filename (user.get_home_dir (), Constants.PLANK_CONF_DIR);
 
             dock_btn.notify["active"].connect (on_dock_btn_activate);
@@ -172,7 +172,7 @@ namespace PC.Widgets {
 
             string[] times = {};
             string[] users = { user.get_user_name () };
-            string id = limit_combobox.get_active_id ();
+            unowned string id = limit_combobox.get_active_id ();
 
             if (PAM.DayType.WEEKDAY.to_string () in id) {
                 times += PAM.DayType.WEEKDAY.to_string () + weekday_box.get_from () + "-" + weekday_box.get_to ();
@@ -209,7 +209,7 @@ namespace PC.Widgets {
                     return;
                 }
 
-                foreach (string printer in get_printers ()) {
+                foreach (unowned string printer in get_printers ()) {
                     if (active) {
                         helper.printer_set_users_allowed (printer, users);
                     } else {
@@ -260,8 +260,6 @@ namespace PC.Widgets {
                         retval += printer;
                     }
                 }
-            } catch (IOError e) {
-                warning ("%s\n", e.message);
             } catch (Error e) {
                 warning ("%s\n", e.message);
             }

@@ -32,11 +32,7 @@ namespace PC {
         private Gtk.InfoBar infobar;
         private Gtk.Grid alert_view_grid;
 
-        private Act.UserManager usermanager;
-
         public MainBox () {
-            usermanager = Utils.get_usermanager ();
-
             stack = new Gtk.Stack ();
 
             var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
@@ -71,8 +67,6 @@ namespace PC {
             infobar_content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
             infobar_action_area.add (lock_button);
 
-            Utils.get_permission ().notify["allowed"].connect (update_view_state);
-
             main_grid = new Gtk.Grid ();
             main_grid.attach (infobar, 0, 1, 1, 1);
             main_grid.attach (paned, 0, 2, 1, 1);
@@ -93,51 +87,23 @@ namespace PC {
             stack.add (main_grid);
             stack.add (alert_view_grid);
 
-            usermanager.notify["is-loaded"].connect (update_user_handling);
-            update_user_handling ();
+            list.notify["has-users"].connect (() => update_stack ());
+            update_stack ();
+
+            unowned Polkit.Permission permission = Utils.get_permission ();
+            permission.bind_property ("allowed", infobar, "no-show-all", GLib.BindingFlags.SYNC_CREATE);
+            permission.bind_property ("allowed", infobar, "visible", GLib.BindingFlags.SYNC_CREATE|GLib.BindingFlags.INVERT_BOOLEAN);
 
             this.add (stack);
             this.show_all ();
         }
 
-        private void update_user_handling () {
-            list.fill ();
-
-            usermanager.user_added.connect (on_user_added);
-            usermanager.user_changed.connect (on_user_changed);
-            usermanager.user_removed.connect (on_user_removed);
-            update_view_state ();
-        }
-
-        private void update_view_state () {
-            if (list.get_has_users ()) {
+        private void update_stack () {
+            if (list.has_users) {
                 stack.visible_child = main_grid;
             } else {
                 stack.visible_child = alert_view_grid;
             }
-
-            if (Utils.get_permission ().get_allowed ()) {
-                infobar.no_show_all = true;
-                infobar.hide ();
-            } else {
-                infobar.no_show_all = false;
-                infobar.show_all ();
-            }
-        }
-
-        private void on_user_added (Act.User user) {
-            list.add_user (user);
-            update_view_state ();
-        }
-
-        private void on_user_changed (Act.User user) {
-            list.update_user (user);
-            update_view_state ();
-        }
-
-        private void on_user_removed (Act.User user) {
-            list.remove_user (user);
-            update_view_state ();
         }
     }
 
@@ -145,8 +111,8 @@ namespace PC {
         private MainBox? main_box = null;
 
         public Plug () {
-	    var settings = new Gee.TreeMap<string, string?> (null, null);
-	    settings.set ("parental-controls", null);
+        var settings = new Gee.TreeMap<string, string?> (null, null);
+        settings.set ("parental-controls", null);
             Object (category: Category.SYSTEM,
                     code_name: "pantheon-parental-controls",
                     display_name: _("Parental Control"),

@@ -22,18 +22,16 @@
 
 namespace PC.Widgets {
     public class ControlPage : Gtk.Box {
-        public Act.User user;
+        public weak Act.User user { get; construct; }
         public Gtk.Stack stack;
         private GeneralBox general_box;
-        private InternetBox internet_box;
-        private AppsBox apps_box;
-        private KeyFile key_file;
 
         public ControlPage (Act.User user) {
-            this.user = user;
+            Object (user: user);
+        }
 
-            key_file = new KeyFile ();
-            key_file.set_list_separator (';');
+        construct {
+            unowned Polkit.Permission permission = Utils.get_permission ();
 
             margin = 24;
             spacing = margin;
@@ -43,10 +41,10 @@ namespace PC.Widgets {
             general_box = new GeneralBox (user);
             general_box.expand = true;
 
-            internet_box = new InternetBox (user);
+            var internet_box = new InternetBox (user);
             internet_box.expand = true;
 
-            apps_box = new AppsBox (user);
+            var apps_box = new AppsBox (user);
             apps_box.expand = true;
 
             stack = new Gtk.Stack ();
@@ -54,7 +52,9 @@ namespace PC.Widgets {
             stack.add_titled (internet_box, "internet", _("Internet"));
             stack.add_titled (apps_box, "apps", _("Applications"));
 
-            Utils.get_permission ().notify["allowed"].connect (update_view_state);
+            permission.bind_property ("allowed", general_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+            permission.bind_property ("allowed", internet_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+            permission.bind_property ("allowed", apps_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
 
             var switcher = new Gtk.StackSwitcher ();
             switcher.halign = Gtk.Align.CENTER;
@@ -64,12 +64,12 @@ namespace PC.Widgets {
             add (switcher);
             add (stack);
 
-            update_view_state ();
             show_all ();
         }
 
         public void set_active (bool active) {
-            if (Utils.get_permission ().get_allowed ()) {
+            unowned Polkit.Permission permission = Utils.get_permission ();
+            if (permission.allowed) {
                 Utils.get_api ().set_user_daemon_active.begin (user.get_user_name (), active);
                 if (active) {
                     general_box.refresh ();
@@ -84,19 +84,12 @@ namespace PC.Widgets {
 
         public async bool get_active () {
             try {
-                return yield Utils.get_api ().get_user_daemon_active (user.get_user_name ());    
-            } catch (IOError e) {
+                return yield Utils.get_api ().get_user_daemon_active (user.get_user_name ());
+            } catch (Error e) {
                 warning (e.message);
             }
             
             return false;
         } 
-
-        private void update_view_state () {
-            bool allowed = Utils.get_permission ().get_allowed ();
-            general_box.sensitive = allowed;
-            internet_box.sensitive = allowed;
-            apps_box.sensitive = allowed;
-        }
     }
 }

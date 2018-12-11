@@ -22,13 +22,10 @@
 
 namespace PC.Widgets {
     public class InternetBox : Gtk.Grid {
-        public string[] urls;
-
         private const string URL_REGEX_RULE = "[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)";
 
-        private Act.User user;
+        public weak Act.User user { get; construct; }
         private Regex? url_regex = null;
-        private List<UrlEntry> url_list;
 
         private Gtk.ListBox list_box;
         private Gtk.Entry entry;
@@ -36,15 +33,18 @@ namespace PC.Widgets {
 
         private class UrlEntry : Gtk.ListBoxRow {
             public signal void deleted ();
-            private string url;
+            public string url { get; construct; }
 
             public UrlEntry (string url) {
-                this.url = url;
+                Object (url: url);
+            }
 
+            construct {
                 var delete_button = new Gtk.Button.from_icon_name ("user-trash-symbolic");
                 delete_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
                 delete_button.clicked.connect (() => {
                     deleted ();
+                    destroy ();
                 });
 
                 var main_box = new Gtk.Box (Gtk.Orientation.HORIZONTAL, 0);
@@ -57,22 +57,18 @@ namespace PC.Widgets {
                 add (main_box);
                 show_all ();
             }
-
-            public string get_url () {
-                return url;
-            }
         }
 
         public InternetBox (Act.User user) {
-            this.user = user;
+            Object (user: user);
+        }
 
+        construct {
             try {
                 url_regex = new Regex (URL_REGEX_RULE, RegexCompileFlags.OPTIMIZE);
             } catch (RegexError e) {
                 warning ("%s\n", e.message);
             }
-
-            url_list = new List<UrlEntry> ();
 
             var info_label = new Gtk.Label (_("Prevent %s from visiting these websites:").printf (user.get_real_name ()));
             info_label.halign = Gtk.Align.START;
@@ -96,7 +92,7 @@ namespace PC.Widgets {
             entry = new Gtk.Entry ();
             entry.hexpand = true;
             entry.margin_start = 6;
-            entry.set_placeholder_text (_("Add a new URL, for example: google.com"));
+            entry.placeholder_text = _("Add a new URL, for example: google.com");
             entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Invalid URL"));
             entry.changed.connect (on_entry_changed);
             entry.activate.connect (on_entry_activate);
@@ -124,12 +120,12 @@ namespace PC.Widgets {
         private async void load_existing () {
             try {
                 string[] block_urls = yield Utils.get_api ().get_user_daemon_block_urls (user.get_user_name ());
-                foreach (string url in block_urls) {
-                    add_entry (new UrlEntry (url));
+                foreach (unowned string url in block_urls) {
+                    add_entry (url);
                 }
             } catch (Error e) {
-                warning ("%s\n", e.message);
-            }         
+                critical (e.message);
+            }
         }
 
         private void update_block_urls () {
@@ -138,8 +134,8 @@ namespace PC.Widgets {
             }
 
             string[] block_urls = {};
-            foreach (var url_entry in url_list) {
-                block_urls += url_entry.get_url ();
+            foreach (weak Gtk.Widget url_entry in list_box.get_children ()) {
+                block_urls += ((UrlEntry) url_entry).url;
             }
 
             Utils.get_api ().set_user_daemon_block_urls.begin (user.get_user_name (), block_urls);
@@ -150,12 +146,13 @@ namespace PC.Widgets {
                 return;
             }
 
-            bool valid = url_regex.match (entry.get_text ());
+            var entry_stripped_text = entry.get_text ().strip ();
+            bool valid = url_regex.match (entry_stripped_text);
             add_button.sensitive = valid;
-            if (valid || entry.get_text ().strip () == "") {
-                entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, null);
+            if (valid || entry_stripped_text == "") {
+                entry.secondary_icon_name = null;
             } else {
-                entry.set_icon_from_icon_name (Gtk.EntryIconPosition.SECONDARY, "process-error-symbolic");
+                entry.secondary_icon_name = "process-error-symbolic";
             }
         }
 
@@ -169,24 +166,16 @@ namespace PC.Widgets {
                 return;
             }
 
-            var url_entry = new UrlEntry (url);
-            add_entry (url_entry);
+            add_entry (url);
 
             entry.text = "";
             update_block_urls ();
         }
 
-        private void add_entry (UrlEntry url_entry) {
-            url_list.append (url_entry);
-            url_entry.deleted.connect (on_url_entry_deleted);
-
-            list_box.add (url_entry);            
-        }
-
-        private void on_url_entry_deleted (UrlEntry url_entry) {
-            url_list.remove (url_entry);
-            list_box.remove (url_entry);
-            update_block_urls ();
+        private void add_entry (string url) {
+            var url_entry = new UrlEntry (url);
+            url_entry.deleted.connect (() => update_block_urls ());
+            list_box.add (url_entry);
         }
     }
 }

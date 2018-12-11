@@ -35,11 +35,9 @@ namespace PC.Widgets {
             public signal void deleted ();
 
             private AppInfo info;
-            private string executable;
 
             public AppEntry (AppInfo info) {
                 this.info = info;
-                executable = info.get_executable ();
 
                 var main_grid = new Gtk.Grid ();
                 main_grid.orientation = Gtk.Orientation.HORIZONTAL;
@@ -52,7 +50,7 @@ namespace PC.Widgets {
                 image.pixel_size = 32;
                 main_grid.add (image);
 
-                string? description = info.get_description ();
+                unowned string? description = info.get_description ();
                 if (description == null) {
                     description = "";
                 }
@@ -72,8 +70,8 @@ namespace PC.Widgets {
                 return info;
             }
 
-            public string get_executable () {
-                return executable;
+            public unowned string get_executable () {
+                return info.get_executable ();
             }
         }
 
@@ -97,16 +95,16 @@ namespace PC.Widgets {
             list_box.row_selected.connect (update_sensitivity);
             scrolled.add (list_box);
 
-            var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.MENU);
+            var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             add_button.tooltip_text = _("Add Prevented Apps…");
             add_button.clicked.connect (on_add_button_clicked);
 
-            remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.MENU);
+            remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             remove_button.tooltip_text = _("Remove Selected App");
             remove_button.sensitive = false;
             remove_button.clicked.connect (on_remove_button_clicked);
 
-            clear_button = new Gtk.Button.from_icon_name ("edit-clear-all-symbolic", Gtk.IconSize.MENU);
+            clear_button = new Gtk.Button.from_icon_name ("edit-clear-all-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             clear_button.tooltip_text = _("Clear All");
             clear_button.sensitive = false;
             clear_button.clicked.connect (on_clear_button_clicked);
@@ -155,7 +153,7 @@ namespace PC.Widgets {
         }
 
         private void on_clear_button_clicked () {
-            foreach (var entry in entries) {
+            foreach (weak AppEntry entry in entries) {
                 Idle.add (() => {
                     entry.deleted ();
                     return false;
@@ -179,7 +177,7 @@ namespace PC.Widgets {
 
         private bool get_info_loaded (AppInfo info) {
             foreach (var entry in entries) {
-                if (entry.get_info () == info) {
+                if (entry.get_info ().equal (info)) {
                     return true;
                 }
             }
@@ -211,8 +209,8 @@ namespace PC.Widgets {
             string[] targets = {};
             foreach (var entry in entries) {
                 targets += Environment.find_program_in_path (entry.get_executable ());
-            }            
-            
+            }
+
             Utils.get_api ().set_user_daemon_targets.begin (user.get_user_name (), targets); 
         }
 
@@ -227,7 +225,7 @@ namespace PC.Widgets {
                 bool admin = yield Utils.get_api ().get_user_daemon_admin (user.get_user_name ());
                 admin_switch_btn.set_active (admin);
 
-                foreach (var info in AppInfo.get_all ()) {
+                foreach (unowned GLib.AppInfo info in AppInfo.get_all ()) {
                     if (info.should_show () && Environment.find_program_in_path (info.get_executable ()) in targets) {
                         load_info (info);
                     }
