@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:23-0700\n"
-"PO-Revision-Date: 2018-10-14 00:03+0000\n"
+"PO-Revision-Date: 2018-12-24 00:07+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/mr/>\n"
@@ -16,9 +16,8 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-#, fuzzy
 msgid "Manage parental control settings"
-msgstr "पालक नियंत्रण प्रतिबंध दाखवा"
+msgstr "पालक नियंत्रण सेटिंग्ज व्यवस्थापित करा"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
