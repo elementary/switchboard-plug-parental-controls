@@ -3,44 +3,46 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:23-0700\n"
-"PO-Revision-Date: 2017-02-11 20:20+0000\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2019-01-06 17:22+0000\n"
+"Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
+"Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
+"switchboard/switchboard-plug-parental-controls/nn/>\n"
+"Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage parental control settings"
-msgstr ""
+msgstr "Behandle innstillingar for foreldrekontroll"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
 msgstr ""
+"Identitetsstadfesting er kravd for å endre innstillingar for foreldrekontroll"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
-msgstr ""
+msgstr "Foreldrekontrollklient"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
 msgid "Show parental control restrictions"
-msgstr ""
+msgstr "Vis innstillingar for foreldrekontroll"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
-msgstr ""
+msgstr "preferences-system-parental-controls"
 
 #: src/plug/Plug.vala:71
 msgid "Some settings require administrator rights to be changed"
-msgstr ""
+msgstr "Nokre innstillingar krev administratorrettar for å kunne endrast"
 
 #: src/plug/Plug.vala:80
 msgid "No users to edit"
-msgstr ""
+msgstr "Ingen brukar(ar) å setje opp"
 
 #: src/plug/Plug.vala:80
 msgid ""
@@ -49,174 +51,178 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
+"Foreldrekontroll kan berre brukast på brukarkontoar som ikkje har "
+"administrative rettar.\n"
+"Du kan endre ein brukar si kontotype frå «Administrator» til «Standardval» i "
+"Brukarkontoar-fana i systeminnstillingane."
 
 #: src/plug/Plug.vala:83
 msgid "Configure User Accounts"
-msgstr ""
+msgstr "Sett opp brukarkontoar"
 
 #: src/plug/Plug.vala:86
 msgid "Open Users settings"
-msgstr ""
+msgstr "Opne brukarinnstillingar"
 
 #: src/plug/Plug.vala:152
 msgid "Parental Control"
-msgstr ""
+msgstr "Foreldrekontroll"
 
 #: src/plug/Plug.vala:153
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "Sett opp tidsavgrensingar og avgrens applikasjonsbruk"
 
 #: src/plug/Plug.vala:182
 msgid "Limit computer use"
-msgstr ""
+msgstr "Avgrens datamaskinbruk"
 
 #: src/plug/Plug.vala:183
 msgid "Prevent website access"
-msgstr ""
+msgstr "Hindre nettstadtilgjenge"
 
 #: src/plug/Plug.vala:184
 msgid "Prevent application access"
-msgstr ""
+msgstr "Hindre applikasjonstilgjenge"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr ""
+msgstr "Frå:"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr ""
+msgstr "Til:"
 
 #: src/plug/Widgets/UserList.vala:42
 msgid "My Account"
-msgstr ""
+msgstr "Min konto"
 
 #: src/plug/Widgets/UserList.vala:46
 msgid "Other Accounts"
-msgstr ""
+msgstr "Andre kontoar"
 
 #: src/plug/Widgets/InternetBox.vala:77
 #, c-format
 msgid "Prevent %s from visiting these websites:"
-msgstr ""
+msgstr "Hindre %s frå å besøke desse nettstadane:"
 
 #: src/plug/Widgets/InternetBox.vala:90
 msgid "Add URL"
-msgstr ""
+msgstr "Legg til URL"
 
 #: src/plug/Widgets/InternetBox.vala:99
 msgid "Add a new URL, for example: google.com"
-msgstr ""
+msgstr "Legg til ein ny URL, til dømes: NRK.no"
 
 #: src/plug/Widgets/InternetBox.vala:100
 msgid "Invalid URL"
-msgstr ""
+msgstr "Ugyldig nettadresse"
 
 #: src/plug/Widgets/GeneralBox.vala:62
 msgid "Allow this user to:"
-msgstr ""
+msgstr "Tillat denne brukaren å:"
 
 #: src/plug/Widgets/GeneralBox.vala:65
 msgid "Modify the dock"
-msgstr ""
+msgstr "Modifiser dokken"
 
 #: src/plug/Widgets/GeneralBox.vala:68
 msgid "Configure printing"
-msgstr ""
+msgstr "Sett opp utskriftsinnstillingar"
 
 #. Temporarily disabled for beta release
 #: src/plug/Widgets/GeneralBox.vala:84
 msgid "Limit computer use:"
-msgstr ""
+msgstr "Begrens databruk:"
 
 #: src/plug/Widgets/GeneralBox.vala:92
 msgid "On weekdays and weekends"
-msgstr ""
+msgstr "På vekedagar og helgedakar"
 
 #: src/plug/Widgets/GeneralBox.vala:93
 msgid "Only on weekdays"
-msgstr ""
+msgstr "Berre på vekedagar"
 
 #: src/plug/Widgets/GeneralBox.vala:94
 msgid "Only on weekends"
-msgstr ""
+msgstr "Berre på helgedagar"
 
 #: src/plug/Widgets/GeneralBox.vala:104
 msgid "Weekdays"
-msgstr ""
+msgstr "Vekedagar"
 
 #: src/plug/Widgets/GeneralBox.vala:108
 msgid "Weekends"
-msgstr ""
+msgstr "Helgar"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "General"
-msgstr ""
+msgstr "Generelt"
 
 #: src/plug/Widgets/ControlPage.vala:54
 msgid "Internet"
-msgstr ""
+msgstr "Internett"
 
 #: src/plug/Widgets/ControlPage.vala:55
 msgid "Applications"
-msgstr ""
+msgstr "Applikasjonar"
 
 #: src/plug/Widgets/AppsBox.vala:90
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "Hindre %s frå å bruke desse applikasjonane:"
 
 #: src/plug/Widgets/AppsBox.vala:101
 msgid "Add Prevented Apps…"
-msgstr ""
+msgstr "Legg til applikasjonar med avgrensingar…"
 
 #: src/plug/Widgets/AppsBox.vala:105
 msgid "Remove Selected App"
-msgstr ""
+msgstr "Fjern vald applikasjon"
 
 #: src/plug/Widgets/AppsBox.vala:110
 msgid "Clear All"
-msgstr ""
+msgstr "Fjern alt"
 
 #: src/plug/Widgets/AppsBox.vala:133
 msgid "Allow access to these apps with admin permission:"
-msgstr ""
+msgstr "Tillat tilgjenge til desse applikasjonane med administratorrettar:"
 
 #: src/plug/Widgets/AppChooser.vala:71
 msgid "Search Applications"
-msgstr ""
+msgstr "Søk i applikasjonar"
 
 #: src/client/Client.vala:89
 #, c-format
 msgid "This computer will lock after %s."
-msgstr ""
+msgstr "Denne maskina vil verte låst etter %s."
 
 #: src/client/Client.vala:91
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu time"
+msgstr[1] "%lu timar"
 
 #: src/client/Client.vala:93
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu minutt"
+msgstr[1] "%lu minutt"
 
 #: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
-msgstr ""
+msgstr "Sørg for å lukke alle applikasjonar før datamaskina vert låst."
 
 #: src/client/Client.vala:101
 msgid "Time left"
-msgstr ""
+msgstr "Gjenverande tid"
 
 #: src/client/AppUnavailableDialog.vala:27
 msgid "You cannot run this application"
-msgstr ""
+msgstr "Du kan ikkje køyre denne applikasjonen"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You are not permitted to run this application."
-msgstr ""
+msgstr "Du har ikkje rettar til å køyre dette programmet."
