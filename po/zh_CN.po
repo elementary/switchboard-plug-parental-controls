@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-13 17:23-0700\n"
-"PO-Revision-Date: 2018-10-31 01:52+0000\n"
-"Last-Translator: Cleiton Floss <cleitonfloss@gmail.com>\n"
+"PO-Revision-Date: 2019-01-14 13:31+0000\n"
+"Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://weblate.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -29,12 +29,10 @@ msgid "Authentication is required to change parental control settings"
 msgstr "家长控制选项需要管理员权限才能更改"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-#, fuzzy
 msgid "Parental Controls Client"
 msgstr "家长控制"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-#, fuzzy
 msgid "Show parental control restrictions"
 msgstr "管理家长控制选项"
 
@@ -77,17 +75,16 @@ msgid "Configure time limits and restrict application usage"
 msgstr "配置时间限制和应用程序使用权限"
 
 #: src/plug/Plug.vala:182
-#, fuzzy
 msgid "Limit computer use"
-msgstr "限制使用："
+msgstr "限制电脑使用"
 
 #: src/plug/Plug.vala:183
 msgid "Prevent website access"
-msgstr ""
+msgstr "阻止网络访问"
 
 #: src/plug/Plug.vala:184
 msgid "Prevent application access"
-msgstr ""
+msgstr "限制软件使用"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -197,9 +194,9 @@ msgid "Search Applications"
 msgstr "搜索应用程序"
 
 #: src/client/Client.vala:89
-#, fuzzy, c-format
+#, c-format
 msgid "This computer will lock after %s."
-msgstr "计算机将在 %s %s %s 后锁定"
+msgstr "计算机将在 %s 后锁定。"
 
 #: src/client/Client.vala:91
 #, c-format
