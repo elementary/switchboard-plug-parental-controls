@@ -23,64 +23,6 @@
 namespace PC {
     public static Plug plug;
 
-    public class MainBox : Gtk.Box {
-        private Gtk.Stack content;
-        private Widgets.UserListBox list;
-        private Gtk.ScrolledWindow scrolled_window;
-        private Gtk.Grid main_grid;
-        private Gtk.InfoBar infobar;
-
-        public MainBox () {
-            var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
-
-            content = new Gtk.Stack ();
-            content.hexpand = true;
-
-            list = new Widgets.UserListBox ();
-            list.row_activated.connect ((row) => {
-                if (content.get_children ().find (((Widgets.UserItem) row).page) == null) {
-                    content.add (((Widgets.UserItem) row).page);
-                }
-
-                content.visible_child = ((Widgets.UserItem) row).page;
-            });
-
-            scrolled_window = new Gtk.ScrolledWindow (null, null);
-            scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
-            scrolled_window.add (list);
-            scrolled_window.vexpand = true;
-
-            paned.pack1 (scrolled_window, true, true);
-            paned.pack2 (content, true, false);
-            paned.set_position (240);
-
-            var lock_button = new Gtk.LockButton (Utils.get_permission ());
-
-            infobar = new Gtk.InfoBar ();
-
-            var infobar_content = infobar.get_content_area ();
-            var infobar_action_area = (Gtk.Container) infobar.get_action_area ();
-            infobar_content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
-            infobar_action_area.add (lock_button);
-
-            main_grid = new Gtk.Grid ();
-            main_grid.attach (infobar, 0, 1, 1, 1);
-            main_grid.attach (paned, 0, 2, 1, 1);
-
-            var link_button = new Gtk.LinkButton.with_label ("settings://accounts", _("Configure User Accounts"));
-            link_button.halign = Gtk.Align.END;
-            link_button.valign = Gtk.Align.END;
-            link_button.tooltip_text = _("Open Users settings");
-
-            unowned Polkit.Permission permission = Utils.get_permission ();
-            permission.bind_property ("allowed", infobar, "no-show-all", GLib.BindingFlags.SYNC_CREATE);
-            permission.bind_property ("allowed", infobar, "visible", GLib.BindingFlags.SYNC_CREATE|GLib.BindingFlags.INVERT_BOOLEAN);
-
-            this.add (main_grid);
-            this.show_all ();
-        }
-    }
-
     public class Plug : Switchboard.Plug {
         private MainBox? main_box = null;
 
