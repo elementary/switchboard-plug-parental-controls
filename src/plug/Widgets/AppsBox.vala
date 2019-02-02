@@ -22,7 +22,7 @@
 
 namespace PC.Widgets {
     public class AppsBox : Gtk.Grid {
-        private List<AppEntry> entries;
+        private List<PC.Widgets.AppRow> entries;
         private Act.User user;
 
         private Gtk.ListBox list_box;
@@ -31,53 +31,9 @@ namespace PC.Widgets {
         private Gtk.Button remove_button;
         private Gtk.Button clear_button;
 
-        protected class AppEntry : Gtk.ListBoxRow {
-            public signal void deleted ();
-
-            private AppInfo info;
-
-            public AppEntry (AppInfo info) {
-                this.info = info;
-
-                var main_grid = new Gtk.Grid ();
-                main_grid.orientation = Gtk.Orientation.HORIZONTAL;
-
-                main_grid.margin = 6;
-                main_grid.margin_start = 12;
-                main_grid.column_spacing = 12;
-
-                var image = new Gtk.Image.from_gicon (info.get_icon (), Gtk.IconSize.LARGE_TOOLBAR);
-                image.pixel_size = 32;
-                main_grid.add (image);
-
-                unowned string? description = info.get_description ();
-                if (description == null) {
-                    description = "";
-                }
-
-                string markup = Utils.create_markup (info.get_display_name (), description);
-                var label = new Gtk.Label (markup);
-                label.expand = true;
-                label.use_markup = true;
-                label.halign = Gtk.Align.START;
-                label.ellipsize = Pango.EllipsizeMode.END;
-                main_grid.add (label);
-
-                add (main_grid);
-            }
-
-            public AppInfo get_info () {
-                return info;
-            }
-
-            public unowned string get_executable () {
-                return info.get_executable ();
-            }
-        }
-
         public AppsBox (Act.User user) {
             this.user = user;
-            entries = new List<AppEntry> ();
+            entries = new List<PC.Widgets.AppRow> ();
 
             column_spacing = 12;
             row_spacing = 12;
@@ -148,12 +104,12 @@ namespace PC.Widgets {
         }
 
         private void on_remove_button_clicked () {
-            var entry = (AppEntry) list_box.get_selected_row ();
+            var entry = (PC.Widgets.AppRow) list_box.get_selected_row ();
             entry.deleted ();
         }
 
         private void on_clear_button_clicked () {
-            foreach (weak AppEntry entry in entries) {
+            foreach (weak PC.Widgets.AppRow entry in entries) {
                 Idle.add (() => {
                     entry.deleted ();
                     return false;
@@ -166,7 +122,7 @@ namespace PC.Widgets {
                 return;
             }
 
-            var row = new AppEntry (info);
+            var row = new PC.Widgets.AppRow (info);
             row.deleted.connect (on_deleted);
 
             entries.append (row);
@@ -177,7 +133,7 @@ namespace PC.Widgets {
 
         private bool get_info_loaded (AppInfo info) {
             foreach (var entry in entries) {
-                if (entry.get_info ().equal (info)) {
+                if (entry.app_info.equal (info)) {
                     return true;
                 }
             }
@@ -185,7 +141,7 @@ namespace PC.Widgets {
             return false;
         }
 
-        private void on_deleted (AppEntry row) {
+        private void on_deleted (PC.Widgets.AppRow row) {
             entries.remove (row);
             row.destroy ();
             update_targets ();
@@ -208,7 +164,7 @@ namespace PC.Widgets {
 
             string[] targets = {};
             foreach (var entry in entries) {
-                targets += Environment.find_program_in_path (entry.get_executable ());
+                targets += Environment.find_program_in_path (entry.app_info.get_executable ());
             }
 
             Utils.get_api ().set_user_daemon_targets.begin (user.get_user_name (), targets); 
