@@ -63,12 +63,6 @@ namespace PC.Widgets {
         }
 
         construct {
-            modal = true;
-
-            var grid = new Gtk.Grid ();
-            grid.margin = 12;
-            grid.row_spacing = 6;
-
             search_entry = new Gtk.SearchEntry ();
             search_entry.margin_end = 12;
             search_entry.margin_start = 12;
