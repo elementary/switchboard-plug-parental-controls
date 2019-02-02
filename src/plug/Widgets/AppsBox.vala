@@ -22,8 +22,9 @@
 
 namespace PC.Widgets {
     public class AppsBox : Gtk.Grid {
+        public Act.User user { get; construct; }
+
         private List<AppEntry> entries;
-        private Act.User user;
 
         private Gtk.ListBox list_box;
         private AppChooser apps_popover;
@@ -76,7 +77,10 @@ namespace PC.Widgets {
         }
 
         public AppsBox (Act.User user) {
-            this.user = user;
+            Object (user: user);
+        }
+
+        construct {
             entries = new List<AppEntry> ();
 
             column_spacing = 12;
@@ -85,17 +89,15 @@ namespace PC.Widgets {
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.hexpand = scrolled.vexpand = true;
 
-            var header_label = new Gtk.Label (_("Prevent %s from using these apps:").printf (user.get_real_name ()));
+            var header_label = new Granite.HeaderLabel (_("Prevent %s from using these apps:").printf (user.get_real_name ()));
             header_label.margin_start = 12;
             header_label.margin_top = 6;
-            header_label.halign = Gtk.Align.START;
-            header_label.get_style_context ().add_class ("h4");
 
             list_box = new Gtk.ListBox ();
             list_box.row_selected.connect (update_sensitivity);
             scrolled.add (list_box);
 
-            var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            var add_button = new Gtk.Button.from_icon_name ("application-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             add_button.tooltip_text = _("Add Prevented Apps…");
             add_button.clicked.connect (on_add_button_clicked);
 

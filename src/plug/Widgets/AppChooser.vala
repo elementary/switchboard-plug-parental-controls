@@ -60,6 +60,14 @@ namespace PC.Widgets {
 
         public AppChooser (Gtk.Widget widget) {
             Object (relative_to: widget);
+        }
+
+        construct {
+            modal = true;
+
+            var grid = new Gtk.Grid ();
+            grid.margin = 12;
+            grid.row_spacing = 6;
 
             search_entry = new Gtk.SearchEntry ();
             search_entry.margin_end = 12;
