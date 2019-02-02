@@ -61,6 +61,9 @@ namespace PC.Widgets {
 
         public AppChooser (Gtk.Widget widget) {
             Object (relative_to: widget);
+        }
+
+        construct {
             modal = true;
 
             var grid = new Gtk.Grid ();
