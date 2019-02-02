@@ -1,4 +1,5 @@
 plug_files = files(
+    'MainView.vala',
     'Plug.vala',
     'Widgets/WeekSpinBox.vala',
     'Widgets/UserList.vala',
