@@ -24,12 +24,6 @@
 
 namespace PC.Widgets {
     public class UserListBox : Gtk.ListBox {
-        public bool has_users {
-            get {
-                return items.length () > 0;
-            }
-        }
-
         private List<UserItem> items;
 
         construct { 
@@ -62,18 +56,13 @@ namespace PC.Widgets {
                 return;
             }
 
-            bool had_users = has_users;
-
             var page = new ControlPage (user);
             var useritem = new UserItem (page);
 
             items.append (useritem);
             add (useritem);
 
-            if (!had_users) {
-                select_first ();
-                notify_property ("has-users");
-            }
+            select_first ();
 
             useritem.show_all ();
         }
@@ -95,9 +84,6 @@ namespace PC.Widgets {
                     item.page.destroy ();
                     item.destroy ();
                     items.remove (item);
-                    if (!has_users) {
-                        notify_property ("has-users");
-                    }
 
                     break;
                 }
