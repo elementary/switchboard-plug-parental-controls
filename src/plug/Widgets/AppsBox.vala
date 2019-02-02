@@ -97,7 +97,7 @@ namespace PC.Widgets {
             list_box.row_selected.connect (update_sensitivity);
             scrolled.add (list_box);
 
-            var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            var add_button = new Gtk.Button.from_icon_name ("application-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             add_button.tooltip_text = _("Add Prevented Apps…");
             add_button.clicked.connect (on_add_button_clicked);
 
