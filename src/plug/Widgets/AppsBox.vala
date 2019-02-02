@@ -89,11 +89,9 @@ namespace PC.Widgets {
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.hexpand = scrolled.vexpand = true;
 
-            var header_label = new Gtk.Label (_("Prevent %s from using these apps:").printf (user.get_real_name ()));
+            var header_label = new Granite.HeaderLabel (_("Prevent %s from using these apps:").printf (user.get_real_name ()));
             header_label.margin_start = 12;
             header_label.margin_top = 6;
-            header_label.halign = Gtk.Align.START;
-            header_label.get_style_context ().add_class ("h4");
 
             list_box = new Gtk.ListBox ();
             list_box.row_selected.connect (update_sensitivity);
