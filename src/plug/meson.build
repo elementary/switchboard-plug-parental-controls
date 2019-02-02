@@ -8,7 +8,8 @@ plug_files = files(
     'Widgets/GeneralBox.vala',
     'Widgets/ControlPage.vala',
     'Widgets/AppsBox.vala',
-    'Widgets/AppChooser.vala'
+    'Widgets/AppChooser.vala',
+    'Widgets/AppRow.vala'
 )
 
 switchboard_dep = dependency('switchboard-2.0')
