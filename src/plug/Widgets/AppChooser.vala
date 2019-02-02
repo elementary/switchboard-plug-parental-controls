@@ -61,48 +61,43 @@ namespace PC.Widgets {
 
         public AppChooser (Gtk.Widget widget) {
             Object (relative_to: widget);
-            modal = true;
-
-            var grid = new Gtk.Grid ();
-            grid.margin = 12;
-            grid.row_spacing = 6;
 
             search_entry = new Gtk.SearchEntry ();
+            search_entry.margin_end = 12;
+            search_entry.margin_start = 12;
             search_entry.placeholder_text = _("Search Applications");
-            search_entry.search_changed.connect (apply_filter);
-
-            var scrolled = new Gtk.ScrolledWindow (null, null);
-            scrolled.height_request = 200;
-            scrolled.width_request = 250;
-            scrolled.vscrollbar_policy = Gtk.PolicyType.AUTOMATIC;
-            scrolled.shadow_type = Gtk.ShadowType.IN;
 
             listbox = new Gtk.ListBox ();
             listbox.expand = true;
-            listbox.height_request = 250;
-            listbox.width_request = 200;
+            listbox.set_filter_func (filter_function);
             listbox.set_sort_func (sort_function);
-            apply_filter ();
+
+            var scrolled = new Gtk.ScrolledWindow (null, null);
+            scrolled.height_request = 200;
+            scrolled.width_request = 500;
+            scrolled.vscrollbar_policy = Gtk.PolicyType.AUTOMATIC;
             scrolled.add (listbox);
 
-            listbox.row_activated.connect (on_app_selected);
-
-            grid.attach (search_entry, 0, 0, 1, 1);
-            grid.attach (scrolled, 0, 1, 1, 1);
+            var grid = new Gtk.Grid ();
+            grid.margin_top = 12;
+            grid.row_spacing = 6;
+            grid.attach (search_entry, 0, 0);
+            grid.attach (scrolled, 0, 1);
 
             add (grid);
-            grid.show_all ();
 
-            init_list ();
-        }
-
-        private void init_list () {
             foreach (var _info in AppInfo.get_all ()) {
                 if (_info.should_show ()) {
                     var row = new AppRow (_info);
                     listbox.prepend (row);
                 }
             }
+
+            listbox.row_activated.connect (on_app_selected);
+
+            search_entry.search_changed.connect (() => {
+                listbox.invalidate_filter ();
+            });
         }
 
         private int sort_function (Gtk.ListBoxRow first_row, Gtk.ListBoxRow second_row) {
@@ -125,10 +120,6 @@ namespace PC.Widgets {
             var app_row = (AppRow)row.get_child ();
             app_chosen (app_row.info);
             hide ();
-        }
-
-        private void apply_filter () {
-            listbox.set_filter_func (filter_function);
         }
     }
 }
