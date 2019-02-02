@@ -22,8 +22,9 @@
 
 namespace PC.Widgets {
     public class AppsBox : Gtk.Grid {
+        public Act.User user { get; construct; }
+
         private List<AppEntry> entries;
-        private Act.User user;
 
         private Gtk.ListBox list_box;
         private AppChooser apps_popover;
@@ -76,7 +77,10 @@ namespace PC.Widgets {
         }
 
         public AppsBox (Act.User user) {
-            this.user = user;
+            Object (user: user);
+        }
+
+        construct {
             entries = new List<AppEntry> ();
 
             column_spacing = 12;
