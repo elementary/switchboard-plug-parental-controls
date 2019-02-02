@@ -1,6 +1,6 @@
-// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
-/*-
- * Copyright (c) 2015 Adam Bieńkowski (https://launchpad.net/switchboard-plug-parental-controls)
+/*
+ * Copyright 2018 elementary, Inc. (https://elementary.io)
+ *           2015 Adam Bieńkowski
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -20,7 +20,6 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  * Julien Spautz <spautz.julien@gmail.com>
  */
-
 
 namespace PC.Widgets {
     public class AppChooser : Gtk.Popover {
