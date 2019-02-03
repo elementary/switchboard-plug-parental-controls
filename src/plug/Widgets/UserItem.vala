@@ -24,7 +24,7 @@
 
 namespace PC.Widgets {
     public class UserItem : Gtk.ListBoxRow {
-        public ControlPage page;
+        public ControlPage page { get; construct; }
 
         private Gtk.Grid grid;
         private Granite.Widgets.Avatar avatar;
@@ -35,13 +35,12 @@ namespace PC.Widgets {
         public weak Act.User user { public get; private set; }
 
         public UserItem (ControlPage page) {
-            this.page = page;
-            this.user = page.user;
-            user.changed.connect (update_view);
+            Object (page: page);
+        }
 
-            grid = new Gtk.Grid ();
-            grid.margin = 6;
-            grid.column_spacing = 6;
+        construct {
+            user = page.user;
+            user.changed.connect (update_view);
 
             avatar = new Granite.Widgets.Avatar.from_file (user.get_icon_file (), 32);
 
@@ -59,6 +58,9 @@ namespace PC.Widgets {
             master_switch = new Gtk.Switch ();
             master_switch.valign = Gtk.Align.CENTER;
 
+            grid = new Gtk.Grid ();
+            grid.margin = 6;
+            grid.column_spacing = 6;
             grid.attach (avatar, 0, 0, 1, 2);
             grid.attach (full_name_label, 1, 0, 1, 1);
             grid.attach (username_label, 1, 1, 1, 1); 

@@ -22,8 +22,8 @@
 
 namespace PC.Widgets {
     public class AppsBox : Gtk.Grid {
-        private List<AppEntry> entries;
-        private Act.User user;
+        private List<PC.Widgets.AppRow> entries;
+        public Act.User user { get; construct; }
 
         private Gtk.ListBox list_box;
         private AppChooser apps_popover;
@@ -31,53 +31,12 @@ namespace PC.Widgets {
         private Gtk.Button remove_button;
         private Gtk.Button clear_button;
 
-        protected class AppEntry : Gtk.ListBoxRow {
-            public signal void deleted ();
-
-            private AppInfo info;
-
-            public AppEntry (AppInfo info) {
-                this.info = info;
-
-                var main_grid = new Gtk.Grid ();
-                main_grid.orientation = Gtk.Orientation.HORIZONTAL;
-
-                main_grid.margin = 6;
-                main_grid.margin_start = 12;
-                main_grid.column_spacing = 12;
-
-                var image = new Gtk.Image.from_gicon (info.get_icon (), Gtk.IconSize.LARGE_TOOLBAR);
-                image.pixel_size = 32;
-                main_grid.add (image);
-
-                unowned string? description = info.get_description ();
-                if (description == null) {
-                    description = "";
-                }
-
-                string markup = Utils.create_markup (info.get_display_name (), description);
-                var label = new Gtk.Label (markup);
-                label.expand = true;
-                label.use_markup = true;
-                label.halign = Gtk.Align.START;
-                label.ellipsize = Pango.EllipsizeMode.END;
-                main_grid.add (label);
-
-                add (main_grid);
-            }
-
-            public AppInfo get_info () {
-                return info;
-            }
-
-            public unowned string get_executable () {
-                return info.get_executable ();
-            }
+        public AppsBox (Act.User user) {
+            Object (user: user);
         }
 
-        public AppsBox (Act.User user) {
-            this.user = user;
-            entries = new List<AppEntry> ();
+        construct {
+            entries = new List<PC.Widgets.AppRow> ();
 
             column_spacing = 12;
             row_spacing = 12;
@@ -85,17 +44,15 @@ namespace PC.Widgets {
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.hexpand = scrolled.vexpand = true;
 
-            var header_label = new Gtk.Label (_("Prevent %s from using these apps:").printf (user.get_real_name ()));
+            var header_label = new Granite.HeaderLabel (_("Prevent %s from using these apps:").printf (user.get_real_name ()));
             header_label.margin_start = 12;
             header_label.margin_top = 6;
-            header_label.halign = Gtk.Align.START;
-            header_label.get_style_context ().add_class ("h4");
 
             list_box = new Gtk.ListBox ();
             list_box.row_selected.connect (update_sensitivity);
             scrolled.add (list_box);
 
-            var add_button = new Gtk.Button.from_icon_name ("list-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            var add_button = new Gtk.Button.from_icon_name ("application-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
             add_button.tooltip_text = _("Add Prevented Apps…");
             add_button.clicked.connect (on_add_button_clicked);
 
@@ -148,12 +105,12 @@ namespace PC.Widgets {
         }
 
         private void on_remove_button_clicked () {
-            var entry = (AppEntry) list_box.get_selected_row ();
+            var entry = (PC.Widgets.AppRow) list_box.get_selected_row ();
             entry.deleted ();
         }
 
         private void on_clear_button_clicked () {
-            foreach (weak AppEntry entry in entries) {
+            foreach (weak PC.Widgets.AppRow entry in entries) {
                 Idle.add (() => {
                     entry.deleted ();
                     return false;
@@ -166,7 +123,7 @@ namespace PC.Widgets {
                 return;
             }
 
-            var row = new AppEntry (info);
+            var row = new PC.Widgets.AppRow (info);
             row.deleted.connect (on_deleted);
 
             entries.append (row);
@@ -177,7 +134,7 @@ namespace PC.Widgets {
 
         private bool get_info_loaded (AppInfo info) {
             foreach (var entry in entries) {
-                if (entry.get_info ().equal (info)) {
+                if (entry.app_info.equal (info)) {
                     return true;
                 }
             }
@@ -185,7 +142,7 @@ namespace PC.Widgets {
             return false;
         }
 
-        private void on_deleted (AppEntry row) {
+        private void on_deleted (PC.Widgets.AppRow row) {
             entries.remove (row);
             row.destroy ();
             update_targets ();
@@ -208,7 +165,7 @@ namespace PC.Widgets {
 
             string[] targets = {};
             foreach (var entry in entries) {
-                targets += Environment.find_program_in_path (entry.get_executable ());
+                targets += Environment.find_program_in_path (entry.app_info.get_executable ());
             }
 
             Utils.get_api ().set_user_daemon_targets.begin (user.get_user_name (), targets); 
