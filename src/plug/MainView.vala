@@ -63,11 +63,6 @@ public class PC.MainBox : Gtk.Box {
         main_grid.attach (infobar, 0, 1, 1, 1);
         main_grid.attach (paned, 0, 2, 1, 1);
 
-        var link_button = new Gtk.LinkButton.with_label ("settings://accounts", _("Configure User Accounts"));
-        link_button.halign = Gtk.Align.END;
-        link_button.valign = Gtk.Align.END;
-        link_button.tooltip_text = _("Open Users settings");
-
         unowned Polkit.Permission permission = Utils.get_permission ();
         permission.bind_property ("allowed", infobar, "no-show-all", GLib.BindingFlags.SYNC_CREATE);
         permission.bind_property ("allowed", infobar, "visible", GLib.BindingFlags.SYNC_CREATE|GLib.BindingFlags.INVERT_BOOLEAN);
