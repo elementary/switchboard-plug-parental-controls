@@ -20,20 +20,19 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace PC.Client {
-    public class AppUnavailableDialog : Gtk.MessageDialog {
-        public AppUnavailableDialog () {
-            deletable = false;
-            text = _("You cannot run this application");
-            secondary_text = _("You are not permitted to run this application.");
-            response.connect (() => {
-                destroy ();
-            });
-        }
+public class PC.Client.AppUnavailableDialog : Granite.MessageDialog {
+    public AppUnavailableDialog () {
+        Object (
+            image_icon: new ThemedIcon ("prefences-system-parental-controls"),
+            primary_text: _("You cannot run this application"),
+            secondary_text: _("You are not permitted to run this application."),
+            buttons: Gtk.ButtonsType.CLOSE
+        );
+    }
 
-        construct {
-            buttons = Gtk.ButtonsType.CLOSE;
-            message_type = Gtk.MessageType.ERROR;
-        }
+    construct {
+        response.connect (() => {
+            destroy ();
+        });
     }
 }
