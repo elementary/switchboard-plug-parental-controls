@@ -1,5 +1,5 @@
 [Desktop Entry]
-Name=Parental Controls Client
+Name=Parental Controls Agent
 Exec=@CLIENT_PATH@
 Comment=Show parental control restrictions
 Icon=preferences-system-parental-controls

@@ -27,8 +27,8 @@ configure_file(
 )
 
 configure_file(
-    input: 'pantheon-parental-controls-client.desktop.in',
-    output: 'pantheon-parental-controls-client.desktop',
+    input: 'io.elementary.desktop.agent-parental-controls.desktop.in',
+    output: 'io.elementary.desktop.agent-parental-controls.desktop',
     configuration: configuration_data,
     install_dir: join_paths(get_option('datadir'), 'applications')
 )

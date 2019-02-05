@@ -1,5 +1,5 @@
 
 subdir('common')
-subdir('client')
+subdir('agent')
 subdir('daemon')
 subdir('plug')

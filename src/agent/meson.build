@@ -1,5 +1,5 @@
 client_files = files(
-    'Client.vala',
+    'Agent.vala',
     'AppUnavailableDialog.vala'
 )
 

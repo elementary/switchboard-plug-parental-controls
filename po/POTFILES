@@ -1,5 +1,5 @@
 data/org.pantheon.switchboard.parental-controls.policy.in
-data/pantheon-parental-controls-client.desktop.in
+data/io.elementary.desktop.agent-parental-controls.desktop.in
 src/plug/MainView.vala
 src/plug/Plug.vala
 src/plug/Widgets/WeekSpinBox.vala
@@ -10,8 +10,8 @@ src/plug/Widgets/GeneralBox.vala
 src/plug/Widgets/ControlPage.vala
 src/plug/Widgets/AppsBox.vala
 src/plug/Widgets/AppChooser.vala
-src/client/Client.vala
-src/client/AppUnavailableDialog.vala
+src/agent/Agent.vala
+src/agent/AppUnavailableDialog.vala
 src/daemon/UserConfig.vala
 src/daemon/SessionManager.vala
 src/daemon/SessionHandler.vala
