@@ -1,6 +1,6 @@
-// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
-/*-
- * Copyright (c) 2015 Adam Bieńkowski (https://launchpad.net/switchboard-plug-parental-controls)
+/*
+ * Copyright 2019 elementary, Inc. (https://elementary.io)
+ *           2015 Adam Bieńkowski (https://launchpad.net/switchboard-plug-parental-controls)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -20,52 +20,47 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace PC {
-    public static Plug plug;
+public class PC.Plug : Switchboard.Plug {
+    private MainBox? main_box = null;
 
-    public class Plug : Switchboard.Plug {
-        private MainBox? main_box = null;
-
-        public Plug () {
+    public Plug () {
         var settings = new Gee.TreeMap<string, string?> (null, null);
         settings.set ("parental-controls", null);
-            Object (category: Category.SYSTEM,
-                    code_name: "pantheon-parental-controls",
-                    display_name: _("Parental Control"),
-                    description: _("Configure time limits and restrict application usage"),
-                    icon: "preferences-system-parental-controls",
-                    supported_settings: settings);
-            plug = this;
+
+        Object (
+            category: Category.SYSTEM,
+            code_name: "pantheon-parental-controls",
+            display_name: _("Parental Control"),
+            description: _("Configure time limits and restrict application usage"),
+            icon: "preferences-system-parental-controls",
+            supported_settings: settings
+        );
+    }
+
+    public override Gtk.Widget get_widget () {
+        if (main_box == null) {
+            main_box = new MainBox ();
         }
 
-        public override Gtk.Widget get_widget () {
-            if (main_box == null) {
-                main_box = new MainBox ();
-            }
+        return main_box;
+    }
 
-            return main_box;
-        }
+    public override void shown () {
+    }
 
-        public override void shown () {
+    public override void hidden () {
+    }
 
-        }
+    public override void search_callback (string location) {
+    }
 
-        public override void hidden () {
-
-        }
-
-        public override void search_callback (string location) {
-
-        }
-
-        // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
-        public override async Gee.TreeMap<string, string> search (string search) {
-            var search_results = new Gee.TreeMap<string, string> ((GLib.CompareDataFunc<string>)strcmp, (Gee.EqualDataFunc<string>)str_equal);
-            search_results.set ("%s → %s".printf (display_name, _("Limit computer use")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Prevent website access")), "");
-            search_results.set ("%s → %s".printf (display_name, _("Prevent application access")), "");
-            return search_results;
-        }
+    // 'search' returns results like ("Keyboard → Behavior → Duration", "keyboard<sep>behavior")
+    public override async Gee.TreeMap<string, string> search (string search) {
+        var search_results = new Gee.TreeMap<string, string> ((GLib.CompareDataFunc<string>)strcmp, (Gee.EqualDataFunc<string>)str_equal);
+        search_results.set ("%s → %s".printf (display_name, _("Limit computer use")), "");
+        search_results.set ("%s → %s".printf (display_name, _("Prevent website access")), "");
+        search_results.set ("%s → %s".printf (display_name, _("Prevent application access")), "");
+        return search_results;
     }
 }
 
