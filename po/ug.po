@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:23-0700\n"
+"POT-Creation-Date: 2019-02-06 14:01-0800\n"
 "PO-Revision-Date: 2017-01-03 04:07+0000\n"
 "Last-Translator: Cody Garver <cody@elementaryos.org>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -43,15 +43,15 @@ msgstr "چوڭلارنىڭ باشقۇرۇش كونترول تەڭشەكلىرى"
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/Plug.vala:71
+#: src/plug/MainView.vala:63
 msgid "Some settings require administrator rights to be changed"
 msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى زۆرۈش"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid "No users to edit"
 msgstr "تەھرىرلىيەلەيدىغان ھىساۋات يوق"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -63,34 +63,96 @@ msgstr ""
 "ئابونت ھىساۋات تاختىسىدا ئابونتلارنىڭ ھىساۋات تۈرىنى \"باشقۇرغۇچى\" لىقتىن "
 "\"ئادەتتىكى\" گە ئۆزگەرتەلەيسىز."
 
-#: src/plug/Plug.vala:83
+#: src/plug/MainView.vala:73
 msgid "Configure User Accounts"
 msgstr "ئابونت ھىساۋاتلىرىنى تەڭشەش"
 
-#: src/plug/Plug.vala:86
+#: src/plug/MainView.vala:76
 msgid "Open Users settings"
 msgstr "ئابونت تەڭشەكلىرىنى ئىچىش"
 
-#: src/plug/Plug.vala:152
+#: src/plug/Plug.vala:33
 msgid "Parental Control"
 msgstr "چوڭلار تەڭشەكلىرى"
 
-#: src/plug/Plug.vala:153
+#: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
 msgstr "ۋاقىت چەكلىمىسى ۋە ئەپلەرنىڭ ئىشلىتىش ھوقۇقىنى تەڭشەش"
 
-#: src/plug/Plug.vala:182
+#: src/plug/Plug.vala:60
 #, fuzzy
 msgid "Limit computer use"
 msgstr "كومپىيۇتىر ئىشلىتىشكە چەكلىمىسى:"
 
-#: src/plug/Plug.vala:183
+#: src/plug/Plug.vala:61
 msgid "Prevent website access"
 msgstr ""
 
-#: src/plug/Plug.vala:184
+#: src/plug/Plug.vala:62
 msgid "Prevent application access"
 msgstr ""
+
+#: src/plug/Views/AppsView.vala:47
+#, c-format
+msgid "Prevent %s from using these apps:"
+msgstr "%s نى بۇ ئەپلەرنى ئىشلىتىشتىن چەكلەش："
+
+#: src/plug/Views/AppsView.vala:56
+msgid "Add Prevented Apps…"
+msgstr "چەكلەنگەن ئەپلەرنى قىتىش...."
+
+#: src/plug/Views/AppsView.vala:60
+msgid "Remove Selected App"
+msgstr "تاللانغان ئەپلەرنى ئۆچۈرۈش"
+
+#: src/plug/Views/AppsView.vala:65
+msgid "Clear All"
+msgstr "ھەممىسىنى قۇرۇقداش"
+
+#: src/plug/Views/AppsView.vala:88
+msgid "Allow access to these apps with admin permission:"
+msgstr "باشقۇرغۇچىلىق سالاھىيىتى بىلەن بۇ ئەپلەرنى زىيارەت قىلىشقا يول قويۇش:"
+
+#: src/plug/Views/TimeLimitView.vala:57
+msgid "Limit computer use:"
+msgstr "كومپىيۇتىر ئىشلىتىشكە چەكلىمىسى:"
+
+#: src/plug/Views/TimeLimitView.vala:65
+msgid "On weekdays and weekends"
+msgstr "خىزمەت كۈنى ۋە ھەپتە ئاخىرىدا"
+
+#: src/plug/Views/TimeLimitView.vala:66
+msgid "Only on weekdays"
+msgstr "پەقەت خىزمەت كۈنلىرىدىلا"
+
+#: src/plug/Views/TimeLimitView.vala:67
+msgid "Only on weekends"
+msgstr "پەقەت ھەپتە ئاخىرىدىلا"
+
+#: src/plug/Views/TimeLimitView.vala:77
+msgid "Weekdays"
+msgstr "خىزمەت كۈنلىرى"
+
+#: src/plug/Views/TimeLimitView.vala:81
+msgid "Weekends"
+msgstr "ھەپتە ئاخىرى"
+
+#: src/plug/Views/InternetView.vala:73
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "%s نى بۇ توربىكەتلەرنى زىيارەت قىلىشتىن چەكلەش:"
+
+#: src/plug/Views/InternetView.vala:86
+msgid "Add URL"
+msgstr "تور ئادىرىسى قىتىش"
+
+#: src/plug/Views/InternetView.vala:95
+msgid "Add a new URL, for example: google.com"
+msgstr "يىڭى تورئادىرىسى قىتىش، مەسىلەن:google.com"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Invalid URL"
+msgstr "ئىناۋەتسىز تورئادىرىسى"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -100,102 +162,28 @@ msgstr "دىن"
 msgid "To:"
 msgstr "گىچە"
 
-#: src/plug/Widgets/UserList.vala:42
+#: src/plug/Widgets/UserList.vala:43
 msgid "My Account"
 msgstr "ھىساۋاتىم"
 
-#: src/plug/Widgets/UserList.vala:46
+#: src/plug/Widgets/UserList.vala:47
 msgid "Other Accounts"
 msgstr "باشقا ھىساۋاتلار"
 
-#: src/plug/Widgets/InternetBox.vala:77
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "%s نى بۇ توربىكەتلەرنى زىيارەت قىلىشتىن چەكلەش:"
+#: src/plug/Widgets/ControlPage.vala:51
+#, fuzzy
+msgid "Time Limits"
+msgstr "قالغان ۋاقىت"
 
-#: src/plug/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr "تور ئادىرىسى قىتىش"
-
-#: src/plug/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr "يىڭى تورئادىرىسى قىتىش، مەسىلەن:google.com"
-
-#: src/plug/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr "ئىناۋەتسىز تورئادىرىسى"
-
-#: src/plug/Widgets/GeneralBox.vala:62
-msgid "Allow this user to:"
-msgstr "بۇ ئابونتنىڭ تۆۋەندىكى مەشغۇلاتىغا يول قويۇش:"
-
-#: src/plug/Widgets/GeneralBox.vala:65
-msgid "Modify the dock"
-msgstr "dock نى ئۆزگەرتىش"
-
-#: src/plug/Widgets/GeneralBox.vala:68
-msgid "Configure printing"
-msgstr "بىسىشنى تەڭشەش"
-
-#. Temporarily disabled for beta release
-#: src/plug/Widgets/GeneralBox.vala:84
-msgid "Limit computer use:"
-msgstr "كومپىيۇتىر ئىشلىتىشكە چەكلىمىسى:"
-
-#: src/plug/Widgets/GeneralBox.vala:92
-msgid "On weekdays and weekends"
-msgstr "خىزمەت كۈنى ۋە ھەپتە ئاخىرىدا"
-
-#: src/plug/Widgets/GeneralBox.vala:93
-msgid "Only on weekdays"
-msgstr "پەقەت خىزمەت كۈنلىرىدىلا"
-
-#: src/plug/Widgets/GeneralBox.vala:94
-msgid "Only on weekends"
-msgstr "پەقەت ھەپتە ئاخىرىدىلا"
-
-#: src/plug/Widgets/GeneralBox.vala:104
-msgid "Weekdays"
-msgstr "خىزمەت كۈنلىرى"
-
-#: src/plug/Widgets/GeneralBox.vala:108
-msgid "Weekends"
-msgstr "ھەپتە ئاخىرى"
-
-#: src/plug/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "ئادەتتىكى تەڭشەكلەر"
-
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
 msgstr "ئېنتىرنىت"
 
-#: src/plug/Widgets/ControlPage.vala:55
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Applications"
 msgstr "ئەپلەر"
 
-#: src/plug/Widgets/AppsBox.vala:90
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "%s نى بۇ ئەپلەرنى ئىشلىتىشتىن چەكلەش："
-
-#: src/plug/Widgets/AppsBox.vala:101
-msgid "Add Prevented Apps…"
-msgstr "چەكلەنگەن ئەپلەرنى قىتىش...."
-
-#: src/plug/Widgets/AppsBox.vala:105
-msgid "Remove Selected App"
-msgstr "تاللانغان ئەپلەرنى ئۆچۈرۈش"
-
-#: src/plug/Widgets/AppsBox.vala:110
-msgid "Clear All"
-msgstr "ھەممىسىنى قۇرۇقداش"
-
-#: src/plug/Widgets/AppsBox.vala:133
-msgid "Allow access to these apps with admin permission:"
-msgstr "باشقۇرغۇچىلىق سالاھىيىتى بىلەن بۇ ئەپلەرنى زىيارەت قىلىشقا يول قويۇش:"
-
-#: src/plug/Widgets/AppChooser.vala:71
+#: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "ئەپ ئىزدەش"
 
@@ -227,10 +215,22 @@ msgstr "كومپىيۇتىرىڭىزنى قۇلۇپلاشتىن بۇرۇن با�
 msgid "Time left"
 msgstr "قالغان ۋاقىت"
 
-#: src/client/AppUnavailableDialog.vala:27
+#: src/client/AppUnavailableDialog.vala:28
 msgid "You cannot run this application"
 msgstr "سىز بۇ ئەپنى ئىجرا قىلالمايسىز"
 
-#: src/client/AppUnavailableDialog.vala:28
+#: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "سىزنىڭ بۇ ئەپنى ئىجرا قىلىش ھوقۇقىڭىز يوق."
+
+#~ msgid "Allow this user to:"
+#~ msgstr "بۇ ئابونتنىڭ تۆۋەندىكى مەشغۇلاتىغا يول قويۇش:"
+
+#~ msgid "Modify the dock"
+#~ msgstr "dock نى ئۆزگەرتىش"
+
+#~ msgid "Configure printing"
+#~ msgstr "بىسىشنى تەڭشەش"
+
+#~ msgid "General"
+#~ msgstr "ئادەتتىكى تەڭشەكلەر"

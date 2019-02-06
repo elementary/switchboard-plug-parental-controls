@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:23-0700\n"
+"POT-Creation-Date: 2019-02-06 14:01-0800\n"
 "PO-Revision-Date: 2017-05-23 12:23+0000\n"
 "Last-Translator: Sergiu Pruteanu <sergiup26@gmail.com>\n"
 "Language-Team: Romanian <https://l10n.elementary.io/projects/switchboard/"
@@ -44,16 +44,16 @@ msgstr "Administrează setările controlului parental"
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/Plug.vala:71
+#: src/plug/MainView.vala:63
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Anumite setări necesită drepturi de administrator pentru a fi schimbate"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid "No users to edit"
 msgstr "Nici un utilizator de modificat"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -65,34 +65,96 @@ msgstr ""
 "Poţi schimba un tip de cont din \"Administrator\" in \"Standard\" în panoul "
 "conturi utilizator."
 
-#: src/plug/Plug.vala:83
+#: src/plug/MainView.vala:73
 msgid "Configure User Accounts"
 msgstr "Configură conturi utilizator"
 
-#: src/plug/Plug.vala:86
+#: src/plug/MainView.vala:76
 msgid "Open Users settings"
 msgstr "Deschide setări utilizator"
 
-#: src/plug/Plug.vala:152
+#: src/plug/Plug.vala:33
 msgid "Parental Control"
 msgstr "Control parental"
 
-#: src/plug/Plug.vala:153
+#: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
 msgstr "Configură timpul limită şi restricţionează folosirea aplicaţiilor"
 
-#: src/plug/Plug.vala:182
+#: src/plug/Plug.vala:60
 #, fuzzy
 msgid "Limit computer use"
 msgstr "Limitează folosirea calculatorului:"
 
-#: src/plug/Plug.vala:183
+#: src/plug/Plug.vala:61
 msgid "Prevent website access"
 msgstr ""
 
-#: src/plug/Plug.vala:184
+#: src/plug/Plug.vala:62
 msgid "Prevent application access"
 msgstr ""
+
+#: src/plug/Views/AppsView.vala:47
+#, c-format
+msgid "Prevent %s from using these apps:"
+msgstr "Impiedică %s să folosească aceste aplicaţii"
+
+#: src/plug/Views/AppsView.vala:56
+msgid "Add Prevented Apps…"
+msgstr "Adaugă aplicaţii blocate..."
+
+#: src/plug/Views/AppsView.vala:60
+msgid "Remove Selected App"
+msgstr "Indepărtează aplicaţiile selectate"
+
+#: src/plug/Views/AppsView.vala:65
+msgid "Clear All"
+msgstr "Curăță tot"
+
+#: src/plug/Views/AppsView.vala:88
+msgid "Allow access to these apps with admin permission:"
+msgstr "Permite accesul la aceste aplicaţii cu drepturi de administrator:"
+
+#: src/plug/Views/TimeLimitView.vala:57
+msgid "Limit computer use:"
+msgstr "Limitează folosirea calculatorului:"
+
+#: src/plug/Views/TimeLimitView.vala:65
+msgid "On weekdays and weekends"
+msgstr "In zilele săptămânii si weekenduri"
+
+#: src/plug/Views/TimeLimitView.vala:66
+msgid "Only on weekdays"
+msgstr "Doar în zilele săptămânii"
+
+#: src/plug/Views/TimeLimitView.vala:67
+msgid "Only on weekends"
+msgstr "Doar în weekend"
+
+#: src/plug/Views/TimeLimitView.vala:77
+msgid "Weekdays"
+msgstr "Zilele săptămânii"
+
+#: src/plug/Views/TimeLimitView.vala:81
+msgid "Weekends"
+msgstr "Weekenduri"
+
+#: src/plug/Views/InternetView.vala:73
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Impiedică %s să viziteze aceste pagini web:"
+
+#: src/plug/Views/InternetView.vala:86
+msgid "Add URL"
+msgstr "Adaugă URL"
+
+#: src/plug/Views/InternetView.vala:95
+msgid "Add a new URL, for example: google.com"
+msgstr "Adaugă un URL nou, de exemplu: google.com"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Invalid URL"
+msgstr "URL invalid"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -102,102 +164,28 @@ msgstr "De la:"
 msgid "To:"
 msgstr "Pâna la:"
 
-#: src/plug/Widgets/UserList.vala:42
+#: src/plug/Widgets/UserList.vala:43
 msgid "My Account"
 msgstr "Contul meu"
 
-#: src/plug/Widgets/UserList.vala:46
+#: src/plug/Widgets/UserList.vala:47
 msgid "Other Accounts"
 msgstr "Alte conturi"
 
-#: src/plug/Widgets/InternetBox.vala:77
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Impiedică %s să viziteze aceste pagini web:"
+#: src/plug/Widgets/ControlPage.vala:51
+#, fuzzy
+msgid "Time Limits"
+msgstr "Timp rămas"
 
-#: src/plug/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr "Adaugă URL"
-
-#: src/plug/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr "Adaugă un URL nou, de exemplu: google.com"
-
-#: src/plug/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr "URL invalid"
-
-#: src/plug/Widgets/GeneralBox.vala:62
-msgid "Allow this user to:"
-msgstr "Permite acestui utilizator să:"
-
-#: src/plug/Widgets/GeneralBox.vala:65
-msgid "Modify the dock"
-msgstr "Modifică andocarea"
-
-#: src/plug/Widgets/GeneralBox.vala:68
-msgid "Configure printing"
-msgstr "Configurează imprimarea"
-
-#. Temporarily disabled for beta release
-#: src/plug/Widgets/GeneralBox.vala:84
-msgid "Limit computer use:"
-msgstr "Limitează folosirea calculatorului:"
-
-#: src/plug/Widgets/GeneralBox.vala:92
-msgid "On weekdays and weekends"
-msgstr "In zilele săptămânii si weekenduri"
-
-#: src/plug/Widgets/GeneralBox.vala:93
-msgid "Only on weekdays"
-msgstr "Doar în zilele săptămânii"
-
-#: src/plug/Widgets/GeneralBox.vala:94
-msgid "Only on weekends"
-msgstr "Doar în weekend"
-
-#: src/plug/Widgets/GeneralBox.vala:104
-msgid "Weekdays"
-msgstr "Zilele săptămânii"
-
-#: src/plug/Widgets/GeneralBox.vala:108
-msgid "Weekends"
-msgstr "Weekenduri"
-
-#: src/plug/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "General"
-
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:55
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Applications"
 msgstr "Aplicaţii"
 
-#: src/plug/Widgets/AppsBox.vala:90
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Impiedică %s să folosească aceste aplicaţii"
-
-#: src/plug/Widgets/AppsBox.vala:101
-msgid "Add Prevented Apps…"
-msgstr "Adaugă aplicaţii blocate..."
-
-#: src/plug/Widgets/AppsBox.vala:105
-msgid "Remove Selected App"
-msgstr "Indepărtează aplicaţiile selectate"
-
-#: src/plug/Widgets/AppsBox.vala:110
-msgid "Clear All"
-msgstr "Curăță tot"
-
-#: src/plug/Widgets/AppsBox.vala:133
-msgid "Allow access to these apps with admin permission:"
-msgstr "Permite accesul la aceste aplicaţii cu drepturi de administrator:"
-
-#: src/plug/Widgets/AppChooser.vala:71
+#: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "Caută aplicaţii"
 
@@ -230,10 +218,22 @@ msgstr ""
 msgid "Time left"
 msgstr "Timp rămas"
 
-#: src/client/AppUnavailableDialog.vala:27
+#: src/client/AppUnavailableDialog.vala:28
 msgid "You cannot run this application"
 msgstr "Nu poţi rula această aplicaţie"
 
-#: src/client/AppUnavailableDialog.vala:28
+#: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Nu ai drepturi să rulezi această aplicaţie."
+
+#~ msgid "Allow this user to:"
+#~ msgstr "Permite acestui utilizator să:"
+
+#~ msgid "Modify the dock"
+#~ msgstr "Modifică andocarea"
+
+#~ msgid "Configure printing"
+#~ msgstr "Configurează imprimarea"
+
+#~ msgid "General"
+#~ msgstr "General"
