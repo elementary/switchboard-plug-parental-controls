@@ -24,7 +24,7 @@ namespace PC.Widgets {
     public class ControlPage : Gtk.Box {
         public weak Act.User user { get; construct; }
         public Gtk.Stack stack;
-        private GeneralBox general_box;
+        private TimeLimitView time_limit_view;
 
         public ControlPage (Act.User user) {
             Object (user: user);
@@ -38,8 +38,8 @@ namespace PC.Widgets {
             hexpand = true;
             orientation = Gtk.Orientation.VERTICAL;
 
-            general_box = new GeneralBox (user);
-            general_box.expand = true;
+            time_limit_view = new TimeLimitView (user);
+            time_limit_view.expand = true;
 
             var internet_box = new InternetBox (user);
             internet_box.expand = true;
@@ -48,11 +48,11 @@ namespace PC.Widgets {
             apps_box.expand = true;
 
             stack = new Gtk.Stack ();
-            stack.add_titled (general_box, "general", _("General"));
+            stack.add_titled (time_limit_view, "general", _("Time Limits"));
             stack.add_titled (internet_box, "internet", _("Internet"));
             stack.add_titled (apps_box, "apps", _("Applications"));
 
-            permission.bind_property ("allowed", general_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+            permission.bind_property ("allowed", time_limit_view, "sensitive", GLib.BindingFlags.SYNC_CREATE);
             permission.bind_property ("allowed", internet_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
             permission.bind_property ("allowed", apps_box, "sensitive", GLib.BindingFlags.SYNC_CREATE);
 
@@ -72,11 +72,11 @@ namespace PC.Widgets {
             if (permission.allowed) {
                 Utils.get_api ().set_user_daemon_active.begin (user.get_user_name (), active);
                 if (active) {
-                    general_box.refresh ();
-                    general_box.update_pam ();
+                    time_limit_view.refresh ();
+                    time_limit_view.update_pam ();
                 } else {
-                    general_box.set_lock_dock_active (false);
-                    general_box.set_printer_active (true);
+                    time_limit_view.set_lock_dock_active (false);
+                    time_limit_view.set_printer_active (true);
                     Utils.get_api ().remove_restriction_for_user.begin (user.get_user_name ());
                 }
             }  
