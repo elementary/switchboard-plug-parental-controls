@@ -21,7 +21,7 @@
  */
 
 namespace PC.Widgets {
-    public class GeneralBox : Gtk.Grid {
+    public class TimeLimitView : Gtk.Grid {
         private string plank_conf_file_path = "";
         public weak Act.User user { get; construct; }
         private Gtk.Switch limit_switch;
@@ -34,7 +34,7 @@ namespace PC.Widgets {
         private WeekSpinBox weekday_box;
         private WeekSpinBox weekend_box;
 
-        public GeneralBox (Act.User user) {
+        public TimeLimitView (Act.User user) {
             Object (user: user);
             plank_conf_file_path = Path.build_filename (user.get_home_dir (), Constants.PLANK_CONF_DIR);
 
