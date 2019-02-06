@@ -2,7 +2,7 @@ plug_files = files(
     'MainView.vala',
     'Plug.vala',
     'Views/AppsView.vala',
-    'Views/GeneralView.vala',
+    'Views/TimeLimitView.vala',
     'Views/InternetView.vala',
     'Widgets/WeekSpinBox.vala',
     'Widgets/UserList.vala',

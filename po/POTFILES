@@ -3,7 +3,7 @@ data/pantheon-parental-controls-client.desktop.in
 src/plug/MainView.vala
 src/plug/Plug.vala
 src/plug/Views/AppsView.vala
-src/plug/Views/GeneralView.vala
+src/plug/Views/TimeLimitView.vala
 src/plug/Views/InternetView.vala
 src/plug/Widgets/WeekSpinBox.vala
 src/plug/Widgets/UserList.vala
