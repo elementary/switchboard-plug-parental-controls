@@ -24,8 +24,6 @@ namespace PC.Widgets {
     public class GeneralBox : Gtk.Grid {
         private string plank_conf_file_path = "";
         public weak Act.User user { get; construct; }
-        private Gtk.CheckButton dock_btn;
-        private Gtk.CheckButton print_btn;
         private Gtk.Switch limit_switch;
         private Gtk.ComboBoxText limit_combobox;
 
@@ -39,9 +37,6 @@ namespace PC.Widgets {
         public GeneralBox (Act.User user) {
             Object (user: user);
             plank_conf_file_path = Path.build_filename (user.get_home_dir (), Constants.PLANK_CONF_DIR);
-
-            dock_btn.notify["active"].connect (on_dock_btn_activate);
-            print_btn.notify["active"].connect (on_print_conf_activate);
 
             limit_switch.notify["active"].connect (on_limit_switch_changed);
             limit_switch.bind_property ("active", limit_combobox, "sensitive", GLib.BindingFlags.SYNC_CREATE);
@@ -58,28 +53,6 @@ namespace PC.Widgets {
         construct {
             column_spacing = 12;
             row_spacing = 6;
-
-            var main_label = new Gtk.Label (_("Allow this user to:"));
-            main_label.halign = Gtk.Align.END;
-
-            dock_btn = new Gtk.CheckButton.with_label (_("Modify the dock"));
-            dock_btn.halign = Gtk.Align.START;
-
-            print_btn = new Gtk.CheckButton.with_label (_("Configure printing"));
-            print_btn.halign = Gtk.Align.START;
-            print_btn.margin_bottom = 18;
-
-            // Temporarily disabled for beta release
-            // Remove after both options are finished
-            main_label.no_show_all = true;
-            main_label.visible = false;
-
-            dock_btn.no_show_all = true;
-            dock_btn.visible = false;
-
-            print_btn.no_show_all = true;
-            print_btn.visible = false;
-            // Temporarily disabled for beta release
 
             var limit_method_label = new Gtk.Label (_("Limit computer use:"));
             limit_method_label.halign = Gtk.Align.END;
@@ -114,24 +87,14 @@ namespace PC.Widgets {
             frame_box.add (weekend_box);
             frame.add (frame_box);
 
-            attach (main_label, 0, 0, 1, 1);
-            attach (dock_btn, 1, 0, 2, 1);
-            attach (print_btn, 1, 1, 2, 1);
-            attach (limit_method_label, 0, 2, 1, 1);
-            attach (limit_switch, 1, 2, 1, 1);
-            attach (limit_combobox, 2, 2, 1, 1);
-            attach (frame, 0, 3, 3, 1);
+            attach (limit_method_label, 0, 0);
+            attach (limit_switch, 1, 0);
+            attach (limit_combobox, 2, 0);
+            attach (frame, 0, 1, 3, 1);
             show_all ();
         }
 
-        public void refresh () {
-            on_dock_btn_activate ();
-            on_print_conf_activate ();
-        }
-
         public void reset () {
-            dock_btn.active = true;
-            print_btn.active = true;
             limit_switch.active = false;
         }
 
@@ -186,41 +149,6 @@ namespace PC.Widgets {
             Utils.get_api ().add_restriction_for_user.begin (input, true);
         }
 
-        private void on_dock_btn_activate () {
-            set_lock_dock_active (!dock_btn.get_active ());
-        }
-
-        public void set_lock_dock_active (bool active) {
-            if (Utils.get_permission ().get_allowed ()) {
-                Utils.get_api ().lock_dock_icons_for_user.begin (user.get_user_name (), active);
-            }
-        }
-
-        private void on_print_conf_activate () {
-            set_printer_active (print_btn.get_active ());
-        }
-
-        public void set_printer_active (bool active) {
-            string[] users = { user.get_user_name () };
-
-            try {
-                CupsPkHelper? helper = Bus.get_proxy_sync (BusType.SYSTEM, Constants.CUPS_PK_HELPER_IFACE, "/");
-                if (helper == null) {
-                    return;
-                }
-
-                foreach (unowned string printer in get_printers ()) {
-                    if (active) {
-                        helper.printer_set_users_allowed (printer, users);
-                    } else {
-                        helper.printer_set_users_denied (printer, users);
-                    }
-                }
-            } catch (Error e) {
-                warning ("%s\n", e.message);
-            } 
-        }  
-
         private void on_limit_switch_changed () {
             if (limit_switch.get_active ()) {
                 update_pam ();
@@ -245,26 +173,5 @@ namespace PC.Widgets {
 
             update_pam ();
         }
-
-        private string[] get_printers () {
-            string[] retval = {};
-            string path = "/etc/cups/ppd";
-            var file = File.new_for_path (path);
-
-            FileInfo info = null;
-            try {
-                var enumerator = file.enumerate_children ("standard::*", FileQueryInfoFlags.NOFOLLOW_SYMLINKS);
-                while ((info = enumerator.next_file ()) != null) {
-                    string printer = info.get_name ().split (".")[0];
-                    if (!(printer in retval)) {
-                        retval += printer;
-                    }
-                }
-            } catch (Error e) {
-                warning ("%s\n", e.message);
-            }
-
-            return retval;
-        }      
     }
 }

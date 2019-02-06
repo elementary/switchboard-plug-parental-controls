@@ -72,11 +72,8 @@ namespace PC.Widgets {
             if (permission.allowed) {
                 Utils.get_api ().set_user_daemon_active.begin (user.get_user_name (), active);
                 if (active) {
-                    general_box.refresh ();
                     general_box.update_pam ();
                 } else {
-                    general_box.set_lock_dock_active (false);
-                    general_box.set_printer_active (true);
                     Utils.get_api ().remove_restriction_for_user.begin (user.get_user_name ());
                 }
             }  
