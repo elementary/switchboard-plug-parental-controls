@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:23-0700\n"
+"POT-Creation-Date: 2019-02-06 14:01-0800\n"
 "PO-Revision-Date: 2018-10-11 12:10+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
@@ -40,15 +40,15 @@ msgstr "הצגת הגבלות בקרת הורים"
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/Plug.vala:71
+#: src/plug/MainView.vala:63
 msgid "Some settings require administrator rights to be changed"
 msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid "No users to edit"
 msgstr "אין משתמשים לעריכה"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -58,33 +58,95 @@ msgstr ""
 "ניתן ליישם בקרת הורים רק עבור משתמשים שאינם בעלי הרשאות מנהל.\n"
 "ניתן לשנות את סוג המשתמש בלוח חשבונות משתמשים."
 
-#: src/plug/Plug.vala:83
+#: src/plug/MainView.vala:73
 msgid "Configure User Accounts"
 msgstr "הגדרת חשבונות משתמשים"
 
-#: src/plug/Plug.vala:86
+#: src/plug/MainView.vala:76
 msgid "Open Users settings"
 msgstr "פתיחת הגדרות משתמשים"
 
-#: src/plug/Plug.vala:152
+#: src/plug/Plug.vala:33
 msgid "Parental Control"
 msgstr "בקרת הורים"
 
-#: src/plug/Plug.vala:153
+#: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
 msgstr "הגדרת מגבלות זמן והגבלת השימוש ביישומים"
 
-#: src/plug/Plug.vala:182
+#: src/plug/Plug.vala:60
 msgid "Limit computer use"
 msgstr "הגבלת השימוש במחשב"
 
-#: src/plug/Plug.vala:183
+#: src/plug/Plug.vala:61
 msgid "Prevent website access"
 msgstr "מניעת כניסה לאתרים"
 
-#: src/plug/Plug.vala:184
+#: src/plug/Plug.vala:62
 msgid "Prevent application access"
 msgstr "מניעת גישה ליישומים"
+
+#: src/plug/Views/AppsView.vala:47
+#, c-format
+msgid "Prevent %s from using these apps:"
+msgstr "%s מנוע מלהשתמש ביישומים אלו:"
+
+#: src/plug/Views/AppsView.vala:56
+msgid "Add Prevented Apps…"
+msgstr "הוספת יישומים לחסימה…"
+
+#: src/plug/Views/AppsView.vala:60
+msgid "Remove Selected App"
+msgstr "הסרת היישום שנבחר"
+
+#: src/plug/Views/AppsView.vala:65
+msgid "Clear All"
+msgstr "ניקוי הכל"
+
+#: src/plug/Views/AppsView.vala:88
+msgid "Allow access to these apps with admin permission:"
+msgstr "מתן אפשרות גישה ליישומים אלו עם הרשאות מנהל:"
+
+#: src/plug/Views/TimeLimitView.vala:57
+msgid "Limit computer use:"
+msgstr "הגבלת השימוש במחשב:"
+
+#: src/plug/Views/TimeLimitView.vala:65
+msgid "On weekdays and weekends"
+msgstr "בימות השבוע ובסופי שבוע"
+
+#: src/plug/Views/TimeLimitView.vala:66
+msgid "Only on weekdays"
+msgstr "בימות השבוע בלבד"
+
+#: src/plug/Views/TimeLimitView.vala:67
+msgid "Only on weekends"
+msgstr "בסופי שבוע בלבד"
+
+#: src/plug/Views/TimeLimitView.vala:77
+msgid "Weekdays"
+msgstr "ימות השבוע"
+
+#: src/plug/Views/TimeLimitView.vala:81
+msgid "Weekends"
+msgstr "סופי שבוע"
+
+#: src/plug/Views/InternetView.vala:73
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "%s מנוע מלבקר באתרי האינטרנט הבאים:"
+
+#: src/plug/Views/InternetView.vala:86
+msgid "Add URL"
+msgstr "הוספת כתובת"
+
+#: src/plug/Views/InternetView.vala:95
+msgid "Add a new URL, for example: google.com"
+msgstr "הוספת כתובת חדשה, לדוגמה: google.com"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Invalid URL"
+msgstr "כתובת לא חוקית"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -94,102 +156,28 @@ msgstr "התחלה:"
 msgid "To:"
 msgstr "סיום:"
 
-#: src/plug/Widgets/UserList.vala:42
+#: src/plug/Widgets/UserList.vala:43
 msgid "My Account"
 msgstr "החשבון שלי"
 
-#: src/plug/Widgets/UserList.vala:46
+#: src/plug/Widgets/UserList.vala:47
 msgid "Other Accounts"
 msgstr "חשבונות אחרים"
 
-#: src/plug/Widgets/InternetBox.vala:77
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "%s מנוע מלבקר באתרי האינטרנט הבאים:"
+#: src/plug/Widgets/ControlPage.vala:51
+#, fuzzy
+msgid "Time Limits"
+msgstr "זמן שנותר"
 
-#: src/plug/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr "הוספת כתובת"
-
-#: src/plug/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr "הוספת כתובת חדשה, לדוגמה: google.com"
-
-#: src/plug/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr "כתובת לא חוקית"
-
-#: src/plug/Widgets/GeneralBox.vala:62
-msgid "Allow this user to:"
-msgstr "מותר למשתמש זה:"
-
-#: src/plug/Widgets/GeneralBox.vala:65
-msgid "Modify the dock"
-msgstr "שינוי המעגן"
-
-#: src/plug/Widgets/GeneralBox.vala:68
-msgid "Configure printing"
-msgstr "הגדרת הדפסה"
-
-#. Temporarily disabled for beta release
-#: src/plug/Widgets/GeneralBox.vala:84
-msgid "Limit computer use:"
-msgstr "הגבלת השימוש במחשב:"
-
-#: src/plug/Widgets/GeneralBox.vala:92
-msgid "On weekdays and weekends"
-msgstr "בימות השבוע ובסופי שבוע"
-
-#: src/plug/Widgets/GeneralBox.vala:93
-msgid "Only on weekdays"
-msgstr "בימות השבוע בלבד"
-
-#: src/plug/Widgets/GeneralBox.vala:94
-msgid "Only on weekends"
-msgstr "בסופי שבוע בלבד"
-
-#: src/plug/Widgets/GeneralBox.vala:104
-msgid "Weekdays"
-msgstr "ימות השבוע"
-
-#: src/plug/Widgets/GeneralBox.vala:108
-msgid "Weekends"
-msgstr "סופי שבוע"
-
-#: src/plug/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "כללי"
-
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
 msgstr "אינטרנט"
 
-#: src/plug/Widgets/ControlPage.vala:55
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Applications"
 msgstr "יישומים"
 
-#: src/plug/Widgets/AppsBox.vala:90
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "%s מנוע מלהשתמש ביישומים אלו:"
-
-#: src/plug/Widgets/AppsBox.vala:101
-msgid "Add Prevented Apps…"
-msgstr "הוספת יישומים לחסימה…"
-
-#: src/plug/Widgets/AppsBox.vala:105
-msgid "Remove Selected App"
-msgstr "הסרת היישום שנבחר"
-
-#: src/plug/Widgets/AppsBox.vala:110
-msgid "Clear All"
-msgstr "ניקוי הכל"
-
-#: src/plug/Widgets/AppsBox.vala:133
-msgid "Allow access to these apps with admin permission:"
-msgstr "מתן אפשרות גישה ליישומים אלו עם הרשאות מנהל:"
-
-#: src/plug/Widgets/AppChooser.vala:71
+#: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "חיפוש יישומים"
 
@@ -221,10 +209,22 @@ msgstr "נא לוודא שכל היישומים נסגרו לפני שהמחשב
 msgid "Time left"
 msgstr "זמן שנותר"
 
-#: src/client/AppUnavailableDialog.vala:27
+#: src/client/AppUnavailableDialog.vala:28
 msgid "You cannot run this application"
 msgstr "לא ניתן להריץ יישום זה"
 
-#: src/client/AppUnavailableDialog.vala:28
+#: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "אין הרשאה להריץ יישום זה."
+
+#~ msgid "Allow this user to:"
+#~ msgstr "מותר למשתמש זה:"
+
+#~ msgid "Modify the dock"
+#~ msgstr "שינוי המעגן"
+
+#~ msgid "Configure printing"
+#~ msgstr "הגדרת הדפסה"
+
+#~ msgid "General"
+#~ msgstr "כללי"

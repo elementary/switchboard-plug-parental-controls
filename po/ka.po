@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:23-0700\n"
+"POT-Creation-Date: 2019-02-06 14:01-0800\n"
 "PO-Revision-Date: 2018-02-11 00:08+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -42,15 +42,15 @@ msgstr ""
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/Plug.vala:71
+#: src/plug/MainView.vala:63
 msgid "Some settings require administrator rights to be changed"
 msgstr "ზოგიერთი პარამეტრი, შესაცვლელად საჭიროებს ადმინისტრატორის უფლებებს"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid "No users to edit"
 msgstr "დასარედაქტირებელი მომხმარებლები არაა"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -62,33 +62,95 @@ msgstr ""
 "თქვენ შეგიძლიათ შეცვალოთ მომხმარებლის ანგარიშის ტიპი \"ადმინისტრატორიდან\" "
 "\"სტანდარტულზე\" მომხმარებლის ანგარიშების პანელიდან."
 
-#: src/plug/Plug.vala:83
+#: src/plug/MainView.vala:73
 msgid "Configure User Accounts"
 msgstr "მომხმარებლის ანგარიშების კონფიგურაცია"
 
-#: src/plug/Plug.vala:86
+#: src/plug/MainView.vala:76
 msgid "Open Users settings"
 msgstr "მომხმარებლის პარამეტგრების გახსნა"
 
-#: src/plug/Plug.vala:152
+#: src/plug/Plug.vala:33
 msgid "Parental Control"
 msgstr "მშობლებთა კონტროლი"
 
-#: src/plug/Plug.vala:153
+#: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
 msgstr ""
 
-#: src/plug/Plug.vala:182
+#: src/plug/Plug.vala:60
 #, fuzzy
 msgid "Limit computer use"
 msgstr "კომპიუტერის გამოყენების შეზღუდვა:"
 
-#: src/plug/Plug.vala:183
+#: src/plug/Plug.vala:61
 msgid "Prevent website access"
 msgstr ""
 
-#: src/plug/Plug.vala:184
+#: src/plug/Plug.vala:62
 msgid "Prevent application access"
+msgstr ""
+
+#: src/plug/Views/AppsView.vala:47
+#, c-format
+msgid "Prevent %s from using these apps:"
+msgstr ""
+
+#: src/plug/Views/AppsView.vala:56
+msgid "Add Prevented Apps…"
+msgstr "აღკვეთილი აპის დამატება..."
+
+#: src/plug/Views/AppsView.vala:60
+msgid "Remove Selected App"
+msgstr "არჩეული აპის წაშლა"
+
+#: src/plug/Views/AppsView.vala:65
+msgid "Clear All"
+msgstr ""
+
+#: src/plug/Views/AppsView.vala:88
+msgid "Allow access to these apps with admin permission:"
+msgstr ""
+
+#: src/plug/Views/TimeLimitView.vala:57
+msgid "Limit computer use:"
+msgstr "კომპიუტერის გამოყენების შეზღუდვა:"
+
+#: src/plug/Views/TimeLimitView.vala:65
+msgid "On weekdays and weekends"
+msgstr "სამუშაო დღეებში და დასვენების დღეებში"
+
+#: src/plug/Views/TimeLimitView.vala:66
+msgid "Only on weekdays"
+msgstr "მხოლოდ სამუშაო დღეებში"
+
+#: src/plug/Views/TimeLimitView.vala:67
+msgid "Only on weekends"
+msgstr "მხოლოდ დასვენების დღეებში"
+
+#: src/plug/Views/TimeLimitView.vala:77
+msgid "Weekdays"
+msgstr "სამუშაო დღეებში"
+
+#: src/plug/Views/TimeLimitView.vala:81
+msgid "Weekends"
+msgstr "დასვენების დღეებში"
+
+#: src/plug/Views/InternetView.vala:73
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr ""
+
+#: src/plug/Views/InternetView.vala:86
+msgid "Add URL"
+msgstr ""
+
+#: src/plug/Views/InternetView.vala:95
+msgid "Add a new URL, for example: google.com"
+msgstr ""
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Invalid URL"
 msgstr ""
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
@@ -99,102 +161,27 @@ msgstr "საიდან:"
 msgid "To:"
 msgstr "სადამდე:"
 
-#: src/plug/Widgets/UserList.vala:42
+#: src/plug/Widgets/UserList.vala:43
 msgid "My Account"
 msgstr "ჩემი ანგარიში"
 
-#: src/plug/Widgets/UserList.vala:46
+#: src/plug/Widgets/UserList.vala:47
 msgid "Other Accounts"
 msgstr "სხვა ანგარიშები"
 
-#: src/plug/Widgets/InternetBox.vala:77
-#, c-format
-msgid "Prevent %s from visiting these websites:"
+#: src/plug/Widgets/ControlPage.vala:51
+msgid "Time Limits"
 msgstr ""
 
-#: src/plug/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr ""
-
-#: src/plug/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr ""
-
-#: src/plug/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr ""
-
-#: src/plug/Widgets/GeneralBox.vala:62
-msgid "Allow this user to:"
-msgstr "მიეცეს ამ მომხმარებელს უფლება, რომ:"
-
-#: src/plug/Widgets/GeneralBox.vala:65
-msgid "Modify the dock"
-msgstr ""
-
-#: src/plug/Widgets/GeneralBox.vala:68
-msgid "Configure printing"
-msgstr ""
-
-#. Temporarily disabled for beta release
-#: src/plug/Widgets/GeneralBox.vala:84
-msgid "Limit computer use:"
-msgstr "კომპიუტერის გამოყენების შეზღუდვა:"
-
-#: src/plug/Widgets/GeneralBox.vala:92
-msgid "On weekdays and weekends"
-msgstr "სამუშაო დღეებში და დასვენების დღეებში"
-
-#: src/plug/Widgets/GeneralBox.vala:93
-msgid "Only on weekdays"
-msgstr "მხოლოდ სამუშაო დღეებში"
-
-#: src/plug/Widgets/GeneralBox.vala:94
-msgid "Only on weekends"
-msgstr "მხოლოდ დასვენების დღეებში"
-
-#: src/plug/Widgets/GeneralBox.vala:104
-msgid "Weekdays"
-msgstr "სამუშაო დღეებში"
-
-#: src/plug/Widgets/GeneralBox.vala:108
-msgid "Weekends"
-msgstr "დასვენების დღეებში"
-
-#: src/plug/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "საერთო"
-
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
 msgstr "ინტერნეტი"
 
-#: src/plug/Widgets/ControlPage.vala:55
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Applications"
 msgstr "პროგრამები"
 
-#: src/plug/Widgets/AppsBox.vala:90
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr ""
-
-#: src/plug/Widgets/AppsBox.vala:101
-msgid "Add Prevented Apps…"
-msgstr "აღკვეთილი აპის დამატება..."
-
-#: src/plug/Widgets/AppsBox.vala:105
-msgid "Remove Selected App"
-msgstr "არჩეული აპის წაშლა"
-
-#: src/plug/Widgets/AppsBox.vala:110
-msgid "Clear All"
-msgstr ""
-
-#: src/plug/Widgets/AppsBox.vala:133
-msgid "Allow access to these apps with admin permission:"
-msgstr ""
-
-#: src/plug/Widgets/AppChooser.vala:71
+#: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "პროგრამებში პოვნა"
 
@@ -226,10 +213,16 @@ msgstr ""
 msgid "Time left"
 msgstr ""
 
-#: src/client/AppUnavailableDialog.vala:27
+#: src/client/AppUnavailableDialog.vala:28
 msgid "You cannot run this application"
 msgstr "თქვენ ამ პროგრამას ვერ გაუშვებთ"
 
-#: src/client/AppUnavailableDialog.vala:28
+#: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "თქვენ არ გაქვთ ამ პროგრამის გაშვების უფლება."
+
+#~ msgid "Allow this user to:"
+#~ msgstr "მიეცეს ამ მომხმარებელს უფლება, რომ:"
+
+#~ msgid "General"
+#~ msgstr "საერთო"

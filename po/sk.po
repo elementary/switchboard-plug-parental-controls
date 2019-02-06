@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:23-0700\n"
+"POT-Creation-Date: 2019-02-06 14:01-0800\n"
 "PO-Revision-Date: 2017-01-03 04:06+0000\n"
 "Last-Translator: Cody Garver <cody@elementaryos.org>\n"
 "Language-Team: Slovak <>\n"
@@ -42,15 +42,15 @@ msgstr "Spravovať nastavenia rodičovskej kontroly"
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/Plug.vala:71
+#: src/plug/MainView.vala:63
 msgid "Some settings require administrator rights to be changed"
 msgstr "Na zmenu niektorých nastavení sú potrebné administrátorské práva"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid "No users to edit"
 msgstr "Žiadny používatelia na úpravu"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -62,34 +62,96 @@ msgstr ""
 "Typ účtu užívateľa zo \"Správcu\" na \"Štandardný\" môžete zmeniť v paneli "
 "Používateľských Účtov."
 
-#: src/plug/Plug.vala:83
+#: src/plug/MainView.vala:73
 msgid "Configure User Accounts"
 msgstr "Konfigurácia používateľských účtov"
 
-#: src/plug/Plug.vala:86
+#: src/plug/MainView.vala:76
 msgid "Open Users settings"
 msgstr "Otvoriť nastavenia používateľa"
 
-#: src/plug/Plug.vala:152
+#: src/plug/Plug.vala:33
 msgid "Parental Control"
 msgstr "Rodičovská kontrola"
 
-#: src/plug/Plug.vala:153
+#: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
 msgstr "Konfigurovať časové limity a obmedzené použitie aplikácii"
 
-#: src/plug/Plug.vala:182
+#: src/plug/Plug.vala:60
 #, fuzzy
 msgid "Limit computer use"
 msgstr "Obmedziť použitie počítača:"
 
-#: src/plug/Plug.vala:183
+#: src/plug/Plug.vala:61
 msgid "Prevent website access"
 msgstr ""
 
-#: src/plug/Plug.vala:184
+#: src/plug/Plug.vala:62
 msgid "Prevent application access"
 msgstr ""
+
+#: src/plug/Views/AppsView.vala:47
+#, c-format
+msgid "Prevent %s from using these apps:"
+msgstr "Zabrániť %s používať tieto aplikácie:"
+
+#: src/plug/Views/AppsView.vala:56
+msgid "Add Prevented Apps…"
+msgstr "Pridať obmedzené aplikácie..."
+
+#: src/plug/Views/AppsView.vala:60
+msgid "Remove Selected App"
+msgstr "Odstrániť vybranú aplikáciu"
+
+#: src/plug/Views/AppsView.vala:65
+msgid "Clear All"
+msgstr "Vymazať všetko"
+
+#: src/plug/Views/AppsView.vala:88
+msgid "Allow access to these apps with admin permission:"
+msgstr "Povoliť prístup k týmto aplikáciam s administrátorským povolením:"
+
+#: src/plug/Views/TimeLimitView.vala:57
+msgid "Limit computer use:"
+msgstr "Obmedziť použitie počítača:"
+
+#: src/plug/Views/TimeLimitView.vala:65
+msgid "On weekdays and weekends"
+msgstr "Vo všedné dni a víkendy"
+
+#: src/plug/Views/TimeLimitView.vala:66
+msgid "Only on weekdays"
+msgstr "Iba vo všedné dni"
+
+#: src/plug/Views/TimeLimitView.vala:67
+msgid "Only on weekends"
+msgstr "Iba cez víkendy"
+
+#: src/plug/Views/TimeLimitView.vala:77
+msgid "Weekdays"
+msgstr "Pracovné dni"
+
+#: src/plug/Views/TimeLimitView.vala:81
+msgid "Weekends"
+msgstr "Víkendy"
+
+#: src/plug/Views/InternetView.vala:73
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Zabrániť %s navštevovať tieto webové stránky:"
+
+#: src/plug/Views/InternetView.vala:86
+msgid "Add URL"
+msgstr "Pridať adresu URL"
+
+#: src/plug/Views/InternetView.vala:95
+msgid "Add a new URL, for example: google.com"
+msgstr "Pridať novú URL, napríklad: google.com"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Invalid URL"
+msgstr "Neplatná adresa URL"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -99,102 +161,28 @@ msgstr "Od:"
 msgid "To:"
 msgstr "Do:"
 
-#: src/plug/Widgets/UserList.vala:42
+#: src/plug/Widgets/UserList.vala:43
 msgid "My Account"
 msgstr "Môj účet"
 
-#: src/plug/Widgets/UserList.vala:46
+#: src/plug/Widgets/UserList.vala:47
 msgid "Other Accounts"
 msgstr "Ostatné účty"
 
-#: src/plug/Widgets/InternetBox.vala:77
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Zabrániť %s navštevovať tieto webové stránky:"
+#: src/plug/Widgets/ControlPage.vala:51
+#, fuzzy
+msgid "Time Limits"
+msgstr "Zostávajúci čas"
 
-#: src/plug/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr "Pridať adresu URL"
-
-#: src/plug/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr "Pridať novú URL, napríklad: google.com"
-
-#: src/plug/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr "Neplatná adresa URL"
-
-#: src/plug/Widgets/GeneralBox.vala:62
-msgid "Allow this user to:"
-msgstr "Povoliť tomuto užívateľovi:"
-
-#: src/plug/Widgets/GeneralBox.vala:65
-msgid "Modify the dock"
-msgstr "Upraviť dock"
-
-#: src/plug/Widgets/GeneralBox.vala:68
-msgid "Configure printing"
-msgstr "Nastaviť tlač"
-
-#. Temporarily disabled for beta release
-#: src/plug/Widgets/GeneralBox.vala:84
-msgid "Limit computer use:"
-msgstr "Obmedziť použitie počítača:"
-
-#: src/plug/Widgets/GeneralBox.vala:92
-msgid "On weekdays and weekends"
-msgstr "Vo všedné dni a víkendy"
-
-#: src/plug/Widgets/GeneralBox.vala:93
-msgid "Only on weekdays"
-msgstr "Iba vo všedné dni"
-
-#: src/plug/Widgets/GeneralBox.vala:94
-msgid "Only on weekends"
-msgstr "Iba cez víkendy"
-
-#: src/plug/Widgets/GeneralBox.vala:104
-msgid "Weekdays"
-msgstr "Pracovné dni"
-
-#: src/plug/Widgets/GeneralBox.vala:108
-msgid "Weekends"
-msgstr "Víkendy"
-
-#: src/plug/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "Všeobecné"
-
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:55
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Applications"
 msgstr "Aplikácie"
 
-#: src/plug/Widgets/AppsBox.vala:90
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Zabrániť %s používať tieto aplikácie:"
-
-#: src/plug/Widgets/AppsBox.vala:101
-msgid "Add Prevented Apps…"
-msgstr "Pridať obmedzené aplikácie..."
-
-#: src/plug/Widgets/AppsBox.vala:105
-msgid "Remove Selected App"
-msgstr "Odstrániť vybranú aplikáciu"
-
-#: src/plug/Widgets/AppsBox.vala:110
-msgid "Clear All"
-msgstr "Vymazať všetko"
-
-#: src/plug/Widgets/AppsBox.vala:133
-msgid "Allow access to these apps with admin permission:"
-msgstr "Povoliť prístup k týmto aplikáciam s administrátorským povolením:"
-
-#: src/plug/Widgets/AppChooser.vala:71
+#: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "Hľadať aplikácie"
 
@@ -228,10 +216,22 @@ msgstr ""
 msgid "Time left"
 msgstr "Zostávajúci čas"
 
-#: src/client/AppUnavailableDialog.vala:27
+#: src/client/AppUnavailableDialog.vala:28
 msgid "You cannot run this application"
 msgstr "Nemôžete spustiť tuto aplikáciu"
 
-#: src/client/AppUnavailableDialog.vala:28
+#: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Nie ste oprávnený spustiť túto aplikáciu."
+
+#~ msgid "Allow this user to:"
+#~ msgstr "Povoliť tomuto užívateľovi:"
+
+#~ msgid "Modify the dock"
+#~ msgstr "Upraviť dock"
+
+#~ msgid "Configure printing"
+#~ msgstr "Nastaviť tlač"
+
+#~ msgid "General"
+#~ msgstr "Všeobecné"

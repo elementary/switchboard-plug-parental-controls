@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:23-0700\n"
+"POT-Creation-Date: 2019-02-06 14:01-0800\n"
 "PO-Revision-Date: 2017-03-31 17:45+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -41,15 +41,15 @@ msgstr "Vanemliku kontrolli seadete muutmine"
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/Plug.vala:71
+#: src/plug/MainView.vala:63
 msgid "Some settings require administrator rights to be changed"
 msgstr "Mõningate seadete muutmiseks on vaja administraatori õigusi…"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid "No users to edit"
 msgstr "Muutmiseks kasutajad puuduvad"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -61,34 +61,96 @@ msgstr ""
 "Sul on võimalik muuta konto tüüpi juurkasutajast tavakasutajaks süsteemi "
 "seadetest kontode seadetest."
 
-#: src/plug/Plug.vala:83
+#: src/plug/MainView.vala:73
 msgid "Configure User Accounts"
 msgstr "Kasutajakontode konfigureerimine"
 
-#: src/plug/Plug.vala:86
+#: src/plug/MainView.vala:76
 msgid "Open Users settings"
 msgstr "Ava kasutajate seaded"
 
-#: src/plug/Plug.vala:152
+#: src/plug/Plug.vala:33
 msgid "Parental Control"
 msgstr "Vanemlik kontroll"
 
-#: src/plug/Plug.vala:153
+#: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
 msgstr "Rakenduste kasutuslimiitide ja piirangute haldamine"
 
-#: src/plug/Plug.vala:182
+#: src/plug/Plug.vala:60
 #, fuzzy
 msgid "Limit computer use"
 msgstr "Arvuti kasutamise piiramine:"
 
-#: src/plug/Plug.vala:183
+#: src/plug/Plug.vala:61
 msgid "Prevent website access"
 msgstr ""
 
-#: src/plug/Plug.vala:184
+#: src/plug/Plug.vala:62
 msgid "Prevent application access"
 msgstr ""
+
+#: src/plug/Views/AppsView.vala:47
+#, c-format
+msgid "Prevent %s from using these apps:"
+msgstr "Kasutajal %s takistatakse nende rakenduste kasutamist:"
+
+#: src/plug/Views/AppsView.vala:56
+msgid "Add Prevented Apps…"
+msgstr "Keelatud rakenduste lisamine…"
+
+#: src/plug/Views/AppsView.vala:60
+msgid "Remove Selected App"
+msgstr "Eemalda valitud rakendus"
+
+#: src/plug/Views/AppsView.vala:65
+msgid "Clear All"
+msgstr "Puhasta kõik"
+
+#: src/plug/Views/AppsView.vala:88
+msgid "Allow access to these apps with admin permission:"
+msgstr "Administraatorõigustega lubatud rakendused:"
+
+#: src/plug/Views/TimeLimitView.vala:57
+msgid "Limit computer use:"
+msgstr "Arvuti kasutamise piiramine:"
+
+#: src/plug/Views/TimeLimitView.vala:65
+msgid "On weekdays and weekends"
+msgstr "Tööpäevadel ja nädalavahetustel"
+
+#: src/plug/Views/TimeLimitView.vala:66
+msgid "Only on weekdays"
+msgstr "Ainult tööpäevadel"
+
+#: src/plug/Views/TimeLimitView.vala:67
+msgid "Only on weekends"
+msgstr "Ainult nädalavahetustel"
+
+#: src/plug/Views/TimeLimitView.vala:77
+msgid "Weekdays"
+msgstr "Tööpäevadel"
+
+#: src/plug/Views/TimeLimitView.vala:81
+msgid "Weekends"
+msgstr "Nädalavahetusel"
+
+#: src/plug/Views/InternetView.vala:73
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Kasutajal %s keelatakse nende veebilehtede külastamine:"
+
+#: src/plug/Views/InternetView.vala:86
+msgid "Add URL"
+msgstr "Lisa URL"
+
+#: src/plug/Views/InternetView.vala:95
+msgid "Add a new URL, for example: google.com"
+msgstr "Uue URL-i lisamine, nagu näiteks: google.ee"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Invalid URL"
+msgstr "Vigane URL"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -98,102 +160,28 @@ msgstr "Alates:"
 msgid "To:"
 msgstr "Kuni:"
 
-#: src/plug/Widgets/UserList.vala:42
+#: src/plug/Widgets/UserList.vala:43
 msgid "My Account"
 msgstr "Minu konto"
 
-#: src/plug/Widgets/UserList.vala:46
+#: src/plug/Widgets/UserList.vala:47
 msgid "Other Accounts"
 msgstr "Teised kontod"
 
-#: src/plug/Widgets/InternetBox.vala:77
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Kasutajal %s keelatakse nende veebilehtede külastamine:"
+#: src/plug/Widgets/ControlPage.vala:51
+#, fuzzy
+msgid "Time Limits"
+msgstr "Aega jäänud"
 
-#: src/plug/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr "Lisa URL"
-
-#: src/plug/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr "Uue URL-i lisamine, nagu näiteks: google.ee"
-
-#: src/plug/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr "Vigane URL"
-
-#: src/plug/Widgets/GeneralBox.vala:62
-msgid "Allow this user to:"
-msgstr "Sellele kasutajale on lubatud:"
-
-#: src/plug/Widgets/GeneralBox.vala:65
-msgid "Modify the dock"
-msgstr "Doki muutmine"
-
-#: src/plug/Widgets/GeneralBox.vala:68
-msgid "Configure printing"
-msgstr "Printimise seadistamine"
-
-#. Temporarily disabled for beta release
-#: src/plug/Widgets/GeneralBox.vala:84
-msgid "Limit computer use:"
-msgstr "Arvuti kasutamise piiramine:"
-
-#: src/plug/Widgets/GeneralBox.vala:92
-msgid "On weekdays and weekends"
-msgstr "Tööpäevadel ja nädalavahetustel"
-
-#: src/plug/Widgets/GeneralBox.vala:93
-msgid "Only on weekdays"
-msgstr "Ainult tööpäevadel"
-
-#: src/plug/Widgets/GeneralBox.vala:94
-msgid "Only on weekends"
-msgstr "Ainult nädalavahetustel"
-
-#: src/plug/Widgets/GeneralBox.vala:104
-msgid "Weekdays"
-msgstr "Tööpäevadel"
-
-#: src/plug/Widgets/GeneralBox.vala:108
-msgid "Weekends"
-msgstr "Nädalavahetusel"
-
-#: src/plug/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "Üldine"
-
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:55
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Applications"
 msgstr "Rakendused"
 
-#: src/plug/Widgets/AppsBox.vala:90
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Kasutajal %s takistatakse nende rakenduste kasutamist:"
-
-#: src/plug/Widgets/AppsBox.vala:101
-msgid "Add Prevented Apps…"
-msgstr "Keelatud rakenduste lisamine…"
-
-#: src/plug/Widgets/AppsBox.vala:105
-msgid "Remove Selected App"
-msgstr "Eemalda valitud rakendus"
-
-#: src/plug/Widgets/AppsBox.vala:110
-msgid "Clear All"
-msgstr "Puhasta kõik"
-
-#: src/plug/Widgets/AppsBox.vala:133
-msgid "Allow access to these apps with admin permission:"
-msgstr "Administraatorõigustega lubatud rakendused:"
-
-#: src/plug/Widgets/AppChooser.vala:71
+#: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "Otsi rakendusi…"
 
@@ -225,10 +213,22 @@ msgstr "Enne arvuti sulgemist veendu, et kõik rakendused oleksid suletud."
 msgid "Time left"
 msgstr "Aega jäänud"
 
-#: src/client/AppUnavailableDialog.vala:27
+#: src/client/AppUnavailableDialog.vala:28
 msgid "You cannot run this application"
 msgstr "Seda rakendust pole võimalik avada"
 
-#: src/client/AppUnavailableDialog.vala:28
+#: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Selle rakenduse käivitamiseks pole sul õigusi."
+
+#~ msgid "Allow this user to:"
+#~ msgstr "Sellele kasutajale on lubatud:"
+
+#~ msgid "Modify the dock"
+#~ msgstr "Doki muutmine"
+
+#~ msgid "Configure printing"
+#~ msgstr "Printimise seadistamine"
+
+#~ msgid "General"
+#~ msgstr "Üldine"
