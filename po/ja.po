@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2018-12-02 06:47+0000\n"
+"PO-Revision-Date: 2019-02-07 01:25+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ja/>\n"
@@ -167,9 +167,8 @@ msgid "Other Accounts"
 msgstr "その他のアカウント"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
 msgid "Time Limits"
-msgstr "残り時間"
+msgstr "時間制限"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
