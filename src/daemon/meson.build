@@ -1,5 +1,5 @@
 daemon_files = files(
-    'UserConfig.vala',
+    'UserConfiguration.vala',
     'SessionManager.vala',
     'SessionHandler.vala',
     'Server.vala',
