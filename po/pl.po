@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-13 17:23-0700\n"
+"POT-Creation-Date: 2019-02-06 14:01-0800\n"
 "PO-Revision-Date: 2018-10-13 01:03+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
@@ -42,15 +42,15 @@ msgstr "Wyświetl ograniczenia kontroli rodzicielskiej"
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/Plug.vala:71
+#: src/plug/MainView.vala:63
 msgid "Some settings require administrator rights to be changed"
 msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid "No users to edit"
 msgstr "Brak użytkowników do edycji"
 
-#: src/plug/Plug.vala:80
+#: src/plug/MainView.vala:70
 msgid ""
 "Parental Controls can only be applied to user accounts that don't have "
 "administrative permissions.\n"
@@ -62,33 +62,95 @@ msgstr ""
 "Możesz zmienić rodzaj konta użytkownika (z \"Administrator\" na \"Zwykłe\") "
 "w panelu Kont użytkowników."
 
-#: src/plug/Plug.vala:83
+#: src/plug/MainView.vala:73
 msgid "Configure User Accounts"
 msgstr "Konfiguruj konta użytkowników"
 
-#: src/plug/Plug.vala:86
+#: src/plug/MainView.vala:76
 msgid "Open Users settings"
 msgstr "Otwórz ustawienia użytkowników"
 
-#: src/plug/Plug.vala:152
+#: src/plug/Plug.vala:33
 msgid "Parental Control"
 msgstr "Kontrola rodzicielska"
 
-#: src/plug/Plug.vala:153
+#: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
 msgstr "Konfiguruj ograniczenia czasowe i ogranicz korzystanie z programów"
 
-#: src/plug/Plug.vala:182
+#: src/plug/Plug.vala:60
 msgid "Limit computer use"
 msgstr "Ogranicz korzystanie z komputera"
 
-#: src/plug/Plug.vala:183
+#: src/plug/Plug.vala:61
 msgid "Prevent website access"
 msgstr "Ogranicz dostęp do stron internetowych"
 
-#: src/plug/Plug.vala:184
+#: src/plug/Plug.vala:62
 msgid "Prevent application access"
 msgstr "Ogranicz dostęp do programów"
+
+#: src/plug/Views/AppsView.vala:47
+#, c-format
+msgid "Prevent %s from using these apps:"
+msgstr "Uniemożliwiaj %s korzystanie z tych programów:"
+
+#: src/plug/Views/AppsView.vala:56
+msgid "Add Prevented Apps…"
+msgstr "Dodaj ograniczane programy…"
+
+#: src/plug/Views/AppsView.vala:60
+msgid "Remove Selected App"
+msgstr "Usuń wybrany program"
+
+#: src/plug/Views/AppsView.vala:65
+msgid "Clear All"
+msgstr "Wyczyść wszystko"
+
+#: src/plug/Views/AppsView.vala:88
+msgid "Allow access to these apps with admin permission:"
+msgstr "Zezwalaj na dostęp do tych programów z uprawnieniami administratora:"
+
+#: src/plug/Views/TimeLimitView.vala:57
+msgid "Limit computer use:"
+msgstr "Ogranicz korzystanie z komputera:"
+
+#: src/plug/Views/TimeLimitView.vala:65
+msgid "On weekdays and weekends"
+msgstr "W dni robocze i weekendy"
+
+#: src/plug/Views/TimeLimitView.vala:66
+msgid "Only on weekdays"
+msgstr "Tylko w dni robocze"
+
+#: src/plug/Views/TimeLimitView.vala:67
+msgid "Only on weekends"
+msgstr "Tylko w weekendy"
+
+#: src/plug/Views/TimeLimitView.vala:77
+msgid "Weekdays"
+msgstr "Dni robocze"
+
+#: src/plug/Views/TimeLimitView.vala:81
+msgid "Weekends"
+msgstr "Weekendy"
+
+#: src/plug/Views/InternetView.vala:73
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Uniemożliwiaj %s odwiedzanie tych stron internetowych:"
+
+#: src/plug/Views/InternetView.vala:86
+msgid "Add URL"
+msgstr "Dodaj URL"
+
+#: src/plug/Views/InternetView.vala:95
+msgid "Add a new URL, for example: google.com"
+msgstr "Dodaj nowy URL, na przykład: google.com"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Invalid URL"
+msgstr "Niepoprawny adres URL"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -98,102 +160,28 @@ msgstr "Od:"
 msgid "To:"
 msgstr "Do:"
 
-#: src/plug/Widgets/UserList.vala:42
+#: src/plug/Widgets/UserList.vala:43
 msgid "My Account"
 msgstr "Moje konto"
 
-#: src/plug/Widgets/UserList.vala:46
+#: src/plug/Widgets/UserList.vala:47
 msgid "Other Accounts"
 msgstr "Inne konta"
 
-#: src/plug/Widgets/InternetBox.vala:77
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Uniemożliwiaj %s odwiedzanie tych stron internetowych:"
+#: src/plug/Widgets/ControlPage.vala:51
+#, fuzzy
+msgid "Time Limits"
+msgstr "Pozostały czas"
 
-#: src/plug/Widgets/InternetBox.vala:90
-msgid "Add URL"
-msgstr "Dodaj URL"
-
-#: src/plug/Widgets/InternetBox.vala:99
-msgid "Add a new URL, for example: google.com"
-msgstr "Dodaj nowy URL, na przykład: google.com"
-
-#: src/plug/Widgets/InternetBox.vala:100
-msgid "Invalid URL"
-msgstr "Niepoprawny adres URL"
-
-#: src/plug/Widgets/GeneralBox.vala:62
-msgid "Allow this user to:"
-msgstr "Pozwól temu użytkownikowi na:"
-
-#: src/plug/Widgets/GeneralBox.vala:65
-msgid "Modify the dock"
-msgstr "Modyfikuj dok"
-
-#: src/plug/Widgets/GeneralBox.vala:68
-msgid "Configure printing"
-msgstr "Konfiguruj drukowanie"
-
-#. Temporarily disabled for beta release
-#: src/plug/Widgets/GeneralBox.vala:84
-msgid "Limit computer use:"
-msgstr "Ogranicz korzystanie z komputera:"
-
-#: src/plug/Widgets/GeneralBox.vala:92
-msgid "On weekdays and weekends"
-msgstr "W dni robocze i weekendy"
-
-#: src/plug/Widgets/GeneralBox.vala:93
-msgid "Only on weekdays"
-msgstr "Tylko w dni robocze"
-
-#: src/plug/Widgets/GeneralBox.vala:94
-msgid "Only on weekends"
-msgstr "Tylko w weekendy"
-
-#: src/plug/Widgets/GeneralBox.vala:104
-msgid "Weekdays"
-msgstr "Dni robocze"
-
-#: src/plug/Widgets/GeneralBox.vala:108
-msgid "Weekends"
-msgstr "Weekendy"
-
-#: src/plug/Widgets/ControlPage.vala:53
-msgid "General"
-msgstr "Ogólne"
-
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:55
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Applications"
 msgstr "Programy"
 
-#: src/plug/Widgets/AppsBox.vala:90
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Uniemożliwiaj %s korzystanie z tych programów:"
-
-#: src/plug/Widgets/AppsBox.vala:101
-msgid "Add Prevented Apps…"
-msgstr "Dodaj ograniczane programy…"
-
-#: src/plug/Widgets/AppsBox.vala:105
-msgid "Remove Selected App"
-msgstr "Usuń wybrany program"
-
-#: src/plug/Widgets/AppsBox.vala:110
-msgid "Clear All"
-msgstr "Wyczyść wszystko"
-
-#: src/plug/Widgets/AppsBox.vala:133
-msgid "Allow access to these apps with admin permission:"
-msgstr "Zezwalaj na dostęp do tych programów z uprawnieniami administratora:"
-
-#: src/plug/Widgets/AppChooser.vala:71
+#: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "Wyszukiwanie programów"
 
@@ -227,10 +215,22 @@ msgstr "Należy zamknąć wszystkie programy zanim komputer zostanie zablokowany
 msgid "Time left"
 msgstr "Pozostały czas"
 
-#: src/client/AppUnavailableDialog.vala:27
+#: src/client/AppUnavailableDialog.vala:28
 msgid "You cannot run this application"
 msgstr "Nie możesz uruchomić tego programu"
 
-#: src/client/AppUnavailableDialog.vala:28
+#: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Nie masz uprawnień do uruchomienia tego programu."
+
+#~ msgid "Allow this user to:"
+#~ msgstr "Pozwól temu użytkownikowi na:"
+
+#~ msgid "Modify the dock"
+#~ msgstr "Modyfikuj dok"
+
+#~ msgid "Configure printing"
+#~ msgstr "Konfiguruj drukowanie"
+
+#~ msgid "General"
+#~ msgstr "Ogólne"

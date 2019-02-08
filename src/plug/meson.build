@@ -1,13 +1,13 @@
 plug_files = files(
     'MainView.vala',
     'Plug.vala',
+    'Views/AppsView.vala',
+    'Views/TimeLimitView.vala',
+    'Views/InternetView.vala',
     'Widgets/WeekSpinBox.vala',
     'Widgets/UserList.vala',
     'Widgets/UserItem.vala',
-    'Widgets/InternetBox.vala',
-    'Widgets/GeneralBox.vala',
     'Widgets/ControlPage.vala',
-    'Widgets/AppsBox.vala',
     'Widgets/AppChooser.vala',
     'Widgets/AppRow.vala'
 )
