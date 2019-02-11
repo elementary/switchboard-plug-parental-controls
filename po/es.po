@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2019-01-19 00:10+0000\n"
+"PO-Revision-Date: 2019-02-09 00:06+0000\n"
 "Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
 "Language-Team: Spanish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/es/>\n"
@@ -85,11 +85,11 @@ msgstr "Limitar el uso del equipo:"
 
 #: src/plug/Plug.vala:61
 msgid "Prevent website access"
-msgstr ""
+msgstr "Prevenir el acceso al sitio web"
 
 #: src/plug/Plug.vala:62
 msgid "Prevent application access"
-msgstr ""
+msgstr "Impedir el acceso a la aplicación"
 
 #: src/plug/Views/AppsView.vala:47
 #, c-format
