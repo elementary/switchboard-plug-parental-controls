@@ -59,7 +59,7 @@ namespace PC.Daemon {
         }
 
         public void kill () {
-            Posix.kill (pid, Posix.SIGINT);
+            Posix.kill (pid, Posix.Signal.INT);
         }
     }
 }
