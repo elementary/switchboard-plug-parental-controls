@@ -25,7 +25,6 @@ namespace PC.Daemon {
     private interface DBus : Object {
         [DBus (name = "GetConnectionUnixProcessID")]
         public abstract uint32 get_connection_unix_process_id (string name) throws GLib.Error;
-        
         public abstract uint32 get_connection_unix_user (string name) throws GLib.Error;
     }
 
@@ -50,7 +49,7 @@ namespace PC.Daemon {
 
             return instance;
         }
-        
+
         protected Server () {
             try {
                 bus_proxy = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.DBus", "/");
@@ -84,7 +83,7 @@ namespace PC.Daemon {
             }
 
             ensure_pam_lightdm_enabled ();
-            
+
             var writer = PAM.Writer.new_for_time ();
             writer.add_restriction_for_user (input, clean);
         }
@@ -109,7 +108,7 @@ namespace PC.Daemon {
 
             var config = UserConfig.get_for_username (username, true);
             if (config == null) {
-                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created".printf (username));
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created", username);
             }
 
             config.set_active (active);
@@ -122,7 +121,7 @@ namespace PC.Daemon {
 
             var config = UserConfig.get_for_username (username, true);
             if (config == null) {
-                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created".printf (username));
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created", username);
             }
 
             config.set_targets (targets);
@@ -135,7 +134,7 @@ namespace PC.Daemon {
 
             var config = UserConfig.get_for_username (username, true);
             if (config == null) {
-                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created".printf (username));
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created", username);
             }
 
             config.set_block_urls (block_urls);
@@ -148,7 +147,7 @@ namespace PC.Daemon {
 
             var config = UserConfig.get_for_username (username, true);
             if (config == null) {
-                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created".printf (username));
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created", username);
             }
 
             config.set_admin (admin);
@@ -157,7 +156,7 @@ namespace PC.Daemon {
         public bool get_user_daemon_active (string username) throws GLib.Error, ParentalControlsError {
             var config = UserConfig.get_for_username (username, false);
             if (config == null) {
-                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist", username);
             }
 
             return config.get_active ();
@@ -166,7 +165,7 @@ namespace PC.Daemon {
         public string[] get_user_daemon_targets (string username) throws GLib.Error, ParentalControlsError {
             var config = UserConfig.get_for_username (username, false);
             if (config == null) {
-                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist", username);
             }
 
             return config.get_targets ();
@@ -175,7 +174,7 @@ namespace PC.Daemon {
         public string[] get_user_daemon_block_urls (string username) throws GLib.Error, ParentalControlsError {
             var config = UserConfig.get_for_username (username, false);
             if (config == null) {
-                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist", username);
             }
 
             return config.get_block_urls ();
@@ -184,7 +183,7 @@ namespace PC.Daemon {
         public bool get_user_daemon_admin (string username) throws GLib.Error, ParentalControlsError {
             var config = UserConfig.get_for_username (username, false);
             if (config == null) {
-                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist".printf (username));
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist", username);
             }
 
             return config.get_admin ();
@@ -199,7 +198,7 @@ namespace PC.Daemon {
 
         private void ensure_pam_lightdm_enabled () {
             string path = "/etc/pam.d/lightdm";
-            
+
             string contents;
             try {
                 FileUtils.get_contents (path, out contents);
@@ -207,7 +206,7 @@ namespace PC.Daemon {
                 warning (e.message);
                 return;
             }
-            
+
             string conf_line = "\naccount required pam_time.so";
             if (conf_line in contents) {
                 return;
@@ -234,7 +233,7 @@ namespace PC.Daemon {
                 user = bus_proxy.get_connection_unix_user (sender);
             } catch (Error e) {
                 warning (e.message);
-            }            
+            }
 
             var subject = new Polkit.UnixProcess.for_owner ((int)pid, 0, (int)user);
 
@@ -256,7 +255,7 @@ namespace PC.Daemon {
                 pid = bus_proxy.get_connection_unix_process_id (sender);
             } catch (Error e) {
                 warning (e.message);
-            }   
+            }
 
             return pid;
         }
