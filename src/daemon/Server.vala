@@ -25,7 +25,6 @@ namespace PC.Daemon {
     private interface DBus : Object {
         [DBus (name = "GetConnectionUnixProcessID")]
         public abstract uint32 get_connection_unix_process_id (string name) throws GLib.Error;
-        
         public abstract uint32 get_connection_unix_user (string name) throws GLib.Error;
     }
 
@@ -50,7 +49,7 @@ namespace PC.Daemon {
 
             return instance;
         }
-        
+
         protected Server () {
             try {
                 bus_proxy = Bus.get_proxy_sync (BusType.SYSTEM, "org.freedesktop.DBus", "/");
@@ -82,7 +81,7 @@ namespace PC.Daemon {
             }
 
             ensure_pam_lightdm_enabled ();
-            
+
             var writer = PAM.Writer.new_for_time ();
             writer.add_restriction_for_user (input, clean);
         }
@@ -197,7 +196,7 @@ namespace PC.Daemon {
 
         private void ensure_pam_lightdm_enabled () {
             string path = "/etc/pam.d/lightdm";
-            
+
             string contents;
             try {
                 FileUtils.get_contents (path, out contents);
@@ -205,7 +204,7 @@ namespace PC.Daemon {
                 warning (e.message);
                 return;
             }
-            
+
             string conf_line = "\naccount required pam_time.so";
             if (conf_line in contents) {
                 return;
@@ -232,7 +231,7 @@ namespace PC.Daemon {
                 user = bus_proxy.get_connection_unix_user (sender);
             } catch (Error e) {
                 warning (e.message);
-            }            
+            }
 
             var subject = new Polkit.UnixProcess.for_owner ((int)pid, 0, (int)user);
 
@@ -254,7 +253,7 @@ namespace PC.Daemon {
                 pid = bus_proxy.get_connection_unix_process_id (sender);
             } catch (Error e) {
                 warning (e.message);
-            }   
+            }
 
             return pid;
         }
