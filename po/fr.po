@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2019-01-14 00:10+0000\n"
+"PO-Revision-Date: 2019-02-16 18:10+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/fr/>\n"
@@ -171,9 +171,8 @@ msgid "Other Accounts"
 msgstr "Autres comptes"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
 msgid "Time Limits"
-msgstr "Temps restant"
+msgstr "Limites de temps"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
