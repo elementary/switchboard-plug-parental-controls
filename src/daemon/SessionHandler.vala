@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2015 Adam Bieńkowski (https://github.com/elementary/switchboard-plug-parental-controls)
+ * Copyright (c) 2019 Adam Bieńkowski (https://github.com/elementary/switchboard-plug-parental-controls)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public

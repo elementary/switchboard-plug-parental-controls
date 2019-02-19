@@ -32,8 +32,6 @@ namespace PC.Client {
             { null }
         };
 
-        private bool in_launch = false;
-
         public static int main (string[] args) {
             try {
                 var opt_context = new OptionContext (null);
