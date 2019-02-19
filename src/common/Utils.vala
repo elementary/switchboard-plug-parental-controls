@@ -31,7 +31,7 @@ namespace PC {
     public interface IParentalControls : Object {
         public abstract async void add_restriction_for_user (string input, bool clean) throws GLib.Error;
         public abstract async void remove_restriction_for_user (string username) throws GLib.Error;
-        public abstract async void end_app_authorization () throws GLib.Error;
+        public abstract async void finish_app_authorization (string username, string[] args) throws GLib.Error;
         public abstract async bool get_user_daemon_active (string username) throws GLib.Error;
         public abstract async bool get_user_daemon_admin (string username) throws GLib.Error;
         public abstract async string[] get_user_daemon_block_urls (string username) throws GLib.Error;
@@ -42,9 +42,7 @@ namespace PC {
         public abstract async void set_user_daemon_block_urls (string username, string[] block_urls) throws GLib.Error;
         public abstract async void set_user_daemon_targets (string username, string[] targets) throws GLib.Error;
 
-        public signal void app_authorize (string username, string path, string action_id);
-        public signal void launch (string[] args);
-        public signal void show_app_unavailable (string path);
+        public signal void launch (string[] args, bool incoming);
         public signal void show_timeout (int hours, int minutes);
         public signal void user_config_changed (string username);
     }
@@ -53,7 +51,7 @@ namespace PC {
         public class DummyParentalControls : Object, IParentalControls  {
             public async void add_restriction_for_user (string input, bool clean) throws GLib.Error {}
             public async void remove_restriction_for_user (string username) throws GLib.Error {}
-            public async void end_app_authorization () throws GLib.Error {}
+            public async void finish_app_authorization (string username, string[] args) throws GLib.Error {}
             public async bool get_user_daemon_active (string username) throws GLib.Error { return false; }
             public async bool get_user_daemon_admin (string username) throws GLib.Error { return false; }
             public async string[] get_user_daemon_block_urls (string username) throws GLib.Error { return {}; }

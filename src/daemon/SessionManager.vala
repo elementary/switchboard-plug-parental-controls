@@ -97,7 +97,7 @@
 
         private void update_session () {
             var session = get_current_session ();
-            if (session != null || current_handler == null || session.id == current_handler.get_id ()) {
+            if (session == null || (current_handler != null && session.id == current_handler.get_id ())) {
                 return;
             }
 
@@ -108,12 +108,8 @@
                 return;
             }
 
-            try {
-                current_handler = new SessionHandler (session);
-                current_handler.start ();
-            } catch (Error e) {
-                current_handler = null;
-            }
+            current_handler = new SessionHandler (session);
+            current_handler.update ();
         }
 
         private void stop_current_handler () {

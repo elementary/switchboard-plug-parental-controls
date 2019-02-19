@@ -1,6 +1,6 @@
 // -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright (c) 2015 Adam Bieńkowski (https://launchpad.net/switchboard-plug-parental-controls)
+ * Copyright (c) 2015 Adam Bieńkowski (https://github.com/elementary/switchboard-plug-parental-controls)
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -32,21 +32,19 @@
         public ISession session;
         private Server server;
 
-        public SessionHandler (ISession session) throws GLib.Error {
+        public SessionHandler (ISession session) {
             this.session = session;
             server = Server.get_default ();
 
-            config = UserConfig.get_for_username (session.name, false);
-            if (config == null || !config.get_active ()) {
-                throw new GLib.IOError.FAILED ("Unable to get userconfig");
-            }
+            config = UserConfig.get_for_username (session.name, true);
+            config.changed.connect (on_config_changed);
 
             controller = new RestrictionController ();
 
-            app_restriction = new AppRestriction ();
-            web_restriction = new WebRestriction ();
+            app_restriction = new AppRestriction (config);
+            web_restriction = new WebRestriction (config);
 
-            time_restriction = new TimeRestriction ();
+            time_restriction = new TimeRestriction (config);
             time_restriction.terminate.connect (() => {
                 try {
                     session.terminate ();
@@ -64,58 +62,33 @@
             return config;
         }
 
-        public void start () {
-            app_restriction.username = config.username;
-            app_restriction.admin = config.get_admin ();
-
-            foreach (string target in config.get_targets ()) {
-                app_restriction.add_target (target);
-            }
-
+        private void start () {
             controller.add_restriction (app_restriction);
-
-            if (WebRestriction.get_supported ()) {
-                foreach (string url in config.get_block_urls ()) {
-                    web_restriction.add_target (url);
-                }
-
-                controller.add_restriction (web_restriction);
-            }
-
-            var token = PAM.Reader.get_token_for_user (Constants.PAM_TIME_CONF_PATH, session.name);
-            time_restriction.add_target (token);
-
+            controller.add_restriction (web_restriction);
             controller.add_restriction (time_restriction);
         }
 
         public void update () {
-            if (!config.get_active ()) {
+            var active = config.get_active ();
+            if (!active && controller.has_restrictions ()) {
                 stop ();
-                return;
+            } else if (active && !controller.has_restrictions ()) {
+                start ();
             }
-
-            app_restriction.username = config.username;
-            app_restriction.admin = config.get_admin ();
-
-            var new_targets = new GLib.List<string> ();
-            foreach (string target in config.get_targets ()) {
-                new_targets.append (target);
-            }
-
-            app_restriction.update_targets (new_targets);
-
-            new_targets = new GLib.List<string> ();
-            foreach (string url in config.get_block_urls ()) {
-                new_targets.append (url);
-            }
-
-            web_restriction.update_targets (new_targets);
         }
 
         public void stop () {
             controller.remove_restriction (app_restriction);
             controller.remove_restriction (web_restriction);
             controller.remove_restriction (time_restriction);
+        }
+
+        private void on_config_changed (string key) {
+            if (key != Constants.DAEMON_KEY_ACTIVE) {
+                return;
+            }
+
+            update ();
         }
     }
 }

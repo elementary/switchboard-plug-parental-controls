@@ -23,6 +23,7 @@
 namespace PC.Daemon {
     public class UserConfig : Object {
         public string username { get; set; }
+        public signal void changed (string key);
 
         private static KeyFile key;
         private static List<UserConfig> config_list;
@@ -98,21 +99,25 @@ namespace PC.Daemon {
         public void set_active (bool active) {
             key.set_boolean (username, Constants.DAEMON_KEY_ACTIVE, active);
             save ();
+            changed (Constants.DAEMON_KEY_ACTIVE);
         }
 
         public void set_targets (string[] targets) {
             key.set_string_list (username, Constants.DAEMON_KEY_TARGETS, targets);
             save ();
+            changed (Constants.DAEMON_KEY_TARGETS);
         }
 
         public void set_block_urls (string[] block_urls) {
             key.set_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS, block_urls);
             save ();
+            changed (Constants.DAEMON_KEY_BLOCK_URLS);
         }
 
         public void set_admin (bool admin) {
             key.set_boolean (username, Constants.DAEMON_KEY_ADMIN, admin);
             save ();
+            changed (Constants.DAEMON_KEY_ADMIN);
         }
 
         public bool get_active () {

@@ -21,18 +21,62 @@
  */
 
 namespace PC.Daemon {
-    public class TimeRestriction : Restriction<PAM.Token> {
+    public class TimeRestriction : Restriction {
+        private const string TIME_KEY = "Time";
         private const int MINUTE_INTERVAL = 60;
         private const int HOUR_INTERVAL = 3600;
+        private File? time_file;
+        private FileMonitor? monitor;
 
         public signal void terminate ();
         
         private uint[] timeout_ids;
 
+        public TimeRestriction (UserConfig config) {
+            base (config);
+        }
+
         public override void start () {
-            foreach (PAM.Token token in targets) {
+            if (time_file == null) {
+                time_file = File.new_for_path (Constants.PAM_TIME_CONF_PATH);
+            }
+
+            var token = PAM.Reader.get_token_for_user (Constants.PAM_TIME_CONF_PATH, config.username);
+            if (token != null) {
                 process_token (token);
             }
+
+            try {
+                monitor = time_file.monitor (FileMonitorFlags.NONE, null);
+                monitor.changed.connect ((file, other, type) => {
+                    if (type != FileMonitorEvent.CHANGED) {
+                        return;
+                    }
+
+                    update (TIME_KEY);
+                });
+            } catch (Error e) {
+                critical (e.message);
+            }
+        }
+
+        public override void stop () {
+            if (monitor != null) {
+                monitor.cancel ();
+            }
+
+            foreach (uint timeout_id in timeout_ids) {
+                GLib.Source.remove (timeout_id);
+            }
+        }
+
+        public override void update (string key) {
+            if (key != TIME_KEY) {
+                return;
+            }
+            
+            stop ();
+            start ();   
         }
 
         private void process_token (PAM.Token token) {
@@ -71,12 +115,6 @@ namespace PC.Daemon {
                 start ();
                 return true;
             });
-        }
-
-        public override void stop () {
-            foreach (uint timeout_id in timeout_ids) {
-                GLib.Source.remove (timeout_id);
-            }
         }
 
         private TimeSpan get_difference_span (string estimated_time_str) {

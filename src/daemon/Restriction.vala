@@ -20,12 +20,8 @@
  */
 
 namespace PC.Daemon {
-    public abstract class Restriction<T> : Object {
-        public GLib.List<T> targets;
-
-        construct {
-            targets = new GLib.List<T> ();
-        }
+    public abstract class Restriction : Object {
+        protected UserConfig config;
 
         public static bool get_supported () {
             return true;
@@ -33,28 +29,11 @@ namespace PC.Daemon {
 
         public abstract void start ();
         public abstract void stop ();
+        public abstract void update (string key);
 
-        public void add_target (T item) {
-            targets.append (item);
-        }
-
-        public void remove_target (T item) {
-            targets.remove (item);
-        }
-
-        public void update_targets (GLib.List<T> new_targets) {
-            stop ();
-            clear_targets ();
-
-            foreach (T target in new_targets) {
-                add_target (target);
-            }    
-
-            start ();        
-        }
-
-        public void clear_targets () {
-            targets.remove (targets.data);
+        public Restriction (UserConfig config) {
+            this.config = config;
+            this.config.changed.connect (update);
         }
     }
 }

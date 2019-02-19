@@ -38,6 +38,8 @@ namespace PC.Daemon {
 
     [DBus (name = "org.pantheon.ParentalControls")]
     public class Server : Object {
+        private const uint CLIENT_LAUNCH_TIMEOUT = 5000;
+
         private static Server? instance = null;
         private DBus? bus_proxy = null;
 
@@ -63,18 +65,57 @@ namespace PC.Daemon {
             config_changed.connect (on_config_changed);
         }
 
-        [DBus (visible = false)]
-        public signal void app_authorization_ended (int client_pid);
-
-        public signal void app_authorize (string username, string path, string action_id);
-        public signal void launch (string[] args);
-        public signal void show_app_unavailable (string path);
+        public signal void launch (string[] args, bool incoming);
         public signal void show_timeout (int hours, int minutes);
         public signal void config_changed ();
 
-        public void end_app_authorization (BusName sender) throws GLib.Error {
-            uint32 pid = get_pid_from_sender (sender);
-            app_authorization_ended ((int)pid);
+        public void finish_app_authorization (BusName sender, string username, string[] args) throws GLib.Error, ParentalControlsError {
+            var config = UserConfig.get_for_username (username, false);
+            if (config == null || !config.get_admin ()) {
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not have an ability to authorize".printf (username));
+            }
+
+            uint32 client_pid = get_pid_from_sender (sender);
+            var authority = Polkit.Authority.get_sync ();
+            try {
+                var unix_user = new Polkit.UnixUser.for_name (username);
+                var result = authority.check_authorization_sync (new Polkit.UnixProcess.for_owner ((int)client_pid, 0, unix_user.get_uid ()),
+                                                                Constants.PARENTAL_CONTROLS_ACTION_ID,
+                                                                null,
+                                                                Polkit.CheckAuthorizationFlags.NONE);
+                if (result.get_is_authorized ()) {
+                    AccessControlLists.setfacl (username, args[0], "--x");
+                    ulong launch_signal_id = 0U;
+                    uint timeout_signal_id = 0U;
+
+                    launch_signal_id = launch.connect ((args, incoming) => {
+                        if (incoming) {
+                            return;
+                        }
+
+                        disconnect (launch_signal_id);
+                        if (timeout_signal_id != 0U) {
+                            Source.remove (timeout_signal_id);
+                        }
+
+                        AccessControlLists.setfacl (username, args[0], AccessControlLists.NO_EXEC_PERMISSIONS);
+                    });
+
+                    timeout_signal_id = Timeout.add (CLIENT_LAUNCH_TIMEOUT, () => {
+                        warning ("Max timeout reached (%u ms): client did not respond.", CLIENT_LAUNCH_TIMEOUT);
+                        if (launch_signal_id != 0U) {
+                            disconnect (launch_signal_id);
+                        }
+
+                        AccessControlLists.setfacl (username, args[0], AccessControlLists.NO_EXEC_PERMISSIONS);
+                        return false;                        
+                    });
+
+                    launch (args, true);
+                }
+            } catch (Error e) {
+                throw e;
+            }
         }
 
         public void add_restriction_for_user (string input, bool clean, BusName sender) throws GLib.Error, ParentalControlsError {

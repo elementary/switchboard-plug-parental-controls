@@ -4,6 +4,7 @@ common_files_minimal = files(
 
 configuration_data = configuration_data()
 configuration_data.set('DAEMON_CONF_DIR', daemon_conf_dir)
+configuration_data.set('CLIENT_PATH', join_paths(client_path, client_name))
 
 common_files_minimal += configure_file(
     input: 'Constants.vala.in',

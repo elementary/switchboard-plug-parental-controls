@@ -44,5 +44,9 @@ namespace PC.Daemon {
             restrictions.remove (restriction);
             restriction.stop ();
         }
+
+        public bool has_restrictions () {
+            return restrictions.size > 0;
+        }
     }
 }
