@@ -43,7 +43,6 @@ namespace PC.Widgets {
                 var delete_button = new Gtk.Button.from_icon_name ("user-trash-symbolic");
                 delete_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
                 delete_button.clicked.connect (() => {
-                    deleted ();
                     destroy ();
                 });
 
@@ -134,8 +133,10 @@ namespace PC.Widgets {
             }
 
             string[] block_urls = {};
+            print ("URLS\n");
             foreach (weak Gtk.Widget url_entry in list_box.get_children ()) {
                 block_urls += ((UrlEntry) url_entry).url;
+                print (((UrlEntry) url_entry).url + "\n");
             }
 
             Utils.get_api ().set_user_daemon_block_urls.begin (user.get_user_name (), block_urls);
@@ -174,7 +175,7 @@ namespace PC.Widgets {
 
         private void add_entry (string url) {
             var url_entry = new UrlEntry (url);
-            url_entry.deleted.connect (() => update_block_urls ());
+            url_entry.destroy.connect (() => update_block_urls ());
             list_box.add (url_entry);
         }
     }
