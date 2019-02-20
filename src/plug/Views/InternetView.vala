@@ -133,10 +133,8 @@ namespace PC.Widgets {
             }
 
             string[] block_urls = {};
-            print ("URLS\n");
             foreach (weak Gtk.Widget url_entry in list_box.get_children ()) {
                 block_urls += ((UrlEntry) url_entry).url;
-                print (((UrlEntry) url_entry).url + "\n");
             }
 
             Utils.get_api ().set_user_daemon_block_urls.begin (user.get_user_name (), block_urls);
