@@ -27,7 +27,7 @@ namespace PC.Client {
         private static string? auth;
 
         private const GLib.OptionEntry[] options = {
-            { "authorize", 'a', 0, OptionArg.STRING, ref auth, "Authorizes an application (format: username\\;target\\;action_id)", null },
+            { "authorize", 'a', 0, OptionArg.STRING, ref auth, "Authorizes an application (format: username:target:action_id)", null },
             { "dialog", 'd', 0, OptionArg.STRING, ref app_name, "Show an unavailable dialog for the specified application name", null },
             { null }
         };
@@ -56,11 +56,11 @@ namespace PC.Client {
             }
 
             if (auth != null) {
-                string[] tokens = auth.split (";");
+                string[] tokens = auth.split (":", 3);
                 if (tokens.length == 3) {
                     on_authorize (tokens[0], tokens[1], tokens[2]);
                 } else {
-                    print ("Usage: --authorize username\\;target\\;action_id");
+                    print ("Usage: --authorize username:target:action_id");
                     return;
                 }
             }

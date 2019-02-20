@@ -66,7 +66,7 @@ public class PC.AccessControlLists {
 
         if (admin) {
             keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC,
-                "%s -a %s;%s;%s".printf (Constants.CLIENT_PATH, username, target, Constants.PARENTAL_CONTROLS_ACTION_ID));
+                "%s -a %s:%s:%s".printf (Constants.CLIENT_PATH, username, target, Constants.PARENTAL_CONTROLS_ACTION_ID));
         } else {
             keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC,
                 "%s -d %s".printf (Constants.CLIENT_PATH, path));
