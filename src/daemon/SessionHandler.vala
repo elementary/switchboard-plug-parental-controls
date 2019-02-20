@@ -37,7 +37,7 @@
             server = Server.get_default ();
 
             config = UserConfig.get_for_username (session.name, true);
-            config.changed.connect (on_config_changed);
+            config.notify["active"].connect (update);
 
             controller = new RestrictionController ();
 
@@ -69,7 +69,7 @@
         }
 
         public void update () {
-            var active = config.get_active ();
+            var active = config.active;
             if (!active && controller.has_restrictions ()) {
                 stop ();
             } else if (active && !controller.has_restrictions ()) {
@@ -81,14 +81,6 @@
             controller.remove_restriction (app_restriction);
             controller.remove_restriction (web_restriction);
             controller.remove_restriction (time_restriction);
-        }
-
-        private void on_config_changed (string key) {
-            if (key != Constants.DAEMON_KEY_ACTIVE) {
-                return;
-            }
-
-            update ();
         }
     }
 }

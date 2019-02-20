@@ -23,7 +23,6 @@
 namespace PC.Daemon {
     public class UserConfig : Object {
         public string username { get; set; }
-        public signal void changed (string key);
 
         private static KeyFile key;
         private static List<UserConfig> config_list;
@@ -87,77 +86,81 @@ namespace PC.Daemon {
             }
 
             var config = new UserConfig (username);
-            config.set_active (false);
+            config.active = false;
             config_list.append (config);
             return config;
         }
 
+        public bool active {
+            get {
+                try {
+                    return key.get_boolean (username, Constants.DAEMON_KEY_ACTIVE);
+                } catch (KeyFileError e) {
+                    warning (e.message);
+                }
+
+                return false;
+            }
+
+            set {
+                key.set_boolean (username, Constants.DAEMON_KEY_ACTIVE, value);
+                save ();
+            }
+        }
+
+        public string[] targets {
+            owned get {
+                try {            
+                    return key.get_string_list (username, Constants.DAEMON_KEY_TARGETS);
+                } catch (KeyFileError e) {
+                    warning (e.message);
+                }   
+    
+                return {};
+            }
+
+            set {
+                key.set_string_list (username, Constants.DAEMON_KEY_TARGETS, value);
+                save ();
+            }
+        }
+
+        public string[] block_urls {
+            owned get {
+                try {
+                    return key.get_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS);
+                } catch (KeyFileError e) {
+                    warning (e.message);
+                }
+    
+                return {};
+            }
+
+            set {
+                key.set_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS, value);
+                save ();
+            }
+        }
+
+        public bool admin {
+            get {
+                try {
+                    return key.get_boolean (username, Constants.DAEMON_KEY_ADMIN);
+                } catch (KeyFileError e) {
+                    warning (e.message);
+                }
+
+                return false;
+            }
+
+            set {
+                key.set_boolean (username, Constants.DAEMON_KEY_ADMIN, value);
+                save ();
+            }
+        }
+
         private UserConfig (string username) {
             this.username = username;
-        }
-
-        public void set_active (bool active) {
-            key.set_boolean (username, Constants.DAEMON_KEY_ACTIVE, active);
-            save ();
-            changed (Constants.DAEMON_KEY_ACTIVE);
-        }
-
-        public void set_targets (string[] targets) {
-            key.set_string_list (username, Constants.DAEMON_KEY_TARGETS, targets);
-            save ();
-            changed (Constants.DAEMON_KEY_TARGETS);
-        }
-
-        public void set_block_urls (string[] block_urls) {
-            key.set_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS, block_urls);
-            save ();
-            changed (Constants.DAEMON_KEY_BLOCK_URLS);
-        }
-
-        public void set_admin (bool admin) {
-            key.set_boolean (username, Constants.DAEMON_KEY_ADMIN, admin);
-            save ();
-            changed (Constants.DAEMON_KEY_ADMIN);
-        }
-
-        public bool get_active () {
-            try {
-                return key.get_boolean (username, Constants.DAEMON_KEY_ACTIVE);
-            } catch (KeyFileError e) {
-                warning (e.message);
-            }
-
-            return false;
-        }
-
-        public string[] get_targets () {
-            try {            
-                return key.get_string_list (username, Constants.DAEMON_KEY_TARGETS);
-            } catch (KeyFileError e) {
-                warning (e.message);
-            }   
-
-            return {};         
-        }
-
-        public string[] get_block_urls () {
-            try {
-                return key.get_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS);
-            } catch (KeyFileError e) {
-                warning (e.message);
-            }
-
-            return {};                
-        }
-
-        public bool get_admin () {
-            try {
-                return key.get_boolean (username, Constants.DAEMON_KEY_ADMIN);
-            } catch (KeyFileError e) {
-                warning (e.message);
-            }
-
-            return false;
         }
 
         private void save () {

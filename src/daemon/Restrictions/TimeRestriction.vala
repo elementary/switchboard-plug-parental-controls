@@ -22,18 +22,20 @@
 
 namespace PC.Daemon {
     public class TimeRestriction : Restriction {
-        private const string TIME_KEY = "Time";
         private const int MINUTE_INTERVAL = 60;
         private const int HOUR_INTERVAL = 3600;
+        private const uint UPDATE_THROTTLE_INTERVAL = 3000;
         private File? time_file;
         private FileMonitor? monitor;
 
         public signal void terminate ();
         
-        private uint[] timeout_ids;
+        private Gee.ArrayList<uint> timeout_ids;
+        private uint update_timeout_id = 0U;
 
         public TimeRestriction (UserConfig config) {
             base (config);
+            timeout_ids = new Gee.ArrayList<uint> ();
         }
 
         public override void start () {
@@ -48,13 +50,7 @@ namespace PC.Daemon {
 
             try {
                 monitor = time_file.monitor (FileMonitorFlags.NONE, null);
-                monitor.changed.connect ((file, other, type) => {
-                    if (type != FileMonitorEvent.CHANGED) {
-                        return;
-                    }
-
-                    update (TIME_KEY);
-                });
+                monitor.changed.connect (on_time_file_changed);
             } catch (Error e) {
                 critical (e.message);
             }
@@ -68,15 +64,27 @@ namespace PC.Daemon {
             foreach (uint timeout_id in timeout_ids) {
                 GLib.Source.remove (timeout_id);
             }
+
+            timeout_ids.clear ();
+            update_timeout_id = 0U;
         }
 
-        public override void update (string key) {
-            if (key != TIME_KEY) {
+        private void update () {
+            stop ();
+            start ();   
+        }
+
+        private void on_time_file_changed (File file, File? other, FileMonitorEvent type) {
+            if (type != FileMonitorEvent.CHANGED && type != FileMonitorEvent.CHANGES_DONE_HINT) {
                 return;
             }
             
-            stop ();
-            start ();   
+            Source.remove (update_timeout_id);
+            update_timeout_id = Timeout.add (UPDATE_THROTTLE_INTERVAL, () => {
+                update_timeout_id = 0U;
+                update ();
+                return false;
+            });
         }
 
         private void process_token (PAM.Token token) {
@@ -110,11 +118,14 @@ namespace PC.Daemon {
                 terminate ();
             }  
 
-            timeout_ids += Timeout.add_seconds (HOUR_INTERVAL * 24, () => {
+            uint tid = 0U;
+            tid = Timeout.add_seconds (HOUR_INTERVAL * 24, () => {
                 stop ();
                 start ();
                 return true;
             });
+
+            timeout_ids.add (tid);
         }
 
         private TimeSpan get_difference_span (string estimated_time_str) {
@@ -136,7 +147,8 @@ namespace PC.Daemon {
 
         private void start_loop (int minutes) {
             Server.get_default ().show_timeout (minutes / MINUTE_INTERVAL, minutes % MINUTE_INTERVAL);
-            timeout_ids += Timeout.add_seconds (MINUTE_INTERVAL, () => {
+            uint tid = 0U;
+            tid = Timeout.add_seconds (MINUTE_INTERVAL, () => {
                 minutes--;
                 if (minutes == MINUTE_INTERVAL ||
                     minutes == 10 ||
@@ -147,10 +159,15 @@ namespace PC.Daemon {
 
                 if (minutes == 0) {
                     terminate ();
+                } else if (minutes > 0) {
+                    return true;
                 }
 
-                return (minutes > 0);
+                timeout_ids.remove (tid);
+                return false;
             });
+
+            timeout_ids.add (tid);
         }   
     }
 }

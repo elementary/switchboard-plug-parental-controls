@@ -31,24 +31,22 @@ namespace PC.Daemon {
 
         public AppRestriction (UserConfig config) {
             base (config);
+            config.notify["targets"].connect (update);
+            config.notify["admin"].connect (update);
         }
 
         public override void start () {
-            update (Constants.DAEMON_KEY_TARGETS);
+            update ();
         }
 
         public override void stop () {
-            var admin = config.get_admin ();
-            AccessControlLists.apply_targets (config.username, config.get_targets (), {}, admin, admin);
+            var admin = config.admin;
+            AccessControlLists.apply_targets (config.username, config.targets, {}, admin, admin);
         }
 
-        public override void update (string key) {
-            if (key != Constants.DAEMON_KEY_TARGETS && key != Constants.DAEMON_KEY_ADMIN) {
-                return;
-            }
-
-            var new_targets = config.get_targets ();
-            var new_admin = config.get_admin ();
+        private void update () {
+            var new_targets = config.targets;
+            var new_admin = config.admin;
             AccessControlLists.apply_targets (config.username, old_targets, new_targets, old_admin, new_admin);
             old_targets = new_targets;
             old_admin = new_admin;

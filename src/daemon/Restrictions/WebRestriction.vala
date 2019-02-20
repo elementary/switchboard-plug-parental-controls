@@ -31,23 +31,20 @@
 
         public WebRestriction (UserConfig config) {
             base (config);
+            config.notify["block-urls"].connect (update);
         }
 
         public override void start () {
-            update (Constants.DAEMON_KEY_BLOCK_URLS);  
+            update ();
         }
 
         public override void stop () {
-            process_urls (config.get_block_urls (), false);
+            process_urls (config.block_urls, false);
         }
 
-        public override void update (string key) {
-            if (key != Constants.DAEMON_KEY_BLOCK_URLS) {
-                return;
-            }
-            
+        private void update () {
             process_urls (old_urls, false);
-            old_urls = config.get_block_urls ();
+            old_urls = config.block_urls;
             process_urls (old_urls, true);
         }
 
