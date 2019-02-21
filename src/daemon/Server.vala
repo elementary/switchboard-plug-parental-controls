@@ -84,7 +84,12 @@ namespace PC.Daemon {
                                                                 null,
                                                                 Polkit.CheckAuthorizationFlags.NONE);
                 if (result.get_is_authorized ()) {
-                    AccessControlLists.setfacl (username, args[0], "--x");
+                    string? path = GLib.Environment.find_program_in_path (args[0]);
+                    if (path == null) {
+                        path = args[0];
+                    }
+
+                    AccessControlLists.setfacl (username, path, "--x");
                     ulong launch_signal_id = 0U;
                     uint timeout_signal_id = 0U;
 
@@ -98,7 +103,7 @@ namespace PC.Daemon {
                             Source.remove (timeout_signal_id);
                         }
 
-                        AccessControlLists.setfacl (username, args[0], AccessControlLists.NO_EXEC_PERMISSIONS);
+                        AccessControlLists.setfacl (username, path, AccessControlLists.NO_EXEC_PERMISSIONS);
                     });
 
                     timeout_signal_id = Timeout.add (CLIENT_LAUNCH_TIMEOUT, () => {
@@ -107,7 +112,7 @@ namespace PC.Daemon {
                             disconnect (launch_signal_id);
                         }
 
-                        AccessControlLists.setfacl (username, args[0], AccessControlLists.NO_EXEC_PERMISSIONS);
+                        AccessControlLists.setfacl (username, path, AccessControlLists.NO_EXEC_PERMISSIONS);
                         return false;                        
                     });
 

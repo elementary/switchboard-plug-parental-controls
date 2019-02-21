@@ -27,7 +27,7 @@ public class PC.AccessControlLists {
     private static AppInfo? get_match (string target, List<AppInfo> infos) {
         string basename = Path.get_basename (target);
         foreach (var info in infos) {
-            if (info.get_executable () == basename) {
+            if (info.should_show () && info.get_executable () == basename) {
                 return info;
             }
         }
@@ -64,12 +64,26 @@ public class PC.AccessControlLists {
             return null;
         }
 
+        string exec;
+        try {
+            exec = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC);
+        } catch (KeyFileError e) {
+            exec = target;
+        }
+
         if (admin) {
             keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC,
-                "%s -a %s:%s:%s".printf (Constants.CLIENT_PATH, username, target, Constants.PARENTAL_CONTROLS_ACTION_ID));
+                "%s -a \"%s:%s:%s\"".printf (Constants.CLIENT_PATH, username, Constants.PARENTAL_CONTROLS_ACTION_ID, exec));
         } else {
+            string[] argv;
+            try {
+                Shell.parse_argv (exec, out argv);
+            } catch (ShellError e) {
+                argv = exec.split (" ");
+            }
+
             keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC,
-                "%s -d %s".printf (Constants.CLIENT_PATH, path));
+                "%s -d %s".printf (Constants.CLIENT_PATH, argv[0]));
         }
 
         return keyfile.to_data ();
@@ -124,9 +138,9 @@ public class PC.AccessControlLists {
                     } catch (Error e) {
                         warning (e.message);
                     }
+                    
+                    continue;
                 }
-
-                continue;
             }
 
             string? contents = process_desktop_entry (target_file.get_path (), target, username, admin);
