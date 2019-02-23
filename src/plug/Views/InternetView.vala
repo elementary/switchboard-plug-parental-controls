@@ -32,7 +32,6 @@ namespace PC.Widgets {
         private Gtk.Button add_button;
 
         private class UrlEntry : Gtk.ListBoxRow {
-            public signal void deleted ();
             public string url { get; construct; }
 
             public UrlEntry (string url) {
