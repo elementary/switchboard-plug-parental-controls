@@ -38,14 +38,14 @@ namespace PC.Widgets {
             Object (user: user);
             plank_conf_file_path = Path.build_filename (user.get_home_dir (), Constants.PLANK_CONF_DIR);
 
-            limit_switch.notify["active"].connect (on_limit_switch_changed);
+            limit_switch.notify["active"].connect (() => update_pam ());
             limit_switch.bind_property ("active", limit_combobox, "sensitive", GLib.BindingFlags.SYNC_CREATE);
             limit_switch.bind_property ("active", frame, "sensitive", GLib.BindingFlags.SYNC_CREATE);
 
             limit_combobox.changed.connect (on_limit_combobox_changed);
 
-            weekday_box.changed.connect (update_pam);
-            weekend_box.changed.connect (update_pam);
+            weekday_box.changed.connect (() => update_pam ());
+            weekend_box.changed.connect (() => update_pam ());
 
             load_restrictions ();
         }
@@ -128,31 +128,27 @@ namespace PC.Widgets {
             }
         }
 
-        public void update_pam () {
+        public void update_pam (bool daemon_active = true) {
             if (!Utils.get_permission ().get_allowed ()) {
                 return;
             }
 
-            string[] times = {};
-            string[] users = { user.get_user_name () };
-            unowned string id = limit_combobox.get_active_id ();
+            if (limit_switch.get_active () && daemon_active) {
+                string[] times = {};
+                string[] users = { user.get_user_name () };
+                unowned string id = limit_combobox.get_active_id ();
 
-            if (PAM.DayType.WEEKDAY.to_string () in id) {
-                times += PAM.DayType.WEEKDAY.to_string () + weekday_box.get_from () + "-" + weekday_box.get_to ();
-            }
+                if (PAM.DayType.WEEKDAY.to_string () in id) {
+                    times += PAM.DayType.WEEKDAY.to_string () + weekday_box.get_from () + "-" + weekday_box.get_to ();
+                }
 
-            if (PAM.DayType.WEEKEND.to_string () in id) {
-                times += PAM.DayType.WEEKEND.to_string () + weekend_box.get_from () + "-" + weekend_box.get_to ();
-            }
+                if (PAM.DayType.WEEKEND.to_string () in id) {
+                    times += PAM.DayType.WEEKEND.to_string () + weekend_box.get_from () + "-" + weekend_box.get_to ();
+                }
 
-            string input = PAM.Token.construct_pam_restriction_simple (users, times);
-            Utils.get_api ().add_restriction_for_user.begin (input, true);
-        }
-
-        private void on_limit_switch_changed () {
-            if (limit_switch.get_active ()) {
-                update_pam ();
-            } else if (Utils.get_permission ().get_allowed ()) {
+                string input = PAM.Token.construct_pam_restriction_simple (users, times);
+                Utils.get_api ().add_restriction_for_user.begin (input, true);
+            } else {
                 Utils.get_api ().remove_restriction_for_user.begin (user.get_user_name ());
             }
         }
