@@ -111,7 +111,7 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created", username);
             }
 
-            config.set_active (active);
+            config.active = active;
         }
 
         public void set_user_daemon_targets (string username, string[] targets, BusName sender) throws GLib.Error, ParentalControlsError {
@@ -124,7 +124,7 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created", username);
             }
 
-            config.set_targets (targets);
+            config.targets = targets;
         }
 
         public void set_user_daemon_block_urls (string username, string[] block_urls, BusName sender) throws GLib.Error, ParentalControlsError {
@@ -137,7 +137,7 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created", username);
             }
 
-            config.set_block_urls (block_urls);
+            config.block_urls = block_urls;
         }
 
         public void set_user_daemon_admin (string username, bool admin, BusName sender) throws GLib.Error, ParentalControlsError {
@@ -150,7 +150,7 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created", username);
             }
 
-            config.set_admin (admin);
+            config.admin = admin;
         }
 
         public bool get_user_daemon_active (string username) throws GLib.Error, ParentalControlsError {
@@ -159,7 +159,7 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist", username);
             }
 
-            return config.get_active ();
+            return config.active;
         }
 
         public string[] get_user_daemon_targets (string username) throws GLib.Error, ParentalControlsError {
@@ -168,7 +168,7 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist", username);
             }
 
-            return config.get_targets ();
+            return config.targets;
         }
 
         public string[] get_user_daemon_block_urls (string username) throws GLib.Error, ParentalControlsError {
@@ -177,7 +177,7 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist", username);
             }
 
-            return config.get_block_urls ();
+            return config.block_urls;
         }
 
         public bool get_user_daemon_admin (string username) throws GLib.Error, ParentalControlsError {
@@ -186,7 +186,7 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist", username);
             }
 
-            return config.get_admin ();
+            return config.admin;
         }
 
         private void on_config_changed () {

@@ -37,7 +37,7 @@
             server = Server.get_default ();
 
             config = UserConfig.get_for_username (session.name, false);
-            if (config == null || !config.get_active ()) {
+            if (config == null || !config.active) {
                 throw new GLib.IOError.FAILED ("Unable to get userconfig");
             }
 
@@ -66,16 +66,16 @@
 
         public void start () {
             app_restriction.username = config.username;
-            app_restriction.admin = config.get_admin ();
+            app_restriction.admin = config.admin;
 
-            foreach (string target in config.get_targets ()) {
+            foreach (string target in config.targets) {
                 app_restriction.add_target (target);
             }
 
             controller.add_restriction (app_restriction);
 
             if (WebRestriction.get_supported ()) {
-                foreach (string url in config.get_block_urls ()) {
+                foreach (string url in config.block_urls) {
                     web_restriction.add_target (url);
                 }
 
@@ -89,23 +89,23 @@
         }
 
         public void update () {
-            if (!config.get_active ()) {
+            if (!config.active) {
                 stop ();
                 return;
             }
 
             app_restriction.username = config.username;
-            app_restriction.admin = config.get_admin ();
+            app_restriction.admin = config.admin;
 
             var new_targets = new GLib.List<string> ();
-            foreach (string target in config.get_targets ()) {
+            foreach (string target in config.targets) {
                 new_targets.append (target);
             }
 
             app_restriction.update_targets (new_targets);
 
             new_targets = new GLib.List<string> ();
-            foreach (string url in config.get_block_urls ()) {
+            foreach (string url in config.block_urls) {
                 new_targets.append (url);
             }
 
