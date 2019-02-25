@@ -71,11 +71,7 @@ namespace PC.Widgets {
             unowned Polkit.Permission permission = Utils.get_permission ();
             if (permission.allowed) {
                 Utils.get_api ().set_user_daemon_active.begin (user.get_user_name (), active);
-                if (active) {
-                    time_limit_view.update_pam ();
-                } else {
-                    Utils.get_api ().remove_restriction_for_user.begin (user.get_user_name ());
-                }
+                time_limit_view.update_pam (active);
             }  
         }
 
