@@ -86,7 +86,7 @@ namespace PC.Daemon {
             }
 
             var config = new UserConfig (username);
-            config.set_active (false);
+            config.active = false;
             config_list.append (config);
             return config;
         }
@@ -95,64 +95,68 @@ namespace PC.Daemon {
             this.username = username;
         }
 
-        public void set_active (bool active) {
-            key.set_boolean (username, Constants.DAEMON_KEY_ACTIVE, active);
-            save ();
-        }
+        public bool active {
+            get {
+                try {
+                    return key.get_boolean (username, Constants.DAEMON_KEY_ACTIVE);
+                } catch (KeyFileError e) {
+                    critical (e.message);
+                }
 
-        public void set_targets (string[] targets) {
-            key.set_string_list (username, Constants.DAEMON_KEY_TARGETS, targets);
-            save ();
-        }
-
-        public void set_block_urls (string[] block_urls) {
-            key.set_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS, block_urls);
-            save ();
-        }
-
-        public void set_admin (bool admin) {
-            key.set_boolean (username, Constants.DAEMON_KEY_ADMIN, admin);
-            save ();
-        }
-
-        public bool get_active () {
-            try {
-                return key.get_boolean (username, Constants.DAEMON_KEY_ACTIVE);
-            } catch (KeyFileError e) {
-                warning (e.message);
+                return false;
             }
-
-            return false;
-        }
-
-        public string[] get_targets () {
-            try {            
-                return key.get_string_list (username, Constants.DAEMON_KEY_TARGETS);
-            } catch (KeyFileError e) {
-                warning (e.message);
-            }   
-
-            return {};         
-        }
-
-        public string[] get_block_urls () {
-            try {
-                return key.get_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS);
-            } catch (KeyFileError e) {
-                warning (e.message);
+            set {
+                key.set_boolean (username, Constants.DAEMON_KEY_ACTIVE, value);
+                save ();
             }
-
-            return {};                
         }
 
-        public bool get_admin () {
-            try {
-                return key.get_boolean (username, Constants.DAEMON_KEY_ADMIN);
-            } catch (KeyFileError e) {
-                warning (e.message);
-            }
+        public string[] targets {
+            owned get {
+                try {
+                    return key.get_string_list (username, Constants.DAEMON_KEY_TARGETS);
+                } catch (KeyFileError e) {
+                    critical (e.message);
+                }
 
-            return false;
+                return {};
+            }
+            set {
+                key.set_string_list (username, Constants.DAEMON_KEY_TARGETS, value);
+                save ();
+            }
+        }
+
+        public string[] block_urls {
+            owned get {
+                try {
+                    return key.get_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS);
+                } catch (KeyFileError e) {
+                    critical (e.message);
+                }
+
+                return {};
+            }
+            set {
+                key.set_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS, value);
+                save ();
+            }
+        }
+
+        public bool admin {
+            get {
+                try {
+                    return key.get_boolean (username, Constants.DAEMON_KEY_ADMIN);
+                } catch (KeyFileError e) {
+                    critical (e.message);
+                }
+
+                return false;
+            }
+            set {
+                key.set_boolean (username, Constants.DAEMON_KEY_ADMIN, value);
+                save ();
+            }
         }
 
         private void save () {
