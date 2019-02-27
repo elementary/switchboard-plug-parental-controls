@@ -12,7 +12,7 @@ src/plug/Widgets/ControlPage.vala
 src/plug/Widgets/AppChooser.vala
 src/client/Client.vala
 src/client/AppUnavailableDialog.vala
-src/daemon/UserConfiguration.vala
+src/daemon/UserConfig.vala
 src/daemon/SessionManager.vala
 src/daemon/SessionHandler.vala
 src/daemon/Server.vala
