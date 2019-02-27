@@ -1,4 +1,4 @@
-/*-
+/*
  * Copyright 2019 elementary, Inc. (https://elementary.io)
  *           2015-2016 Adam Bieńkowski
  *
