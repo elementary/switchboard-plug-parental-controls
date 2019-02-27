@@ -28,7 +28,7 @@
         private WebRestriction web_restriction;
         private TimeRestriction time_restriction;
 
-        public unowned UserConfiguration config { get; private set; }
+        public unowned UserConfig config { get; private set; }
         public ISession session;
         private Server server;
 
@@ -36,7 +36,7 @@
             this.session = session;
             server = Server.get_default ();
 
-            config = UserConfiguration.get_for_username (session.name);
+            config = UserConfig.get_for_username (session.name);
             if (config == null || !config.active) {
                 throw new GLib.IOError.FAILED ("Unable to get userconfig");
             }

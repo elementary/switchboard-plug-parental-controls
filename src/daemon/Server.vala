@@ -104,7 +104,7 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
 
-            unowned UserConfiguration? config = UserConfiguration.get_for_username (username, true);
+            unowned UserConfig? config = UserConfig.get_for_username (username, true);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created", username);
             }
@@ -117,7 +117,7 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
 
-            unowned UserConfiguration? config = UserConfiguration.get_for_username (username, true);
+            unowned UserConfig? config = UserConfig.get_for_username (username, true);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created", username);
             }
@@ -130,7 +130,7 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }  
 
-            unowned UserConfiguration? config = UserConfiguration.get_for_username (username, true);
+            unowned UserConfig? config = UserConfig.get_for_username (username, true);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created", username);
             }
@@ -143,7 +143,7 @@ namespace PC.Daemon {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
 
-            unowned UserConfiguration config = UserConfiguration.get_for_username (username, true);
+            unowned UserConfig config = UserConfig.get_for_username (username, true);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or could not be created", username);
             }
@@ -152,7 +152,7 @@ namespace PC.Daemon {
         }
 
         public bool get_user_daemon_active (string username) throws GLib.Error, ParentalControlsError {
-            unowned UserConfiguration config = UserConfiguration.get_for_username (username);
+            unowned UserConfig config = UserConfig.get_for_username (username);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist", username);
             }
@@ -161,7 +161,7 @@ namespace PC.Daemon {
         }
 
         public string[] get_user_daemon_targets (string username) throws GLib.Error, ParentalControlsError {
-            unowned UserConfiguration config = UserConfiguration.get_for_username (username);
+            unowned UserConfig config = UserConfig.get_for_username (username);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist", username);
             }
@@ -170,7 +170,7 @@ namespace PC.Daemon {
         }
 
         public string[] get_user_daemon_block_urls (string username) throws GLib.Error, ParentalControlsError {
-            unowned UserConfiguration config = UserConfiguration.get_for_username (username);
+            unowned UserConfig config = UserConfig.get_for_username (username);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist", username);
             }
@@ -179,7 +179,7 @@ namespace PC.Daemon {
         }
 
         public bool get_user_daemon_admin (string username) throws GLib.Error, ParentalControlsError {
-            unowned UserConfiguration config = UserConfiguration.get_for_username (username);
+            unowned UserConfig config = UserConfig.get_for_username (username);
             if (config == null) {
                 throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not exist", username);
             }

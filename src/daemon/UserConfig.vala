@@ -19,20 +19,20 @@
  * Authored by: Corentin Noël <corentin@elementary.io>
  */
 
-public class PC.Daemon.UserConfiguration : GLib.Object {
+public class PC.Daemon.UserConfig : GLib.Object {
     private static GLib.KeyFile key_file;
-    private static GLib.HashTable<string, UserConfiguration> configurations;
+    private static GLib.HashTable<string, UserConfig> configurations;
 
-    public static unowned UserConfiguration? get_for_username (string username, bool create = false) {
+    public static unowned UserConfig? get_for_username (string username, bool create = false) {
         // We need this to be sure that the configurations table will be populated
-        typeof(UserConfiguration).ensure ();
+        typeof(UserConfig).ensure ();
 
-        unowned UserConfiguration? config = configurations[username];
+        unowned UserConfig? config = configurations[username];
         if (config == null && create) {
             // We need to ensure that the user exist before creating a configuration
             var user = Utils.get_usermanager ().get_user (username);
             if (user != null) {
-                var new_config = new UserConfiguration (username);
+                var new_config = new UserConfig (username);
                 configurations[username] = new_config;
                 config = new_config;
             }
@@ -41,11 +41,11 @@ public class PC.Daemon.UserConfiguration : GLib.Object {
         return config;
     }
 
-    public static Gee.ArrayList<UserConfiguration> get_all () {
+    public static Gee.ArrayList<UserConfig> get_all () {
         // We need this to be sure that the configurations table will be populated
-        typeof(UserConfiguration).ensure ();
+        typeof(UserConfig).ensure ();
 
-        var list = new Gee.ArrayList<UserConfiguration> ();
+        var list = new Gee.ArrayList<UserConfig> ();
         configurations.foreach ((key, val) => {
             list.add (val);
         });
@@ -54,7 +54,7 @@ public class PC.Daemon.UserConfiguration : GLib.Object {
     }
 
     static construct {
-        configurations = new GLib.HashTable<string, UserConfiguration> (str_hash, str_equal);
+        configurations = new GLib.HashTable<string, UserConfig> (str_hash, str_equal);
         key_file = new GLib.KeyFile ();
         key_file.set_list_separator (';');
 
@@ -68,7 +68,7 @@ public class PC.Daemon.UserConfiguration : GLib.Object {
 
             string[] usernames = key_file.get_groups ();
             foreach (unowned string username in usernames) {
-                configurations[username] = new UserConfiguration (username);
+                configurations[username] = new UserConfig (username);
             }
         } else {
             critical ("Failed to load configuration file: %s does not exist", file.get_path ());
@@ -135,7 +135,7 @@ public class PC.Daemon.UserConfiguration : GLib.Object {
         }
     }
 
-    private UserConfiguration (string username) {
+    private UserConfig (string username) {
         Object (username: username);
     }
 
