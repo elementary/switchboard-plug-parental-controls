@@ -123,6 +123,7 @@ namespace PC.Daemon {
                 save ();
             }
         }
+
         public bool admin {
             get {
                 try {
