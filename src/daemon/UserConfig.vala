@@ -96,12 +96,11 @@ namespace PC.Daemon {
                 try {
                     return key.get_boolean (username, Constants.DAEMON_KEY_ACTIVE);
                 } catch (KeyFileError e) {
-                    warning (e.message);
+                    critical (e.message);
                 }
 
                 return false;
             }
-
             set {
                 key.set_boolean (username, Constants.DAEMON_KEY_ACTIVE, value);
                 save ();
@@ -110,15 +109,14 @@ namespace PC.Daemon {
 
         public string[] targets {
             owned get {
-                try {            
+                try {
                     return key.get_string_list (username, Constants.DAEMON_KEY_TARGETS);
                 } catch (KeyFileError e) {
                     warning (e.message);
-                }   
-    
+                }
+
                 return {};
             }
-
             set {
                 key.set_string_list (username, Constants.DAEMON_KEY_TARGETS, value);
                 save ();
@@ -130,12 +128,11 @@ namespace PC.Daemon {
                 try {
                     return key.get_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS);
                 } catch (KeyFileError e) {
-                    warning (e.message);
+                    critical (e.message);
                 }
-    
+
                 return {};
             }
-
             set {
                 key.set_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS, value);
                 save ();
@@ -147,12 +144,11 @@ namespace PC.Daemon {
                 try {
                     return key.get_boolean (username, Constants.DAEMON_KEY_ADMIN);
                 } catch (KeyFileError e) {
-                    warning (e.message);
+                    critical (e.message);
                 }
 
                 return false;
             }
-
             set {
                 key.set_boolean (username, Constants.DAEMON_KEY_ADMIN, value);
                 save ();
