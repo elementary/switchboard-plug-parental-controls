@@ -21,137 +21,135 @@
  *              Corentin Noël <corentin@elementary.io>
  */
 
-namespace PC.Daemon {
-    public class UserConfig : GLib.Object {
-        private static GLib.KeyFile key;
-        private static GLib.HashTable<string, UserConfig> configurations;
+public class PC.Daemon.UserConfig : GLib.Object {
+    private static GLib.KeyFile key;
+    private static GLib.HashTable<string, UserConfig> configurations;
 
-        public static unowned UserConfig? get_for_username (string username, bool create = false) {
-            // We need this to be sure that the configurations table will be populated
-            typeof(UserConfig).ensure ();
+    public static unowned UserConfig? get_for_username (string username, bool create = false) {
+        // We need this to be sure that the configurations table will be populated
+        typeof(UserConfig).ensure ();
 
-            unowned UserConfig? config = configurations[username];
-            if (config == null && create) {
-                // We need to ensure that the user exist before creating a configuration
-                var user = Utils.get_usermanager ().get_user (username);
-                if (user != null) {
-                    var new_config = new UserConfig (username);
-                    configurations[username] = new_config;
-                    config = new_config;
-                }
-            }
-
-            return config;
-        }
-
-        public static Gee.ArrayList<UserConfig> get_all () {
-            // We need this to be sure that the configurations table will be populated
-            typeof(UserConfig).ensure ();
-
-            var list = new Gee.ArrayList<UserConfig> ();
-            configurations.foreach ((key, val) => {
-                list.add (val);
-            });
-
-            return list;
-        }
-
-        static construct {
-            configurations = new GLib.HashTable<string, UserConfig> (str_hash, str_equal);
-            key = new GLib.KeyFile ();
-            key.set_list_separator (';');
-
-            var file = GLib.File.new_for_path (Constants.DAEMON_CONF_FILE);
-            if (file.query_exists ()) {
-                try {
-                    key.load_from_file (Constants.DAEMON_CONF_FILE, KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS);
-                } catch (GLib.Error e) {
-                    critical (e.message);
-                }
-
-                string[] usernames = key.get_groups ();
-                foreach (unowned string username in usernames) {
-                    configurations[username] = new UserConfig (username);
-                }
-            } else {
-                critical ("Failed to load configuration file: %s does not exist", file.get_path ());
+        unowned UserConfig? config = configurations[username];
+        if (config == null && create) {
+            // We need to ensure that the user exist before creating a configuration
+            var user = Utils.get_usermanager ().get_user (username);
+            if (user != null) {
+                var new_config = new UserConfig (username);
+                configurations[username] = new_config;
+                config = new_config;
             }
         }
 
-        public string username { get; construct; }
-        public bool active {
-            get {
-                try {
-                    return key.get_boolean (username, Constants.DAEMON_KEY_ACTIVE);
-                } catch (Error e) {
-                    debug (e.message);
-                    return false;
-                }
-            }
-            set {
-                key.set_boolean (username, Constants.DAEMON_KEY_ACTIVE, value);
-                save ();
-            }
-        }
+        return config;
+    }
 
-        public string[] targets {
-            owned get {
-                try {
-                    return key.get_string_list (username, Constants.DAEMON_KEY_TARGETS);
-                } catch (Error e) {
-                    debug (e.message);
-                    return {};
-                }
-            }
-            set {
-                key.set_string_list (username, Constants.DAEMON_KEY_TARGETS, value);
-                save ();
-            }
-        }
+    public static Gee.ArrayList<UserConfig> get_all () {
+        // We need this to be sure that the configurations table will be populated
+        typeof(UserConfig).ensure ();
 
-        public string[] block_urls {
-            owned get {
-                try {
-                    return key.get_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS);
-                } catch (Error e) {
-                    debug (e.message);
-                    return {};
-                }
-            }
-            set {
-                key.set_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS, value);
-                save ();
-            }
-        }
+        var list = new Gee.ArrayList<UserConfig> ();
+        configurations.foreach ((key, val) => {
+            list.add (val);
+        });
 
-        public bool admin {
-            get {
-                try {
-                    return key.get_boolean (username, Constants.DAEMON_KEY_ADMIN);
-                } catch (Error e) {
-                    debug (e.message);
-                    return false;
-                }
-            }
-            set {
-                key.set_boolean (username, Constants.DAEMON_KEY_ADMIN, value);
-                save ();
-            }
-        }
+        return list;
+    }
 
-        private UserConfig (string username) {
-            Object (username: username);
-        }
+    static construct {
+        configurations = new GLib.HashTable<string, UserConfig> (str_hash, str_equal);
+        key = new GLib.KeyFile ();
+        key.set_list_separator (';');
 
-        private void save () {
+        var file = GLib.File.new_for_path (Constants.DAEMON_CONF_FILE);
+        if (file.query_exists ()) {
             try {
-                key.save_to_file (Constants.DAEMON_CONF_FILE);
-            } catch (FileError e) {
+                key.load_from_file (Constants.DAEMON_CONF_FILE, KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS);
+            } catch (GLib.Error e) {
                 critical (e.message);
-                return;
             }
 
-            Server.get_default ().config_changed ();
+            string[] usernames = key.get_groups ();
+            foreach (unowned string username in usernames) {
+                configurations[username] = new UserConfig (username);
+            }
+        } else {
+            critical ("Failed to load configuration file: %s does not exist", file.get_path ());
         }
+    }
+
+    public string username { get; construct; }
+    public bool active {
+        get {
+            try {
+                return key.get_boolean (username, Constants.DAEMON_KEY_ACTIVE);
+            } catch (Error e) {
+                debug (e.message);
+                return false;
+            }
+        }
+        set {
+            key.set_boolean (username, Constants.DAEMON_KEY_ACTIVE, value);
+            save ();
+        }
+    }
+
+    public string[] targets {
+        owned get {
+            try {
+                return key.get_string_list (username, Constants.DAEMON_KEY_TARGETS);
+            } catch (Error e) {
+                debug (e.message);
+                return {};
+            }
+        }
+        set {
+            key.set_string_list (username, Constants.DAEMON_KEY_TARGETS, value);
+            save ();
+        }
+    }
+
+    public string[] block_urls {
+        owned get {
+            try {
+                return key.get_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS);
+            } catch (Error e) {
+                debug (e.message);
+                return {};
+            }
+        }
+        set {
+            key.set_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS, value);
+            save ();
+        }
+    }
+
+    public bool admin {
+        get {
+            try {
+                return key.get_boolean (username, Constants.DAEMON_KEY_ADMIN);
+            } catch (Error e) {
+                debug (e.message);
+                return false;
+            }
+        }
+        set {
+            key.set_boolean (username, Constants.DAEMON_KEY_ADMIN, value);
+            save ();
+        }
+    }
+
+    private UserConfig (string username) {
+        Object (username: username);
+    }
+
+    private void save () {
+        try {
+            key.save_to_file (Constants.DAEMON_CONF_FILE);
+        } catch (FileError e) {
+            critical (e.message);
+            return;
+        }
+
+        Server.get_default ().config_changed ();
     }
 }
