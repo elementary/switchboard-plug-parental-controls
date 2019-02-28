@@ -182,6 +182,7 @@ namespace PC.Widgets {
                 bool admin = yield Utils.get_api ().get_user_daemon_admin (user.get_user_name ());
                 admin_switch_btn.set_active (admin);
 
+                targets += Constants.CLIENT_PATH;
                 foreach (unowned GLib.AppInfo info in AppInfo.get_all ()) {
                     if (info.should_show () && Environment.find_program_in_path (info.get_executable ()) in targets) {
                         load_info (info);
