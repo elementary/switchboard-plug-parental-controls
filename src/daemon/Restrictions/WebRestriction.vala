@@ -20,10 +20,10 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
- namespace PC.Daemon {
+namespace PC.Daemon {
     public class WebRestriction : Restriction {
         private const string IPTABLES_EXEC = "iptables";
-        private string[] old_urls = {};
+        private const int DPORT = 80;
 
         public new static bool get_supported () {
             return Environment.find_program_in_path (IPTABLES_EXEC) != null;
@@ -31,33 +31,47 @@
 
         public WebRestriction (UserConfig config) {
             base (config);
-            config.notify["block-urls"].connect (update);
         }
 
         public override void start () {
-            update ();
+            foreach (string url in config.block_urls) {
+                string[] addresses = get_addresses_from_name (url);
+                foreach (string address in addresses) {
+                    process_adress (address, "-A");
+                }
+            }      
         }
 
         public override void stop () {
-            process_urls (config.block_urls, false);
-        }
-
-        private void update () {
-            process_urls (old_urls, false);
-            old_urls = config.block_urls;
-            process_urls (old_urls, true);
-        }
-
-        private void process_urls (string[] urls, bool block) {
-            foreach (string url in urls) {
-                process_adress (url, block ? "-A" : "-D");
+            foreach (string url in config.block_urls) {
+                string[] addresses = get_addresses_from_name (url);
+                foreach (string address in addresses) {
+                    process_adress (address, "-D");
+                }
             }  
         }
 
-        private static void process_adress (string address, string option) {
+        private string[] get_addresses_from_name (string name) {
+            string[] address_list = {};
+            var resolver = Resolver.get_default ();
+            try {
+                var addresses = resolver.lookup_by_name (name, null);
+                foreach (InetAddress address in addresses) {
+                    if (address.get_family () == SocketFamily.IPV4) {
+                        address_list += address.to_string ();
+                    }
+                }
+            } catch (Error e) {
+                warning (e.message);
+            }
+
+            return address_list;
+        }
+
+        private void process_adress (string address, string option) {
             try {
                 GLib.Process.spawn_sync ("/",
-                                    { IPTABLES_EXEC, option, "OUTPUT", "-p", "tcp", "-m", "string", "--string", address, "--algo", "kmp", "-j", "REJECT" },
+                                    { IPTABLES_EXEC, option, "OUTPUT", "-p", "tcp", "-d", address, "--dport", DPORT.to_string (), "-j", "REJECT" },
                                     Environ.get (),
                                     SpawnFlags.SEARCH_PATH,
                                     null,
@@ -65,7 +79,7 @@
                                     null,
                                     null);
             } catch (SpawnError e) {
-                warning (e.message);
+                warning ("%s\n", e.message);
             }
         }
     }
