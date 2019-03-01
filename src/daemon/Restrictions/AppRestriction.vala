@@ -33,13 +33,22 @@ namespace PC.Daemon {
             base (config);
             config.notify["targets"].connect (update);
             config.notify["admin"].connect (update);
+            config.notify["active"].connect (() => {
+                if (config.active) {
+                    update ();
+                } else {
+                    remove_restrictions ();
+                }
+            });
         }
 
         public override void start () {
-            update ();
         }
 
         public override void stop () {
+        }
+
+        private void remove_restrictions () {
             var admin = config.admin;
             AccessControlLists.apply_targets (config.username, config.targets, {}, admin, admin);
         }
