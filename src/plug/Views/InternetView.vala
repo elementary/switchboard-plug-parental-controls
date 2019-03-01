@@ -32,7 +32,6 @@ namespace PC.Widgets {
         private Gtk.Button add_button;
 
         private class UrlEntry : Gtk.ListBoxRow {
-            public signal void deleted ();
             public string url { get; construct; }
 
             public UrlEntry (string url) {
@@ -43,7 +42,6 @@ namespace PC.Widgets {
                 var delete_button = new Gtk.Button.from_icon_name ("user-trash-symbolic");
                 delete_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
                 delete_button.clicked.connect (() => {
-                    deleted ();
                     destroy ();
                 });
 
@@ -174,7 +172,7 @@ namespace PC.Widgets {
 
         private void add_entry (string url) {
             var url_entry = new UrlEntry (url);
-            url_entry.deleted.connect (() => update_block_urls ());
+            url_entry.destroy.connect (() => update_block_urls ());
             list_box.add (url_entry);
         }
     }
