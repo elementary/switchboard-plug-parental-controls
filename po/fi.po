@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2018-10-11 17:57+0000\n"
+"PO-Revision-Date: 2019-02-09 08:30+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/fi/>\n"
@@ -167,9 +167,8 @@ msgid "Other Accounts"
 msgstr "Muut tilit"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
 msgid "Time Limits"
-msgstr "Aikaa jäljellä"
+msgstr "Aikarajoitukset"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
