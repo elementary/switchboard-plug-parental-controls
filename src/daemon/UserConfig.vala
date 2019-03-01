@@ -1,6 +1,6 @@
-// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
-/*-
- * Copyright (c) 2015-2016 Adam Bieńkowski (https://launchpad.net/switchboard-plug-parental-controls)
+/*
+ * Copyright 2019 elementary, Inc. (https://elementary.io)
+ *           2015-2016 Adam Bieńkowski
  *
  * This library is free software; you can redistribute it and/or
  * modify it under the terms of the GNU Library General Public
@@ -20,154 +20,152 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
-namespace PC.Daemon {
-    public class UserConfig : Object {
-        public string username { get; set; }
+public class PC.Daemon.UserConfig : GLib.Object {
+    public string username { get; set; }
 
-        private static KeyFile key;
-        private static List<UserConfig> config_list;
+    private static KeyFile key;
+    private static List<UserConfig> config_list;
 
-        public static UserConfig? get_for_username (string username, bool create) {
-            foreach (UserConfig config in config_list) {
-                if (config.username == username) {
-                    return config;
-                }
+    public static UserConfig? get_for_username (string username, bool create) {
+        foreach (UserConfig config in config_list) {
+            if (config.username == username) {
+                return config;
             }
+        }
 
-            if (create) {
-                return create_for_username (username);
-            }            
+        if (create) {
+            return create_for_username (username);
+        }            
 
+        return null;
+    }
+
+    public static List<weak UserConfig> get_all () {
+        return config_list.copy ();
+    }
+
+    public static void init () {
+        config_list = new List<UserConfig> ();
+
+        key = new KeyFile ();
+        key.set_list_separator (';');
+
+        if (!init_config_file ()) {
+            return;
+        }
+
+        try {
+            key.load_from_file (Constants.DAEMON_CONF_FILE, KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS);
+        } catch (KeyFileError e) {
+            warning (e.message);
+        } catch (FileError e) {
+            warning (e.message);
+        }
+        
+        foreach (string username in key.get_groups ()) {
+            var user_config = new UserConfig (username);
+            config_list.append (user_config);
+        }
+    }
+
+    private static bool init_config_file () {
+        var file = File.new_for_path (Constants.DAEMON_CONF_FILE);
+        if (!file.query_exists ()) {
+            critical ("Could not find daemon config file: %s does not exist".printf (file.get_path ()));
+            return false;
+        }
+
+        return true;
+    }
+
+    private static UserConfig? create_for_username (string username) {
+        var user = Utils.get_usermanager ().get_user (username);
+        if (user == null) {
             return null;
         }
 
-        public static List<weak UserConfig> get_all () {
-            return config_list.copy ();
-        }
+        var config = new UserConfig (username);
+        config.active = false;
+        config_list.append (config);
+        return config;
+    }
 
-        public static void init () {
-            config_list = new List<UserConfig> ();
+    private UserConfig (string username) {
+        this.username = username;
+    }
 
-            key = new KeyFile ();
-            key.set_list_separator (';');
-
-            if (!init_config_file ()) {
-                return;
-            }
-
+    public bool active {
+        get {
             try {
-                key.load_from_file (Constants.DAEMON_CONF_FILE, KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS);
+                return key.get_boolean (username, Constants.DAEMON_KEY_ACTIVE);
             } catch (KeyFileError e) {
-                warning (e.message);
-            } catch (FileError e) {
-                warning (e.message);
+                critical (e.message);
             }
-            
-            foreach (string username in key.get_groups ()) {
-                var user_config = new UserConfig (username);
-                config_list.append (user_config);
-            }
+
+            return false;
         }
-
-        private static bool init_config_file () {
-            var file = File.new_for_path (Constants.DAEMON_CONF_FILE);
-            if (!file.query_exists ()) {
-                critical ("Could not find daemon config file: %s does not exist".printf (file.get_path ()));
-                return false;
-            }
-
-            return true;
+        set {
+            key.set_boolean (username, Constants.DAEMON_KEY_ACTIVE, value);
+            save ();
         }
+    }
 
-        private static UserConfig? create_for_username (string username) {
-            var user = Utils.get_usermanager ().get_user (username);
-            if (user == null) {
-                return null;
-            }
-
-            var config = new UserConfig (username);
-            config.active = false;
-            config_list.append (config);
-            return config;
-        }
-
-        public bool active {
-            get {
-                try {
-                    return key.get_boolean (username, Constants.DAEMON_KEY_ACTIVE);
-                } catch (KeyFileError e) {
-                    critical (e.message);
-                }
-
-                return false;
-            }
-            set {
-                key.set_boolean (username, Constants.DAEMON_KEY_ACTIVE, value);
-                save ();
-            }
-        }
-
-        public string[] targets {
-            owned get {
-                try {
-                    return key.get_string_list (username, Constants.DAEMON_KEY_TARGETS);
-                } catch (KeyFileError e) {
-                    warning (e.message);
-                }
-
-                return {};
-            }
-            set {
-                key.set_string_list (username, Constants.DAEMON_KEY_TARGETS, value);
-                save ();
-            }
-        }
-
-        public string[] block_urls {
-            owned get {
-                try {
-                    return key.get_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS);
-                } catch (KeyFileError e) {
-                    critical (e.message);
-                }
-
-                return {};
-            }
-            set {
-                key.set_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS, value);
-                save ();
-            }
-        }
-
-        public bool admin {
-            get {
-                try {
-                    return key.get_boolean (username, Constants.DAEMON_KEY_ADMIN);
-                } catch (KeyFileError e) {
-                    critical (e.message);
-                }
-
-                return false;
-            }
-            set {
-                key.set_boolean (username, Constants.DAEMON_KEY_ADMIN, value);
-                save ();
-            }
-        }
-
-        private UserConfig (string username) {
-            this.username = username;
-        }
-
-        private void save () {
+    public string[] targets {
+        owned get {
             try {
-                key.save_to_file (Constants.DAEMON_CONF_FILE);
-            } catch (FileError e) {
-                warning (e.message);
-                return;
+                return key.get_string_list (username, Constants.DAEMON_KEY_TARGETS);
+            } catch (KeyFileError e) {
+                critical (e.message);
             }
 
-            Server.get_default ().config_changed ();
+            return {};
         }
+        set {
+            key.set_string_list (username, Constants.DAEMON_KEY_TARGETS, value);
+            save ();
+        }
+    }
+
+    public string[] block_urls {
+        owned get {
+            try {
+                return key.get_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS);
+            } catch (KeyFileError e) {
+                critical (e.message);
+            }
+
+            return {};
+        }
+        set {
+            key.set_string_list (username, Constants.DAEMON_KEY_BLOCK_URLS, value);
+            save ();
+        }
+    }
+
+    public bool admin {
+        get {
+            try {
+                return key.get_boolean (username, Constants.DAEMON_KEY_ADMIN);
+            } catch (KeyFileError e) {
+                critical (e.message);
+            }
+
+            return false;
+        }
+        set {
+            key.set_boolean (username, Constants.DAEMON_KEY_ADMIN, value);
+            save ();
+        }
+    }
+
+    private void save () {
+        try {
+            key.save_to_file (Constants.DAEMON_CONF_FILE);
+        } catch (FileError e) {
+            warning (e.message);
+            return;
+        }
+
+        Server.get_default ().config_changed ();
     }
 }
