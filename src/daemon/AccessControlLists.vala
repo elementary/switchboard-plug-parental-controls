@@ -64,26 +64,16 @@ public class PC.AccessControlLists {
             return null;
         }
 
-        string exec;
-        try {
-            exec = keyfile.get_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC);
-        } catch (KeyFileError e) {
-            exec = target;
-        }
+        string[] args;
+        string exec = Utils.info_to_exec_path (new DesktopAppInfo.from_keyfile (keyfile), out args);
 
         if (admin) {
+            args[0] = exec;
             keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC,
-                "%s -a \"%s:%s:%s\"".printf (Constants.CLIENT_PATH, username, Constants.PARENTAL_CONTROLS_ACTION_ID, exec));
+                "%s -a \"%s:%s:%s\"".printf (Constants.CLIENT_PATH, username, Constants.PARENTAL_CONTROLS_ACTION_ID, string.joinv (" ", args)));
         } else {
-            string[] argv;
-            try {
-                Shell.parse_argv (exec, out argv);
-            } catch (ShellError e) {
-                argv = exec.split (" ");
-            }
-
             keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC,
-                "%s -d %s".printf (Constants.CLIENT_PATH, argv[0]));
+                "%s -d %s".printf (Constants.CLIENT_PATH, exec));
         }
 
         return keyfile.to_data ();

@@ -165,7 +165,7 @@ namespace PC.Widgets {
 
             string[] targets = {};
             foreach (var entry in entries) {
-                targets += Environment.find_program_in_path (entry.app_info.get_executable ());
+                targets += Utils.info_to_exec_path (entry.app_info, null);
             }
 
             Utils.get_api ().set_user_daemon_targets.begin (user.get_user_name (), targets); 
@@ -182,10 +182,13 @@ namespace PC.Widgets {
                 bool admin = yield Utils.get_api ().get_user_daemon_admin (user.get_user_name ());
                 admin_switch_btn.set_active (admin);
 
-                targets += Constants.CLIENT_PATH;
-                foreach (unowned GLib.AppInfo info in AppInfo.get_all ()) {
-                    if (info.should_show () && Environment.find_program_in_path (info.get_executable ()) in targets) {
-                        load_info (info);
+                List<unowned AppInfo> infos = AppInfo.get_all ();
+                foreach (string target in targets) {
+                    foreach (unowned GLib.AppInfo info in infos) {
+                        if (info.should_show () && Utils.info_to_exec_path (info, null) == target) {
+                            load_info (info);
+                            break;
+                        }
                     }
                 }
             } catch (Error e) {

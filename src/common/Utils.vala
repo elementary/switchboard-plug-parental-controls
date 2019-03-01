@@ -118,6 +118,44 @@ namespace PC {
             return get_usermanager ().get_user (Environment.get_user_name ());
         }
 
+        /**
+         * Explicitly converts the executable in the Exec field to the absolute executable path
+         * while taking into account the pantheon-parental-controls-client arguments.
+         */
+        public static string info_to_exec_path (AppInfo info, out string[] args) {
+            args = info.get_commandline ().split (" ");
+            string exec = info.get_executable ();
+            if (args.length > 2 && args[0] == Constants.CLIENT_PATH) {
+                if (args[1] == "-d") {
+                    exec = args[2];
+                } else if (args[1] == "-a") {
+                    string[] tokens = args[2].replace ("\"", "").split (":");
+                    if (tokens.length < 3) {
+                        return exec;
+                    }
+
+                    string target = tokens[2];
+                    try {
+                        Shell.parse_argv (target, out args);
+                    } catch (ShellError e) {
+                        args = exec.split (" ");
+                    }
+
+                    exec = args[0];
+                }
+            }
+
+            return exec_to_path (exec);
+        }
+        
+        private static string exec_to_path (string exec) {
+            if (!exec.has_prefix (GLib.Path.DIR_SEPARATOR_S)) {
+                return Environment.find_program_in_path (exec) ?? exec;
+            }
+
+            return exec;
+        }
+
         public static string remove_comments (string str) {
             string buffer = "";
 
