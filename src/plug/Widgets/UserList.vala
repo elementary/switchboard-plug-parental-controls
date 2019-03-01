@@ -24,14 +24,6 @@
 
 namespace PC.Widgets {
     public class UserListBox : Gtk.ListBox {
-        public bool has_users {
-            get {
-                return items.length () > 0;
-            }
-        }
-
-        private Gtk.Label my_account_label;
-        private Gtk.Label other_accounts_label;
         private List<UserItem> items;
 
         construct { 
@@ -39,14 +31,6 @@ namespace PC.Widgets {
 
             selection_mode = Gtk.SelectionMode.SINGLE;
             set_header_func (update_headers);
-
-            my_account_label = new Gtk.Label (_("My Account"));
-            my_account_label.halign = Gtk.Align.START;
-            my_account_label.get_style_context ().add_class ("h4");
-
-            other_accounts_label = new Gtk.Label (_("Other Accounts"));
-            other_accounts_label.halign = Gtk.Align.START;
-            other_accounts_label.get_style_context ().add_class ("h4");
 
             unowned Act.UserManager user_manager = Act.UserManager.get_default ();
 
@@ -68,11 +52,9 @@ namespace PC.Widgets {
         }
 
         public void add_user (Act.User user) {
-            if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR || has_user (user)) {
+            if (has_user (user)) {
                 return;
             }
-
-            bool had_users = has_users;
 
             var page = new ControlPage (user);
             var useritem = new UserItem (page);
@@ -80,10 +62,7 @@ namespace PC.Widgets {
             items.append (useritem);
             add (useritem);
 
-            if (!had_users) {
-                select_first ();
-                notify_property ("has-users");
-            }
+            select_first ();
 
             useritem.show_all ();
         }
@@ -92,11 +71,7 @@ namespace PC.Widgets {
             foreach (var item in items) {
                 if (item.user == user) {
                     item.update_view ();
-                    if (user.get_account_type () == Act.UserAccountType.ADMINISTRATOR) {
-                        remove_user (user);
-                    } else {
-                        add_user (user);
-                    }
+                    add_user (user);
 
                     break;
                 }
@@ -109,9 +84,6 @@ namespace PC.Widgets {
                     item.page.destroy ();
                     item.destroy ();
                     items.remove (item);
-                    if (!has_users) {
-                        notify_property ("has-users");
-                    }
 
                     break;
                 }
@@ -129,9 +101,11 @@ namespace PC.Widgets {
 
         private void update_headers (Gtk.ListBoxRow row, Gtk.ListBoxRow? before) {
             if (row is UserItem && ((UserItem) row).user == Utils.get_current_user ()) {
-                row.set_header (my_account_label);
-            } else {
-                row.set_header (null);
+                var my_account_header = new Granite.HeaderLabel (_("My Account"));
+                row.set_header (my_account_header);
+            } else if (before is UserItem && ((UserItem) before).user == Utils.get_current_user ()) {
+                var other_accounts_label = new Granite.HeaderLabel (_("Other Accounts"));
+                row.set_header (other_accounts_label);
             }
         }
 
