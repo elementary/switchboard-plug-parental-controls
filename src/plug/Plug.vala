@@ -30,7 +30,7 @@ public class PC.Plug : Switchboard.Plug {
         Object (
             category: Category.SYSTEM,
             code_name: "pantheon-parental-controls",
-            display_name: _("Parental Control"),
+            display_name: _("Digital Wellbeing"),
             description: _("Configure time limits and restrict application usage"),
             icon: "preferences-system-parental-controls",
             supported_settings: settings

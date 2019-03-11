@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=Parental Controls Client
+Name=Digital Wellbeing Client
 Exec=@CLIENT_PATH@
-Comment=Show parental control restrictions
+Comment=Show Digital Wellbeing information and restrictions
 Icon=preferences-system-parental-controls
 Terminal=false
 Type=Application

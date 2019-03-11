@@ -1,5 +1,5 @@
 [Unit]
-Description=Pantheon Parental Controls Daemon
+Description=Pantheon Digital Wellbeing Daemon
 
 [Service]
 Type=dbus
