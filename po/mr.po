@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2018-12-24 00:07+0000\n"
+"PO-Revision-Date: 2019-03-09 13:31+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
-"Language-Team: Marathi <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/mr/>\n"
 "Language: mr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.4\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
@@ -147,11 +147,11 @@ msgstr ""
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr "तर्फे :"
+msgstr "पासून:"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr "प्रति:"
+msgstr "पर्यंत:"
 
 #: src/plug/Widgets/UserList.vala:43
 msgid "My Account"
@@ -171,7 +171,7 @@ msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "Applications"
-msgstr ""
+msgstr "ॲप्लिकेशन्स्"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
