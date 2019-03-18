@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2018-12-11 15:10+0000\n"
+"PO-Revision-Date: 2019-03-17 17:27+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
-"Language-Team: Danish <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/da/>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.4\n"
 "X-Launchpad-Export-Date: 2017-03-19 06:51+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
@@ -168,9 +168,8 @@ msgid "Other Accounts"
 msgstr "Andre konti"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
 msgid "Time Limits"
-msgstr "Tid tilbage"
+msgstr "Tidsbegrænsninger"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
