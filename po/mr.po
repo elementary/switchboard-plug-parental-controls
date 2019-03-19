@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2019-03-09 13:31+0000\n"
+"PO-Revision-Date: 2019-03-20 23:58+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/mr/>\n"
@@ -21,7 +21,7 @@ msgstr "पालक नियंत्रण सेटिंग्ज व्य
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
-msgstr ""
+msgstr "पॅरेंटल कंट्रोल सेटिंग्ज बदलण्यासाठी प्रमाणीकरण आवश्यक आहे"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -86,23 +86,23 @@ msgstr "अप्लिकेशन प्रवेश प्रतिबंध�
 #: src/plug/Views/AppsView.vala:47
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "या अॅप्सला वापरण्यापासून %s ला प्रतिबंधित करा:"
 
 #: src/plug/Views/AppsView.vala:56
 msgid "Add Prevented Apps…"
-msgstr ""
+msgstr "प्रतिबंधित अॅप्स जोडा…"
 
 #: src/plug/Views/AppsView.vala:60
 msgid "Remove Selected App"
-msgstr ""
+msgstr "निवडलेले अॅप काढा"
 
 #: src/plug/Views/AppsView.vala:65
 msgid "Clear All"
-msgstr ""
+msgstr "सर्व साफ करा"
 
 #: src/plug/Views/AppsView.vala:88
 msgid "Allow access to these apps with admin permission:"
-msgstr ""
+msgstr "प्रशासकीय परवानगीसह या अॅप्सवरील प्रवेशास अनुमती द्या:"
 
 #: src/plug/Views/TimeLimitView.vala:57
 msgid "Limit computer use:"
