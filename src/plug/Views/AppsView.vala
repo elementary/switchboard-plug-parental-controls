@@ -26,7 +26,7 @@ namespace PC.Widgets {
         public Act.User user { get; construct; }
 
         private Gtk.ListBox list_box;
-        private AppChooser apps_popover;
+        // private AppChooser apps_popover;
         private Gtk.Switch admin_switch_btn;
         private Gtk.Button remove_button;
         private Gtk.Button clear_button;
@@ -52,34 +52,34 @@ namespace PC.Widgets {
             list_box.row_selected.connect (update_sensitivity);
             scrolled.add (list_box);
 
-            var add_button = new Gtk.Button.from_icon_name ("application-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-            add_button.tooltip_text = _("Add Prevented Apps…");
-            add_button.clicked.connect (on_add_button_clicked);
+            // var add_button = new Gtk.Button.from_icon_name ("application-add-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            // add_button.tooltip_text = _("Add Prevented Apps…");
+            // add_button.clicked.connect (on_add_button_clicked);
 
-            remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-            remove_button.tooltip_text = _("Remove Selected App");
-            remove_button.sensitive = false;
-            remove_button.clicked.connect (on_remove_button_clicked);
+            // remove_button = new Gtk.Button.from_icon_name ("list-remove-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            // remove_button.tooltip_text = _("Remove Selected App");
+            // remove_button.sensitive = false;
+            // remove_button.clicked.connect (on_remove_button_clicked);
 
-            clear_button = new Gtk.Button.from_icon_name ("edit-clear-all-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
-            clear_button.tooltip_text = _("Clear All");
-            clear_button.sensitive = false;
-            clear_button.clicked.connect (on_clear_button_clicked);
+            // clear_button = new Gtk.Button.from_icon_name ("edit-clear-all-symbolic", Gtk.IconSize.SMALL_TOOLBAR);
+            // clear_button.tooltip_text = _("Clear All");
+            // clear_button.sensitive = false;
+            // clear_button.clicked.connect (on_clear_button_clicked);
 
-            apps_popover = new AppChooser (add_button);
-            apps_popover.app_chosen.connect (load_info);
+            // apps_popover = new AppChooser (add_button);
+            // apps_popover.app_chosen.connect (load_info);
 
-            var toolbar = new Gtk.ActionBar ();
-            toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
-            toolbar.add (add_button);
-            toolbar.add (remove_button);
-            toolbar.pack_end (clear_button);
+            // var toolbar = new Gtk.ActionBar ();
+            // toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_INLINE_TOOLBAR);
+            // toolbar.add (add_button);
+            // toolbar.add (remove_button);
+            // toolbar.pack_end (clear_button);
 
             var main_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
             main_box.add (header_label);
             main_box.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
             main_box.add (scrolled);
-            main_box.add (toolbar);
+            // main_box.add (toolbar);
 
             var frame = new Gtk.Frame (null);
             frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
@@ -98,10 +98,6 @@ namespace PC.Widgets {
 
             load_existing.begin ();
             show_all ();
-        }
-
-        private void on_add_button_clicked () {
-            apps_popover.show_all ();
         }
 
         private void on_remove_button_clicked () {
@@ -168,7 +164,7 @@ namespace PC.Widgets {
                 targets += Environment.find_program_in_path (entry.app_info.get_executable ());
             }
 
-            Utils.get_api ().set_user_daemon_targets.begin (user.get_user_name (), targets); 
+            Utils.get_api ().set_user_daemon_targets.begin (user.get_user_name (), targets);
         }
 
         private void update_sensitivity () {

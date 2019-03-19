@@ -8,7 +8,6 @@ plug_files = files(
     'Widgets/UserList.vala',
     'Widgets/UserItem.vala',
     'Widgets/ControlPage.vala',
-    'Widgets/AppChooser.vala',
     'Widgets/AppRow.vala'
 )
 
