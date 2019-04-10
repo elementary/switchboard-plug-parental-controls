@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2019-03-09 13:31+0000\n"
+"PO-Revision-Date: 2019-04-02 17:52+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/mr/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.5.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
@@ -21,7 +21,7 @@ msgstr "पालक नियंत्रण सेटिंग्ज व्य
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
-msgstr ""
+msgstr "पॅरेंटल कंट्रोल सेटिंग्ज बदलण्यासाठी प्रमाणीकरण आवश्यक आहे"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -86,64 +86,64 @@ msgstr "अप्लिकेशन प्रवेश प्रतिबंध�
 #: src/plug/Views/AppsView.vala:47
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "या अॅप्सला वापरण्यापासून %s ला प्रतिबंधित करा:"
 
 #: src/plug/Views/AppsView.vala:56
 msgid "Add Prevented Apps…"
-msgstr ""
+msgstr "प्रतिबंधित अॅप्स जोडा…"
 
 #: src/plug/Views/AppsView.vala:60
 msgid "Remove Selected App"
-msgstr ""
+msgstr "निवडलेले अॅप काढा"
 
 #: src/plug/Views/AppsView.vala:65
 msgid "Clear All"
-msgstr ""
+msgstr "सर्व साफ करा"
 
 #: src/plug/Views/AppsView.vala:88
 msgid "Allow access to these apps with admin permission:"
-msgstr ""
+msgstr "प्रशासकीय परवानगीसह या अॅप्सवरील प्रवेशास अनुमती द्या:"
 
 #: src/plug/Views/TimeLimitView.vala:57
 msgid "Limit computer use:"
-msgstr ""
+msgstr "संगणक वापर मर्यादित करा:"
 
 #: src/plug/Views/TimeLimitView.vala:65
 msgid "On weekdays and weekends"
-msgstr ""
+msgstr "आठवड्याचे दिवस आणि शनिवार व रविवार"
 
 #: src/plug/Views/TimeLimitView.vala:66
 msgid "Only on weekdays"
-msgstr ""
+msgstr "केवळ आठवड्याचे दिवस"
 
 #: src/plug/Views/TimeLimitView.vala:67
 msgid "Only on weekends"
-msgstr ""
+msgstr "केवळ आठवड्याच्या शेवटी"
 
 #: src/plug/Views/TimeLimitView.vala:77
 msgid "Weekdays"
-msgstr ""
+msgstr "सोमवार ते शुक्रवार"
 
 #: src/plug/Views/TimeLimitView.vala:81
 msgid "Weekends"
-msgstr ""
+msgstr "शनिवार आणि रविवार"
 
 #: src/plug/Views/InternetView.vala:73
 #, c-format
 msgid "Prevent %s from visiting these websites:"
-msgstr ""
+msgstr "या वेबसाइटला भेट दिल्यापासून %s ला प्रतिबंधित करा:"
 
 #: src/plug/Views/InternetView.vala:86
 msgid "Add URL"
-msgstr ""
+msgstr "यूआरएल जोडा"
 
 #: src/plug/Views/InternetView.vala:95
 msgid "Add a new URL, for example: google.com"
-msgstr ""
+msgstr "नवीन URL जोडा, उदाहरणार्थ: google.com"
 
 #: src/plug/Views/InternetView.vala:96
 msgid "Invalid URL"
-msgstr ""
+msgstr "अवैध यूआरएल"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
@@ -163,11 +163,11 @@ msgstr "अन्य खाती"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Time Limits"
-msgstr ""
+msgstr "वेळ मर्यादा"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
-msgstr ""
+msgstr "इंटरनेट"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "Applications"
@@ -175,40 +175,40 @@ msgstr "ॲप्लिकेशन्स्"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
-msgstr ""
+msgstr "ऍप्लिकेशन्स शोधा"
 
 #: src/client/Client.vala:89
 #, c-format
 msgid "This computer will lock after %s."
-msgstr ""
+msgstr "हे संगणक %s नंतर लॉक होईल."
 
 #: src/client/Client.vala:91
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu  तास"
+msgstr[1] "%lu तास"
 
 #: src/client/Client.vala:93
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu मिनिट"
+msgstr[1] "%lu मिनिटे"
 
 #: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
-msgstr ""
+msgstr "आपला संगणक लॉक होण्यापूर्वी सर्व अनुप्रयोग बंद करणे सुनिश्चित करा."
 
 #: src/client/Client.vala:101
 msgid "Time left"
-msgstr ""
+msgstr "बाकी वेळ"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You cannot run this application"
-msgstr ""
+msgstr "आपण हा अनुप्रयोग चालवू शकत नाही"
 
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
-msgstr ""
+msgstr "आपल्याला हा अनुप्रयोग चालविण्याची परवानगी नाही."
