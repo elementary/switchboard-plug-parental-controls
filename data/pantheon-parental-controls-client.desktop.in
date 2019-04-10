@@ -1,7 +1,7 @@
 [Desktop Entry]
-Name=Digital Wellbeing Client
+Name=Screen Time & Limits Client
 Exec=@CLIENT_PATH@
-Comment=Show Digital Wellbeing information and restrictions
+Comment=Show Screen Time & Limits information and restrictions
 Icon=preferences-system-parental-controls
 Terminal=false
 Type=Application

@@ -7,8 +7,8 @@
   <vendor_url>https://elementary.io</vendor_url>
 
   <action id="org.pantheon.switchboard.parental-controls.administration">
-    <description gettext-domain="@GETTEXT_PACKAGE@">Manage Digital Wellbeing settings</description>
-    <message gettext-domain="@GETTEXT_PACKAGE@">Authentication is required to change Digital Wellbeing settings</message>
+    <description gettext-domain="@GETTEXT_PACKAGE@">Manage Screen Time &amp; Limits settings</description>
+    <message gettext-domain="@GETTEXT_PACKAGE@">Authentication is required to change Screen Time &amp; Limits settings</message>
     <icon_name>preferences-system-parental-controls</icon_name>
     <defaults>
       <allow_any>no</allow_any>

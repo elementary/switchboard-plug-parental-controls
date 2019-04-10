@@ -2,7 +2,7 @@
 <component type="addon">
   <id>io.elementary.switchboard.parental-controls</id>
   <extends>io.elementary.switchboard</extends>
-  <name>Digital Wellbeing Settings</name>
+  <name>Screen Time &amp; Limits Settings</name>
   <summary>Configure time limits and restrict application usage</summary>
   <screenshots>
     <screenshot type="default">

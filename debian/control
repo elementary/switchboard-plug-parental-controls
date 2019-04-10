@@ -21,5 +21,5 @@ Package: switchboard-plug-parental-controls
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
-Description: Manage Digital Wellbeing
- Switchboard plug for managing Digital Wellbeing.
+Description: Manage Screen Time & Limits
+ Switchboard plug for managing Screen Time & Limits.
