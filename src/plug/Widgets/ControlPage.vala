@@ -48,7 +48,7 @@ namespace PC.Widgets {
             apps_box.expand = true;
 
             stack = new Gtk.Stack ();
-            stack.add_titled (time_limit_view, "general", _("Time Limits"));
+            stack.add_titled (time_limit_view, "general", _("Screen Time"));
             stack.add_titled (internet_box, "internet", _("Internet"));
             stack.add_titled (apps_box, "apps", _("Applications"));
 
@@ -72,7 +72,7 @@ namespace PC.Widgets {
             if (permission.allowed) {
                 Utils.get_api ().set_user_daemon_active.begin (user.get_user_name (), active);
                 time_limit_view.update_pam (active);
-            }  
+            }
         }
 
         public async bool get_active () {
@@ -81,8 +81,8 @@ namespace PC.Widgets {
             } catch (Error e) {
                 warning (e.message);
             }
-            
+
             return false;
-        } 
+        }
     }
 }

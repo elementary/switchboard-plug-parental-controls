@@ -30,7 +30,7 @@ public class PC.Plug : Switchboard.Plug {
         Object (
             category: Category.SYSTEM,
             code_name: "pantheon-parental-controls",
-            display_name: _("Parental Control"),
+            display_name: _("Screen Time & Limits"),
             description: _("Configure time limits and restrict application usage"),
             icon: "preferences-system-parental-controls",
             supported_settings: settings
@@ -65,7 +65,7 @@ public class PC.Plug : Switchboard.Plug {
 }
 
 public Switchboard.Plug get_plug (Module module) {
-    debug ("Activating Parental Controls plug");
+    debug ("Activating Screen Time & Limits plug");
 
     var plug = new PC.Plug ();
     return plug;
