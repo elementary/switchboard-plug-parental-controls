@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2019-04-05 22:03+0000\n"
+"PO-Revision-Date: 2019-04-14 14:25+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/tr/>\n"
@@ -27,8 +27,7 @@ msgstr "Ebeveyn kontrolü ayarlarını yönet"
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
 msgstr ""
-"Ebeveyn kontrolü ayarlarını değiştirmek için kimliğinizi doğrulamanız "
-"gerekiyor"
+"Ebeveyn kontrolü ayarlarını değiştirmek için kimlik doğrulaması gerekiyor"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -36,11 +35,11 @@ msgstr "Ebeveyn Denetimleri İstemcisi"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
 msgid "Show parental control restrictions"
-msgstr "Ebeveyn kontrolü kısıtlamalarını göster"
+msgstr "Ebeveyn denetimi kısıtlamalarını göster"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
-msgstr "tercihler-sistem-ebeveyn-denetimleri"
+msgstr "preferences-system-parental-controls"
 
 #: src/plug/MainView.vala:63
 msgid "Some settings require administrator rights to be changed"
@@ -49,7 +48,7 @@ msgstr ""
 
 #: src/plug/MainView.vala:70
 msgid "No users to edit"
-msgstr "Değiştirilecek kullanıcı yok"
+msgstr "Düzenlenecek kullanıcı yok"
 
 #: src/plug/MainView.vala:70
 msgid ""
@@ -58,10 +57,10 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
-"Ebeveyn kontrolleri yalnızca yönetici yetkisi olmayan kullanıcılarda "
-"çalışır.\n"
-"Kullanıcı tipini 'Yönetici'den 'Normal'e Kullanıcı Hesapları Panelinden "
-"değiştirebilirsiniz."
+"Ebeveyn Denetimleri yalnızca yönetici izinlerine sahip olmayan kullanıcı "
+"hesaplarına uygulanabilir.\n"
+"Kullanıcı Hesapları panelinden \"Yönetici\" olan kullanıcı hesap türünü \""
+"Standart\" olarak değiştirebilirsiniz."
 
 #: src/plug/MainView.vala:73
 msgid "Configure User Accounts"
@@ -77,7 +76,7 @@ msgstr "Ebeveyn Denetimi"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
-msgstr "Zaman sınırlamasını yapılandırın ve uygulama kullanımını kısıtlayın"
+msgstr "Zaman sınırlamasını ve uygulama kullanımını kısıtlamasını yapılandırın"
 
 #: src/plug/Plug.vala:60
 msgid "Limit computer use"
@@ -94,15 +93,15 @@ msgstr "Uygulama erişimini engelle"
 #: src/plug/Views/AppsView.vala:47
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr "%s kullanıcısının şu uygulamaları kullanmasını engelle:"
+msgstr "%s kullanıcısının aşağıdaki uygulamaları kullanmasını engelle:"
 
 #: src/plug/Views/AppsView.vala:56
 msgid "Add Prevented Apps…"
-msgstr "Engelli uygulama ekle…"
+msgstr "Engellenecek Uygulama Ekle…"
 
 #: src/plug/Views/AppsView.vala:60
 msgid "Remove Selected App"
-msgstr "Seçili uygulamayı sil"
+msgstr "Seçili Uygulamayı Kaldır"
 
 #: src/plug/Views/AppsView.vala:65
 msgid "Clear All"
@@ -139,11 +138,11 @@ msgstr "Hafta sonu"
 #: src/plug/Views/InternetView.vala:73
 #, c-format
 msgid "Prevent %s from visiting these websites:"
-msgstr "%s kullanıcısının şu websiteleri ziyaret etmesini engelle:"
+msgstr "%s kullanıcısının aşağıdaki web sitelerini ziyaret etmesini engelle:"
 
 #: src/plug/Views/InternetView.vala:86
 msgid "Add URL"
-msgstr "URL ekle"
+msgstr "URL Ekle"
 
 #: src/plug/Views/InternetView.vala:95
 msgid "Add a new URL, for example: google.com"
@@ -183,12 +182,12 @@ msgstr "Uygulamalar"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
-msgstr "Uygulamaları Ara"
+msgstr "Uygulama Ara"
 
 #: src/client/Client.vala:89
 #, c-format
 msgid "This computer will lock after %s."
-msgstr "Bilgisayar şu süre sonunda kilitlenecek %s."
+msgstr "Bu bilgisayar %s sonra kilitlenecek."
 
 #: src/client/Client.vala:91
 #, c-format
@@ -212,7 +211,7 @@ msgstr ""
 
 #: src/client/Client.vala:101
 msgid "Time left"
-msgstr "Kalan zaman"
+msgstr "Kalan süre"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You cannot run this application"
@@ -220,7 +219,7 @@ msgstr "Bu uygulamayı çalıştıramazsınız"
 
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
-msgstr "Bu uygulamayı çalıştırma yetkiniz yok."
+msgstr "Bu uygulamayı çalıştırmanıza izin verilmiyor."
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Kullanıcıya şunun için izin ver:"
