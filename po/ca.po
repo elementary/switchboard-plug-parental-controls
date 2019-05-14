@@ -8,25 +8,25 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2019-02-07 14:23+0000\n"
+"PO-Revision-Date: 2019-05-15 17:14+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage parental control settings"
-msgstr "Gestioneu els paràmetres del control parental"
+msgstr "Gestioneu els paràmetres del control parental."
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
-msgstr "Cal autenticació per canviar els paràmetres del control parental"
+msgstr "Cal autenticació per canviar els paràmetres del control parental."
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
@@ -74,7 +74,7 @@ msgstr "Control parental"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
-msgstr "Configureu límits de temps i restringiu l'ús d'aplicacions"
+msgstr "Configureu els límits de temps i restringiu l'ús d'aplicacions."
 
 #: src/plug/Plug.vala:60
 msgid "Limit computer use"
