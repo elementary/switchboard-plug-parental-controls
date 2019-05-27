@@ -8,16 +8,16 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2019-02-11 05:11+0000\n"
+"PO-Revision-Date: 2019-05-28 18:29+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
-"Language-Team: Portuguese (Brazil) <https://weblate.elementary.io/projects/"
+"Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/pt_BR/>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.6.1\n"
 "X-Launchpad-Export-Date: 2017-02-13 06:02+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
@@ -78,7 +78,7 @@ msgstr "Controle dos Pais"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
-msgstr "Configure limites de tempo e restrinja o uso de aplicativos"
+msgstr "Configurar limites de tempo e restringir o uso de aplicativos"
 
 #: src/plug/Plug.vala:60
 msgid "Limit computer use"
@@ -180,7 +180,7 @@ msgstr "Internet"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "Applications"
-msgstr "Aplicativos"
+msgstr "Aplicações"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
