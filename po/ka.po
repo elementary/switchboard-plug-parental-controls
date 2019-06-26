@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2018-02-11 00:08+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -21,58 +21,32 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-#, fuzzy
-msgid "Manage parental control settings"
-msgstr "მშობლებთა კონტროლი"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-#, fuzzy
-msgid "Parental Controls Client"
-msgstr "მშობლებთა კონტროლი"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show parental control restrictions"
+msgid "Show Screen Time & Limits information and restrictions"
 msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "ზოგიერთი პარამეტრი, შესაცვლელად საჭიროებს ადმინისტრატორის უფლებებს"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "დასარედაქტირებელი მომხმარებლები არაა"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"მშობელთა კონტროლო შესაძლოა დაყენდეს მხოლოდ ანგარიშებზე, რომელთაც არ აქვთ "
-"ადმინისტრატორის უფლებები.\n"
-"თქვენ შეგიძლიათ შეცვალოთ მომხმარებლის ანგარიშის ტიპი \"ადმინისტრატორიდან\" "
-"\"სტანდარტულზე\" მომხმარებლის ანგარიშების პანელიდან."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "მომხმარებლის ანგარიშების კონფიგურაცია"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "მომხმარებლის პარამეტგრების გახსნა"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "მშობლებთა კონტროლი"
+msgid "Screen Time & Limits"
+msgstr ""
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -136,20 +110,20 @@ msgstr "სამუშაო დღეებში"
 msgid "Weekends"
 msgstr "დასვენების დღეებში"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr ""
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr ""
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr ""
 
@@ -161,16 +135,16 @@ msgstr "საიდან:"
 msgid "To:"
 msgstr "სადამდე:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "ჩემი ანგარიში"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "სხვა ანგარიშები"
 
 #: src/plug/Widgets/ControlPage.vala:51
-msgid "Time Limits"
+msgid "Screen Time"
 msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
@@ -220,6 +194,37 @@ msgstr "თქვენ ამ პროგრამას ვერ გაუ�
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "თქვენ არ გაქვთ ამ პროგრამის გაშვების უფლება."
+
+#, fuzzy
+#~ msgid "Manage parental control settings"
+#~ msgstr "მშობლებთა კონტროლი"
+
+#, fuzzy
+#~ msgid "Parental Controls Client"
+#~ msgstr "მშობლებთა კონტროლი"
+
+#~ msgid "No users to edit"
+#~ msgstr "დასარედაქტირებელი მომხმარებლები არაა"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "მშობელთა კონტროლო შესაძლოა დაყენდეს მხოლოდ ანგარიშებზე, რომელთაც არ აქვთ "
+#~ "ადმინისტრატორის უფლებები.\n"
+#~ "თქვენ შეგიძლიათ შეცვალოთ მომხმარებლის ანგარიშის ტიპი \"ადმინისტრატორიდან"
+#~ "\" \"სტანდარტულზე\" მომხმარებლის ანგარიშების პანელიდან."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "მომხმარებლის ანგარიშების კონფიგურაცია"
+
+#~ msgid "Open Users settings"
+#~ msgstr "მომხმარებლის პარამეტგრების გახსნა"
+
+#~ msgid "Parental Control"
+#~ msgstr "მშობლებთა კონტროლი"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "მიეცეს ამ მომხმარებელს უფლება, რომ:"

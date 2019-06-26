@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2018-06-07 00:09+0000\n"
 "Last-Translator: Dieter Debast <dieter_debast@hotmail.com>\n"
 "Language-Team: Dutch <https://weblate.elementary.io/projects/switchboard/"
@@ -21,58 +21,36 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Beheer ouderlijk toezicht instellingen"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr ""
 "administrator rechten zijn nodig om ouderlijk toezichts instellingen te "
 "verranderen"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Parental Controls Client"
-msgstr "Ouderlijk toezicht cliënt"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show parental control restrictions"
-msgstr "Beheer ouderlijk toezicht restricties"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "Geen gebruikers te configureren"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Ouderlijk toezicht kan alleen aangezet worden bij gebruikers die geen "
-"administratieve rechten hebben.\n"
-"U kunt het accounttype veranderen van \"Administrator\" naar \"Standaard\" "
-"in de accountinstellingen."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Configureer gebruikers account"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Open gebruikers instellingen"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Ouderlijk toezicht"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Resterende tijd"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -138,20 +116,20 @@ msgstr "Werkdagen"
 msgid "Weekends"
 msgstr "Weekenden"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Voorkomen dat %s volgende websites bezoekt:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "URL Toevoegen"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Voeg nieuwe URL toe, bijvoorbeeld: google.com"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "Ongeldige URL"
 
@@ -163,18 +141,17 @@ msgstr "Van:"
 msgid "To:"
 msgstr "Tot:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "Mijn account"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Andere accounts"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
-msgid "Time Limits"
-msgstr "Resterende tijd"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -225,6 +202,38 @@ msgstr "U kan dit programm niet uitvoeren"
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "U heeft geen toestemming om deze applicatie uit te voeren."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Beheer ouderlijk toezicht instellingen"
+
+#~ msgid "Parental Controls Client"
+#~ msgstr "Ouderlijk toezicht cliënt"
+
+#~ msgid "Show parental control restrictions"
+#~ msgstr "Beheer ouderlijk toezicht restricties"
+
+#~ msgid "No users to edit"
+#~ msgstr "Geen gebruikers te configureren"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Ouderlijk toezicht kan alleen aangezet worden bij gebruikers die geen "
+#~ "administratieve rechten hebben.\n"
+#~ "U kunt het accounttype veranderen van \"Administrator\" naar \"Standaard"
+#~ "\" in de accountinstellingen."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Configureer gebruikers account"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Open gebruikers instellingen"
+
+#~ msgid "Parental Control"
+#~ msgstr "Ouderlijk toezicht"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Geef deze gebruiker toegang tot:"

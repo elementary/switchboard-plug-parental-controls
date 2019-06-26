@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2016-05-01 14:04+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -20,54 +20,34 @@ msgstr ""
 "X-Generator: Launchpad (build 18326)\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "จัดการค่าตั้งการควบคุมโดยผู้ปกครอง"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr "ต้องยืนยันตัวตนเพื่อเปลี่ยนแปลงค่าตั้งการควบคุมโดยผู้ปกครอง"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-#, fuzzy
-msgid "Parental Controls Client"
-msgstr "การควบคุมโดยผู้ปกครอง"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-#, fuzzy
-msgid "Show parental control restrictions"
-msgstr "จัดการค่าตั้งการควบคุมโดยผู้ปกครอง"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "ค่าตั้งบางอย่างต้องใช้สิทธิ์ขั้นผู้ดูแลระบบจึงจะสามารถเปลี่ยนแปลงได้"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "ไม่มีผู้ใช้ที่จะแก้"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr "การควบคุมโดยผู้ปกครองสามารถนำไปใช้กับบัญชีผู้ใช้ที่ไม่มีสิทธิ์ขั้นผู้ดูแลเท่านั้น"
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "ตั้งค่าบัญชีผู้ใช้"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "เปิดค่าตั้งผู้ใช้"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "การควบคุมโดยผู้ปกครอง"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "เวลาที่เหลือ"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -131,20 +111,20 @@ msgstr "วันธรรมดา"
 msgid "Weekends"
 msgstr "วันหยุดสุดสัปดาห์"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr ""
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "เพิ่ม URL"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "เพิ่ม URL ใหม่ เช่น: google.com"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "URL ไม่ถูกต้อง"
 
@@ -156,18 +136,17 @@ msgstr "จาก:"
 msgid "To:"
 msgstr "ถึง:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "บัญชีของฉัน"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "บัญชีอื่นๆ"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
-msgid "Time Limits"
-msgstr "เวลาที่เหลือ"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -216,6 +195,36 @@ msgstr "คุณไม่สามารถเรียกใช้แอพพ
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "คุณไม่ได้รับอนุญาตให้เรียกใช้แอพพลิเคชั่นนี้"
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "จัดการค่าตั้งการควบคุมโดยผู้ปกครอง"
+
+#, fuzzy
+#~ msgid "Parental Controls Client"
+#~ msgstr "การควบคุมโดยผู้ปกครอง"
+
+#, fuzzy
+#~ msgid "Show parental control restrictions"
+#~ msgstr "จัดการค่าตั้งการควบคุมโดยผู้ปกครอง"
+
+#~ msgid "No users to edit"
+#~ msgstr "ไม่มีผู้ใช้ที่จะแก้"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr "การควบคุมโดยผู้ปกครองสามารถนำไปใช้กับบัญชีผู้ใช้ที่ไม่มีสิทธิ์ขั้นผู้ดูแลเท่านั้น"
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "ตั้งค่าบัญชีผู้ใช้"
+
+#~ msgid "Open Users settings"
+#~ msgstr "เปิดค่าตั้งผู้ใช้"
+
+#~ msgid "Parental Control"
+#~ msgstr "การควบคุมโดยผู้ปกครอง"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "อนุญาตให้ผู้ใช้นี้:"

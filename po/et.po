@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2017-03-31 17:45+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -20,58 +20,34 @@ msgstr ""
 "X-Generator: Launchpad (build 18335)\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Vanemliku kontrolli seadete muutmine"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr "Vanemliku kontrolli seadete muutmiseks on vajalik autentimine."
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-#, fuzzy
-msgid "Parental Controls Client"
-msgstr "Vanemlik kontroll"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-#, fuzzy
-msgid "Show parental control restrictions"
-msgstr "Vanemliku kontrolli seadete muutmine"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Mõningate seadete muutmiseks on vaja administraatori õigusi…"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "Muutmiseks kasutajad puuduvad"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Vanemlike õigusi saab rakendada ainult nendele kontodele, millel puuduvad "
-"juurkasutaja õigused.\n"
-"Sul on võimalik muuta konto tüüpi juurkasutajast tavakasutajaks süsteemi "
-"seadetest kontode seadetest."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Kasutajakontode konfigureerimine"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Ava kasutajate seaded"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Vanemlik kontroll"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Aega jäänud"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -135,20 +111,20 @@ msgstr "Tööpäevadel"
 msgid "Weekends"
 msgstr "Nädalavahetusel"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Kasutajal %s keelatakse nende veebilehtede külastamine:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "Lisa URL"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Uue URL-i lisamine, nagu näiteks: google.ee"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "Vigane URL"
 
@@ -160,18 +136,17 @@ msgstr "Alates:"
 msgid "To:"
 msgstr "Kuni:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "Minu konto"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Teised kontod"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
-msgid "Time Limits"
-msgstr "Aega jäänud"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -220,6 +195,40 @@ msgstr "Seda rakendust pole võimalik avada"
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Selle rakenduse käivitamiseks pole sul õigusi."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Vanemliku kontrolli seadete muutmine"
+
+#, fuzzy
+#~ msgid "Parental Controls Client"
+#~ msgstr "Vanemlik kontroll"
+
+#, fuzzy
+#~ msgid "Show parental control restrictions"
+#~ msgstr "Vanemliku kontrolli seadete muutmine"
+
+#~ msgid "No users to edit"
+#~ msgstr "Muutmiseks kasutajad puuduvad"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Vanemlike õigusi saab rakendada ainult nendele kontodele, millel puuduvad "
+#~ "juurkasutaja õigused.\n"
+#~ "Sul on võimalik muuta konto tüüpi juurkasutajast tavakasutajaks süsteemi "
+#~ "seadetest kontode seadetest."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Kasutajakontode konfigureerimine"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Ava kasutajate seaded"
+
+#~ msgid "Parental Control"
+#~ msgstr "Vanemlik kontroll"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Sellele kasutajale on lubatud:"

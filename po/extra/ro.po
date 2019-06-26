@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-10 14:23-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2018-12-10 14:23-0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -19,7 +19,7 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
-msgid "Parental Controls Settings"
+msgid "Screen Time &amp; Limits Settings"
 msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6

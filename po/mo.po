@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2018-05-28 00:00+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -14,58 +14,35 @@ msgstr ""
 "X-Generator: Weblate 2.18\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Gestionați setările de control parental"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr ""
 "Este necesară autentificarea pentru a modifica setările de control parental"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Parental Controls Client"
-msgstr "Cont client de control parental"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show parental control restrictions"
-msgstr "Arătați restricții privind controlul parental"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr "Preferințe-sistem-control-parental"
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Unele setări necesită modificarea drepturilor de administrator"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "Nu există utilizatori de editat"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Controlul parental poate fi aplicat numai conturilor de utilizator care nu "
-"au permisiuni administrative.\n"
-"\n"
-"Puteți modifica tipul de cont al unui utilizator de la \"Administrator\" la "
-"\"Standard\" din panoul Conturi utilizator."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Configurați conturile de utilizator"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Deschideți setările pentru utilizatori"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Control Parental"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Timp rămas"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -129,20 +106,20 @@ msgstr "Zilele saptămânii"
 msgid "Weekends"
 msgstr "Weekend-uri"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Împiedicați %s 1 să viziteze aceste site-uri web:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "Adaugă URL"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Adaugă nou URL, de exemplu: Google.com"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "URL invalid"
 
@@ -154,18 +131,17 @@ msgstr "De la:"
 msgid "To:"
 msgstr "Pentru:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "Contul meu"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Alte conturi"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
-msgid "Time Limits"
-msgstr "Timp rămas"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -216,6 +192,39 @@ msgstr "Nu puteți rula această aplicație"
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Nu aveți permisiunea de a rula această aplicație."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Gestionați setările de control parental"
+
+#~ msgid "Parental Controls Client"
+#~ msgstr "Cont client de control parental"
+
+#~ msgid "Show parental control restrictions"
+#~ msgstr "Arătați restricții privind controlul parental"
+
+#~ msgid "No users to edit"
+#~ msgstr "Nu există utilizatori de editat"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Controlul parental poate fi aplicat numai conturilor de utilizator care "
+#~ "nu au permisiuni administrative.\n"
+#~ "\n"
+#~ "Puteți modifica tipul de cont al unui utilizator de la \"Administrator\" "
+#~ "la \"Standard\" din panoul Conturi utilizator."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Configurați conturile de utilizator"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Deschideți setările pentru utilizatori"
+
+#~ msgid "Parental Control"
+#~ msgstr "Control Parental"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Permiteți acestui utilizator să:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-10 14:23-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2019-05-30 19:04+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -20,11 +20,14 @@ msgstr ""
 "X-Generator: Weblate 3.6.1\n"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
-msgid "Parental Controls Settings"
-msgstr "Paramètres du contrôle parental"
+msgid "Screen Time &amp; Limits Settings"
+msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
 msgstr ""
 "Configurer les limites de temps et les restrictions d'utilisation des "
 "applications"
+
+#~ msgid "Parental Controls Settings"
+#~ msgstr "Paramètres du contrôle parental"

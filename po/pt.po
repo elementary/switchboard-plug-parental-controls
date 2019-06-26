@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2019-02-07 11:12+0000\n"
 "Last-Translator: Nuno Alexandre MS Ribeiro <nuno.anarresti@gmail.com>\n"
 "Language-Team: Portuguese <https://weblate.elementary.io/projects/"
@@ -21,58 +21,36 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Gerir definições de controlo parental"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr ""
 "Autenticação necessária para alterar as definições de controlo parental"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Parental Controls Client"
-msgstr "Controlo Parental"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show parental control restrictions"
-msgstr "Mostrar restrições do controlo parental"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Algumas definições requerem privilégios administrativos para serem alteradas"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "Sem utilizadores para editar"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Os Controlos Parentais só podem ser aplicados a contas de utilizadores sem "
-"permissões administrativas.\n"
-"Pode mudar o tipo de conta de um utilizador de \"Administrador\" para "
-"\"Padrão\" no painel Contas de Utilizadores."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Configurar Contas de Utilizadores"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Abrir definições de Utilizadores"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Controlo Parental"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Limite de Tempo"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -135,20 +113,20 @@ msgstr "Dias úteis"
 msgid "Weekends"
 msgstr "Fins de semana"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Impedir %s de visitar as seguintes páginas web:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "Adicionar URL"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Adicionar um novo URL, por exemplo: google.pt"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "URL Inválido"
 
@@ -160,17 +138,17 @@ msgstr "De:"
 msgid "To:"
 msgstr "Até:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "A Minha Conta"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Outras Contas"
 
 #: src/plug/Widgets/ControlPage.vala:51
-msgid "Time Limits"
-msgstr "Limite de Tempo"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -221,6 +199,38 @@ msgstr "Não pode executar esta aplicação"
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Não tens permissão para executar esta aplicação."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Gerir definições de controlo parental"
+
+#~ msgid "Parental Controls Client"
+#~ msgstr "Controlo Parental"
+
+#~ msgid "Show parental control restrictions"
+#~ msgstr "Mostrar restrições do controlo parental"
+
+#~ msgid "No users to edit"
+#~ msgstr "Sem utilizadores para editar"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Os Controlos Parentais só podem ser aplicados a contas de utilizadores "
+#~ "sem permissões administrativas.\n"
+#~ "Pode mudar o tipo de conta de um utilizador de \"Administrador\" para "
+#~ "\"Padrão\" no painel Contas de Utilizadores."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Configurar Contas de Utilizadores"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Abrir definições de Utilizadores"
+
+#~ msgid "Parental Control"
+#~ msgstr "Controlo Parental"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Autorizar este utilizador a:"

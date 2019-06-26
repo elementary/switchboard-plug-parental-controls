@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2018-11-05 23:31+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -17,58 +17,36 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Upravljajte podešavanjima roditeljskih kontrola"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr ""
 "Autentifikacija je potrebna da biste mijenjali podešavanja roditeljskih "
 "kontrola"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Parental Controls Client"
-msgstr "Klijent za roditeljske kontrole"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show parental control restrictions"
-msgstr "Prikaži ograničenja roditeljskih kontrola"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Za izmjenu nekih podešavanja su potrebna administratorska prava"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "Nema korisnika za uređivanje"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Roditeljske kontrole se mogu samo primijeniti na korisničke račune koji "
-"nemaju administratorske dozvole.\n"
-"Možete promijeniti vrstu korisnikovog računa iz \"Administrator\" u "
-"\"Standardni\" u panelu Korisnički računi."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Podesi korisničke račune"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Otvori podešavanja korisnika"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Roditeljska kontrola"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Preostalo vrijeme"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -131,20 +109,20 @@ msgstr "Radnim danima"
 msgid "Weekends"
 msgstr "Vikendima"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Spriječi da %s posjećuje sljedeće web stranice:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "Dodaj URL"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Dodaj novi URL, naprimjer: google.com"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "Nevažeći URL"
 
@@ -156,18 +134,17 @@ msgstr "Od:"
 msgid "To:"
 msgstr "Do:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "Moj račun"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Drugi računi"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
-msgid "Time Limits"
-msgstr "Preostalo vrijeme"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -218,6 +195,38 @@ msgstr "Ne možete pokrenuti ovu aplikaciju"
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Nemate dozvolu za pokretanje ove aplikacije."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Upravljajte podešavanjima roditeljskih kontrola"
+
+#~ msgid "Parental Controls Client"
+#~ msgstr "Klijent za roditeljske kontrole"
+
+#~ msgid "Show parental control restrictions"
+#~ msgstr "Prikaži ograničenja roditeljskih kontrola"
+
+#~ msgid "No users to edit"
+#~ msgstr "Nema korisnika za uređivanje"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Roditeljske kontrole se mogu samo primijeniti na korisničke račune koji "
+#~ "nemaju administratorske dozvole.\n"
+#~ "Možete promijeniti vrstu korisnikovog računa iz \"Administrator\" u "
+#~ "\"Standardni\" u panelu Korisnički računi."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Podesi korisničke račune"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Otvori podešavanja korisnika"
+
+#~ msgid "Parental Control"
+#~ msgstr "Roditeljska kontrola"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Dozvoli ovom korisniku da:"
