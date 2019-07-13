@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2019-07-05 05:46+0000\n"
+"PO-Revision-Date: 2019-07-15 10:28+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/eo/>\n"
@@ -17,23 +17,23 @@ msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage parental control settings"
-msgstr ""
+msgstr "Mastrumi gepatrajn kontrolilajn agordojn"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
 msgid "Authentication is required to change parental control settings"
-msgstr ""
+msgstr "Aŭtentigo necesas por ŝanĝi la gepatrajn kontrolilajn agordojn"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Parental Controls Client"
-msgstr ""
+msgstr "Gepatra kontrolila kliento"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
 msgid "Show parental control restrictions"
-msgstr ""
+msgstr "Montri gepatrajn kontrolilajn limigojn"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
-msgstr ""
+msgstr "preferences-system-parental-controls"
 
 #: src/plug/MainView.vala:63
 msgid "Some settings require administrator rights to be changed"
@@ -41,7 +41,7 @@ msgstr "Kelkaj agordaj ŝanĝoj postulas administrajn permesojn"
 
 #: src/plug/MainView.vala:70
 msgid "No users to edit"
-msgstr ""
+msgstr "Neniu uzanto modifebla"
 
 #: src/plug/MainView.vala:70
 msgid ""
@@ -50,120 +50,123 @@ msgid ""
 "You can change a user's account type from \"Administrator\" to \"Standard\" "
 "in the User Accounts pane."
 msgstr ""
+"Gepatra kontrolilo aplikeblas nur al kontoj sen administraj permesoj.\n"
+"Eblas ŝanĝi la permesreĝimon de uzantokonto de „Administra“ al „Normala“ en "
+"la panelo Uzantokontoj."
 
 #: src/plug/MainView.vala:73
 msgid "Configure User Accounts"
-msgstr ""
+msgstr "Agordi uzantokontojn"
 
 #: src/plug/MainView.vala:76
 msgid "Open Users settings"
-msgstr ""
+msgstr "Malfermi uzantajn agordojn"
 
 #: src/plug/Plug.vala:33
 msgid "Parental Control"
-msgstr ""
+msgstr "Gepatra kontrolilo"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "Agordi tempolimojn kaj striktigi aplikaĵan uzadon"
 
 #: src/plug/Plug.vala:60
 msgid "Limit computer use"
-msgstr ""
+msgstr "Limigi komputilan uzon"
 
 #: src/plug/Plug.vala:61
 msgid "Prevent website access"
-msgstr ""
+msgstr "Antaŭmalhelpi retejan alireblecon"
 
 #: src/plug/Plug.vala:62
 msgid "Prevent application access"
-msgstr ""
+msgstr "Antaŭmalhelpi aplikaĵan alireblecon"
 
 #: src/plug/Views/AppsView.vala:47
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "Antaŭmalhelpi „%s“ uzadi ĉi aplikaĵojn:"
 
 #: src/plug/Views/AppsView.vala:56
 msgid "Add Prevented Apps…"
-msgstr ""
+msgstr "Aldoni antaŭmalhelpitajn aplikaĵojn…"
 
 #: src/plug/Views/AppsView.vala:60
 msgid "Remove Selected App"
-msgstr ""
+msgstr "Forigi elektitan aplikaĵon"
 
 #: src/plug/Views/AppsView.vala:65
 msgid "Clear All"
-msgstr ""
+msgstr "Forigi ĉion"
 
 #: src/plug/Views/AppsView.vala:88
 msgid "Allow access to these apps with admin permission:"
-msgstr ""
+msgstr "Permesi aliron al tiuj aplikaĵoj kun administra permeso:"
 
 #: src/plug/Views/TimeLimitView.vala:57
 msgid "Limit computer use:"
-msgstr ""
+msgstr "Limigi komputilan uzon:"
 
 #: src/plug/Views/TimeLimitView.vala:65
 msgid "On weekdays and weekends"
-msgstr ""
+msgstr "Semajntage kaj semajnfine"
 
 #: src/plug/Views/TimeLimitView.vala:66
 msgid "Only on weekdays"
-msgstr ""
+msgstr "Nur semajntage"
 
 #: src/plug/Views/TimeLimitView.vala:67
 msgid "Only on weekends"
-msgstr ""
+msgstr "Nur semajnfine"
 
 #: src/plug/Views/TimeLimitView.vala:77
 msgid "Weekdays"
-msgstr ""
+msgstr "Semajntage"
 
 #: src/plug/Views/TimeLimitView.vala:81
 msgid "Weekends"
-msgstr ""
+msgstr "Semajnfine"
 
 #: src/plug/Views/InternetView.vala:73
 #, c-format
 msgid "Prevent %s from visiting these websites:"
-msgstr ""
+msgstr "Antaŭmalhelpi %s viziti tiujn retejojn:"
 
 #: src/plug/Views/InternetView.vala:86
 msgid "Add URL"
-msgstr ""
+msgstr "Aldoni URL-adreson"
 
 #: src/plug/Views/InternetView.vala:95
 msgid "Add a new URL, for example: google.com"
-msgstr ""
+msgstr "Aldoni novan URL-adreson, ekzemple: google.com"
 
 #: src/plug/Views/InternetView.vala:96
 msgid "Invalid URL"
-msgstr ""
+msgstr "Nevalida URL-adreso"
 
 #: src/plug/Widgets/WeekSpinBox.vala:45
 msgid "From:"
-msgstr ""
+msgstr "De:"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr ""
+msgstr "Ĝis:"
 
 #: src/plug/Widgets/UserList.vala:43
 msgid "My Account"
-msgstr ""
+msgstr "Mia konto"
 
 #: src/plug/Widgets/UserList.vala:47
 msgid "Other Accounts"
-msgstr ""
+msgstr "Aliaj kontoj"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Time Limits"
-msgstr ""
+msgstr "Tempolimoj"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
-msgstr ""
+msgstr "Interreto"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "Applications"
@@ -171,40 +174,40 @@ msgstr "Aplikaĵoj"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
-msgstr ""
+msgstr "Serĉi aplikaĵojn"
 
 #: src/client/Client.vala:89
 #, c-format
 msgid "This computer will lock after %s."
-msgstr ""
+msgstr "Ĉi komputilo ŝlosiĝos post %s."
 
 #: src/client/Client.vala:91
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu horo"
+msgstr[1] "%lu horoj"
 
 #: src/client/Client.vala:93
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu minuto"
+msgstr[1] "%lu minutoj"
 
 #: src/client/Client.vala:95
 msgid ""
 "Make sure to close all applications before your computer will be locked."
-msgstr ""
+msgstr "Certiĝu pri fermo de ĉiuj aplikaĵoj antaŭ komputila ŝloso."
 
 #: src/client/Client.vala:101
 msgid "Time left"
-msgstr ""
+msgstr "Restanta"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "You cannot run this application"
-msgstr ""
+msgstr "Neeblas lanĉi ĉi aplikaĵon"
 
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
-msgstr ""
+msgstr "Vi ne havas permeson uzi ĉi aplikaĵon."
