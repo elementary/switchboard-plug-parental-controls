@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2019-04-08 05:53+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
@@ -16,56 +16,34 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Kelola pengaturan bimbingan orang tua"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr "Otentikasi diperlukan untuk mengubah pengaturan bimbingan orang tua"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Parental Controls Client"
-msgstr "Klien Bimbingan Orangtua"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show parental control restrictions"
-msgstr "Tampilkan batasan kontrol orangtua"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr "preferensi-sistem-kontrol-orangtua"
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Beberapa pengaturan memerlukan hak administrator untuk diubah"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "Tidak ada pengguna yang bisa disunting"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Bimbingan Orang Tua hanya dapat diterapkan ke akun pengguna yang tidak "
-"memiliki izin administratif.\n"
-"Anda dapat mengubah jenis akun pengguna dari \"Administrator\" menjadi "
-"\"Standar\" pada panel Akun Pengguna."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Konfigurasikan Akun Pengguna"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Pengaturan pengguna terbuka"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Bimbingan Orang Tua"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Batas Waktu"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -128,20 +106,20 @@ msgstr "Hari kerja"
 msgid "Weekends"
 msgstr "Akhir pekan"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Mencegah %s mengunjungi situs web ini:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "Tambah URL"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Tambahkan URL baru, misalnya: google.com"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "URL tidak valid"
 
@@ -153,17 +131,17 @@ msgstr "Dari:"
 msgid "To:"
 msgstr "Kepada:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "Akun Saya"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Akun Lain"
 
 #: src/plug/Widgets/ControlPage.vala:51
-msgid "Time Limits"
-msgstr "Batas Waktu"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -210,6 +188,38 @@ msgstr "Anda tidak dapat menjalankan aplikasi ini"
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Anda tidak diizinkan menjalankan aplikasi ini."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Kelola pengaturan bimbingan orang tua"
+
+#~ msgid "Parental Controls Client"
+#~ msgstr "Klien Bimbingan Orangtua"
+
+#~ msgid "Show parental control restrictions"
+#~ msgstr "Tampilkan batasan kontrol orangtua"
+
+#~ msgid "No users to edit"
+#~ msgstr "Tidak ada pengguna yang bisa disunting"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Bimbingan Orang Tua hanya dapat diterapkan ke akun pengguna yang tidak "
+#~ "memiliki izin administratif.\n"
+#~ "Anda dapat mengubah jenis akun pengguna dari \"Administrator\" menjadi "
+#~ "\"Standar\" pada panel Akun Pengguna."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Konfigurasikan Akun Pengguna"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Pengaturan pengguna terbuka"
+
+#~ msgid "Parental Control"
+#~ msgstr "Bimbingan Orang Tua"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Izinkan pengguna ini untuk:"

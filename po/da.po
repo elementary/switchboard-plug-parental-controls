@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2019-03-17 17:27+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
@@ -21,57 +21,35 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-03-19 06:51+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Håndter forælderkontrolindstillinger"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr "Godkendelse er påkrævet for at ændre forældrekontrolindstillinger"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Parental Controls Client"
-msgstr "Forældrekontrol Klient"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show parental control restrictions"
-msgstr "Vis forældrekontrol begrænsninger"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Nogle indstillinger kræver administratorrettigheder for at blive ændret"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "Ingen brugere at redigere"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Forældrekontrol kan kun anvendes på brugerkonti der ikke har "
-"administrationsrettigheder.\n"
-"Du kan ændre en brugers kontotype fra \"Administrator\" til \"Standard\" i "
-"panelet for Brugere."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Konfigurer brugerkonti"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Åbn brugerens indstillinger"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Forældre Kontrol"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Tidsbegrænsninger"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -134,20 +112,20 @@ msgstr "Hverdage"
 msgid "Weekends"
 msgstr "Weekender"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Forhindre %s i at besøge disse websteder:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "Tilføj URL"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Tilføj en ny URL , f.eks. google.dk"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "Ugyldig URL"
 
@@ -159,17 +137,17 @@ msgstr "Fra:"
 msgid "To:"
 msgstr "Til:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "Min konto"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Andre konti"
 
 #: src/plug/Widgets/ControlPage.vala:51
-msgid "Time Limits"
-msgstr "Tidsbegrænsninger"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -218,6 +196,38 @@ msgstr "Du kan ikke køre denne applikation"
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Du har ikke tilladelse til at køre denne applikation."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Håndter forælderkontrolindstillinger"
+
+#~ msgid "Parental Controls Client"
+#~ msgstr "Forældrekontrol Klient"
+
+#~ msgid "Show parental control restrictions"
+#~ msgstr "Vis forældrekontrol begrænsninger"
+
+#~ msgid "No users to edit"
+#~ msgstr "Ingen brugere at redigere"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Forældrekontrol kan kun anvendes på brugerkonti der ikke har "
+#~ "administrationsrettigheder.\n"
+#~ "Du kan ændre en brugers kontotype fra \"Administrator\" til \"Standard\" "
+#~ "i panelet for Brugere."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Konfigurer brugerkonti"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Åbn brugerens indstillinger"
+
+#~ msgid "Parental Control"
+#~ msgstr "Forældre Kontrol"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Tillad denne bruger at:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2019-04-22 18:59+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -21,56 +21,34 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-27 05:54+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Upravit nastavení rodičovské kontroly"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr "Pro změnu nastavení rodičovské kontroly je potřeba ověření"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Parental Controls Client"
-msgstr "Klient rodičovské kontroly"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show parental control restrictions"
-msgstr "Zobrazit omezení rodičovské kontroly"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Některá nastavení vyžadují administrátorská oprávnění"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "Žádní uživatelé k editaci"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Rodičovská kontrola může být aplikována jen na uživatelské účty, které "
-"nemají administrátorská oprávnění.\n"
-"Typ uživatele z \"Administrátor\" na \"Standardní\" můžete změnit v panelu "
-"uživatelských účtů."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Konfigurovat uživatelské účty"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Otevřít nastavení uživatelů"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Rodičovská kontrola"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Časová omezení"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -133,20 +111,20 @@ msgstr "Všední dny"
 msgid "Weekends"
 msgstr "Víkendy"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Zabránit %s v návštěvě těchto stránek:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "Přidat URL"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Přidat novou URL, například: google.com"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "Neplatná URL"
 
@@ -158,17 +136,17 @@ msgstr "Od:"
 msgid "To:"
 msgstr "Do:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "Můj účet"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Ostatní účty"
 
 #: src/plug/Widgets/ControlPage.vala:51
-msgid "Time Limits"
-msgstr "Časová omezení"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -220,6 +198,38 @@ msgstr "Nemůžete spouštět tuto aplikaci"
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Nemáte svolení spouštět tuto aplikaci."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Upravit nastavení rodičovské kontroly"
+
+#~ msgid "Parental Controls Client"
+#~ msgstr "Klient rodičovské kontroly"
+
+#~ msgid "Show parental control restrictions"
+#~ msgstr "Zobrazit omezení rodičovské kontroly"
+
+#~ msgid "No users to edit"
+#~ msgstr "Žádní uživatelé k editaci"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Rodičovská kontrola může být aplikována jen na uživatelské účty, které "
+#~ "nemají administrátorská oprávnění.\n"
+#~ "Typ uživatele z \"Administrátor\" na \"Standardní\" můžete změnit v "
+#~ "panelu uživatelských účtů."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Konfigurovat uživatelské účty"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Otevřít nastavení uživatelů"
+
+#~ msgid "Parental Control"
+#~ msgstr "Rodičovská kontrola"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Povolit tomuto uživateli:"

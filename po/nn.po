@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2019-01-06 17:22+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
@@ -16,57 +16,35 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Behandle innstillingar for foreldrekontroll"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr ""
 "Identitetsstadfesting er kravd for å endre innstillingar for foreldrekontroll"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Parental Controls Client"
-msgstr "Foreldrekontrollklient"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show parental control restrictions"
-msgstr "Vis innstillingar for foreldrekontroll"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Nokre innstillingar krev administratorrettar for å kunne endrast"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "Ingen brukar(ar) å setje opp"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Foreldrekontroll kan berre brukast på brukarkontoar som ikkje har "
-"administrative rettar.\n"
-"Du kan endre ein brukar si kontotype frå «Administrator» til «Standardval» i "
-"Brukarkontoar-fana i systeminnstillingane."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Sett opp brukarkontoar"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Opne brukarinnstillingar"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Foreldrekontroll"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Gjenverande tid"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -129,20 +107,20 @@ msgstr "Vekedagar"
 msgid "Weekends"
 msgstr "Helgar"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Hindre %s frå å besøke desse nettstadane:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "Legg til URL"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Legg til ein ny URL, til dømes: NRK.no"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "Ugyldig nettadresse"
 
@@ -154,18 +132,17 @@ msgstr "Frå:"
 msgid "To:"
 msgstr "Til:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "Min konto"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Andre kontoar"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
-msgid "Time Limits"
-msgstr "Gjenverande tid"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -214,6 +191,38 @@ msgstr "Du kan ikkje køyre denne applikasjonen"
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Du har ikkje rettar til å køyre dette programmet."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Behandle innstillingar for foreldrekontroll"
+
+#~ msgid "Parental Controls Client"
+#~ msgstr "Foreldrekontrollklient"
+
+#~ msgid "Show parental control restrictions"
+#~ msgstr "Vis innstillingar for foreldrekontroll"
+
+#~ msgid "No users to edit"
+#~ msgstr "Ingen brukar(ar) å setje opp"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Foreldrekontroll kan berre brukast på brukarkontoar som ikkje har "
+#~ "administrative rettar.\n"
+#~ "Du kan endre ein brukar si kontotype frå «Administrator» til "
+#~ "«Standardval» i Brukarkontoar-fana i systeminnstillingane."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Sett opp brukarkontoar"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Opne brukarinnstillingar"
+
+#~ msgid "Parental Control"
+#~ msgstr "Foreldrekontroll"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Tillat denne brukaren å:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2019-02-09 08:30+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://weblate.elementary.io/projects/switchboard/"
@@ -21,56 +21,34 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-17 06:09+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Hallitse käytönvalvonnan asetuksia"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr "Käytönvalvonnan asetusten muuttaminen vaatii tunnistautumisen"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Parental Controls Client"
-msgstr "Käytönvalvonnan sovellus"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show parental control restrictions"
-msgstr "Näytä käytönvalvonnan rajoitukset"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "Ei muokattavia käyttäjiä"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Käytönvalvontaa voidaan soveltaa ainoastaan niihin tileihin, joilla ei ole "
-"ylläpito-oikeuksia.\n"
-"Voit vaihtaa käyttäjätilin tyyppiä ylläpitäjästä peruskäyttäjään "
-"käyttäjäpaneelin kautta."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Muokkaa käyttäjätilejä"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Avaa käyttäjäasetukset"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Käytönvalvonta"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Aikarajoitukset"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -133,20 +111,20 @@ msgstr "Arkipäivinä"
 msgid "Weekends"
 msgstr "Viikonloppuisin"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Estä käyttäjää %s käymästä seuraavilla sivustoilla:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "Lisää verkko-osoite"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Lisää uusi osoite, esim. google.com"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "Virheellinen osoite"
 
@@ -158,17 +136,17 @@ msgstr "Alkaa:"
 msgid "To:"
 msgstr "Päättyy:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "Oma tili"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Muut tilit"
 
 #: src/plug/Widgets/ControlPage.vala:51
-msgid "Time Limits"
-msgstr "Aikarajoitukset"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -218,6 +196,38 @@ msgstr "Et voi suorittaa tätä sovellusta"
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Sinulla ei ole oikeutta suorittaa tätä sovellusta."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Hallitse käytönvalvonnan asetuksia"
+
+#~ msgid "Parental Controls Client"
+#~ msgstr "Käytönvalvonnan sovellus"
+
+#~ msgid "Show parental control restrictions"
+#~ msgstr "Näytä käytönvalvonnan rajoitukset"
+
+#~ msgid "No users to edit"
+#~ msgstr "Ei muokattavia käyttäjiä"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Käytönvalvontaa voidaan soveltaa ainoastaan niihin tileihin, joilla ei "
+#~ "ole ylläpito-oikeuksia.\n"
+#~ "Voit vaihtaa käyttäjätilin tyyppiä ylläpitäjästä peruskäyttäjään "
+#~ "käyttäjäpaneelin kautta."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Muokkaa käyttäjätilejä"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Avaa käyttäjäasetukset"
+
+#~ msgid "Parental Control"
+#~ msgstr "Käytönvalvonta"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Salli tämän käyttäjän:"

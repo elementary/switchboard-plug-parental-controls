@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2017-01-03 04:06+0000\n"
 "Last-Translator: Cody Garver <cody@elementaryos.org>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -20,58 +20,35 @@ msgstr ""
 "X-Generator: Launchpad (build 18326)\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Настройки на родителския контрол"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr ""
 "За промяна на настройките на родителския контрол се изисква удостоверяване"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-#, fuzzy
-msgid "Parental Controls Client"
-msgstr "Родителски контрол"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-#, fuzzy
-msgid "Show parental control restrictions"
-msgstr "Настройки на родителския контрол"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Някои настройки изискват администраторски права, за да бъдат променени"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "Няма потребители за настройване"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Родителският контрол може да се приложи само за профили, които нямат "
-"администраторски права.\n"
-"Можете да промените вида на профила в настройките на потребителите."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Настройване на потребителските профили"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Отваряне на настройките на потребителя"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Родителски контрол"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Оставащо време"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -135,20 +112,20 @@ msgstr "Делнични дни"
 msgid "Weekends"
 msgstr "Неделнични дни"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Предотвратяване на отварянето на следните сайтове от %s:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "Добавяне на адрес"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Добавяне на нов адрес, например: abv.bg"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "Недействителен адрес"
 
@@ -160,18 +137,17 @@ msgstr "От:"
 msgid "To:"
 msgstr "До:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "Моят профил"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Други профили"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
-msgid "Time Limits"
-msgstr "Оставащо време"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -220,6 +196,39 @@ msgstr "Не можете да отворите тази програма"
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Нямате права да отворите тази програма."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Настройки на родителския контрол"
+
+#, fuzzy
+#~ msgid "Parental Controls Client"
+#~ msgstr "Родителски контрол"
+
+#, fuzzy
+#~ msgid "Show parental control restrictions"
+#~ msgstr "Настройки на родителския контрол"
+
+#~ msgid "No users to edit"
+#~ msgstr "Няма потребители за настройване"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Родителският контрол може да се приложи само за профили, които нямат "
+#~ "администраторски права.\n"
+#~ "Можете да промените вида на профила в настройките на потребителите."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Настройване на потребителските профили"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Отваряне на настройките на потребителя"
+
+#~ msgid "Parental Control"
+#~ msgstr "Родителски контрол"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Позволяване на потребителя да:"
