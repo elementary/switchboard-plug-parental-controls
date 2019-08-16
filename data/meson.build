@@ -16,14 +16,14 @@ configure_file(
     input: 'org.pantheon.switchboard.parental-controls.policy.in',
     output: 'org.pantheon.switchboard.parental-controls.policy',
     configuration: configuration_data,
-    install_dir: polkit_dep.get_pkgconfig_variable('policydir')
+    install_dir: polkit_dep.get_pkgconfig_variable('policydir', define_variable: ['prefix', prefix])
 )
 
 configure_file(
     input: 'org.pantheon.ParentalControls.service.in',
     output: 'org.pantheon.ParentalControls.service',
     configuration: configuration_data,
-    install_dir: dbus_dep.get_pkgconfig_variable('system_bus_services_dir')
+    install_dir: dbus_dep.get_pkgconfig_variable('system_bus_services_dir', define_variable: ['datadir', datadir])
 )
 
 configure_file(
