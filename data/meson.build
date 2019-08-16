@@ -30,7 +30,7 @@ configure_file(
     input: 'pantheon-parental-controls-client.desktop.in',
     output: 'pantheon-parental-controls-client.desktop',
     configuration: configuration_data,
-    install_dir: join_paths(get_option('datadir'), 'applications')
+    install_dir: join_paths(datadir, 'applications')
 )
 
 install_data(
@@ -47,6 +47,6 @@ i18n.merge_file(
     input: 'io.elementary.switchboard.parental-controls.appdata.xml.in',
     output: 'io.elementary.switchboard.parental-controls.appdata.xml',
     po_dir: join_paths(meson.source_root (), 'po', 'extra'),
-    install_dir: join_paths(get_option('datadir'), 'metainfo'),
+    install_dir: join_paths(datadir, 'metainfo'),
     install: true
 )

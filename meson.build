@@ -18,11 +18,14 @@ add_project_arguments(
     language: 'vala'
 )
 
+prefix = get_option('prefix')
+datadir = join_paths(prefix, get_option('datadir'))
+libdir = join_paths(prefix, get_option('libdir'))
 
-client_path = join_paths(get_option('prefix'), get_option('libexecdir'))
+client_path = join_paths(prefix, get_option('libexecdir'))
 client_name = 'pantheon-parental-controls-client'
 
-daemon_path = join_paths(get_option('prefix'), get_option('bindir'))
+daemon_path = join_paths(prefix, get_option('bindir'))
 daemon_name = 'pantheon-parental-controls-daemon'
 daemon_conf_dir = join_paths(get_option('sysconfdir'), 'pantheon-parental-controls')
 
