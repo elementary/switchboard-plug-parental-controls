@@ -1,0 +1,1 @@
+option('systemdunitdir', type: 'string', description: 'Directory for systemd service files')
