@@ -29,7 +29,7 @@ public class PC.Plug : Switchboard.Plug {
 
         Object (
             category: Category.SYSTEM,
-            code_name: "pantheon-parental-controls",
+            code_name: "io.elementary.switchboard.parental-controls",
             display_name: _("Screen Time & Limits"),
             description: _("Configure time limits and restrict application usage"),
             icon: "preferences-system-parental-controls",
