@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2019-07-26 10:13+0000\n"
+"PO-Revision-Date: 2019-09-01 16:22+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pt/>\n"
@@ -76,7 +76,7 @@ msgstr "Adicionar Aplicações a Impedir…"
 
 #: src/plug/Views/AppsView.vala:60
 msgid "Remove Selected App"
-msgstr "Remover Aplicação Seleccionada"
+msgstr "Remover aplicação selecionada"
 
 #: src/plug/Views/AppsView.vala:65
 msgid "Clear All"
@@ -121,7 +121,7 @@ msgstr "Adicionar URL"
 
 #: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
-msgstr "Adicionar um novo URL, por exemplo: google.pt"
+msgstr "Adicionar um novo URL, por exemplo: google.com"
 
 #: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
@@ -162,7 +162,7 @@ msgstr "Procurar Aplicações"
 #: src/client/Client.vala:89
 #, c-format
 msgid "This computer will lock after %s."
-msgstr "Este computador iserá bloqueado dentro de %s."
+msgstr "Este computador irá bloquear dentro de %s."
 
 #: src/client/Client.vala:91
 #, c-format
