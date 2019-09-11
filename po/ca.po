@@ -7,74 +7,54 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2019-02-07 14:23+0000\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
+"PO-Revision-Date: 2019-07-21 03:24+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
-"Language-Team: Catalan <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Gestioneu els paràmetres del control parental"
+msgid "Manage Screen Time &amp; Limits"
+msgstr "Gestioneu els límits i el temps d'ús de la pantalla"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
-msgstr "Cal autenticació per canviar els paràmetres del control parental"
+msgid "Authentication is required to change Screen Time &amp; Limits"
+msgstr ""
+"Cal autenticació per canviar els paràmetres dels límits i el temps d'ús de "
+"la pantalla."
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Parental Controls Client"
-msgstr "Client de controls parentals"
+msgid "Screen Time & Limits Client"
+msgstr "Client de límits i de temps de pantalla"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show parental control restrictions"
-msgstr "Mostra les restriccions del control parental"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
+"Mostra la informació i les restriccions dels límits i del temps d'ús de la "
+"pantalla"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr "preferències-sistema-parental-controls"
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Alguns paràmetres necessiten permisos d'administrador per modificar-se"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "No hi ha usuaris per editar"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Els controls parentals només es poden aplicar als comptes dels usuaris que "
-"no tenen permisos administratius.\n"
-"Podeu canviar el tipus de compte d'un usuari d'administrador a estàndard a "
-"la secció de comptes d'usuari."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Configureu comptes d'usuari"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Obre els paràmetres dels usuaris"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Control parental"
+msgid "Screen Time & Limits"
+msgstr "Límits i temps de pantalla"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
-msgstr "Configureu límits de temps i restringiu l'ús d'aplicacions"
+msgstr "Configureu els límits de temps i restringiu l'ús d'aplicacions."
 
 #: src/plug/Plug.vala:60
 msgid "Limit computer use"
@@ -133,20 +113,20 @@ msgstr "Dies feiners"
 msgid "Weekends"
 msgstr "Caps de setmana"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Impedeix que %s visiti aquests llocs web:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "Afegeix un URL"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Afegiu un URL nou, com ara google.com"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "L'URL no és vàlid"
 
@@ -158,17 +138,17 @@ msgstr "De:"
 msgid "To:"
 msgstr "A:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "El meu compte"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Altres comptes"
 
 #: src/plug/Widgets/ControlPage.vala:51
-msgid "Time Limits"
-msgstr "Límits de temps"
+msgid "Screen Time"
+msgstr "Temps de pantalla"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -218,6 +198,38 @@ msgstr "No podeu executar aquesta aplicació."
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "No teniu permís per executar aquesta aplicació."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Gestioneu els paràmetres del control parental."
+
+#~ msgid "Parental Controls Client"
+#~ msgstr "Client de controls parentals"
+
+#~ msgid "Show parental control restrictions"
+#~ msgstr "Mostra les restriccions del control parental"
+
+#~ msgid "No users to edit"
+#~ msgstr "No hi ha usuaris per editar"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Els controls parentals només es poden aplicar als comptes dels usuaris "
+#~ "que no tenen permisos administratius.\n"
+#~ "Podeu canviar el tipus de compte d'un usuari d'administrador a estàndard "
+#~ "a la secció de comptes d'usuari."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Configureu comptes d'usuari"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Obre els paràmetres dels usuaris"
+
+#~ msgid "Parental Control"
+#~ msgstr "Control parental"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Permet a aquest usuari el següent:"
