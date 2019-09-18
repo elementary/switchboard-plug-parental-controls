@@ -149,7 +149,7 @@ namespace PC.Daemon {
         public void remove_restriction_for_user (
             string username,
             BusName sender
-        ) throws GLib.ErrorParentalControlsError {
+        ) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
