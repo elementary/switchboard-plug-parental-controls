@@ -36,7 +36,14 @@ public class PC.AccessControlLists {
     }
 
     private static File? create_desktop_files_dir (string username) {
-        string local_appdir = Path.build_filename (GLib.Path.DIR_SEPARATOR_S, "home", username, ".local", "share", "applications");
+        string local_appdir = Path.build_filename (
+            GLib.Path.DIR_SEPARATOR_S,
+            "home",
+            username,
+            ".local",
+            "share",
+            "applications"
+        );
         var appdir_file = File.new_for_path (local_appdir);
         if (!appdir_file.query_exists ()) {
             try {
@@ -70,7 +77,13 @@ public class PC.AccessControlLists {
         if (admin) {
             args[0] = exec;
             keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC,
-                "%s -a \"%s:%s:%s\"".printf (Constants.CLIENT_PATH, username, Constants.PARENTAL_CONTROLS_ACTION_ID, string.joinv (" ", args)));
+                "%s -a \"%s:%s:%s\"".printf (
+                    Constants.CLIENT_PATH,
+                    username,
+                    Constants.PARENTAL_CONTROLS_ACTION_ID,
+                    string.joinv (" ", args)
+                )
+            );
         } else {
             keyfile.set_string (KeyFileDesktop.GROUP, KeyFileDesktop.KEY_EXEC,
                 "%s -d %s".printf (Constants.CLIENT_PATH, exec));
@@ -128,7 +141,7 @@ public class PC.AccessControlLists {
                     } catch (Error e) {
                         warning (e.message);
                     }
-                    
+
                     continue;
                 }
             }
@@ -148,7 +161,13 @@ public class PC.AccessControlLists {
         }
     }
 
-    public static void apply_targets (string username, string[] old_targets, string[] targets, bool old_admin, bool admin) {
+    public static void apply_targets (
+        string username,
+        string[] old_targets,
+        string[] targets,
+        bool old_admin,
+        bool admin
+    ) {
         apply_permissions (username, old_targets, DEFAULT_PERMISSIONS, old_admin);
         apply_permissions (username, targets, NO_EXEC_PERMISSIONS, admin);
     }
