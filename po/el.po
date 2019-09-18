@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2017-02-19 11:55+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,59 +15,35 @@ msgstr ""
 "X-Generator: Launchpad (build 18326)\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "Διαχείριση ρυθμίσεων γονικού ελέγχου"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr ""
 "Απαιτείται επαλήθευση για να αλλάξετε τις ρυθμίσεις του γονικού ελέγχου"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-#, fuzzy
-msgid "Parental Controls Client"
-msgstr "Γονικός έλεγχος"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-#, fuzzy
-msgid "Show parental control restrictions"
-msgstr "Διαχείριση ρυθμίσεων γονικού ελέγχου"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Κάποιες ρυθμίσεις απαιτούν δικαιώματα διαχειριστή για να αλλάξουν"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "Δεν υπάρχουν χρήστες για επεξεργασία"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Ο γονικός έλεγχος μπορεί να εφαρμοστεί μόνο σε λογαριασμούς χρηστών οι "
-"οποίοι δεν έχουν δικαιώματα διαχειριστή.\n"
-"Μπορείτε να αλλάξετε τον τύπο ενός λογαριασμού από \"Διαχειριστής\" σε "
-"\"Τυπικός\" στον πίνακα λογαριασμών χρηστών."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Ρύθμιση λογαριασμών χρήστη"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Άνοιγμα ρυθμίσεων χρήστη"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Γονικός έλεγχος"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Χρόνος που απομένει"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -132,20 +108,20 @@ msgstr "Καθημερινές"
 msgid "Weekends"
 msgstr "Σαββατοκύριακα"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Αποτροπή %s από την επίσκεψη αυτών των ιστοσελίδων:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "Προσθήκη διεύθυνσης"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Προσθήκη νέας διεύθυνσης, για παράδειγμα: google.com"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "Μη έγκυση διεύθυνση"
 
@@ -157,18 +133,17 @@ msgstr "Από:"
 msgid "To:"
 msgstr "Έως:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "Ο λογαριασμός μου"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Άλλοι λογαριασμοί"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
-msgid "Time Limits"
-msgstr "Χρόνος που απομένει"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -219,6 +194,40 @@ msgstr "Δε μπορείτε να εκτελέσετε αυτήν την εφα
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Δεν σας επιτρέπεται να εκτελέσετε αυτήν την εφαρμογή."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "Διαχείριση ρυθμίσεων γονικού ελέγχου"
+
+#, fuzzy
+#~ msgid "Parental Controls Client"
+#~ msgstr "Γονικός έλεγχος"
+
+#, fuzzy
+#~ msgid "Show parental control restrictions"
+#~ msgstr "Διαχείριση ρυθμίσεων γονικού ελέγχου"
+
+#~ msgid "No users to edit"
+#~ msgstr "Δεν υπάρχουν χρήστες για επεξεργασία"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Ο γονικός έλεγχος μπορεί να εφαρμοστεί μόνο σε λογαριασμούς χρηστών οι "
+#~ "οποίοι δεν έχουν δικαιώματα διαχειριστή.\n"
+#~ "Μπορείτε να αλλάξετε τον τύπο ενός λογαριασμού από \"Διαχειριστής\" σε "
+#~ "\"Τυπικός\" στον πίνακα λογαριασμών χρηστών."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Ρύθμιση λογαριασμών χρήστη"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Άνοιγμα ρυθμίσεων χρήστη"
+
+#~ msgid "Parental Control"
+#~ msgstr "Γονικός έλεγχος"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Να επιτρέπεται σε αυτόν το χρήστη να:"

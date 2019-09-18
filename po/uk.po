@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2016-08-11 16:47+0000\n"
 "Last-Translator: Daniel Fore <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -21,58 +21,34 @@ msgstr ""
 "X-Generator: Launchpad (build 18326)\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-#, fuzzy
-msgid "Manage parental control settings"
-msgstr "Вхід необхідний для зміни налаштувань батьківського контролю"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr "Вхід необхідний для зміни налаштувань батьківського контролю"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-#, fuzzy
-msgid "Parental Controls Client"
-msgstr "Батьківський контроль"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show parental control restrictions"
+msgid "Show Screen Time & Limits information and restrictions"
 msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "Немає користувачів для редагування"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"Батьківський контроль може бути застосований лише до облікових записів "
-"користувачів, які не мають дозволу адміністратора.\n"
-"Ви можете змінити тип облікового запису користувача від \"Адміністратор\" на "
-"\"Стандарт\" в панелі \"Облікові записи користувачів\"."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "Налаштовувати облікових записів користувачів"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "Відкрити параметри користувача"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "Батьківський контроль"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Часу залишилось"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -136,20 +112,20 @@ msgstr "Будні"
 msgid "Weekends"
 msgstr "Вихідні"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "Захистити %s від відвідування цих сайтів:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "Додати URL"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "Додати новий URL, наприклад: google.com"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "Некоректна адреса"
 
@@ -161,18 +137,17 @@ msgstr "Від:"
 msgid "To:"
 msgstr "До:"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "Мій обліковий запис"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Інші облікові записи"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
-msgid "Time Limits"
-msgstr "Часу залишилось"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -223,6 +198,37 @@ msgstr "Ви не можете запустити цю програму"
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "Ви не маєте права запускати цю програму."
+
+#, fuzzy
+#~ msgid "Manage parental control settings"
+#~ msgstr "Вхід необхідний для зміни налаштувань батьківського контролю"
+
+#, fuzzy
+#~ msgid "Parental Controls Client"
+#~ msgstr "Батьківський контроль"
+
+#~ msgid "No users to edit"
+#~ msgstr "Немає користувачів для редагування"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "Батьківський контроль може бути застосований лише до облікових записів "
+#~ "користувачів, які не мають дозволу адміністратора.\n"
+#~ "Ви можете змінити тип облікового запису користувача від \"Адміністратор\" "
+#~ "на \"Стандарт\" в панелі \"Облікові записи користувачів\"."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "Налаштовувати облікових записів користувачів"
+
+#~ msgid "Open Users settings"
+#~ msgstr "Відкрити параметри користувача"
+
+#~ msgid "Parental Control"
+#~ msgstr "Батьківський контроль"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "Дозволити цьому користувачеві:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
+"POT-Creation-Date: 2019-06-26 22:45+0200\n"
 "PO-Revision-Date: 2017-01-03 04:07+0000\n"
 "Last-Translator: Cody Garver <cody@elementaryos.org>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -20,60 +20,36 @@ msgstr ""
 "X-Generator: Launchpad (build 18326)\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage parental control settings"
-msgstr "چوڭلارنىڭ باشقۇرۇش كونترول تەڭشەكلىرى"
+msgid "Manage Screen Time &amp; Limits"
+msgstr ""
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change parental control settings"
+#, fuzzy
+msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr ""
 "چوڭلارنىڭ باشقۇرۇش تەڭشەكلىرىنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتىنى "
 "دەلىللەش زۆرۈر"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
-#, fuzzy
-msgid "Parental Controls Client"
-msgstr "چوڭلار تەڭشەكلىرى"
+msgid "Screen Time & Limits Client"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:5
-#, fuzzy
-msgid "Show parental control restrictions"
-msgstr "چوڭلارنىڭ باشقۇرۇش كونترول تەڭشەكلىرى"
+msgid "Show Screen Time & Limits information and restrictions"
+msgstr ""
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/MainView.vala:63
+#: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى زۆرۈش"
 
-#: src/plug/MainView.vala:70
-msgid "No users to edit"
-msgstr "تەھرىرلىيەلەيدىغان ھىساۋات يوق"
-
-#: src/plug/MainView.vala:70
-msgid ""
-"Parental Controls can only be applied to user accounts that don't have "
-"administrative permissions.\n"
-"You can change a user's account type from \"Administrator\" to \"Standard\" "
-"in the User Accounts pane."
-msgstr ""
-"چوڭلار باشقۇرۇش تەڭشەكلىرى پەقەت باشقۇرغۇچىلىق سالاھىيىتى بولمىغان "
-"ھىساۋاتلارغا ماس كىلىدۇ.\n"
-"ئابونت ھىساۋات تاختىسىدا ئابونتلارنىڭ ھىساۋات تۈرىنى \"باشقۇرغۇچى\" لىقتىن "
-"\"ئادەتتىكى\" گە ئۆزگەرتەلەيسىز."
-
-#: src/plug/MainView.vala:73
-msgid "Configure User Accounts"
-msgstr "ئابونت ھىساۋاتلىرىنى تەڭشەش"
-
-#: src/plug/MainView.vala:76
-msgid "Open Users settings"
-msgstr "ئابونت تەڭشەكلىرىنى ئىچىش"
-
 #: src/plug/Plug.vala:33
-msgid "Parental Control"
-msgstr "چوڭلار تەڭشەكلىرى"
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "قالغان ۋاقىت"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -137,20 +113,20 @@ msgstr "خىزمەت كۈنلىرى"
 msgid "Weekends"
 msgstr "ھەپتە ئاخىرى"
 
-#: src/plug/Views/InternetView.vala:73
+#: src/plug/Views/InternetView.vala:71
 #, c-format
 msgid "Prevent %s from visiting these websites:"
 msgstr "%s نى بۇ توربىكەتلەرنى زىيارەت قىلىشتىن چەكلەش:"
 
-#: src/plug/Views/InternetView.vala:86
+#: src/plug/Views/InternetView.vala:84
 msgid "Add URL"
 msgstr "تور ئادىرىسى قىتىش"
 
-#: src/plug/Views/InternetView.vala:95
+#: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
 msgstr "يىڭى تورئادىرىسى قىتىش، مەسىلەن:google.com"
 
-#: src/plug/Views/InternetView.vala:96
+#: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
 msgstr "ئىناۋەتسىز تورئادىرىسى"
 
@@ -162,18 +138,17 @@ msgstr "دىن"
 msgid "To:"
 msgstr "گىچە"
 
-#: src/plug/Widgets/UserList.vala:43
+#: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "ھىساۋاتىم"
 
-#: src/plug/Widgets/UserList.vala:47
+#: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "باشقا ھىساۋاتلار"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
-msgid "Time Limits"
-msgstr "قالغان ۋاقىت"
+msgid "Screen Time"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -222,6 +197,40 @@ msgstr "سىز بۇ ئەپنى ئىجرا قىلالمايسىز"
 #: src/client/AppUnavailableDialog.vala:29
 msgid "You are not permitted to run this application."
 msgstr "سىزنىڭ بۇ ئەپنى ئىجرا قىلىش ھوقۇقىڭىز يوق."
+
+#~ msgid "Manage parental control settings"
+#~ msgstr "چوڭلارنىڭ باشقۇرۇش كونترول تەڭشەكلىرى"
+
+#, fuzzy
+#~ msgid "Parental Controls Client"
+#~ msgstr "چوڭلار تەڭشەكلىرى"
+
+#, fuzzy
+#~ msgid "Show parental control restrictions"
+#~ msgstr "چوڭلارنىڭ باشقۇرۇش كونترول تەڭشەكلىرى"
+
+#~ msgid "No users to edit"
+#~ msgstr "تەھرىرلىيەلەيدىغان ھىساۋات يوق"
+
+#~ msgid ""
+#~ "Parental Controls can only be applied to user accounts that don't have "
+#~ "administrative permissions.\n"
+#~ "You can change a user's account type from \"Administrator\" to \"Standard"
+#~ "\" in the User Accounts pane."
+#~ msgstr ""
+#~ "چوڭلار باشقۇرۇش تەڭشەكلىرى پەقەت باشقۇرغۇچىلىق سالاھىيىتى بولمىغان "
+#~ "ھىساۋاتلارغا ماس كىلىدۇ.\n"
+#~ "ئابونت ھىساۋات تاختىسىدا ئابونتلارنىڭ ھىساۋات تۈرىنى \"باشقۇرغۇچى\" "
+#~ "لىقتىن \"ئادەتتىكى\" گە ئۆزگەرتەلەيسىز."
+
+#~ msgid "Configure User Accounts"
+#~ msgstr "ئابونت ھىساۋاتلىرىنى تەڭشەش"
+
+#~ msgid "Open Users settings"
+#~ msgstr "ئابونت تەڭشەكلىرىنى ئىچىش"
+
+#~ msgid "Parental Control"
+#~ msgstr "چوڭلار تەڭشەكلىرى"
 
 #~ msgid "Allow this user to:"
 #~ msgstr "بۇ ئابونتنىڭ تۆۋەندىكى مەشغۇلاتىغا يول قويۇش:"

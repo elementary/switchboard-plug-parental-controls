@@ -5,11 +5,16 @@ configuration_data.set('CLIENT_PATH', join_paths(client_path, client_name))
 
 dbus_dep = dependency('dbus-1')
 
+systemdunitdir = get_option('systemdunitdir')
+if systemdunitdir == ''
+    systemdunitdir = systemd_dep.get_pkgconfig_variable('systemdsystemunitdir')
+endif
+
 configure_file(
     input: 'pantheon-parental-controls.service.in',
     output: 'pantheon-parental-controls.service',
     configuration: configuration_data,
-    install_dir: systemd_dep.get_pkgconfig_variable('systemdsystemunitdir')
+    install_dir: systemdunitdir
 )
 
 configure_file(
