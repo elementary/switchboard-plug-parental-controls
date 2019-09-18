@@ -26,9 +26,25 @@ namespace PC.Client {
         private static string? app_name;
         private static string? auth;
 
-        private const GLib.OptionEntry[] options = {
-            { "authorize", 'a', 0, OptionArg.STRING, ref auth, "Authorizes an application (format: username:action_id:arguments)", null },
-            { "dialog", 'd', 0, OptionArg.STRING, ref app_name, "Show an unavailable dialog for the specified application name", null },
+        private const GLib.OptionEntry[] OPTIONS = {
+            {
+                "authorize",
+                'a',
+                0,
+                OptionArg.STRING,
+                ref auth,
+                "Authorizes an application (format: username:action_id:arguments)",
+                null
+            },
+            {
+                "dialog",
+                'd',
+                0,
+                OptionArg.STRING,
+                ref app_name,
+                "Show an unavailable dialog for the specified application name",
+                null
+            },
             { null }
         };
 
@@ -36,7 +52,7 @@ namespace PC.Client {
             try {
                 var opt_context = new OptionContext (null);
                 opt_context.set_help_enabled (true);
-                opt_context.add_main_entries (options, null);
+                opt_context.add_main_entries (OPTIONS, null);
                 opt_context.parse (ref args);
             } catch (OptionError e) {
                 print ("error: %s\n", e.message);
