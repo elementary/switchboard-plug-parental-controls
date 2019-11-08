@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 17:11+0000\n"
-"PO-Revision-Date: 2019-07-23 13:25+0000\n"
+"PO-Revision-Date: 2019-11-08 19:24+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/ja/>\n"
@@ -28,29 +28,28 @@ msgid "Configure time limits and restrict application usage"
 msgstr "時間制限を設定し、アプリケーションの使用を制限します"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:10
-#, fuzzy
 msgid "Rename to Screen Time &amp; Limits"
-msgstr "スクリーンタイムと制限の設定"
+msgstr "スクリーンタイムと制限の設定に名称変更"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:11
 msgid "Show your own account"
-msgstr ""
+msgstr "利用中のアカウントも表示するように修正"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Redesign the app chooser"
-msgstr ""
+msgstr "アプリ選択画面を再設計"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
 msgid "Fix an issue with removing URLs from restricted websites"
-msgstr ""
+msgstr "制限された Web サイトから URL を削除する際の問題を修正"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid "Fix time restriction being applied even if master switch is disabled"
-msgstr ""
+msgstr "制限全体のスイッチが無効の場合にも時間制限が適用されてしまう問題を修正"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Updated translations"
-msgstr ""
+msgstr "翻訳の更新"
 
 #~ msgid "Parental Controls Settings"
 #~ msgstr "ペアレンタルコントロールの設定"
