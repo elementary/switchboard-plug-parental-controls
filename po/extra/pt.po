@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2019-07-26 10:13+0000\n"
+"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"PO-Revision-Date: 2019-11-08 19:24+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/pt/>\n"
@@ -26,6 +26,32 @@ msgstr "Tempo de ecrã &amp; Limites de definições"
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
 msgstr "Configurar limites de utilização e restrições ao uso de aplicações"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:10
+msgid "Rename to Screen Time &amp; Limits"
+msgstr "Renomear para tempo de ecrã &amp; limites"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:11
+msgid "Show your own account"
+msgstr "Mostrar a sua própria conta"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
+msgid "Redesign the app chooser"
+msgstr "Redesenhar o seletor de aplicações"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
+msgid "Fix an issue with removing URLs from restricted websites"
+msgstr "Corrige um problema com a remoção de URLs de sites restritos"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+msgid "Fix time restriction being applied even if master switch is disabled"
+msgstr ""
+"Corrige a restrição de tempo de ser aplicada mesmo que o comutador principal "
+"esteja desativado"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+msgid "Updated translations"
+msgstr "Traduções atualizadas"
 
 #~ msgid "Parental Controls Settings"
 #~ msgstr "Definições de controlo parental"

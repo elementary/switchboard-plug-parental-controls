@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-12-10 14:23-0800\n"
-"PO-Revision-Date: 2019-07-21 03:24+0000\n"
+"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"PO-Revision-Date: 2019-11-08 19:24+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/eo/>\n"
@@ -21,8 +21,32 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
-msgstr "Agordoj pri ekranaj uzado &amp; limoj"
+msgstr "Agordoj pri ekranaj uztempo &amp; limoj"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
-msgstr "Agordi tempolimojn kaj striktigi aplikaĵan uzadon"
+msgstr "Agordi uztempajn limojn kaj striktigi aplikaĵan uzadon"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:10
+msgid "Rename to Screen Time &amp; Limits"
+msgstr "Renomi al Ekrana uztempo &amp; limoj"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:11
+msgid "Show your own account"
+msgstr "Montri vian propran konton"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
+msgid "Redesign the app chooser"
+msgstr "Refasoni la aplikaĵan elektilon"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
+msgid "Fix an issue with removing URLs from restricted websites"
+msgstr "Ripari problemon pri forigo de URL-adreso el limigitaj retejoj"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+msgid "Fix time restriction being applied even if master switch is disabled"
+msgstr "Ripari tempan limigon aplikata eĉ se la estra ŝaltilo estas malebligita"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+msgid "Updated translations"
+msgstr "Ĝisdatigitaj tradukoj"
