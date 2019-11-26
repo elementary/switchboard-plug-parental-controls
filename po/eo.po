@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2019-07-21 03:24+0000\n"
+"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"PO-Revision-Date: 2019-11-08 19:24+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/eo/>\n"
@@ -45,7 +45,7 @@ msgstr "Ekranaj uzado &amp; limoj"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
-msgstr "Agordi tempolimojn kaj striktigi aplikaĵan uzadon"
+msgstr "Agordi uztempajn limojn kaj striktigi aplikaĵan uzadon"
 
 #: src/plug/Plug.vala:60
 msgid "Limit computer use"
