@@ -44,7 +44,10 @@ namespace PC.Widgets {
             var scrolled = new Gtk.ScrolledWindow (null, null);
             scrolled.hexpand = scrolled.vexpand = true;
 
-            var header_label = new Granite.HeaderLabel (_("Prevent %s from using these apps:").printf (user.get_real_name ()));
+            var header_label = new Granite.HeaderLabel (
+                                    _("Prevent %s from using these apps:").printf (user.get_real_name ())
+                               );
+
             header_label.margin_start = 12;
             header_label.margin_top = 6;
 

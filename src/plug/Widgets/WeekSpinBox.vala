@@ -63,7 +63,10 @@ namespace PC.Widgets {
             string hours = from.slice (0, 2);
             string minutes = from.substring (2);
 
-            var time = new DateTime.local (new DateTime.now_local ().get_year (), 1, 1, int.parse (hours), int.parse (minutes), 0);
+            var time = new DateTime.local (
+                           new DateTime.now_local ().get_year (), 1, 1, int.parse (hours), int.parse (minutes), 0
+                       );
+
             picker_from.time = time;
         }
 
@@ -71,7 +74,10 @@ namespace PC.Widgets {
             string hours = to.slice (0, 2);
             string minutes = to.substring (2);
 
-            var time = new DateTime.local (new DateTime.now_local ().get_year (), 1, 1, int.parse (hours), int.parse (minutes), 0);
+            var time = new DateTime.local (
+                           new DateTime.now_local ().get_year (), 1, 1, int.parse (hours), int.parse (minutes), 0
+                       );
+
             picker_to.time = time;
         }
 

@@ -75,7 +75,8 @@ namespace PC {
             }
 
             try {
-                api = Bus.get_proxy_sync (BusType.SYSTEM, Constants.PARENTAL_CONTROLS_IFACE, Constants.PARENTAL_CONTROLS_OBJECT_PATH);
+                api = Bus.get_proxy_sync (BusType.SYSTEM, Constants.PARENTAL_CONTROLS_IFACE,
+                                          Constants.PARENTAL_CONTROLS_OBJECT_PATH);
             } catch (Error e) {
                 critical ("%s, using dummy parental controls backend", e.message);
                 api = new DummyParentalControls ();

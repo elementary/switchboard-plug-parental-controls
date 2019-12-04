@@ -22,7 +22,7 @@
 
 namespace PC.Widgets {
     public class InternetBox : Gtk.Grid {
-        private const string URL_REGEX_RULE = "[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)";
+        private const string URL_REGEX = "[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)";
 
         public weak Act.User user { get; construct; }
         private Regex? url_regex = null;
@@ -63,12 +63,15 @@ namespace PC.Widgets {
 
         construct {
             try {
-                url_regex = new Regex (URL_REGEX_RULE, RegexCompileFlags.OPTIMIZE);
+                url_regex = new Regex (URL_REGEX, RegexCompileFlags.OPTIMIZE);
             } catch (RegexError e) {
                 warning ("%s\n", e.message);
             }
 
-            var info_label = new Gtk.Label (_("Prevent %s from visiting these websites:").printf (user.get_real_name ()));
+            var info_label = new Gtk.Label (
+                                _("Prevent %s from visiting these websites:").printf (user.get_real_name ())
+                             );
+
             info_label.halign = Gtk.Align.START;
             info_label.margin_start = 12;
             info_label.get_style_context ().add_class ("h4");

@@ -55,7 +55,9 @@ public class PC.Daemon.UserConfig : GLib.Object {
         }
 
         try {
-            key.load_from_file (Constants.DAEMON_CONF_FILE, KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS);
+            key.load_from_file (Constants.DAEMON_CONF_FILE,
+                                KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS);
+
         } catch (KeyFileError e) {
             warning (e.message);
         } catch (FileError e) {
