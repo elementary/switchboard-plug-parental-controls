@@ -124,7 +124,7 @@ namespace PC.Widgets {
             }
 
             if (ids.length > 0) {
-                limit_combobox.active_id = string.joinv ("|", ids);    
+                limit_combobox.active_id = string.joinv ("|", ids);
             }
         }
 

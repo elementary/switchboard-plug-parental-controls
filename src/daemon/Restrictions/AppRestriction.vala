@@ -64,7 +64,7 @@ namespace PC.Daemon {
             } catch (ShellError e) {
                 warning ("%s\n", e.message);
                 return;
-            }                
+            }
 
             string executable = args[0];
 

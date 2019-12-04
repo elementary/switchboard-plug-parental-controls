@@ -50,7 +50,7 @@ namespace PC.PAM {
                     return "Wd";
                 default:
                 case UNKNOWN:
-                    return "unknown";                
+                    return "unknown";
             }
         }
     }
@@ -132,7 +132,7 @@ namespace PC.PAM {
                 info.day_type = DayType.to_enum (time.slice (0, 2));
                 info.from = bounds[0];
                 info.to = bounds[1];
-                
+
                 list.append (info);
             }
 
@@ -161,7 +161,7 @@ namespace PC.PAM {
             string[] bounds = times[0].substring (2).split ("-");
             if (bounds.length < 2) {
                 from = 0;
-                to = 0;                
+                to = 0;
                 return;
             }
 
@@ -180,7 +180,7 @@ namespace PC.PAM {
             if (bounds.length < 2) {
                 from = 0;
                 to = 0;
-                return;                
+                return;
             }
 
             from = int.parse (bounds[0]);

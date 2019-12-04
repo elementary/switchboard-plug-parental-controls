@@ -168,7 +168,7 @@ namespace PC.Widgets {
                 targets += Environment.find_program_in_path (entry.app_info.get_executable ());
             }
 
-            Utils.get_api ().set_user_daemon_targets.begin (user.get_user_name (), targets); 
+            Utils.get_api ().set_user_daemon_targets.begin (user.get_user_name (), targets);
         }
 
         private void update_sensitivity () {

@@ -26,7 +26,7 @@ namespace PC.Daemon {
         private const int HOUR_INTERVAL = 3600;
 
         public signal void terminate ();
-        
+
         private uint[] timeout_ids;
 
         public override void start () {
@@ -59,12 +59,12 @@ namespace PC.Daemon {
 
             var span = get_difference_span (current.to);
             int minutes = ((int)(span / GLib.TimeSpan.MINUTE)).abs ();
-            
+
             if (minutes > 0) {
                 start_loop (minutes);
             } else {
                 terminate ();
-            }  
+            }
 
             timeout_ids += Timeout.add_seconds (HOUR_INTERVAL * 24, () => {
                 stop ();
@@ -113,6 +113,6 @@ namespace PC.Daemon {
 
                 return (minutes > 0);
             });
-        }   
+        }
     }
 }

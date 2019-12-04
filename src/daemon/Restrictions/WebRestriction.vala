@@ -35,7 +35,7 @@
                 foreach (string address in addresses) {
                     process_adress (address, "-A");
                 }
-            }      
+            }
         }
 
         public override void stop () {
@@ -44,7 +44,7 @@
                 foreach (string address in addresses) {
                     process_adress (address, "-D");
                 }
-            }  
+            }
         }
 
         private string[] get_addresses_from_name (string name) {

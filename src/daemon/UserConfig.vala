@@ -35,7 +35,7 @@ public class PC.Daemon.UserConfig : GLib.Object {
 
         if (create) {
             return create_for_username (username);
-        }            
+        }
 
         return null;
     }
@@ -61,7 +61,7 @@ public class PC.Daemon.UserConfig : GLib.Object {
         } catch (FileError e) {
             warning (e.message);
         }
-        
+
         foreach (string username in key.get_groups ()) {
             var user_config = new UserConfig (username);
             config_list.append (user_config);

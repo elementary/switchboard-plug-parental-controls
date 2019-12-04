@@ -50,7 +50,7 @@ namespace PC {
     }
 
     public class Utils {
-        public class DummyParentalControls : Object, IParentalControls  {
+        public class DummyParentalControls : Object, IParentalControls {
             public async void add_restriction_for_user (string input, bool clean) throws GLib.Error {}
             public async void remove_restriction_for_user (string username) throws GLib.Error {}
             public async void end_app_authorization () throws GLib.Error {}

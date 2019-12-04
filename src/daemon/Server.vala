@@ -130,7 +130,7 @@ namespace PC.Daemon {
         public void set_user_daemon_block_urls (string username, string[] block_urls, BusName sender) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
-            }  
+            }
 
             var config = UserConfig.get_for_username (username, true);
             if (config == null) {
@@ -240,7 +240,7 @@ namespace PC.Daemon {
             try {
                 var authority = Polkit.Authority.get_sync (null);
                 var auth_result = authority.check_authorization_sync (subject, Constants.PARENTAL_CONTROLS_ACTION_ID, null, Polkit.CheckAuthorizationFlags.NONE);
-                return auth_result.get_is_authorized ();     
+                return auth_result.get_is_authorized ();
             } catch (Error e) {
                 warning (e.message);
             }

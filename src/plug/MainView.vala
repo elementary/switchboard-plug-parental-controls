@@ -65,7 +65,8 @@ public class PC.MainBox : Gtk.Box {
 
         unowned Polkit.Permission permission = Utils.get_permission ();
         permission.bind_property ("allowed", infobar, "no-show-all", GLib.BindingFlags.SYNC_CREATE);
-        permission.bind_property ("allowed", infobar, "visible", GLib.BindingFlags.SYNC_CREATE|GLib.BindingFlags.INVERT_BOOLEAN);
+        permission.bind_property ("allowed", infobar, "visible",
+                                  GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
 
         this.add (main_grid);
         this.show_all ();
