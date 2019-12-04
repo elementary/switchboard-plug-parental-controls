@@ -87,8 +87,9 @@ namespace PC.Widgets {
             master_switch.sensitive = Utils.get_permission ().get_allowed ();
 
             full_name_label.label = user.get_real_name ();
-            var escaped_name = GLib.Markup.escape_text (user.get_user_name ());
-            username_label.label = "<span font_size=\"small\">%s</span>".printf (escaped_name);
+            username_label.label = GLib.Markup.printf_escaped (
+                                        "<span font_size=\"small\">%s</span>", user.get_user_name ()
+                                   );
             grid.show_all ();
         }
     }

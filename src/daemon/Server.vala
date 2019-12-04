@@ -145,7 +145,9 @@ namespace PC.Daemon {
             config.targets = targets;
         }
 
-        public void set_user_daemon_block_urls (string username, string[] block_urls, BusName sender) throws GLib.Error, ParentalControlsError {
+        public void set_user_daemon_block_urls (string username, string[] block_urls,
+                                                BusName sender) throws GLib.Error, ParentalControlsError {
+
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
