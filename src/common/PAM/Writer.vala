@@ -38,7 +38,7 @@ namespace PC.PAM {
                 var token = Token.parse_line (input);
                 if (token != null) {
                     clean_username = token.get_user_arg0 ();
-                }   
+                }
             }
 
             string contents;

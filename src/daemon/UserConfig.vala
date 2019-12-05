@@ -35,7 +35,7 @@ public class PC.Daemon.UserConfig : GLib.Object {
 
         if (create) {
             return create_for_username (username);
-        }            
+        }
 
         return null;
     }
@@ -55,13 +55,15 @@ public class PC.Daemon.UserConfig : GLib.Object {
         }
 
         try {
-            key.load_from_file (Constants.DAEMON_CONF_FILE, KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS);
+            key.load_from_file (Constants.DAEMON_CONF_FILE,
+                                KeyFileFlags.KEEP_COMMENTS | KeyFileFlags.KEEP_TRANSLATIONS);
+
         } catch (KeyFileError e) {
             warning (e.message);
         } catch (FileError e) {
             warning (e.message);
         }
-        
+
         foreach (string username in key.get_groups ()) {
             var user_config = new UserConfig (username);
             config_list.append (user_config);

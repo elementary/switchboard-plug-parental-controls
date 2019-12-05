@@ -64,7 +64,7 @@ namespace PC.Daemon {
             } catch (ShellError e) {
                 warning ("%s\n", e.message);
                 return;
-            }                
+            }
 
             string executable = args[0];
 
@@ -93,10 +93,13 @@ namespace PC.Daemon {
             signal_id = server.app_authorization_ended.connect ((client_pid) => {
                 try {
                     var unix_user = new Polkit.UnixUser.for_name (username);
-                    var result = authority.check_authorization_sync (new Polkit.UnixProcess.for_owner (client_pid, 0, unix_user.get_uid ()),
-                                                                    Constants.PARENTAL_CONTROLS_ACTION_ID,
-                                                                    null,
-                                                                    Polkit.CheckAuthorizationFlags.NONE);
+                    var result = authority.check_authorization_sync (
+                                    new Polkit.UnixProcess.for_owner (client_pid, 0, unix_user.get_uid ()),
+                                    Constants.PARENTAL_CONTROLS_ACTION_ID,
+                                    null,
+                                    Polkit.CheckAuthorizationFlags.NONE
+                                );
+
                     if (result.get_is_authorized ()) {
                         allowed_executables.add (executable);
                         server.launch (args);

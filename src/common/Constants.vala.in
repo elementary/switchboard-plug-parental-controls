@@ -19,7 +19,7 @@
  *
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
- 
+
 namespace PC.Constants {
     public const string LOGIN_IFACE = "org.freedesktop.login1";
     public const string LOGIN_OBJECT_PATH = "/org/freedesktop/login1";
