@@ -48,9 +48,9 @@ namespace PC.Daemon {
 
             foreach (T target in new_targets) {
                 add_target (target);
-            }    
+            }
 
-            start ();        
+            start ();
         }
 
         public void clear_targets () {
