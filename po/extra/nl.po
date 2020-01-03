@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 17:11+0000\n"
-"PO-Revision-Date: 2020-01-01 16:07+0000\n"
+"PO-Revision-Date: 2020-01-04 09:07+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/nl/>\n"
@@ -21,31 +21,35 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
-msgstr ""
+msgstr "Schermtijd &amp; Limieten instellingen"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "Configureer tijdslimieten en limiteer programma gebruik"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:10
 msgid "Rename to Screen Time &amp; Limits"
-msgstr ""
+msgstr "Hernoemd naar Schermtijd &amp; Limieten"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:11
 msgid "Show your own account"
-msgstr ""
+msgstr "Toon uw eigen account"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Redesign the app chooser"
-msgstr ""
+msgstr "De app kiezer opnieuw ontworpen"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
+"Een probleem opgelost met het verwijderen van URLs van de lijst met "
+"geblokkeerde websites"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid "Fix time restriction being applied even if master switch is disabled"
 msgstr ""
+"Een probleem opgelost waarbij tijdslimiet werd toegepast ook al was de "
+"hoofdschakelaar uitgeschakeld"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Updated translations"
