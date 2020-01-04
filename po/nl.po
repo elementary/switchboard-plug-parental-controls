@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 17:11+0000\n"
-"PO-Revision-Date: 2020-01-04 09:07+0000\n"
+"PO-Revision-Date: 2020-01-05 17:07+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/nl/>\n"
@@ -134,7 +134,7 @@ msgstr "Van:"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr "Aan:"
+msgstr "Tot:"
 
 #: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
