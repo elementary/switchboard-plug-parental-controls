@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 17:11+0000\n"
-"PO-Revision-Date: 2019-07-21 03:24+0000\n"
+"PO-Revision-Date: 2020-01-25 15:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-17 06:09+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
@@ -140,7 +140,7 @@ msgstr "自分のアカウント"
 
 #: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
-msgstr "その他のアカウント"
+msgstr "ほかのアカウント"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
