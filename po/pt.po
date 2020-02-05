@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 17:11+0000\n"
-"PO-Revision-Date: 2019-09-01 16:22+0000\n"
+"PO-Revision-Date: 2020-02-06 23:08+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
@@ -43,7 +43,7 @@ msgstr "preferences-system-parental-controls"
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"Algumas definições requerem privilégios administrativos para serem alteradas"
+"Algumas definições requerem privilégios de administrador para serem alteradas"
 
 #: src/plug/Plug.vala:33
 msgid "Screen Time & Limits"
