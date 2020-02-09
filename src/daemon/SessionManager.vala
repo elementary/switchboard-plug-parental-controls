@@ -83,9 +83,11 @@
             try {
                 var structs = manager.list_sessions ();
                 foreach (SessionStruct session_s in structs) {
-                    ISession? session = Bus.get_proxy_sync (BusType.SYSTEM, Constants.LOGIN_IFACE,
-                                                            session_s.object_path);
-
+                    ISession? session = Bus.get_proxy_sync (
+                        BusType.SYSTEM,
+                        Constants.LOGIN_IFACE,
+                        session_s.object_path
+                    );
                     if (session != null && session.active) {
                         return session;
                     }

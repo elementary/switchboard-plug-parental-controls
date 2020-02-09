@@ -73,8 +73,11 @@ namespace PC {
             }
 
             try {
-                api = Bus.get_proxy_sync (BusType.SYSTEM, Constants.PARENTAL_CONTROLS_IFACE,
-                                          Constants.PARENTAL_CONTROLS_OBJECT_PATH);
+                api = Bus.get_proxy_sync (
+                    BusType.SYSTEM,
+                    Constants.PARENTAL_CONTROLS_IFACE,
+                    Constants.PARENTAL_CONTROLS_OBJECT_PATH
+                );
             } catch (Error e) {
                 critical ("%s, using dummy parental controls backend", e.message);
                 api = new DummyParentalControls ();
@@ -148,7 +151,7 @@ namespace PC {
 
             return exec_to_path (exec);
         }
-        
+
         private static string exec_to_path (string exec) {
             if (!exec.has_prefix (GLib.Path.DIR_SEPARATOR_S)) {
                 return Environment.find_program_in_path (exec) ?? exec;

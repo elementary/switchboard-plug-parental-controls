@@ -29,7 +29,7 @@ namespace PC.Daemon {
         private FileMonitor? monitor;
 
         public signal void terminate ();
-        
+
         private Gee.ArrayList<uint> timeout_ids;
         private uint update_timeout_id = 0U;
 
@@ -71,14 +71,14 @@ namespace PC.Daemon {
 
         private void update () {
             stop ();
-            start ();   
+            start ();
         }
 
         private void on_time_file_changed (File file, File? other, FileMonitorEvent type) {
             if (type != FileMonitorEvent.CHANGED && type != FileMonitorEvent.CHANGES_DONE_HINT) {
                 return;
             }
-            
+
             Source.remove (update_timeout_id);
             update_timeout_id = Timeout.add (UPDATE_THROTTLE_INTERVAL, () => {
                 update_timeout_id = 0U;
@@ -168,6 +168,6 @@ namespace PC.Daemon {
             });
 
             timeout_ids.add (tid);
-        }   
+        }
     }
 }

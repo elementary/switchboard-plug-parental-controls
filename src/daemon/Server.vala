@@ -69,20 +69,28 @@ namespace PC.Daemon {
         public signal void show_timeout (int hours, int minutes);
         public signal void config_changed ();
 
-        public void finish_app_authorization (BusName sender, string username, string[] args) throws GLib.Error, ParentalControlsError {
+        public void finish_app_authorization (
+            BusName sender,
+            string username,
+            string[] args
+        ) throws GLib.Error, ParentalControlsError {
             var config = UserConfig.get_for_username (username, false);
             if (config == null || !config.admin) {
-                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD ("Error: config for %s is not valid or does not have an ability to authorize".printf (username));
+                throw new ParentalControlsError.USER_CONFIG_NOT_VAILD (
+                    "Error: config for %s is not valid or does not have an ability to authorize".printf (username)
+                );
             }
 
             uint32 client_pid = get_pid_from_sender (sender);
             var authority = Polkit.Authority.get_sync ();
             try {
                 var unix_user = new Polkit.UnixUser.for_name (username);
-                var result = authority.check_authorization_sync (new Polkit.UnixProcess.for_owner ((int)client_pid, 0, unix_user.get_uid ()),
-                                                                Constants.PARENTAL_CONTROLS_ACTION_ID,
-                                                                null,
-                                                                Polkit.CheckAuthorizationFlags.NONE);
+                var result = authority.check_authorization_sync (
+                    new Polkit.UnixProcess.for_owner ((int)client_pid, 0, unix_user.get_uid ()),
+                    Constants.PARENTAL_CONTROLS_ACTION_ID,
+                    null,
+                    Polkit.CheckAuthorizationFlags.NONE
+                );
                 if (result.get_is_authorized ()) {
                     string? path = GLib.Environment.find_program_in_path (args[0]);
                     if (path == null) {
@@ -113,7 +121,7 @@ namespace PC.Daemon {
                         }
 
                         AccessControlLists.setfacl (username, path, AccessControlLists.NO_EXEC_PERMISSIONS);
-                        return false;                        
+                        return false;
                     });
 
                     launch (args, true);
@@ -123,10 +131,11 @@ namespace PC.Daemon {
             }
         }
 
-        public void add_restriction_for_user (string input,
-                                              bool clean,
-                                              BusName sender) throws GLib.Error, ParentalControlsError {
-
+        public void add_restriction_for_user (
+            string input,
+            bool clean,
+            BusName sender
+        ) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
@@ -137,9 +146,10 @@ namespace PC.Daemon {
             writer.add_restriction_for_user (input, clean);
         }
 
-        public void remove_restriction_for_user (string username,
-                                                 BusName sender) throws GLib.Error, ParentalControlsError {
-
+        public void remove_restriction_for_user (
+            string username,
+            BusName sender
+        ) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
@@ -148,17 +158,19 @@ namespace PC.Daemon {
             writer.remove_restriction_for_user (username);
         }
 
-        public void lock_dock_icons_for_user (string username,
-                                              bool lock,
-                                              BusName sender) throws GLib.Error, ParentalControlsError {
-
+        public void lock_dock_icons_for_user (
+            string username,
+            bool lock,
+            BusName sender
+        ) throws GLib.Error, ParentalControlsError {
             throw new ParentalControlsError.NOT_IMPLEMENTED ("Error: not implemented");
         }
 
-        public void set_user_daemon_active (string username,
-                                            bool active,
-                                            BusName sender) throws GLib.Error, ParentalControlsError {
-
+        public void set_user_daemon_active (
+            string username,
+            bool active,
+            BusName sender
+        ) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
@@ -173,10 +185,11 @@ namespace PC.Daemon {
             config.active = active;
         }
 
-        public void set_user_daemon_targets (string username,
-                                             string[] targets,
-                                             BusName sender) throws GLib.Error, ParentalControlsError {
-
+        public void set_user_daemon_targets (
+            string username,
+            string[] targets,
+            BusName sender
+        ) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
@@ -191,9 +204,11 @@ namespace PC.Daemon {
             config.targets = targets;
         }
 
-        public void set_user_daemon_block_urls (string username, string[] block_urls,
-                                                BusName sender) throws GLib.Error, ParentalControlsError {
-
+        public void set_user_daemon_block_urls (
+            string username,
+            string[] block_urls,
+            BusName sender
+        ) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
@@ -208,10 +223,11 @@ namespace PC.Daemon {
             config.block_urls = block_urls;
         }
 
-        public void set_user_daemon_admin (string username,
-                                           bool admin,
-                                           BusName sender) throws GLib.Error, ParentalControlsError {
-
+        public void set_user_daemon_admin (
+            string username,
+            bool admin,
+            BusName sender
+        ) throws GLib.Error, ParentalControlsError {
             if (!get_sender_is_authorized (sender)) {
                 throw new ParentalControlsError.NOT_AUTHORIZED ("Error: sender not authorized");
             }
@@ -322,9 +338,12 @@ namespace PC.Daemon {
 
             try {
                 var authority = Polkit.Authority.get_sync (null);
-                var auth_result = authority.check_authorization_sync (subject, Constants.PARENTAL_CONTROLS_ACTION_ID,
-                                                                      null, Polkit.CheckAuthorizationFlags.NONE);
-
+                var auth_result = authority.check_authorization_sync (
+                    subject,
+                    Constants.PARENTAL_CONTROLS_ACTION_ID,
+                    null,
+                    Polkit.CheckAuthorizationFlags.NONE
+                );
                 return auth_result.get_is_authorized ();
             } catch (Error e) {
                 warning (e.message);
