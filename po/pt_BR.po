@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2019-05-28 18:29+0000\n"
+"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"PO-Revision-Date: 2019-08-24 08:22+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/pt_BR/>\n"
@@ -17,27 +17,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-13 06:02+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage Screen Time &amp; Limits"
-msgstr ""
+msgstr "Gerenciar tempo de tela &amp; Limites"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-#, fuzzy
 msgid "Authentication is required to change Screen Time &amp; Limits"
-msgstr ""
-"É necessária autenticação para realizar alterações nas configurações de "
-"controle dos pais"
+msgstr "A autenticação é necessária para alterar o Tempo da Tela &amp; Limites"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Screen Time & Limits Client"
-msgstr ""
+msgstr "Cliente de Tempo e Limites de Tela"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
 msgid "Show Screen Time & Limits information and restrictions"
-msgstr ""
+msgstr "Exibir informações e restrições de tempo e limites da tela"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
@@ -50,9 +47,8 @@ msgstr ""
 "modificadas"
 
 #: src/plug/Plug.vala:33
-#, fuzzy
 msgid "Screen Time & Limits"
-msgstr "Limite de Tempo"
+msgstr "Tempo de Tela e Limites"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -150,7 +146,7 @@ msgstr "Outras contas"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
-msgstr ""
+msgstr "Tempo de Tela"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"

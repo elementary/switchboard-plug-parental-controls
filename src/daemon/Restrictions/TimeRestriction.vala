@@ -111,12 +111,12 @@ namespace PC.Daemon {
 
             var span = get_difference_span (current.to);
             int minutes = ((int)(span / GLib.TimeSpan.MINUTE)).abs ();
-            
+
             if (minutes > 0) {
                 start_loop (minutes);
             } else {
                 terminate ();
-            }  
+            }
 
             uint tid = 0U;
             tid = Timeout.add_seconds (HOUR_INTERVAL * 24, () => {

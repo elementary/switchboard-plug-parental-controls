@@ -26,7 +26,7 @@ namespace PC.Widgets {
     public class UserListBox : Gtk.ListBox {
         private List<UserItem> items;
 
-        construct { 
+        construct {
             items = new List<UserItem> ();
 
             selection_mode = Gtk.SelectionMode.SINGLE;

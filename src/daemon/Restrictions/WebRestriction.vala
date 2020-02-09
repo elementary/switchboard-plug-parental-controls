@@ -39,7 +39,7 @@ namespace PC.Daemon {
                 foreach (string address in addresses) {
                     process_adress (address, "-A");
                 }
-            }      
+            }
         }
 
         public override void stop () {
@@ -48,7 +48,7 @@ namespace PC.Daemon {
                 foreach (string address in addresses) {
                     process_adress (address, "-D");
                 }
-            }  
+            }
         }
 
         private string[] get_addresses_from_name (string name) {
@@ -70,8 +70,11 @@ namespace PC.Daemon {
 
         private void process_adress (string address, string option) {
             try {
+                string[] argv = { IPTABLES_EXEC, option, "OUTPUT", "-p", "tcp", "-d", address, "--dport",
+                                  DPORT.to_string (), "-j", "REJECT" };
+
                 GLib.Process.spawn_sync ("/",
-                                    { IPTABLES_EXEC, option, "OUTPUT", "-p", "tcp", "-d", address, "--dport", DPORT.to_string (), "-j", "REJECT" },
+                                    argv,
                                     Environ.get (),
                                     SpawnFlags.SEARCH_PATH,
                                     null,

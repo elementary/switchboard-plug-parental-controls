@@ -48,7 +48,7 @@ namespace PC {
     }
 
     public class Utils {
-        public class DummyParentalControls : Object, IParentalControls  {
+        public class DummyParentalControls : Object, IParentalControls {
             public async void add_restriction_for_user (string input, bool clean) throws GLib.Error {}
             public async void remove_restriction_for_user (string username) throws GLib.Error {}
             public async void finish_app_authorization (string username, string[] args) throws GLib.Error {}
@@ -73,7 +73,8 @@ namespace PC {
             }
 
             try {
-                api = Bus.get_proxy_sync (BusType.SYSTEM, Constants.PARENTAL_CONTROLS_IFACE, Constants.PARENTAL_CONTROLS_OBJECT_PATH);
+                api = Bus.get_proxy_sync (BusType.SYSTEM, Constants.PARENTAL_CONTROLS_IFACE,
+                                          Constants.PARENTAL_CONTROLS_OBJECT_PATH);
             } catch (Error e) {
                 critical ("%s, using dummy parental controls backend", e.message);
                 api = new DummyParentalControls ();

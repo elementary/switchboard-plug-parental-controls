@@ -62,7 +62,10 @@ namespace PC.Widgets {
 
             limit_combobox = new Gtk.ComboBoxText ();
             limit_combobox.hexpand = true;
-            limit_combobox.append (PAM.DayType.WEEKDAY.to_string () + PAM.DayType.WEEKEND.to_string (), _("On weekdays and weekends"));
+            limit_combobox.append (
+                PAM.DayType.WEEKDAY.to_string () + PAM.DayType.WEEKEND.to_string (),
+                _("On weekdays and weekends")
+            );
             limit_combobox.append (PAM.DayType.WEEKDAY.to_string (), _("Only on weekdays"));
             limit_combobox.append (PAM.DayType.WEEKEND.to_string (), _("Only on weekends"));
             limit_combobox.active = 0;
@@ -124,7 +127,7 @@ namespace PC.Widgets {
             }
 
             if (ids.length > 0) {
-                limit_combobox.active_id = string.joinv ("|", ids);    
+                limit_combobox.active_id = string.joinv ("|", ids);
             }
         }
 

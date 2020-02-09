@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-06 14:01-0800\n"
-"PO-Revision-Date: 2019-06-20 21:07+0000\n"
+"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"PO-Revision-Date: 2019-09-02 20:22+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/fi/>\n"
@@ -17,25 +17,24 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-17 06:09+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage Screen Time &amp; Limits"
-msgstr ""
+msgstr "Hallitse näyttöaikaa ja rajoituksia"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-#, fuzzy
 msgid "Authentication is required to change Screen Time &amp; Limits"
-msgstr "Käytönvalvonnan asetusten muuttaminen vaatii tunnistautumisen"
+msgstr "Näyttöajan ja rajoitusten muuttaminen vaatii tunnistautumisen"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Screen Time & Limits Client"
-msgstr ""
+msgstr "Näyttöajan ja rajoitusten asiakas"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
 msgid "Show Screen Time & Limits information and restrictions"
-msgstr ""
+msgstr "Näyttää näyttöajan ja rajoituksien tiedot"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
@@ -46,9 +45,8 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"
 
 #: src/plug/Plug.vala:33
-#, fuzzy
 msgid "Screen Time & Limits"
-msgstr "Aikarajoitukset"
+msgstr "Näyttöaika ja rajoitukset"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -146,7 +144,7 @@ msgstr "Muut tilit"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
-msgstr ""
+msgstr "Näyttöaika"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"

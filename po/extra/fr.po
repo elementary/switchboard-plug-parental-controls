@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2019-05-30 19:04+0000\n"
+"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"PO-Revision-Date: 2019-11-08 19:24+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/fr/>\n"
@@ -17,17 +17,45 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
-msgstr ""
+msgstr "Paramètres du temps d'écran et des limites"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
 msgstr ""
 "Configurer les limites de temps et les restrictions d'utilisation des "
 "applications"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:10
+msgid "Rename to Screen Time &amp; Limits"
+msgstr "Renommé en temps d'écran et des limites"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:11
+msgid "Show your own account"
+msgstr "Affichage de son compte"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
+msgid "Redesign the app chooser"
+msgstr "Re-design du sélecteur d'applications"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
+msgid "Fix an issue with removing URLs from restricted websites"
+msgstr ""
+"Correction d'un problème lors de la suppression d'URLs des restrictions de "
+"sites web"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+msgid "Fix time restriction being applied even if master switch is disabled"
+msgstr ""
+"Correction de la restriction de temps appliqué même lorsque le bouton à "
+"bascule est désactivé"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+msgid "Updated translations"
+msgstr "Mise à jour des traductions"
 
 #~ msgid "Parental Controls Settings"
 #~ msgstr "Paramètres du contrôle parental"

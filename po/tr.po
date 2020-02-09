@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2019-04-14 14:25+0000\n"
+"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"PO-Revision-Date: 2019-08-30 21:22+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/tr/>\n"
@@ -17,26 +17,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.5.1\n"
+"X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-19 06:00+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage Screen Time &amp; Limits"
-msgstr ""
+msgstr "Ekran Zaman Aşım ve Sınırları Yönetin"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-#, fuzzy
 msgid "Authentication is required to change Screen Time &amp; Limits"
 msgstr ""
-"Ebeveyn kontrolü ayarlarını değiştirmek için kimlik doğrulaması gerekiyor"
+"Ekran Zaman Aşım ve Sınırları değiştirmek için kimlik doğrulaması gerekiyor"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Screen Time & Limits Client"
-msgstr ""
+msgstr "Ekran Zaman Aşım ve Sınırları İstemcisi"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
 msgid "Show Screen Time & Limits information and restrictions"
-msgstr ""
+msgstr "Ekran Zaman Aşım, Sınırlar ve kısıtlamaların bilgilerinini göster"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
@@ -48,9 +47,8 @@ msgstr ""
 "Bazı ayarları değiştirebilmek için yönetici haklarına sahip olmanız gerekiyor"
 
 #: src/plug/Plug.vala:33
-#, fuzzy
 msgid "Screen Time & Limits"
-msgstr "Zaman Sınırlamaları"
+msgstr "Ekran Zaman Aşım ve Sınırlar"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -148,7 +146,7 @@ msgstr "Diğer Hesaplar"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
-msgstr ""
+msgstr "Ekran Zaman Aşımı"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"

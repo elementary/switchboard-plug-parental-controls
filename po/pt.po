@@ -7,36 +7,34 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2019-02-07 11:12+0000\n"
-"Last-Translator: Nuno Alexandre MS Ribeiro <nuno.anarresti@gmail.com>\n"
-"Language-Team: Portuguese <https://weblate.elementary.io/projects/"
-"switchboard/switchboard-plug-parental-controls/pt/>\n"
+"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"PO-Revision-Date: 2020-02-06 23:08+0000\n"
+"Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
+"Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-parental-controls/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage Screen Time &amp; Limits"
-msgstr ""
+msgstr "Gerir tempo de ecrã &amp; Limites"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-#, fuzzy
 msgid "Authentication is required to change Screen Time &amp; Limits"
-msgstr ""
-"Autenticação necessária para alterar as definições de controlo parental"
+msgstr "Autenticação necessária para alterar o tempo de ecrã &amp; Limites"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Screen Time & Limits Client"
-msgstr ""
+msgstr "Tempo de ecrã & Limites de Cliente"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
 msgid "Show Screen Time & Limits information and restrictions"
-msgstr ""
+msgstr "Mostrar informações & restrições de tempo e limites da ecrã"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
@@ -45,12 +43,11 @@ msgstr "preferences-system-parental-controls"
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"Algumas definições requerem privilégios administrativos para serem alteradas"
+"Algumas definições requerem privilégios de administrador para serem alteradas"
 
 #: src/plug/Plug.vala:33
-#, fuzzy
 msgid "Screen Time & Limits"
-msgstr "Limite de Tempo"
+msgstr "Tempo de ecrã & Limites"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
@@ -79,7 +76,7 @@ msgstr "Adicionar Aplicações a Impedir…"
 
 #: src/plug/Views/AppsView.vala:60
 msgid "Remove Selected App"
-msgstr "Remover Aplicação Seleccionada"
+msgstr "Remover aplicação selecionada"
 
 #: src/plug/Views/AppsView.vala:65
 msgid "Clear All"
@@ -124,7 +121,7 @@ msgstr "Adicionar URL"
 
 #: src/plug/Views/InternetView.vala:93
 msgid "Add a new URL, for example: google.com"
-msgstr "Adicionar um novo URL, por exemplo: google.pt"
+msgstr "Adicionar um novo URL, por exemplo: google.com"
 
 #: src/plug/Views/InternetView.vala:94
 msgid "Invalid URL"
@@ -148,7 +145,7 @@ msgstr "Outras Contas"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
-msgstr ""
+msgstr "Tempo de ecrã"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -165,7 +162,7 @@ msgstr "Procurar Aplicações"
 #: src/client/Client.vala:89
 #, c-format
 msgid "This computer will lock after %s."
-msgstr "Este computador iserá bloqueado dentro de %s."
+msgstr "Este computador irá bloquear dentro de %s."
 
 #: src/client/Client.vala:91
 #, c-format

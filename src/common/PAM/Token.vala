@@ -50,7 +50,7 @@ namespace PC.PAM {
                     return "Wd";
                 default:
                 case UNKNOWN:
-                    return "unknown";                
+                    return "unknown";
             }
         }
     }
@@ -102,7 +102,9 @@ namespace PC.PAM {
             return list;
         }
 
-        public static string construct_pam_restriction (string[] services, string[] ttys, string[] users, string[] times) {
+        public static string construct_pam_restriction (string[] services, string[] ttys,
+                                                        string[] users, string[] times) {
+
             string services_str = string.joinv (LIST_SEPARATOR, services);
             string ttys_str = string.joinv (LIST_SEPARATOR, ttys);
             string users_str = string.joinv (LIST_SEPARATOR, users);
@@ -132,7 +134,7 @@ namespace PC.PAM {
                 info.day_type = DayType.to_enum (time.slice (0, 2));
                 info.from = bounds[0];
                 info.to = bounds[1];
-                
+
                 list.append (info);
             }
 
@@ -161,7 +163,7 @@ namespace PC.PAM {
             string[] bounds = times[0].substring (2).split ("-");
             if (bounds.length < 2) {
                 from = 0;
-                to = 0;                
+                to = 0;
                 return;
             }
 
@@ -180,7 +182,7 @@ namespace PC.PAM {
             if (bounds.length < 2) {
                 from = 0;
                 to = 0;
-                return;                
+                return;
             }
 
             from = int.parse (bounds[0]);

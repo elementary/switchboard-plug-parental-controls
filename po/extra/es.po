@@ -7,20 +7,50 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-26 22:45+0200\n"
-"PO-Revision-Date: 2018-12-10 14:23-0800\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"PO-Revision-Date: 2019-11-11 12:24+0000\n"
+"Last-Translator: Daniel R. <riesp@pm.me>\n"
+"Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
+"parental-controls-plug-extra/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=ASCII\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.7.1\n"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
-msgstr ""
+msgstr "Ajustes de límite de tiempo de pantalla"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
+msgstr "Configurar límites de tiempo y restringir el uso de aplicaciones"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:10
+msgid "Rename to Screen Time &amp; Limits"
+msgstr "Cambiar el nombre a Tiempo de Pantalla y Límites"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:11
+msgid "Show your own account"
+msgstr "Mostrar su propia cuenta"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
+msgid "Redesign the app chooser"
+msgstr "Rediseñar el selector de aplicaciones"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
+msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
+"Corrección de un problema con la eliminación de URL de sitios web "
+"restringidos"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+msgid "Fix time restriction being applied even if master switch is disabled"
+msgstr ""
+"Corrección de la restricción de tiempo aplicada incluso si el interruptor "
+"maestro está desactivado"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+msgid "Updated translations"
+msgstr "Traducciones actualizadas"
