@@ -8,34 +8,33 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 17:11+0000\n"
-"PO-Revision-Date: 2019-02-07 07:53+0000\n"
+"PO-Revision-Date: 2020-03-26 23:09+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
-"Language-Team: Hebrew <https://weblate.elementary.io/projects/switchboard/"
+"Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/he/>\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:10
 msgid "Manage Screen Time &amp; Limits"
-msgstr ""
+msgstr "ניהול זמן מסך ומגבלות"
 
 #: data/org.pantheon.switchboard.parental-controls.policy.in:11
-#, fuzzy
 msgid "Authentication is required to change Screen Time &amp; Limits"
-msgstr "נדרש אימות על מנת לשנות הגדרות בקרת הורים"
+msgstr "נדרש אימות על מנת לשנות הגדרות זמן מסך ומגבלות"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Screen Time & Limits Client"
-msgstr ""
+msgstr "לקוח זמן מסך ומגבלות"
 
 #: data/pantheon-parental-controls-client.desktop.in:5
 msgid "Show Screen Time & Limits information and restrictions"
-msgstr ""
+msgstr "הצגת מידע והגבלות של זמן מסך ומגבלות"
 
 #: data/pantheon-parental-controls-client.desktop.in:6
 msgid "preferences-system-parental-controls"
@@ -46,13 +45,12 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
 
 #: src/plug/Plug.vala:33
-#, fuzzy
 msgid "Screen Time & Limits"
-msgstr "מגבלות זמן"
+msgstr "זמן מסך ומגבלות"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
-msgstr "הגדרת מגבלות זמן והגבלת השימוש ביישומים"
+msgstr "הגדרת מגבלות זמן והגבלת שימוש ביישומים"
 
 #: src/plug/Plug.vala:60
 msgid "Limit computer use"
@@ -146,7 +144,7 @@ msgstr "חשבונות אחרים"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
-msgstr ""
+msgstr "זמן מסך"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
