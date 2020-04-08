@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-11-07 17:11+0000\n"
-"PO-Revision-Date: 2020-02-06 23:08+0000\n"
+"PO-Revision-Date: 2020-04-09 14:10+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pt/>\n"
@@ -133,7 +133,7 @@ msgstr "De:"
 
 #: src/plug/Widgets/WeekSpinBox.vala:47
 msgid "To:"
-msgstr "Até:"
+msgstr "Para:"
 
 #: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
@@ -157,7 +157,7 @@ msgstr "Aplicações"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
-msgstr "Procurar Aplicações"
+msgstr "Procurar aplicações"
 
 #: src/client/Client.vala:89
 #, c-format
