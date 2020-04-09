@@ -1,6 +1,7 @@
 project(
     'parental-controls',
     'vala', 'c',
+    meson_version: '>= 0.46.1',
     version: '2.1.5'
 )
 

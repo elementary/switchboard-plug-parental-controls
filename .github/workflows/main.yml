@@ -15,7 +15,7 @@ jobs:
     - name: Install Dependencies
       run: |
         apt update
-        apt install -y dh-systemd libaccountsservice-dev libglib2.0-dev libgranite-dev libgtk-3-dev libpolkit-gobject-1-dev libswitchboard-2.0-dev libdbus-1-dev systemd meson valac
+        apt install -y dh-systemd libaccountsservice-dev libglib2.0-dev libgranite-dev libgtk-3-dev libpolkit-gobject-1-dev libswitchboard-2.0-dev libdbus-1-dev policykit-1 systemd meson valac
     - name: Build
       env:
         DESTDIR: out
