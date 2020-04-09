@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 19:38+0000\n"
 "PO-Revision-Date: 2017-01-03 04:07+0000\n"
 "Last-Translator: Cody Garver <cody@elementaryos.org>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -42,109 +42,107 @@ msgstr ""
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/plug/MainView.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى زۆرۈش"
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You cannot run this application"
+msgstr "سىز بۇ ئەپنى ئىجرا قىلالمايسىز"
 
-#: src/plug/Plug.vala:33
-#, fuzzy
-msgid "Screen Time & Limits"
+#: src/client/AppUnavailableDialog.vala:29
+msgid "You are not permitted to run this application."
+msgstr "سىزنىڭ بۇ ئەپنى ئىجرا قىلىش ھوقۇقىڭىز يوق."
+
+#: src/client/Client.vala:162
+#, fuzzy, c-format
+msgid "This computer will lock after %s."
+msgstr "%s %s. %s دىن كىيىن بۇ كومپىيۇتىر قۇلۇپلىنىدۇ"
+
+#: src/client/Client.vala:164
+#, c-format
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/client/Client.vala:166
+#, c-format
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: src/client/Client.vala:168
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr "كومپىيۇتىرىڭىزنى قۇلۇپلاشتىن بۇرۇن بارلىق ئەپلەرنى ئۆچۈرىۋىتىڭ."
+
+#: src/client/Client.vala:174
+msgid "Time left"
 msgstr "قالغان ۋاقىت"
 
-#: src/plug/Plug.vala:34
-msgid "Configure time limits and restrict application usage"
-msgstr "ۋاقىت چەكلىمىسى ۋە ئەپلەرنىڭ ئىشلىتىش ھوقۇقىنى تەڭشەش"
-
-#: src/plug/Plug.vala:60
-#, fuzzy
-msgid "Limit computer use"
-msgstr "كومپىيۇتىر ئىشلىتىشكە چەكلىمىسى:"
-
-#: src/plug/Plug.vala:61
-msgid "Prevent website access"
-msgstr ""
-
-#: src/plug/Plug.vala:62
-msgid "Prevent application access"
-msgstr ""
-
-#: src/plug/Views/AppsView.vala:47
+#: src/plug/Views/AppsView.vala:48
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "%s نى بۇ ئەپلەرنى ئىشلىتىشتىن چەكلەش："
 
-#: src/plug/Views/AppsView.vala:56
+#: src/plug/Views/AppsView.vala:58
 msgid "Add Prevented Apps…"
 msgstr "چەكلەنگەن ئەپلەرنى قىتىش...."
 
-#: src/plug/Views/AppsView.vala:60
+#: src/plug/Views/AppsView.vala:62
 msgid "Remove Selected App"
 msgstr "تاللانغان ئەپلەرنى ئۆچۈرۈش"
 
-#: src/plug/Views/AppsView.vala:65
+#: src/plug/Views/AppsView.vala:67
 msgid "Clear All"
 msgstr "ھەممىسىنى قۇرۇقداش"
 
-#: src/plug/Views/AppsView.vala:88
+#: src/plug/Views/AppsView.vala:90
 msgid "Allow access to these apps with admin permission:"
 msgstr "باشقۇرغۇچىلىق سالاھىيىتى بىلەن بۇ ئەپلەرنى زىيارەت قىلىشقا يول قويۇش:"
+
+#: src/plug/Views/InternetView.vala:72
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "%s نى بۇ توربىكەتلەرنى زىيارەت قىلىشتىن چەكلەش:"
+
+#: src/plug/Views/InternetView.vala:87
+msgid "Add URL"
+msgstr "تور ئادىرىسى قىتىش"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Add a new URL, for example: google.com"
+msgstr "يىڭى تورئادىرىسى قىتىش، مەسىلەن:google.com"
+
+#: src/plug/Views/InternetView.vala:97
+msgid "Invalid URL"
+msgstr "ئىناۋەتسىز تورئادىرىسى"
 
 #: src/plug/Views/TimeLimitView.vala:57
 msgid "Limit computer use:"
 msgstr "كومپىيۇتىر ئىشلىتىشكە چەكلىمىسى:"
 
-#: src/plug/Views/TimeLimitView.vala:65
+#: src/plug/Views/TimeLimitView.vala:67
 msgid "On weekdays and weekends"
 msgstr "خىزمەت كۈنى ۋە ھەپتە ئاخىرىدا"
 
-#: src/plug/Views/TimeLimitView.vala:66
+#: src/plug/Views/TimeLimitView.vala:69
 msgid "Only on weekdays"
 msgstr "پەقەت خىزمەت كۈنلىرىدىلا"
 
-#: src/plug/Views/TimeLimitView.vala:67
+#: src/plug/Views/TimeLimitView.vala:70
 msgid "Only on weekends"
 msgstr "پەقەت ھەپتە ئاخىرىدىلا"
 
-#: src/plug/Views/TimeLimitView.vala:77
+#: src/plug/Views/TimeLimitView.vala:80
 msgid "Weekdays"
 msgstr "خىزمەت كۈنلىرى"
 
-#: src/plug/Views/TimeLimitView.vala:81
+#: src/plug/Views/TimeLimitView.vala:84
 msgid "Weekends"
 msgstr "ھەپتە ئاخىرى"
 
-#: src/plug/Views/InternetView.vala:71
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "%s نى بۇ توربىكەتلەرنى زىيارەت قىلىشتىن چەكلەش:"
-
-#: src/plug/Views/InternetView.vala:84
-msgid "Add URL"
-msgstr "تور ئادىرىسى قىتىش"
-
-#: src/plug/Views/InternetView.vala:93
-msgid "Add a new URL, for example: google.com"
-msgstr "يىڭى تورئادىرىسى قىتىش، مەسىلەن:google.com"
-
-#: src/plug/Views/InternetView.vala:94
-msgid "Invalid URL"
-msgstr "ئىناۋەتسىز تورئادىرىسى"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "دىن"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "گىچە"
-
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "ھىساۋاتىم"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "باشقا ھىساۋاتلار"
+#: src/plug/Widgets/AppChooser.vala:40
+msgid "Search Applications"
+msgstr "ئەپ ئىزدەش"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
@@ -158,45 +156,47 @@ msgstr "ئېنتىرنىت"
 msgid "Applications"
 msgstr "ئەپلەر"
 
-#: src/plug/Widgets/AppChooser.vala:40
-msgid "Search Applications"
-msgstr "ئەپ ئىزدەش"
+#: src/plug/Widgets/UserList.vala:104
+msgid "My Account"
+msgstr "ھىساۋاتىم"
 
-#: src/client/Client.vala:89
-#, fuzzy, c-format
-msgid "This computer will lock after %s."
-msgstr "%s %s. %s دىن كىيىن بۇ كومپىيۇتىر قۇلۇپلىنىدۇ"
+#: src/plug/Widgets/UserList.vala:107
+msgid "Other Accounts"
+msgstr "باشقا ھىساۋاتلار"
 
-#: src/client/Client.vala:91
-#, c-format
-msgid "%lu hour"
-msgid_plural "%lu hours"
-msgstr[0] ""
-msgstr[1] ""
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "دىن"
 
-#: src/client/Client.vala:93
-#, c-format
-msgid "%lu minute"
-msgid_plural "%lu minutes"
-msgstr[0] ""
-msgstr[1] ""
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "گىچە"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr "كومپىيۇتىرىڭىزنى قۇلۇپلاشتىن بۇرۇن بارلىق ئەپلەرنى ئۆچۈرىۋىتىڭ."
+#: src/plug/MainView.vala:59
+msgid "Some settings require administrator rights to be changed"
+msgstr "بەزى تەڭشەكلەرنى ئۆزگەرتىش ئۈچۈن باشقۇرغۇچىلىق سالاھىيىتى زۆرۈش"
 
-#: src/client/Client.vala:101
-msgid "Time left"
+#: src/plug/Plug.vala:33
+#, fuzzy
+msgid "Screen Time & Limits"
 msgstr "قالغان ۋاقىت"
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "سىز بۇ ئەپنى ئىجرا قىلالمايسىز"
+#: src/plug/Plug.vala:34
+msgid "Configure time limits and restrict application usage"
+msgstr "ۋاقىت چەكلىمىسى ۋە ئەپلەرنىڭ ئىشلىتىش ھوقۇقىنى تەڭشەش"
 
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
-msgstr "سىزنىڭ بۇ ئەپنى ئىجرا قىلىش ھوقۇقىڭىز يوق."
+#: src/plug/Plug.vala:61
+#, fuzzy
+msgid "Limit computer use"
+msgstr "كومپىيۇتىر ئىشلىتىشكە چەكلىمىسى:"
+
+#: src/plug/Plug.vala:62
+msgid "Prevent website access"
+msgstr ""
+
+#: src/plug/Plug.vala:63
+msgid "Prevent application access"
+msgstr ""
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "چوڭلارنىڭ باشقۇرۇش كونترول تەڭشەكلىرى"

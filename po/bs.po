@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 19:38+0000\n"
 "PO-Revision-Date: 2018-11-05 23:31+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -39,108 +39,109 @@ msgstr ""
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/MainView.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "Za izmjenu nekih podešavanja su potrebna administratorska prava"
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You cannot run this application"
+msgstr "Ne možete pokrenuti ovu aplikaciju"
 
-#: src/plug/Plug.vala:33
-#, fuzzy
-msgid "Screen Time & Limits"
+#: src/client/AppUnavailableDialog.vala:29
+msgid "You are not permitted to run this application."
+msgstr "Nemate dozvolu za pokretanje ove aplikacije."
+
+#: src/client/Client.vala:162
+#, c-format
+msgid "This computer will lock after %s."
+msgstr "Ovaj će se računar zaključati nakon %s."
+
+#: src/client/Client.vala:164
+#, c-format
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] "%lu sata"
+msgstr[1] "%lu sata"
+msgstr[2] "%lu sati"
+
+#: src/client/Client.vala:166
+#, c-format
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] "%lu minute"
+msgstr[1] "%lu minute"
+msgstr[2] "%lu minuta"
+
+#: src/client/Client.vala:168
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr "Zatvorite sve aplikacije prije nego što Vaš računar bude zaključan."
+
+#: src/client/Client.vala:174
+msgid "Time left"
 msgstr "Preostalo vrijeme"
 
-#: src/plug/Plug.vala:34
-msgid "Configure time limits and restrict application usage"
-msgstr "Postavite vremenska ograničenja i ograničite korištenje aplikacija"
-
-#: src/plug/Plug.vala:60
-msgid "Limit computer use"
-msgstr "Ograničite korištenje računara"
-
-#: src/plug/Plug.vala:61
-msgid "Prevent website access"
-msgstr "Spriječite pristup web stranici"
-
-#: src/plug/Plug.vala:62
-msgid "Prevent application access"
-msgstr "Spriječite pristup aplikaciji"
-
-#: src/plug/Views/AppsView.vala:47
+#: src/plug/Views/AppsView.vala:48
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "Spriječi da %s koristi ove aplikacije:"
 
-#: src/plug/Views/AppsView.vala:56
+#: src/plug/Views/AppsView.vala:58
 msgid "Add Prevented Apps…"
 msgstr "Dodaj spriječene aplikacije…"
 
-#: src/plug/Views/AppsView.vala:60
+#: src/plug/Views/AppsView.vala:62
 msgid "Remove Selected App"
 msgstr "Ukloni odabranu aplikaciju"
 
-#: src/plug/Views/AppsView.vala:65
+#: src/plug/Views/AppsView.vala:67
 msgid "Clear All"
 msgstr "Izbriši sve"
 
-#: src/plug/Views/AppsView.vala:88
+#: src/plug/Views/AppsView.vala:90
 msgid "Allow access to these apps with admin permission:"
 msgstr "Dozvoli pristup ovim aplikacijama s administratorskim dozvolama:"
+
+#: src/plug/Views/InternetView.vala:72
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Spriječi da %s posjećuje sljedeće web stranice:"
+
+#: src/plug/Views/InternetView.vala:87
+msgid "Add URL"
+msgstr "Dodaj URL"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Add a new URL, for example: google.com"
+msgstr "Dodaj novi URL, naprimjer: google.com"
+
+#: src/plug/Views/InternetView.vala:97
+msgid "Invalid URL"
+msgstr "Nevažeći URL"
 
 #: src/plug/Views/TimeLimitView.vala:57
 msgid "Limit computer use:"
 msgstr "Ograniči korištenje računara:"
 
-#: src/plug/Views/TimeLimitView.vala:65
+#: src/plug/Views/TimeLimitView.vala:67
 msgid "On weekdays and weekends"
 msgstr "Radnim danima i vikendom"
 
-#: src/plug/Views/TimeLimitView.vala:66
+#: src/plug/Views/TimeLimitView.vala:69
 msgid "Only on weekdays"
 msgstr "Samo radnim danima"
 
-#: src/plug/Views/TimeLimitView.vala:67
+#: src/plug/Views/TimeLimitView.vala:70
 msgid "Only on weekends"
 msgstr "Samo vikendom"
 
-#: src/plug/Views/TimeLimitView.vala:77
+#: src/plug/Views/TimeLimitView.vala:80
 msgid "Weekdays"
 msgstr "Radnim danima"
 
-#: src/plug/Views/TimeLimitView.vala:81
+#: src/plug/Views/TimeLimitView.vala:84
 msgid "Weekends"
 msgstr "Vikendima"
 
-#: src/plug/Views/InternetView.vala:71
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Spriječi da %s posjećuje sljedeće web stranice:"
-
-#: src/plug/Views/InternetView.vala:84
-msgid "Add URL"
-msgstr "Dodaj URL"
-
-#: src/plug/Views/InternetView.vala:93
-msgid "Add a new URL, for example: google.com"
-msgstr "Dodaj novi URL, naprimjer: google.com"
-
-#: src/plug/Views/InternetView.vala:94
-msgid "Invalid URL"
-msgstr "Nevažeći URL"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Od:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Do:"
-
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "Moj račun"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "Drugi računi"
+#: src/plug/Widgets/AppChooser.vala:40
+msgid "Search Applications"
+msgstr "Pretraži aplikacije"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
@@ -154,47 +155,46 @@ msgstr "Internet"
 msgid "Applications"
 msgstr "Aplikacije"
 
-#: src/plug/Widgets/AppChooser.vala:40
-msgid "Search Applications"
-msgstr "Pretraži aplikacije"
+#: src/plug/Widgets/UserList.vala:104
+msgid "My Account"
+msgstr "Moj račun"
 
-#: src/client/Client.vala:89
-#, c-format
-msgid "This computer will lock after %s."
-msgstr "Ovaj će se računar zaključati nakon %s."
+#: src/plug/Widgets/UserList.vala:107
+msgid "Other Accounts"
+msgstr "Drugi računi"
 
-#: src/client/Client.vala:91
-#, c-format
-msgid "%lu hour"
-msgid_plural "%lu hours"
-msgstr[0] "%lu sata"
-msgstr[1] "%lu sata"
-msgstr[2] "%lu sati"
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "Od:"
 
-#: src/client/Client.vala:93
-#, c-format
-msgid "%lu minute"
-msgid_plural "%lu minutes"
-msgstr[0] "%lu minute"
-msgstr[1] "%lu minute"
-msgstr[2] "%lu minuta"
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Do:"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr "Zatvorite sve aplikacije prije nego što Vaš računar bude zaključan."
+#: src/plug/MainView.vala:59
+msgid "Some settings require administrator rights to be changed"
+msgstr "Za izmjenu nekih podešavanja su potrebna administratorska prava"
 
-#: src/client/Client.vala:101
-msgid "Time left"
+#: src/plug/Plug.vala:33
+#, fuzzy
+msgid "Screen Time & Limits"
 msgstr "Preostalo vrijeme"
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "Ne možete pokrenuti ovu aplikaciju"
+#: src/plug/Plug.vala:34
+msgid "Configure time limits and restrict application usage"
+msgstr "Postavite vremenska ograničenja i ograničite korištenje aplikacija"
 
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
-msgstr "Nemate dozvolu za pokretanje ove aplikacije."
+#: src/plug/Plug.vala:61
+msgid "Limit computer use"
+msgstr "Ograničite korištenje računara"
+
+#: src/plug/Plug.vala:62
+msgid "Prevent website access"
+msgstr "Spriječite pristup web stranici"
+
+#: src/plug/Plug.vala:63
+msgid "Prevent application access"
+msgstr "Spriječite pristup aplikaciji"
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "Upravljajte podešavanjima roditeljskih kontrola"

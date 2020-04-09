@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 19:38+0000\n"
 "PO-Revision-Date: 2019-01-06 17:22+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
@@ -37,108 +37,107 @@ msgstr ""
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/MainView.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "Nokre innstillingar krev administratorrettar for å kunne endrast"
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You cannot run this application"
+msgstr "Du kan ikkje køyre denne applikasjonen"
 
-#: src/plug/Plug.vala:33
-#, fuzzy
-msgid "Screen Time & Limits"
+#: src/client/AppUnavailableDialog.vala:29
+msgid "You are not permitted to run this application."
+msgstr "Du har ikkje rettar til å køyre dette programmet."
+
+#: src/client/Client.vala:162
+#, c-format
+msgid "This computer will lock after %s."
+msgstr "Denne maskina vil verte låst etter %s."
+
+#: src/client/Client.vala:164
+#, c-format
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] "%lu time"
+msgstr[1] "%lu timar"
+
+#: src/client/Client.vala:166
+#, c-format
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] "%lu minutt"
+msgstr[1] "%lu minutt"
+
+#: src/client/Client.vala:168
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr "Sørg for å lukke alle applikasjonar før datamaskina vert låst."
+
+#: src/client/Client.vala:174
+msgid "Time left"
 msgstr "Gjenverande tid"
 
-#: src/plug/Plug.vala:34
-msgid "Configure time limits and restrict application usage"
-msgstr "Sett opp tidsavgrensingar og avgrens applikasjonsbruk"
-
-#: src/plug/Plug.vala:60
-msgid "Limit computer use"
-msgstr "Avgrens datamaskinbruk"
-
-#: src/plug/Plug.vala:61
-msgid "Prevent website access"
-msgstr "Hindre nettstadtilgjenge"
-
-#: src/plug/Plug.vala:62
-msgid "Prevent application access"
-msgstr "Hindre applikasjonstilgjenge"
-
-#: src/plug/Views/AppsView.vala:47
+#: src/plug/Views/AppsView.vala:48
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "Hindre %s frå å bruke desse applikasjonane:"
 
-#: src/plug/Views/AppsView.vala:56
+#: src/plug/Views/AppsView.vala:58
 msgid "Add Prevented Apps…"
 msgstr "Legg til applikasjonar med avgrensingar…"
 
-#: src/plug/Views/AppsView.vala:60
+#: src/plug/Views/AppsView.vala:62
 msgid "Remove Selected App"
 msgstr "Fjern vald applikasjon"
 
-#: src/plug/Views/AppsView.vala:65
+#: src/plug/Views/AppsView.vala:67
 msgid "Clear All"
 msgstr "Fjern alt"
 
-#: src/plug/Views/AppsView.vala:88
+#: src/plug/Views/AppsView.vala:90
 msgid "Allow access to these apps with admin permission:"
 msgstr "Tillat tilgjenge til desse applikasjonane med administratorrettar:"
+
+#: src/plug/Views/InternetView.vala:72
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Hindre %s frå å besøke desse nettstadane:"
+
+#: src/plug/Views/InternetView.vala:87
+msgid "Add URL"
+msgstr "Legg til URL"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Add a new URL, for example: google.com"
+msgstr "Legg til ein ny URL, til dømes: NRK.no"
+
+#: src/plug/Views/InternetView.vala:97
+msgid "Invalid URL"
+msgstr "Ugyldig nettadresse"
 
 #: src/plug/Views/TimeLimitView.vala:57
 msgid "Limit computer use:"
 msgstr "Begrens databruk:"
 
-#: src/plug/Views/TimeLimitView.vala:65
+#: src/plug/Views/TimeLimitView.vala:67
 msgid "On weekdays and weekends"
 msgstr "På vekedagar og helgedakar"
 
-#: src/plug/Views/TimeLimitView.vala:66
+#: src/plug/Views/TimeLimitView.vala:69
 msgid "Only on weekdays"
 msgstr "Berre på vekedagar"
 
-#: src/plug/Views/TimeLimitView.vala:67
+#: src/plug/Views/TimeLimitView.vala:70
 msgid "Only on weekends"
 msgstr "Berre på helgedagar"
 
-#: src/plug/Views/TimeLimitView.vala:77
+#: src/plug/Views/TimeLimitView.vala:80
 msgid "Weekdays"
 msgstr "Vekedagar"
 
-#: src/plug/Views/TimeLimitView.vala:81
+#: src/plug/Views/TimeLimitView.vala:84
 msgid "Weekends"
 msgstr "Helgar"
 
-#: src/plug/Views/InternetView.vala:71
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Hindre %s frå å besøke desse nettstadane:"
-
-#: src/plug/Views/InternetView.vala:84
-msgid "Add URL"
-msgstr "Legg til URL"
-
-#: src/plug/Views/InternetView.vala:93
-msgid "Add a new URL, for example: google.com"
-msgstr "Legg til ein ny URL, til dømes: NRK.no"
-
-#: src/plug/Views/InternetView.vala:94
-msgid "Invalid URL"
-msgstr "Ugyldig nettadresse"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Frå:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Til:"
-
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "Min konto"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "Andre kontoar"
+#: src/plug/Widgets/AppChooser.vala:40
+msgid "Search Applications"
+msgstr "Søk i applikasjonar"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
@@ -152,45 +151,46 @@ msgstr "Internett"
 msgid "Applications"
 msgstr "Applikasjonar"
 
-#: src/plug/Widgets/AppChooser.vala:40
-msgid "Search Applications"
-msgstr "Søk i applikasjonar"
+#: src/plug/Widgets/UserList.vala:104
+msgid "My Account"
+msgstr "Min konto"
 
-#: src/client/Client.vala:89
-#, c-format
-msgid "This computer will lock after %s."
-msgstr "Denne maskina vil verte låst etter %s."
+#: src/plug/Widgets/UserList.vala:107
+msgid "Other Accounts"
+msgstr "Andre kontoar"
 
-#: src/client/Client.vala:91
-#, c-format
-msgid "%lu hour"
-msgid_plural "%lu hours"
-msgstr[0] "%lu time"
-msgstr[1] "%lu timar"
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "Frå:"
 
-#: src/client/Client.vala:93
-#, c-format
-msgid "%lu minute"
-msgid_plural "%lu minutes"
-msgstr[0] "%lu minutt"
-msgstr[1] "%lu minutt"
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Til:"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr "Sørg for å lukke alle applikasjonar før datamaskina vert låst."
+#: src/plug/MainView.vala:59
+msgid "Some settings require administrator rights to be changed"
+msgstr "Nokre innstillingar krev administratorrettar for å kunne endrast"
 
-#: src/client/Client.vala:101
-msgid "Time left"
+#: src/plug/Plug.vala:33
+#, fuzzy
+msgid "Screen Time & Limits"
 msgstr "Gjenverande tid"
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "Du kan ikkje køyre denne applikasjonen"
+#: src/plug/Plug.vala:34
+msgid "Configure time limits and restrict application usage"
+msgstr "Sett opp tidsavgrensingar og avgrens applikasjonsbruk"
 
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
-msgstr "Du har ikkje rettar til å køyre dette programmet."
+#: src/plug/Plug.vala:61
+msgid "Limit computer use"
+msgstr "Avgrens datamaskinbruk"
+
+#: src/plug/Plug.vala:62
+msgid "Prevent website access"
+msgstr "Hindre nettstadtilgjenge"
+
+#: src/plug/Plug.vala:63
+msgid "Prevent application access"
+msgstr "Hindre applikasjonstilgjenge"
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "Behandle innstillingar for foreldrekontroll"

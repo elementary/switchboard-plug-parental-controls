@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 19:38+0000\n"
 "PO-Revision-Date: 2019-08-30 21:22+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -41,108 +41,108 @@ msgstr "Ekran Zaman Aşım, Sınırlar ve kısıtlamaların bilgilerinini göste
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/MainView.vala:59
-msgid "Some settings require administrator rights to be changed"
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You cannot run this application"
+msgstr "Bu uygulamayı çalıştıramazsınız"
+
+#: src/client/AppUnavailableDialog.vala:29
+msgid "You are not permitted to run this application."
+msgstr "Bu uygulamayı çalıştırmanıza izin verilmiyor."
+
+#: src/client/Client.vala:162
+#, c-format
+msgid "This computer will lock after %s."
+msgstr "Bu bilgisayar %s sonra kilitlenecek."
+
+#: src/client/Client.vala:164
+#, c-format
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] "%lu saat"
+msgstr[1] "%lu saat"
+
+#: src/client/Client.vala:166
+#, c-format
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] "%lu dakika"
+msgstr[1] "%lu dakika"
+
+#: src/client/Client.vala:168
+msgid ""
+"Make sure to close all applications before your computer will be locked."
 msgstr ""
-"Bazı ayarları değiştirebilmek için yönetici haklarına sahip olmanız gerekiyor"
+"Bilgisayarınız kilitlenmeden önce tüm uygulamaları kapattığınızdan emin olun."
 
-#: src/plug/Plug.vala:33
-msgid "Screen Time & Limits"
-msgstr "Ekran Zaman Aşım ve Sınırlar"
+#: src/client/Client.vala:174
+msgid "Time left"
+msgstr "Kalan süre"
 
-#: src/plug/Plug.vala:34
-msgid "Configure time limits and restrict application usage"
-msgstr "Zaman sınırlamasını ve uygulama kullanımını kısıtlamasını yapılandırın"
-
-#: src/plug/Plug.vala:60
-msgid "Limit computer use"
-msgstr "Bilgisayar kullanımını sınırla"
-
-#: src/plug/Plug.vala:61
-msgid "Prevent website access"
-msgstr "Web sitesi erişimini engelle"
-
-#: src/plug/Plug.vala:62
-msgid "Prevent application access"
-msgstr "Uygulama erişimini engelle"
-
-#: src/plug/Views/AppsView.vala:47
+#: src/plug/Views/AppsView.vala:48
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "%s kullanıcısının aşağıdaki uygulamaları kullanmasını engelle:"
 
-#: src/plug/Views/AppsView.vala:56
+#: src/plug/Views/AppsView.vala:58
 msgid "Add Prevented Apps…"
 msgstr "Engellenecek Uygulama Ekle…"
 
-#: src/plug/Views/AppsView.vala:60
+#: src/plug/Views/AppsView.vala:62
 msgid "Remove Selected App"
 msgstr "Seçili Uygulamayı Kaldır"
 
-#: src/plug/Views/AppsView.vala:65
+#: src/plug/Views/AppsView.vala:67
 msgid "Clear All"
 msgstr "Hepsini Temizle"
 
-#: src/plug/Views/AppsView.vala:88
+#: src/plug/Views/AppsView.vala:90
 msgid "Allow access to these apps with admin permission:"
 msgstr "Bu uygulamalara yönetici izinleri ile erişime izin ver:"
+
+#: src/plug/Views/InternetView.vala:72
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "%s kullanıcısının aşağıdaki web sitelerini ziyaret etmesini engelle:"
+
+#: src/plug/Views/InternetView.vala:87
+msgid "Add URL"
+msgstr "URL Ekle"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Add a new URL, for example: google.com"
+msgstr "Yeni bir URL ekle, örnek: google.com"
+
+#: src/plug/Views/InternetView.vala:97
+msgid "Invalid URL"
+msgstr "Geçersiz URL"
 
 #: src/plug/Views/TimeLimitView.vala:57
 msgid "Limit computer use:"
 msgstr "Bilgisayar kullanımını sınırla:"
 
-#: src/plug/Views/TimeLimitView.vala:65
+#: src/plug/Views/TimeLimitView.vala:67
 msgid "On weekdays and weekends"
 msgstr "Hafta içi ve hafta sonu"
 
-#: src/plug/Views/TimeLimitView.vala:66
+#: src/plug/Views/TimeLimitView.vala:69
 msgid "Only on weekdays"
 msgstr "Sadece hafta içi"
 
-#: src/plug/Views/TimeLimitView.vala:67
+#: src/plug/Views/TimeLimitView.vala:70
 msgid "Only on weekends"
 msgstr "Sadece hafta sonu"
 
-#: src/plug/Views/TimeLimitView.vala:77
+#: src/plug/Views/TimeLimitView.vala:80
 msgid "Weekdays"
 msgstr "Hafta içi"
 
-#: src/plug/Views/TimeLimitView.vala:81
+#: src/plug/Views/TimeLimitView.vala:84
 msgid "Weekends"
 msgstr "Hafta sonu"
 
-#: src/plug/Views/InternetView.vala:71
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "%s kullanıcısının aşağıdaki web sitelerini ziyaret etmesini engelle:"
-
-#: src/plug/Views/InternetView.vala:84
-msgid "Add URL"
-msgstr "URL Ekle"
-
-#: src/plug/Views/InternetView.vala:93
-msgid "Add a new URL, for example: google.com"
-msgstr "Yeni bir URL ekle, örnek: google.com"
-
-#: src/plug/Views/InternetView.vala:94
-msgid "Invalid URL"
-msgstr "Geçersiz URL"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Başlangıç:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Bitiş:"
-
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "Hesabım"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "Diğer Hesaplar"
+#: src/plug/Widgets/AppChooser.vala:40
+msgid "Search Applications"
+msgstr "Uygulama Ara"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
@@ -156,46 +156,46 @@ msgstr "İnternet"
 msgid "Applications"
 msgstr "Uygulamalar"
 
-#: src/plug/Widgets/AppChooser.vala:40
-msgid "Search Applications"
-msgstr "Uygulama Ara"
+#: src/plug/Widgets/UserList.vala:104
+msgid "My Account"
+msgstr "Hesabım"
 
-#: src/client/Client.vala:89
-#, c-format
-msgid "This computer will lock after %s."
-msgstr "Bu bilgisayar %s sonra kilitlenecek."
+#: src/plug/Widgets/UserList.vala:107
+msgid "Other Accounts"
+msgstr "Diğer Hesaplar"
 
-#: src/client/Client.vala:91
-#, c-format
-msgid "%lu hour"
-msgid_plural "%lu hours"
-msgstr[0] "%lu saat"
-msgstr[1] "%lu saat"
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "Başlangıç:"
 
-#: src/client/Client.vala:93
-#, c-format
-msgid "%lu minute"
-msgid_plural "%lu minutes"
-msgstr[0] "%lu dakika"
-msgstr[1] "%lu dakika"
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Bitiş:"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
+#: src/plug/MainView.vala:59
+msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"Bilgisayarınız kilitlenmeden önce tüm uygulamaları kapattığınızdan emin olun."
+"Bazı ayarları değiştirebilmek için yönetici haklarına sahip olmanız gerekiyor"
 
-#: src/client/Client.vala:101
-msgid "Time left"
-msgstr "Kalan süre"
+#: src/plug/Plug.vala:33
+msgid "Screen Time & Limits"
+msgstr "Ekran Zaman Aşım ve Sınırlar"
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "Bu uygulamayı çalıştıramazsınız"
+#: src/plug/Plug.vala:34
+msgid "Configure time limits and restrict application usage"
+msgstr "Zaman sınırlamasını ve uygulama kullanımını kısıtlamasını yapılandırın"
 
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
-msgstr "Bu uygulamayı çalıştırmanıza izin verilmiyor."
+#: src/plug/Plug.vala:61
+msgid "Limit computer use"
+msgstr "Bilgisayar kullanımını sınırla"
+
+#: src/plug/Plug.vala:62
+msgid "Prevent website access"
+msgstr "Web sitesi erişimini engelle"
+
+#: src/plug/Plug.vala:63
+msgid "Prevent application access"
+msgstr "Uygulama erişimini engelle"
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "Ebeveyn kontrolü ayarlarını yönet"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 19:38+0000\n"
 "PO-Revision-Date: 2019-11-08 19:24+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -35,107 +35,107 @@ msgstr "Montri informojn kaj limigojn pri ekranaj uzado &amp; limoj"
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/MainView.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "Kelkaj agordoj postulas administrajn permesojn por esti ŝanĝitaj"
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You cannot run this application"
+msgstr "Neeblas lanĉi ĉi aplikaĵon"
 
-#: src/plug/Plug.vala:33
-msgid "Screen Time & Limits"
-msgstr "Ekranaj uzado &amp; limoj"
+#: src/client/AppUnavailableDialog.vala:29
+msgid "You are not permitted to run this application."
+msgstr "Vi ne havas permeson uzi ĉi aplikaĵon."
 
-#: src/plug/Plug.vala:34
-msgid "Configure time limits and restrict application usage"
-msgstr "Agordi uztempajn limojn kaj striktigi aplikaĵan uzadon"
+#: src/client/Client.vala:162
+#, c-format
+msgid "This computer will lock after %s."
+msgstr "Ĉi komputilo ŝlosiĝos post %s."
 
-#: src/plug/Plug.vala:60
-msgid "Limit computer use"
-msgstr "Limigi komputilan uzon"
+#: src/client/Client.vala:164
+#, c-format
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] "%lu horo"
+msgstr[1] "%lu horoj"
 
-#: src/plug/Plug.vala:61
-msgid "Prevent website access"
-msgstr "Antaŭmalhelpi retejan alireblecon"
+#: src/client/Client.vala:166
+#, c-format
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] "%lu minuto"
+msgstr[1] "%lu minutoj"
 
-#: src/plug/Plug.vala:62
-msgid "Prevent application access"
-msgstr "Antaŭmalhelpi aplikaĵan alireblecon"
+#: src/client/Client.vala:168
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr "Certiĝu pri fermo de ĉiuj aplikaĵoj antaŭ komputila ŝloso."
 
-#: src/plug/Views/AppsView.vala:47
+#: src/client/Client.vala:174
+msgid "Time left"
+msgstr "Restanta"
+
+#: src/plug/Views/AppsView.vala:48
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "Antaŭmalhelpi „%s“ uzadi ĉi aplikaĵojn:"
 
-#: src/plug/Views/AppsView.vala:56
+#: src/plug/Views/AppsView.vala:58
 msgid "Add Prevented Apps…"
 msgstr "Aldoni antaŭmalhelpitajn aplikaĵojn…"
 
-#: src/plug/Views/AppsView.vala:60
+#: src/plug/Views/AppsView.vala:62
 msgid "Remove Selected App"
 msgstr "Forigi elektitan aplikaĵon"
 
-#: src/plug/Views/AppsView.vala:65
+#: src/plug/Views/AppsView.vala:67
 msgid "Clear All"
 msgstr "Forigi ĉion"
 
-#: src/plug/Views/AppsView.vala:88
+#: src/plug/Views/AppsView.vala:90
 msgid "Allow access to these apps with admin permission:"
 msgstr "Permesi aliron al tiuj aplikaĵoj kun administra permeso:"
+
+#: src/plug/Views/InternetView.vala:72
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Antaŭmalhelpi %s viziti tiujn retejojn:"
+
+#: src/plug/Views/InternetView.vala:87
+msgid "Add URL"
+msgstr "Aldoni URL-adreson"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Add a new URL, for example: google.com"
+msgstr "Aldoni novan URL-adreson, ekzemple: google.com"
+
+#: src/plug/Views/InternetView.vala:97
+msgid "Invalid URL"
+msgstr "Nevalida URL-adreso"
 
 #: src/plug/Views/TimeLimitView.vala:57
 msgid "Limit computer use:"
 msgstr "Limigi komputilan uzon:"
 
-#: src/plug/Views/TimeLimitView.vala:65
+#: src/plug/Views/TimeLimitView.vala:67
 msgid "On weekdays and weekends"
 msgstr "Semajntage kaj semajnfine"
 
-#: src/plug/Views/TimeLimitView.vala:66
+#: src/plug/Views/TimeLimitView.vala:69
 msgid "Only on weekdays"
 msgstr "Nur semajntage"
 
-#: src/plug/Views/TimeLimitView.vala:67
+#: src/plug/Views/TimeLimitView.vala:70
 msgid "Only on weekends"
 msgstr "Nur semajnfine"
 
-#: src/plug/Views/TimeLimitView.vala:77
+#: src/plug/Views/TimeLimitView.vala:80
 msgid "Weekdays"
 msgstr "Semajntage"
 
-#: src/plug/Views/TimeLimitView.vala:81
+#: src/plug/Views/TimeLimitView.vala:84
 msgid "Weekends"
 msgstr "Semajnfine"
 
-#: src/plug/Views/InternetView.vala:71
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Antaŭmalhelpi %s viziti tiujn retejojn:"
-
-#: src/plug/Views/InternetView.vala:84
-msgid "Add URL"
-msgstr "Aldoni URL-adreson"
-
-#: src/plug/Views/InternetView.vala:93
-msgid "Add a new URL, for example: google.com"
-msgstr "Aldoni novan URL-adreson, ekzemple: google.com"
-
-#: src/plug/Views/InternetView.vala:94
-msgid "Invalid URL"
-msgstr "Nevalida URL-adreso"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "De:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Ĝis:"
-
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "Mia konto"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "Aliaj kontoj"
+#: src/plug/Widgets/AppChooser.vala:40
+msgid "Search Applications"
+msgstr "Serĉi aplikaĵojn"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
@@ -149,42 +149,42 @@ msgstr "Interreto"
 msgid "Applications"
 msgstr "Aplikaĵoj"
 
-#: src/plug/Widgets/AppChooser.vala:40
-msgid "Search Applications"
-msgstr "Serĉi aplikaĵojn"
+#: src/plug/Widgets/UserList.vala:104
+msgid "My Account"
+msgstr "Mia konto"
 
-#: src/client/Client.vala:89
-#, c-format
-msgid "This computer will lock after %s."
-msgstr "Ĉi komputilo ŝlosiĝos post %s."
+#: src/plug/Widgets/UserList.vala:107
+msgid "Other Accounts"
+msgstr "Aliaj kontoj"
 
-#: src/client/Client.vala:91
-#, c-format
-msgid "%lu hour"
-msgid_plural "%lu hours"
-msgstr[0] "%lu horo"
-msgstr[1] "%lu horoj"
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "De:"
 
-#: src/client/Client.vala:93
-#, c-format
-msgid "%lu minute"
-msgid_plural "%lu minutes"
-msgstr[0] "%lu minuto"
-msgstr[1] "%lu minutoj"
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Ĝis:"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr "Certiĝu pri fermo de ĉiuj aplikaĵoj antaŭ komputila ŝloso."
+#: src/plug/MainView.vala:59
+msgid "Some settings require administrator rights to be changed"
+msgstr "Kelkaj agordoj postulas administrajn permesojn por esti ŝanĝitaj"
 
-#: src/client/Client.vala:101
-msgid "Time left"
-msgstr "Restanta"
+#: src/plug/Plug.vala:33
+msgid "Screen Time & Limits"
+msgstr "Ekranaj uzado &amp; limoj"
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "Neeblas lanĉi ĉi aplikaĵon"
+#: src/plug/Plug.vala:34
+msgid "Configure time limits and restrict application usage"
+msgstr "Agordi uztempajn limojn kaj striktigi aplikaĵan uzadon"
 
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
-msgstr "Vi ne havas permeson uzi ĉi aplikaĵon."
+#: src/plug/Plug.vala:61
+msgid "Limit computer use"
+msgstr "Limigi komputilan uzon"
+
+#: src/plug/Plug.vala:62
+msgid "Prevent website access"
+msgstr "Antaŭmalhelpi retejan alireblecon"
+
+#: src/plug/Plug.vala:63
+msgid "Prevent application access"
+msgstr "Antaŭmalhelpi aplikaĵan alireblecon"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 19:38+0000\n"
 "PO-Revision-Date: 2019-07-21 03:24+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -43,6 +43,139 @@ msgstr ""
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You cannot run this application"
+msgstr "Vous ne pouvez pas démarrer cette application"
+
+#: src/client/AppUnavailableDialog.vala:29
+msgid "You are not permitted to run this application."
+msgstr "Vous n'êtes pas autorisé à démarrer cette application."
+
+#: src/client/Client.vala:162
+#, c-format
+msgid "This computer will lock after %s."
+msgstr "Cet ordinateur se verrouillera dans %s."
+
+#: src/client/Client.vala:164
+#, c-format
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] "%lu heure"
+msgstr[1] "%lu heures"
+
+#: src/client/Client.vala:166
+#, c-format
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] "%lu minute"
+msgstr[1] "%lu minutes"
+
+#: src/client/Client.vala:168
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr ""
+"Assurez-vous de fermer toutes les applications avant que votre ordinateur "
+"soit verrouillé."
+
+#: src/client/Client.vala:174
+msgid "Time left"
+msgstr "Temps restant"
+
+#: src/plug/Views/AppsView.vala:48
+#, c-format
+msgid "Prevent %s from using these apps:"
+msgstr "Interdire à %s d'utiliser ces programmes :"
+
+#: src/plug/Views/AppsView.vala:58
+msgid "Add Prevented Apps…"
+msgstr "Ajouter des applications bloquées…"
+
+#: src/plug/Views/AppsView.vala:62
+msgid "Remove Selected App"
+msgstr "Supprimer l'application sélectionnée"
+
+#: src/plug/Views/AppsView.vala:67
+msgid "Clear All"
+msgstr "Tout retirer"
+
+#: src/plug/Views/AppsView.vala:90
+msgid "Allow access to these apps with admin permission:"
+msgstr ""
+"Permettre l'utilisation de ces programmes avec des droits d'administrateur :"
+
+#: src/plug/Views/InternetView.vala:72
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Interdire à %s la visite de ces sites internet :"
+
+#: src/plug/Views/InternetView.vala:87
+msgid "Add URL"
+msgstr "Ajouter une URL"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Add a new URL, for example: google.com"
+msgstr "Ajouter une nouvelle URL, par exemple : www.google.fr"
+
+#: src/plug/Views/InternetView.vala:97
+msgid "Invalid URL"
+msgstr "URL non valide"
+
+#: src/plug/Views/TimeLimitView.vala:57
+msgid "Limit computer use:"
+msgstr "Limiter l'utilisation :"
+
+#: src/plug/Views/TimeLimitView.vala:67
+msgid "On weekdays and weekends"
+msgstr "La semaine et le week-end"
+
+#: src/plug/Views/TimeLimitView.vala:69
+msgid "Only on weekdays"
+msgstr "Seulement la semaine"
+
+#: src/plug/Views/TimeLimitView.vala:70
+msgid "Only on weekends"
+msgstr "Seulement le week-end"
+
+#: src/plug/Views/TimeLimitView.vala:80
+msgid "Weekdays"
+msgstr "La semaine"
+
+#: src/plug/Views/TimeLimitView.vala:84
+msgid "Weekends"
+msgstr "Les week-ends"
+
+#: src/plug/Widgets/AppChooser.vala:40
+msgid "Search Applications"
+msgstr "Rechercher des applications"
+
+#: src/plug/Widgets/ControlPage.vala:51
+msgid "Screen Time"
+msgstr "Temps d'écran"
+
+#: src/plug/Widgets/ControlPage.vala:52
+msgid "Internet"
+msgstr "Internet"
+
+#: src/plug/Widgets/ControlPage.vala:53
+msgid "Applications"
+msgstr "Applications"
+
+#: src/plug/Widgets/UserList.vala:104
+msgid "My Account"
+msgstr "Mon compte"
+
+#: src/plug/Widgets/UserList.vala:107
+msgid "Other Accounts"
+msgstr "Autres comptes"
+
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "De :"
+
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "À :"
+
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
@@ -58,150 +191,17 @@ msgstr ""
 "Configurer les limites de temps et les restrictions d'utilisation des "
 "applications"
 
-#: src/plug/Plug.vala:60
+#: src/plug/Plug.vala:61
 msgid "Limit computer use"
 msgstr "Limiter l'utilisation"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:62
 msgid "Prevent website access"
 msgstr "Empêcher l'accès au site web"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Empêcher l'accès à l'application"
-
-#: src/plug/Views/AppsView.vala:47
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Interdire à %s d'utiliser ces programmes :"
-
-#: src/plug/Views/AppsView.vala:56
-msgid "Add Prevented Apps…"
-msgstr "Ajouter des applications bloquées…"
-
-#: src/plug/Views/AppsView.vala:60
-msgid "Remove Selected App"
-msgstr "Supprimer l'application sélectionnée"
-
-#: src/plug/Views/AppsView.vala:65
-msgid "Clear All"
-msgstr "Tout retirer"
-
-#: src/plug/Views/AppsView.vala:88
-msgid "Allow access to these apps with admin permission:"
-msgstr ""
-"Permettre l'utilisation de ces programmes avec des droits d'administrateur :"
-
-#: src/plug/Views/TimeLimitView.vala:57
-msgid "Limit computer use:"
-msgstr "Limiter l'utilisation :"
-
-#: src/plug/Views/TimeLimitView.vala:65
-msgid "On weekdays and weekends"
-msgstr "La semaine et le week-end"
-
-#: src/plug/Views/TimeLimitView.vala:66
-msgid "Only on weekdays"
-msgstr "Seulement la semaine"
-
-#: src/plug/Views/TimeLimitView.vala:67
-msgid "Only on weekends"
-msgstr "Seulement le week-end"
-
-#: src/plug/Views/TimeLimitView.vala:77
-msgid "Weekdays"
-msgstr "La semaine"
-
-#: src/plug/Views/TimeLimitView.vala:81
-msgid "Weekends"
-msgstr "Les week-ends"
-
-#: src/plug/Views/InternetView.vala:71
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Interdire à %s la visite de ces sites internet :"
-
-#: src/plug/Views/InternetView.vala:84
-msgid "Add URL"
-msgstr "Ajouter une URL"
-
-#: src/plug/Views/InternetView.vala:93
-msgid "Add a new URL, for example: google.com"
-msgstr "Ajouter une nouvelle URL, par exemple : www.google.fr"
-
-#: src/plug/Views/InternetView.vala:94
-msgid "Invalid URL"
-msgstr "URL non valide"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "De :"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "À :"
-
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "Mon compte"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "Autres comptes"
-
-#: src/plug/Widgets/ControlPage.vala:51
-msgid "Screen Time"
-msgstr "Temps d'écran"
-
-#: src/plug/Widgets/ControlPage.vala:52
-msgid "Internet"
-msgstr "Internet"
-
-#: src/plug/Widgets/ControlPage.vala:53
-msgid "Applications"
-msgstr "Applications"
-
-#: src/plug/Widgets/AppChooser.vala:40
-msgid "Search Applications"
-msgstr "Rechercher des applications"
-
-#: src/client/Client.vala:89
-#, c-format
-msgid "This computer will lock after %s."
-msgstr "Cet ordinateur se verrouillera dans %s."
-
-#: src/client/Client.vala:91
-#, c-format
-msgid "%lu hour"
-msgid_plural "%lu hours"
-msgstr[0] "%lu heure"
-msgstr[1] "%lu heures"
-
-#: src/client/Client.vala:93
-#, c-format
-msgid "%lu minute"
-msgid_plural "%lu minutes"
-msgstr[0] "%lu minute"
-msgstr[1] "%lu minutes"
-
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr ""
-"Assurez-vous de fermer toutes les applications avant que votre ordinateur "
-"soit verrouillé."
-
-#: src/client/Client.vala:101
-msgid "Time left"
-msgstr "Temps restant"
-
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "Vous ne pouvez pas démarrer cette application"
-
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
-msgstr "Vous n'êtes pas autorisé à démarrer cette application."
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "Gestion de la configuration du contrôle parental"
