@@ -6,7 +6,7 @@
   <vendor>elementary</vendor>
   <vendor_url>https://elementary.io</vendor_url>
 
-  <action id="io.elementary.switchboard.parental-controls.administration">
+  <action id="io.elementary.switchboard.screentime-limits.administration">
     <description gettext-domain="@GETTEXT_PACKAGE@">Manage Screen Time and Limits</description>
     <message gettext-domain="@GETTEXT_PACKAGE@">Authentication is required to change Screen Time and Limits</message>
     <icon_name>preferences-system-parental-controls</icon_name>
