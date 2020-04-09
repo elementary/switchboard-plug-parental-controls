@@ -1,4 +1,3 @@
-data/org.pantheon.switchboard.parental-controls.policy.in
 data/pantheon-parental-controls-client.desktop.in
 src/client/AppUnavailableDialog.vala
 src/client/Client.vala

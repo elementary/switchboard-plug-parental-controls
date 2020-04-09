@@ -6,9 +6,9 @@
   <vendor>elementary</vendor>
   <vendor_url>https://elementary.io</vendor_url>
 
-  <action id="org.pantheon.switchboard.parental-controls.administration">
-    <description gettext-domain="@GETTEXT_PACKAGE@">Manage Screen Time &amp; Limits</description>
-    <message gettext-domain="@GETTEXT_PACKAGE@">Authentication is required to change Screen Time &amp; Limits</message>
+  <action id="io.elementary.switchboard.parental-controls.administration">
+    <description gettext-domain="@GETTEXT_PACKAGE@">Manage Screen Time and Limits</description>
+    <message gettext-domain="@GETTEXT_PACKAGE@">Authentication is required to change Screen Time and Limits</message>
     <icon_name>preferences-system-parental-controls</icon_name>
     <defaults>
       <allow_any>no</allow_any>

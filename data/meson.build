@@ -18,8 +18,8 @@ configure_file(
 )
 
 configure_file(
-    input: 'org.pantheon.switchboard.parental-controls.policy.in',
-    output: 'org.pantheon.switchboard.parental-controls.policy',
+    input: 'policy.in',
+    output: 'io.elementary.switchboard.parental-controls.policy',
     configuration: configuration_data,
     install_dir: polkit_dep.get_pkgconfig_variable('policydir', define_variable: ['prefix', prefix])
 )
