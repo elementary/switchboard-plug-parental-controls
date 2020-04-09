@@ -20,8 +20,8 @@
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
  */
 
- namespace PC.Daemon {
-    public class WebRestriction : Restriction<string> {
+namespace PC.Daemon {
+    public class WebRestriction : Restriction {
         private const string IPTABLES_EXEC = "iptables";
         private const int DPORT = 80;
 
@@ -29,8 +29,12 @@
             return Environment.find_program_in_path (IPTABLES_EXEC) != null;
         }
 
+        public WebRestriction (UserConfig config) {
+            base (config);
+        }
+
         public override void start () {
-            foreach (string url in targets) {
+            foreach (string url in config.block_urls) {
                 string[] addresses = get_addresses_from_name (url);
                 foreach (string address in addresses) {
                     process_adress (address, "-A");
@@ -39,7 +43,7 @@
         }
 
         public override void stop () {
-            foreach (string url in targets) {
+            foreach (string url in config.block_urls) {
                 string[] addresses = get_addresses_from_name (url);
                 foreach (string address in addresses) {
                     process_adress (address, "-D");
