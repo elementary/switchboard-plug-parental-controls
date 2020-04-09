@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 19:38+0000\n"
+"POT-Creation-Date: 2020-04-09 20:13+0000\n"
 "PO-Revision-Date: 2019-11-08 19:24+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -35,39 +35,41 @@ msgstr "Montri informojn kaj limigojn pri ekranaj uzado &amp; limoj"
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "Neeblas lanĉi ĉi aplikaĵon"
-
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
+#: src/client/AppUnavailableDialog.vala:27
+#, fuzzy
+#| msgid "You are not permitted to run this application."
+msgid "You are not permitted to run this application"
 msgstr "Vi ne havas permeson uzi ĉi aplikaĵon."
 
-#: src/client/Client.vala:162
+#: src/client/AppUnavailableDialog.vala:28
+msgid "An administrator has restricted your access to this application."
+msgstr ""
+
+#: src/client/Client.vala:158
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Ĉi komputilo ŝlosiĝos post %s."
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:160
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu horo"
 msgstr[1] "%lu horoj"
 
-#: src/client/Client.vala:166
+#: src/client/Client.vala:162
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu minuto"
 msgstr[1] "%lu minutoj"
 
-#: src/client/Client.vala:168
+#: src/client/Client.vala:164
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "Certiĝu pri fermo de ĉiuj aplikaĵoj antaŭ komputila ŝloso."
 
-#: src/client/Client.vala:174
+#: src/client/Client.vala:170
 msgid "Time left"
 msgstr "Restanta"
 
@@ -188,3 +190,6 @@ msgstr "Antaŭmalhelpi retejan alireblecon"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Antaŭmalhelpi aplikaĵan alireblecon"
+
+#~ msgid "You cannot run this application"
+#~ msgstr "Neeblas lanĉi ĉi aplikaĵon"

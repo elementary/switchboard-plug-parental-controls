@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 19:38+0000\n"
+"POT-Creation-Date: 2020-04-09 20:13+0000\n"
 "PO-Revision-Date: 2016-05-01 14:04+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -40,39 +40,41 @@ msgstr ""
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "คุณไม่สามารถเรียกใช้แอพพลิเคชั่นนี้ได้"
-
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
+#: src/client/AppUnavailableDialog.vala:27
+#, fuzzy
+#| msgid "You are not permitted to run this application."
+msgid "You are not permitted to run this application"
 msgstr "คุณไม่ได้รับอนุญาตให้เรียกใช้แอพพลิเคชั่นนี้"
 
-#: src/client/Client.vala:162
+#: src/client/AppUnavailableDialog.vala:28
+msgid "An administrator has restricted your access to this application."
+msgstr ""
+
+#: src/client/Client.vala:158
 #, fuzzy, c-format
 msgid "This computer will lock after %s."
 msgstr "คอมพิวเตอร์เครื่องนี้จะล็อคหลังจาก %s %s. %s"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:160
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:166
+#: src/client/Client.vala:162
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:168
+#: src/client/Client.vala:164
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "โปรดตรวจสอบให้แน่ใจว่าทุกโปรแกรมถูกปิดแล้ว ก่อนที่คอมพิวเตอร์ของคุณจะถูกล็อค"
 
-#: src/client/Client.vala:174
+#: src/client/Client.vala:170
 msgid "Time left"
 msgstr "เวลาที่เหลือ"
 
@@ -195,6 +197,9 @@ msgstr ""
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr ""
+
+#~ msgid "You cannot run this application"
+#~ msgstr "คุณไม่สามารถเรียกใช้แอพพลิเคชั่นนี้ได้"
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "จัดการค่าตั้งการควบคุมโดยผู้ปกครอง"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 19:38+0000\n"
+"POT-Creation-Date: 2020-04-09 20:13+0000\n"
 "PO-Revision-Date: 2019-02-09 10:53+0000\n"
 "Last-Translator: Piotr Strebski <strebski@gmail.com>\n"
 "Language-Team: Polish <https://weblate.elementary.io/projects/switchboard/"
@@ -43,20 +43,22 @@ msgstr ""
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "Nie możesz uruchomić tego programu"
-
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
+#: src/client/AppUnavailableDialog.vala:27
+#, fuzzy
+#| msgid "You are not permitted to run this application."
+msgid "You are not permitted to run this application"
 msgstr "Nie masz uprawnień do uruchomienia tego programu."
 
-#: src/client/Client.vala:162
+#: src/client/AppUnavailableDialog.vala:28
+msgid "An administrator has restricted your access to this application."
+msgstr ""
+
+#: src/client/Client.vala:158
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Ten komputer zostanie zablokowany po %s."
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:160
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
@@ -64,7 +66,7 @@ msgstr[0] "%lu godzina"
 msgstr[1] "%lu godziny"
 msgstr[2] "%lu godzin"
 
-#: src/client/Client.vala:166
+#: src/client/Client.vala:162
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
@@ -72,12 +74,12 @@ msgstr[0] "%lu minuta"
 msgstr[1] "%lu minuty"
 msgstr[2] "%lu minut"
 
-#: src/client/Client.vala:168
+#: src/client/Client.vala:164
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "Należy zamknąć wszystkie programy zanim komputer zostanie zablokowany."
 
-#: src/client/Client.vala:174
+#: src/client/Client.vala:170
 msgid "Time left"
 msgstr "Pozostały czas"
 
@@ -199,6 +201,9 @@ msgstr "Ogranicz dostęp do stron internetowych"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Ogranicz dostęp do programów"
+
+#~ msgid "You cannot run this application"
+#~ msgstr "Nie możesz uruchomić tego programu"
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "Zarządzaj ustawieniami kontroli rodzicielskiej"
