@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-09 21:36+0000\n"
-"PO-Revision-Date: 2020-04-09 14:10+0000\n"
+"PO-Revision-Date: 2020-04-11 10:10+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pt/>\n"
@@ -21,14 +21,12 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "Não tens permissão para executar esta aplicação."
+msgstr "Não tem permissão para executar esta aplicação"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "Um administrador restringiu o seu acesso a esta aplicação."
 
 #: src/client/Client.vala:158
 #, c-format
