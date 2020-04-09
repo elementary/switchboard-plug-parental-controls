@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 19:38+0000\n"
 "PO-Revision-Date: 2020-03-26 23:09+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -40,107 +40,107 @@ msgstr "הצגת מידע והגבלות של זמן מסך ומגבלות"
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/MainView.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You cannot run this application"
+msgstr "לא ניתן להריץ יישום זה"
 
-#: src/plug/Plug.vala:33
-msgid "Screen Time & Limits"
-msgstr "זמן מסך ומגבלות"
+#: src/client/AppUnavailableDialog.vala:29
+msgid "You are not permitted to run this application."
+msgstr "אין הרשאה להריץ יישום זה."
 
-#: src/plug/Plug.vala:34
-msgid "Configure time limits and restrict application usage"
-msgstr "הגדרת מגבלות זמן והגבלת שימוש ביישומים"
+#: src/client/Client.vala:162
+#, c-format
+msgid "This computer will lock after %s."
+msgstr "המחשב יינעל לאחר %s."
 
-#: src/plug/Plug.vala:60
-msgid "Limit computer use"
-msgstr "הגבלת השימוש במחשב"
+#: src/client/Client.vala:164
+#, c-format
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] "שעה אחת"
+msgstr[1] "%lu שעות"
 
-#: src/plug/Plug.vala:61
-msgid "Prevent website access"
-msgstr "מניעת כניסה לאתרים"
+#: src/client/Client.vala:166
+#, c-format
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] "דקה אחת"
+msgstr[1] "%lu דקות"
 
-#: src/plug/Plug.vala:62
-msgid "Prevent application access"
-msgstr "מניעת גישה ליישומים"
+#: src/client/Client.vala:168
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr "נא לוודא שכל היישומים נסגרו לפני שהמחשב ינעל."
 
-#: src/plug/Views/AppsView.vala:47
+#: src/client/Client.vala:174
+msgid "Time left"
+msgstr "זמן שנותר"
+
+#: src/plug/Views/AppsView.vala:48
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "%s מנוע מלהשתמש ביישומים אלו:"
 
-#: src/plug/Views/AppsView.vala:56
+#: src/plug/Views/AppsView.vala:58
 msgid "Add Prevented Apps…"
 msgstr "הוספת יישומים לחסימה…"
 
-#: src/plug/Views/AppsView.vala:60
+#: src/plug/Views/AppsView.vala:62
 msgid "Remove Selected App"
 msgstr "הסרת היישום שנבחר"
 
-#: src/plug/Views/AppsView.vala:65
+#: src/plug/Views/AppsView.vala:67
 msgid "Clear All"
 msgstr "ניקוי הכל"
 
-#: src/plug/Views/AppsView.vala:88
+#: src/plug/Views/AppsView.vala:90
 msgid "Allow access to these apps with admin permission:"
 msgstr "מתן אפשרות גישה ליישומים אלו עם הרשאות מנהל:"
+
+#: src/plug/Views/InternetView.vala:72
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "%s מנוע מלבקר באתרי האינטרנט הבאים:"
+
+#: src/plug/Views/InternetView.vala:87
+msgid "Add URL"
+msgstr "הוספת כתובת"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Add a new URL, for example: google.com"
+msgstr "הוספת כתובת חדשה, לדוגמה: google.com"
+
+#: src/plug/Views/InternetView.vala:97
+msgid "Invalid URL"
+msgstr "כתובת לא חוקית"
 
 #: src/plug/Views/TimeLimitView.vala:57
 msgid "Limit computer use:"
 msgstr "הגבלת השימוש במחשב:"
 
-#: src/plug/Views/TimeLimitView.vala:65
+#: src/plug/Views/TimeLimitView.vala:67
 msgid "On weekdays and weekends"
 msgstr "בימות השבוע ובסופי שבוע"
 
-#: src/plug/Views/TimeLimitView.vala:66
+#: src/plug/Views/TimeLimitView.vala:69
 msgid "Only on weekdays"
 msgstr "בימות השבוע בלבד"
 
-#: src/plug/Views/TimeLimitView.vala:67
+#: src/plug/Views/TimeLimitView.vala:70
 msgid "Only on weekends"
 msgstr "בסופי שבוע בלבד"
 
-#: src/plug/Views/TimeLimitView.vala:77
+#: src/plug/Views/TimeLimitView.vala:80
 msgid "Weekdays"
 msgstr "ימות השבוע"
 
-#: src/plug/Views/TimeLimitView.vala:81
+#: src/plug/Views/TimeLimitView.vala:84
 msgid "Weekends"
 msgstr "סופי שבוע"
 
-#: src/plug/Views/InternetView.vala:71
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "%s מנוע מלבקר באתרי האינטרנט הבאים:"
-
-#: src/plug/Views/InternetView.vala:84
-msgid "Add URL"
-msgstr "הוספת כתובת"
-
-#: src/plug/Views/InternetView.vala:93
-msgid "Add a new URL, for example: google.com"
-msgstr "הוספת כתובת חדשה, לדוגמה: google.com"
-
-#: src/plug/Views/InternetView.vala:94
-msgid "Invalid URL"
-msgstr "כתובת לא חוקית"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "התחלה:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "סיום:"
-
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "החשבון שלי"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "חשבונות אחרים"
+#: src/plug/Widgets/AppChooser.vala:40
+msgid "Search Applications"
+msgstr "חיפוש יישומים"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
@@ -154,45 +154,45 @@ msgstr "אינטרנט"
 msgid "Applications"
 msgstr "יישומים"
 
-#: src/plug/Widgets/AppChooser.vala:40
-msgid "Search Applications"
-msgstr "חיפוש יישומים"
+#: src/plug/Widgets/UserList.vala:104
+msgid "My Account"
+msgstr "החשבון שלי"
 
-#: src/client/Client.vala:89
-#, c-format
-msgid "This computer will lock after %s."
-msgstr "המחשב יינעל לאחר %s."
+#: src/plug/Widgets/UserList.vala:107
+msgid "Other Accounts"
+msgstr "חשבונות אחרים"
 
-#: src/client/Client.vala:91
-#, c-format
-msgid "%lu hour"
-msgid_plural "%lu hours"
-msgstr[0] "שעה אחת"
-msgstr[1] "%lu שעות"
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "התחלה:"
 
-#: src/client/Client.vala:93
-#, c-format
-msgid "%lu minute"
-msgid_plural "%lu minutes"
-msgstr[0] "דקה אחת"
-msgstr[1] "%lu דקות"
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "סיום:"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr "נא לוודא שכל היישומים נסגרו לפני שהמחשב ינעל."
+#: src/plug/MainView.vala:59
+msgid "Some settings require administrator rights to be changed"
+msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
 
-#: src/client/Client.vala:101
-msgid "Time left"
-msgstr "זמן שנותר"
+#: src/plug/Plug.vala:33
+msgid "Screen Time & Limits"
+msgstr "זמן מסך ומגבלות"
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "לא ניתן להריץ יישום זה"
+#: src/plug/Plug.vala:34
+msgid "Configure time limits and restrict application usage"
+msgstr "הגדרת מגבלות זמן והגבלת שימוש ביישומים"
 
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
-msgstr "אין הרשאה להריץ יישום זה."
+#: src/plug/Plug.vala:61
+msgid "Limit computer use"
+msgstr "הגבלת השימוש במחשב"
+
+#: src/plug/Plug.vala:62
+msgid "Prevent website access"
+msgstr "מניעת כניסה לאתרים"
+
+#: src/plug/Plug.vala:63
+msgid "Prevent application access"
+msgstr "מניעת גישה ליישומים"
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "ניהול הגדרות בקרת הורים"

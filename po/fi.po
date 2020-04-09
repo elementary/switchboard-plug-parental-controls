@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 19:38+0000\n"
 "PO-Revision-Date: 2019-09-02 20:22+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -40,107 +40,108 @@ msgstr "Näyttää näyttöajan ja rajoituksien tiedot"
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/MainView.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You cannot run this application"
+msgstr "Et voi suorittaa tätä sovellusta"
 
-#: src/plug/Plug.vala:33
-msgid "Screen Time & Limits"
-msgstr "Näyttöaika ja rajoitukset"
+#: src/client/AppUnavailableDialog.vala:29
+msgid "You are not permitted to run this application."
+msgstr "Sinulla ei ole oikeutta suorittaa tätä sovellusta."
 
-#: src/plug/Plug.vala:34
-msgid "Configure time limits and restrict application usage"
-msgstr "Määritä aikarajat ja rajoita sovellusten käyttöä"
+#: src/client/Client.vala:162
+#, c-format
+msgid "This computer will lock after %s."
+msgstr "Tämä tietokone lukkiutuu viiveellä %s."
 
-#: src/plug/Plug.vala:60
-msgid "Limit computer use"
-msgstr "Rajoita tietokoneen käyttöä"
+#: src/client/Client.vala:164
+#, c-format
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] "%lu tunti"
+msgstr[1] "%lu tuntia"
 
-#: src/plug/Plug.vala:61
-msgid "Prevent website access"
-msgstr "Estä verkkosivuille pääsy"
+#: src/client/Client.vala:166
+#, c-format
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] "%lu minuutti"
+msgstr[1] "%lu minuuttia"
 
-#: src/plug/Plug.vala:62
-msgid "Prevent application access"
-msgstr "Estä sovellusten käyttö"
+#: src/client/Client.vala:168
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr ""
+"Varmista, että suljet kaikki sovellukset, ennen kuin tietokone lukitaan."
 
-#: src/plug/Views/AppsView.vala:47
+#: src/client/Client.vala:174
+msgid "Time left"
+msgstr "Aikaa jäljellä"
+
+#: src/plug/Views/AppsView.vala:48
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "Estä käyttäjää %s käyttämästä seuraavia sovelluksia:"
 
-#: src/plug/Views/AppsView.vala:56
+#: src/plug/Views/AppsView.vala:58
 msgid "Add Prevented Apps…"
 msgstr "Lisää estetyt sovellukset…"
 
-#: src/plug/Views/AppsView.vala:60
+#: src/plug/Views/AppsView.vala:62
 msgid "Remove Selected App"
 msgstr "Poista valittu sovellus"
 
-#: src/plug/Views/AppsView.vala:65
+#: src/plug/Views/AppsView.vala:67
 msgid "Clear All"
 msgstr "Tyhjennä kaikki"
 
-#: src/plug/Views/AppsView.vala:88
+#: src/plug/Views/AppsView.vala:90
 msgid "Allow access to these apps with admin permission:"
 msgstr "Salli seuraavien sovellusten käyttö ylläpito-oikeuksin:"
+
+#: src/plug/Views/InternetView.vala:72
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Estä käyttäjää %s käymästä seuraavilla sivustoilla:"
+
+#: src/plug/Views/InternetView.vala:87
+msgid "Add URL"
+msgstr "Lisää verkko-osoite"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Add a new URL, for example: google.com"
+msgstr "Lisää uusi osoite, esim. google.com"
+
+#: src/plug/Views/InternetView.vala:97
+msgid "Invalid URL"
+msgstr "Virheellinen osoite"
 
 #: src/plug/Views/TimeLimitView.vala:57
 msgid "Limit computer use:"
 msgstr "Rajoita tietokoneen käyttöä:"
 
-#: src/plug/Views/TimeLimitView.vala:65
+#: src/plug/Views/TimeLimitView.vala:67
 msgid "On weekdays and weekends"
 msgstr "Arkipäivinä ja viikonloppuisin"
 
-#: src/plug/Views/TimeLimitView.vala:66
+#: src/plug/Views/TimeLimitView.vala:69
 msgid "Only on weekdays"
 msgstr "Vain arkipäivinä"
 
-#: src/plug/Views/TimeLimitView.vala:67
+#: src/plug/Views/TimeLimitView.vala:70
 msgid "Only on weekends"
 msgstr "Vain viikonloppuisin"
 
-#: src/plug/Views/TimeLimitView.vala:77
+#: src/plug/Views/TimeLimitView.vala:80
 msgid "Weekdays"
 msgstr "Arkipäivinä"
 
-#: src/plug/Views/TimeLimitView.vala:81
+#: src/plug/Views/TimeLimitView.vala:84
 msgid "Weekends"
 msgstr "Viikonloppuisin"
 
-#: src/plug/Views/InternetView.vala:71
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Estä käyttäjää %s käymästä seuraavilla sivustoilla:"
-
-#: src/plug/Views/InternetView.vala:84
-msgid "Add URL"
-msgstr "Lisää verkko-osoite"
-
-#: src/plug/Views/InternetView.vala:93
-msgid "Add a new URL, for example: google.com"
-msgstr "Lisää uusi osoite, esim. google.com"
-
-#: src/plug/Views/InternetView.vala:94
-msgid "Invalid URL"
-msgstr "Virheellinen osoite"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Alkaa:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Päättyy:"
-
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "Oma tili"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "Muut tilit"
+#: src/plug/Widgets/AppChooser.vala:40
+msgid "Search Applications"
+msgstr "Etsi sovelluksia"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
@@ -154,46 +155,45 @@ msgstr "Internet"
 msgid "Applications"
 msgstr "Sovellukset"
 
-#: src/plug/Widgets/AppChooser.vala:40
-msgid "Search Applications"
-msgstr "Etsi sovelluksia"
+#: src/plug/Widgets/UserList.vala:104
+msgid "My Account"
+msgstr "Oma tili"
 
-#: src/client/Client.vala:89
-#, c-format
-msgid "This computer will lock after %s."
-msgstr "Tämä tietokone lukkiutuu viiveellä %s."
+#: src/plug/Widgets/UserList.vala:107
+msgid "Other Accounts"
+msgstr "Muut tilit"
 
-#: src/client/Client.vala:91
-#, c-format
-msgid "%lu hour"
-msgid_plural "%lu hours"
-msgstr[0] "%lu tunti"
-msgstr[1] "%lu tuntia"
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "Alkaa:"
 
-#: src/client/Client.vala:93
-#, c-format
-msgid "%lu minute"
-msgid_plural "%lu minutes"
-msgstr[0] "%lu minuutti"
-msgstr[1] "%lu minuuttia"
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Päättyy:"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr ""
-"Varmista, että suljet kaikki sovellukset, ennen kuin tietokone lukitaan."
+#: src/plug/MainView.vala:59
+msgid "Some settings require administrator rights to be changed"
+msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"
 
-#: src/client/Client.vala:101
-msgid "Time left"
-msgstr "Aikaa jäljellä"
+#: src/plug/Plug.vala:33
+msgid "Screen Time & Limits"
+msgstr "Näyttöaika ja rajoitukset"
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "Et voi suorittaa tätä sovellusta"
+#: src/plug/Plug.vala:34
+msgid "Configure time limits and restrict application usage"
+msgstr "Määritä aikarajat ja rajoita sovellusten käyttöä"
 
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
-msgstr "Sinulla ei ole oikeutta suorittaa tätä sovellusta."
+#: src/plug/Plug.vala:61
+msgid "Limit computer use"
+msgstr "Rajoita tietokoneen käyttöä"
+
+#: src/plug/Plug.vala:62
+msgid "Prevent website access"
+msgstr "Estä verkkosivuille pääsy"
+
+#: src/plug/Plug.vala:63
+msgid "Prevent application access"
+msgstr "Estä sovellusten käyttö"
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "Hallitse käytönvalvonnan asetuksia"

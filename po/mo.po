@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 19:38+0000\n"
 "PO-Revision-Date: 2018-05-28 00:00+0000\n"
 "Last-Translator: Romanic Ion Nicușor <contact.romanic@gmail.com>\n"
 "Language-Team: Moldovan <https://weblate.elementary.io/projects/switchboard/"
@@ -35,109 +35,109 @@ msgstr ""
 msgid "preferences-system-parental-controls"
 msgstr "Preferințe-sistem-control-parental"
 
-#: src/plug/MainView.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "Unele setări necesită modificarea drepturilor de administrator"
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You cannot run this application"
+msgstr "Nu puteți rula această aplicație"
 
-#: src/plug/Plug.vala:33
-#, fuzzy
-msgid "Screen Time & Limits"
+#: src/client/AppUnavailableDialog.vala:29
+msgid "You are not permitted to run this application."
+msgstr "Nu aveți permisiunea de a rula această aplicație."
+
+#: src/client/Client.vala:162
+#, fuzzy, c-format
+msgid "This computer will lock after %s."
+msgstr "Acest computer se va bloca după %s 1 %s 2. %s 3"
+
+#: src/client/Client.vala:164
+#, c-format
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] "%l 1 o oră"
+msgstr[1] "%l 2 ore"
+
+#: src/client/Client.vala:166
+#, c-format
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] "%l 1 un minut"
+msgstr[1] "%l 2 minute"
+
+#: src/client/Client.vala:168
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr ""
+"Asigurați-vă că ați închis toate aplicațiile înainte ca calculatorul dvs. să "
+"fie blocat."
+
+#: src/client/Client.vala:174
+msgid "Time left"
 msgstr "Timp rămas"
 
-#: src/plug/Plug.vala:34
-msgid "Configure time limits and restrict application usage"
-msgstr "Configurați termenele și restricționați utilizarea aplicațiilor"
-
-#: src/plug/Plug.vala:60
-#, fuzzy
-msgid "Limit computer use"
-msgstr "Limitați utilizarea calculatorului:"
-
-#: src/plug/Plug.vala:61
-msgid "Prevent website access"
-msgstr ""
-
-#: src/plug/Plug.vala:62
-msgid "Prevent application access"
-msgstr ""
-
-#: src/plug/Views/AppsView.vala:47
+#: src/plug/Views/AppsView.vala:48
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "Preveniți %s 1 să utilizați aceste aplicații:"
 
-#: src/plug/Views/AppsView.vala:56
+#: src/plug/Views/AppsView.vala:58
 msgid "Add Prevented Apps…"
 msgstr "Adăugați aplicații prevenite …"
 
-#: src/plug/Views/AppsView.vala:60
+#: src/plug/Views/AppsView.vala:62
 msgid "Remove Selected App"
 msgstr "Eliminați aplicația selectată"
 
-#: src/plug/Views/AppsView.vala:65
+#: src/plug/Views/AppsView.vala:67
 msgid "Clear All"
 msgstr "Curăță tot"
 
-#: src/plug/Views/AppsView.vala:88
+#: src/plug/Views/AppsView.vala:90
 msgid "Allow access to these apps with admin permission:"
 msgstr "Permiteți accesul la aceste aplicații cu permisiunea de administrator:"
+
+#: src/plug/Views/InternetView.vala:72
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Împiedicați %s 1 să viziteze aceste site-uri web:"
+
+#: src/plug/Views/InternetView.vala:87
+msgid "Add URL"
+msgstr "Adaugă URL"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Add a new URL, for example: google.com"
+msgstr "Adaugă nou URL, de exemplu: Google.com"
+
+#: src/plug/Views/InternetView.vala:97
+msgid "Invalid URL"
+msgstr "URL invalid"
 
 #: src/plug/Views/TimeLimitView.vala:57
 msgid "Limit computer use:"
 msgstr "Limitați utilizarea calculatorului:"
 
-#: src/plug/Views/TimeLimitView.vala:65
+#: src/plug/Views/TimeLimitView.vala:67
 msgid "On weekdays and weekends"
 msgstr "În zilele lucrătoare și în weekend"
 
-#: src/plug/Views/TimeLimitView.vala:66
+#: src/plug/Views/TimeLimitView.vala:69
 msgid "Only on weekdays"
 msgstr "Numai în timpul săptămânii"
 
-#: src/plug/Views/TimeLimitView.vala:67
+#: src/plug/Views/TimeLimitView.vala:70
 msgid "Only on weekends"
 msgstr "Numai la sfârșit de săptămână"
 
-#: src/plug/Views/TimeLimitView.vala:77
+#: src/plug/Views/TimeLimitView.vala:80
 msgid "Weekdays"
 msgstr "Zilele saptămânii"
 
-#: src/plug/Views/TimeLimitView.vala:81
+#: src/plug/Views/TimeLimitView.vala:84
 msgid "Weekends"
 msgstr "Weekend-uri"
 
-#: src/plug/Views/InternetView.vala:71
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Împiedicați %s 1 să viziteze aceste site-uri web:"
-
-#: src/plug/Views/InternetView.vala:84
-msgid "Add URL"
-msgstr "Adaugă URL"
-
-#: src/plug/Views/InternetView.vala:93
-msgid "Add a new URL, for example: google.com"
-msgstr "Adaugă nou URL, de exemplu: Google.com"
-
-#: src/plug/Views/InternetView.vala:94
-msgid "Invalid URL"
-msgstr "URL invalid"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "De la:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Pentru:"
-
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "Contul meu"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "Alte conturi"
+#: src/plug/Widgets/AppChooser.vala:40
+msgid "Search Applications"
+msgstr "Căutați aplicații"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
@@ -151,47 +151,47 @@ msgstr "Internet"
 msgid "Applications"
 msgstr "Aplicații"
 
-#: src/plug/Widgets/AppChooser.vala:40
-msgid "Search Applications"
-msgstr "Căutați aplicații"
+#: src/plug/Widgets/UserList.vala:104
+msgid "My Account"
+msgstr "Contul meu"
 
-#: src/client/Client.vala:89
-#, fuzzy, c-format
-msgid "This computer will lock after %s."
-msgstr "Acest computer se va bloca după %s 1 %s 2. %s 3"
+#: src/plug/Widgets/UserList.vala:107
+msgid "Other Accounts"
+msgstr "Alte conturi"
 
-#: src/client/Client.vala:91
-#, c-format
-msgid "%lu hour"
-msgid_plural "%lu hours"
-msgstr[0] "%l 1 o oră"
-msgstr[1] "%l 2 ore"
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "De la:"
 
-#: src/client/Client.vala:93
-#, c-format
-msgid "%lu minute"
-msgid_plural "%lu minutes"
-msgstr[0] "%l 1 un minut"
-msgstr[1] "%l 2 minute"
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Pentru:"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr ""
-"Asigurați-vă că ați închis toate aplicațiile înainte ca calculatorul dvs. să "
-"fie blocat."
+#: src/plug/MainView.vala:59
+msgid "Some settings require administrator rights to be changed"
+msgstr "Unele setări necesită modificarea drepturilor de administrator"
 
-#: src/client/Client.vala:101
-msgid "Time left"
+#: src/plug/Plug.vala:33
+#, fuzzy
+msgid "Screen Time & Limits"
 msgstr "Timp rămas"
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "Nu puteți rula această aplicație"
+#: src/plug/Plug.vala:34
+msgid "Configure time limits and restrict application usage"
+msgstr "Configurați termenele și restricționați utilizarea aplicațiilor"
 
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
-msgstr "Nu aveți permisiunea de a rula această aplicație."
+#: src/plug/Plug.vala:61
+#, fuzzy
+msgid "Limit computer use"
+msgstr "Limitați utilizarea calculatorului:"
+
+#: src/plug/Plug.vala:62
+msgid "Prevent website access"
+msgstr ""
+
+#: src/plug/Plug.vala:63
+msgid "Prevent application access"
+msgstr ""
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "Gestionați setările de control parental"
