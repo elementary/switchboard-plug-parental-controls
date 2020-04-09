@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 19:38+0000\n"
 "PO-Revision-Date: 2019-04-22 18:59+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -41,108 +41,110 @@ msgstr ""
 msgid "preferences-system-parental-controls"
 msgstr "preferences-system-parental-controls"
 
-#: src/plug/MainView.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "Některá nastavení vyžadují administrátorská oprávnění"
+#: src/client/AppUnavailableDialog.vala:28
+msgid "You cannot run this application"
+msgstr "Nemůžete spouštět tuto aplikaci"
 
-#: src/plug/Plug.vala:33
-#, fuzzy
-msgid "Screen Time & Limits"
-msgstr "Časová omezení"
+#: src/client/AppUnavailableDialog.vala:29
+msgid "You are not permitted to run this application."
+msgstr "Nemáte svolení spouštět tuto aplikaci."
 
-#: src/plug/Plug.vala:34
-msgid "Configure time limits and restrict application usage"
-msgstr "Nastavit časové limity a omezení používání aplikace"
+#: src/client/Client.vala:162
+#, c-format
+msgid "This computer will lock after %s."
+msgstr "Tento počítač se zamkne za %s."
 
-#: src/plug/Plug.vala:60
-msgid "Limit computer use"
-msgstr "Omezit používání počítače"
+#: src/client/Client.vala:164
+#, c-format
+msgid "%lu hour"
+msgid_plural "%lu hours"
+msgstr[0] "%lu hodina"
+msgstr[1] "%lu hodiny"
+msgstr[2] "%lu hodin"
 
-#: src/plug/Plug.vala:61
-msgid "Prevent website access"
-msgstr "Zabránit přístupu k webovým stránkám"
+#: src/client/Client.vala:166
+#, c-format
+msgid "%lu minute"
+msgid_plural "%lu minutes"
+msgstr[0] "%lu minuta"
+msgstr[1] "%lu minuty"
+msgstr[2] "%lu minut"
 
-#: src/plug/Plug.vala:62
-msgid "Prevent application access"
-msgstr "Zabránit přístupu k aplikaci"
+#: src/client/Client.vala:168
+msgid ""
+"Make sure to close all applications before your computer will be locked."
+msgstr ""
+"Ujistěte se, že jste zavřeli všechny aplikace, než bude váš počítač uzamčen."
 
-#: src/plug/Views/AppsView.vala:47
+#: src/client/Client.vala:174
+msgid "Time left"
+msgstr "Zbývající čas"
+
+#: src/plug/Views/AppsView.vala:48
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "Zabránit %s v používání těchto aplikací:"
 
-#: src/plug/Views/AppsView.vala:56
+#: src/plug/Views/AppsView.vala:58
 msgid "Add Prevented Apps…"
 msgstr "Přidat zakázané aplikace…"
 
-#: src/plug/Views/AppsView.vala:60
+#: src/plug/Views/AppsView.vala:62
 msgid "Remove Selected App"
 msgstr "Odebrat vybranou aplikaci"
 
-#: src/plug/Views/AppsView.vala:65
+#: src/plug/Views/AppsView.vala:67
 msgid "Clear All"
 msgstr "Smazat vše"
 
-#: src/plug/Views/AppsView.vala:88
+#: src/plug/Views/AppsView.vala:90
 msgid "Allow access to these apps with admin permission:"
 msgstr "Povolit přístup k těmto aplikacím se svolením admina:"
+
+#: src/plug/Views/InternetView.vala:72
+#, c-format
+msgid "Prevent %s from visiting these websites:"
+msgstr "Zabránit %s v návštěvě těchto stránek:"
+
+#: src/plug/Views/InternetView.vala:87
+msgid "Add URL"
+msgstr "Přidat URL"
+
+#: src/plug/Views/InternetView.vala:96
+msgid "Add a new URL, for example: google.com"
+msgstr "Přidat novou URL, například: google.com"
+
+#: src/plug/Views/InternetView.vala:97
+msgid "Invalid URL"
+msgstr "Neplatná URL"
 
 #: src/plug/Views/TimeLimitView.vala:57
 msgid "Limit computer use:"
 msgstr "Omezit používání počítače:"
 
-#: src/plug/Views/TimeLimitView.vala:65
+#: src/plug/Views/TimeLimitView.vala:67
 msgid "On weekdays and weekends"
 msgstr "Ve všední dny a o víkendech"
 
-#: src/plug/Views/TimeLimitView.vala:66
+#: src/plug/Views/TimeLimitView.vala:69
 msgid "Only on weekdays"
 msgstr "Pouze ve všední dny"
 
-#: src/plug/Views/TimeLimitView.vala:67
+#: src/plug/Views/TimeLimitView.vala:70
 msgid "Only on weekends"
 msgstr "Pouze o víkendech"
 
-#: src/plug/Views/TimeLimitView.vala:77
+#: src/plug/Views/TimeLimitView.vala:80
 msgid "Weekdays"
 msgstr "Všední dny"
 
-#: src/plug/Views/TimeLimitView.vala:81
+#: src/plug/Views/TimeLimitView.vala:84
 msgid "Weekends"
 msgstr "Víkendy"
 
-#: src/plug/Views/InternetView.vala:71
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Zabránit %s v návštěvě těchto stránek:"
-
-#: src/plug/Views/InternetView.vala:84
-msgid "Add URL"
-msgstr "Přidat URL"
-
-#: src/plug/Views/InternetView.vala:93
-msgid "Add a new URL, for example: google.com"
-msgstr "Přidat novou URL, například: google.com"
-
-#: src/plug/Views/InternetView.vala:94
-msgid "Invalid URL"
-msgstr "Neplatná URL"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Od:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Do:"
-
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "Můj účet"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "Ostatní účty"
+#: src/plug/Widgets/AppChooser.vala:40
+msgid "Search Applications"
+msgstr "Hledat aplikace"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
@@ -156,48 +158,46 @@ msgstr "Internet"
 msgid "Applications"
 msgstr "Aplikace"
 
-#: src/plug/Widgets/AppChooser.vala:40
-msgid "Search Applications"
-msgstr "Hledat aplikace"
+#: src/plug/Widgets/UserList.vala:104
+msgid "My Account"
+msgstr "Můj účet"
 
-#: src/client/Client.vala:89
-#, c-format
-msgid "This computer will lock after %s."
-msgstr "Tento počítač se zamkne za %s."
+#: src/plug/Widgets/UserList.vala:107
+msgid "Other Accounts"
+msgstr "Ostatní účty"
 
-#: src/client/Client.vala:91
-#, c-format
-msgid "%lu hour"
-msgid_plural "%lu hours"
-msgstr[0] "%lu hodina"
-msgstr[1] "%lu hodiny"
-msgstr[2] "%lu hodin"
+#: src/plug/Widgets/WeekSpinBox.vala:45
+msgid "From:"
+msgstr "Od:"
 
-#: src/client/Client.vala:93
-#, c-format
-msgid "%lu minute"
-msgid_plural "%lu minutes"
-msgstr[0] "%lu minuta"
-msgstr[1] "%lu minuty"
-msgstr[2] "%lu minut"
+#: src/plug/Widgets/WeekSpinBox.vala:47
+msgid "To:"
+msgstr "Do:"
 
-#: src/client/Client.vala:95
-msgid ""
-"Make sure to close all applications before your computer will be locked."
-msgstr ""
-"Ujistěte se, že jste zavřeli všechny aplikace, než bude váš počítač uzamčen."
+#: src/plug/MainView.vala:59
+msgid "Some settings require administrator rights to be changed"
+msgstr "Některá nastavení vyžadují administrátorská oprávnění"
 
-#: src/client/Client.vala:101
-msgid "Time left"
-msgstr "Zbývající čas"
+#: src/plug/Plug.vala:33
+#, fuzzy
+msgid "Screen Time & Limits"
+msgstr "Časová omezení"
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "Nemůžete spouštět tuto aplikaci"
+#: src/plug/Plug.vala:34
+msgid "Configure time limits and restrict application usage"
+msgstr "Nastavit časové limity a omezení používání aplikace"
 
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
-msgstr "Nemáte svolení spouštět tuto aplikaci."
+#: src/plug/Plug.vala:61
+msgid "Limit computer use"
+msgstr "Omezit používání počítače"
+
+#: src/plug/Plug.vala:62
+msgid "Prevent website access"
+msgstr "Zabránit přístupu k webovým stránkám"
+
+#: src/plug/Plug.vala:63
+msgid "Prevent application access"
+msgstr "Zabránit přístupu k aplikaci"
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "Upravit nastavení rodičovské kontroly"
