@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-09 21:10+0000\n"
-"PO-Revision-Date: 2019-11-08 19:24+0000\n"
+"PO-Revision-Date: 2020-04-11 10:10+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
@@ -54,16 +54,12 @@ msgid "Updated translations"
 msgstr "Traduções atualizadas"
 
 #: data/screentime-limits.policy.in.in:10
-#, fuzzy
-#| msgid "Rename to Screen Time &amp; Limits"
 msgid "Manage Screen Time and Limits"
-msgstr "Renomear para tempo de ecrã &amp; limites"
+msgstr "Gerir o tempo e os limites do ecrã"
 
 #: data/screentime-limits.policy.in.in:11
-#, fuzzy
-#| msgid "Rename to Screen Time &amp; Limits"
 msgid "Authentication is required to change Screen Time and Limits"
-msgstr "Renomear para tempo de ecrã &amp; limites"
+msgstr "É necessária a autenticação para alterar o tempo e os limites do ecrã"
 
 #~ msgid "Parental Controls Settings"
 #~ msgstr "Definições de controlo parental"
