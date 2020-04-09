@@ -68,7 +68,8 @@ namespace PC.Client {
             var api = Utils.get_api ();
 
             if (app_name != null) {
-                on_show_app_unavailable (app_name);
+                var app_lock_dialog = new AppUnavailableDialog ();
+                app_lock_dialog.show_all ();
             }
 
             if (auth != null) {
@@ -93,11 +94,6 @@ namespace PC.Client {
             api.show_timeout.connect (on_show_timeout);
 
             Gtk.main ();
-        }
-
-        private void on_show_app_unavailable (string path) {
-            var app_lock_dialog = new AppUnavailableDialog ();
-            app_lock_dialog.show_all ();
         }
 
         private void on_authorize (string username, string action_id, string[] _args) {
