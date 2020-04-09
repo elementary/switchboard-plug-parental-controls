@@ -37,4 +37,5 @@ namespace PC.Constants {
     public const string PAM_CONF_START = "## PANTHEON_PARENTAL_CONTROLS_START";
     public const string PAM_CONF_END = "## PANTHEON_PARENTAL_CONTROLS_END";
     public const string PAM_TIME_CONF_PATH = "/etc/security/time.conf";
+    public const string CLIENT_PATH = "@CLIENT_PATH@";
 }

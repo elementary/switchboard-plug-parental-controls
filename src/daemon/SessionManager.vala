@@ -83,9 +83,11 @@
             try {
                 var structs = manager.list_sessions ();
                 foreach (SessionStruct session_s in structs) {
-                    ISession? session = Bus.get_proxy_sync (BusType.SYSTEM, Constants.LOGIN_IFACE,
-                                                            session_s.object_path);
-
+                    ISession? session = Bus.get_proxy_sync (
+                        BusType.SYSTEM,
+                        Constants.LOGIN_IFACE,
+                        session_s.object_path
+                    );
                     if (session != null && session.active) {
                         return session;
                     }
@@ -99,7 +101,7 @@
 
         private void update_session () {
             var session = get_current_session ();
-            if (session != null || current_handler == null || session.id == current_handler.get_id ()) {
+            if (session == null || (current_handler != null && session.id == current_handler.get_id ())) {
                 return;
             }
 
@@ -110,12 +112,8 @@
                 return;
             }
 
-            try {
-                current_handler = new SessionHandler (session);
-                current_handler.start ();
-            } catch (Error e) {
-                current_handler = null;
-            }
+            current_handler = new SessionHandler (session);
+            current_handler.update ();
         }
 
         private void stop_current_handler () {

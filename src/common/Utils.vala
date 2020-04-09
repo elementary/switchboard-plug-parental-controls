@@ -31,7 +31,7 @@ namespace PC {
     public interface IParentalControls : Object {
         public abstract async void add_restriction_for_user (string input, bool clean) throws GLib.Error;
         public abstract async void remove_restriction_for_user (string username) throws GLib.Error;
-        public abstract async void end_app_authorization () throws GLib.Error;
+        public abstract async void finish_app_authorization (string username, string[] args) throws GLib.Error;
         public abstract async bool get_user_daemon_active (string username) throws GLib.Error;
         public abstract async bool get_user_daemon_admin (string username) throws GLib.Error;
         public abstract async string[] get_user_daemon_block_urls (string username) throws GLib.Error;
@@ -42,9 +42,7 @@ namespace PC {
         public abstract async void set_user_daemon_block_urls (string username, string[] block_urls) throws GLib.Error;
         public abstract async void set_user_daemon_targets (string username, string[] targets) throws GLib.Error;
 
-        public signal void app_authorize (string username, string path, string action_id);
-        public signal void launch (string[] args);
-        public signal void show_app_unavailable (string path);
+        public signal void launch (string[] args, bool incoming);
         public signal void show_timeout (int hours, int minutes);
         public signal void user_config_changed (string username);
     }
@@ -53,7 +51,7 @@ namespace PC {
         public class DummyParentalControls : Object, IParentalControls {
             public async void add_restriction_for_user (string input, bool clean) throws GLib.Error {}
             public async void remove_restriction_for_user (string username) throws GLib.Error {}
-            public async void end_app_authorization () throws GLib.Error {}
+            public async void finish_app_authorization (string username, string[] args) throws GLib.Error {}
             public async bool get_user_daemon_active (string username) throws GLib.Error { return false; }
             public async bool get_user_daemon_admin (string username) throws GLib.Error { return false; }
             public async string[] get_user_daemon_block_urls (string username) throws GLib.Error { return {}; }
@@ -75,8 +73,11 @@ namespace PC {
             }
 
             try {
-                api = Bus.get_proxy_sync (BusType.SYSTEM, Constants.PARENTAL_CONTROLS_IFACE,
-                                          Constants.PARENTAL_CONTROLS_OBJECT_PATH);
+                api = Bus.get_proxy_sync (
+                    BusType.SYSTEM,
+                    Constants.PARENTAL_CONTROLS_IFACE,
+                    Constants.PARENTAL_CONTROLS_OBJECT_PATH
+                );
             } catch (Error e) {
                 critical ("%s, using dummy parental controls backend", e.message);
                 api = new DummyParentalControls ();
@@ -119,6 +120,44 @@ namespace PC {
 
         public static unowned Act.User? get_current_user () {
             return get_usermanager ().get_user (Environment.get_user_name ());
+        }
+
+        /**
+         * Explicitly converts the executable in the Exec field to the absolute executable path
+         * while taking into account the pantheon-parental-controls-client arguments.
+         */
+        public static string info_to_exec_path (AppInfo info, out string[] args) {
+            args = info.get_commandline ().split (" ");
+            string exec = info.get_executable ();
+            if (args.length > 2 && args[0] == Constants.CLIENT_PATH) {
+                if (args[1] == "-d") {
+                    exec = args[2];
+                } else if (args[1] == "-a") {
+                    string[] tokens = args[2].replace ("\"", "").split (":");
+                    if (tokens.length < 3) {
+                        return exec;
+                    }
+
+                    string target = tokens[2];
+                    try {
+                        Shell.parse_argv (target, out args);
+                    } catch (ShellError e) {
+                        args = exec.split (" ");
+                    }
+
+                    exec = args[0];
+                }
+            }
+
+            return exec_to_path (exec);
+        }
+
+        private static string exec_to_path (string exec) {
+            if (!exec.has_prefix (GLib.Path.DIR_SEPARATOR_S)) {
+                return Environment.find_program_in_path (exec) ?? exec;
+            }
+
+            return exec;
         }
 
         public static string remove_comments (string str) {
