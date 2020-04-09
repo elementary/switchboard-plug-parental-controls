@@ -17,18 +17,18 @@ configure_file(
     install_dir: systemdunitdir
 )
 
-policy = configure_file(
+gettext_declaration = configure_file(
     configuration: configuration_data,
     input: 'screentime-limits.policy.in.in',
     output: '@BASENAME@'
 )
 
 i18n.merge_file(
-    input: policy,
+    input: gettext_declaration,
     output: 'io.elementary.switchboard.screentime-limits.policy',
     po_dir: join_paths(meson.source_root(), 'po', 'extra'),
     install: true,
-    install_dir: polkit_dep.get_pkgconfig_variable('policydir', define_variable: ['prefix', prefix])
+    install_dir: polkit_actiondir
 )
 
 configure_file(
