@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 20:52+0000\n"
+"POT-Creation-Date: 2020-04-09 21:36+0000\n"
 "PO-Revision-Date: 2019-01-02 21:46+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
@@ -19,18 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
-
-#: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Screen Time & Limits Client"
-msgstr ""
-
-#: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show Screen Time & Limits information and restrictions"
-msgstr ""
-
-#: data/pantheon-parental-controls-client.desktop.in:6
-msgid "preferences-system-parental-controls"
-msgstr "preferences-system-parental-controls"
 
 #: src/client/AppUnavailableDialog.vala:27
 #, fuzzy
@@ -193,6 +181,9 @@ msgstr "Website-Zugriff verhindern"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Zugriff auf Anwendungen verhindern"
+
+#~ msgid "preferences-system-parental-controls"
+#~ msgstr "preferences-system-parental-controls"
 
 #, fuzzy
 #~ msgid "Authentication is required to change Screen Time &amp; Limits"

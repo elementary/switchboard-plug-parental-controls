@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 20:52+0000\n"
+"POT-Creation-Date: 2020-04-09 21:36+0000\n"
 "PO-Revision-Date: 2019-11-08 19:24+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -14,18 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
-
-#: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Screen Time & Limits Client"
-msgstr "Kliento pri ekranaj uzado &amp; limoj"
-
-#: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show Screen Time & Limits information and restrictions"
-msgstr "Montri informojn kaj limigojn pri ekranaj uzado &amp; limoj"
-
-#: data/pantheon-parental-controls-client.desktop.in:6
-msgid "preferences-system-parental-controls"
-msgstr "preferences-system-parental-controls"
 
 #: src/client/AppUnavailableDialog.vala:27
 #, fuzzy
@@ -182,6 +170,15 @@ msgstr "Antaŭmalhelpi retejan alireblecon"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Antaŭmalhelpi aplikaĵan alireblecon"
+
+#~ msgid "Screen Time & Limits Client"
+#~ msgstr "Kliento pri ekranaj uzado &amp; limoj"
+
+#~ msgid "Show Screen Time & Limits information and restrictions"
+#~ msgstr "Montri informojn kaj limigojn pri ekranaj uzado &amp; limoj"
+
+#~ msgid "preferences-system-parental-controls"
+#~ msgstr "preferences-system-parental-controls"
 
 #~ msgid "Manage Screen Time &amp; Limits"
 #~ msgstr "Mastrumi ekranajn uzadon &amp; limojn"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 20:52+0000\n"
+"POT-Creation-Date: 2020-04-09 21:36+0000\n"
 "PO-Revision-Date: 2019-07-21 03:24+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -19,19 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-28 05:31+0000\n"
-
-#: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Screen Time & Limits Client"
-msgstr "Client de temps d'écran et de limites"
-
-#: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show Screen Time & Limits information and restrictions"
-msgstr ""
-"Voir les temps d'écran, les informations sur les limites et les restrictions"
-
-#: data/pantheon-parental-controls-client.desktop.in:6
-msgid "preferences-system-parental-controls"
-msgstr "preferences-system-parental-controls"
 
 #: src/client/AppUnavailableDialog.vala:27
 #, fuzzy
@@ -194,6 +181,17 @@ msgstr "Empêcher l'accès au site web"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Empêcher l'accès à l'application"
+
+#~ msgid "Screen Time & Limits Client"
+#~ msgstr "Client de temps d'écran et de limites"
+
+#~ msgid "Show Screen Time & Limits information and restrictions"
+#~ msgstr ""
+#~ "Voir les temps d'écran, les informations sur les limites et les "
+#~ "restrictions"
+
+#~ msgid "preferences-system-parental-controls"
+#~ msgstr "preferences-system-parental-controls"
 
 #~ msgid "Manage Screen Time &amp; Limits"
 #~ msgstr "Gérer le temps d'écran et limites"
