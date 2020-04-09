@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: parental-controls-plug\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:10+0000\n"
+"POT-Creation-Date: 2020-04-09 21:36+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,18 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-
-#: data/pantheon-parental-controls-client.desktop.in:3
-msgid "Screen Time & Limits Client"
-msgstr ""
-
-#: data/pantheon-parental-controls-client.desktop.in:5
-msgid "Show Screen Time & Limits information and restrictions"
-msgstr ""
-
-#: data/pantheon-parental-controls-client.desktop.in:6
-msgid "preferences-system-parental-controls"
-msgstr ""
 
 #: src/client/AppUnavailableDialog.vala:27
 msgid "You are not permitted to run this application"
