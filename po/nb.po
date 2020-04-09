@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 19:38+0000\n"
+"POT-Creation-Date: 2020-04-09 20:13+0000\n"
 "PO-Revision-Date: 2019-06-27 14:12+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -42,39 +42,41 @@ msgstr ""
 msgid "preferences-system-parental-controls"
 msgstr "Innstillinger-system-foreldrebaserte-kontroller"
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "Du kan ikke kjøre dette programmet"
-
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
+#: src/client/AppUnavailableDialog.vala:27
+#, fuzzy
+#| msgid "You are not permitted to run this application."
+msgid "You are not permitted to run this application"
 msgstr "Du har ikke rettigheter til å kjøre dette programmet."
 
-#: src/client/Client.vala:162
+#: src/client/AppUnavailableDialog.vala:28
+msgid "An administrator has restricted your access to this application."
+msgstr ""
+
+#: src/client/Client.vala:158
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Denne maskinen vil låses etter %s."
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:160
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu time"
 msgstr[1] "%lu timer"
 
-#: src/client/Client.vala:166
+#: src/client/Client.vala:162
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu minutt"
 msgstr[1] "%lu minutter"
 
-#: src/client/Client.vala:168
+#: src/client/Client.vala:164
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "Sørg for å lukke alle programmer før datamaskinen låses."
 
-#: src/client/Client.vala:174
+#: src/client/Client.vala:170
 msgid "Time left"
 msgstr "Gjenværende tid"
 
@@ -196,6 +198,9 @@ msgstr "Forhindre nettsidetilgang"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Forhindre programtilgang"
+
+#~ msgid "You cannot run this application"
+#~ msgstr "Du kan ikke kjøre dette programmet"
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "Behandle innstillinger for foreldrekontroll"

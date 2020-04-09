@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 19:38+0000\n"
+"POT-Creation-Date: 2020-04-09 20:13+0000\n"
 "PO-Revision-Date: 2017-01-03 04:07+0000\n"
 "Last-Translator: Cody Garver <cody@elementaryos.org>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -42,39 +42,41 @@ msgstr ""
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "سىز بۇ ئەپنى ئىجرا قىلالمايسىز"
-
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
+#: src/client/AppUnavailableDialog.vala:27
+#, fuzzy
+#| msgid "You are not permitted to run this application."
+msgid "You are not permitted to run this application"
 msgstr "سىزنىڭ بۇ ئەپنى ئىجرا قىلىش ھوقۇقىڭىز يوق."
 
-#: src/client/Client.vala:162
+#: src/client/AppUnavailableDialog.vala:28
+msgid "An administrator has restricted your access to this application."
+msgstr ""
+
+#: src/client/Client.vala:158
 #, fuzzy, c-format
 msgid "This computer will lock after %s."
 msgstr "%s %s. %s دىن كىيىن بۇ كومپىيۇتىر قۇلۇپلىنىدۇ"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:160
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:166
+#: src/client/Client.vala:162
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:168
+#: src/client/Client.vala:164
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "كومپىيۇتىرىڭىزنى قۇلۇپلاشتىن بۇرۇن بارلىق ئەپلەرنى ئۆچۈرىۋىتىڭ."
 
-#: src/client/Client.vala:174
+#: src/client/Client.vala:170
 msgid "Time left"
 msgstr "قالغان ۋاقىت"
 
@@ -197,6 +199,9 @@ msgstr ""
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr ""
+
+#~ msgid "You cannot run this application"
+#~ msgstr "سىز بۇ ئەپنى ئىجرا قىلالمايسىز"
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "چوڭلارنىڭ باشقۇرۇش كونترول تەڭشەكلىرى"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 19:38+0000\n"
+"POT-Creation-Date: 2020-04-09 20:13+0000\n"
 "PO-Revision-Date: 2018-08-22 00:09+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -42,20 +42,22 @@ msgstr ""
 msgid "preferences-system-parental-controls"
 msgstr ""
 
-#: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
-msgstr "Ne morete zagnati te aplikacije"
-
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
+#: src/client/AppUnavailableDialog.vala:27
+#, fuzzy
+#| msgid "You are not permitted to run this application."
+msgid "You are not permitted to run this application"
 msgstr "Nimate dovoljenja za zagon te aplikacije."
 
-#: src/client/Client.vala:162
+#: src/client/AppUnavailableDialog.vala:28
+msgid "An administrator has restricted your access to this application."
+msgstr ""
+
+#: src/client/Client.vala:158
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Računalnik se bo zaklenil po %s."
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:160
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
@@ -64,7 +66,7 @@ msgstr[1] "dveh urah"
 msgstr[2] "%lu urah"
 msgstr[3] "%lu urah"
 
-#: src/client/Client.vala:166
+#: src/client/Client.vala:162
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
@@ -73,12 +75,12 @@ msgstr[1] "dveh minutah"
 msgstr[2] "%lu minutah"
 msgstr[3] "%lu minutah"
 
-#: src/client/Client.vala:168
+#: src/client/Client.vala:164
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "Zapri vse aplikacije preden bo računalnik zaklenjen."
 
-#: src/client/Client.vala:174
+#: src/client/Client.vala:170
 msgid "Time left"
 msgstr "Preostali čas"
 
@@ -201,6 +203,9 @@ msgstr ""
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr ""
+
+#~ msgid "You cannot run this application"
+#~ msgstr "Ne morete zagnati te aplikacije"
 
 #~ msgid "Manage parental control settings"
 #~ msgstr "Upravljajte nastavitve starševskega nadzora"

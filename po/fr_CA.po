@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 19:38+0000\n"
+"POT-Creation-Date: 2020-04-09 20:13+0000\n"
 "PO-Revision-Date: 2015-09-06 19:10+0000\n"
 "Last-Translator: Ismael Cormier <ismael.cormier@outlook.com>\n"
 "Language-Team: French (Canada) <fr_CA@li.org>\n"
@@ -39,39 +39,39 @@ msgstr ""
 msgid "preferences-system-parental-controls"
 msgstr ""
 
+#: src/client/AppUnavailableDialog.vala:27
+msgid "You are not permitted to run this application"
+msgstr ""
+
 #: src/client/AppUnavailableDialog.vala:28
-msgid "You cannot run this application"
+msgid "An administrator has restricted your access to this application."
 msgstr ""
 
-#: src/client/AppUnavailableDialog.vala:29
-msgid "You are not permitted to run this application."
-msgstr ""
-
-#: src/client/Client.vala:162
+#: src/client/Client.vala:158
 #, c-format
 msgid "This computer will lock after %s."
 msgstr ""
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:160
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:166
+#: src/client/Client.vala:162
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:168
+#: src/client/Client.vala:164
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 
-#: src/client/Client.vala:174
+#: src/client/Client.vala:170
 msgid "Time left"
 msgstr ""
 
