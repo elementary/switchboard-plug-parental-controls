@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 20:13+0000\n"
+"POT-Creation-Date: 2020-04-09 20:52+0000\n"
 "PO-Revision-Date: 2016-08-11 16:47+0000\n"
 "Last-Translator: Daniel Fore <Unknown>\n"
 "Language-Team: Ukrainian <uk@li.org>\n"
@@ -19,15 +19,6 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage Screen Time &amp; Limits"
-msgstr ""
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-#, fuzzy
-msgid "Authentication is required to change Screen Time &amp; Limits"
-msgstr "Вхід необхідний для зміни налаштувань батьківського контролю"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Screen Time & Limits Client"
@@ -200,6 +191,10 @@ msgstr ""
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Authentication is required to change Screen Time &amp; Limits"
+#~ msgstr "Вхід необхідний для зміни налаштувань батьківського контролю"
 
 #~ msgid "You cannot run this application"
 #~ msgstr "Ви не можете запустити цю програму"

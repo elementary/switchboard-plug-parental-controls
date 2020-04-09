@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 20:13+0000\n"
+"POT-Creation-Date: 2020-04-09 20:52+0000\n"
 "PO-Revision-Date: 2020-01-05 17:07+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -19,14 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage Screen Time &amp; Limits"
-msgstr "Beheer Schermtijd &amp; Limieten"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change Screen Time &amp; Limits"
-msgstr "Inloggen is vereist om Schermtijd &amp; limieten te wijzigen"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Screen Time & Limits Client"
@@ -199,6 +191,12 @@ msgstr "Voorkom toegang tot website"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Voorkom toegang tot toepassing"
+
+#~ msgid "Manage Screen Time &amp; Limits"
+#~ msgstr "Beheer Schermtijd &amp; Limieten"
+
+#~ msgid "Authentication is required to change Screen Time &amp; Limits"
+#~ msgstr "Inloggen is vereist om Schermtijd &amp; limieten te wijzigen"
 
 #~ msgid "You cannot run this application"
 #~ msgstr "U kan dit programm niet uitvoeren"

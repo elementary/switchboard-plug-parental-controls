@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 20:13+0000\n"
+"POT-Creation-Date: 2020-04-09 20:52+0000\n"
 "PO-Revision-Date: 2019-04-22 18:59+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -19,15 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 3.5.1\n"
 "X-Launchpad-Export-Date: 2017-02-27 05:54+0000\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage Screen Time &amp; Limits"
-msgstr ""
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-#, fuzzy
-msgid "Authentication is required to change Screen Time &amp; Limits"
-msgstr "Pro změnu nastavení rodičovské kontroly je potřeba ověření"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Screen Time & Limits Client"
@@ -200,6 +191,10 @@ msgstr "Zabránit přístupu k webovým stránkám"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Zabránit přístupu k aplikaci"
+
+#, fuzzy
+#~ msgid "Authentication is required to change Screen Time &amp; Limits"
+#~ msgstr "Pro změnu nastavení rodičovské kontroly je potřeba ověření"
 
 #~ msgid "You cannot run this application"
 #~ msgstr "Nemůžete spouštět tuto aplikaci"

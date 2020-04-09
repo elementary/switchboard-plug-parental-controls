@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 20:13+0000\n"
+"POT-Creation-Date: 2020-04-09 20:52+0000\n"
 "PO-Revision-Date: 2018-11-05 23:31+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -15,17 +15,6 @@ msgstr ""
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.0.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage Screen Time &amp; Limits"
-msgstr ""
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-#, fuzzy
-msgid "Authentication is required to change Screen Time &amp; Limits"
-msgstr ""
-"Autentifikacija je potrebna da biste mijenjali podešavanja roditeljskih "
-"kontrola"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Screen Time & Limits Client"
@@ -197,6 +186,12 @@ msgstr "Spriječite pristup web stranici"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Spriječite pristup aplikaciji"
+
+#, fuzzy
+#~ msgid "Authentication is required to change Screen Time &amp; Limits"
+#~ msgstr ""
+#~ "Autentifikacija je potrebna da biste mijenjali podešavanja roditeljskih "
+#~ "kontrola"
 
 #~ msgid "You cannot run this application"
 #~ msgstr "Ne možete pokrenuti ovu aplikaciju"

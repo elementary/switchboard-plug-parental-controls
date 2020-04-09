@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 20:13+0000\n"
+"POT-Creation-Date: 2020-04-09 20:52+0000\n"
 "PO-Revision-Date: 2019-04-08 05:53+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
@@ -14,15 +14,6 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 3.5.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage Screen Time &amp; Limits"
-msgstr ""
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-#, fuzzy
-msgid "Authentication is required to change Screen Time &amp; Limits"
-msgstr "Otentikasi diperlukan untuk mengubah pengaturan bimbingan orang tua"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Screen Time & Limits Client"
@@ -190,6 +181,10 @@ msgstr "Cegah akses situs"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Cegah akses aplikasi"
+
+#, fuzzy
+#~ msgid "Authentication is required to change Screen Time &amp; Limits"
+#~ msgstr "Otentikasi diperlukan untuk mengubah pengaturan bimbingan orang tua"
 
 #~ msgid "You cannot run this application"
 #~ msgstr "Anda tidak dapat menjalankan aplikasi ini"

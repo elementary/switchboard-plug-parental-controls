@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 20:13+0000\n"
+"POT-Creation-Date: 2020-04-09 20:52+0000\n"
 "PO-Revision-Date: 2019-08-30 21:22+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -19,15 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-19 06:00+0000\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage Screen Time &amp; Limits"
-msgstr "Ekran Zaman Aşım ve Sınırları Yönetin"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change Screen Time &amp; Limits"
-msgstr ""
-"Ekran Zaman Aşım ve Sınırları değiştirmek için kimlik doğrulaması gerekiyor"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Screen Time & Limits Client"
@@ -198,6 +189,14 @@ msgstr "Web sitesi erişimini engelle"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Uygulama erişimini engelle"
+
+#~ msgid "Manage Screen Time &amp; Limits"
+#~ msgstr "Ekran Zaman Aşım ve Sınırları Yönetin"
+
+#~ msgid "Authentication is required to change Screen Time &amp; Limits"
+#~ msgstr ""
+#~ "Ekran Zaman Aşım ve Sınırları değiştirmek için kimlik doğrulaması "
+#~ "gerekiyor"
 
 #~ msgid "You cannot run this application"
 #~ msgstr "Bu uygulamayı çalıştıramazsınız"

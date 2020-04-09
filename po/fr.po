@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 20:13+0000\n"
+"POT-Creation-Date: 2020-04-09 20:52+0000\n"
 "PO-Revision-Date: 2019-07-21 03:24+0000\n"
 "Last-Translator: Corentin Noël <corentin@elementary.io>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -19,16 +19,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 3.7.1\n"
 "X-Launchpad-Export-Date: 2017-02-28 05:31+0000\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage Screen Time &amp; Limits"
-msgstr "Gérer le temps d'écran et limites"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-msgid "Authentication is required to change Screen Time &amp; Limits"
-msgstr ""
-"Une authentification est requise pour modifier le temps d'écran et les "
-"limites"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Screen Time & Limits Client"
@@ -204,6 +194,14 @@ msgstr "Empêcher l'accès au site web"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Empêcher l'accès à l'application"
+
+#~ msgid "Manage Screen Time &amp; Limits"
+#~ msgstr "Gérer le temps d'écran et limites"
+
+#~ msgid "Authentication is required to change Screen Time &amp; Limits"
+#~ msgstr ""
+#~ "Une authentification est requise pour modifier le temps d'écran et les "
+#~ "limites"
 
 #~ msgid "You cannot run this application"
 #~ msgstr "Vous ne pouvez pas démarrer cette application"

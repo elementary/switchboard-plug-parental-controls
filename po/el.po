@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 20:13+0000\n"
+"POT-Creation-Date: 2020-04-09 20:52+0000\n"
 "PO-Revision-Date: 2017-02-19 11:55+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,16 +13,6 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Launchpad-Export-Date: 2017-02-20 06:04+0000\n"
 "X-Generator: Launchpad (build 18326)\n"
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:10
-msgid "Manage Screen Time &amp; Limits"
-msgstr ""
-
-#: data/org.pantheon.switchboard.parental-controls.policy.in:11
-#, fuzzy
-msgid "Authentication is required to change Screen Time &amp; Limits"
-msgstr ""
-"Απαιτείται επαλήθευση για να αλλάξετε τις ρυθμίσεις του γονικού ελέγχου"
 
 #: data/pantheon-parental-controls-client.desktop.in:3
 msgid "Screen Time & Limits Client"
@@ -196,6 +186,11 @@ msgstr ""
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr ""
+
+#, fuzzy
+#~ msgid "Authentication is required to change Screen Time &amp; Limits"
+#~ msgstr ""
+#~ "Απαιτείται επαλήθευση για να αλλάξετε τις ρυθμίσεις του γονικού ελέγχου"
 
 #~ msgid "You cannot run this application"
 #~ msgstr "Δε μπορείτε να εκτελέσετε αυτήν την εφαρμογή"
