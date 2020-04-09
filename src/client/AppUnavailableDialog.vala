@@ -1,6 +1,5 @@
-// -*- Mode: vala; indent-tabs-mode: nil; tab-width: 4 -*-
 /*-
- * Copyright 2019 elementary, Inc (htts://elementary.io)
+ * Copyright 2019-2020 elementary, Inc (htts://elementary.io)
  *           2015 Adam Bieńkowski
  *
  * This library is free software; you can redistribute it and/or
@@ -24,9 +23,9 @@
 public class PC.Client.AppUnavailableDialog : Granite.MessageDialog {
     public AppUnavailableDialog () {
         Object (
-            image_icon: new ThemedIcon ("prefences-system-parental-controls"),
-            primary_text: _("You cannot run this application"),
-            secondary_text: _("You are not permitted to run this application."),
+            image_icon: new ThemedIcon ("preferences-system-parental-controls"),
+            primary_text: _("You are not permitted to run this application"),
+            secondary_text: _("An administrator has restricted your access to this application."),
             buttons: Gtk.ButtonsType.CLOSE
         );
     }
