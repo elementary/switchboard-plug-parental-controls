@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 21:10+0000\n"
 "PO-Revision-Date: 2019-12-20 16:09+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -51,3 +51,13 @@ msgstr ""
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Updated translations"
 msgstr "翻译更新"
+
+#: data/screentime-limits.policy.in.in:10
+#, fuzzy
+msgid "Manage Screen Time and Limits"
+msgstr "使用时段 &amp; 限制设置"
+
+#: data/screentime-limits.policy.in.in:11
+#, fuzzy
+msgid "Authentication is required to change Screen Time and Limits"
+msgstr "使用时段 &amp; 限制设置"

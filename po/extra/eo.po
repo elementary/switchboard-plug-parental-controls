@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 21:10+0000\n"
 "PO-Revision-Date: 2019-11-08 19:24+0000\n"
 "Last-Translator: Shtonchjo <shtonchjo@gmail.com>\n"
 "Language-Team: Esperanto <https://l10n.elementary.io/projects/switchboard/"
@@ -45,8 +45,21 @@ msgstr "Ripari problemon pri forigo de URL-adreso el limigitaj retejoj"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid "Fix time restriction being applied even if master switch is disabled"
-msgstr "Ripari tempan limigon aplikata eĉ se la estra ŝaltilo estas malebligita"
+msgstr ""
+"Ripari tempan limigon aplikata eĉ se la estra ŝaltilo estas malebligita"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Updated translations"
 msgstr "Ĝisdatigitaj tradukoj"
+
+#: data/screentime-limits.policy.in.in:10
+#, fuzzy
+#| msgid "Rename to Screen Time &amp; Limits"
+msgid "Manage Screen Time and Limits"
+msgstr "Renomi al Ekrana uztempo &amp; limoj"
+
+#: data/screentime-limits.policy.in.in:11
+#, fuzzy
+#| msgid "Rename to Screen Time &amp; Limits"
+msgid "Authentication is required to change Screen Time and Limits"
+msgstr "Renomi al Ekrana uztempo &amp; limoj"

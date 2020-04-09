@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 21:10+0000\n"
 "PO-Revision-Date: 2019-11-08 19:24+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -50,6 +50,18 @@ msgstr "制限全体のスイッチが無効の場合にも時間制限が適用
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Updated translations"
 msgstr "翻訳の更新"
+
+#: data/screentime-limits.policy.in.in:10
+#, fuzzy
+#| msgid "Rename to Screen Time &amp; Limits"
+msgid "Manage Screen Time and Limits"
+msgstr "スクリーンタイムと制限の設定に名称変更"
+
+#: data/screentime-limits.policy.in.in:11
+#, fuzzy
+#| msgid "Rename to Screen Time &amp; Limits"
+msgid "Authentication is required to change Screen Time and Limits"
+msgstr "スクリーンタイムと制限の設定に名称変更"
 
 #~ msgid "Parental Controls Settings"
 #~ msgstr "ペアレンタルコントロールの設定"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 21:10+0000\n"
 "PO-Revision-Date: 2019-11-25 09:25+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -46,12 +46,23 @@ msgstr "प्रतिबंधित वेबसाइटवरून URL ह
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid "Fix time restriction being applied even if master switch is disabled"
 msgstr ""
-"जरी मास्टर स्विच अक्षम केलेले असेल तर वेळेचे निर्बंध लागू करण्याबाबद समस्येचे"
-" निराकरण करा"
+"जरी मास्टर स्विच अक्षम केलेले असेल तर वेळेचे निर्बंध लागू करण्याबाबद समस्येचे निराकरण करा"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Updated translations"
 msgstr "अद्ययावत भाषांतर"
+
+#: data/screentime-limits.policy.in.in:10
+#, fuzzy
+#| msgid "Rename to Screen Time &amp; Limits"
+msgid "Manage Screen Time and Limits"
+msgstr "स्क्रीन वेळ आणि मर्यादा असे नाव बदला"
+
+#: data/screentime-limits.policy.in.in:11
+#, fuzzy
+#| msgid "Rename to Screen Time &amp; Limits"
+msgid "Authentication is required to change Screen Time and Limits"
+msgstr "स्क्रीन वेळ आणि मर्यादा असे नाव बदला"
 
 #~ msgid "Parental Controls Settings"
 #~ msgstr "पालक नियंत्रण सेटिंग्ज"

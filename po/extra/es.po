@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-07 17:11+0000\n"
+"POT-Creation-Date: 2020-04-09 21:10+0000\n"
 "PO-Revision-Date: 2020-03-10 17:09+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -54,3 +54,15 @@ msgstr ""
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Updated translations"
 msgstr "Traducciones actualizadas"
+
+#: data/screentime-limits.policy.in.in:10
+#, fuzzy
+#| msgid "Rename to Screen Time &amp; Limits"
+msgid "Manage Screen Time and Limits"
+msgstr "Cambio de nombre a Tiempo ante pantalla y límites"
+
+#: data/screentime-limits.policy.in.in:11
+#, fuzzy
+#| msgid "Rename to Screen Time &amp; Limits"
+msgid "Authentication is required to change Screen Time and Limits"
+msgstr "Cambio de nombre a Tiempo ante pantalla y límites"
