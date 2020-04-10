@@ -35,7 +35,7 @@ namespace PC.Widgets {
         }
 
         construct {
-            var limit_description = new Gtk.Label (_("%s will not be able to log in during this time and will be automatically logged out once this period beings:").printf (user.get_real_name ()));
+            var limit_description = new Gtk.Label (_("%s will not be able to log in during this time and will be automatically logged out once this period begins:").printf (user.get_real_name ()));
             limit_description.wrap = true;
             limit_description.xalign = 0;
 
