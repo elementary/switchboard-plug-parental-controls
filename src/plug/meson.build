@@ -4,7 +4,6 @@ plug_files = files(
     'Views/AppsView.vala',
     'Views/TimeLimitView.vala',
     'Views/InternetView.vala',
-    'Widgets/WeekSpinBox.vala',
     'Widgets/UserList.vala',
     'Widgets/UserItem.vala',
     'Widgets/ControlPage.vala',

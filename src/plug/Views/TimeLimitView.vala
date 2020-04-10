@@ -24,10 +24,6 @@ namespace PC.Widgets {
     public class TimeLimitView : Gtk.Grid {
         private string plank_conf_file_path = "";
         public weak Act.User user { get; construct; }
-        private Gtk.Switch limit_switch;
-        private Gtk.ComboBoxText limit_combobox;
-
-        private Gtk.Frame frame;
 
         private Gtk.SizeGroup title_group;
 
@@ -36,69 +32,39 @@ namespace PC.Widgets {
 
         public TimeLimitView (Act.User user) {
             Object (user: user);
+        }
+
+        construct {
+            var limit_description = new Gtk.Label (_("%s will not be able to log in during this time and will be automatically logged out once this period beings:").printf (user.get_real_name ()));
+            limit_description.wrap = true;
+            limit_description.xalign = 0;
+
+            title_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
+
+            weekday_box = new WeekSpinBox (_("Weekdays"), title_group);
+
+            weekend_box = new WeekSpinBox (_("Weekends"), title_group);
+
+            row_spacing = 24;
+            attach (limit_description, 0, 0);
+            attach (weekday_box, 0, 1);
+            attach (weekend_box, 0, 2);
+            show_all ();
+
             plank_conf_file_path = Path.build_filename (user.get_home_dir (), Constants.PLANK_CONF_DIR);
-
-            limit_switch.notify["active"].connect (() => update_pam ());
-            limit_switch.bind_property ("active", limit_combobox, "sensitive", GLib.BindingFlags.SYNC_CREATE);
-            limit_switch.bind_property ("active", frame, "sensitive", GLib.BindingFlags.SYNC_CREATE);
-
-            limit_combobox.changed.connect (on_limit_combobox_changed);
 
             weekday_box.changed.connect (() => update_pam ());
             weekend_box.changed.connect (() => update_pam ());
 
             load_restrictions ();
-        }
 
-        construct {
-            column_spacing = 12;
-            row_spacing = 6;
+            weekday_box.notify["active"].connect (() => {
+                update_pam ();
+            });
 
-            var limit_method_label = new Gtk.Label (_("Limit computer use:"));
-            limit_method_label.halign = Gtk.Align.END;
-
-            limit_switch = new Gtk.Switch ();
-            limit_switch.valign = Gtk.Align.CENTER;
-
-            limit_combobox = new Gtk.ComboBoxText ();
-            limit_combobox.hexpand = true;
-            limit_combobox.append (
-                PAM.DayType.WEEKDAY.to_string () + PAM.DayType.WEEKEND.to_string (),
-                _("On weekdays and weekends")
-            );
-            limit_combobox.append (PAM.DayType.WEEKDAY.to_string (), _("Only on weekdays"));
-            limit_combobox.append (PAM.DayType.WEEKEND.to_string (), _("Only on weekends"));
-            limit_combobox.active = 0;
-
-            frame = new Gtk.Frame (null);
-            frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
-
-            var frame_box = new Gtk.Box (Gtk.Orientation.VERTICAL, 6);
-
-            title_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
-
-            weekday_box = new WeekSpinBox (_("Weekdays"), title_group);
-            weekday_box.margin = 12;
-            weekday_box.halign = Gtk.Align.CENTER;
-
-            weekend_box = new WeekSpinBox (_("Weekends"), title_group);
-            weekend_box.margin = 12;
-            weekend_box.halign = Gtk.Align.CENTER;
-
-            frame_box.add (weekday_box);
-            frame_box.add (new Gtk.Separator (Gtk.Orientation.HORIZONTAL));
-            frame_box.add (weekend_box);
-            frame.add (frame_box);
-
-            attach (limit_method_label, 0, 0);
-            attach (limit_switch, 1, 0);
-            attach (limit_combobox, 2, 0);
-            attach (frame, 0, 1, 3, 1);
-            show_all ();
-        }
-
-        public void reset () {
-            limit_switch.active = false;
+            weekend_box.notify["active"].connect (() => {
+                update_pam ();
+            });
         }
 
         private void load_restrictions () {
@@ -107,27 +73,21 @@ namespace PC.Widgets {
                 return;
             }
 
-            limit_switch.active = true;
-
-            string[] ids = {};
             foreach (PAM.TimeInfo info in token.get_times_info ()) {
-                ids += info.day_type.to_string ();
                 switch (info.day_type) {
                     case PAM.DayType.WEEKDAY:
+                        weekday_box.active = true;
                         weekday_box.set_from (info.from);
                         weekday_box.set_to (info.to);
                         break;
                     case PAM.DayType.WEEKEND:
+                        weekend_box.active = true;
                         weekend_box.set_from (info.from);
                         weekend_box.set_to (info.to);
                         break;
                     default:
                         break;
                 }
-            }
-
-            if (ids.length > 0) {
-                limit_combobox.active_id = string.joinv ("|", ids);
             }
         }
 
@@ -136,16 +96,15 @@ namespace PC.Widgets {
                 return;
             }
 
-            if (limit_switch.get_active () && daemon_active) {
+            if ((weekday_box.active || weekend_box.active) && daemon_active) {
                 string[] times = {};
                 string[] users = { user.get_user_name () };
-                unowned string id = limit_combobox.get_active_id ();
 
-                if (PAM.DayType.WEEKDAY.to_string () in id) {
+                if (weekday_box.active) {
                     times += PAM.DayType.WEEKDAY.to_string () + weekday_box.get_from () + "-" + weekday_box.get_to ();
                 }
 
-                if (PAM.DayType.WEEKEND.to_string () in id) {
+                if (weekend_box.active) {
                     times += PAM.DayType.WEEKEND.to_string () + weekend_box.get_from () + "-" + weekend_box.get_to ();
                 }
 
@@ -155,22 +114,102 @@ namespace PC.Widgets {
                 Utils.get_api ().remove_restriction_for_user.begin (user.get_user_name ());
             }
         }
+    }
 
-        private void on_limit_combobox_changed () {
-            string id = limit_combobox.get_active_id ();
+    private class WeekSpinBox : Gtk.Grid {
+        public signal void changed ();
 
-            if (PAM.DayType.WEEKDAY.to_string () in id && PAM.DayType.WEEKEND.to_string () in id) {
-                weekday_box.sensitive = true;
-                weekend_box.sensitive = true;
-            } else if (PAM.DayType.WEEKDAY.to_string () in id) {
-                weekday_box.sensitive = true;
-                weekend_box.sensitive = false;
-            } else if (PAM.DayType.WEEKEND.to_string () in id) {
-                weekday_box.sensitive = false;
-                weekend_box.sensitive = true;
+        public bool active { get; set; }
+        public string title { get; construct; }
+        public Gtk.SizeGroup size_group { get; construct; }
+
+        private Granite.Widgets.TimePicker picker_from;
+        private Granite.Widgets.TimePicker picker_to;
+
+        public WeekSpinBox (string title, Gtk.SizeGroup size_group) {
+            Object (
+                title: title,
+                size_group: size_group
+            );
+        }
+
+        construct {
+            var enable_switch = new Gtk.Switch ();
+            enable_switch.halign = Gtk.Align.START;
+            enable_switch.valign = Gtk.Align.CENTER;
+
+            var from_label = new Gtk.Label (_("From:"));
+            from_label.halign = Gtk.Align.END;
+
+            picker_from = new Granite.Widgets.TimePicker ();
+            picker_from.hexpand = true;
+
+            var to_label = new Gtk.Label (_("To:"));
+
+            picker_to = new Granite.Widgets.TimePicker ();
+            picker_to.hexpand = true;
+
+            var label = new Gtk.Label (title);
+            label.get_style_context ().add_class (Granite.STYLE_CLASS_H4_LABEL);
+            size_group.add_widget (label);
+
+            column_spacing = 12;
+            row_spacing = 6;
+            attach (label, 0, 0);
+            attach (enable_switch, 1, 0);
+            attach (from_label, 0, 1);
+            attach (picker_from, 1, 1);
+            attach (to_label, 2, 1);
+            attach (picker_to, 3, 1);
+
+            bind_property ("active", enable_switch, "active", GLib.BindingFlags.BIDIRECTIONAL);
+            bind_property ("active", from_label, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+            bind_property ("active", picker_from, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+            bind_property ("active", to_label, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+            bind_property ("active", picker_to, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+
+            picker_from.time_changed.connect (() => changed ());
+            picker_to.time_changed.connect (() => changed ());
+        }
+
+        public string get_from () {
+            return format_time_string (picker_from.time.get_hour ())
+                + format_time_string (picker_from.time.get_minute ());
+        }
+
+        public string get_to () {
+            return format_time_string (picker_to.time.get_hour ())
+                + format_time_string (picker_to.time.get_minute ());
+        }
+
+        public void set_from (string from) {
+            string hours = from.slice (0, 2);
+            string minutes = from.substring (2);
+
+            var time = new DateTime.local (
+               new DateTime.now_local ().get_year (), 1, 1, int.parse (hours), int.parse (minutes), 0
+            );
+
+            picker_from.time = time;
+        }
+
+        public void set_to (string to) {
+            string hours = to.slice (0, 2);
+            string minutes = to.substring (2);
+
+            var time = new DateTime.local (
+               new DateTime.now_local ().get_year (), 1, 1, int.parse (hours), int.parse (minutes), 0
+            );
+
+            picker_to.time = time;
+        }
+
+        private string format_time_string (int val) {
+            if (val < 10) {
+                return "0" + val.to_string ();
             }
 
-            update_pam ();
+            return val.to_string ();
         }
     }
 }
