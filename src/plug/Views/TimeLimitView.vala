@@ -22,7 +22,6 @@
 
 namespace PC.Widgets {
     public class TimeLimitView : Gtk.Grid {
-        private string plank_conf_file_path = "";
         public weak Act.User user { get; construct; }
 
         private Gtk.SizeGroup title_group;
@@ -50,8 +49,6 @@ namespace PC.Widgets {
             attach (weekday_box, 0, 1);
             attach (weekend_box, 0, 2);
             show_all ();
-
-            plank_conf_file_path = Path.build_filename (user.get_home_dir (), Constants.PLANK_CONF_DIR);
 
             weekday_box.changed.connect (() => update_pam ());
             weekend_box.changed.connect (() => update_pam ());
