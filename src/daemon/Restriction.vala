@@ -30,7 +30,7 @@ namespace PC.Daemon {
         public abstract void start ();
         public abstract void stop ();
 
-        public Restriction (UserConfig config) {
+        protected Restriction (UserConfig config) {
             this.config = config;
         }
     }
