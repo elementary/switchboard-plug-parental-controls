@@ -4,6 +4,8 @@
   <extends>io.elementary.switchboard</extends>
   <name>Screen Time &amp; Limits Settings</name>
   <summary>Configure time limits and restrict application usage</summary>
+  <icon type="stock">preferences-system-parental-controls</icon>
+  <translation type="gettext">parental-controls-plug</translation>
   <releases>
     <release version="2.2.0" date="2019-11-05" urgency="medium">
       <description>
