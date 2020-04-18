@@ -22,6 +22,5 @@ src/plug/Widgets/AppChooser.vala
 src/plug/Widgets/ControlPage.vala
 src/plug/Widgets/UserItem.vala
 src/plug/Widgets/UserList.vala
-src/plug/Widgets/WeekSpinBox.vala
 src/plug/MainView.vala
 src/plug/Plug.vala

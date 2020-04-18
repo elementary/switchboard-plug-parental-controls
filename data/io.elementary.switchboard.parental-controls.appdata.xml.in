@@ -7,13 +7,14 @@
   <icon type="stock">preferences-system-parental-controls</icon>
   <translation type="gettext">parental-controls-plug</translation>
   <releases>
-    <release version="2.2.0" date="2019-11-05" urgency="medium">
+    <release version="2.2.0" date="2020-04-08" urgency="medium">
       <description>
         <p>Rename to Screen Time &amp; Limits</p>
         <p>Show your own account</p>
         <p>Redesign the app chooser</p>
+        <p>Redesign the Screen Time view</p>
         <p>Fix an issue with removing URLs from restricted websites</p>
-        <p>Fix time restriction being applied even if master switch is disabled</p>
+        <p>Reliably apply time restrictions</p>
         <p>Updated translations</p>
       </description>
     </release>
