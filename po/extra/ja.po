@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:10+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2019-11-08 19:24+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -27,27 +27,33 @@ msgstr "スクリーンタイムと制限の設定"
 msgid "Configure time limits and restrict application usage"
 msgstr "時間制限を設定し、アプリケーションの使用を制限します"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:10
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "スクリーンタイムと制限の設定に名称変更"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:11
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
 msgid "Show your own account"
 msgstr "利用中のアカウントも表示するように修正"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid "Redesign the app chooser"
 msgstr "アプリ選択画面を再設計"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+#, fuzzy
+#| msgid "Rename to Screen Time &amp; Limits"
+msgid "Redesign the Screen Time view"
+msgstr "スクリーンタイムと制限の設定に名称変更"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr "制限された Web サイトから URL を削除する際の問題を修正"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
-msgid "Fix time restriction being applied even if master switch is disabled"
-msgstr "制限全体のスイッチが無効の場合にも時間制限が適用されてしまう問題を修正"
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
+msgid "Reliably apply time restrictions"
+msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
@@ -62,6 +68,10 @@ msgstr "スクリーンタイムと制限の設定に名称変更"
 #| msgid "Rename to Screen Time &amp; Limits"
 msgid "Authentication is required to change Screen Time and Limits"
 msgstr "スクリーンタイムと制限の設定に名称変更"
+
+#~ msgid "Fix time restriction being applied even if master switch is disabled"
+#~ msgstr ""
+#~ "制限全体のスイッチが無効の場合にも時間制限が適用されてしまう問題を修正"
 
 #~ msgid "Parental Controls Settings"
 #~ msgstr "ペアレンタルコントロールの設定"

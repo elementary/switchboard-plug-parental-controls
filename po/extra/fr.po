@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:10+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2020-04-11 10:10+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -29,31 +29,35 @@ msgstr ""
 "Configurer les limites de temps et les restrictions d'utilisation des "
 "applications"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:10
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Renommé en temps d'écran et des limites"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:11
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
 msgid "Show your own account"
 msgstr "Affichage de son compte"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid "Redesign the app chooser"
 msgstr "Re-design du sélecteur d'applications"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+#, fuzzy
+#| msgid "Rename to Screen Time &amp; Limits"
+msgid "Redesign the Screen Time view"
+msgstr "Renommé en temps d'écran et des limites"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
 "Correction d'un problème lors de la suppression d'URLs des restrictions de "
 "sites web"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
-msgid "Fix time restriction being applied even if master switch is disabled"
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
+msgid "Reliably apply time restrictions"
 msgstr ""
-"Correction de la restriction de temps appliqué même lorsque le bouton à "
-"bascule est désactivé"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Updated translations"
 msgstr "Mise à jour des traductions"
 
@@ -66,6 +70,11 @@ msgid "Authentication is required to change Screen Time and Limits"
 msgstr ""
 "Une authentification est requise pour modifier le temps d'écran et les "
 "limitations"
+
+#~ msgid "Fix time restriction being applied even if master switch is disabled"
+#~ msgstr ""
+#~ "Correction de la restriction de temps appliqué même lorsque le bouton à "
+#~ "bascule est désactivé"
 
 #~ msgid "Parental Controls Settings"
 #~ msgstr "Paramètres du contrôle parental"

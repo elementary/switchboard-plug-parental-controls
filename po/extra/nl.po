@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:10+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2020-01-04 09:07+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -27,31 +27,35 @@ msgstr "Schermtijd &amp; Limieten instellingen"
 msgid "Configure time limits and restrict application usage"
 msgstr "Configureer tijdslimieten en limiteer programma gebruik"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:10
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Hernoemd naar Schermtijd &amp; Limieten"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:11
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
 msgid "Show your own account"
 msgstr "Toon uw eigen account"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid "Redesign the app chooser"
 msgstr "De app kiezer opnieuw ontworpen"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+#, fuzzy
+#| msgid "Rename to Screen Time &amp; Limits"
+msgid "Redesign the Screen Time view"
+msgstr "Hernoemd naar Schermtijd &amp; Limieten"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
 "Een probleem opgelost met het verwijderen van URLs van de lijst met "
 "geblokkeerde websites"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
-msgid "Fix time restriction being applied even if master switch is disabled"
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
+msgid "Reliably apply time restrictions"
 msgstr ""
-"Een probleem opgelost waarbij tijdslimiet werd toegepast ook al was de "
-"hoofdschakelaar uitgeschakeld"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Updated translations"
 msgstr "Bijgewerkte vertalingen"
 
@@ -66,3 +70,8 @@ msgstr "Hernoemd naar Schermtijd &amp; Limieten"
 #| msgid "Rename to Screen Time &amp; Limits"
 msgid "Authentication is required to change Screen Time and Limits"
 msgstr "Hernoemd naar Schermtijd &amp; Limieten"
+
+#~ msgid "Fix time restriction being applied even if master switch is disabled"
+#~ msgstr ""
+#~ "Een probleem opgelost waarbij tijdslimiet werd toegepast ook al was de "
+#~ "hoofdschakelaar uitgeschakeld"
