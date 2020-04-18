@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:36+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2020-04-11 10:10+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -95,29 +95,28 @@ msgstr "Afegiu un URL nou, com ara google.com"
 msgid "Invalid URL"
 msgstr "L'URL no és vàlid"
 
-#: src/plug/Views/TimeLimitView.vala:57
-msgid "Limit computer use:"
-msgstr "Limita l'ús de l'ordinador:"
+#: src/plug/Views/TimeLimitView.vala:37
+#, c-format
+msgid ""
+"%s will only be able to log in during this time, and will be automatically "
+"logged out once this period ends:"
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:67
-msgid "On weekdays and weekends"
-msgstr "Els dies feiners i els caps de setmana"
-
-#: src/plug/Views/TimeLimitView.vala:69
-msgid "Only on weekdays"
-msgstr "Només els caps de setmana"
-
-#: src/plug/Views/TimeLimitView.vala:70
-msgid "Only on weekends"
-msgstr "Només els dies feiners"
-
-#: src/plug/Views/TimeLimitView.vala:80
+#: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
 msgstr "Dies feiners"
 
-#: src/plug/Views/TimeLimitView.vala:84
+#: src/plug/Views/TimeLimitView.vala:45
 msgid "Weekends"
 msgstr "Caps de setmana"
+
+#: src/plug/Views/TimeLimitView.vala:138
+msgid "From:"
+msgstr "De:"
+
+#: src/plug/Views/TimeLimitView.vala:144
+msgid "To:"
+msgstr "A:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -143,14 +142,6 @@ msgstr "El meu compte"
 msgid "Other Accounts"
 msgstr "Altres comptes"
 
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "De:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "A:"
-
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Alguns paràmetres necessiten permisos d'administrador per modificar-se"
@@ -174,6 +165,18 @@ msgstr "Evita l'accés al lloc web"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Evita l'accés a l'aplicació"
+
+#~ msgid "Limit computer use:"
+#~ msgstr "Limita l'ús de l'ordinador:"
+
+#~ msgid "On weekdays and weekends"
+#~ msgstr "Els dies feiners i els caps de setmana"
+
+#~ msgid "Only on weekdays"
+#~ msgstr "Només els caps de setmana"
+
+#~ msgid "Only on weekends"
+#~ msgstr "Només els dies feiners"
 
 #~ msgid "Screen Time & Limits Client"
 #~ msgstr "Client de límits i de temps de pantalla"

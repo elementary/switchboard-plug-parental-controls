@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:36+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2018-02-25 00:09+0000\n"
 "Last-Translator: Cheng-Chia Tseng <pswo10680@gmail.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.elementary.io/projects/"
@@ -94,29 +94,28 @@ msgstr "加入新網址，例如：google.com"
 msgid "Invalid URL"
 msgstr "無效的網址"
 
-#: src/plug/Views/TimeLimitView.vala:57
-msgid "Limit computer use:"
-msgstr "限制電腦使用："
+#: src/plug/Views/TimeLimitView.vala:37
+#, c-format
+msgid ""
+"%s will only be able to log in during this time, and will be automatically "
+"logged out once this period ends:"
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:67
-msgid "On weekdays and weekends"
-msgstr "週間和週末"
-
-#: src/plug/Views/TimeLimitView.vala:69
-msgid "Only on weekdays"
-msgstr "僅週間"
-
-#: src/plug/Views/TimeLimitView.vala:70
-msgid "Only on weekends"
-msgstr "僅週末"
-
-#: src/plug/Views/TimeLimitView.vala:80
+#: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
 msgstr "週間"
 
-#: src/plug/Views/TimeLimitView.vala:84
+#: src/plug/Views/TimeLimitView.vala:45
 msgid "Weekends"
 msgstr "週末"
+
+#: src/plug/Views/TimeLimitView.vala:138
+msgid "From:"
+msgstr "從："
+
+#: src/plug/Views/TimeLimitView.vala:144
+msgid "To:"
+msgstr "到："
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -141,14 +140,6 @@ msgstr "我的帳號"
 #: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "其他帳號"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "從："
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "到："
 
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
@@ -175,6 +166,18 @@ msgstr ""
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr ""
+
+#~ msgid "Limit computer use:"
+#~ msgstr "限制電腦使用："
+
+#~ msgid "On weekdays and weekends"
+#~ msgstr "週間和週末"
+
+#~ msgid "Only on weekdays"
+#~ msgstr "僅週間"
+
+#~ msgid "Only on weekends"
+#~ msgstr "僅週末"
 
 #~ msgid "preferences-system-parental-controls"
 #~ msgstr "preferences-system-parental-controls"

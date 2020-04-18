@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:36+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2019-07-02 15:28+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -99,29 +99,28 @@ msgstr "Aggiungi un nuovo URL, per esempio: google.com"
 msgid "Invalid URL"
 msgstr "URL non valido"
 
-#: src/plug/Views/TimeLimitView.vala:57
-msgid "Limit computer use:"
-msgstr "Limita l'uso del computer:"
+#: src/plug/Views/TimeLimitView.vala:37
+#, c-format
+msgid ""
+"%s will only be able to log in during this time, and will be automatically "
+"logged out once this period ends:"
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:67
-msgid "On weekdays and weekends"
-msgstr "Nei giorni feriali e nei fine settimana"
-
-#: src/plug/Views/TimeLimitView.vala:69
-msgid "Only on weekdays"
-msgstr "Solo nei giorni feriali"
-
-#: src/plug/Views/TimeLimitView.vala:70
-msgid "Only on weekends"
-msgstr "Solo nei fine settimana"
-
-#: src/plug/Views/TimeLimitView.vala:80
+#: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
 msgstr "Giorni feriali"
 
-#: src/plug/Views/TimeLimitView.vala:84
+#: src/plug/Views/TimeLimitView.vala:45
 msgid "Weekends"
 msgstr "Fine settimana"
+
+#: src/plug/Views/TimeLimitView.vala:138
+msgid "From:"
+msgstr "Dalle:"
+
+#: src/plug/Views/TimeLimitView.vala:144
+msgid "To:"
+msgstr "Alle:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -146,14 +145,6 @@ msgstr "Account personale"
 #: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Altri account"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Dalle:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Alle:"
 
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
@@ -181,6 +172,18 @@ msgstr "Impedisci l'accesso al sito web"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Impedisci l'accesso all'applicazione"
+
+#~ msgid "Limit computer use:"
+#~ msgstr "Limita l'uso del computer:"
+
+#~ msgid "On weekdays and weekends"
+#~ msgstr "Nei giorni feriali e nei fine settimana"
+
+#~ msgid "Only on weekdays"
+#~ msgstr "Solo nei giorni feriali"
+
+#~ msgid "Only on weekends"
+#~ msgstr "Solo nei fine settimana"
 
 #~ msgid "preferences-system-parental-controls"
 #~ msgstr "preferences-system-parental-controls"

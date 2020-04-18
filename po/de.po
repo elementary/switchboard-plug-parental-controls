@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:36+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2019-01-02 21:46+0000\n"
 "Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
 "Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
@@ -98,29 +98,28 @@ msgstr "Adresse hinzufügen, beispielsweise: google.com"
 msgid "Invalid URL"
 msgstr "Ungültige Adresse"
 
-#: src/plug/Views/TimeLimitView.vala:57
-msgid "Limit computer use:"
-msgstr "Rechnernutzung beschränken auf:"
+#: src/plug/Views/TimeLimitView.vala:37
+#, c-format
+msgid ""
+"%s will only be able to log in during this time, and will be automatically "
+"logged out once this period ends:"
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:67
-msgid "On weekdays and weekends"
-msgstr "An Werktagen und am Wochenende"
-
-#: src/plug/Views/TimeLimitView.vala:69
-msgid "Only on weekdays"
-msgstr "Nur an Werktagen"
-
-#: src/plug/Views/TimeLimitView.vala:70
-msgid "Only on weekends"
-msgstr "Nur an Wochenenden"
-
-#: src/plug/Views/TimeLimitView.vala:80
+#: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
 msgstr "An Werktagen"
 
-#: src/plug/Views/TimeLimitView.vala:84
+#: src/plug/Views/TimeLimitView.vala:45
 msgid "Weekends"
 msgstr "An Wochenenden"
+
+#: src/plug/Views/TimeLimitView.vala:138
+msgid "From:"
+msgstr "Von:"
+
+#: src/plug/Views/TimeLimitView.vala:144
+msgid "To:"
+msgstr "Bis:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -145,14 +144,6 @@ msgstr "Mein Konto"
 #: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Weitere Konten"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Von:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Bis:"
 
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
@@ -181,6 +172,18 @@ msgstr "Website-Zugriff verhindern"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Zugriff auf Anwendungen verhindern"
+
+#~ msgid "Limit computer use:"
+#~ msgstr "Rechnernutzung beschränken auf:"
+
+#~ msgid "On weekdays and weekends"
+#~ msgstr "An Werktagen und am Wochenende"
+
+#~ msgid "Only on weekdays"
+#~ msgstr "Nur an Werktagen"
+
+#~ msgid "Only on weekends"
+#~ msgstr "Nur an Wochenenden"
 
 #~ msgid "preferences-system-parental-controls"
 #~ msgstr "preferences-system-parental-controls"

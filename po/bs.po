@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:36+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2018-11-05 23:31+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -94,29 +94,28 @@ msgstr "Dodaj novi URL, naprimjer: google.com"
 msgid "Invalid URL"
 msgstr "Nevažeći URL"
 
-#: src/plug/Views/TimeLimitView.vala:57
-msgid "Limit computer use:"
-msgstr "Ograniči korištenje računara:"
+#: src/plug/Views/TimeLimitView.vala:37
+#, c-format
+msgid ""
+"%s will only be able to log in during this time, and will be automatically "
+"logged out once this period ends:"
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:67
-msgid "On weekdays and weekends"
-msgstr "Radnim danima i vikendom"
-
-#: src/plug/Views/TimeLimitView.vala:69
-msgid "Only on weekdays"
-msgstr "Samo radnim danima"
-
-#: src/plug/Views/TimeLimitView.vala:70
-msgid "Only on weekends"
-msgstr "Samo vikendom"
-
-#: src/plug/Views/TimeLimitView.vala:80
+#: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
 msgstr "Radnim danima"
 
-#: src/plug/Views/TimeLimitView.vala:84
+#: src/plug/Views/TimeLimitView.vala:45
 msgid "Weekends"
 msgstr "Vikendima"
+
+#: src/plug/Views/TimeLimitView.vala:138
+msgid "From:"
+msgstr "Od:"
+
+#: src/plug/Views/TimeLimitView.vala:144
+msgid "To:"
+msgstr "Do:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -142,14 +141,6 @@ msgstr "Moj račun"
 msgid "Other Accounts"
 msgstr "Drugi računi"
 
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Od:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Do:"
-
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Za izmjenu nekih podešavanja su potrebna administratorska prava"
@@ -174,6 +165,18 @@ msgstr "Spriječite pristup web stranici"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Spriječite pristup aplikaciji"
+
+#~ msgid "Limit computer use:"
+#~ msgstr "Ograniči korištenje računara:"
+
+#~ msgid "On weekdays and weekends"
+#~ msgstr "Radnim danima i vikendom"
+
+#~ msgid "Only on weekdays"
+#~ msgstr "Samo radnim danima"
+
+#~ msgid "Only on weekends"
+#~ msgstr "Samo vikendom"
 
 #~ msgid "preferences-system-parental-controls"
 #~ msgstr "preferences-system-parental-controls"

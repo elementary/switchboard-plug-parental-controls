@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:36+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2017-01-03 04:07+0000\n"
 "Last-Translator: Cody Garver <cody@elementaryos.org>\n"
 "Language-Team: Uyghur <ug@li.org>\n"
@@ -95,29 +95,28 @@ msgstr "يىڭى تورئادىرىسى قىتىش، مەسىلەن:google.com"
 msgid "Invalid URL"
 msgstr "ئىناۋەتسىز تورئادىرىسى"
 
-#: src/plug/Views/TimeLimitView.vala:57
-msgid "Limit computer use:"
-msgstr "كومپىيۇتىر ئىشلىتىشكە چەكلىمىسى:"
+#: src/plug/Views/TimeLimitView.vala:37
+#, c-format
+msgid ""
+"%s will only be able to log in during this time, and will be automatically "
+"logged out once this period ends:"
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:67
-msgid "On weekdays and weekends"
-msgstr "خىزمەت كۈنى ۋە ھەپتە ئاخىرىدا"
-
-#: src/plug/Views/TimeLimitView.vala:69
-msgid "Only on weekdays"
-msgstr "پەقەت خىزمەت كۈنلىرىدىلا"
-
-#: src/plug/Views/TimeLimitView.vala:70
-msgid "Only on weekends"
-msgstr "پەقەت ھەپتە ئاخىرىدىلا"
-
-#: src/plug/Views/TimeLimitView.vala:80
+#: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
 msgstr "خىزمەت كۈنلىرى"
 
-#: src/plug/Views/TimeLimitView.vala:84
+#: src/plug/Views/TimeLimitView.vala:45
 msgid "Weekends"
 msgstr "ھەپتە ئاخىرى"
+
+#: src/plug/Views/TimeLimitView.vala:138
+msgid "From:"
+msgstr "دىن"
+
+#: src/plug/Views/TimeLimitView.vala:144
+msgid "To:"
+msgstr "گىچە"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -142,14 +141,6 @@ msgstr "ھىساۋاتىم"
 #: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "باشقا ھىساۋاتلار"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "دىن"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "گىچە"
 
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
@@ -176,6 +167,18 @@ msgstr ""
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr ""
+
+#~ msgid "Limit computer use:"
+#~ msgstr "كومپىيۇتىر ئىشلىتىشكە چەكلىمىسى:"
+
+#~ msgid "On weekdays and weekends"
+#~ msgstr "خىزمەت كۈنى ۋە ھەپتە ئاخىرىدا"
+
+#~ msgid "Only on weekdays"
+#~ msgstr "پەقەت خىزمەت كۈنلىرىدىلا"
+
+#~ msgid "Only on weekends"
+#~ msgstr "پەقەت ھەپتە ئاخىرىدىلا"
 
 #, fuzzy
 #~ msgid "Authentication is required to change Screen Time &amp; Limits"

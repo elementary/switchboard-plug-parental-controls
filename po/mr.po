@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:36+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2019-09-07 21:22+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -91,29 +91,28 @@ msgstr "नवीन URL जोडा, उदाहरणार्थ: google.co
 msgid "Invalid URL"
 msgstr "अवैध यूआरएल"
 
-#: src/plug/Views/TimeLimitView.vala:57
-msgid "Limit computer use:"
-msgstr "संगणक वापर मर्यादित करा:"
+#: src/plug/Views/TimeLimitView.vala:37
+#, c-format
+msgid ""
+"%s will only be able to log in during this time, and will be automatically "
+"logged out once this period ends:"
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:67
-msgid "On weekdays and weekends"
-msgstr "आठवड्याचे दिवस आणि शनिवार व रविवार"
-
-#: src/plug/Views/TimeLimitView.vala:69
-msgid "Only on weekdays"
-msgstr "केवळ आठवड्याचे दिवस"
-
-#: src/plug/Views/TimeLimitView.vala:70
-msgid "Only on weekends"
-msgstr "केवळ आठवड्याच्या शेवटी"
-
-#: src/plug/Views/TimeLimitView.vala:80
+#: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
 msgstr "सोमवार ते शुक्रवार"
 
-#: src/plug/Views/TimeLimitView.vala:84
+#: src/plug/Views/TimeLimitView.vala:45
 msgid "Weekends"
 msgstr "शनिवार आणि रविवार"
+
+#: src/plug/Views/TimeLimitView.vala:138
+msgid "From:"
+msgstr "पासून:"
+
+#: src/plug/Views/TimeLimitView.vala:144
+msgid "To:"
+msgstr "पर्यंत:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -139,14 +138,6 @@ msgstr "माझे खाते"
 msgid "Other Accounts"
 msgstr "अन्य खाती"
 
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "पासून:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "पर्यंत:"
-
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "काही सेटिंग्जसाठी प्रशासकीय अधिकार बदलण्याची आवश्यकता आहे"
@@ -170,6 +161,18 @@ msgstr "वेबसाइट प्रवेश प्रतिबंधित 
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "अप्लिकेशन प्रवेश प्रतिबंधित करा"
+
+#~ msgid "Limit computer use:"
+#~ msgstr "संगणक वापर मर्यादित करा:"
+
+#~ msgid "On weekdays and weekends"
+#~ msgstr "आठवड्याचे दिवस आणि शनिवार व रविवार"
+
+#~ msgid "Only on weekdays"
+#~ msgstr "केवळ आठवड्याचे दिवस"
+
+#~ msgid "Only on weekends"
+#~ msgstr "केवळ आठवड्याच्या शेवटी"
 
 #~ msgid "Screen Time & Limits Client"
 #~ msgstr "स्क्रीन वेळ आणि मर्यादा क्लायंट"

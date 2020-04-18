@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:36+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2019-03-17 17:27+0000\n"
 "Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
@@ -96,29 +96,28 @@ msgstr "Tilføj en ny URL , f.eks. google.dk"
 msgid "Invalid URL"
 msgstr "Ugyldig URL"
 
-#: src/plug/Views/TimeLimitView.vala:57
-msgid "Limit computer use:"
-msgstr "Begræns computerbrug:"
+#: src/plug/Views/TimeLimitView.vala:37
+#, c-format
+msgid ""
+"%s will only be able to log in during this time, and will be automatically "
+"logged out once this period ends:"
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:67
-msgid "On weekdays and weekends"
-msgstr "På hverdage og i weekender"
-
-#: src/plug/Views/TimeLimitView.vala:69
-msgid "Only on weekdays"
-msgstr "Kun på hverdage"
-
-#: src/plug/Views/TimeLimitView.vala:70
-msgid "Only on weekends"
-msgstr "Kun i weekender"
-
-#: src/plug/Views/TimeLimitView.vala:80
+#: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
 msgstr "Hverdage"
 
-#: src/plug/Views/TimeLimitView.vala:84
+#: src/plug/Views/TimeLimitView.vala:45
 msgid "Weekends"
 msgstr "Weekender"
+
+#: src/plug/Views/TimeLimitView.vala:138
+msgid "From:"
+msgstr "Fra:"
+
+#: src/plug/Views/TimeLimitView.vala:144
+msgid "To:"
+msgstr "Til:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -143,14 +142,6 @@ msgstr "Min konto"
 #: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Andre konti"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Fra:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Til:"
 
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
@@ -177,6 +168,18 @@ msgstr "Forhindrer webside adgang"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Forhindrer applikation adgang"
+
+#~ msgid "Limit computer use:"
+#~ msgstr "Begræns computerbrug:"
+
+#~ msgid "On weekdays and weekends"
+#~ msgstr "På hverdage og i weekender"
+
+#~ msgid "Only on weekdays"
+#~ msgstr "Kun på hverdage"
+
+#~ msgid "Only on weekends"
+#~ msgstr "Kun i weekender"
 
 #~ msgid "preferences-system-parental-controls"
 #~ msgstr "preferences-system-parental-controls"

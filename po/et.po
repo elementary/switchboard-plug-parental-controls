@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:36+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2017-03-31 17:45+0000\n"
 "Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
 "Language-Team: Estonian <et@li.org>\n"
@@ -95,29 +95,28 @@ msgstr "Uue URL-i lisamine, nagu näiteks: google.ee"
 msgid "Invalid URL"
 msgstr "Vigane URL"
 
-#: src/plug/Views/TimeLimitView.vala:57
-msgid "Limit computer use:"
-msgstr "Arvuti kasutamise piiramine:"
+#: src/plug/Views/TimeLimitView.vala:37
+#, c-format
+msgid ""
+"%s will only be able to log in during this time, and will be automatically "
+"logged out once this period ends:"
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:67
-msgid "On weekdays and weekends"
-msgstr "Tööpäevadel ja nädalavahetustel"
-
-#: src/plug/Views/TimeLimitView.vala:69
-msgid "Only on weekdays"
-msgstr "Ainult tööpäevadel"
-
-#: src/plug/Views/TimeLimitView.vala:70
-msgid "Only on weekends"
-msgstr "Ainult nädalavahetustel"
-
-#: src/plug/Views/TimeLimitView.vala:80
+#: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
 msgstr "Tööpäevadel"
 
-#: src/plug/Views/TimeLimitView.vala:84
+#: src/plug/Views/TimeLimitView.vala:45
 msgid "Weekends"
 msgstr "Nädalavahetusel"
+
+#: src/plug/Views/TimeLimitView.vala:138
+msgid "From:"
+msgstr "Alates:"
+
+#: src/plug/Views/TimeLimitView.vala:144
+msgid "To:"
+msgstr "Kuni:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -142,14 +141,6 @@ msgstr "Minu konto"
 #: src/plug/Widgets/UserList.vala:107
 msgid "Other Accounts"
 msgstr "Teised kontod"
-
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Alates:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Kuni:"
 
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
@@ -176,6 +167,18 @@ msgstr ""
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr ""
+
+#~ msgid "Limit computer use:"
+#~ msgstr "Arvuti kasutamise piiramine:"
+
+#~ msgid "On weekdays and weekends"
+#~ msgstr "Tööpäevadel ja nädalavahetustel"
+
+#~ msgid "Only on weekdays"
+#~ msgstr "Ainult tööpäevadel"
+
+#~ msgid "Only on weekends"
+#~ msgstr "Ainult nädalavahetustel"
 
 #, fuzzy
 #~ msgid "Authentication is required to change Screen Time &amp; Limits"

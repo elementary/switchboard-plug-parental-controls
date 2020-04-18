@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:36+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2019-04-22 18:59+0000\n"
 "Last-Translator: Jan Marek <janmarek28@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -99,29 +99,28 @@ msgstr "Přidat novou URL, například: google.com"
 msgid "Invalid URL"
 msgstr "Neplatná URL"
 
-#: src/plug/Views/TimeLimitView.vala:57
-msgid "Limit computer use:"
-msgstr "Omezit používání počítače:"
+#: src/plug/Views/TimeLimitView.vala:37
+#, c-format
+msgid ""
+"%s will only be able to log in during this time, and will be automatically "
+"logged out once this period ends:"
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:67
-msgid "On weekdays and weekends"
-msgstr "Ve všední dny a o víkendech"
-
-#: src/plug/Views/TimeLimitView.vala:69
-msgid "Only on weekdays"
-msgstr "Pouze ve všední dny"
-
-#: src/plug/Views/TimeLimitView.vala:70
-msgid "Only on weekends"
-msgstr "Pouze o víkendech"
-
-#: src/plug/Views/TimeLimitView.vala:80
+#: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
 msgstr "Všední dny"
 
-#: src/plug/Views/TimeLimitView.vala:84
+#: src/plug/Views/TimeLimitView.vala:45
 msgid "Weekends"
 msgstr "Víkendy"
+
+#: src/plug/Views/TimeLimitView.vala:138
+msgid "From:"
+msgstr "Od:"
+
+#: src/plug/Views/TimeLimitView.vala:144
+msgid "To:"
+msgstr "Do:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -147,14 +146,6 @@ msgstr "Můj účet"
 msgid "Other Accounts"
 msgstr "Ostatní účty"
 
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "Od:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "Do:"
-
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "Některá nastavení vyžadují administrátorská oprávnění"
@@ -179,6 +170,18 @@ msgstr "Zabránit přístupu k webovým stránkám"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "Zabránit přístupu k aplikaci"
+
+#~ msgid "Limit computer use:"
+#~ msgstr "Omezit používání počítače:"
+
+#~ msgid "On weekdays and weekends"
+#~ msgstr "Ve všední dny a o víkendech"
+
+#~ msgid "Only on weekdays"
+#~ msgstr "Pouze ve všední dny"
+
+#~ msgid "Only on weekends"
+#~ msgstr "Pouze o víkendech"
 
 #~ msgid "preferences-system-parental-controls"
 #~ msgstr "preferences-system-parental-controls"

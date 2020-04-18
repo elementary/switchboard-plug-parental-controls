@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:36+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2018-02-11 00:08+0000\n"
 "Last-Translator: Lasha-Giorgi Esebua <lashagiorgiesebua@gmail.com>\n"
 "Language-Team: Georgian <https://weblate.elementary.io/projects/switchboard/"
@@ -96,29 +96,28 @@ msgstr ""
 msgid "Invalid URL"
 msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:57
-msgid "Limit computer use:"
-msgstr "კომპიუტერის გამოყენების შეზღუდვა:"
+#: src/plug/Views/TimeLimitView.vala:37
+#, c-format
+msgid ""
+"%s will only be able to log in during this time, and will be automatically "
+"logged out once this period ends:"
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:67
-msgid "On weekdays and weekends"
-msgstr "სამუშაო დღეებში და დასვენების დღეებში"
-
-#: src/plug/Views/TimeLimitView.vala:69
-msgid "Only on weekdays"
-msgstr "მხოლოდ სამუშაო დღეებში"
-
-#: src/plug/Views/TimeLimitView.vala:70
-msgid "Only on weekends"
-msgstr "მხოლოდ დასვენების დღეებში"
-
-#: src/plug/Views/TimeLimitView.vala:80
+#: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
 msgstr "სამუშაო დღეებში"
 
-#: src/plug/Views/TimeLimitView.vala:84
+#: src/plug/Views/TimeLimitView.vala:45
 msgid "Weekends"
 msgstr "დასვენების დღეებში"
+
+#: src/plug/Views/TimeLimitView.vala:138
+msgid "From:"
+msgstr "საიდან:"
+
+#: src/plug/Views/TimeLimitView.vala:144
+msgid "To:"
+msgstr "სადამდე:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -144,14 +143,6 @@ msgstr "ჩემი ანგარიში"
 msgid "Other Accounts"
 msgstr "სხვა ანგარიშები"
 
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "საიდან:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "სადამდე:"
-
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "ზოგიერთი პარამეტრი, შესაცვლელად საჭიროებს ადმინისტრატორის უფლებებს"
@@ -176,6 +167,18 @@ msgstr ""
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr ""
+
+#~ msgid "Limit computer use:"
+#~ msgstr "კომპიუტერის გამოყენების შეზღუდვა:"
+
+#~ msgid "On weekdays and weekends"
+#~ msgstr "სამუშაო დღეებში და დასვენების დღეებში"
+
+#~ msgid "Only on weekdays"
+#~ msgstr "მხოლოდ სამუშაო დღეებში"
+
+#~ msgid "Only on weekends"
+#~ msgstr "მხოლოდ დასვენების დღეებში"
 
 #~ msgid "You cannot run this application"
 #~ msgstr "თქვენ ამ პროგრამას ვერ გაუშვებთ"

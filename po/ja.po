@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-09 21:36+0000\n"
+"POT-Creation-Date: 2020-04-18 02:10+0000\n"
 "PO-Revision-Date: 2020-01-25 15:08+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -96,29 +96,28 @@ msgstr "新しい URL を追加してください。例: google.com"
 msgid "Invalid URL"
 msgstr "無効な URL です"
 
-#: src/plug/Views/TimeLimitView.vala:57
-msgid "Limit computer use:"
-msgstr "コンピューターの利用を制限:"
+#: src/plug/Views/TimeLimitView.vala:37
+#, c-format
+msgid ""
+"%s will only be able to log in during this time, and will be automatically "
+"logged out once this period ends:"
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:67
-msgid "On weekdays and weekends"
-msgstr "平日と週末"
-
-#: src/plug/Views/TimeLimitView.vala:69
-msgid "Only on weekdays"
-msgstr "平日のみ"
-
-#: src/plug/Views/TimeLimitView.vala:70
-msgid "Only on weekends"
-msgstr "週末のみ"
-
-#: src/plug/Views/TimeLimitView.vala:80
+#: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
 msgstr "平日"
 
-#: src/plug/Views/TimeLimitView.vala:84
+#: src/plug/Views/TimeLimitView.vala:45
 msgid "Weekends"
 msgstr "週末"
+
+#: src/plug/Views/TimeLimitView.vala:138
+msgid "From:"
+msgstr "開始:"
+
+#: src/plug/Views/TimeLimitView.vala:144
+msgid "To:"
+msgstr "終了:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -144,14 +143,6 @@ msgstr "自分のアカウント"
 msgid "Other Accounts"
 msgstr "ほかのアカウント"
 
-#: src/plug/Widgets/WeekSpinBox.vala:45
-msgid "From:"
-msgstr "開始:"
-
-#: src/plug/Widgets/WeekSpinBox.vala:47
-msgid "To:"
-msgstr "終了:"
-
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr "一部の設定変更には管理者権限が必要です"
@@ -175,6 +166,18 @@ msgstr "Web サイトへのアクセスを防止"
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
 msgstr "アプリケーションへのアクセスを防止"
+
+#~ msgid "Limit computer use:"
+#~ msgstr "コンピューターの利用を制限:"
+
+#~ msgid "On weekdays and weekends"
+#~ msgstr "平日と週末"
+
+#~ msgid "Only on weekdays"
+#~ msgstr "平日のみ"
+
+#~ msgid "Only on weekends"
+#~ msgstr "週末のみ"
 
 #~ msgid "Screen Time & Limits Client"
 #~ msgstr "スクリーンタイムと制限クライアント"
