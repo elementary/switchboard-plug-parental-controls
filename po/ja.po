@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2020-01-25 15:08+0000\n"
+"PO-Revision-Date: 2020-04-21 01:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ja/>\n"
@@ -21,14 +21,12 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-17 06:09+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "このアプリケーションの実行は許可されていません。"
+msgstr "このアプリケーションの実行は許可されていません"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "管理者がこのアプリケーションへのあなたのアクセスを制限しました。"
 
 #: src/client/Client.vala:158
 #, c-format
@@ -101,7 +99,7 @@ msgstr "無効な URL です"
 msgid ""
 "%s will only be able to log in during this time, and will be automatically "
 "logged out once this period ends:"
-msgstr ""
+msgstr "%s は以下の時間帯のみログインが可能です。以下の時間帯を超えると、自動的にログアウトされます。"
 
 #: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
