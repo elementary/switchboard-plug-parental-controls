@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2019-11-08 19:24+0000\n"
+"PO-Revision-Date: 2020-04-21 01:10+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
@@ -37,13 +37,11 @@ msgstr "利用中のアカウントも表示するように修正"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid "Redesign the app chooser"
-msgstr "アプリ選択画面を再設計"
+msgstr "アプリ選択画面のデザインを変更"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
-#, fuzzy
-#| msgid "Rename to Screen Time &amp; Limits"
 msgid "Redesign the Screen Time view"
-msgstr "スクリーンタイムと制限の設定に名称変更"
+msgstr "スクリーンタイムビューのデザインを変更"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Fix an issue with removing URLs from restricted websites"
@@ -51,23 +49,19 @@ msgstr "制限された Web サイトから URL を削除する際の問題を�
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
 msgid "Reliably apply time restrictions"
-msgstr ""
+msgstr "時間制限が正しく適用されるように修正"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
 #: data/screentime-limits.policy.in.in:10
-#, fuzzy
-#| msgid "Rename to Screen Time &amp; Limits"
 msgid "Manage Screen Time and Limits"
-msgstr "スクリーンタイムと制限の設定に名称変更"
+msgstr "スクリーンタイムと制限を管理"
 
 #: data/screentime-limits.policy.in.in:11
-#, fuzzy
-#| msgid "Rename to Screen Time &amp; Limits"
 msgid "Authentication is required to change Screen Time and Limits"
-msgstr "スクリーンタイムと制限の設定に名称変更"
+msgstr "スクリーンタイムと制限を変更するには認証が必要です"
 
 #~ msgid "Fix time restriction being applied even if master switch is disabled"
 #~ msgstr ""
