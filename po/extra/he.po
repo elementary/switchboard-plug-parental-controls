@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2020-04-15 11:10+0000\n"
+"PO-Revision-Date: 2020-04-21 01:10+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/he/>\n"
@@ -40,10 +40,8 @@ msgid "Redesign the app chooser"
 msgstr "עיצוב מחדש של בוחר היישומים"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
-#, fuzzy
-#| msgid "Rename to Screen Time &amp; Limits"
 msgid "Redesign the Screen Time view"
-msgstr "שינוי השם לזמן מסך ומגבלות"
+msgstr "עיצוב מחדש של תצוגת זמן המסך"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Fix an issue with removing URLs from restricted websites"
@@ -51,7 +49,7 @@ msgstr "תיקון תקלה עם הסרת כתובות מאתרים מוגבלי
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
 msgid "Reliably apply time restrictions"
-msgstr ""
+msgstr "החלת מגבלות זמן באופן אמין"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Updated translations"
