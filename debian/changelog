@@ -1,3 +1,88 @@
+switchboard-plug-parental-controls (3.0.0) bionic; urgency=medium
+
+  * Release 3.0.0 (#118)
+  * Update translation files
+  * Update translation files
+  * Update translation template
+  * TimeLimitView: Redesign (#113)
+  * AppData: Add Icon & Gettext domain (#117)
+  * Fix build with newer valac (#116)
+  * Update translation files
+  * Update translation template
+  * really fix build
+  * Fix build
+  * meson: use polkit_actiondir in data
+  * Update translation files
+  * Update translation template
+  * Translate policy file
+  * Update translation files
+  * Update translation template
+  * Policy: Fix description and rename file (#110)
+  * Update translation files
+  * Update translation template
+  * AppUnavailableDialog: Fix missing icon, update copy (#111)
+  * Update translation files
+  * Update translation template
+  * Update POTFILES
+  * Restriction rewrite (#87)
+  * use vala-lint action (#107)
+  * Fix lint errors (#106)
+  * Update translation template
+  * Merge branch 'master' of github.com:elementary/switchboard-plug-
+    parental-controls
+  * AppData: Add 2.2.0 release info
+  * Add Release to Actions
+  * Add Gettext Updates to Actions
+  * Split deb packaging into its own branch
+  * build: use define_variable with pkgconfig paths (#97)
+  * run installation in CI (#104)
+  * Use GitHub CI (#102)
+  * Delete CODE_OF_CONDUCT.md
+  * Delete FUNDING.yml
+  * build: add systemdunitdir option (#98)
+  * Plug: Change code name to RDNN
+  * Add Silesian and update translation template
+  * Create FUNDING.yml
+  * Parental Controls → Screen Time & Limits (#92)
+  * UserList: Show your user in sidebar (#67)
+  * UserConfig: inline namespacing (#91)
+  * UserConfig: convert get/set to properties (#90)
+  * Fix time restriction being applied even if master switch disabled
+    (#89)
+  * Fix wrong URL's passed to daemon after removal (#88)
+  * Constants: Remove unused strings (#82)
+  * Server: Code style fixes (#84)
+  * Update translation files
+  * Move views to Views folder and rename files (#68)
+  * GeneralBox: Remove dead code (#80)
+  * Rename General to Time Limits (#79)
+  * Remove unused Translation.vala (#77)
+  * Plug: cleanup (#74)
+  * AppUnavailableDialog: Use Granite.MessageDialog (#73)
+  * Meson: fix BASENAME warnings (#72)
+  * Create an AppRow class (#65)
+  * AppChooser: Redesign as in other plugs (#70)
+  * AppsView: Use application-add icon (#69)
+  * UserItem: GObject-style construction (#66)
+  * AppsBox: Use GObject-style construction (#64)
+  * AppsBox: Use Granite.HeaderLabel (#63)
+  * AppChooser: Use GObject style construction (#62)
+  * Move MainView to its own class (#61)
+  * Big cleanup
+  * Update AccountsService .vapi file
+  * Add AppData and translations (#58)
+  * Fix type-argument mismatch of GLib.List
+  * Use correct syntax for array parameter
+  * Travis: use juno-unstable docker (#56)
+  * Use systemd itself instead of libsystemd
+  * Update control (#57)
+  * Meson: Use GLib preset for l10n
+  * Added screenshot (#54)
+  * Updated translation templates
+  * Plug search improvements (#51)
+
+ -- elementary OS Team <builds@elementary.io>  Wed, 22 Apr 2020 21:08:19 +0000
+
 switchboard-plug-parental-controls (2.1.5) bionic; urgency=medium
 
   * New upstream release.
