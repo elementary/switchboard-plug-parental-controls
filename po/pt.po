@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2020-04-21 01:10+0000\n"
+"PO-Revision-Date: 2020-04-27 00:10+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pt/>\n"
@@ -65,7 +65,7 @@ msgstr "Impedir %s de usar as seguintes aplicações:"
 
 #: src/plug/Views/AppsView.vala:58
 msgid "Add Prevented Apps…"
-msgstr "Adicionar Aplicações a Impedir…"
+msgstr "Adicionar aplicações a impedir…"
 
 #: src/plug/Views/AppsView.vala:62
 msgid "Remove Selected App"
@@ -73,7 +73,7 @@ msgstr "Remover aplicação selecionada"
 
 #: src/plug/Views/AppsView.vala:67
 msgid "Clear All"
-msgstr "Apagar todas"
+msgstr "Limpar tudo"
 
 #: src/plug/Views/AppsView.vala:90
 msgid "Allow access to these apps with admin permission:"
@@ -90,7 +90,7 @@ msgstr "Adicionar URL"
 
 #: src/plug/Views/InternetView.vala:96
 msgid "Add a new URL, for example: google.com"
-msgstr "Adicionar um novo URL, por exemplo: google.com"
+msgstr "Adicionar um novo URL, por exemplo: google.pt"
 
 #: src/plug/Views/InternetView.vala:97
 msgid "Invalid URL"
@@ -102,7 +102,7 @@ msgid ""
 "%s will only be able to log in during this time, and will be automatically "
 "logged out once this period ends:"
 msgstr ""
-"%s só poderão iniciar sessão durante este período e serão automaticamente "
+"%s só poderá iniciar sessão durante este período e serão automaticamente "
 "encerradas quando este terminar:"
 
 #: src/plug/Views/TimeLimitView.vala:43
@@ -152,7 +152,7 @@ msgstr ""
 
 #: src/plug/Plug.vala:33
 msgid "Screen Time & Limits"
-msgstr "Tempo de ecrã & Limites"
+msgstr "Tempo de ecrã e Limitações"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
