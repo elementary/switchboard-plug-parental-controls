@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2020-04-27 00:10+0000\n"
+"PO-Revision-Date: 2020-04-28 00:41+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/pt/>\n"
@@ -21,19 +21,19 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
-msgstr "Tempo de ecrã e Definições de limites"
+msgstr "Definições de tempo e limites do ecrã"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
-msgstr "Configurar limites de utilização e restrições ao uso de aplicações"
+msgstr "Configurar limites de tempo e restringir o uso de aplicações"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Rename to Screen Time &amp; Limits"
-msgstr "Renomear para tempo de ecrã e Limites"
+msgstr "Renomear para Tempo e Limites do Ecrã"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
 msgid "Show your own account"
-msgstr "Mostrar a sua própria conta"
+msgstr "Mostrar a própria conta"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid "Redesign the app chooser"
@@ -61,7 +61,7 @@ msgstr "Gerir o tempo e os limites do ecrã"
 
 #: data/screentime-limits.policy.in.in:11
 msgid "Authentication is required to change Screen Time and Limits"
-msgstr "É necessária a autenticação para alterar o tempo e os limites do ecrã"
+msgstr "É necessária a autenticação para alterar o Tempo e Limites do Ecrã"
 
 #~ msgid "Fix time restriction being applied even if master switch is disabled"
 #~ msgstr ""
