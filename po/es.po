@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2020-03-10 17:09+0000\n"
+"PO-Revision-Date: 2020-04-30 06:10+0000\n"
 "Last-Translator: Adolfo Jayme Barrientos <fitojb@ubuntu.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/es/>\n"
@@ -21,14 +21,12 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "No se le permite ejecutar esta aplicación."
+msgstr "No se le permite ejecutar esta aplicación"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "Un administrador ha restringido su acceso a esta aplicación."
 
 #: src/client/Client.vala:158
 #, c-format
@@ -103,6 +101,8 @@ msgid ""
 "%s will only be able to log in during this time, and will be automatically "
 "logged out once this period ends:"
 msgstr ""
+"%s solo podrá acceder a su cuenta durante este período, tras el cual la "
+"sesión finalizará automáticamente:"
 
 #: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
