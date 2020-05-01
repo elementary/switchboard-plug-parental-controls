@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2019-12-19 13:07+0000\n"
+"PO-Revision-Date: 2020-05-02 11:10+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/tr/>\n"
@@ -56,10 +56,8 @@ msgid "Updated translations"
 msgstr "Çeviriler güncellendi"
 
 #: data/screentime-limits.policy.in.in:10
-#, fuzzy
-#| msgid "Screen Time &amp; Limits Settings"
 msgid "Manage Screen Time and Limits"
-msgstr "Ekran Zaman Aşımı ve Sınırlarının Ayarları"
+msgstr "Ekran Zaman Aşımı ve Sınırları Yönetin"
 
 #: data/screentime-limits.policy.in.in:11
 msgid "Authentication is required to change Screen Time and Limits"
