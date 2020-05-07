@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2020-01-05 17:07+0000\n"
+"PO-Revision-Date: 2020-05-08 10:10+0000\n"
 "Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/nl/>\n"
@@ -21,14 +21,12 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "U heeft geen toestemming om deze applicatie uit te voeren."
+msgstr "U heeft geen toestemming om deze applicatie uit te voeren"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "Een beheerder heeft uw toegang tot dit programma beperkt."
 
 #: src/client/Client.vala:158
 #, c-format
@@ -106,6 +104,8 @@ msgid ""
 "%s will only be able to log in during this time, and will be automatically "
 "logged out once this period ends:"
 msgstr ""
+"%s kan alleen inloggen gedurende deze tijd, en wordt automatisch uitgelogd "
+"als de tijd voorbij is:"
 
 #: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
