@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2020-05-08 10:10+0000\n"
+"PO-Revision-Date: 2020-05-11 20:10+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/cs/>\n"
@@ -21,35 +21,37 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
-msgstr ""
+msgstr "Čas před obrazovkou a nastavení limitů"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "Nastavit časové limity a omezení používání aplikace"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Rename to Screen Time &amp; Limits"
-msgstr ""
+msgstr "Přejmenování na Čas před obrazovkou a limity"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
 msgid "Show your own account"
-msgstr ""
+msgstr "Zobrazit váš vlastní účet"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid "Redesign the app chooser"
-msgstr ""
+msgstr "Předělání volby aplikací"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Redesign the Screen Time view"
-msgstr ""
+msgstr "Předělání pohledu na čas před obrazovkou"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
+"Oprava problému při odebírání URL adres ze seznamu stránek s omezeným "
+"přístupem"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
 msgid "Reliably apply time restrictions"
-msgstr ""
+msgstr "Spolehlivé uplatnění časových omezení"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Updated translations"
@@ -57,8 +59,8 @@ msgstr "Aktualizované překlady"
 
 #: data/screentime-limits.policy.in.in:10
 msgid "Manage Screen Time and Limits"
-msgstr ""
+msgstr "Správa času před obrazovkou a limitů"
 
 #: data/screentime-limits.policy.in.in:11
 msgid "Authentication is required to change Screen Time and Limits"
-msgstr ""
+msgstr "Pro změnu času před obrazovkou a limitů je zapotřebí se ověřit"
