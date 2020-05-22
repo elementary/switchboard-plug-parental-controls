@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2019-12-20 16:09+0000\n"
+"PO-Revision-Date: 2020-05-23 07:11+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/zh_Hans/>\n"
@@ -21,14 +21,12 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-03-14 07:34+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "您没有权限运行此应用。"
+msgstr "您没有权限运行此应用程序"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "您访问此应用程序的权限已被管理员限制。"
 
 #: src/client/Client.vala:158
 #, c-format
@@ -63,7 +61,7 @@ msgstr "阻止 %s 使用以下应用："
 
 #: src/plug/Views/AppsView.vala:58
 msgid "Add Prevented Apps…"
-msgstr "添加阻止的应用…"
+msgstr "添加要阻止的应用…"
 
 #: src/plug/Views/AppsView.vala:62
 msgid "Remove Selected App"
@@ -99,7 +97,7 @@ msgstr "无效网址"
 msgid ""
 "%s will only be able to log in during this time, and will be automatically "
 "logged out once this period ends:"
-msgstr ""
+msgstr "%s 只能在以下时间段内登录，超出所选时间段后系统将会自动注销："
 
 #: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
