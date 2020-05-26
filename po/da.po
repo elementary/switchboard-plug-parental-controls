@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2019-03-17 17:27+0000\n"
-"Last-Translator: Kaj Printz Madsen <kajprintz@gmail.com>\n"
+"PO-Revision-Date: 2020-05-27 12:11+0000\n"
+"Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/da/>\n"
 "Language: da\n"
@@ -17,18 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.4\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-03-19 06:51+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "Du har ikke tilladelse til at køre denne applikation."
+msgstr "Du har ikke tilladelse til at køre denne applikation"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "En administrator har begrænset din adgang til denne applikation."
 
 #: src/client/Client.vala:158
 #, c-format
@@ -102,6 +100,8 @@ msgid ""
 "%s will only be able to log in during this time, and will be automatically "
 "logged out once this period ends:"
 msgstr ""
+"%s kan kun logge ind i dette tidsrum, og bliver automatisk logget ud når "
+"perioden slutter:"
 
 #: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
@@ -125,7 +125,7 @@ msgstr "Søg efter Applikationer"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
-msgstr ""
+msgstr "Skærmtid"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -149,9 +149,8 @@ msgstr ""
 "Nogle indstillinger kræver administratorrettigheder for at blive ændret"
 
 #: src/plug/Plug.vala:33
-#, fuzzy
 msgid "Screen Time & Limits"
-msgstr "Tidsbegrænsninger"
+msgstr "Skærmtid & Begrænsninger"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
