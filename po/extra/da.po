@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2020-05-27 12:11+0000\n"
+"PO-Revision-Date: 2020-05-28 13:11+0000\n"
 "Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/da/>\n"
@@ -53,7 +53,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Updated translations"
-msgstr ""
+msgstr "Opdaterede oversættelser"
 
 #: data/screentime-limits.policy.in.in:10
 msgid "Manage Screen Time and Limits"
