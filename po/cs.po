@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2020-05-11 20:10+0000\n"
+"PO-Revision-Date: 2020-05-28 22:11+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/cs/>\n"
@@ -78,7 +78,7 @@ msgstr "Smazat vše"
 
 #: src/plug/Views/AppsView.vala:90
 msgid "Allow access to these apps with admin permission:"
-msgstr "Povolit přístup k těmto aplikacím se svolením admina:"
+msgstr "Povolit přístup k těmto aplikacím se svolením správce:"
 
 #: src/plug/Views/InternetView.vala:72
 #, c-format
@@ -148,7 +148,7 @@ msgstr "Ostatní účty"
 
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
-msgstr "Některá nastavení vyžadují administrátorská oprávnění"
+msgstr "Některá nastavení vyžadují oprávnění na úrovni správce systému"
 
 #: src/plug/Plug.vala:33
 msgid "Screen Time & Limits"
