@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-18 02:10+0000\n"
+"POT-Creation-Date: 2020-05-28 18:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,31 +26,32 @@ msgid "Configure time limits and restrict application usage"
 msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
-msgid "Rename to Screen Time &amp; Limits"
-msgstr ""
-
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
-msgid "Show your own account"
-msgstr ""
-
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
-msgid "Redesign the app chooser"
-msgstr ""
-
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
-msgid "Redesign the Screen Time view"
-msgstr ""
-
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
-msgid "Fix an issue with removing URLs from restricted websites"
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
+msgid "Updated translations"
 msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
-msgid "Reliably apply time restrictions"
+msgid "Rename to Screen Time &amp; Limits"
 msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
-msgid "Updated translations"
+msgid "Show your own account"
+msgstr ""
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:19
+msgid "Redesign the app chooser"
+msgstr ""
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
+msgid "Redesign the Screen Time view"
+msgstr ""
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
+msgid "Fix an issue with removing URLs from restricted websites"
+msgstr ""
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
+msgid "Reliably apply time restrictions"
 msgstr ""
 
 #: data/screentime-limits.policy.in.in:10
