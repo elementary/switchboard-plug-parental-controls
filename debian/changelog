@@ -1,3 +1,9 @@
+switchboard-plug-parental-controls (3.0.1) bionic; urgency=medium
+
+  * Release 3.0.1 (#131)
+
+ -- elementary OS Team <builds@elementary.io>  Thu, 28 May 2020 18:41:08 +0000
+
 switchboard-plug-parental-controls (3.0.0) bionic; urgency=medium
 
   * Release 3.0.0 (#118)
