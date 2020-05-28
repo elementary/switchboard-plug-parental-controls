@@ -7,6 +7,11 @@
   <icon type="stock">preferences-system-parental-controls</icon>
   <translation type="gettext">parental-controls-plug</translation>
   <releases>
+    <release version="3.0.1" date="2020-05-28" urgency="medium">
+      <description>
+        <p>Updated translations</p>
+      </description>
+    </release>
     <release version="3.0.0" date="2020-04-22" urgency="medium">
       <description>
         <p>Rename to Screen Time &amp; Limits</p>
