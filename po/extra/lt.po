@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-18 02:10+0000\n"
+"POT-Creation-Date: 2020-05-28 18:40+0000\n"
 "PO-Revision-Date: 2019-07-26 10:13+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -30,33 +30,34 @@ msgid "Configure time limits and restrict application usage"
 msgstr "Konfigūruoti laiko apribojimus ir riboti naudojimąsi programomis"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
+msgid "Updated translations"
+msgstr ""
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
 #, fuzzy
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Laiko prie ekrano ir jo apribojimų nustatymai"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Show your own account"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:19
 msgid "Redesign the app chooser"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
 #, fuzzy
 msgid "Redesign the Screen Time view"
 msgstr "Laiko prie ekrano ir jo apribojimų nustatymai"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
 msgid "Reliably apply time restrictions"
-msgstr ""
-
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
-msgid "Updated translations"
 msgstr ""
 
 #: data/screentime-limits.policy.in.in:10

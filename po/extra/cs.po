@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-18 02:10+0000\n"
+"POT-Creation-Date: 2020-05-28 18:40+0000\n"
 "PO-Revision-Date: 2020-05-11 20:10+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -28,34 +28,35 @@ msgid "Configure time limits and restrict application usage"
 msgstr "Nastavit časové limity a omezení používání aplikace"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
+msgid "Updated translations"
+msgstr "Aktualizované překlady"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Přejmenování na Čas před obrazovkou a limity"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:13
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Show your own account"
 msgstr "Zobrazit váš vlastní účet"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:19
 msgid "Redesign the app chooser"
 msgstr "Předělání volby aplikací"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
 msgid "Redesign the Screen Time view"
 msgstr "Předělání pohledu na čas před obrazovkou"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
 "Oprava problému při odebírání URL adres ze seznamu stránek s omezeným "
 "přístupem"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
 msgid "Reliably apply time restrictions"
 msgstr "Spolehlivé uplatnění časových omezení"
-
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
-msgid "Updated translations"
-msgstr "Aktualizované překlady"
 
 #: data/screentime-limits.policy.in.in:10
 msgid "Manage Screen Time and Limits"
