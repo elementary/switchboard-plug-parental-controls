@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-05-28 18:40+0000\n"
-"PO-Revision-Date: 2020-04-21 01:10+0000\n"
+"PO-Revision-Date: 2020-06-07 13:11+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/ja/>\n"
@@ -50,7 +50,7 @@ msgstr "スクリーンタイムビューのデザインを変更"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
 msgid "Fix an issue with removing URLs from restricted websites"
-msgstr "制限された Web サイトから URL を削除する際の問題を修正"
+msgstr "制限された Web サイトから URL を削除する際の不具合を修正"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
 msgid "Reliably apply time restrictions"
