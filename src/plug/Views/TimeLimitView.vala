@@ -34,20 +34,15 @@ namespace PC.Widgets {
         }
 
         construct {
-            var limit_description = new Gtk.Label (_("%s will only be able to log in during this time, and will be automatically logged out once this period ends:").printf (user.get_real_name ()));
-            limit_description.wrap = true;
-            limit_description.xalign = 0;
-
             title_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
-            weekday_box = new WeekSpinBox (_("Weekdays"), title_group);
+            weekday_box = new WeekSpinBox (_("Weekdays"), title_group, user);
 
-            weekend_box = new WeekSpinBox (_("Weekends"), title_group);
+            weekend_box = new WeekSpinBox (_("Weekends"), title_group, user);
 
             row_spacing = 24;
-            attach (limit_description, 0, 0);
-            attach (weekday_box, 0, 1);
-            attach (weekend_box, 0, 2);
+            attach (weekday_box, 0, 0);
+            attach (weekend_box, 0, 1);
             show_all ();
 
             weekday_box.changed.connect (() => update_pam ());
@@ -119,14 +114,16 @@ namespace PC.Widgets {
         public bool active { get; set; }
         public string title { get; construct; }
         public Gtk.SizeGroup size_group { get; construct; }
+        public weak Act.User user { get; construct; }
 
         private Granite.Widgets.TimePicker picker_from;
         private Granite.Widgets.TimePicker picker_to;
 
-        public WeekSpinBox (string title, Gtk.SizeGroup size_group) {
+        public WeekSpinBox (string title, Gtk.SizeGroup size_group, Act.User user) {
             Object (
                 title: title,
-                size_group: size_group
+                size_group: size_group,
+                user: user
             );
         }
 
@@ -152,18 +149,36 @@ namespace PC.Widgets {
 
             column_spacing = 12;
             row_spacing = 6;
+
+            var message_not_limited = _("Screen Time for %s will not be limited on this period.").printf (user.get_real_name ());
+            var message_limited = _("%s will only be able to log in during this time, and will be automatically logged out once this period ends:").printf (user.get_real_name ());
+
+            var limit_description = new Gtk.Label (message_not_limited);
+            limit_description.wrap = true;
+            limit_description.xalign = 0;
+
+
             attach (label, 0, 0);
             attach (enable_switch, 1, 0);
-            attach (from_label, 0, 1);
-            attach (picker_from, 1, 1);
-            attach (to_label, 2, 1);
-            attach (picker_to, 3, 1);
+            attach (limit_description, 0, 1, 4, 1);
+            attach (from_label, 0, 2);
+            attach (picker_from, 1, 2);
+            attach (to_label, 2, 2);
+            attach (picker_to, 3, 2);
 
             bind_property ("active", enable_switch, "active", GLib.BindingFlags.BIDIRECTIONAL);
             bind_property ("active", from_label, "sensitive", GLib.BindingFlags.SYNC_CREATE);
             bind_property ("active", picker_from, "sensitive", GLib.BindingFlags.SYNC_CREATE);
             bind_property ("active", to_label, "sensitive", GLib.BindingFlags.SYNC_CREATE);
             bind_property ("active", picker_to, "sensitive", GLib.BindingFlags.SYNC_CREATE);
+
+            notify["active"].connect (() => {
+                if (active) {
+                    limit_description.set_text (message_limited);
+                } else {
+                    limit_description.set_text (message_not_limited);
+                }
+            });
 
             picker_from.time_changed.connect (() => changed ());
             picker_to.time_changed.connect (() => changed ());
