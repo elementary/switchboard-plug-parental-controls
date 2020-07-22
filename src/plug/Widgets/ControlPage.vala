@@ -77,9 +77,9 @@ namespace PC.Widgets {
             description_message.wrap = true;
             description_message.wrap_mode = Pango.WrapMode.WORD;
             if (Utils.get_current_user () == user) {
-                description_message.set_text(_("Manage your usage of this device by setting limits on time usage, websites, and apps."));
+                description_message.set_text (_("Manage your usage of this device by setting limits on time usage, websites, and apps."));
             } else {
-                description_message.set_text(_("Supervise and manage usage of this device with limits on time usage, websites, and apps. Some limits may be bypassed with an administrator's authorization."));
+                description_message.set_text (_("Supervise and manage usage of this device with limits on time usage, websites, and apps. Some limits may be bypassed with an administrator's authorization."));
             }
 
             header_grid.attach (avatar, 0, 0, 1, 2);
