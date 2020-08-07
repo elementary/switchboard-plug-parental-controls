@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-18 02:10+0000\n"
+"POT-Creation-Date: 2020-08-07 22:40+0000\n"
 "PO-Revision-Date: 2015-09-06 19:10+0000\n"
 "Last-Translator: Ismael Cormier <ismael.cormier@outlook.com>\n"
 "Language-Team: French (Canada) <fr_CA@li.org>\n"
@@ -108,11 +108,11 @@ msgstr ""
 msgid "Weekends"
 msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:138
+#: src/plug/Views/TimeLimitView.vala:153
 msgid "From:"
 msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:144
+#: src/plug/Views/TimeLimitView.vala:160
 msgid "To:"
 msgstr ""
 

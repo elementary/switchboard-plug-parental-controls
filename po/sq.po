@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-18 02:10+0000\n"
+"POT-Creation-Date: 2020-08-07 22:40+0000\n"
 "PO-Revision-Date: 2016-09-21 15:05+0000\n"
 "Last-Translator: Indrit Bashkimi <indrit.bashkimi@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -110,11 +110,11 @@ msgstr "Ditët javore"
 msgid "Weekends"
 msgstr "Fundjavat"
 
-#: src/plug/Views/TimeLimitView.vala:138
+#: src/plug/Views/TimeLimitView.vala:153
 msgid "From:"
 msgstr "Nga:"
 
-#: src/plug/Views/TimeLimitView.vala:144
+#: src/plug/Views/TimeLimitView.vala:160
 msgid "To:"
 msgstr "Deri më:"
 
