@@ -7,6 +7,18 @@
   <icon type="stock">preferences-system-parental-controls</icon>
   <translation type="gettext">parental-controls-plug</translation>
   <releases>
+    <release version="3.0.2" date="2020-05-28" urgency="medium">
+      <description>
+        <p>Fixes</p>
+        <ul>
+          <li>Set default Screen Time from midnight to midnight to prevent accidental lockouts</li>
+        </ul>
+        <p>Minor updates</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
     <release version="3.0.1" date="2020-05-28" urgency="medium">
       <description>
         <p>Updated translations</p>
