@@ -36,9 +36,23 @@ namespace PC.Widgets {
         construct {
             title_group = new Gtk.SizeGroup (Gtk.SizeGroupMode.HORIZONTAL);
 
-            weekday_box = new WeekSpinBox (_("Weekdays"), title_group, user);
+            weekday_box = new WeekSpinBox (
+                ///TRANSLATORS: Refers to non-weekend days, as used in a title
+                _("Weekdays"),
+                ///TRANSLATORS: Refers to non-weekend days, as used in a sentence
+                _("weekdays"),
+                title_group,
+                user
+            );
 
-            weekend_box = new WeekSpinBox (_("Weekends"), title_group, user);
+            weekend_box = new WeekSpinBox (
+                ///TRANSLATORS: Refers to weekend days, as used in a title
+                _("Weekends"),
+                ///TRANSLATORS: Refers to weekend days, as used in a sentence
+                _("weekends"),
+                title_group,
+                user
+            );
 
             row_spacing = 24;
             attach (weekday_box, 0, 0);
@@ -113,15 +127,22 @@ namespace PC.Widgets {
 
         public bool active { get; set; }
         public string title { get; construct; }
+        public string sentence_case { get; construct; }
         public Gtk.SizeGroup size_group { get; construct; }
         public weak Act.User user { get; construct; }
 
         private Granite.Widgets.TimePicker picker_from;
         private Granite.Widgets.TimePicker picker_to;
 
-        public WeekSpinBox (string title, Gtk.SizeGroup size_group, Act.User user) {
+        public WeekSpinBox (
+            string title,
+            string sentence_case,
+            Gtk.SizeGroup size_group,
+            Act.User user
+        ) {
             Object (
                 title: title,
+                sentence_case: sentence_case,
                 size_group: size_group,
                 user: user
             );
@@ -150,8 +171,14 @@ namespace PC.Widgets {
             column_spacing = 12;
             row_spacing = 6;
 
-            var message_not_limited = _("Screen Time for %s will not be limited on this period.").printf (user.get_real_name ());
-            var message_limited = _("%s will only be able to log in during this time, and will be automatically logged out once this period ends:").printf (user.get_real_name ());
+            var message_not_limited = _("Screen Time for %s will not be limited during this period on %s.").printf (
+                user.get_real_name (),
+                sentence_case
+            );
+            var message_limited = _("%s will only be able to log in during this time on %s, and will be automatically logged out once this period ends:").printf (
+                user.get_real_name (),
+                sentence_case
+            );
 
             var limit_description = new Gtk.Label (message_not_limited);
             limit_description.wrap = true;
