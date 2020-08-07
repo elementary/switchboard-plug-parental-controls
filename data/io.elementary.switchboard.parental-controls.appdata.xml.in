@@ -11,7 +11,7 @@
       <description>
         <p>Fixes</p>
         <ul>
-          <li>Set default Screen Time to midnight to midnight to prevent accidental lockouts</li>
+          <li>Set default Screen Time from midnight to midnight to prevent accidental lockouts</li>
         </ul>
         <p>Minor updates</p>
         <ul>
