@@ -171,10 +171,13 @@ namespace PC.Widgets {
             column_spacing = 12;
             row_spacing = 6;
 
+            ///TRANSLATORS: First %s is the user's name, second is the sentence-case for "weekday" or "weekend"
             var message_not_limited = _("Screen Time for %s will not be limited during this period on %s.").printf (
                 user.get_real_name (),
                 sentence_case
             );
+
+            ///TRANSLATORS: First %s is the user's name, second is the sentence-case for "weekday" or "weekend"
             var message_limited = _("%s will only be able to log in during this time on %s, and will be automatically logged out once this period ends:").printf (
                 user.get_real_name (),
                 sentence_case
