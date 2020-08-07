@@ -136,10 +136,19 @@ namespace PC.Widgets {
             enable_switch.valign = Gtk.Align.CENTER;
 
             var today_local = new GLib.DateTime.now_local ();
-            var today_start = new GLib.DateTime.local (today_local.get_year (), today_local.get_month (),
-                                                      today_local.get_day_of_month (), 0, 0, 0);
-            var today_end = new GLib.DateTime.local (today_local.get_year (), today_local.get_month (),
-                                                    today_local.get_day_of_month (), 23, 59, 59);
+            var today_start = new GLib.DateTime.local (
+                today_local.get_year (),
+                today_local.get_month (),
+                today_local.get_day_of_month (),
+                0, 0, 0
+            );
+
+            var today_end = new GLib.DateTime.local (
+                today_local.get_year (),
+                today_local.get_month (),
+                today_local.get_day_of_month (),
+                23, 59, 59
+            );
 
             var from_label = new Gtk.Label (_("From:"));
             from_label.halign = Gtk.Align.END;
