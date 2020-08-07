@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-18 02:10+0000\n"
+"POT-Creation-Date: 2020-08-07 22:40+0000\n"
 "PO-Revision-Date: 2018-06-20 00:00+0000\n"
 "Last-Translator: janus tolkien <janustolkien@gmail.com>\n"
 "Language-Team: Kurdish <https://weblate.elementary.io/projects/switchboard/"
@@ -109,11 +109,11 @@ msgstr "Rojên navhefteyê"
 msgid "Weekends"
 msgstr "Rojên dawiya hefteyê"
 
-#: src/plug/Views/TimeLimitView.vala:138
+#: src/plug/Views/TimeLimitView.vala:153
 msgid "From:"
 msgstr "Ji:"
 
-#: src/plug/Views/TimeLimitView.vala:144
+#: src/plug/Views/TimeLimitView.vala:160
 msgid "To:"
 msgstr "Ji bo:"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-18 02:10+0000\n"
+"POT-Creation-Date: 2020-08-07 22:40+0000\n"
 "PO-Revision-Date: 2020-04-21 01:10+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -112,11 +112,11 @@ msgstr "Dies feiners"
 msgid "Weekends"
 msgstr "Caps de setmana"
 
-#: src/plug/Views/TimeLimitView.vala:138
+#: src/plug/Views/TimeLimitView.vala:153
 msgid "From:"
 msgstr "De:"
 
-#: src/plug/Views/TimeLimitView.vala:144
+#: src/plug/Views/TimeLimitView.vala:160
 msgid "To:"
 msgstr "A:"
 

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-18 02:10+0000\n"
+"POT-Creation-Date: 2020-08-07 22:40+0000\n"
 "PO-Revision-Date: 2019-04-08 05:53+0000\n"
 "Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
@@ -104,11 +104,11 @@ msgstr "Hari kerja"
 msgid "Weekends"
 msgstr "Akhir pekan"
 
-#: src/plug/Views/TimeLimitView.vala:138
+#: src/plug/Views/TimeLimitView.vala:153
 msgid "From:"
 msgstr "Dari:"
 
-#: src/plug/Views/TimeLimitView.vala:144
+#: src/plug/Views/TimeLimitView.vala:160
 msgid "To:"
 msgstr "Kepada:"
 
