@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2020-06-07 13:11+0000\n"
+"PO-Revision-Date: 2020-08-11 12:13+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/ja/>\n"
@@ -29,17 +29,17 @@ msgstr "時間制限を設定し、アプリケーションの使用を制限し
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Fixes"
-msgstr ""
+msgstr "修正点"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
-msgstr ""
+msgstr "誤ってロックアウトされてしまわないように、デフォルトのスクリーンタイムを深夜から深夜に変更"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Minor updates"
-msgstr ""
+msgstr "軽微なアップデート"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:24

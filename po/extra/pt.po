@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2020-04-30 06:10+0000\n"
+"PO-Revision-Date: 2020-08-11 12:13+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/pt/>\n"
@@ -29,17 +29,19 @@ msgstr "Configurar limites de tempo e restringir o uso de aplicações"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Fixes"
-msgstr ""
+msgstr "Correções"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 msgstr ""
+"Define o tempo de ecrã predefinido da meia-noite à meia-noite para evitar "
+"bloqueios acidentais"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Minor updates"
-msgstr ""
+msgstr "Pequenas atualizações"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:24
