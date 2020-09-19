@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2020-09-18 23:14+0000\n"
+"PO-Revision-Date: 2020-09-20 14:33+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/uk/>\n"
@@ -64,11 +64,11 @@ msgstr "Часу залишилось"
 #: src/plug/Views/AppsView.vala:48
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr "Запобіжати %s від використання цих додатків:"
+msgstr "Заборонити %s використовувати ці застосунки:"
 
 #: src/plug/Views/AppsView.vala:58
 msgid "Add Prevented Apps…"
-msgstr "Додати заборонені додатки..."
+msgstr "Додати заборонені застосунки…"
 
 #: src/plug/Views/AppsView.vala:62
 msgid "Remove Selected App"
