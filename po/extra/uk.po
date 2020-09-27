@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2020-09-26 21:14+0000\n"
+"PO-Revision-Date: 2020-09-28 10:14+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/uk/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
-msgstr ""
+msgstr "Параметри обмежень та тривалості роботи екрану"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
@@ -30,13 +30,15 @@ msgstr "Налаштовування обмеження за часом та к�
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Fixes"
-msgstr ""
+msgstr "Виправлення"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 msgstr ""
+"Встановіть стандартний час екрану з півночі до півночі, щоб запобігти "
+"випадковим блокуванням"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Minor updates"
@@ -50,32 +52,32 @@ msgstr "Оновлено переклади"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:29
 msgid "Rename to Screen Time &amp; Limits"
-msgstr ""
+msgstr "Перейменування на обмеження та тривалість роботи екрану"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
 msgid "Show your own account"
-msgstr ""
+msgstr "Показ вашого власного облікового запису"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
 msgid "Redesign the app chooser"
-msgstr ""
+msgstr "Перероблено меню вибору застосунків"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:32
 msgid "Redesign the Screen Time view"
-msgstr ""
+msgstr "Перероблено вигляд вибору часу роботи екрана"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
 msgid "Fix an issue with removing URLs from restricted websites"
-msgstr ""
+msgstr "Розв'язано проблему зникання URL-адрес вебсайтів з обмеженим доступом"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
 msgid "Reliably apply time restrictions"
-msgstr ""
+msgstr "Надійне застосовування обмеження за часом"
 
 #: data/screentime-limits.policy.in.in:10
 msgid "Manage Screen Time and Limits"
-msgstr ""
+msgstr "Керуйте обмеженнями та часом роботи екрану"
 
 #: data/screentime-limits.policy.in.in:11
 msgid "Authentication is required to change Screen Time and Limits"
-msgstr ""
+msgstr "Необхідна автентифікація для зміни обмежень та часу роботи екрану"
