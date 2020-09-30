@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2020-04-21 01:10+0000\n"
+"PO-Revision-Date: 2020-10-01 16:14+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/fr/>\n"
@@ -116,11 +116,11 @@ msgstr "Les week-ends"
 
 #: src/plug/Views/TimeLimitView.vala:153
 msgid "From:"
-msgstr "De :"
+msgstr "À partir de :"
 
 #: src/plug/Views/TimeLimitView.vala:160
 msgid "To:"
-msgstr "À :"
+msgstr "Jusqu'à :"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
