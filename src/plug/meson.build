@@ -25,6 +25,7 @@ shared_module(
         gobject_dep,
         granite_dep,
         gtk_dep,
+        hdy_dep,
         polkit_dep,
         switchboard_dep,
         posix_dep
