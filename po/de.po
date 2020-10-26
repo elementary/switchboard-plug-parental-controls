@@ -8,27 +8,25 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2019-01-02 21:46+0000\n"
-"Last-Translator: Jörg Arnold <j.ar@mailbox.org>\n"
-"Language-Team: German <https://weblate.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2020-10-28 00:15+0000\n"
+"Last-Translator: Uwe S <saabisto@gmx.de>\n"
+"Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.0.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "Sie sind nicht berechtigt diese Anwendung auszuführen."
+msgstr "Sie sind nicht berechtigt, diese Anwendung auszuführen"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "Ein Systemverwalter hat Ihnen den Zugriff auf diese Anwendung verwehrt."
 
 #: src/client/Client.vala:158
 #, c-format
@@ -104,6 +102,8 @@ msgid ""
 "%s will only be able to log in during this time, and will be automatically "
 "logged out once this period ends:"
 msgstr ""
+"%s kann sich nur zu dieser Uhrzeit anmelden und wird automatisch abgemeldet, "
+"sobald die Zeitspanne abgelaufen ist"
 
 #: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
@@ -126,8 +126,9 @@ msgid "Search Applications"
 msgstr "Anwendungen suchen"
 
 #: src/plug/Widgets/ControlPage.vala:51
+#, fuzzy
 msgid "Screen Time"
-msgstr ""
+msgstr "Rechnerzeit"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -152,9 +153,8 @@ msgstr ""
 "werden"
 
 #: src/plug/Plug.vala:33
-#, fuzzy
 msgid "Screen Time & Limits"
-msgstr "Verbleibende Zeit"
+msgstr "Rechnerzeit & Beschränkungen"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
