@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2019-11-25 09:25+0000\n"
+"PO-Revision-Date: 2020-10-29 18:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/mr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.7.1\n"
+"X-Generator: Weblate 3.9.1\n"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
@@ -29,17 +29,19 @@ msgstr "वेळ मर्यादा कॉन्फिगर करा आ�
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Fixes"
-msgstr ""
+msgstr "निराकारणे"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 msgstr ""
+"अपघाती लॉकआउट्स टाळण्यासाठी मध्यरात्र ते मध्यरात्री दरम्यान डीफॉल्ट स्क्रीन "
+"वेळ सेट करा"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Minor updates"
-msgstr ""
+msgstr "किरकोळ अद्यतने"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:24
@@ -60,10 +62,8 @@ msgid "Redesign the app chooser"
 msgstr "अ‍ॅप निवडकर्ता पुन्हा डिझाइन करा"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:32
-#, fuzzy
-#| msgid "Rename to Screen Time &amp; Limits"
 msgid "Redesign the Screen Time view"
-msgstr "स्क्रीन वेळ आणि मर्यादा असे नाव बदला"
+msgstr "स्क्रीन वेळ दृश्य पुन्हा डिझाइन करा"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
 msgid "Fix an issue with removing URLs from restricted websites"
@@ -71,19 +71,15 @@ msgstr "प्रतिबंधित वेबसाइटवरून URL ह
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
 msgid "Reliably apply time restrictions"
-msgstr ""
+msgstr "विश्वासाने वेळेचे निर्बंध लागू करा"
 
 #: data/screentime-limits.policy.in.in:10
-#, fuzzy
-#| msgid "Rename to Screen Time &amp; Limits"
 msgid "Manage Screen Time and Limits"
-msgstr "स्क्रीन वेळ आणि मर्यादा असे नाव बदला"
+msgstr "स्क्रीन वेळ आणि मर्यादा व्यवस्थापित करा"
 
 #: data/screentime-limits.policy.in.in:11
-#, fuzzy
-#| msgid "Rename to Screen Time &amp; Limits"
 msgid "Authentication is required to change Screen Time and Limits"
-msgstr "स्क्रीन वेळ आणि मर्यादा असे नाव बदला"
+msgstr "स्क्रीन वेळ आणि मर्यादा बदलण्यासाठी प्रमाणीकरण आवश्यक आहे"
 
 #~ msgid "Fix time restriction being applied even if master switch is disabled"
 #~ msgstr ""
