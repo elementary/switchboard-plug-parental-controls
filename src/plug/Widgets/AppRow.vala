@@ -26,6 +26,55 @@ public class PC.Widgets.AppRow : Gtk.ListBoxRow {
         Object (app_info: app_info);
     }
 
+    public bool is_flatpak {
+        get {
+            return ((DesktopAppInfo)app_info).has_key ("X-Flatpak");
+        }
+    }
+
+    public string? flatpak_ref {
+        owned get {
+            if (!is_flatpak) {
+                return null;
+            }
+
+            string id = ((DesktopAppInfo)app_info).get_string ("X-Flatpak");
+            string? ref = null;
+
+            try {
+                var installation = new Flatpak.Installation.system ();
+                var refs = installation.list_installed_refs_by_kind (Flatpak.RefKind.APP);
+                for (int i = 0; i < refs.length; i++) {
+                    unowned Flatpak.InstalledRef installed_ref = refs.@get (i);
+                    if (installed_ref.get_name () == id) {
+                        ref = installed_ref.format_ref ();
+                    }
+                }
+            } catch (Error e) {
+                // pass
+            }
+
+            try {
+                var installation = new Flatpak.Installation.user ();
+                var refs = installation.list_installed_refs_by_kind (Flatpak.RefKind.APP);
+                for (int i = 0; i < refs.length; i++) {
+                    unowned Flatpak.InstalledRef installed_ref = refs.@get (i);
+                    if (installed_ref.get_name () == id) {
+                        ref = installed_ref.format_ref ();
+                    }
+                }
+            } catch (Error e) {
+                // pass
+            }
+
+            if (ref != null) {
+                return ref;
+            }
+
+            return null;
+        }
+    }
+
     construct {
         var image = new Gtk.Image.from_gicon (app_info.get_icon (), Gtk.IconSize.LARGE_TOOLBAR);
         image.pixel_size = 32;

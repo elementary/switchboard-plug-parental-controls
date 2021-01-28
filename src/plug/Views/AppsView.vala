@@ -31,11 +31,19 @@ namespace PC.Widgets {
         private Gtk.Button remove_button;
         private Gtk.Button clear_button;
 
+        private Mct.Manager malcontent;
+
         public AppsBox (Act.User user) {
             Object (user: user);
         }
 
         construct {
+            try {
+                malcontent = new Mct.Manager (GLib.Bus.get_sync (GLib.BusType.SYSTEM));
+            } catch (Error e) {
+                warning ("Unable to init malcontent support: %s", e.message);
+            }
+
             entries = new List<PC.Widgets.AppRow> ();
 
             column_spacing = 12;
@@ -166,8 +174,26 @@ namespace PC.Widgets {
             }
 
             string[] targets = {};
+
+            var app_filter_builder = new Mct.AppFilterBuilder ();
+
             foreach (var entry in entries) {
-                targets += Utils.info_to_exec_path (entry.app_info, null);
+                if (entry.is_flatpak) {
+                    var flatpak_ref = entry.flatpak_ref;
+                    if (flatpak_ref != null) {
+                        app_filter_builder.blocklist_flatpak_ref (flatpak_ref);
+                    }
+                } else {
+                    targets += Utils.info_to_exec_path (entry.app_info, null);
+                }
+            }
+
+            if (malcontent != null) {
+                try {
+                    malcontent.set_app_filter (user.uid, app_filter_builder.end (), Mct.ManagerSetValueFlags.NONE);
+                } catch (Error e) {
+                    warning ("Failed to set malcontent app filter: %s", e.message);
+                }
             }
 
             Utils.get_api ().set_user_daemon_targets.begin (user.get_user_name (), targets);
@@ -179,18 +205,30 @@ namespace PC.Widgets {
         }
 
         private async void load_existing () {
+            Mct.AppFilter? app_filter = null;
+
+            if (malcontent != null) {
+                app_filter = yield malcontent.get_app_filter_async (user.uid, Mct.ManagerGetValueFlags.NONE, null);
+            }
+
             try {
                 string[] targets = yield Utils.get_api ().get_user_daemon_targets (user.get_user_name ());
                 bool admin = yield Utils.get_api ().get_user_daemon_admin (user.get_user_name ());
                 admin_switch_btn.set_active (admin);
 
                 List<AppInfo> infos = AppInfo.get_all ();
-                foreach (string target in targets) {
-                    foreach (unowned GLib.AppInfo info in infos) {
-                        if (info.should_show () && Utils.info_to_exec_path (info, null) == target) {
+                foreach (unowned GLib.AppInfo info in infos) {
+                    unowned DesktopAppInfo desktop_app = (DesktopAppInfo)info;
+                    if (desktop_app.has_key ("X-Flatpak")) {
+                        if (app_filter != null && !app_filter.is_flatpak_app_allowed (desktop_app.get_string ("X-Flatpak"))) {
                             load_info (info);
-                            break;
                         }
+
+                        continue;
+                    }
+
+                    if (info.should_show () && Utils.info_to_exec_path (info, null) in targets) {
+                        load_info (info);
                     }
                 }
             } catch (Error e) {
