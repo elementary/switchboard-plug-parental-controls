@@ -204,6 +204,24 @@ namespace PC.Widgets {
             clear_button.sensitive = (entries.length () > 0);
         }
 
+        public void set_restrictions_active (bool active) {
+            if (malcontent == null) {
+                return;
+            }
+
+            // Clear the restrictions list if restrictions are disabled for this user
+            if (!active) {
+                var app_filter_builder = new Mct.AppFilterBuilder ();
+                try {
+                    malcontent.set_app_filter (user.uid, app_filter_builder.end (), Mct.ManagerSetValueFlags.NONE);
+                } catch (Error e) {
+                    warning ("Failed to set malcontent app filter: %s", e.message);
+                }
+            } else {
+                update_targets ();
+            }
+        }
+
         private async void load_existing () {
             Mct.AppFilter? app_filter = null;
 
@@ -220,7 +238,7 @@ namespace PC.Widgets {
                 foreach (unowned GLib.AppInfo info in infos) {
                     unowned DesktopAppInfo desktop_app = (DesktopAppInfo)info;
                     if (desktop_app.has_key ("X-Flatpak")) {
-                        if (app_filter != null && !app_filter.is_flatpak_app_allowed (desktop_app.get_string ("X-Flatpak"))) {
+                        if (app_filter != null && !app_filter.is_appinfo_allowed (desktop_app)) {
                             load_info (info);
                         }
 
