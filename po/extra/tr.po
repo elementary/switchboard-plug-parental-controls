@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2020-10-29 18:15+0000\n"
+"PO-Revision-Date: 2021-01-29 13:54+0000\n"
 "Last-Translator: Ozgur Baskin <bebeto_baskin@yahoo.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
@@ -29,7 +29,7 @@ msgstr "Zaman sınırlamasını ve uygulama kullanımını kısıtlamasını yap
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Fixes"
-msgstr ""
+msgstr "Düzeltmeler"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid ""
