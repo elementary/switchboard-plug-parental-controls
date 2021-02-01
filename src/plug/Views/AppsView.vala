@@ -38,12 +38,6 @@ namespace PC.Widgets {
         }
 
         construct {
-            try {
-                malcontent = new Mct.Manager (GLib.Bus.get_sync (GLib.BusType.SYSTEM));
-            } catch (Error e) {
-                warning ("Unable to init malcontent support: %s", e.message);
-            }
-
             entries = new List<PC.Widgets.AppRow> ();
 
             column_spacing = 12;
@@ -223,6 +217,12 @@ namespace PC.Widgets {
         }
 
         private async void load_existing () {
+            try {
+                malcontent = new Mct.Manager (yield GLib.Bus.@get (GLib.BusType.SYSTEM));
+            } catch (Error e) {
+                warning ("Unable to init malcontent support: %s", e.message);
+            }
+
             Mct.AppFilter? app_filter = null;
 
             if (malcontent != null) {
