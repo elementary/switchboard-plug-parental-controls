@@ -226,7 +226,11 @@ namespace PC.Widgets {
             Mct.AppFilter? app_filter = null;
 
             if (malcontent != null) {
-                app_filter = yield malcontent.get_app_filter_async (user.uid, Mct.ManagerGetValueFlags.NONE, null);
+                try {
+                    app_filter = yield malcontent.get_app_filter_async (user.uid, Mct.ManagerGetValueFlags.NONE, null);
+                } catch (Error e) {
+                    warning ("Unable to get malcontent app filter: %s", e.message);
+                }
             }
 
             try {
@@ -238,6 +242,7 @@ namespace PC.Widgets {
                 foreach (unowned GLib.AppInfo info in infos) {
                     unowned DesktopAppInfo desktop_app = (DesktopAppInfo)info;
                     if (desktop_app.has_key ("X-Flatpak")) {
+                        // Show the flatpak in the app list if it's been blocked for this user
                         if (app_filter != null && !app_filter.is_appinfo_allowed (desktop_app)) {
                             load_info (info);
                         }

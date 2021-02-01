@@ -18,6 +18,7 @@
     <annotate key="org.freedesktop.policykit.exec.path">@CLIENT_PATH@</annotate>
     <annotate key="org.freedesktop.policykit.imply">org.freedesktop.parental-controls.user-administration</annotate>
     <annotate key="org.freedesktop.policykit.imply">com.endlessm.ParentalControls.AppFilter.ChangeOwn</annotate>
+    <annotate key="org.freedesktop.policykit.imply">com.endlessm.ParentalControls.AppFilter.ChangeAny</annotate>
   </action>
 
 </policyconfig>
