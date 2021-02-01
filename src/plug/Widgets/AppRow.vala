@@ -22,6 +22,9 @@ public class PC.Widgets.AppRow : Gtk.ListBoxRow {
 
     public AppInfo app_info { get; construct; }
 
+    private static Flatpak.Installation system_installation;
+    private static Flatpak.Installation user_installation;
+
     public AppRow (AppInfo app_info) {
         Object (app_info: app_info);
     }
@@ -39,39 +42,7 @@ public class PC.Widgets.AppRow : Gtk.ListBoxRow {
             }
 
             string id = ((DesktopAppInfo)app_info).get_string ("X-Flatpak");
-            string? ref = null;
-
-            try {
-                var installation = new Flatpak.Installation.system ();
-                var refs = installation.list_installed_refs_by_kind (Flatpak.RefKind.APP);
-                for (int i = 0; i < refs.length; i++) {
-                    unowned Flatpak.InstalledRef installed_ref = refs.@get (i);
-                    if (installed_ref.get_name () == id) {
-                        ref = installed_ref.format_ref ();
-                    }
-                }
-            } catch (Error e) {
-                // pass
-            }
-
-            try {
-                var installation = new Flatpak.Installation.user ();
-                var refs = installation.list_installed_refs_by_kind (Flatpak.RefKind.APP);
-                for (int i = 0; i < refs.length; i++) {
-                    unowned Flatpak.InstalledRef installed_ref = refs.@get (i);
-                    if (installed_ref.get_name () == id) {
-                        ref = installed_ref.format_ref ();
-                    }
-                }
-            } catch (Error e) {
-                // pass
-            }
-
-            if (ref != null) {
-                return ref;
-            }
-
-            return null;
+            return get_flatpak_ref_for_id (id);
         }
     }
 
@@ -97,5 +68,47 @@ public class PC.Widgets.AppRow : Gtk.ListBoxRow {
         main_grid.attach (app_comment, 1, 1);
 
         add (main_grid);
+    }
+
+    public static string? get_flatpak_ref_for_id (string id) {
+        string? ref = null;
+
+        try {
+            if (system_installation == null) {
+                system_installation = new Flatpak.Installation.system ();
+            }
+
+            var refs = system_installation.list_installed_refs_by_kind (Flatpak.RefKind.APP);
+            for (int i = 0; i < refs.length; i++) {
+                unowned Flatpak.InstalledRef installed_ref = refs.@get (i);
+                if (installed_ref.get_name () == id) {
+                    ref = installed_ref.format_ref ();
+                }
+            }
+        } catch (Error e) {
+            // pass
+        }
+
+        try {
+            if (user_installation == null) {
+                user_installation = new Flatpak.Installation.user ();
+            }
+
+            var refs = user_installation.list_installed_refs_by_kind (Flatpak.RefKind.APP);
+            for (int i = 0; i < refs.length; i++) {
+                unowned Flatpak.InstalledRef installed_ref = refs.@get (i);
+                if (installed_ref.get_name () == id) {
+                    ref = installed_ref.format_ref ();
+                }
+            }
+        } catch (Error e) {
+            // pass
+        }
+
+        if (ref != null) {
+            return ref;
+        }
+
+        return null;
     }
 }
