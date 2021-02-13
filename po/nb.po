@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2019-06-27 14:12+0000\n"
+"PO-Revision-Date: 2021-02-13 13:01+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/nb/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -28,7 +28,7 @@ msgstr "Du har ikke rettigheter til å kjøre dette programmet."
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "En administrator har begrenset din tilgang til dette programmet."
 
 #: src/client/Client.vala:158
 #, c-format
@@ -102,6 +102,8 @@ msgid ""
 "%s will only be able to log in during this time, and will be automatically "
 "logged out once this period ends:"
 msgstr ""
+"%s vil kun kunne logge inn i dette tidsrommet, og vil automatisk bli "
+"utlogget når perioden er over:"
 
 #: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
@@ -125,7 +127,7 @@ msgstr "Søk i programmer"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
-msgstr ""
+msgstr "Skjermtid"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
