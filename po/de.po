@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2020-10-28 00:15+0000\n"
+"PO-Revision-Date: 2021-02-15 21:09+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/de/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -31,7 +31,7 @@ msgstr "Ein Systemverwalter hat Ihnen den Zugriff auf diese Anwendung verwehrt."
 #: src/client/Client.vala:158
 #, c-format
 msgid "This computer will lock after %s."
-msgstr "Dieser Rechner wird in %s gesperrt"
+msgstr "Dieser Rechner wird in %s gesperrt."
 
 #: src/client/Client.vala:160
 #, c-format
@@ -103,7 +103,7 @@ msgid ""
 "logged out once this period ends:"
 msgstr ""
 "%s kann sich nur zu dieser Uhrzeit anmelden und wird automatisch abgemeldet, "
-"sobald die Zeitspanne abgelaufen ist"
+"sobald diese Zeitspanne abgelaufen ist:"
 
 #: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
@@ -126,7 +126,6 @@ msgid "Search Applications"
 msgstr "Anwendungen suchen"
 
 #: src/plug/Widgets/ControlPage.vala:51
-#, fuzzy
 msgid "Screen Time"
 msgstr "Rechnerzeit"
 
@@ -159,7 +158,7 @@ msgstr "Rechnerzeit & Beschränkungen"
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
 msgstr ""
-"Zeitliche Beschränkungen einrichten und Anwendungsbenutzung einschränken"
+"Zeitliche Beschränkungen einrichten und Nutzung von Anwendungen beschränken"
 
 #: src/plug/Plug.vala:61
 msgid "Limit computer use"
