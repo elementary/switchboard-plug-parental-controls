@@ -21,7 +21,7 @@ Homepage: https://github.com/elementary/switchboard-plug-parental-controls
 
 Package: switchboard-plug-parental-controls
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: malcontent, ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
 Description: Manage Screen Time & Limits
  Switchboard plug for managing Screen Time & Limits.
