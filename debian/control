@@ -6,10 +6,12 @@ Build-Depends: debhelper (>= 10.5.1),
                gettext,
                libaccountsservice-dev,
                libdbus-1-dev,
+               libflatpak-dev,
                libgranite-dev,
                libglib2.0-dev,
                libgtk-3-dev,
                libhandy-1-dev (>= 0.90.0),
+               libmalcontent-0-dev,
                libpolkit-gobject-1-dev,
                libswitchboard-2.0-dev,
                meson (>= 0.46.1),
@@ -21,7 +23,7 @@ Homepage: https://github.com/elementary/switchboard-plug-parental-controls
 
 Package: switchboard-plug-parental-controls
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: malcontent, ${misc:Depends}, ${shlibs:Depends}
 Enhances: switchboard
 Description: Manage Screen Time & Limits
  Switchboard plug for managing Screen Time & Limits.
