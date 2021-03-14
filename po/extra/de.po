@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2021-02-15 21:09+0000\n"
+"PO-Revision-Date: 2021-03-14 14:38+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/de/>\n"
@@ -74,8 +74,9 @@ msgstr ""
 
 #: data/screentime-limits.policy.in.in:10
 msgid "Manage Screen Time and Limits"
-msgstr ""
+msgstr "Bildschirmzeit und Einschränkungen können eingerichtet werden"
 
 #: data/screentime-limits.policy.in.in:11
 msgid "Authentication is required to change Screen Time and Limits"
 msgstr ""
+"Authentifizierung benötigt, um Bildschirmzeit und Einschränkungen zu ändern"
