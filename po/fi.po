@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2021-02-09 20:16+0000\n"
+"PO-Revision-Date: 2021-05-04 12:26+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/fi/>\n"
@@ -110,7 +110,7 @@ msgstr "Arkipäivinä"
 
 #: src/plug/Views/TimeLimitView.vala:45
 msgid "Weekends"
-msgstr "Viikonloppuisin"
+msgstr "Viikonloppuina"
 
 #: src/plug/Views/TimeLimitView.vala:153
 msgid "From:"
