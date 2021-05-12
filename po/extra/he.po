@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-28 18:40+0000\n"
-"PO-Revision-Date: 2020-04-21 01:10+0000\n"
+"POT-Creation-Date: 2020-08-07 22:40+0000\n"
+"PO-Revision-Date: 2021-01-24 14:30+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
@@ -28,31 +28,46 @@ msgid "Configure time limits and restrict application usage"
 msgstr "הגדרת מגבלות זמן והגבלת שימוש ביישומים"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
+msgid "Fixes"
+msgstr "תיקונים"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+msgid ""
+"Set default Screen Time from midnight to midnight to prevent accidental "
+"lockouts"
+msgstr "הגדרת בררת המחדל של שעת המסך מחצות לחצות כדי למנוע נעילות בטעות"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
+msgid "Minor updates"
+msgstr "עדכונים קלים"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:24
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
 msgid "Updated translations"
 msgstr "תרגומים עודכנו"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:29
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "שינוי השם לזמן מסך ומגבלות"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
 msgid "Show your own account"
 msgstr "הצגת החשבון העצמי שלך"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:19
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
 msgid "Redesign the app chooser"
 msgstr "עיצוב מחדש של בוחר היישומים"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:32
 msgid "Redesign the Screen Time view"
 msgstr "עיצוב מחדש של תצוגת זמן המסך"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr "תיקון תקלה עם הסרת כתובות מאתרים מוגבלים"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
 msgid "Reliably apply time restrictions"
 msgstr "החלת מגבלות זמן באופן אמין"
 

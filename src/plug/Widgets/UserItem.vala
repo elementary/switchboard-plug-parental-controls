@@ -27,7 +27,7 @@ namespace PC.Widgets {
         public ControlPage page { get; construct; }
 
         private Gtk.Grid grid;
-        private Granite.Widgets.Avatar avatar;
+        private Hdy.Avatar avatar;
         private Gtk.Label full_name_label;
         private Gtk.Label username_label;
         private Gtk.Switch master_switch;
@@ -42,7 +42,7 @@ namespace PC.Widgets {
             user = page.user;
             user.changed.connect (update_view);
 
-            avatar = new Granite.Widgets.Avatar.from_file (user.get_icon_file (), 32);
+            avatar = new Hdy.Avatar (32, null, true);
 
             full_name_label = new Gtk.Label ("");
             full_name_label.halign = Gtk.Align.START;
@@ -58,9 +58,12 @@ namespace PC.Widgets {
             master_switch = new Gtk.Switch ();
             master_switch.valign = Gtk.Align.CENTER;
 
-            grid = new Gtk.Grid ();
-            grid.margin = 6;
-            grid.column_spacing = 6;
+            grid = new Gtk.Grid () {
+                column_spacing = 12,
+                margin = 6,
+                margin_end = 12,
+                margin_start = 12
+            };
             grid.attach (avatar, 0, 0, 1, 2);
             grid.attach (full_name_label, 1, 0, 1, 1);
             grid.attach (username_label, 1, 1, 1, 1);
@@ -90,6 +93,17 @@ namespace PC.Widgets {
             username_label.label = GLib.Markup.printf_escaped (
                                         "<span font_size=\"small\">%s</span>", user.get_user_name ()
                                    );
+
+            avatar.text = user.get_real_name ();
+            avatar.set_image_load_func ((size) => {
+                try {
+                    return new Gdk.Pixbuf.from_file_at_size (user.get_icon_file (), size, size);
+                } catch (Error e) {
+                    debug (e.message);
+                    return null;
+                }
+            });
+
             grid.show_all ();
         }
     }

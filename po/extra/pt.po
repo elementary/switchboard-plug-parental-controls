@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-28 18:40+0000\n"
-"PO-Revision-Date: 2020-04-30 06:10+0000\n"
+"POT-Creation-Date: 2020-08-07 22:40+0000\n"
+"PO-Revision-Date: 2020-08-11 12:13+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/pt/>\n"
@@ -28,31 +28,48 @@ msgid "Configure time limits and restrict application usage"
 msgstr "Configurar limites de tempo e restringir o uso de aplicações"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
+msgid "Fixes"
+msgstr "Correções"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+msgid ""
+"Set default Screen Time from midnight to midnight to prevent accidental "
+"lockouts"
+msgstr ""
+"Define o tempo de ecrã predefinido da meia-noite à meia-noite para evitar "
+"bloqueios acidentais"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
+msgid "Minor updates"
+msgstr "Pequenas atualizações"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:24
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
 msgid "Updated translations"
 msgstr "Traduções atualizadas"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:29
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Renomear para Tempo e Limites do Ecrã"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
 msgid "Show your own account"
 msgstr "Mostrar a própria conta"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:19
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
 msgid "Redesign the app chooser"
 msgstr "Redesenhar o seletor de aplicações"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:32
 msgid "Redesign the Screen Time view"
 msgstr "Redesenhar a vista de tempo do ecrã"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr "Corrige um problema com a remoção de URLs de sites restritos"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
 msgid "Reliably apply time restrictions"
 msgstr "Aplicar de forma fiável as restrições de tempo"
 

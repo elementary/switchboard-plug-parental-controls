@@ -7,10 +7,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2018-06-23 00:11+0000\n"
-"Last-Translator: Kirill Romanov <djaler1@gmail.com>\n"
-"Language-Team: Russian <https://weblate.elementary.io/projects/switchboard/"
+"POT-Creation-Date: 2020-08-07 22:40+0000\n"
+"PO-Revision-Date: 2021-03-18 02:32+0000\n"
+"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -18,18 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "У вас нет разрешения на запуск этого приложения."
+msgstr "У вас нет разрешения на запуск этого приложения"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "Администратор ограничил ваш доступ к этому приложению."
 
 #: src/client/Client.vala:158
 #, c-format
@@ -107,6 +105,8 @@ msgid ""
 "%s will only be able to log in during this time, and will be automatically "
 "logged out once this period ends:"
 msgstr ""
+"%s сможет войти в систему в течение этого времени и автоматически выйдет из "
+"системы по истечении этого периода:"
 
 #: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
@@ -116,11 +116,11 @@ msgstr "Будние дни"
 msgid "Weekends"
 msgstr "Выходные дни"
 
-#: src/plug/Views/TimeLimitView.vala:138
+#: src/plug/Views/TimeLimitView.vala:153
 msgid "From:"
 msgstr "С:"
 
-#: src/plug/Views/TimeLimitView.vala:144
+#: src/plug/Views/TimeLimitView.vala:160
 msgid "To:"
 msgstr "До:"
 
@@ -130,7 +130,7 @@ msgstr "Поиск приложений"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
-msgstr ""
+msgstr "Экранное время"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -153,26 +153,24 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Для изменения некоторых настроек требуются права администратора"
 
 #: src/plug/Plug.vala:33
-#, fuzzy
 msgid "Screen Time & Limits"
-msgstr "Оставшееся время"
+msgstr "Экранное время и ограничения"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
-msgstr "Настройка ограничения времени и использования приложений"
+msgstr "Настройка ограничения по времени и использования приложений"
 
 #: src/plug/Plug.vala:61
-#, fuzzy
 msgid "Limit computer use"
-msgstr "Ограничение использования компьютера:"
+msgstr "Ограничить использование компьютера"
 
 #: src/plug/Plug.vala:62
 msgid "Prevent website access"
-msgstr ""
+msgstr "Запретить доступ к веб-сайту"
 
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
-msgstr ""
+msgstr "Запретить доступ к приложению"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "Ограничение использования компьютера:"

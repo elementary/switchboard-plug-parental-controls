@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2019-07-02 15:28+0000\n"
+"POT-Creation-Date: 2020-08-07 22:40+0000\n"
+"PO-Revision-Date: 2020-10-24 13:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/it/>\n"
@@ -17,18 +17,16 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.6.1\n"
+"X-Generator: Weblate 3.9.1\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "Non ti è permesso avviare quest'applicazione."
+msgstr "Non ti è permesso avviare quest'applicazione"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "Un amministratore ha limitato il tuo accesso a questa applicazione."
 
 #: src/client/Client.vala:158
 #, c-format
@@ -105,6 +103,8 @@ msgid ""
 "%s will only be able to log in during this time, and will be automatically "
 "logged out once this period ends:"
 msgstr ""
+"%s potrà accedere solo durante questo intervallo di tempo e verrà "
+"disconnesso automaticamente al termine di questo periodo:"
 
 #: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
@@ -114,11 +114,11 @@ msgstr "Giorni feriali"
 msgid "Weekends"
 msgstr "Fine settimana"
 
-#: src/plug/Views/TimeLimitView.vala:138
+#: src/plug/Views/TimeLimitView.vala:153
 msgid "From:"
 msgstr "Dalle:"
 
-#: src/plug/Views/TimeLimitView.vala:144
+#: src/plug/Views/TimeLimitView.vala:160
 msgid "To:"
 msgstr "Alle:"
 
@@ -128,7 +128,7 @@ msgstr "Cerca applicazioni"
 
 #: src/plug/Widgets/ControlPage.vala:51
 msgid "Screen Time"
-msgstr ""
+msgstr "Tempo di utilizzo"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Internet"
@@ -149,13 +149,12 @@ msgstr "Altri account"
 #: src/plug/MainView.vala:59
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
-"Alcune impostazioni richiedono i diritti di amministratore per essere "
+"Alcune impostazioni richiedono i permessi di amministratore per essere "
 "modificate"
 
 #: src/plug/Plug.vala:33
-#, fuzzy
 msgid "Screen Time & Limits"
-msgstr "Tempo rimanente"
+msgstr "Tempo di utilizzo e limitazioni"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"

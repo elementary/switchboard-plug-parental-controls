@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2020-04-21 01:10+0000\n"
+"POT-Creation-Date: 2020-08-07 22:40+0000\n"
+"PO-Revision-Date: 2021-05-06 14:05+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-17 06:09+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -37,13 +37,13 @@ msgstr "このコンピューターは %s後にロックされます。"
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
-msgstr[0] "%lu 時間"
+msgstr[0] "%lu時間"
 
 #: src/client/Client.vala:162
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
-msgstr[0] "%lu 分"
+msgstr[0] "%lu分"
 
 #: src/client/Client.vala:164
 msgid ""
@@ -92,14 +92,16 @@ msgstr "新しい URL を追加してください。例: google.com"
 
 #: src/plug/Views/InternetView.vala:97
 msgid "Invalid URL"
-msgstr "無効な URL です"
+msgstr "不適切な URL です"
 
 #: src/plug/Views/TimeLimitView.vala:37
 #, c-format
 msgid ""
 "%s will only be able to log in during this time, and will be automatically "
 "logged out once this period ends:"
-msgstr "%s は以下の時間帯のみログインが可能です。以下の時間帯を超えると、自動的にログアウトされます。"
+msgstr ""
+"%s は以下の時間帯のみログインが可能です。以下の時間帯を超えると、自動的にログ"
+"アウトされます。"
 
 #: src/plug/Views/TimeLimitView.vala:43
 msgid "Weekdays"
@@ -109,11 +111,11 @@ msgstr "平日"
 msgid "Weekends"
 msgstr "週末"
 
-#: src/plug/Views/TimeLimitView.vala:138
+#: src/plug/Views/TimeLimitView.vala:153
 msgid "From:"
 msgstr "開始:"
 
-#: src/plug/Views/TimeLimitView.vala:144
+#: src/plug/Views/TimeLimitView.vala:160
 msgid "To:"
 msgstr "終了:"
 

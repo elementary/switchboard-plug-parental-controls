@@ -11,6 +11,7 @@ You'll need the following dependencies:
 * libdbus-1-dev
 * libglib2.0-dev
 * libgranite-dev
+* libhandy-1-dev >= 0.90.0
 * libpolkit-gobject-1-dev
 * libswitchboard-2.0-dev
 * meson >= 0.46.1

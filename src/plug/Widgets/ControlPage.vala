@@ -25,6 +25,7 @@ namespace PC.Widgets {
         public weak Act.User user { get; construct; }
         public Gtk.Stack stack;
         private TimeLimitView time_limit_view;
+        private AppsBox apps_box;
 
         public ControlPage (Act.User user) {
             Object (user: user);
@@ -44,7 +45,7 @@ namespace PC.Widgets {
             var internet_box = new InternetBox (user);
             internet_box.expand = true;
 
-            var apps_box = new AppsBox (user);
+            apps_box = new AppsBox (user);
             apps_box.expand = true;
 
             stack = new Gtk.Stack ();
@@ -97,6 +98,7 @@ namespace PC.Widgets {
             unowned Polkit.Permission permission = Utils.get_permission ();
             if (permission.allowed) {
                 Utils.get_api ().set_user_daemon_active.begin (user.get_user_name (), active);
+                apps_box.set_restrictions_active (active);
                 time_limit_view.update_pam (active);
             }
         }
