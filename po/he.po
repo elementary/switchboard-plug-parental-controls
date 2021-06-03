@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2020-04-21 01:10+0000\n"
+"PO-Revision-Date: 2021-06-03 07:46+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -92,7 +92,7 @@ msgstr "הוספת כתובת חדשה, לדוגמה: google.com"
 
 #: src/plug/Views/InternetView.vala:97
 msgid "Invalid URL"
-msgstr "כתובת לא חוקית"
+msgstr "כתובת שגויה"
 
 #: src/plug/Views/TimeLimitView.vala:37
 #, c-format
