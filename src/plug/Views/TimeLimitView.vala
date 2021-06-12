@@ -204,8 +204,6 @@ namespace PC.Widgets {
                 wrap = true,
                 xalign = 0
             };
-
-
             attach (label, 0, 0);
             attach (enable_switch, 1, 0);
             attach (limit_description, 0, 1, 4, 1);
