@@ -220,9 +220,9 @@ namespace PC.Widgets {
 
             notify["active"].connect (() => {
                 if (active) {
-                    limit_description.set_text (message_limited);
+                    limit_description.text = message_limited;
                 } else {
-                    limit_description.set_text (message_not_limited);
+                    limit_description.text = message_not_limited;
                 }
             });
 
