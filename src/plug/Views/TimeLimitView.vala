@@ -200,9 +200,10 @@ namespace PC.Widgets {
                 sentence_case
             );
 
-            var limit_description = new Gtk.Label (message_not_limited);
-            limit_description.wrap = true;
-            limit_description.xalign = 0;
+            var limit_description = new Gtk.Label (message_not_limited) {
+                wrap = true,
+                xalign = 0
+            };
 
 
             attach (label, 0, 0);
