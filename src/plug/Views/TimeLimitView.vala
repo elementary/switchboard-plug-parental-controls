@@ -39,8 +39,7 @@ namespace PC.Widgets {
             weekday_box = new WeekSpinBox (
                 ///TRANSLATORS: Refers to non-weekend days, as used in a title
                 _("Weekdays"),
-                ///TRANSLATORS: Refers to non-weekend days, as used in a sentence
-                _("weekdays"),
+                false,
                 title_group,
                 user
             );
@@ -48,8 +47,7 @@ namespace PC.Widgets {
             weekend_box = new WeekSpinBox (
                 ///TRANSLATORS: Refers to weekend days, as used in a title
                 _("Weekends"),
-                ///TRANSLATORS: Refers to weekend days, as used in a sentence
-                _("weekends"),
+                true,
                 title_group,
                 user
             );
@@ -127,7 +125,7 @@ namespace PC.Widgets {
 
         public bool active { get; set; }
         public string title { get; construct; }
-        public string sentence_case { get; construct; }
+        public bool is_weekend {get; construct; }
         public Gtk.SizeGroup size_group { get; construct; }
         public weak Act.User user { get; construct; }
 
@@ -136,13 +134,13 @@ namespace PC.Widgets {
 
         public WeekSpinBox (
             string title,
-            string sentence_case,
+            bool is_weekend,
             Gtk.SizeGroup size_group,
             Act.User user
         ) {
             Object (
                 title: title,
-                sentence_case: sentence_case,
+                is_weekend: is_weekend,
                 size_group: size_group,
                 user: user
             );
@@ -188,17 +186,26 @@ namespace PC.Widgets {
             column_spacing = 12;
             row_spacing = 6;
 
-            ///TRANSLATORS: First %s is the user's name, second is the sentence-case for "weekday" or "weekend"
-            var message_not_limited = _("Screen Time for %s will not be limited during this period on %s.").printf (
-                user.get_real_name (),
-                sentence_case
-            );
-
-            ///TRANSLATORS: First %s is the user's name, second is the sentence-case for "weekday" or "weekend"
-            var message_limited = _("%s will only be able to log in during this time on %s, and will be automatically logged out once this period ends:").printf (
-                user.get_real_name (),
-                sentence_case
-            );
+            string message_not_limited, message_limited;
+            if (is_weekend) {
+                ///TRANSLATORS: %s is the user's name
+                message_not_limited = _("Screen Time for %s will not be limited during this period on weekends.").printf (
+                    user.get_real_name ()
+                );
+                ///TRANSLATORS: %s is the user's name
+                message_limited = _("%s will only be able to log in during this time on weekends, and will be automatically logged out once this period ends:").printf (
+                    user.get_real_name ()
+                );
+            } else {
+                ///TRANSLATORS: %s is the user's name
+                message_not_limited = _("Screen Time for %s will not be limited during this period on weekdays.").printf (
+                    user.get_real_name ()
+                );
+                ///TRANSLATORS: %s is the user's name
+                message_limited = _("%s will only be able to log in during this time on weekdays, and will be automatically logged out once this period ends:").printf (
+                    user.get_real_name ()
+                );
+            }
 
             var limit_description = new Gtk.Label (message_not_limited) {
                 wrap = true,
@@ -220,9 +227,9 @@ namespace PC.Widgets {
 
             notify["active"].connect (() => {
                 if (active) {
-                    limit_description.text = message_limited;
+                    limit_description.label = message_limited;
                 } else {
-                    limit_description.text = message_not_limited;
+                    limit_description.label = message_not_limited;
                 }
             });
 
