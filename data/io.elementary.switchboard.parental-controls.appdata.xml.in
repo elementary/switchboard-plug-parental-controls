@@ -12,7 +12,7 @@
         <p>Fixes</p>
         <ul>
           <li>Set default Screen Time from midnight to midnight to prevent accidental lockouts</li>
-          <li>Clarify how Screen Time limits work and when they take affect</li>
+          <li>Clarify how Screen Time limits work and when they take effect</li>
         </ul>
         <p>Minor updates</p>
         <ul>
