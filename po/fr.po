@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2020-10-01 16:14+0000\n"
+"PO-Revision-Date: 2021-06-02 10:29+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-28 05:31+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -95,7 +95,7 @@ msgstr "Ajouter une nouvelle URL, par exemple : www.google.fr"
 
 #: src/plug/Views/InternetView.vala:97
 msgid "Invalid URL"
-msgstr "URL non valide"
+msgstr "URL invalide"
 
 #: src/plug/Views/TimeLimitView.vala:37
 #, c-format
