@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-07 22:40+0000\n"
+"POT-Creation-Date: 2021-06-15 21:07+0000\n"
 "PO-Revision-Date: 2018-08-22 00:09+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -63,24 +63,24 @@ msgstr "Zapri vse aplikacije preden bo računalnik zaklenjen."
 msgid "Time left"
 msgstr "Preostali čas"
 
-#: src/plug/Views/AppsView.vala:48
+#: src/plug/Views/AppsView.vala:50
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "Prepreči %s uporabo teh aplikacij:"
 
-#: src/plug/Views/AppsView.vala:58
+#: src/plug/Views/AppsView.vala:60
 msgid "Add Prevented Apps…"
 msgstr "Dodaj prepovedane aplikacije…"
 
-#: src/plug/Views/AppsView.vala:62
+#: src/plug/Views/AppsView.vala:64
 msgid "Remove Selected App"
 msgstr "Odstrani izbrano aplikacijo"
 
-#: src/plug/Views/AppsView.vala:67
+#: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
 msgstr "Izbriši vse"
 
-#: src/plug/Views/AppsView.vala:90
+#: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
 msgstr "Dovoli skrbniški dostop do teh aplikacij:"
 
@@ -101,42 +101,65 @@ msgstr "Dodaj nov URL, na primer: google.com"
 msgid "Invalid URL"
 msgstr "Neveljaven URL"
 
-#: src/plug/Views/TimeLimitView.vala:37
-#, c-format
-msgid ""
-"%s will only be able to log in during this time, and will be automatically "
-"logged out once this period ends:"
-msgstr ""
-
-#: src/plug/Views/TimeLimitView.vala:43
+#. /TRANSLATORS: Refers to non-weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:41
 msgid "Weekdays"
 msgstr "Delavniki"
 
-#: src/plug/Views/TimeLimitView.vala:45
+#. /TRANSLATORS: Refers to weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:49
 msgid "Weekends"
 msgstr "Vikendi"
 
-#: src/plug/Views/TimeLimitView.vala:153
+#: src/plug/Views/TimeLimitView.vala:169
 msgid "From:"
 msgstr "Od:"
 
-#: src/plug/Views/TimeLimitView.vala:160
+#: src/plug/Views/TimeLimitView.vala:176
 msgid "To:"
 msgstr "Do:"
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:192
+#, c-format
+msgid "Screen Time for %s will not be limited during this period on weekends."
+msgstr ""
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:196
+#, c-format
+msgid ""
+"%s will only be able to log in during this time on weekends, and will be "
+"automatically logged out once this period ends:"
+msgstr ""
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:201
+#, c-format
+msgid "Screen Time for %s will not be limited during this period on weekdays."
+msgstr ""
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:205
+#, c-format
+msgid ""
+"%s will only be able to log in during this time on weekdays, and will be "
+"automatically logged out once this period ends:"
+msgstr ""
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "Išči med programi"
 
-#: src/plug/Widgets/ControlPage.vala:51
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:54
 msgid "Applications"
 msgstr "Aplikacije"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-07 22:40+0000\n"
+"POT-Creation-Date: 2021-06-15 21:07+0000\n"
 "PO-Revision-Date: 2021-06-11 21:23+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -61,24 +61,24 @@ msgstr ""
 msgid "Time left"
 msgstr "Оставшееся время"
 
-#: src/plug/Views/AppsView.vala:48
+#: src/plug/Views/AppsView.vala:50
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "Запретить %s использовать эти приложения:"
 
-#: src/plug/Views/AppsView.vala:58
+#: src/plug/Views/AppsView.vala:60
 msgid "Add Prevented Apps…"
 msgstr "Добавить запрещённые приложения…"
 
-#: src/plug/Views/AppsView.vala:62
+#: src/plug/Views/AppsView.vala:64
 msgid "Remove Selected App"
 msgstr "Удалить выбранное приложение"
 
-#: src/plug/Views/AppsView.vala:67
+#: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
 msgstr "Очистить всё"
 
-#: src/plug/Views/AppsView.vala:90
+#: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
 msgstr "Разрешить доступ к этим приложениям с правами доступа:"
 
@@ -99,44 +99,75 @@ msgstr "Добавьте новый URL, например google.com"
 msgid "Invalid URL"
 msgstr "Недействительный URL-адрес"
 
-#: src/plug/Views/TimeLimitView.vala:37
+#. /TRANSLATORS: Refers to non-weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:41
+msgid "Weekdays"
+msgstr "Будние дни"
+
+#. /TRANSLATORS: Refers to weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:49
+msgid "Weekends"
+msgstr "Выходные дни"
+
+#: src/plug/Views/TimeLimitView.vala:169
+msgid "From:"
+msgstr "С:"
+
+#: src/plug/Views/TimeLimitView.vala:176
+msgid "To:"
+msgstr "До:"
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:192
 #, c-format
+msgid "Screen Time for %s will not be limited during this period on weekends."
+msgstr ""
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:196
+#, fuzzy, c-format
+#| msgid ""
+#| "%s will only be able to log in during this time, and will be "
+#| "automatically logged out once this period ends:"
 msgid ""
-"%s will only be able to log in during this time, and will be automatically "
-"logged out once this period ends:"
+"%s will only be able to log in during this time on weekends, and will be "
+"automatically logged out once this period ends:"
 msgstr ""
 "%s сможет войти в систему в течение этого времени и автоматически выйдет из "
 "системы по истечении этого периода:"
 
-#: src/plug/Views/TimeLimitView.vala:43
-msgid "Weekdays"
-msgstr "Будние дни"
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:201
+#, c-format
+msgid "Screen Time for %s will not be limited during this period on weekdays."
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:45
-msgid "Weekends"
-msgstr "Выходные дни"
-
-#: src/plug/Views/TimeLimitView.vala:153
-msgid "From:"
-msgstr "С:"
-
-#: src/plug/Views/TimeLimitView.vala:160
-msgid "To:"
-msgstr "До:"
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:205
+#, fuzzy, c-format
+#| msgid ""
+#| "%s will only be able to log in during this time, and will be "
+#| "automatically logged out once this period ends:"
+msgid ""
+"%s will only be able to log in during this time on weekdays, and will be "
+"automatically logged out once this period ends:"
+msgstr ""
+"%s сможет войти в систему в течение этого времени и автоматически выйдет из "
+"системы по истечении этого периода:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "Поиск приложений"
 
-#: src/plug/Widgets/ControlPage.vala:51
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
 msgstr "Экранное время"
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
 msgstr "Интернет"
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:54
 msgid "Applications"
 msgstr "Приложения"
 

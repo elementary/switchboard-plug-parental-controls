@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-07 22:40+0000\n"
+"POT-Creation-Date: 2021-06-15 21:07+0000\n"
 "PO-Revision-Date: 2020-04-27 00:10+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -58,24 +58,24 @@ msgstr ""
 msgid "Time left"
 msgstr "Tempo restante"
 
-#: src/plug/Views/AppsView.vala:48
+#: src/plug/Views/AppsView.vala:50
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "Impedir %s de usar estes aplicativos:"
 
-#: src/plug/Views/AppsView.vala:58
+#: src/plug/Views/AppsView.vala:60
 msgid "Add Prevented Apps…"
 msgstr "Adicionar aplicativos impedidos…"
 
-#: src/plug/Views/AppsView.vala:62
+#: src/plug/Views/AppsView.vala:64
 msgid "Remove Selected App"
 msgstr "Remover aplicativo selecionado"
 
-#: src/plug/Views/AppsView.vala:67
+#: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
 msgstr "Limpar tudo"
 
-#: src/plug/Views/AppsView.vala:90
+#: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
 msgstr "Acessar estes aplicativos com permissão do administrador:"
 
@@ -96,44 +96,75 @@ msgstr "Adicionar uma nova URL, por exemplo: google.com"
 msgid "Invalid URL"
 msgstr "URL inválida"
 
-#: src/plug/Views/TimeLimitView.vala:37
+#. /TRANSLATORS: Refers to non-weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:41
+msgid "Weekdays"
+msgstr "Dia de Semana"
+
+#. /TRANSLATORS: Refers to weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:49
+msgid "Weekends"
+msgstr "Fins de semana"
+
+#: src/plug/Views/TimeLimitView.vala:169
+msgid "From:"
+msgstr "Das:"
+
+#: src/plug/Views/TimeLimitView.vala:176
+msgid "To:"
+msgstr "Às:"
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:192
 #, c-format
+msgid "Screen Time for %s will not be limited during this period on weekends."
+msgstr ""
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:196
+#, fuzzy, c-format
+#| msgid ""
+#| "%s will only be able to log in during this time, and will be "
+#| "automatically logged out once this period ends:"
 msgid ""
-"%s will only be able to log in during this time, and will be automatically "
-"logged out once this period ends:"
+"%s will only be able to log in during this time on weekends, and will be "
+"automatically logged out once this period ends:"
 msgstr ""
 "%s só poderá fazer login durante esse período e será desconectado "
 "automaticamente quando esse período terminar:"
 
-#: src/plug/Views/TimeLimitView.vala:43
-msgid "Weekdays"
-msgstr "Dia de Semana"
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:201
+#, c-format
+msgid "Screen Time for %s will not be limited during this period on weekdays."
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:45
-msgid "Weekends"
-msgstr "Fins de semana"
-
-#: src/plug/Views/TimeLimitView.vala:153
-msgid "From:"
-msgstr "Das:"
-
-#: src/plug/Views/TimeLimitView.vala:160
-msgid "To:"
-msgstr "Às:"
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:205
+#, fuzzy, c-format
+#| msgid ""
+#| "%s will only be able to log in during this time, and will be "
+#| "automatically logged out once this period ends:"
+msgid ""
+"%s will only be able to log in during this time on weekdays, and will be "
+"automatically logged out once this period ends:"
+msgstr ""
+"%s só poderá fazer login durante esse período e será desconectado "
+"automaticamente quando esse período terminar:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "Pesquisar por aplicativos"
 
-#: src/plug/Widgets/ControlPage.vala:51
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
 msgstr "Tempo de Tela"
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:54
 msgid "Applications"
 msgstr "Aplicações"
 

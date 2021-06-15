@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-07 22:40+0000\n"
+"POT-Creation-Date: 2021-06-15 21:07+0000\n"
 "PO-Revision-Date: 2021-02-15 21:09+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -26,7 +26,8 @@ msgstr "Sie sind nicht berechtigt, diese Anwendung auszuführen"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr "Ein Systemverwalter hat Ihnen den Zugriff auf diese Anwendung verwehrt."
+msgstr ""
+"Ein Systemverwalter hat Ihnen den Zugriff auf diese Anwendung verwehrt."
 
 #: src/client/Client.vala:158
 #, c-format
@@ -58,24 +59,24 @@ msgstr ""
 msgid "Time left"
 msgstr "Verbleibende Zeit"
 
-#: src/plug/Views/AppsView.vala:48
+#: src/plug/Views/AppsView.vala:50
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "Folgende Anwendungen für %s sperren:"
 
-#: src/plug/Views/AppsView.vala:58
+#: src/plug/Views/AppsView.vala:60
 msgid "Add Prevented Apps…"
 msgstr "Gesperrte Anwendungen hinzufügen …"
 
-#: src/plug/Views/AppsView.vala:62
+#: src/plug/Views/AppsView.vala:64
 msgid "Remove Selected App"
 msgstr "Ausgewählte Anwendung entfernen"
 
-#: src/plug/Views/AppsView.vala:67
+#: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
 msgstr "Alle entfernen"
 
-#: src/plug/Views/AppsView.vala:90
+#: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
 msgstr "Zugriff auf diese Anwendungen mit Systemverwalterrechten erlauben:"
 
@@ -96,44 +97,75 @@ msgstr "Adresse hinzufügen, beispielsweise: google.com"
 msgid "Invalid URL"
 msgstr "Ungültige Adresse"
 
-#: src/plug/Views/TimeLimitView.vala:37
+#. /TRANSLATORS: Refers to non-weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:41
+msgid "Weekdays"
+msgstr "An Werktagen"
+
+#. /TRANSLATORS: Refers to weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:49
+msgid "Weekends"
+msgstr "An Wochenenden"
+
+#: src/plug/Views/TimeLimitView.vala:169
+msgid "From:"
+msgstr "Von:"
+
+#: src/plug/Views/TimeLimitView.vala:176
+msgid "To:"
+msgstr "Bis:"
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:192
 #, c-format
+msgid "Screen Time for %s will not be limited during this period on weekends."
+msgstr ""
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:196
+#, fuzzy, c-format
+#| msgid ""
+#| "%s will only be able to log in during this time, and will be "
+#| "automatically logged out once this period ends:"
 msgid ""
-"%s will only be able to log in during this time, and will be automatically "
-"logged out once this period ends:"
+"%s will only be able to log in during this time on weekends, and will be "
+"automatically logged out once this period ends:"
 msgstr ""
 "%s kann sich nur zu dieser Uhrzeit anmelden und wird automatisch abgemeldet, "
 "sobald diese Zeitspanne abgelaufen ist:"
 
-#: src/plug/Views/TimeLimitView.vala:43
-msgid "Weekdays"
-msgstr "An Werktagen"
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:201
+#, c-format
+msgid "Screen Time for %s will not be limited during this period on weekdays."
+msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:45
-msgid "Weekends"
-msgstr "An Wochenenden"
-
-#: src/plug/Views/TimeLimitView.vala:153
-msgid "From:"
-msgstr "Von:"
-
-#: src/plug/Views/TimeLimitView.vala:160
-msgid "To:"
-msgstr "Bis:"
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:205
+#, fuzzy, c-format
+#| msgid ""
+#| "%s will only be able to log in during this time, and will be "
+#| "automatically logged out once this period ends:"
+msgid ""
+"%s will only be able to log in during this time on weekdays, and will be "
+"automatically logged out once this period ends:"
+msgstr ""
+"%s kann sich nur zu dieser Uhrzeit anmelden und wird automatisch abgemeldet, "
+"sobald diese Zeitspanne abgelaufen ist:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "Anwendungen suchen"
 
-#: src/plug/Widgets/ControlPage.vala:51
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
 msgstr "Rechnerzeit"
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:54
 msgid "Applications"
 msgstr "Anwendungen"
 
