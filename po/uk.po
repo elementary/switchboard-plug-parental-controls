@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2021-05-03 18:36+0000\n"
+"PO-Revision-Date: 2021-06-16 00:07+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/uk/>\n"
@@ -121,38 +121,36 @@ msgstr "До:"
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
 msgstr ""
+"Час роботи екрана для %s не буде обмежено впродовж цього періоду у вихідні "
+"дні."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s зможе ввійти до системи впродовж цього часу і автоматично вийде з системи "
-"після закінчення цього періоду:"
+"%s зможе ввійти до системи лише впродовж цього часу у вихідні й автоматично "
+"вийде з системи після закінчення цього періоду:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
 msgstr ""
+"Час роботи екрана для %s не буде обмежено впродовж цього періоду у робочі "
+"дні."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s зможе ввійти до системи впродовж цього часу і автоматично вийде з системи "
-"після закінчення цього періоду:"
+"%s зможе ввійти до системи лише впродовж цього часу у вихідні й автоматично "
+"вийде з системи після закінчення цього періоду:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
