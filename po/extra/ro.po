@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-07 22:40+0000\n"
+"POT-Creation-Date: 2021-06-15 21:07+0000\n"
 "PO-Revision-Date: 2018-12-10 14:23-0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -36,37 +36,41 @@ msgid ""
 "lockouts"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+msgid "Clarify how Screen Time limits work and when they take effect"
+msgstr ""
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
 msgid "Minor updates"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:24
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:19
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:25
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:36
 msgid "Updated translations"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:29
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
 msgid "Rename to Screen Time &amp; Limits"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
 msgid "Show your own account"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:32
 msgid "Redesign the app chooser"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:32
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
 msgid "Redesign the Screen Time view"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
 msgid "Reliably apply time restrictions"
 msgstr ""
 
