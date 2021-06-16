@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2020-04-28 00:41+0000\n"
+"PO-Revision-Date: 2021-06-16 23:48+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -119,38 +119,36 @@ msgstr "Para:"
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
 msgstr ""
+"O tempo do ecrã para %s não será limitado durante este período nos fins-de-"
+"semana."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s só poderá iniciar sessão durante este período e serão automaticamente "
-"encerradas quando este terminar:"
+"%s apenas poderá iniciar sessão durante este período nos fins-de-semana e "
+"terminará automaticamente assim que este período terminar:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
 msgstr ""
+"O tempo do ecrã para %s não será limitado durante este período nos dias de "
+"semana."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s só poderá iniciar sessão durante este período e serão automaticamente "
-"encerradas quando este terminar:"
+"%s apenas poderá iniciar sessão durante este período nos fins-de-semana e "
+"terminará automaticamente assim que este período terminar:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
