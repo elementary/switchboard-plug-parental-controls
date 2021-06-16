@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2021-01-24 14:30+0000\n"
+"PO-Revision-Date: 2021-06-16 23:48+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/he/>\n"
@@ -39,7 +39,7 @@ msgstr "הגדרת בררת המחדל של שעת המסך מחצות לחצו�
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Clarify how Screen Time limits work and when they take effect"
-msgstr ""
+msgstr "הסבר על האופן בו מוקצה זמן מסך ומתי הוא תקף"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
 msgid "Minor updates"
