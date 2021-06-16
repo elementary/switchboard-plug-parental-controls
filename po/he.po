@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2021-06-03 07:46+0000\n"
+"PO-Revision-Date: 2021-06-16 23:48+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/he/>\n"
@@ -116,39 +116,33 @@ msgstr "סיום:"
 #: src/plug/Views/TimeLimitView.vala:192
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
-msgstr ""
+msgstr "זמן המסך עבור %s לא יוגבל במהלך תקופה זו במשך סופי השבוע."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"למשתמש %s תהיה אפשרות להיכנס רק בפרק זמן זה ותתבצע יציאה אוטומטית עם סיום "
-"פרק הזמן הזה:"
+"למשתמש %s תהיה אפשרות להיכנס רק בפרק זמן זה בסופי שבוע ותתבצע יציאה אוטומטית "
+"עם סיום פרק הזמן הזה:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
-msgstr ""
+msgstr "זמן המסך עבור %s לא יוגבל במהלך תקופה זו במשך ימי השבוע."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"למשתמש %s תהיה אפשרות להיכנס רק בפרק זמן זה ותתבצע יציאה אוטומטית עם סיום "
-"פרק הזמן הזה:"
+"למשתמש %s תהיה אפשרות להיכנס רק בפרק זמן זה בימי השבוע ותתבצע יציאה אוטומטית "
+"עם סיום פרק הזמן הזה:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
