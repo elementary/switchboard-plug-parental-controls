@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2021-06-02 10:29+0000\n"
+"PO-Revision-Date: 2021-06-16 11:27+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/fr/>\n"
@@ -120,38 +120,36 @@ msgstr "Jusqu'à :"
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
 msgstr ""
+"Le temps d'écran de %s ne sera pas limité pendant cette période les week-"
+"ends."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s ne pourra se connecter que pendant cette période, et sera automatiquement "
-"déconnecté à la fin de celle-ci :"
+"%s ne pourra se connecter que pendant cette période les week-ends, et sera "
+"automatiquement déconnecté à la fin de celle-ci :"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
 msgstr ""
+"Le temps d'écran de %s ne sera pas limité pendant cette période les jours de "
+"semaine."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s ne pourra se connecter que pendant cette période, et sera automatiquement "
-"déconnecté à la fin de celle-ci :"
+"%s ne pourra se connecter que pendant cette période les jours de semaine, et "
+"sera automatiquement déconnecté à la fin de celle-ci :"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
