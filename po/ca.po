@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2021-06-02 19:56+0000\n"
+"PO-Revision-Date: 2021-06-17 12:32+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ca/>\n"
@@ -118,38 +118,36 @@ msgstr "A:"
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
 msgstr ""
+"El temps de pantalla per a %s no es limitarà durant aquest període els caps "
+"de setmana."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s només podrà iniciar la sessió durant aquest temps i es desconnectarà "
-"automàticament un cop acabi aquest període:"
+"%s només podrà iniciar la sessió durant aquest temps els caps de setmana i "
+"es desconnectarà automàticament un cop acabi el període:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
 msgstr ""
+"El temps de pantalla per a %s no es limitarà durant aquest període els dies "
+"feiners."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s només podrà iniciar la sessió durant aquest temps i es desconnectarà "
-"automàticament un cop acabi aquest període:"
+"%s només podrà iniciar la sessió durant aquest temps els dies feiners i es "
+"desconnectarà automàticament un cop acabi el període:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
