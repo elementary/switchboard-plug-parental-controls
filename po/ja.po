@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2021-05-06 14:05+0000\n"
+"PO-Revision-Date: 2021-06-17 05:35+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ja/>\n"
@@ -116,39 +116,29 @@ msgstr "終了:"
 #: src/plug/Views/TimeLimitView.vala:192
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
-msgstr ""
+msgstr "週末の以下の時間は、%s のスクリーンタイムは制限されません。"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
-msgstr ""
-"%s は以下の時間帯のみログインが可能です。以下の時間帯を超えると、自動的にログ"
-"アウトされます。"
+msgstr "週末の場合、%s は以下の時間のみログインが可能です。以下の時間を超えると、自動的にログアウトされます。"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
-msgstr ""
+msgstr "平日の以下の時間は、%s のスクリーンタイムは制限されません。"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
-msgstr ""
-"%s は以下の時間帯のみログインが可能です。以下の時間帯を超えると、自動的にログ"
-"アウトされます。"
+msgstr "平日の場合、%s は以下の時間のみログインが可能です。以下の時間を超えると、自動的にログアウトされます。"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
