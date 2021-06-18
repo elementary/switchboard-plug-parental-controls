@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2021-05-04 12:26+0000\n"
+"PO-Revision-Date: 2021-06-18 08:05+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/fi/>\n"
@@ -118,38 +118,33 @@ msgstr "Päättyy:"
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
 msgstr ""
+"Näyttöaikaa käyttäjälle %s ei rajoiteta tällä ajanjaksolla viikonloppuisin."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s voi kirjautua vain tällä aikavälillä, ja hänet kirjataan automaattisesti "
-"ulos kun ajanjakso päättyy:"
+"%s voi kirjautua vain tällä aikavälillä viikonloppuisin, ja hänet kirjataan "
+"automaattisesti ulos kun ajanjakso päättyy:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
-msgstr ""
+msgstr "Näyttöaikaa käyttäjälle %s ei rajoiteta tällä ajanjaksolla arkisin."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s voi kirjautua vain tällä aikavälillä, ja hänet kirjataan automaattisesti "
-"ulos kun ajanjakso päättyy:"
+"%s voi kirjautua vain tällä aikavälillä arkisin, ja hänet kirjataan "
+"automaattisesti ulos kun ajanjakso päättyy:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
