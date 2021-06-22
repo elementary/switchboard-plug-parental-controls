@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-28 18:40+0000\n"
-"PO-Revision-Date: 2020-06-07 13:11+0000\n"
+"POT-Creation-Date: 2021-06-15 21:07+0000\n"
+"PO-Revision-Date: 2021-06-17 05:35+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
@@ -28,31 +28,52 @@ msgid "Configure time limits and restrict application usage"
 msgstr "時間制限を設定し、アプリケーションの使用を制限します"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
+msgid "Fixes"
+msgstr "修正点"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+msgid ""
+"Set default Screen Time from midnight to midnight to prevent accidental "
+"lockouts"
+msgstr ""
+"誤ってロックアウトされてしまわないように、デフォルトのスクリーンタイムを深夜"
+"から深夜に変更"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+msgid "Clarify how Screen Time limits work and when they take effect"
+msgstr "スクリーンタイムの制限の仕組みや制限時間を明確化"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
+msgid "Minor updates"
+msgstr "軽微なアップデート"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:19
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:25
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:36
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "スクリーンタイムと制限の設定に名称変更"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
 msgid "Show your own account"
 msgstr "利用中のアカウントも表示するように修正"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:19
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:32
 msgid "Redesign the app chooser"
 msgstr "アプリ選択画面のデザインを変更"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
 msgid "Redesign the Screen Time view"
 msgstr "スクリーンタイムビューのデザインを変更"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr "制限された Web サイトから URL を削除する際の不具合を修正"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
 msgid "Reliably apply time restrictions"
 msgstr "時間制限が正しく適用されるように修正"
 
