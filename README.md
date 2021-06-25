@@ -12,6 +12,7 @@ You'll need the following dependencies:
 * libflatpak-dev
 * libglib2.0-dev
 * libgranite-dev
+* libhandy-1-dev >= 0.90.0
 * libmalcontent-0-dev
 * libpolkit-gobject-1-dev
 * libswitchboard-2.0-dev
