@@ -7,79 +7,79 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2016-08-11 16:47+0000\n"
-"Last-Translator: Daniel Fore <Unknown>\n"
-"Language-Team: Ukrainian <uk@li.org>\n"
+"POT-Creation-Date: 2021-06-15 21:07+0000\n"
+"PO-Revision-Date: 2021-06-16 00:07+0000\n"
+"Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
+"Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-parental-controls/uk/>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "Ви не маєте права запускати цю програму."
+msgstr "Вам заборонено запускати цей застосунок"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "Адміністратор обмежив ваш доступ до цього застосунку."
 
 #: src/client/Client.vala:158
-#, fuzzy, c-format
+#, c-format
 msgid "This computer will lock after %s."
-msgstr "Цей компʼютер буде заблокований через %s %s. %s"
+msgstr "Цей компʼютер буде заблоковано за %s."
 
 #: src/client/Client.vala:160
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu годину"
+msgstr[1] "%lu години"
+msgstr[2] "%lu годин"
 
 #: src/client/Client.vala:162
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu хвилину"
+msgstr[1] "%lu хвилини"
+msgstr[2] "%lu хвилин"
 
 #: src/client/Client.vala:164
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
-"Переконайтеся в тому, що всі програми закрити, перш ніж ваш комп'ютер буде "
-"заблокований."
+"Не забудьте закрити всі застосунки, перш ніж ваш комп’ютер буде заблоковано."
 
 #: src/client/Client.vala:170
 msgid "Time left"
 msgstr "Часу залишилось"
 
-#: src/plug/Views/AppsView.vala:48
+#: src/plug/Views/AppsView.vala:50
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr "Запобіжати %s від використання цих додатків:"
+msgstr "Заборонити %s користуватися цими застосунками:"
 
-#: src/plug/Views/AppsView.vala:58
+#: src/plug/Views/AppsView.vala:60
 msgid "Add Prevented Apps…"
-msgstr "Додати заборонені додатки..."
+msgstr "Додати заборонені застосунки…"
 
-#: src/plug/Views/AppsView.vala:62
+#: src/plug/Views/AppsView.vala:64
 msgid "Remove Selected App"
-msgstr "Видалити вибрані додатки"
+msgstr "Вилучити вибрані застосунки"
 
-#: src/plug/Views/AppsView.vala:67
+#: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
 msgstr "Очистити все"
 
-#: src/plug/Views/AppsView.vala:90
+#: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
-msgstr "Дозволити доступ до цих програм з дозволу адміністратора:"
+msgstr "Дозволити доступ до цих застосунків з дозволу адміністратора:"
 
 #: src/plug/Views/InternetView.vala:72
 #, c-format
@@ -88,54 +88,85 @@ msgstr "Захистити %s від відвідування цих сайті�
 
 #: src/plug/Views/InternetView.vala:87
 msgid "Add URL"
-msgstr "Додати URL"
+msgstr "Додати URL-адресу"
 
 #: src/plug/Views/InternetView.vala:96
 msgid "Add a new URL, for example: google.com"
-msgstr "Додати новий URL, наприклад: google.com"
+msgstr "Додати нову URL-адресу, наприклад: google.com"
 
 #: src/plug/Views/InternetView.vala:97
 msgid "Invalid URL"
-msgstr "Некоректна адреса"
+msgstr "Недійсна URL-адреса"
 
-#: src/plug/Views/TimeLimitView.vala:37
-#, c-format
-msgid ""
-"%s will only be able to log in during this time, and will be automatically "
-"logged out once this period ends:"
-msgstr ""
-
-#: src/plug/Views/TimeLimitView.vala:43
+#. /TRANSLATORS: Refers to non-weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:41
 msgid "Weekdays"
 msgstr "Будні"
 
-#: src/plug/Views/TimeLimitView.vala:45
+#. /TRANSLATORS: Refers to weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:49
 msgid "Weekends"
 msgstr "Вихідні"
 
-#: src/plug/Views/TimeLimitView.vala:138
+#: src/plug/Views/TimeLimitView.vala:169
 msgid "From:"
-msgstr "Від:"
+msgstr "З:"
 
-#: src/plug/Views/TimeLimitView.vala:144
+#: src/plug/Views/TimeLimitView.vala:176
 msgid "To:"
 msgstr "До:"
 
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:192
+#, c-format
+msgid "Screen Time for %s will not be limited during this period on weekends."
+msgstr ""
+"Час роботи екрана для %s не буде обмежено впродовж цього періоду у вихідні "
+"дні."
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:196
+#, c-format
+msgid ""
+"%s will only be able to log in during this time on weekends, and will be "
+"automatically logged out once this period ends:"
+msgstr ""
+"%s зможе ввійти до системи лише впродовж цього часу у вихідні й автоматично "
+"вийде з системи після закінчення цього періоду:"
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:201
+#, c-format
+msgid "Screen Time for %s will not be limited during this period on weekdays."
+msgstr ""
+"Час роботи екрана для %s не буде обмежено впродовж цього періоду у робочі "
+"дні."
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:205
+#, c-format
+msgid ""
+"%s will only be able to log in during this time on weekdays, and will be "
+"automatically logged out once this period ends:"
+msgstr ""
+"%s зможе ввійти до системи лише впродовж цього часу у вихідні й автоматично "
+"вийде з системи після закінчення цього періоду:"
+
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
-msgstr "Пошук додатків"
-
-#: src/plug/Widgets/ControlPage.vala:51
-msgid "Screen Time"
-msgstr ""
+msgstr "Шукати застосунки"
 
 #: src/plug/Widgets/ControlPage.vala:52
+msgid "Screen Time"
+msgstr "Час перед екраном"
+
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
 msgstr "Інтернет"
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:54
 msgid "Applications"
-msgstr "Додатки"
+msgstr "Застосунки"
 
 #: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
@@ -150,26 +181,24 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Для зміни деяких налаштувань необхідно мати права адміністратора"
 
 #: src/plug/Plug.vala:33
-#, fuzzy
 msgid "Screen Time & Limits"
-msgstr "Часу залишилось"
+msgstr "Час перед екраном та обмеження"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
-msgstr "Налаштовувати обмеження за часом і обмеження використання додатків"
+msgstr "Налаштовування обмеження за часом та користування застосунками"
 
 #: src/plug/Plug.vala:61
-#, fuzzy
 msgid "Limit computer use"
-msgstr "Обмежити використання комп'ютера:"
+msgstr "Обмежити користування комп'ютером"
 
 #: src/plug/Plug.vala:62
 msgid "Prevent website access"
-msgstr ""
+msgstr "Заборонити доступ до вебсайту"
 
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
-msgstr ""
+msgstr "Заборонити доступ до застосунків"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "Обмежити використання комп'ютера:"

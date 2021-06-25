@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-05-28 18:40+0000\n"
-"PO-Revision-Date: 2020-03-19 19:09+0000\n"
+"POT-Creation-Date: 2021-06-15 21:07+0000\n"
+"PO-Revision-Date: 2020-08-11 12:13+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@posteo.net>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/parental-controls-plug-extra/en_GB/>\n"
@@ -28,47 +28,62 @@ msgid "Configure time limits and restrict application usage"
 msgstr "Configure time limits and restrict application usage"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
+msgid "Fixes"
+msgstr "Fixes"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+msgid ""
+"Set default Screen Time from midnight to midnight to prevent accidental "
+"lockouts"
+msgstr ""
+"Set default Screen Time from midnight to midnight to prevent accidental "
+"lockouts"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+msgid "Clarify how Screen Time limits work and when they take effect"
+msgstr ""
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
+msgid "Minor updates"
+msgstr "Minor updates"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:19
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:25
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:36
 msgid "Updated translations"
 msgstr "Updated translations"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Rename to Screen Time &amp; Limits"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
 msgid "Show your own account"
 msgstr "Show your own account"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:19
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:32
 msgid "Redesign the app chooser"
 msgstr "Redesign the app chooser"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
-#, fuzzy
-#| msgid "Rename to Screen Time &amp; Limits"
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
 msgid "Redesign the Screen Time view"
-msgstr "Rename to Screen Time &amp; Limits"
+msgstr "Redesign the Screen Time view"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr "Fix an issue with removing URLs from restricted websites"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
 msgid "Reliably apply time restrictions"
-msgstr ""
+msgstr "Reliably apply time restrictions"
 
 #: data/screentime-limits.policy.in.in:10
-#, fuzzy
-#| msgid "Rename to Screen Time &amp; Limits"
 msgid "Manage Screen Time and Limits"
-msgstr "Rename to Screen Time &amp; Limits"
+msgstr "Manage Screen Time and Limits"
 
 #: data/screentime-limits.policy.in.in:11
-#, fuzzy
-#| msgid "Rename to Screen Time &amp; Limits"
 msgid "Authentication is required to change Screen Time and Limits"
-msgstr "Rename to Screen Time &amp; Limits"
+msgstr "Authentication is required to change Screen Time and Limits"
 
 #~ msgid "Fix time restriction being applied even if master switch is disabled"
 #~ msgstr ""

@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-04-18 02:10+0000\n"
-"PO-Revision-Date: 2020-04-21 01:10+0000\n"
+"POT-Creation-Date: 2021-06-15 21:07+0000\n"
+"PO-Revision-Date: 2021-06-16 11:27+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-28 05:31+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -58,24 +58,24 @@ msgstr ""
 msgid "Time left"
 msgstr "Temps restant"
 
-#: src/plug/Views/AppsView.vala:48
+#: src/plug/Views/AppsView.vala:50
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "Interdire à %s d'utiliser ces programmes :"
 
-#: src/plug/Views/AppsView.vala:58
+#: src/plug/Views/AppsView.vala:60
 msgid "Add Prevented Apps…"
 msgstr "Ajouter des applications bloquées…"
 
-#: src/plug/Views/AppsView.vala:62
+#: src/plug/Views/AppsView.vala:64
 msgid "Remove Selected App"
 msgstr "Supprimer l'application sélectionnée"
 
-#: src/plug/Views/AppsView.vala:67
+#: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
 msgstr "Tout retirer"
 
-#: src/plug/Views/AppsView.vala:90
+#: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
 msgstr ""
 "Permettre l'utilisation de ces programmes avec des droits d'administrateur :"
@@ -95,46 +95,75 @@ msgstr "Ajouter une nouvelle URL, par exemple : www.google.fr"
 
 #: src/plug/Views/InternetView.vala:97
 msgid "Invalid URL"
-msgstr "URL non valide"
+msgstr "URL invalide"
 
-#: src/plug/Views/TimeLimitView.vala:37
-#, c-format
-msgid ""
-"%s will only be able to log in during this time, and will be automatically "
-"logged out once this period ends:"
-msgstr ""
-"%s ne pourra se connecter que pendant cette période, et sera automatiquement "
-"déconnecté à la fin de celle-ci :"
-
-#: src/plug/Views/TimeLimitView.vala:43
+#. /TRANSLATORS: Refers to non-weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:41
 msgid "Weekdays"
 msgstr "La semaine"
 
-#: src/plug/Views/TimeLimitView.vala:45
+#. /TRANSLATORS: Refers to weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:49
 msgid "Weekends"
 msgstr "Les week-ends"
 
-#: src/plug/Views/TimeLimitView.vala:138
+#: src/plug/Views/TimeLimitView.vala:169
 msgid "From:"
-msgstr "De :"
+msgstr "À partir de :"
 
-#: src/plug/Views/TimeLimitView.vala:144
+#: src/plug/Views/TimeLimitView.vala:176
 msgid "To:"
-msgstr "À :"
+msgstr "Jusqu'à :"
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:192
+#, c-format
+msgid "Screen Time for %s will not be limited during this period on weekends."
+msgstr ""
+"Le temps d'écran de %s ne sera pas limité pendant cette période les week-"
+"ends."
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:196
+#, c-format
+msgid ""
+"%s will only be able to log in during this time on weekends, and will be "
+"automatically logged out once this period ends:"
+msgstr ""
+"%s ne pourra se connecter que pendant cette période les week-ends, et sera "
+"automatiquement déconnecté à la fin de celle-ci :"
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:201
+#, c-format
+msgid "Screen Time for %s will not be limited during this period on weekdays."
+msgstr ""
+"Le temps d'écran de %s ne sera pas limité pendant cette période les jours de "
+"semaine."
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:205
+#, c-format
+msgid ""
+"%s will only be able to log in during this time on weekdays, and will be "
+"automatically logged out once this period ends:"
+msgstr ""
+"%s ne pourra se connecter que pendant cette période les jours de semaine, et "
+"sera automatiquement déconnecté à la fin de celle-ci :"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "Rechercher des applications"
 
-#: src/plug/Widgets/ControlPage.vala:51
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
 msgstr "Temps d'écran"
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:54
 msgid "Applications"
 msgstr "Applications"
 
