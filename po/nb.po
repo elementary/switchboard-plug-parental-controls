@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2021-06-03 09:13+0000\n"
+"PO-Revision-Date: 2021-07-03 07:44+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/nb/>\n"
@@ -114,28 +114,25 @@ msgstr "Til:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:192
-#, c-format
+#, c-format, fuzzy
 msgid "Screen Time for %s will not be limited during this period on weekends."
-msgstr ""
+msgstr "Skjermtid for %s vil ikke innskrenkes for denne perioden i helger."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s vil kun kunne logge inn i dette tidsrommet, og vil automatisk bli "
-"utlogget når perioden er over:"
+"%s vil kun kunne logge inn i dette tidsrommet i helger, og vil automatisk "
+"bli utlogget når perioden er over:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
-#, c-format
+#, c-format, fuzzy
 msgid "Screen Time for %s will not be limited during this period on weekdays."
-msgstr ""
+msgstr "Skjermtid for %s vil ikke innskrenkes i denne perioden i helger."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
@@ -181,7 +178,7 @@ msgstr "Noen innstillinger krever administrasjonsrettigheter for å endres"
 #: src/plug/Plug.vala:33
 #, fuzzy
 msgid "Screen Time & Limits"
-msgstr "Gjenværende tid"
+msgstr "Skjermtid og grenser"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
