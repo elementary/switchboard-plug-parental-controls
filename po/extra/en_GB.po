@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2020-08-11 12:13+0000\n"
-"Last-Translator: Ciarán Ainsworth <ciaranainsworth@posteo.net>\n"
+"PO-Revision-Date: 2021-07-05 13:54+0000\n"
+"Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/parental-controls-plug-extra/en_GB/>\n"
 "Language: en_GB\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
@@ -41,7 +41,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Clarify how Screen Time limits work and when they take effect"
-msgstr ""
+msgstr "Clarify how Screen Time limits work and when they take effect"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
 msgid "Minor updates"
