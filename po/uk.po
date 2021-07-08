@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2021-05-03 18:36+0000\n"
+"POT-Creation-Date: 2021-06-15 21:07+0000\n"
+"PO-Revision-Date: 2021-06-16 00:07+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/uk/>\n"
@@ -60,24 +60,24 @@ msgstr ""
 msgid "Time left"
 msgstr "Часу залишилось"
 
-#: src/plug/Views/AppsView.vala:48
+#: src/plug/Views/AppsView.vala:50
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "Заборонити %s користуватися цими застосунками:"
 
-#: src/plug/Views/AppsView.vala:58
+#: src/plug/Views/AppsView.vala:60
 msgid "Add Prevented Apps…"
 msgstr "Додати заборонені застосунки…"
 
-#: src/plug/Views/AppsView.vala:62
+#: src/plug/Views/AppsView.vala:64
 msgid "Remove Selected App"
 msgstr "Вилучити вибрані застосунки"
 
-#: src/plug/Views/AppsView.vala:67
+#: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
 msgstr "Очистити все"
 
-#: src/plug/Views/AppsView.vala:90
+#: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
 msgstr "Дозволити доступ до цих застосунків з дозволу адміністратора:"
 
@@ -98,44 +98,73 @@ msgstr "Додати нову URL-адресу, наприклад: google.com"
 msgid "Invalid URL"
 msgstr "Недійсна URL-адреса"
 
-#: src/plug/Views/TimeLimitView.vala:37
-#, c-format
-msgid ""
-"%s will only be able to log in during this time, and will be automatically "
-"logged out once this period ends:"
-msgstr ""
-"%s зможе ввійти до системи впродовж цього часу і автоматично вийде з системи "
-"після закінчення цього періоду:"
-
-#: src/plug/Views/TimeLimitView.vala:43
+#. /TRANSLATORS: Refers to non-weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:41
 msgid "Weekdays"
 msgstr "Будні"
 
-#: src/plug/Views/TimeLimitView.vala:45
+#. /TRANSLATORS: Refers to weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:49
 msgid "Weekends"
 msgstr "Вихідні"
 
-#: src/plug/Views/TimeLimitView.vala:153
+#: src/plug/Views/TimeLimitView.vala:169
 msgid "From:"
 msgstr "З:"
 
-#: src/plug/Views/TimeLimitView.vala:160
+#: src/plug/Views/TimeLimitView.vala:176
 msgid "To:"
 msgstr "До:"
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:192
+#, c-format
+msgid "Screen Time for %s will not be limited during this period on weekends."
+msgstr ""
+"Час роботи екрана для %s не буде обмежено впродовж цього періоду у вихідні "
+"дні."
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:196
+#, c-format
+msgid ""
+"%s will only be able to log in during this time on weekends, and will be "
+"automatically logged out once this period ends:"
+msgstr ""
+"%s зможе ввійти до системи лише впродовж цього часу у вихідні й автоматично "
+"вийде з системи після закінчення цього періоду:"
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:201
+#, c-format
+msgid "Screen Time for %s will not be limited during this period on weekdays."
+msgstr ""
+"Час роботи екрана для %s не буде обмежено впродовж цього періоду у робочі "
+"дні."
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:205
+#, c-format
+msgid ""
+"%s will only be able to log in during this time on weekdays, and will be "
+"automatically logged out once this period ends:"
+msgstr ""
+"%s зможе ввійти до системи лише впродовж цього часу у вихідні й автоматично "
+"вийде з системи після закінчення цього періоду:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "Шукати застосунки"
 
-#: src/plug/Widgets/ControlPage.vala:51
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
 msgstr "Час перед екраном"
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
 msgstr "Інтернет"
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:54
 msgid "Applications"
 msgstr "Застосунки"
 

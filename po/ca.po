@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-08-07 22:40+0000\n"
-"PO-Revision-Date: 2020-04-21 01:10+0000\n"
+"POT-Creation-Date: 2021-06-15 21:07+0000\n"
+"PO-Revision-Date: 2021-06-17 12:32+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -57,24 +57,24 @@ msgstr ""
 msgid "Time left"
 msgstr "Temps restant"
 
-#: src/plug/Views/AppsView.vala:48
+#: src/plug/Views/AppsView.vala:50
 #, c-format
 msgid "Prevent %s from using these apps:"
 msgstr "Impedeix que %s usi aquestes aplicacions:"
 
-#: src/plug/Views/AppsView.vala:58
+#: src/plug/Views/AppsView.vala:60
 msgid "Add Prevented Apps…"
 msgstr "Afegeix aplicacions protegides…"
 
-#: src/plug/Views/AppsView.vala:62
+#: src/plug/Views/AppsView.vala:64
 msgid "Remove Selected App"
 msgstr "Suprimeix l'aplicació seleccionada"
 
-#: src/plug/Views/AppsView.vala:67
+#: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
 msgstr "Neteja-ho tot"
 
-#: src/plug/Views/AppsView.vala:90
+#: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
 msgstr "Permet accés a aquestes aplicacions amb permís d'administrador:"
 
@@ -93,46 +93,75 @@ msgstr "Afegiu un URL nou, com ara google.com"
 
 #: src/plug/Views/InternetView.vala:97
 msgid "Invalid URL"
-msgstr "L'URL no és vàlid"
+msgstr "URL no vàlid"
 
-#: src/plug/Views/TimeLimitView.vala:37
-#, c-format
-msgid ""
-"%s will only be able to log in during this time, and will be automatically "
-"logged out once this period ends:"
-msgstr ""
-"%s només podrà iniciar la sessió durant aquest temps i es desconnectarà "
-"automàticament un cop acabi aquest període:"
-
-#: src/plug/Views/TimeLimitView.vala:43
+#. /TRANSLATORS: Refers to non-weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:41
 msgid "Weekdays"
 msgstr "Dies feiners"
 
-#: src/plug/Views/TimeLimitView.vala:45
+#. /TRANSLATORS: Refers to weekend days, as used in a title
+#: src/plug/Views/TimeLimitView.vala:49
 msgid "Weekends"
 msgstr "Caps de setmana"
 
-#: src/plug/Views/TimeLimitView.vala:153
+#: src/plug/Views/TimeLimitView.vala:169
 msgid "From:"
 msgstr "De:"
 
-#: src/plug/Views/TimeLimitView.vala:160
+#: src/plug/Views/TimeLimitView.vala:176
 msgid "To:"
 msgstr "A:"
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:192
+#, c-format
+msgid "Screen Time for %s will not be limited during this period on weekends."
+msgstr ""
+"El temps de pantalla per a %s no es limitarà durant aquest període els caps "
+"de setmana."
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:196
+#, c-format
+msgid ""
+"%s will only be able to log in during this time on weekends, and will be "
+"automatically logged out once this period ends:"
+msgstr ""
+"%s només podrà iniciar la sessió durant aquest temps els caps de setmana i "
+"es desconnectarà automàticament un cop acabi el període:"
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:201
+#, c-format
+msgid "Screen Time for %s will not be limited during this period on weekdays."
+msgstr ""
+"El temps de pantalla per a %s no es limitarà durant aquest període els dies "
+"feiners."
+
+#. /TRANSLATORS: %s is the user's name
+#: src/plug/Views/TimeLimitView.vala:205
+#, c-format
+msgid ""
+"%s will only be able to log in during this time on weekdays, and will be "
+"automatically logged out once this period ends:"
+msgstr ""
+"%s només podrà iniciar la sessió durant aquest temps els dies feiners i es "
+"desconnectarà automàticament un cop acabi el període:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
 msgstr "Cerca aplicacions"
 
-#: src/plug/Widgets/ControlPage.vala:51
+#: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
 msgstr "Temps de pantalla"
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:54
 msgid "Applications"
 msgstr "Aplicacions"
 
