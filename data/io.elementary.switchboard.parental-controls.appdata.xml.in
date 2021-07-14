@@ -9,14 +9,15 @@
   <releases>
     <release version="6.0.0" date="2021-07-14" urgency="medium">
       <description>
-        <p>Fixes</p>
+        <p>Fixes:</p>
         <ul>
           <li>Set default Screen Time from midnight to midnight to prevent accidental lockouts</li>
-          <li>Clarify how Screen Time limits work and when they take effect</li>
-        </ul>
-        <p>Minor updates</p>
-        <ul>
           <li>Improve reliability of app blocking</li>
+          <li>Support blocking Flatpak apps</li>
+        </ul>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Clarify how Screen Time limits work and when they take effect</li>
           <li>New colorful avatar fallback</li>
           <li>Updated translations</li>
         </ul>
