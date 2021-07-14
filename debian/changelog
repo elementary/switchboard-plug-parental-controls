@@ -1,3 +1,19 @@
+switchboard-plug-parental-controls (6.0.0) bionic; urgency=medium
+
+  * Release 6.0.0 (#151)
+  * Add dependencies to readme (#150)
+  * Update translation files
+  * Update translation template
+  * Duplicates limit description for each period (Weekdays and Weekends)
+    (#133)
+  * Use malcontent to block flatpak applications (#144)
+  * LINGUAS: sort, remove en_US
+  * UserItem: Use Hdy.Avatar (#141)
+  * Sets 00:00 and 23:59 as default times for picker_to and picker_from.
+    (#136)
+
+ -- elementary OS Team <builds@elementary.io>  Wed, 14 Jul 2021 21:57:36 +0000
+
 switchboard-plug-parental-controls (3.0.1) bionic; urgency=medium
 
   * Release 3.0.1 (#131)
