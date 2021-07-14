@@ -7,7 +7,7 @@
   <icon type="stock">preferences-system-parental-controls</icon>
   <translation type="gettext">parental-controls-plug</translation>
   <releases>
-    <release version="3.0.2" date="2020-05-28" urgency="medium">
+    <release version="6.0.0" date="2021-07-14" urgency="medium">
       <description>
         <p>Fixes</p>
         <ul>
@@ -16,6 +16,8 @@
         </ul>
         <p>Minor updates</p>
         <ul>
+          <li>Improve reliability of app blocking</li>
+          <li>New colorful avatar fallback</li>
           <li>Updated translations</li>
         </ul>
       </description>
