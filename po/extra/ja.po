@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-06-17 05:35+0000\n"
+"PO-Revision-Date: 2021-07-15 02:33+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/ja/>\n"
@@ -28,10 +28,8 @@ msgid "Configure time limits and restrict application usage"
 msgstr "時間制限を設定し、アプリケーションの使用を制限します"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
-#, fuzzy
-#| msgid "Fixes"
 msgid "Fixes:"
-msgstr "修正点"
+msgstr "修正点:"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid ""
@@ -50,10 +48,8 @@ msgid "Support blocking Flatpak apps"
 msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
-#, fuzzy
-#| msgid "Minor updates"
 msgid "Minor updates:"
-msgstr "軽微なアップデート"
+msgstr "軽微なアップデート:"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
 msgid "Clarify how Screen Time limits work and when they take effect"
