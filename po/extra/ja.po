@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-07-15 02:33+0000\n"
+"PO-Revision-Date: 2021-07-15 13:41+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/ja/>\n"
@@ -41,11 +41,11 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Improve reliability of app blocking"
-msgstr ""
+msgstr "アプリ実行のブロックにおける信頼性を改善"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Support blocking Flatpak apps"
-msgstr ""
+msgstr "Flatpak アプリの実行をブロックできるように変更"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Minor updates:"
@@ -57,7 +57,7 @@ msgstr "スクリーンタイムの制限の仕組みや制限時間を明確化
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
 msgid "New colorful avatar fallback"
-msgstr ""
+msgstr "アバター画像未設定時に背景を色付きで表示するように変更"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:28
