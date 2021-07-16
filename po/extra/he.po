@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-07-15 13:41+0000\n"
+"PO-Revision-Date: 2021-07-16 09:57+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/he/>\n"
@@ -28,10 +28,8 @@ msgid "Configure time limits and restrict application usage"
 msgstr "הגדרת מגבלות זמן והגבלת שימוש ביישומים"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
-#, fuzzy
-#| msgid "Fixes"
 msgid "Fixes:"
-msgstr "תיקונים"
+msgstr "תיקונים:"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid ""
@@ -41,11 +39,11 @@ msgstr "הגדרת בררת המחדל של שעת המסך מחצות לחצו�
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Improve reliability of app blocking"
-msgstr ""
+msgstr "אמינות חסימת היישומים השתפרה"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Support blocking Flatpak apps"
-msgstr ""
+msgstr "תמיכה בחסימת יישומי Flatpak"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Minor updates:"
@@ -57,7 +55,7 @@ msgstr "הסבר על האופן בו מוקצה זמן מסך ומתי הוא �
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
 msgid "New colorful avatar fallback"
-msgstr ""
+msgstr "תמונה ייצוגית צבעונית חדשה כנסיגה"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:28
