@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-07-16 13:51+0000\n"
+"PO-Revision-Date: 2021-07-19 21:52+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/tr/>\n"
@@ -41,11 +41,11 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Improve reliability of app blocking"
-msgstr ""
+msgstr "Uygulama engellemenin güvenilirliği artırıldı"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Support blocking Flatpak apps"
-msgstr ""
+msgstr "Flatpak uygulamalarını engelleme desteği eklendi"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Minor updates:"
@@ -54,6 +54,8 @@ msgstr "Küçük güncellemeler:"
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
+"Ekran Süresi sınırlarının nasıl çalıştığı ve ne zaman yürürlüğe gireceği "
+"belirtildi"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
 msgid "New colorful avatar fallback"
@@ -67,11 +69,11 @@ msgstr "Çeviriler güncellendi"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
 msgid "Rename to Screen Time &amp; Limits"
-msgstr ""
+msgstr "Ekran Zaman Aşımı ve Sınırları olarak yeniden adlandırıldı"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
 msgid "Show your own account"
-msgstr ""
+msgstr "Kendi hesabını göster"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
 msgid "Redesign the app chooser"
