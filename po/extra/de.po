@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-07-21 04:50+0000\n"
+"PO-Revision-Date: 2021-07-21 14:31+0000\n"
 "Last-Translator: supaeasy <ismo+github@wolffson.ch>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/de/>\n"
@@ -42,11 +42,11 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Improve reliability of app blocking"
-msgstr ""
+msgstr "Zuverlässigkeit von App blocking verbessern"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Support blocking Flatpak apps"
-msgstr ""
+msgstr "Unterstützt die Möglichkeit Flatpak Apps zu blockieren"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Minor updates:"
@@ -55,10 +55,12 @@ msgstr "Kleinere Aktualisierungen:"
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
+"Klarstellung, wie Bildschirmzeit-Limits funktionieren und wann sie aktiv "
+"werden"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
 msgid "New colorful avatar fallback"
-msgstr "Neuer farbiger Avatar als Fallback"
+msgstr "Neue farbenfrohe Avatar-Fallbacks"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:28
@@ -68,27 +70,27 @@ msgstr "Aktualisierte Übersetzungen"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
 msgid "Rename to Screen Time &amp; Limits"
-msgstr ""
+msgstr "Name geändert zu Bildschirmzeit &amp; Limits"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
 msgid "Show your own account"
-msgstr ""
+msgstr "Eigenen Account anzeigen"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
 msgid "Redesign the app chooser"
-msgstr ""
+msgstr "Redesign des App-Wählers"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:36
 msgid "Redesign the Screen Time view"
-msgstr ""
+msgstr "Redesign der Bildschirmzeit-Ansicht"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:37
 msgid "Fix an issue with removing URLs from restricted websites"
-msgstr ""
+msgstr "Problem behoben indem URLs von gesperrten Websites entfernt wurden"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:38
 msgid "Reliably apply time restrictions"
-msgstr ""
+msgstr "Zeitbeschränkungen zuverlässiger übernehmen"
 
 #: data/screentime-limits.policy.in.in:10
 msgid "Manage Screen Time and Limits"
