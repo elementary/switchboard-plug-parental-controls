@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-08-10 17:10+0000\n"
+"PO-Revision-Date: 2021-08-12 22:06+0000\n"
 "Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/ru/>\n"
@@ -30,7 +30,7 @@ msgstr "Настройка ограничения по времени и исп�
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Fixes:"
-msgstr "Исправления"
+msgstr "Исправления:"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid ""
