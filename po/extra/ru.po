@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-08-12 22:06+0000\n"
-"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"PO-Revision-Date: 2021-08-14 01:28+0000\n"
+"Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/ru/>\n"
 "Language: ru\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
-msgstr ""
+msgstr "Настройки экранного время и ограничений"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
@@ -37,6 +37,8 @@ msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 msgstr ""
+"Установка стандартной времени работы экрана от полуночи до полуночи для "
+"предотвращения случайных блокировок"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Improve reliability of app blocking"
@@ -56,7 +58,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
 msgid "New colorful avatar fallback"
-msgstr ""
+msgstr "Новый красочный аватар"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:28
@@ -66,15 +68,15 @@ msgstr "Обновлены переводы"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
 msgid "Rename to Screen Time &amp; Limits"
-msgstr ""
+msgstr "Переименовано на «Экранное время и ограничения»"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
 msgid "Show your own account"
-msgstr ""
+msgstr "Отображение Вашей учётной записи"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
 msgid "Redesign the app chooser"
-msgstr ""
+msgstr "Переработано меню выбора приложений"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:36
 msgid "Redesign the Screen Time view"
