@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-08-14 12:22+0000\n"
+"PO-Revision-Date: 2021-08-14 15:23+0000\n"
 "Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/ru/>\n"
@@ -55,7 +55,7 @@ msgstr "Незначительные обновления:"
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
-"Уточнить, как работают ограничения экранного времени и когда они вступают в "
+"Уточнение, как работает Время работы экрана, а также когда они вступают в "
 "силу"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
