@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-08-14 12:13+0000\n"
+"PO-Revision-Date: 2021-08-14 12:20+0000\n"
 "Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/ru/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
-msgstr "Настройки экранного время и ограничений"
+msgstr "Настройки времени работы экрана и ограничений"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
@@ -68,7 +68,7 @@ msgstr "Обновлены переводы"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
 msgid "Rename to Screen Time &amp; Limits"
-msgstr "Переименовано на «Экранное время и ограничения»"
+msgstr "Переименовано на «Времени работы экрана и ограничения»"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
 msgid "Show your own account"
@@ -80,7 +80,7 @@ msgstr "Переработано меню выбора приложений"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:36
 msgid "Redesign the Screen Time view"
-msgstr "Полностью переработан внешний вид окна экранного времени"
+msgstr "Полностью переработан внешний вид окна времени работы экрана"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:37
 msgid "Fix an issue with removing URLs from restricted websites"
@@ -89,11 +89,11 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:38
 msgid "Reliably apply time restrictions"
-msgstr "Надежное применений ограничений по времени"
+msgstr "Надежное применение ограничений по времени"
 
 #: data/screentime-limits.policy.in.in:10
 msgid "Manage Screen Time and Limits"
-msgstr ""
+msgstr "Управление временем работы экрана и ограничениями"
 
 #: data/screentime-limits.policy.in.in:11
 msgid "Authentication is required to change Screen Time and Limits"
