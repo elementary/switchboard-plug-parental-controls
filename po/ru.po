@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-08-14 15:23+0000\n"
-"Last-Translator: DartDeaDia <DartDeaDia@protonmail.com>\n"
+"PO-Revision-Date: 2021-08-16 08:39+0000\n"
+"Last-Translator: DartDeaDia <dartdeadia@protonmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ru/>\n"
 "Language: ru\n"
@@ -89,11 +89,11 @@ msgstr "Запретить %s посещать эти сайты:"
 
 #: src/plug/Views/InternetView.vala:87
 msgid "Add URL"
-msgstr "Добавить URL"
+msgstr "Добавить URL-адрес"
 
 #: src/plug/Views/InternetView.vala:96
 msgid "Add a new URL, for example: google.com"
-msgstr "Добавьте новый URL, например google.com"
+msgstr "Добавьте новый URL-адрес, например google.com"
 
 #: src/plug/Views/InternetView.vala:97
 msgid "Invalid URL"
