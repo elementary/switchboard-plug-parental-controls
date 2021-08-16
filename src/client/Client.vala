@@ -49,6 +49,11 @@ namespace PC.Client {
         };
 
         public static int main (string[] args) {
+            GLib.Intl.setlocale (LocaleCategory.ALL, "");
+            GLib.Intl.bindtextdomain (Constants.GETTEXT_PACKAGE, Constants.LOCALEDIR);
+            GLib.Intl.bind_textdomain_codeset (Constants.GETTEXT_PACKAGE, "UTF-8");
+            GLib.Intl.textdomain (Constants.GETTEXT_PACKAGE);
+
             try {
                 var opt_context = new OptionContext (null);
                 opt_context.set_help_enabled (true);
