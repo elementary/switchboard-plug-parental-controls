@@ -24,6 +24,9 @@ public class PC.Plug : Switchboard.Plug {
     private MainBox? main_box = null;
 
     public Plug () {
+        GLib.Intl.bindtextdomain (Constants.GETTEXT_PACKAGE, Constants.LOCALEDIR);
+        GLib.Intl.bind_textdomain_codeset (Constants.GETTEXT_PACKAGE, "UTF-8");
+
         var settings = new Gee.TreeMap<string, string?> (null, null);
         settings.set ("parental-controls", null);
 
