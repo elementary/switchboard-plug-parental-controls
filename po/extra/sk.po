@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-08-24 18:20+0000\n"
+"PO-Revision-Date: 2021-08-26 08:14+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/sk/>\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
-msgstr ""
+msgstr "Nastavenia rodičovskej kontroly"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "Nastavujte časové limity a obmedzte používanie aplikácii"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Fixes:"
@@ -36,14 +36,16 @@ msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 msgstr ""
+"Nastavený predvolený čas pri obrazovke od polnoci do polnoci na zabránenie "
+"náhodným uzamknutiam"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Improve reliability of app blocking"
-msgstr ""
+msgstr "Vylepšená spoľahlivosť blokovania aplikácií"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Support blocking Flatpak apps"
-msgstr ""
+msgstr "Podpora blokovania Flatpak aplikácií"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Minor updates:"
@@ -52,10 +54,12 @@ msgstr "Menšie aktualizácie:"
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
+"Upresnené informácie o fungovaní časových limitov obrazovky a kedy nadobudnú "
+"účinnosť"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
 msgid "New colorful avatar fallback"
-msgstr "Nový farebný náhradný avatar"
+msgstr "Nová náhradná farebná ikonka používateľa"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:28
@@ -65,23 +69,24 @@ msgstr "Aktualizované preklady"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
 msgid "Rename to Screen Time &amp; Limits"
-msgstr ""
+msgstr "Premenované na Rodičovskú kontrolu"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
 msgid "Show your own account"
-msgstr ""
+msgstr "Zobrazenie vášho vlastného účtu"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
 msgid "Redesign the app chooser"
-msgstr ""
+msgstr "Prerobený volič aplikácií"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:36
 msgid "Redesign the Screen Time view"
-msgstr ""
+msgstr "Prerobené zobrazenie Času pri obrazovke"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:37
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
+"Opravený problém pri odstraňovaní URL adries zo zoznamu obmedzených stránok"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:38
 msgid "Reliably apply time restrictions"
