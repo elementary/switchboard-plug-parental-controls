@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-07-20 18:18+0000\n"
-"Last-Translator: colindemian <colindemian@outlook.com>\n"
+"PO-Revision-Date: 2021-11-01 10:01+0000\n"
+"Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -114,35 +114,29 @@ msgstr "结束时间："
 #: src/plug/Views/TimeLimitView.vala:192
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
-msgstr ""
+msgstr "在周末的这段时间里，%s 的屏幕时间将不受限制。"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
-msgstr "%s 只能在以下时间段内登录，超出所选时间段后系统将会自动注销："
+msgstr "%s 只能在周末的这段时间登录，超出所选时间段后系统将会自动注销："
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
-msgstr ""
+msgstr "在工作日的这段时间里，%s 的屏幕时间将不受限制。"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
-msgstr "%s 只能在以下时间段内登录，超出所选时间段后系统将会自动注销："
+msgstr "%s 只能在工作日的这段时间登录，超出所选时间段后系统将会自动注销："
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
