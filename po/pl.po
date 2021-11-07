@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-11-07 10:51+0000\n"
+"PO-Revision-Date: 2021-11-07 12:18+0000\n"
 "Last-Translator: DarkKnightComes <darkknightcomes@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pl/>\n"
@@ -157,7 +157,7 @@ msgstr "Wyszukiwanie programów"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
-msgstr "Czas przed ekranem"
+msgstr "Harmonogram ekranu"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
@@ -180,9 +180,8 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"
 
 #: src/plug/Plug.vala:33
-#, fuzzy
 msgid "Screen Time & Limits"
-msgstr "Ograniczenia czasu"
+msgstr "Harmonogram ekranu i ograniczenia"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
