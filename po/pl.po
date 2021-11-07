@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
 "PO-Revision-Date: 2021-11-07 10:51+0000\n"
-"Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
+"Last-Translator: DarkKnightComes <darkknightcomes@gmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pl/>\n"
 "Language: pl\n"
@@ -27,7 +27,7 @@ msgstr "Nie masz uprawnień do uruchomienia tego programu"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "Administrator ograniczył twój dostęp do tej aplikacji."
 
 #: src/client/Client.vala:158
 #, c-format
@@ -120,6 +120,8 @@ msgstr "Do:"
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
 msgstr ""
+"Harmonogram ekranu dla %s nie będzie ograniczony w tym przedziale czasowym w "
+"weekendy."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
@@ -128,12 +130,16 @@ msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
+"%s będzie mógł zalogować się tylko w tym przedziale czasowym w weekendy i "
+"będzie automatycznie wylogowany, gdy ten okres się skończy:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
 msgstr ""
+"Harmonogram ekranu dla %s nie będzie ograniczony w trakcie tego okresu w dni "
+"robocze."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
@@ -142,6 +148,8 @@ msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
+"%s będzie mógł zalogować się tylko w tym przedziale czasowym w dni robocze i "
+"będzie automatycznie wylogowany, gdy ten okres się skończy:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
