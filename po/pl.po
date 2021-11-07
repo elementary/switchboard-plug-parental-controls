@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-11-04 08:10+0000\n"
+"PO-Revision-Date: 2021-11-07 10:51+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pl/>\n"
@@ -22,10 +22,8 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-15 06:49+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "Nie masz uprawnień do uruchomienia tego programu."
+msgstr "Nie masz uprawnień do uruchomienia tego programu"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
@@ -151,7 +149,7 @@ msgstr "Wyszukiwanie programów"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
-msgstr ""
+msgstr "Czas przed ekranem"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
