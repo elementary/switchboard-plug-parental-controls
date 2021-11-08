@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-11-07 12:18+0000\n"
+"PO-Revision-Date: 2021-11-08 08:35+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/pl/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
-msgstr ""
+msgstr "Ustawienia czasu przed ekranem i ograniczeń"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
@@ -30,21 +30,23 @@ msgstr "Konfiguruj ograniczenia czasowe i ogranicz korzystanie z programów"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 msgid "Fixes:"
-msgstr ""
+msgstr "Poprawki:"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 msgstr ""
+"Ustawiono domyślny czas przed ekranem od północy do północy by uniknąć "
+"przypadkowego zablokowania"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
 msgid "Improve reliability of app blocking"
-msgstr ""
+msgstr "Poprawiono skuteczność blokowania aplikacji"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
 msgid "Support blocking Flatpak apps"
-msgstr ""
+msgstr "Wsparcie dla blokowania aplikacji Flatpak"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Minor updates:"
@@ -52,11 +54,11 @@ msgstr "Mniejsze aktualizacje:"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
 msgid "Clarify how Screen Time limits work and when they take effect"
-msgstr ""
+msgstr "Wyjaśnienie działania Czasu przed ekranem gdy jest włączany"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
 msgid "New colorful avatar fallback"
-msgstr ""
+msgstr "Nowe kolorowe awatary zastępcze"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:28
@@ -66,32 +68,32 @@ msgstr "Zaktualizowane tłumaczenia"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
 msgid "Rename to Screen Time &amp; Limits"
-msgstr ""
+msgstr "Zmiana nazwy na Czas przed ekranem i ograniczenia"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
 msgid "Show your own account"
-msgstr ""
+msgstr "Pokazanie twojego konta"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
 msgid "Redesign the app chooser"
-msgstr ""
+msgstr "Przeprojektowanie wybierania aplikacji"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:36
 msgid "Redesign the Screen Time view"
-msgstr ""
+msgstr "Przeprojektowania widoku czasu przed ekranem"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:37
 msgid "Fix an issue with removing URLs from restricted websites"
-msgstr ""
+msgstr "Naprawiono problem z usuwaniem URLi z zablokowanych stron"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:38
 msgid "Reliably apply time restrictions"
-msgstr ""
+msgstr "Skutecznie aplikuj restrykcje czasu"
 
 #: data/screentime-limits.policy.in.in:10
 msgid "Manage Screen Time and Limits"
-msgstr ""
+msgstr "Zarządzanie Czasem przed ekranem i ograniczeniami"
 
 #: data/screentime-limits.policy.in.in:11
 msgid "Authentication is required to change Screen Time and Limits"
-msgstr ""
+msgstr "Wymagane uwierzytelnianie by zmienić Czas przed ekranem i ograczenia"
