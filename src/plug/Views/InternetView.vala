@@ -22,9 +22,10 @@
 
 namespace PC.Widgets {
     public class InternetBox : Gtk.Grid {
-        private const string URL_REGEX = "[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,4}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)";
-
+        private const string URL_REGEX = "([^/w.])[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{1,3}([^/])\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*\\b)";
+        private string? entry_secondary_tooltip_text = null;
         public weak Act.User user { get; construct; }
+        private GLib.MatchInfo? pattern = null;
         private Regex? url_regex = null;
 
         private Gtk.ListBox list_box;
@@ -94,8 +95,10 @@ namespace PC.Widgets {
             entry.hexpand = true;
             entry.margin_start = 6;
             entry.placeholder_text = _("Add a new URL, for example: google.com");
-            entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY, _("Invalid URL"));
-            entry.changed.connect (on_entry_changed);
+            entry.changed.connect (() => {
+                on_entry_changed ();
+                entry.set_icon_tooltip_text (Gtk.EntryIconPosition.SECONDARY , this.entry_secondary_tooltip_text);
+            });
             entry.activate.connect (on_entry_activate);
 
             var main_box = new Gtk.Grid ();
@@ -134,12 +137,38 @@ namespace PC.Widgets {
                 return;
             }
 
+            // SECTION: Remove duplicate strings
+            string formatted_url = entry.get_text ().strip ();
+            string input_url = pattern.get_string ();
+            string block_url;
+            int i = 0;
+            //
+
             string[] block_urls = {};
             foreach (weak Gtk.Widget url_entry in list_box.get_children ()) {
-                block_urls += ((UrlEntry) url_entry).url;
+                block_url = ((UrlEntry) url_entry).url;
+                // SECTION begin
+                if (formatted_url in block_url) {
+                    if (formatted_url.length == block_url.length) {
+                        i++;
+                        if (i > 1) {
+                            list_box.remove (url_entry);
+                            entry.set_text (input_url);
+                            return;
+                        }
+                    }
+                }
+                // SECTION
+                block_urls += block_url;
             }
 
+            // SECTION end
+            entry.text = "";
+
+            // We necessary to clean a table rules before saving the configuration file
+            Utils.get_api ().set_user_daemon_active.begin (user.get_user_name (), false);
             Utils.get_api ().set_user_daemon_block_urls.begin (user.get_user_name (), block_urls);
+            Utils.get_api ().set_user_daemon_active.begin (user.get_user_name (), true);
         }
 
         private void on_entry_changed () {
@@ -152,7 +181,15 @@ namespace PC.Widgets {
             add_button.sensitive = valid;
             if (valid || entry_stripped_text == "") {
                 entry.secondary_icon_name = null;
+                if (pattern != null) {
+                    if (entry_stripped_text == pattern.get_string ()) {
+                        entry_secondary_tooltip_text = _("The specified URL already exists in list");
+                        entry.secondary_icon_name = "dialog-warning-symbolic";
+                        add_button.sensitive = false;
+                    }
+                }
             } else {
+                entry_secondary_tooltip_text = _("Invalid URL");
                 entry.secondary_icon_name = "process-error-symbolic";
             }
         }
@@ -167,9 +204,25 @@ namespace PC.Widgets {
                 return;
             }
 
-            add_entry (url);
+            // Add automatic url formatting, for example:
+            // google.com instead of www.google.com
+            // youtube.com instead of https://www.youtube.com
+            string? formatted_url = null;
+            try {
+                for (url_regex.match (url, 0, out pattern); pattern.matches (); pattern.next ()) {
+                    formatted_url = pattern.fetch (0);
+                    entry.set_text (formatted_url);
+                }
+            } catch (GLib.Error e) {
+                GLib.error ("Failed URL extraction using regex: %s", e.message);
+            }
 
-            entry.text = "";
+            if (formatted_url == null) {
+                return;
+            }
+
+            add_entry (formatted_url);
+
             update_block_urls ();
         }
 
