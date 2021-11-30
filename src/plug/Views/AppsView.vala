@@ -227,7 +227,7 @@ namespace PC.Widgets {
 
             if (malcontent != null) {
                 try {
-                    app_filter = yield malcontent.get_app_filter_async (user.uid, Mct.ManagerGetValueFlags.NONE, null);
+                    app_filter = yield malcontent.get_app_filter_async ((int)Posix.getuid (), Mct.ManagerGetValueFlags.NONE, null);
                 } catch (Error e) {
                     warning ("Unable to get malcontent app filter: %s", e.message);
                 }
