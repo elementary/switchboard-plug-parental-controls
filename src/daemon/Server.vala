@@ -294,10 +294,21 @@ namespace PC.Daemon {
         }
 
         private void ensure_pam_lightdm_enabled () {
-            // other path to file
-            string path = "/usr/etc/pam.d/lightdm";
+            // dir etc: priority admin file
+            // dir usr/etc/pam.d: system provided configuration file
+            // Set following priority: etc -> usr/etc/pam.d
+            string? path = null;
+            string[] paths = { "/usr/etc/pam.d/lightdm", "/etc/pam.d/lightdm" };
 
-            if (!FileUtils.test (path, FileTest.EXISTS)) {
+            foreach (string file in paths) {
+                if (!FileUtils.test (file.to_string (), FileTest.EXISTS)) {
+                    continue;
+                }
+                // Get last file found
+                path = file.to_string ();
+            }
+
+            if (path == null) {
                 path = "/etc/pam.d/lightdm";
             }
 
