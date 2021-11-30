@@ -294,7 +294,12 @@ namespace PC.Daemon {
         }
 
         private void ensure_pam_lightdm_enabled () {
-            string path = "/etc/pam.d/lightdm";
+            // other path to file
+            string path = "/usr/etc/pam.d/lightdm";
+
+            if (!FileUtils.test (path, FileTest.EXISTS)) {
+                path = "/etc/pam.d/lightdm";
+            }
 
             string contents;
             try {
