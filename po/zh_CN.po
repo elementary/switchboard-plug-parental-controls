@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-11-01 10:01+0000\n"
-"Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
+"PO-Revision-Date: 2021-12-07 09:40+0000\n"
+"Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -144,7 +144,7 @@ msgstr "搜索应用程序"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
-msgstr "使用时段"
+msgstr "屏幕时间"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
@@ -168,7 +168,7 @@ msgstr "某些设置需要管理员权限才能更改"
 
 #: src/plug/Plug.vala:33
 msgid "Screen Time & Limits"
-msgstr "家长控制"
+msgstr "屏幕时间"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
