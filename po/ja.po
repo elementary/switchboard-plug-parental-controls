@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-06-17 05:35+0000\n"
+"PO-Revision-Date: 2021-12-14 15:01+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ja/>\n"
@@ -124,9 +124,7 @@ msgstr "週末の以下の時間は、%s のスクリーンタイムは制限さ
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
-msgstr ""
-"週末の場合、%s は以下の時間のみログインが可能です。以下の時間を超えると、自動"
-"的にログアウトされます。"
+msgstr "週末に %s がログイン可能なのは以下の時間帯のみです。これを超過すると自動的にログアウトされます。"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
@@ -140,9 +138,7 @@ msgstr "平日の以下の時間は、%s のスクリーンタイムは制限さ
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
-msgstr ""
-"平日の場合、%s は以下の時間のみログインが可能です。以下の時間を超えると、自動"
-"的にログアウトされます。"
+msgstr "平日に %s がログイン可能なのは以下の時間帯のみです。これを超過すると自動的にログアウトされます。"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
