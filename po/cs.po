@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2022-01-10 12:16+0000\n"
+"PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/cs/>\n"
@@ -120,38 +120,36 @@ msgstr "Do:"
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
 msgstr ""
+"Doba před obrazovkou pro %s nebude omezována v průběhu této periody o "
+"víkendech."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s se bude moci přihlásit pouze v tomto čase a bude po skončení této periody "
-"automaticky odhlášen(a):"
+"%s se bude moci přihlásit pouze v tomto čase o víkendech a bude po skončení "
+"této periody automaticky odhlášen(a):"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
 msgstr ""
+"Doba před obrazovkou pro %s nebude omezována v průběhu této periody ve "
+"všedních dnech."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s se bude moci přihlásit pouze v tomto čase a bude po skončení této periody "
-"automaticky odhlášen(a):"
+"%s se bude moci přihlásit pouze v tomto čase ve všedních dnech a bude po "
+"skončení této periody automaticky odhlášen(a):"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
