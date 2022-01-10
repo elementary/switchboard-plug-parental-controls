@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2020-08-25 06:13+0000\n"
+"PO-Revision-Date: 2022-01-10 12:16+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/cs/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
@@ -28,10 +28,8 @@ msgid "Configure time limits and restrict application usage"
 msgstr "Nastavit časové limity a omezení používání aplikace"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
-#, fuzzy
-#| msgid "Fixes"
 msgid "Fixes:"
-msgstr "Opravy"
+msgstr "Opravy:"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 msgid ""
@@ -50,10 +48,8 @@ msgid "Support blocking Flatpak apps"
 msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
-#, fuzzy
-#| msgid "Minor updates"
 msgid "Minor updates:"
-msgstr "Drobné aktualizace"
+msgstr "Drobné aktualizace:"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
 msgid "Clarify how Screen Time limits work and when they take effect"
