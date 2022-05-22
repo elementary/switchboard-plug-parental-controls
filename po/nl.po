@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2022-01-15 22:24+0000\n"
+"PO-Revision-Date: 2022-05-22 08:05+0000\n"
 "Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/nl/>\n"
@@ -120,38 +120,35 @@ msgstr "Tot:"
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
 msgstr ""
+"Schermtijd van %s zal niet worden gelimiteerd tijdens deze periode in het "
+"weekend."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s kan alleen inloggen gedurende deze tijd, en wordt automatisch uitgelogd "
-"als de tijd voorbij is:"
+"%s kan alleen inloggen gedurende deze tijd in het weekend en wordt "
+"automatisch uitgelogd als de tijd voorbij is:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
 msgstr ""
+"Schermtijd van %s zal niet worden gelimiteerd in deze periode doordeweeks."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s kan alleen inloggen gedurende deze tijd, en wordt automatisch uitgelogd "
-"als de tijd voorbij is:"
+"%s kan alleen inloggen gedurende deze tijd doordeweeks en wordt automatisch "
+"uitgelogd als de tijd voorbij is:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -183,7 +180,7 @@ msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
 #: src/plug/Plug.vala:33
 msgid "Screen Time & Limits"
-msgstr "Schermtijd & limieten"
+msgstr "Schermtijd en limieten"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
