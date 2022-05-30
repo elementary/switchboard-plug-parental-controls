@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-07-30 20:57+0000\n"
+"PO-Revision-Date: 2022-05-30 10:51+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/fr/>\n"
@@ -51,7 +51,7 @@ msgstr "Prise en charge du blocage des applications Flatpak"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
 msgid "Minor updates:"
-msgstr "Mises à jour mineures :"
+msgstr "Mises à jour mineures :"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
 msgid "Clarify how Screen Time limits work and when they take effect"
