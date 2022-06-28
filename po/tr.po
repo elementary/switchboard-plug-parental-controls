@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-06-16 23:48+0000\n"
+"PO-Revision-Date: 2022-06-29 04:55+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/tr/>\n"
@@ -72,7 +72,7 @@ msgstr "Seçili Uygulamayı Kaldır"
 
 #: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
-msgstr "Hepsini Temizle"
+msgstr "Tümünü Temizle"
 
 #: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
