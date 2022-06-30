@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-06-16 23:48+0000\n"
+"PO-Revision-Date: 2022-06-30 13:47+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/he/>\n"
@@ -71,7 +71,7 @@ msgstr "הסרת היישום שנבחר"
 
 #: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
-msgstr "ניקוי הכל"
+msgstr "פינוי הכול"
 
 #: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
