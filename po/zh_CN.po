@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-12-07 09:40+0000\n"
+"PO-Revision-Date: 2022-07-20 09:38+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/zh_Hans/>\n"
@@ -69,7 +69,7 @@ msgstr "删除选中的应用"
 
 #: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
-msgstr "全部清除"
+msgstr "清除所有"
 
 #: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
