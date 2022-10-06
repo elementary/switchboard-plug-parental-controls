@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2022-10-04 21:31+0000\n"
+"PO-Revision-Date: 2022-10-07 16:57+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/ckb/>\n"
@@ -17,73 +17,73 @@ msgstr ""
 
 #: src/client/AppUnavailableDialog.vala:27
 msgid "You are not permitted to run this application"
-msgstr ""
+msgstr "تۆ مۆڵەتی کردنەوەی ئەم بەرنامەیەت نییە"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "بەڕێوەبەر مۆڵەتی تۆی سنووردار کردووە لە دەستگەیشتنت بەم بەرنامەیە."
 
 #: src/client/Client.vala:158
 #, c-format
 msgid "This computer will lock after %s."
-msgstr ""
+msgstr "ئەم کۆمپیتەرە دوای %s قوفڵ دەبێت."
 
 #: src/client/Client.vala:160
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "تەنها %lu کاتژمێر"
+msgstr[1] "%lu کاتژمێر"
 
 #: src/client/Client.vala:162
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "تەنها %lu خولەک"
+msgstr[1] "%lu خولەک"
 
 #: src/client/Client.vala:164
 msgid ""
 "Make sure to close all applications before your computer will be locked."
-msgstr ""
+msgstr "دڵنیابە لە داخستنی هەموو بەرنامەکانت پێش ئەوەی کۆمپیتەرەکەت قوفڵ ببێت."
 
 #: src/client/Client.vala:170
 msgid "Time left"
-msgstr ""
+msgstr "کاتی ماوە"
 
 #: src/plug/Views/AppsView.vala:50
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "ڕێگریکردنی %s لە بەکارهێنانی ئەم بەرنامانە:"
 
 #: src/plug/Views/AppsView.vala:60
 msgid "Add Prevented Apps…"
-msgstr ""
+msgstr "زیادکردنی بەرنامەی قەدەغەکراو…"
 
 #: src/plug/Views/AppsView.vala:64
 msgid "Remove Selected App"
-msgstr ""
+msgstr "سڕینەوەی بەرنامەی دیاریکراو"
 
 #: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
-msgstr ""
+msgstr "سڕینەوەی هەموو"
 
 #: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
-msgstr ""
+msgstr "ڕێگەی بدە ئەم بەرنامانە بە مۆڵەتی بەڕێوەبەر بەکار بهێنێت:"
 
 #: src/plug/Views/InternetView.vala:72
 #, c-format
 msgid "Prevent %s from visiting these websites:"
-msgstr ""
+msgstr "ڕێگریکردن لە %s لە سەردانیکردنی ئەم وێبسایتانە:"
 
 #: src/plug/Views/InternetView.vala:87
 msgid "Add URL"
-msgstr ""
+msgstr "زیادکردنی وێبسایت"
 
 #: src/plug/Views/InternetView.vala:96
 msgid "Add a new URL, for example: google.com"
-msgstr ""
+msgstr "وێبسایتێکی نوێ زیاد بکە، بۆ نموونە google.com"
 
 #: src/plug/Views/InternetView.vala:97
 msgid "Invalid URL"
@@ -92,12 +92,12 @@ msgstr "لینکەکە هەڵەیە"
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:41
 msgid "Weekdays"
-msgstr ""
+msgstr "ڕۆژەکانی هەفتە"
 
 #. /TRANSLATORS: Refers to weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:49
 msgid "Weekends"
-msgstr ""
+msgstr "کۆتایی هەفتەکان"
 
 #: src/plug/Views/TimeLimitView.vala:169
 msgid "From:"
@@ -111,7 +111,7 @@ msgstr "بۆ:"
 #: src/plug/Views/TimeLimitView.vala:192
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
-msgstr ""
+msgstr "کاتی ڕوونما بۆ %s سنووردار نابێت لەماوەی کۆتایی هەفتەکاندا."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
@@ -120,12 +120,14 @@ msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
+"%s تەنها دەتوانیت لەم ماوەیەدا لە کۆتایی هەفتەکاندا بچێتە ژوورەوە و، دوای "
+"تەواوبوونی ماوەکە ڕاستەوخۆ دەوەستێندرێت:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
-msgstr ""
+msgstr "کاتی ڕوونما بۆ %s لەم ماوەیەدا لە ڕۆژەکانی هەفتەدا سنووردار نابێت."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
@@ -134,6 +136,8 @@ msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
+"%s تەنها لەم ماوەیدا لەماوە ڕۆژەکانی هەفتەدا دەتوانێت بچێتە ژوور، دوای "
+"تەواوبوونی ماوەکە ڕاستەوخۆ دەچێتە دەرەوە:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -141,11 +145,11 @@ msgstr "بەدوای بەرنامەدا بگەڕێ"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
-msgstr ""
+msgstr "کاتی ڕوونما"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
-msgstr ""
+msgstr "ئینتەرنێت"
 
 #: src/plug/Widgets/ControlPage.vala:54
 msgid "Applications"
@@ -167,20 +171,20 @@ msgstr ""
 
 #: src/plug/Plug.vala:33
 msgid "Screen Time & Limits"
-msgstr ""
+msgstr "کاتی ڕوونما & سنوورەکان"
 
 #: src/plug/Plug.vala:34
 msgid "Configure time limits and restrict application usage"
-msgstr ""
+msgstr "سنووری کاتەکان ڕێک بخە و بەکارهێنانی بەرنامەکان سنووردار بکە"
 
 #: src/plug/Plug.vala:61
 msgid "Limit computer use"
-msgstr ""
+msgstr "بەکارهێنانی کۆمپیوتەر سنووردار بکە"
 
 #: src/plug/Plug.vala:62
 msgid "Prevent website access"
-msgstr ""
+msgstr "ڕێگری لە چوونەژوورەوەی ماڵپەڕەکان بکە"
 
 #: src/plug/Plug.vala:63
 msgid "Prevent application access"
-msgstr ""
+msgstr "ڕێگریکردن لە دەستڕاگەیشتن بە بەرنامەکان"
