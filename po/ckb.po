@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:57+0000\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
 "PO-Revision-Date: 2022-10-07 16:57+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -23,31 +23,31 @@ msgstr "تۆ مۆڵەتی کردنەوەی ئەم بەرنامەیەت نییە"
 msgid "An administrator has restricted your access to this application."
 msgstr "بەڕێوەبەر مۆڵەتی تۆی سنووردار کردووە لە دەستگەیشتنت بەم بەرنامەیە."
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "ئەم کۆمپیتەرە دوای %s قوفڵ دەبێت."
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "تەنها %lu کاتژمێر"
 msgstr[1] "%lu کاتژمێر"
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "تەنها %lu خولەک"
 msgstr[1] "%lu خولەک"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "دڵنیابە لە داخستنی هەموو بەرنامەکانت پێش ئەوەی کۆمپیتەرەکەت قوفڵ ببێت."
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "کاتی ماوە"
 
@@ -169,22 +169,22 @@ msgstr ""
 "بەشێک لە ڕێکخستنەکان پێویستیان بە دەسەڵاتی بەڕێوەبەرە بۆ ئەوەی گۆڕانکاریان "
 "بەسەردا بێت"
 
-#: src/plug/Plug.vala:33
+#: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
 msgstr "کاتی ڕوونما & سنوورەکان"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "سنووری کاتەکان ڕێک بخە و بەکارهێنانی بەرنامەکان سنووردار بکە"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:64
 msgid "Limit computer use"
 msgstr "بەکارهێنانی کۆمپیوتەر سنووردار بکە"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
 msgstr "ڕێگری لە چوونەژوورەوەی ماڵپەڕەکان بکە"
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "ڕێگریکردن لە دەستڕاگەیشتن بە بەرنامەکان"

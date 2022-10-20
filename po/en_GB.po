@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:57+0000\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
 "PO-Revision-Date: 2021-07-05 13:54+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -23,32 +23,32 @@ msgstr "You are not permitted to run this application"
 msgid "An administrator has restricted your access to this application."
 msgstr "An administrator has restricted your access to this application."
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "This computer will lock after %s."
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu hour"
 msgstr[1] "%lu hours"
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu minute"
 msgstr[1] "%lu minutes"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Make sure to close all applications before your computer will be locked."
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "Time left"
 
@@ -168,23 +168,23 @@ msgstr "Other Accounts"
 msgid "Some settings require administrator rights to be changed"
 msgstr "Some settings require administrator rights to be changed"
 
-#: src/plug/Plug.vala:33
+#: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
 msgstr "Screen Time & Limits"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "Configure time limits and restrict application usage"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:64
 msgid "Limit computer use"
 msgstr "Limit computer use"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
 msgstr "Prevent website access"
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Prevent application access"
 

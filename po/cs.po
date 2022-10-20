@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:57+0000\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
 "PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -28,12 +28,12 @@ msgstr "Nemáte oprávnění spouštět tuto aplikaci"
 msgid "An administrator has restricted your access to this application."
 msgstr "Správce počítače vám omezil přístup k této aplikaci."
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Tento počítač se zamkne za %s."
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
@@ -41,7 +41,7 @@ msgstr[0] "%lu hodina"
 msgstr[1] "%lu hodiny"
 msgstr[2] "%lu hodin"
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
@@ -49,13 +49,13 @@ msgstr[0] "%lu minuta"
 msgstr[1] "%lu minuty"
 msgstr[2] "%lu minut"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Ujistěte se, že jste zavřeli všechny aplikace, než bude váš počítač uzamčen."
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "Zbývající čas"
 
@@ -179,23 +179,23 @@ msgstr "Ostatní účty"
 msgid "Some settings require administrator rights to be changed"
 msgstr "Některá nastavení vyžadují oprávnění na úrovni správce systému"
 
-#: src/plug/Plug.vala:33
+#: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
 msgstr "Časová omezení"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "Nastavit časové limity a omezení používání aplikace"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:64
 msgid "Limit computer use"
 msgstr "Omezit používání počítače"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
 msgstr "Zabránit přístupu k webovým stránkám"
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Zabránit přístupu k aplikaci"
 

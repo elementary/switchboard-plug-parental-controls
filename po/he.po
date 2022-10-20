@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:57+0000\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
 "PO-Revision-Date: 2022-06-30 13:47+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -28,31 +28,31 @@ msgstr "אין הרשאה להריץ יישום זה"
 msgid "An administrator has restricted your access to this application."
 msgstr "ההנהלה הגבילה את הגישה שלך ליישום הזה."
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "המחשב יינעל לאחר %s."
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "שעה אחת"
 msgstr[1] "%lu שעות"
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "דקה אחת"
 msgstr[1] "%lu דקות"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "נא לוודא שכל היישומים נסגרו לפני שהמחשב ינעל."
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "זמן שנותר"
 
@@ -172,23 +172,23 @@ msgstr "חשבונות אחרים"
 msgid "Some settings require administrator rights to be changed"
 msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
 
-#: src/plug/Plug.vala:33
+#: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
 msgstr "זמן מסך ומגבלות"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "הגדרת מגבלות זמן והגבלת שימוש ביישומים"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:64
 msgid "Limit computer use"
 msgstr "הגבלת השימוש במחשב"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
 msgstr "מניעת כניסה לאתרים"
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "מניעת גישה ליישומים"
 

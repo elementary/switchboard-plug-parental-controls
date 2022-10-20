@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:57+0000\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
 "PO-Revision-Date: 2017-02-19 11:55+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,33 +24,33 @@ msgstr "Δεν σας επιτρέπεται να εκτελέσετε αυτή�
 msgid "An administrator has restricted your access to this application."
 msgstr ""
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, fuzzy, c-format
 msgid "This computer will lock after %s."
 msgstr "Ο υπολογιστής θα κλειδώσει μετά από %s %s. %s"
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu ώρα"
 msgstr[1] "%lu ώρες"
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu λεπτό"
 msgstr[1] "%lu λεπτά"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Σιγουρευτείτε να κλείσετε όλες τις εφαρμογές πριν κλειδώσει ο υπολογιστής "
 "σας."
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "Χρόνος που απομένει"
 
@@ -167,25 +167,25 @@ msgstr "Άλλοι λογαριασμοί"
 msgid "Some settings require administrator rights to be changed"
 msgstr "Κάποιες ρυθμίσεις απαιτούν δικαιώματα διαχειριστή για να αλλάξουν"
 
-#: src/plug/Plug.vala:33
+#: src/plug/Plug.vala:36
 #, fuzzy
 msgid "Screen Time & Limits"
 msgstr "Χρόνος που απομένει"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "Ρύθμιση χρονικών ορίων και περιορισμός χρήσης εφαρμογών"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:64
 #, fuzzy
 msgid "Limit computer use"
 msgstr "Περιορισμός χρήσης υπολογιστή:"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
 msgstr ""
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr ""
 
