@@ -1,3 +1,14 @@
+switchboard-plug-parental-controls (6.0.1) bionic; urgency=medium
+
+  * Release 6.0.1 (#163)
+  * Update translation files
+  * Update translation template
+  * Correctly list polkit implied permissions (#162)
+  * README: Update to the current Plug name (#153)
+  * l10n: Correctly setup the locales (#152)
+
+ -- elementary OS Team <builds@elementary.io>  Fri, 21 Oct 2022 22:08:48 +0000
+
 switchboard-plug-parental-controls (6.0.0) bionic; urgency=medium
 
   * Release 6.0.0 (#151)
