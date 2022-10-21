@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:57+0000\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
 "PO-Revision-Date: 2019-07-26 09:13+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -31,12 +31,12 @@ msgstr "Jums neleidžiama vykdyti šią programą."
 msgid "An administrator has restricted your access to this application."
 msgstr ""
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Šis kompiuteris bus užrakintas po %s."
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
@@ -44,7 +44,7 @@ msgstr[0] "%lu valanda"
 msgstr[1] "%lu valandos"
 msgstr[2] "%lu valandų"
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
@@ -52,14 +52,14 @@ msgstr[0] "%lu minutė"
 msgstr[1] "%lu minutės"
 msgstr[2] "%lu minučių"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Prieš tai, kai jūsų kompiuteris bus užrakintas, nepamirškite užverti visas "
 "programas."
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "Liko laiko"
 
@@ -175,23 +175,23 @@ msgstr "Kitos paskyros"
 msgid "Some settings require administrator rights to be changed"
 msgstr "Kai kurių nustatymų pakeitimui reikia administratoriaus teisių"
 
-#: src/plug/Plug.vala:33
+#: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
 msgstr "Laikas prie ekrano ir jo apribojimai"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "Konfigūruoti laiko apribojimus ir riboti naudojimąsi programomis"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:64
 msgid "Limit computer use"
 msgstr "Apriboti naudojimąsi kompiuteriu"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
 msgstr "Neleisti prieigą prie svetainių"
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Neleisti prieigą prie programų"
 

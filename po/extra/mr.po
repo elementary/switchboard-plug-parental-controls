@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:57+0000\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
 "PO-Revision-Date: 2020-10-29 18:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -28,67 +28,69 @@ msgid "Configure time limits and restrict application usage"
 msgstr "वेळ मर्यादा कॉन्फिगर करा आणि अनुप्रयोग वापर प्रतिबंधित करा"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:27
+#, fuzzy
+#| msgid "Minor updates"
+msgid "Minor updates:"
+msgstr "किरकोळ अद्यतने"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:37
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:48
+msgid "Updated translations"
+msgstr "अद्ययावत भाषांतर"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
 #, fuzzy
 #| msgid "Fixes"
 msgid "Fixes:"
 msgstr "निराकारणे"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 msgstr ""
 "अपघाती लॉकआउट्स टाळण्यासाठी मध्यरात्र ते मध्यरात्री दरम्यान डीफॉल्ट स्क्रीन वेळ सेट करा"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:24
 msgid "Improve reliability of app blocking"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:25
 msgid "Support blocking Flatpak apps"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
-#, fuzzy
-#| msgid "Minor updates"
-msgid "Minor updates:"
-msgstr "किरकोळ अद्यतने"
-
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:29
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
 msgid "New colorful avatar fallback"
 msgstr ""
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:28
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:39
-msgid "Updated translations"
-msgstr "अद्ययावत भाषांतर"
-
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:42
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "स्क्रीन वेळ आणि मर्यादा असे नाव बदला"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:43
 msgid "Show your own account"
 msgstr "आपले स्वतःचे खाते दर्शवा"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:44
 msgid "Redesign the app chooser"
 msgstr "अ‍ॅप निवडकर्ता पुन्हा डिझाइन करा"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:36
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:45
 msgid "Redesign the Screen Time view"
 msgstr "स्क्रीन वेळ दृश्य पुन्हा डिझाइन करा"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:37
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:46
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr "प्रतिबंधित वेबसाइटवरून URL हटवण्याबाबद समस्येचे निराकरण करा"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:38
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:47
 msgid "Reliably apply time restrictions"
 msgstr "विश्वासाने वेळेचे निर्बंध लागू करा"
 
