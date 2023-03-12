@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 18:21+0000\n"
 "PO-Revision-Date: 2023-03-12 03:39+0000\n"
-"Last-Translator: Cleiton Floss <cleitonfloss@tutanota.de>\n"
+"Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ka/>\n"
 "Language: ka\n"
@@ -21,47 +21,43 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "თქვენ არ გაქვთ ამ პროგრამის გაშვების უფლება."
+msgstr "თქვენ ამ პროგრამის გაშვების უფლება არ გაქვთ"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "ამ აპლიკაციასთან წვდომა შეზღუდულია ადმინისტრატორის მიერ."
 
 #: src/client/Client.vala:163
 #, c-format
 msgid "This computer will lock after %s."
-msgstr ""
+msgstr "კომპიუტერი დაიბლოკება %s-ის შემდეგ."
 
 #: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu საათი"
 
 #: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%lu წუთი"
 
 #: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
-msgstr ""
+msgstr "კომპიუტერის დაბლოკვამდე ყველა აპლიკაციის დახურვა."
 
 #: src/client/Client.vala:175
 msgid "Time left"
-msgstr ""
+msgstr "დარჩენილი დრო"
 
 #: src/plug/Views/AppsView.vala:50
 #, c-format
 msgid "Prevent %s from using these apps:"
-msgstr ""
+msgstr "%s-ის შეზღუდვა შემდეგი აპებისგან:"
 
 #: src/plug/Views/AppsView.vala:60
 msgid "Add Prevented Apps…"
@@ -73,28 +69,28 @@ msgstr "არჩეული აპის წაშლა"
 
 #: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
-msgstr ""
+msgstr "ყველას გასუფთავება"
 
 #: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
-msgstr ""
+msgstr "ამ აპებთან ადმინის უფლებებით წვდომის უფლება:"
 
 #: src/plug/Views/InternetView.vala:72
 #, c-format
 msgid "Prevent %s from visiting these websites:"
-msgstr ""
+msgstr "%s-სთვის შემდეგი ვებგვერდების დახურვის აკრძალვა:"
 
 #: src/plug/Views/InternetView.vala:87
 msgid "Add URL"
-msgstr ""
+msgstr "URL-ის დამატება"
 
 #: src/plug/Views/InternetView.vala:96
 msgid "Add a new URL, for example: google.com"
-msgstr ""
+msgstr "დაამატეთ ახალი URL. მაგ: google.com"
 
 #: src/plug/Views/InternetView.vala:97
 msgid "Invalid URL"
-msgstr ""
+msgstr "არასწორი URL"
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:41
@@ -119,6 +115,7 @@ msgstr "სადამდე:"
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
 msgstr ""
+"ეკრანთან ჯდომა %s დასვენების დღეებში მითითებულ პერიოდში შეზღუდული არ იქნება."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
@@ -127,6 +124,8 @@ msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
+"%s-ს შესვლა მხოლოდ კვირის ბოლოს შეეძლება და ავტომატურად გამოვარდება, როცა ეს "
+"პერიოდი დასრულდება:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
@@ -148,7 +147,7 @@ msgstr "პროგრამებში პოვნა"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
-msgstr ""
+msgstr "ეკრანის დრო"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
@@ -172,24 +171,23 @@ msgstr "ზოგიერთი პარამეტრი, შესაცვ
 
 #: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
-msgstr ""
+msgstr "ეკრანის დრო და ლიმიტები"
 
 #: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr ""
 
 #: src/plug/Plug.vala:64
-#, fuzzy
 msgid "Limit computer use"
-msgstr "კომპიუტერის გამოყენების შეზღუდვა:"
+msgstr "კომპიუტერის გამოყენების შეზღუდვა"
 
 #: src/plug/Plug.vala:65
 msgid "Prevent website access"
-msgstr ""
+msgstr "ვებგვერდთან წვდომის აკრძალვა"
 
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
-msgstr ""
+msgstr "აპლიკაცისთან წვდომის აკრძალვა"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "კომპიუტერის გამოყენების შეზღუდვა:"
