@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 18:21+0000\n"
-"PO-Revision-Date: 2020-10-29 18:15+0000\n"
+"PO-Revision-Date: 2023-03-21 18:59+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/mr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.16.4\n"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
@@ -29,10 +29,8 @@ msgstr "वेळ मर्यादा कॉन्फिगर करा आ�
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:27
-#, fuzzy
-#| msgid "Minor updates"
 msgid "Minor updates:"
-msgstr "किरकोळ अद्यतने"
+msgstr "किरकोळ अद्यतने:"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
@@ -42,10 +40,8 @@ msgid "Updated translations"
 msgstr "अद्ययावत भाषांतर"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
-#, fuzzy
-#| msgid "Fixes"
 msgid "Fixes:"
-msgstr "निराकारणे"
+msgstr "निराकारणे:"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
 msgid ""
