@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-20 18:21+0000\n"
-"PO-Revision-Date: 2023-05-23 19:07+0000\n"
+"PO-Revision-Date: 2023-06-02 08:07+0000\n"
 "Last-Translator: Faisal Rachmadin <frachmadin@users.noreply.l10n.elementary."
 "io>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
@@ -17,10 +17,8 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "Anda tidak diizinkan menjalankan aplikasi ini."
+msgstr "Anda tidak diizinkan menjalankan aplikasi ini"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
