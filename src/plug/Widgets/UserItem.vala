@@ -27,7 +27,7 @@ namespace PC.Widgets {
         public ControlPage page { get; construct; }
 
         private Gtk.Grid grid;
-        private Hdy.Avatar avatar;
+        private Adw.Avatar avatar;
         private Gtk.Label full_name_label;
         private Gtk.Label username_label;
         private Gtk.Switch master_switch;
@@ -42,7 +42,7 @@ namespace PC.Widgets {
             user = page.user;
             user.changed.connect (update_view);
 
-            avatar = new Hdy.Avatar (32, null, true);
+            avatar = new Adw.Avatar (32, null, true);
 
             full_name_label = new Gtk.Label ("");
             full_name_label.halign = Gtk.Align.START;

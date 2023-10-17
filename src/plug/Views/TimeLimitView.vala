@@ -129,8 +129,8 @@ namespace PC.Widgets {
         public Gtk.SizeGroup size_group { get; construct; }
         public weak Act.User user { get; construct; }
 
-        private Granite.Widgets.TimePicker picker_from;
-        private Granite.Widgets.TimePicker picker_to;
+        private Granite.TimePicker picker_from;
+        private Granite.TimePicker picker_to;
 
         public WeekSpinBox (
             string title,

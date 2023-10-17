@@ -23,52 +23,47 @@ public class PC.MainBox : Gtk.Box {
     private Gtk.Stack content;
     private Widgets.UserListBox list;
     private Gtk.ScrolledWindow scrolled_window;
-    private Gtk.Grid main_grid;
     private Gtk.InfoBar infobar;
 
     public MainBox () {
-        var paned = new Gtk.Paned (Gtk.Orientation.HORIZONTAL);
-
-        content = new Gtk.Stack ();
-        content.hexpand = true;
+        content = new Gtk.Stack () {
+            hexpand = true
+        };
 
         list = new Widgets.UserListBox ();
         list.row_activated.connect ((row) => {
             if (content.get_children ().find (((Widgets.UserItem) row).page) == null) {
-                content.add (((Widgets.UserItem) row).page);
+                content.add_child (((Widgets.UserItem) row).page);
             }
 
             content.visible_child = ((Widgets.UserItem) row).page;
         });
 
-        scrolled_window = new Gtk.ScrolledWindow (null, null);
-        scrolled_window.hscrollbar_policy = Gtk.PolicyType.NEVER;
-        scrolled_window.add (list);
-        scrolled_window.vexpand = true;
+        scrolled_window = new Gtk.ScrolledWindow () {
+            child = list,
+            hscrollbar_policy = NEVER,
+            vexpand = true
+        };
 
-        paned.pack1 (scrolled_window, true, true);
-        paned.pack2 (content, true, false);
-        paned.set_position (240);
+        var paned = new Gtk.Paned (HORIZONTAL) {
+            position = 240,
+            start_child = scrolled_window,
+            end_child = content
+        };
 
         var lock_button = new Gtk.LockButton (Utils.get_permission ());
 
         infobar = new Gtk.InfoBar ();
-
-        var infobar_content = infobar.get_content_area ();
-        var infobar_action_area = (Gtk.Container) infobar.get_action_area ();
-        infobar_content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
-        infobar_action_area.add (lock_button);
-
-        main_grid = new Gtk.Grid ();
-        main_grid.attach (infobar, 0, 1, 1, 1);
-        main_grid.attach (paned, 0, 2, 1, 1);
+        infobar.add_child (new Gtk.Label (_("Some settings require administrator rights to be changed")));
+        infobar.add_action_widget (lock_button);
 
         unowned Polkit.Permission permission = Utils.get_permission ();
         permission.bind_property ("allowed", infobar, "no-show-all", GLib.BindingFlags.SYNC_CREATE);
         permission.bind_property ("allowed", infobar, "visible",
                                   GLib.BindingFlags.SYNC_CREATE | GLib.BindingFlags.INVERT_BOOLEAN);
 
-        this.add (main_grid);
-        this.show_all ();
+        orientation = VERTICAL;
+        append (infobar);
+        append (paned);
     }
 }

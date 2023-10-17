@@ -74,7 +74,7 @@ namespace PC.Client {
 
             if (app_name != null) {
                 var app_lock_dialog = new AppUnavailableDialog ();
-                app_lock_dialog.show_all ();
+                app_lock_dialog.present ();
             }
 
             if (auth != null) {
@@ -97,8 +97,6 @@ namespace PC.Client {
 
             api.launch.connect (on_launch);
             api.show_timeout.connect (on_show_timeout);
-
-            Gtk.main ();
         }
 
         private void on_authorize (string username, string action_id, string[] _args) {
