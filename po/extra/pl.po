@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:57+0000\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
 "PO-Revision-Date: 2021-11-08 08:35+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -29,10 +29,22 @@ msgid "Configure time limits and restrict application usage"
 msgstr "Konfiguruj ograniczenia czasowe i ogranicz korzystanie z programów"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:27
+msgid "Minor updates:"
+msgstr "Mniejsze aktualizacje:"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:37
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:48
+msgid "Updated translations"
+msgstr "Zaktualizowane tłumaczenia"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
 msgid "Fixes:"
 msgstr "Poprawki:"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
@@ -40,53 +52,43 @@ msgstr ""
 "Ustawiono domyślny czas przed ekranem od północy do północy by uniknąć "
 "przypadkowego zablokowania"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:24
 msgid "Improve reliability of app blocking"
 msgstr "Poprawiono skuteczność blokowania aplikacji"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:16
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:25
 msgid "Support blocking Flatpak apps"
 msgstr "Wsparcie dla blokowania aplikacji Flatpak"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:18
-msgid "Minor updates:"
-msgstr "Mniejsze aktualizacje:"
-
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:20
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:29
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr "Wyjaśnienie działania Czasu przed ekranem gdy jest włączany"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
 msgid "New colorful avatar fallback"
 msgstr "Nowe kolorowe awatary zastępcze"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:22
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:28
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:39
-msgid "Updated translations"
-msgstr "Zaktualizowane tłumaczenia"
-
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:42
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Zmiana nazwy na Czas przed ekranem i ograniczenia"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:43
 msgid "Show your own account"
 msgstr "Pokazanie twojego konta"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:44
 msgid "Redesign the app chooser"
 msgstr "Przeprojektowanie wybierania aplikacji"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:36
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:45
 msgid "Redesign the Screen Time view"
 msgstr "Przeprojektowania widoku czasu przed ekranem"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:37
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:46
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr "Naprawiono problem z usuwaniem URLi z zablokowanych stron"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:38
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:47
 msgid "Reliably apply time restrictions"
 msgstr "Skutecznie aplikuj restrykcje czasu"
 

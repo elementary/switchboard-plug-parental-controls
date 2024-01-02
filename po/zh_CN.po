@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2021-11-01 10:01+0000\n"
-"Last-Translator: Yuchen Deng <loaden@gmail.com>\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
+"PO-Revision-Date: 2022-07-20 09:38+0000\n"
+"Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/zh_Hans/>\n"
 "Language: zh_CN\n"
@@ -28,29 +28,29 @@ msgstr "您没有权限运行此应用程序"
 msgid "An administrator has restricted your access to this application."
 msgstr "您访问此应用程序的权限已被管理员限制。"
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "计算机将在 %s 后锁定。"
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu 小时"
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu 分钟"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "请确保所有应用程序已在计算机锁定前关闭。"
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "剩余时间"
 
@@ -69,7 +69,7 @@ msgstr "删除选中的应用"
 
 #: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
-msgstr "全部清除"
+msgstr "清除所有"
 
 #: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
@@ -144,7 +144,7 @@ msgstr "搜索应用程序"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
-msgstr "使用时段"
+msgstr "屏幕时间"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
@@ -166,23 +166,23 @@ msgstr "其他账户"
 msgid "Some settings require administrator rights to be changed"
 msgstr "某些设置需要管理员权限才能更改"
 
-#: src/plug/Plug.vala:33
+#: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
-msgstr "家长控制"
+msgstr "屏幕时间"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "配置时间限制和应用程序的使用限制"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:64
 msgid "Limit computer use"
 msgstr "限制电脑使用"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
 msgstr "阻止网络访问"
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "限制软件使用"
 
