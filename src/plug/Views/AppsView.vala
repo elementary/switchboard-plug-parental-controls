@@ -67,7 +67,7 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
         main_box.add (toolbar);
 
         var frame = new Gtk.Frame (null) {
-            child =  main_box,
+            child = main_box,
             margin_bottom = 12
         };
         frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
