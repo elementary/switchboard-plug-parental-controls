@@ -294,7 +294,27 @@ namespace PC.Daemon {
         }
 
         private void ensure_pam_lightdm_enabled () {
-            string path = "/etc/pam.d/lightdm";
+            // Prioritize user config over system
+            var config_dirs = new string [0];
+            config_dirs += Environment.get_user_config_dir ();
+            foreach (unowned var dir in Environment.get_system_config_dirs ()) {
+                config_dirs += dir;
+            }
+
+            string? path = null;
+            foreach (unowned var dir in config_dirs) {
+                var file_path = Path.build_path (Path.DIR_SEPARATOR_S, dir, "pam.d", "lightdm");
+                var file = File.new_for_path (file_path);
+                if (file.query_exists ()) {
+                    path = file_path;
+                    break;
+                }
+            }
+
+            if (path == null) {
+                critical ("No pam.d lightdm found");
+                return;
+            }
 
             string contents;
             try {
