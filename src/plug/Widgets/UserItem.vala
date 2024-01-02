@@ -7,7 +7,6 @@
 public class PC.Widgets.UserItem : Gtk.ListBoxRow {
     public ControlPage page { get; construct; }
 
-    private Gtk.Grid grid;
     private Hdy.Avatar avatar;
     private Gtk.Label full_name_label;
     private Gtk.Label username_label;
@@ -43,7 +42,7 @@ public class PC.Widgets.UserItem : Gtk.ListBoxRow {
             valign = CENTER
         };
 
-        grid = new Gtk.Grid () {
+        var grid = new Gtk.Grid () {
             column_spacing = 12,
             margin_top = 6,
             margin_end = 12,
@@ -61,7 +60,7 @@ public class PC.Widgets.UserItem : Gtk.ListBoxRow {
         master_switch.bind_property ("active", page.stack, "sensitive", SYNC_CREATE);
         master_switch.sensitive = Utils.get_permission ().get_allowed ();
         master_switch.notify["active"].connect (() => {
-            page.set_active (master_switch.get_active ());
+            page.set_active (master_switch.active);
         });
 
         Utils.get_permission ().notify["allowed"].connect (() => {
