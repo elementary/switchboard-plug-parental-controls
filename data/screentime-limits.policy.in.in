@@ -16,9 +16,7 @@
       <allow_active>auth_admin_keep</allow_active>
     </defaults>
     <annotate key="org.freedesktop.policykit.exec.path">@CLIENT_PATH@</annotate>
-    <annotate key="org.freedesktop.policykit.imply">org.freedesktop.parental-controls.user-administration</annotate>
-    <annotate key="org.freedesktop.policykit.imply">com.endlessm.ParentalControls.AppFilter.ChangeOwn</annotate>
-    <annotate key="org.freedesktop.policykit.imply">com.endlessm.ParentalControls.AppFilter.ChangeAny</annotate>
+    <annotate key="org.freedesktop.policykit.imply">org.freedesktop.parental-controls.user-administration com.endlessm.ParentalControls.AppFilter.ReadOwn com.endlessm.ParentalControls.AppFilter.ReadAny com.endlessm.ParentalControls.AppFilter.ChangeOwn com.endlessm.ParentalControls.AppFilter.ChangeAny</annotate>
   </action>
 
 </policyconfig>

@@ -2,9 +2,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:57+0000\n"
-"PO-Revision-Date: 2019-04-08 05:53+0000\n"
-"Last-Translator: Eri Hidayat <eriwhidayat@gmail.com>\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
+"PO-Revision-Date: 2023-06-02 08:07+0000\n"
+"Last-Translator: Faisal Rachmadin <frachmadin@users.noreply.l10n.elementary."
+"io>\n"
 "Language-Team: Indonesian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/id/>\n"
 "Language: id\n"
@@ -12,42 +13,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.5.1\n"
+"X-Generator: Weblate 4.17\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "Anda tidak diizinkan menjalankan aplikasi ini."
+msgstr "Anda tidak diizinkan menjalankan aplikasi ini"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
 msgstr ""
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Komputer ini akan terkunci setelah %s."
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu jam"
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu menit"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "Pastikan untuk menutup semua aplikasi sebelum komputer Anda terkunci."
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "Waktu tersisa"
 
@@ -105,7 +104,7 @@ msgstr "Dari:"
 
 #: src/plug/Views/TimeLimitView.vala:176
 msgid "To:"
-msgstr "Kepada:"
+msgstr "Sampai:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:192
@@ -163,24 +162,24 @@ msgstr "Akun Lain"
 msgid "Some settings require administrator rights to be changed"
 msgstr "Beberapa pengaturan memerlukan hak administrator untuk diubah"
 
-#: src/plug/Plug.vala:33
+#: src/plug/Plug.vala:36
 #, fuzzy
 msgid "Screen Time & Limits"
 msgstr "Batas Waktu"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "Mengkonfigurasi batas waktu dan membatasi penggunaan aplikasi"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:64
 msgid "Limit computer use"
 msgstr "Batasi penggunaan komputer"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
 msgstr "Cegah akses situs"
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Cegah akses aplikasi"
 

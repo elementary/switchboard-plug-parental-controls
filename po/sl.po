@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-14 21:57+0000\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
 "PO-Revision-Date: 2018-08-22 00:09+0000\n"
 "Last-Translator: Jernej Virag <jernej@virag.si>\n"
 "Language-Team: Slovenian <https://weblate.elementary.io/projects/switchboard/"
@@ -31,12 +31,12 @@ msgstr "Nimate dovoljenja za zagon te aplikacije."
 msgid "An administrator has restricted your access to this application."
 msgstr ""
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Računalnik se bo zaklenil po %s."
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
@@ -45,7 +45,7 @@ msgstr[1] "dveh urah"
 msgstr[2] "%lu urah"
 msgstr[3] "%lu urah"
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
@@ -54,12 +54,12 @@ msgstr[1] "dveh minutah"
 msgstr[2] "%lu minutah"
 msgstr[3] "%lu minutah"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "Zapri vse aplikacije preden bo računalnik zaklenjen."
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "Preostali čas"
 
@@ -175,25 +175,25 @@ msgstr "Drugi računi"
 msgid "Some settings require administrator rights to be changed"
 msgstr "Za spreminjanje nekaterih nastavitev so potrebne skrbniške pravice"
 
-#: src/plug/Plug.vala:33
+#: src/plug/Plug.vala:36
 #, fuzzy
 msgid "Screen Time & Limits"
 msgstr "Preostali čas"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "Nastavitve časovnih in aplikacijskih omejitev za druge uporabnike"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:64
 #, fuzzy
 msgid "Limit computer use"
 msgstr "Omeji uporabo računalnika:"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
 msgstr ""
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr ""
 
