@@ -59,7 +59,7 @@ public class PC.Widgets.AppRow : Gtk.ListBoxRow {
         var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
             halign = END,
             hexpand = true,
-            tooltip_text = ("Unblock %s").printf (app_info.get_display_name ())
+            tooltip_text = _("Unblock %s").printf (app_info.get_display_name ())
         };
 
         var main_grid = new Gtk.Grid () {
