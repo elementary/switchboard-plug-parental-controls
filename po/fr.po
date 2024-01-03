@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 00:56+0000\n"
+"POT-Creation-Date: 2024-01-03 22:56+0000\n"
 "PO-Revision-Date: 2024-01-03 22:56+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
@@ -185,18 +185,18 @@ msgstr ""
 "d'utilisation, les sites web et les applications. Certaines limites peuvent "
 "être contournées avec l'autorisation d'un administrateur."
 
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "Mon compte"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "Autres comptes"
-
-#: src/plug/MainView.vala:33
+#: src/plug/MainView.vala:41
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "La modification de certains paramètres nécessite les droits d'administrateur"
+
+#: src/plug/MainView.vala:127
+msgid "My Account"
+msgstr "Mon compte"
+
+#: src/plug/MainView.vala:130
+msgid "Other Accounts"
+msgstr "Autres comptes"
 
 #: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
