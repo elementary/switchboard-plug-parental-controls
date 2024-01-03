@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 22:56+0000\n"
+"POT-Creation-Date: 2024-01-03 23:44+0000\n"
 "PO-Revision-Date: 2018-11-05 23:31+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -77,22 +77,26 @@ msgstr "Izbriši sve"
 msgid "Allow access to these apps with admin permission:"
 msgstr "Dozvoli pristup ovim aplikacijama s administratorskim dozvolama:"
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Spriječi da %s posjećuje sljedeće web stranice:"
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "Dodaj URL"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "Dodaj novi URL, naprimjer: google.com"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "Nevažeći URL"
+
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr ""
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:41
@@ -201,6 +205,16 @@ msgstr "Spriječite pristup web stranici"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Spriječite pristup aplikaciji"
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "Spriječi da %s posjećuje sljedeće web stranice:"
+
+#~ msgid "Add URL"
+#~ msgstr "Dodaj URL"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "Dodaj novi URL, naprimjer: google.com"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "Ograniči korištenje računara:"
