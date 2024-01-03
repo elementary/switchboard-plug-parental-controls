@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 22:56+0000\n"
+"POT-Creation-Date: 2024-01-03 23:44+0000\n"
 "PO-Revision-Date: 2024-01-03 22:56+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -77,22 +77,26 @@ msgstr "פינוי הכול"
 msgid "Allow access to these apps with admin permission:"
 msgstr "מתן אפשרות גישה ליישומים אלו עם הרשאות מנהל:"
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "%s מנוע מלבקר באתרי האינטרנט הבאים:"
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "הוספת כתובת"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "הוספת כתובת חדשה, לדוגמה: google.com"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "כתובת שגויה"
+
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr ""
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:41
@@ -206,6 +210,16 @@ msgstr "מניעת כניסה לאתרים"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "מניעת גישה ליישומים"
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "%s מנוע מלבקר באתרי האינטרנט הבאים:"
+
+#~ msgid "Add URL"
+#~ msgstr "הוספת כתובת"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "הוספת כתובת חדשה, לדוגמה: google.com"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "הגבלת השימוש במחשב:"

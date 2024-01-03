@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 22:56+0000\n"
+"POT-Creation-Date: 2024-01-03 23:44+0000\n"
 "PO-Revision-Date: 2021-06-02 18:43+0000\n"
 "Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
@@ -78,22 +78,26 @@ msgstr "Limpiar todo"
 msgid "Allow access to these apps with admin permission:"
 msgstr "Permitir el acceso a estas aplicaciones con permiso de administrador:"
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Evitar que %s visite estos sitios web:"
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "Añadir URL"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "Añada un URL nuevo, por ejemplo: google.com"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "URL invalida"
+
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr ""
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:41
@@ -211,6 +215,16 @@ msgstr "Impedir el acceso a sitios web"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Impedir el acceso a aplicaciones"
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "Evitar que %s visite estos sitios web:"
+
+#~ msgid "Add URL"
+#~ msgstr "Añadir URL"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "Añada un URL nuevo, por ejemplo: google.com"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "Limitar el uso del equipo:"

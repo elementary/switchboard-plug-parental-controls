@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 22:56+0000\n"
+"POT-Creation-Date: 2024-01-03 23:44+0000\n"
 "PO-Revision-Date: 2020-10-29 18:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -72,22 +72,26 @@ msgstr "सर्व साफ करा"
 msgid "Allow access to these apps with admin permission:"
 msgstr "प्रशासकीय परवानगीसह या अॅप्सवरील प्रवेशास अनुमती द्या:"
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "या वेबसाइटला भेट दिल्यापासून %s ला प्रतिबंधित करा:"
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "यूआरएल जोडा"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "नवीन URL जोडा, उदाहरणार्थ: google.com"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "अवैध यूआरएल"
+
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr ""
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:41
@@ -205,6 +209,16 @@ msgstr "वेबसाइट प्रवेश प्रतिबंधित 
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "अप्लिकेशन प्रवेश प्रतिबंधित करा"
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "या वेबसाइटला भेट दिल्यापासून %s ला प्रतिबंधित करा:"
+
+#~ msgid "Add URL"
+#~ msgstr "यूआरएल जोडा"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "नवीन URL जोडा, उदाहरणार्थ: google.com"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "संगणक वापर मर्यादित करा:"

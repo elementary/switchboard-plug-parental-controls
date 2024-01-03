@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 22:56+0000\n"
+"POT-Creation-Date: 2024-01-03 23:44+0000\n"
 "PO-Revision-Date: 2022-10-07 16:57+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -72,22 +72,26 @@ msgstr "سڕینەوەی هەموو"
 msgid "Allow access to these apps with admin permission:"
 msgstr "ڕێگەی بدە ئەم بەرنامانە بە مۆڵەتی بەڕێوەبەر بەکار بهێنێت:"
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "ڕێگریکردن لە %s لە سەردانیکردنی ئەم وێبسایتانە:"
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "زیادکردنی وێبسایت"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "وێبسایتێکی نوێ زیاد بکە، بۆ نموونە google.com"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "لینکەکە هەڵەیە"
+
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr ""
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:41
@@ -201,3 +205,13 @@ msgstr "ڕێگری لە چوونەژوورەوەی ماڵپەڕەکان بکە"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "ڕێگریکردن لە دەستڕاگەیشتن بە بەرنامەکان"
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "ڕێگریکردن لە %s لە سەردانیکردنی ئەم وێبسایتانە:"
+
+#~ msgid "Add URL"
+#~ msgstr "زیادکردنی وێبسایت"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "وێبسایتێکی نوێ زیاد بکە، بۆ نموونە google.com"

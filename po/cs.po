@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 22:56+0000\n"
+"POT-Creation-Date: 2024-01-03 23:44+0000\n"
 "PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -80,22 +80,26 @@ msgstr "Smazat vše"
 msgid "Allow access to these apps with admin permission:"
 msgstr "Povolit přístup k těmto aplikacím se svolením správce:"
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Zabránit %s v návštěvě těchto stránek:"
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "Přidat URL"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "Přidat novou URL, například: google.com"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "Neplatná URL adresa"
+
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr ""
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:41
@@ -211,6 +215,16 @@ msgstr "Zabránit přístupu k webovým stránkám"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Zabránit přístupu k aplikaci"
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "Zabránit %s v návštěvě těchto stránek:"
+
+#~ msgid "Add URL"
+#~ msgstr "Přidat URL"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "Přidat novou URL, například: google.com"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "Omezit používání počítače:"

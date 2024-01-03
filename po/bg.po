@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 22:56+0000\n"
+"POT-Creation-Date: 2024-01-03 23:44+0000\n"
 "PO-Revision-Date: 2017-01-03 04:06+0000\n"
 "Last-Translator: Cody Garver <cody@elementaryos.org>\n"
 "Language-Team: Bulgarian <bg@li.org>\n"
@@ -78,22 +78,26 @@ msgstr "Изчистване на всичко"
 msgid "Allow access to these apps with admin permission:"
 msgstr "Позволяване на достъп до програмите с администраторски права"
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Предотвратяване на отварянето на следните сайтове от %s:"
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "Добавяне на адрес"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "Добавяне на нов адрес, например: abv.bg"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "Недействителен адрес"
+
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr ""
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:41
@@ -203,6 +207,16 @@ msgstr ""
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr ""
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "Предотвратяване на отварянето на следните сайтове от %s:"
+
+#~ msgid "Add URL"
+#~ msgstr "Добавяне на адрес"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "Добавяне на нов адрес, например: abv.bg"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "Ограничаване на употребата на устройството:"
