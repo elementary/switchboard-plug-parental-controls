@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 00:56+0000\n"
+"POT-Creation-Date: 2024-01-03 22:56+0000\n"
 "PO-Revision-Date: 2017-04-24 23:04+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://l10n.elementary.io/projects/switchboard/"
@@ -174,17 +174,17 @@ msgid ""
 "authorization."
 msgstr ""
 
-#: src/plug/Widgets/UserList.vala:104
+#: src/plug/MainView.vala:41
+msgid "Some settings require administrator rights to be changed"
+msgstr "Neke postavke zahtijevaju administratorske ovlasti"
+
+#: src/plug/MainView.vala:127
 msgid "My Account"
 msgstr "Moj račun"
 
-#: src/plug/Widgets/UserList.vala:107
+#: src/plug/MainView.vala:130
 msgid "Other Accounts"
 msgstr "Ostali računi"
-
-#: src/plug/MainView.vala:33
-msgid "Some settings require administrator rights to be changed"
-msgstr "Neke postavke zahtijevaju administratorske ovlasti"
 
 #: src/plug/Plug.vala:36
 #, fuzzy

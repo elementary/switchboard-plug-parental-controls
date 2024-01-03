@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 00:56+0000\n"
+"POT-Creation-Date: 2024-01-03 22:56+0000\n"
 "PO-Revision-Date: 2020-04-27 00:10+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -181,19 +181,19 @@ msgid ""
 "authorization."
 msgstr ""
 
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "Minha conta"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "Outras contas"
-
-#: src/plug/MainView.vala:33
+#: src/plug/MainView.vala:41
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Algumas configurações precisam de direitos administrativos para serem "
 "modificadas"
+
+#: src/plug/MainView.vala:127
+msgid "My Account"
+msgstr "Minha conta"
+
+#: src/plug/MainView.vala:130
+msgid "Other Accounts"
+msgstr "Outras contas"
 
 #: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
