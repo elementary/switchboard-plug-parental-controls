@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 22:56+0000\n"
+"POT-Creation-Date: 2024-01-03 23:44+0000\n"
 "PO-Revision-Date: 2017-02-19 11:55+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,22 +76,26 @@ msgid "Allow access to these apps with admin permission:"
 msgstr ""
 "Να επιτρέπεται η πρόσβαση σε αυτές τις εφαρμογές με άδεια του διαχειριστή:"
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Αποτροπή %s από την επίσκεψη αυτών των ιστοσελίδων:"
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "Προσθήκη διεύθυνσης"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "Προσθήκη νέας διεύθυνσης, για παράδειγμα: google.com"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "Μη έγκυση διεύθυνση"
+
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr ""
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:41
@@ -201,6 +205,16 @@ msgstr ""
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr ""
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "Αποτροπή %s από την επίσκεψη αυτών των ιστοσελίδων:"
+
+#~ msgid "Add URL"
+#~ msgstr "Προσθήκη διεύθυνσης"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "Προσθήκη νέας διεύθυνσης, για παράδειγμα: google.com"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "Περιορισμός χρήσης υπολογιστή:"
