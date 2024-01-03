@@ -303,9 +303,8 @@ namespace PC.Daemon {
 
             string? path = null;
             foreach (unowned var dir in config_dirs) {
-                var file_path = Path.build_path (Path.DIR_SEPARATOR_S, dir, "pam.d", "lightdm");
-                var file = File.new_for_path (file_path);
-                if (file.query_exists ()) {
+                var file_path = Path.build_filename (dir, "pam.d", "lightdm");
+                if (FileUtils.test (file_path, EXISTS)) {
                     path = file_path;
                     break;
                 }
