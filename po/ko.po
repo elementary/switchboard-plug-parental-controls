@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:21+0000\n"
+"POT-Creation-Date: 2024-01-03 22:56+0000\n"
 "PO-Revision-Date: 2022-08-06 15:44+0000\n"
 "Last-Translator: Jung-Kyu Park <bagjunggyu@gmail.com>\n"
 "Language-Team: Korean <https://l10n.elementary.io/projects/switchboard/"
@@ -158,17 +158,30 @@ msgstr "인터넷"
 msgid "Applications"
 msgstr "애플리케이션"
 
-#: src/plug/Widgets/UserList.vala:104
+#: src/plug/Widgets/ControlPage.vala:81
+msgid ""
+"Manage your usage of this device by setting limits on time usage, websites, "
+"and apps."
+msgstr ""
+
+#: src/plug/Widgets/ControlPage.vala:83
+msgid ""
+"Supervise and manage usage of this device with limits on time usage, "
+"websites, and apps. Some limits may be bypassed with an administrator's "
+"authorization."
+msgstr ""
+
+#: src/plug/MainView.vala:41
+msgid "Some settings require administrator rights to be changed"
+msgstr "일부 설정은 변경할 때 관리자 권한이 필요합니다"
+
+#: src/plug/MainView.vala:127
 msgid "My Account"
 msgstr "내 계정"
 
-#: src/plug/Widgets/UserList.vala:107
+#: src/plug/MainView.vala:130
 msgid "Other Accounts"
 msgstr "기타 계정"
-
-#: src/plug/MainView.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "일부 설정은 변경할 때 관리자 권한이 필요합니다"
 
 #: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"

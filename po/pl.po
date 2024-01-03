@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:21+0000\n"
-"PO-Revision-Date: 2022-06-29 08:35+0000\n"
+"POT-Creation-Date: 2024-01-03 22:56+0000\n"
+"PO-Revision-Date: 2024-01-03 22:56+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-02-15 06:49+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -167,17 +167,35 @@ msgstr "Internet"
 msgid "Applications"
 msgstr "Programy"
 
-#: src/plug/Widgets/UserList.vala:104
+#: src/plug/Widgets/ControlPage.vala:81
+msgid ""
+"Manage your usage of this device by setting limits on time usage, websites, "
+"and apps."
+msgstr ""
+"Zarządzaj swoim użyciem urządzenia poprzez ustawienie limitów używania ze "
+"względu na czas, strony oraz aplikacje."
+
+#: src/plug/Widgets/ControlPage.vala:83
+msgid ""
+"Supervise and manage usage of this device with limits on time usage, "
+"websites, and apps. Some limits may be bypassed with an administrator's "
+"authorization."
+msgstr ""
+"Nadzoruj i zarządzaj użytkowaniem tego urządzenia przez nałożenie limitu "
+"czasowego, na strony lub aplikacje. Niektóre limity mogą być ominięte przy "
+"użyciu uprawnień administracyjnych."
+
+#: src/plug/MainView.vala:41
+msgid "Some settings require administrator rights to be changed"
+msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"
+
+#: src/plug/MainView.vala:127
 msgid "My Account"
 msgstr "Moje konto"
 
-#: src/plug/Widgets/UserList.vala:107
+#: src/plug/MainView.vala:130
 msgid "Other Accounts"
 msgstr "Inne konta"
-
-#: src/plug/MainView.vala:59
-msgid "Some settings require administrator rights to be changed"
-msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"
 
 #: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
