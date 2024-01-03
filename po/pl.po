@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 22:56+0000\n"
+"POT-Creation-Date: 2024-01-03 23:44+0000\n"
 "PO-Revision-Date: 2024-01-03 22:56+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -80,22 +80,26 @@ msgstr "Wyczyść wszystkie"
 msgid "Allow access to these apps with admin permission:"
 msgstr "Zezwalaj na dostęp do tych programów z uprawnieniami administratora:"
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Uniemożliwiaj %s odwiedzanie tych stron internetowych:"
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "Dodaj URL"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "Dodaj nowy URL, na przykład: google.com"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "Niepoprawny URL"
+
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr ""
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:41
@@ -216,6 +220,16 @@ msgstr "Ogranicz dostęp do stron internetowych"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Ogranicz dostęp do programów"
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "Uniemożliwiaj %s odwiedzanie tych stron internetowych:"
+
+#~ msgid "Add URL"
+#~ msgstr "Dodaj URL"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "Dodaj nowy URL, na przykład: google.com"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "Ogranicz korzystanie z komputera:"

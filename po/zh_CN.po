@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 22:56+0000\n"
+"POT-Creation-Date: 2024-01-03 23:44+0000\n"
 "PO-Revision-Date: 2022-07-20 09:38+0000\n"
 "Last-Translator: colindemian <colindemian@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
@@ -75,22 +75,26 @@ msgstr "清除所有"
 msgid "Allow access to these apps with admin permission:"
 msgstr "授予以下应用管理员权限："
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "阻止 %s 访问以下网站："
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "添加网址"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "添加新网址，如：google.com"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "无效 URL"
+
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr ""
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:41
@@ -198,6 +202,16 @@ msgstr "阻止网络访问"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "限制软件使用"
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "阻止 %s 访问以下网站："
+
+#~ msgid "Add URL"
+#~ msgstr "添加网址"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "添加新网址，如：google.com"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "限制使用："
