@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:44+0000\n"
+"POT-Creation-Date: 2024-01-03 23:51+0000\n"
 "PO-Revision-Date: 2024-01-03 22:56+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -102,33 +102,34 @@ msgid "Unblock %s"
 msgstr ""
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:41
+#: src/plug/Views/TimeLimitView.vala:20
 msgid "Weekdays"
 msgstr "Dni robocze"
 
 #. /TRANSLATORS: Refers to weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:49
+#: src/plug/Views/TimeLimitView.vala:27
 msgid "Weekends"
 msgstr "Weekendy"
 
-#: src/plug/Views/TimeLimitView.vala:169
+#: src/plug/Views/TimeLimitView.vala:149
 msgid "From:"
 msgstr "Od:"
 
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:158
 msgid "To:"
 msgstr "Do:"
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:192
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekends."
+#: src/plug/Views/TimeLimitView.vala:168
+#, fuzzy
+#| msgid ""
+#| "Screen Time for %s will not be limited during this period on weekends."
+msgid "Screen Time is not limited on weekends."
 msgstr ""
 "Harmonogram ekranu dla %s nie będzie ograniczony w tym przedziale czasowym w "
 "weekendy."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:196
+#: src/plug/Views/TimeLimitView.vala:170
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
@@ -137,16 +138,17 @@ msgstr ""
 "%s będzie mógł zalogować się tylko w tym przedziale czasowym w weekendy i "
 "będzie automatycznie wylogowany, gdy ten okres się skończy:"
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:201
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekdays."
+#: src/plug/Views/TimeLimitView.vala:174
+#, fuzzy
+#| msgid ""
+#| "Screen Time for %s will not be limited during this period on weekdays."
+msgid "Screen Time is not limited on weekdays."
 msgstr ""
 "Harmonogram ekranu dla %s nie będzie ograniczony w trakcie tego okresu w dni "
 "robocze."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:205
+#: src/plug/Views/TimeLimitView.vala:176
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
@@ -159,31 +161,39 @@ msgstr ""
 msgid "Search Applications"
 msgstr "Wyszukiwanie programów"
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"
 msgstr "Harmonogram ekranu"
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:34
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:35
 msgid "Applications"
 msgstr "Programy"
 
-#: src/plug/Widgets/ControlPage.vala:81
+#: src/plug/Widgets/ControlPage.vala:73
+#, fuzzy
+#| msgid ""
+#| "Manage your usage of this device by setting limits on time usage, "
+#| "websites, and apps."
 msgid ""
-"Manage your usage of this device by setting limits on time usage, websites, "
-"and apps."
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
 msgstr ""
 "Zarządzaj swoim użyciem urządzenia poprzez ustawienie limitów używania ze "
 "względu na czas, strony oraz aplikacje."
 
-#: src/plug/Widgets/ControlPage.vala:83
+#: src/plug/Widgets/ControlPage.vala:75
+#, fuzzy
+#| msgid ""
+#| "Supervise and manage usage of this device with limits on time usage, "
+#| "websites, and apps. Some limits may be bypassed with an administrator's "
+#| "authorization."
 msgid ""
-"Supervise and manage usage of this device with limits on time usage, "
-"websites, and apps. Some limits may be bypassed with an administrator's "
-"authorization."
+"Supervise and manage device usage with limits on Screen Time, websites, and "
+"apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
 "Nadzoruj i zarządzaj użytkowaniem tego urządzenia przez nałożenie limitu "
 "czasowego, na strony lub aplikacje. Niektóre limity mogą być ominięte przy "

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:44+0000\n"
+"POT-Creation-Date: 2024-01-03 23:51+0000\n"
 "PO-Revision-Date: 2019-06-26 18:53+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -93,45 +93,41 @@ msgid "Unblock %s"
 msgstr ""
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:41
+#: src/plug/Views/TimeLimitView.vala:20
 msgid "Weekdays"
 msgstr ""
 
 #. /TRANSLATORS: Refers to weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:49
+#: src/plug/Views/TimeLimitView.vala:27
 msgid "Weekends"
 msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:169
+#: src/plug/Views/TimeLimitView.vala:149
 msgid "From:"
 msgstr ""
 
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:158
 msgid "To:"
 msgstr ""
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:192
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekends."
+#: src/plug/Views/TimeLimitView.vala:168
+msgid "Screen Time is not limited on weekends."
 msgstr ""
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:196
+#: src/plug/Views/TimeLimitView.vala:170
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:201
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekdays."
+#: src/plug/Views/TimeLimitView.vala:174
+msgid "Screen Time is not limited on weekdays."
 msgstr ""
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:205
+#: src/plug/Views/TimeLimitView.vala:176
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
@@ -142,29 +138,28 @@ msgstr ""
 msgid "Search Applications"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:34
 msgid "Internet"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:35
 msgid "Applications"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:81
+#: src/plug/Widgets/ControlPage.vala:73
 msgid ""
-"Manage your usage of this device by setting limits on time usage, websites, "
-"and apps."
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:83
+#: src/plug/Widgets/ControlPage.vala:75
 msgid ""
-"Supervise and manage usage of this device with limits on time usage, "
-"websites, and apps. Some limits may be bypassed with an administrator's "
-"authorization."
+"Supervise and manage device usage with limits on Screen Time, websites, and "
+"apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
 
 #: src/plug/MainView.vala:41
