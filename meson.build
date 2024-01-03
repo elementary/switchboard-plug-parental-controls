@@ -2,7 +2,7 @@ project(
     'parental-controls',
     'vala', 'c',
     meson_version: '>= 0.46.1',
-    version: '3.0.1'
+    version: '6.0.1'
 )
 
 gettext_name = meson.project_name() + '-plug'

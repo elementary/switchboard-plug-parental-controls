@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2021-06-16 23:48+0000\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
+"PO-Revision-Date: 2022-06-29 04:55+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/tr/>\n"
@@ -28,32 +28,32 @@ msgstr "Bu uygulamayı çalıştırmanıza izin verilmiyor"
 msgid "An administrator has restricted your access to this application."
 msgstr "Bir yönetici bu uygulamaya erişiminizi kısıtladı."
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Bu bilgisayar %s sonra kilitlenecek."
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu saat"
 msgstr[1] "%lu saat"
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu dakika"
 msgstr[1] "%lu dakika"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Bilgisayarınız kilitlenmeden önce tüm uygulamaları kapattığınızdan emin olun."
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "Kalan süre"
 
@@ -72,7 +72,7 @@ msgstr "Seçili Uygulamayı Kaldır"
 
 #: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
-msgstr "Hepsini Temizle"
+msgstr "Tümünü Temizle"
 
 #: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
@@ -176,23 +176,23 @@ msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Bazı ayarları değiştirebilmek için yönetici haklarına sahip olmanız gerekiyor"
 
-#: src/plug/Plug.vala:33
+#: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
 msgstr "Ekran Zaman Aşımı ve Sınırları"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "Zaman sınırlamasını ve uygulama kullanımını kısıtlamasını yapılandırın"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:64
 msgid "Limit computer use"
 msgstr "Bilgisayar kullanımını sınırla"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
 msgstr "Web sitesi erişimini engelle"
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Uygulama erişimini engelle"
 

@@ -7,15 +7,27 @@
   <icon type="stock">preferences-system-parental-controls</icon>
   <translation type="gettext">parental-controls-plug</translation>
   <releases>
-    <release version="3.0.2" date="2020-05-28" urgency="medium">
+    <release version="6.0.1" date="2022-10-20" urgency="medium">
       <description>
-        <p>Fixes</p>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+    </release>
+
+    <release version="6.0.0" date="2021-07-14" urgency="medium">
+      <description>
+        <p>Fixes:</p>
         <ul>
           <li>Set default Screen Time from midnight to midnight to prevent accidental lockouts</li>
-          <li>Clarify how Screen Time limits work and when they take effect</li>
+          <li>Improve reliability of app blocking</li>
+          <li>Support blocking Flatpak apps</li>
         </ul>
-        <p>Minor updates</p>
+        <p>Minor updates:</p>
         <ul>
+          <li>Clarify how Screen Time limits work and when they take effect</li>
+          <li>New colorful avatar fallback</li>
           <li>Updated translations</li>
         </ul>
       </description>

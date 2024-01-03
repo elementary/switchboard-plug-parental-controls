@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2021-06-16 23:48+0000\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
+"PO-Revision-Date: 2022-06-30 10:04+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/fr/>\n"
@@ -30,10 +30,22 @@ msgstr ""
 "applications"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
-msgid "Fixes"
-msgstr "Corrections"
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:27
+msgid "Minor updates:"
+msgstr "Mises à jour mineures :"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:37
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:48
+msgid "Updated translations"
+msgstr "Mise à jour des traductions"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
+msgid "Fixes:"
+msgstr "Corrections :"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
@@ -41,45 +53,47 @@ msgstr ""
 "Nous avons défini le temps d'écran par défaut de minuit à minuit pour éviter "
 "des déconnexions accidentelles"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:24
+msgid "Improve reliability of app blocking"
+msgstr "Amélioration de la fiabilité du blocage d'applications"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:25
+msgid "Support blocking Flatpak apps"
+msgstr "Prise en charge du blocage des applications Flatpak"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:29
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
 "Clarification de la façon dont fonctionne le temps d'écran et la façon dont "
 "il est mis en place"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
-msgid "Minor updates"
-msgstr "Mises à jour mineures"
-
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:19
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:25
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:36
-msgid "Updated translations"
-msgstr "Mise à jour des traductions"
-
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
+msgid "New colorful avatar fallback"
+msgstr "Nouveaux avatars colorés par défaut"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:42
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Renommé en temps d'écran et des limites"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:43
 msgid "Show your own account"
 msgstr "Affichage de son compte"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:32
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:44
 msgid "Redesign the app chooser"
 msgstr "Re-design du sélecteur d'applications"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:45
 msgid "Redesign the Screen Time view"
 msgstr "Refonte de la vue du temps d'écran"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:46
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
 "Correction d'un problème lors de la suppression d'URLs des restrictions de "
 "sites web"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:47
 msgid "Reliably apply time restrictions"
 msgstr "Appliquez des restrictions de temps de façon fiable"
 

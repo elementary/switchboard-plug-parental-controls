@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-15 21:07+0000\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
 "PO-Revision-Date: 2016-05-01 14:04+0000\n"
 "Last-Translator: Rockworld <sumoisrock@gmail.com>\n"
 "Language-Team: Thai <th@li.org>\n"
@@ -29,31 +29,31 @@ msgstr "คุณไม่ได้รับอนุญาตให้เรี
 msgid "An administrator has restricted your access to this application."
 msgstr ""
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, fuzzy, c-format
 msgid "This computer will lock after %s."
 msgstr "คอมพิวเตอร์เครื่องนี้จะล็อคหลังจาก %s %s. %s"
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] ""
 msgstr[1] ""
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "โปรดตรวจสอบให้แน่ใจว่าทุกโปรแกรมถูกปิดแล้ว ก่อนที่คอมพิวเตอร์ของคุณจะถูกล็อค"
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "เวลาที่เหลือ"
 
@@ -169,25 +169,25 @@ msgstr "บัญชีอื่นๆ"
 msgid "Some settings require administrator rights to be changed"
 msgstr "ค่าตั้งบางอย่างต้องใช้สิทธิ์ขั้นผู้ดูแลระบบจึงจะสามารถเปลี่ยนแปลงได้"
 
-#: src/plug/Plug.vala:33
+#: src/plug/Plug.vala:36
 #, fuzzy
 msgid "Screen Time & Limits"
 msgstr "เวลาที่เหลือ"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "ตั้งค่าการจำกัดเวลาและการห้ามการใช้แอพพลิเคชั่น"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:64
 #, fuzzy
 msgid "Limit computer use"
 msgstr "จำกัดการใช้คอมพิวเตอร์:"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
 msgstr ""
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr ""
 

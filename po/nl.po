@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2020-05-08 10:10+0000\n"
-"Last-Translator: Jaimie85 <alsemgeest@gmail.com>\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
+"PO-Revision-Date: 2022-08-14 02:55+0000\n"
+"Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/nl/>\n"
 "Language: nl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9.1\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -28,33 +28,33 @@ msgstr "U heeft geen toestemming om deze applicatie uit te voeren"
 msgid "An administrator has restricted your access to this application."
 msgstr "Een beheerder heeft uw toegang tot dit programma beperkt."
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, c-format
 msgid "This computer will lock after %s."
-msgstr "Deze computer zal vergrendelen na %s."
+msgstr "Deze computer zal vergrendelen over %s."
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu uur"
 msgstr[1] "%lu uren"
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu minuut"
 msgstr[1] "%lu minuten"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Zorg ervoor dat alle applicaties afgesloten zijn, voordat uw computer zich "
 "vergrendeld."
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "Resterende tijd"
 
@@ -69,7 +69,7 @@ msgstr "Voeg geblokkeerde applicaties toe…"
 
 #: src/plug/Views/AppsView.vala:64
 msgid "Remove Selected App"
-msgstr "Verwijder geselecteerde programma"
+msgstr "Verwijder geselecteerde app"
 
 #: src/plug/Views/AppsView.vala:69
 msgid "Clear All"
@@ -78,13 +78,12 @@ msgstr "Alles wissen"
 #: src/plug/Views/AppsView.vala:92
 msgid "Allow access to these apps with admin permission:"
 msgstr ""
-"Toegang verlenen aan de volgende applicaties, alleen met goedkeuring van de "
-"administrator:"
+"Toegang verlenen aan de volgende apps met goedkeuring van de administrator:"
 
 #: src/plug/Views/InternetView.vala:72
 #, c-format
 msgid "Prevent %s from visiting these websites:"
-msgstr "Voorkomen dat %s volgende websites bezoekt:"
+msgstr "Voorkomen dat %s deze websites bezoekt:"
 
 #: src/plug/Views/InternetView.vala:87
 msgid "Add URL"
@@ -92,7 +91,7 @@ msgstr "URL Toevoegen"
 
 #: src/plug/Views/InternetView.vala:96
 msgid "Add a new URL, for example: google.com"
-msgstr "Voeg nieuwe URL toe, bijvoorbeeld: google.com"
+msgstr "Voeg een nieuwe URL toe, bijvoorbeeld: google.com"
 
 #: src/plug/Views/InternetView.vala:97
 msgid "Invalid URL"
@@ -121,42 +120,39 @@ msgstr "Tot:"
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
 msgstr ""
+"Schermtijd van %s zal niet worden gelimiteerd tijdens deze periode in het "
+"weekend."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s kan alleen inloggen gedurende deze tijd, en wordt automatisch uitgelogd "
-"als de tijd voorbij is:"
+"%s kan alleen inloggen gedurende deze tijd in het weekend en wordt "
+"automatisch uitgelogd als de tijd voorbij is:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
 msgstr ""
+"Schermtijd van %s zal niet worden gelimiteerd in deze periode doordeweeks."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
-#, fuzzy, c-format
-#| msgid ""
-#| "%s will only be able to log in during this time, and will be "
-#| "automatically logged out once this period ends:"
+#, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s kan alleen inloggen gedurende deze tijd, en wordt automatisch uitgelogd "
-"als de tijd voorbij is:"
+"%s kan alleen inloggen gedurende deze tijd doordeweeks en wordt automatisch "
+"uitgelogd als de tijd voorbij is:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
-msgstr "Zoek programma's"
+msgstr "Zoek applicaties"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
@@ -168,7 +164,7 @@ msgstr "Internet"
 
 #: src/plug/Widgets/ControlPage.vala:54
 msgid "Applications"
-msgstr "Toepassingen"
+msgstr "Applicaties"
 
 #: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
@@ -182,25 +178,25 @@ msgstr "Andere accounts"
 msgid "Some settings require administrator rights to be changed"
 msgstr "Sommige instellingen vereisen beheerdersrechten om te worden gewijzigd"
 
-#: src/plug/Plug.vala:33
+#: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
-msgstr "Schermtijd & Limieten"
+msgstr "Schermtijd & limieten"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "Configureer tijdslimieten en limiteer programma gebruik"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:64
 msgid "Limit computer use"
 msgstr "Limiteer het computergebruik"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
-msgstr "Voorkom toegang tot website"
+msgstr "Ontzeg toegang tot websites"
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
-msgstr "Voorkom toegang tot toepassing"
+msgstr "Ontzeg toegang tot applicaties"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "Limiteer het computergebruik:"

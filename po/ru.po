@@ -7,18 +7,18 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2021-06-16 23:48+0000\n"
-"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
+"PO-Revision-Date: 2023-07-21 17:07+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.4.2\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.17\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -29,12 +29,12 @@ msgstr "У вас нет разрешения на запуск этого пр�
 msgid "An administrator has restricted your access to this application."
 msgstr "Администратор ограничил ваш доступ к этому приложению."
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Этот компьютер будет заблокирован через %s."
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
@@ -42,7 +42,7 @@ msgstr[0] "%lu час"
 msgstr[1] "%lu часа"
 msgstr[2] "%lu часов"
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
@@ -50,14 +50,14 @@ msgstr[0] "%lu минуту"
 msgstr[1] "%lu минуты"
 msgstr[2] "%lu минут"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Обязательно закройте все приложения, прежде чем ваш компьютер будет "
 "заблокирован."
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "Оставшееся время"
 
@@ -89,11 +89,11 @@ msgstr "Запретить %s посещать эти сайты:"
 
 #: src/plug/Views/InternetView.vala:87
 msgid "Add URL"
-msgstr "Добавить URL"
+msgstr "Добавить URL-адрес"
 
 #: src/plug/Views/InternetView.vala:96
 msgid "Add a new URL, for example: google.com"
-msgstr "Добавьте новый URL, например google.com"
+msgstr "Добавьте новый URL-адрес, например google.com"
 
 #: src/plug/Views/InternetView.vala:97
 msgid "Invalid URL"
@@ -122,7 +122,7 @@ msgstr "До:"
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
 msgstr ""
-"Экранное время для %s не будет ограничено в течение этого периода по "
+"Время работы экрана для %s не будет ограничено в течение этого периода по "
 "выходным."
 
 #. /TRANSLATORS: %s is the user's name
@@ -140,8 +140,8 @@ msgstr ""
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
 msgstr ""
-"Экранное время для %s не будет ограничено в течение этого периода в будние "
-"дни."
+"Время работы экрана для %s не будет ограничено в течение этого периода в "
+"будние дни."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
@@ -159,7 +159,7 @@ msgstr "Поиск приложений"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
-msgstr "Экранное время"
+msgstr "Время работы экрана"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
@@ -181,23 +181,23 @@ msgstr "Другие учётные записи"
 msgid "Some settings require administrator rights to be changed"
 msgstr "Для изменения некоторых настроек требуются права администратора"
 
-#: src/plug/Plug.vala:33
+#: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
-msgstr "Экранное время и ограничения"
+msgstr "Родительский контроль"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "Настройка ограничения по времени и использования приложений"
 
-#: src/plug/Plug.vala:61
+#: src/plug/Plug.vala:64
 msgid "Limit computer use"
 msgstr "Ограничить использование компьютера"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
 msgstr "Запретить доступ к веб-сайту"
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Запретить доступ к приложению"
 

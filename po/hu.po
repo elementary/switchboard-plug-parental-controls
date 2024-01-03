@@ -7,55 +7,53 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2018-06-18 00:05+0000\n"
-"Last-Translator: Majer Tamás <mtamas@disroot.org>\n"
-"Language-Team: Hungarian <https://weblate.elementary.io/projects/switchboard/"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
+"PO-Revision-Date: 2021-08-26 00:26+0000\n"
+"Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
+"Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/hu/>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2.18\n"
+"X-Generator: Weblate 4.4.2\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "Nincs engedélye futtatni ezt az alkalmazást."
+msgstr "Nincs engedélye futtatni ezt az alkalmazást"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "Egy adminisztrátor korlátozta a hozzáférését ehhez az alkalmazáshoz."
 
-#: src/client/Client.vala:158
+#: src/client/Client.vala:163
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "A számítógép lezárásra kerül: %s."
 
-#: src/client/Client.vala:160
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu óra"
 msgstr[1] "%lu óra"
 
-#: src/client/Client.vala:162
+#: src/client/Client.vala:167
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu perc"
 msgstr[1] "%lu perc"
 
-#: src/client/Client.vala:164
+#: src/client/Client.vala:169
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Zárja be az összes alkalmazást, mielőtt a számítógép lezárásra kerülne."
 
-#: src/client/Client.vala:170
+#: src/client/Client.vala:175
 msgid "Time left"
 msgstr "Hátralévő idő"
 
@@ -120,6 +118,7 @@ msgstr "Eddig:"
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekends."
 msgstr ""
+"%s kijelzőideje nem lesz korlátozva hétvégén ebben az időintervallumban."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:196
@@ -128,12 +127,14 @@ msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
+"%s csak hétvégén ebben az idősávban fog tudni bejelentkezni, automatikusan "
+"ki lesz jelentkeztetve utána:"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:201
 #, c-format
 msgid "Screen Time for %s will not be limited during this period on weekdays."
-msgstr ""
+msgstr "%s kijelzőideje nem lesz korlátozva hétközben ebben az idősávban."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:205
@@ -142,6 +143,8 @@ msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
+"%s csak hétköznap ebben az idősávban fog tudni bejelentkezni, automatikusan "
+"ki lesz jelentkeztetve utána:"
 
 #: src/plug/Widgets/AppChooser.vala:40
 msgid "Search Applications"
@@ -149,7 +152,7 @@ msgstr "Alkalmazások keresése"
 
 #: src/plug/Widgets/ControlPage.vala:52
 msgid "Screen Time"
-msgstr ""
+msgstr "Kijelzőidő"
 
 #: src/plug/Widgets/ControlPage.vala:53
 msgid "Internet"
@@ -172,27 +175,25 @@ msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Egyes beállítások megváltoztatásához rendszergazdai jogokra van szükség"
 
-#: src/plug/Plug.vala:33
-#, fuzzy
+#: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
-msgstr "Hátralévő idő"
+msgstr "Kijelzőidő és korlátozások"
 
-#: src/plug/Plug.vala:34
+#: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "Határidők és alkalmazások korlátozásának beállítása"
 
-#: src/plug/Plug.vala:61
-#, fuzzy
+#: src/plug/Plug.vala:64
 msgid "Limit computer use"
-msgstr "Számítógép használat korlátozása:"
+msgstr "Számítógéphasználat korlátozása"
 
-#: src/plug/Plug.vala:62
+#: src/plug/Plug.vala:65
 msgid "Prevent website access"
-msgstr ""
+msgstr "Weboldalelérés megelőzése"
 
-#: src/plug/Plug.vala:63
+#: src/plug/Plug.vala:66
 msgid "Prevent application access"
-msgstr ""
+msgstr "Alkalmazáselérés megelőzése"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "Számítógép használat korlátozása:"

@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-15 21:07+0000\n"
-"PO-Revision-Date: 2021-03-18 02:32+0000\n"
-"Last-Translator: DartDeaDia <jorydit@gmail.com>\n"
+"POT-Creation-Date: 2022-10-20 18:21+0000\n"
+"PO-Revision-Date: 2022-10-09 14:07+0000\n"
+"Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/ru/>\n"
 "Language: ru\n"
@@ -22,64 +22,84 @@ msgstr ""
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
-msgstr ""
+msgstr "Настройки времени работы экрана и ограничений"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
 msgid "Configure time limits and restrict application usage"
 msgstr "Настройка ограничения по времени и использования приложений"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
-msgid "Fixes"
-msgstr "Исправления"
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:27
+msgid "Minor updates:"
+msgstr "Незначительные обновления:"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:37
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:48
+msgid "Updated translations"
+msgstr "Обновлены переводы"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
+msgid "Fixes:"
+msgstr "Исправления:"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 msgstr ""
+"Установка стандартной времени работы экрана от полуночи до полуночи для "
+"предотвращения случайных блокировок"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:15
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:24
+msgid "Improve reliability of app blocking"
+msgstr "Повышение надежности блокировки приложений"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:25
+msgid "Support blocking Flatpak apps"
+msgstr "Поддержка блокировки приложений Flatpak"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:29
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
-
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:17
-msgid "Minor updates"
-msgstr "Незначительные обновления"
-
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:19
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:25
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:36
-msgid "Updated translations"
-msgstr "Обновлены переводы"
+"Уточнение, как работает Время работы экрана, а также когда они вступают в "
+"силу"
 
 #: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
+msgid "New colorful avatar fallback"
+msgstr "Новый красочный аватар"
+
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:42
 msgid "Rename to Screen Time &amp; Limits"
-msgstr ""
+msgstr "Переименовано во «Время работы экрана и ограничения»"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:43
 msgid "Show your own account"
-msgstr ""
+msgstr "Отображение вашей учётной записи"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:32
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:44
 msgid "Redesign the app chooser"
-msgstr ""
+msgstr "Переработано меню выбора приложений"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:33
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:45
 msgid "Redesign the Screen Time view"
-msgstr ""
+msgstr "Полностью переработан внешний вид окна времени работы экрана"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:34
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:46
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
+"Исправлена ошибка, которая связанная с исчезновением URL-адреса из "
+"запрещённых сайтов"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:35
+#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:47
 msgid "Reliably apply time restrictions"
-msgstr ""
+msgstr "Надежное применение ограничений по времени"
 
 #: data/screentime-limits.policy.in.in:10
 msgid "Manage Screen Time and Limits"
-msgstr ""
+msgstr "Управление временем работы экрана и ограничениями"
 
 #: data/screentime-limits.policy.in.in:11
 msgid "Authentication is required to change Screen Time and Limits"
-msgstr ""
+msgstr "Нужна аутентификация чтобы изменить лимит времени работы экрана"
