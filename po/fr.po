@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 00:56+0000\n"
-"PO-Revision-Date: 2022-06-29 08:35+0000\n"
+"POT-Creation-Date: 2024-01-03 22:56+0000\n"
+"PO-Revision-Date: 2024-01-03 22:56+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-02-28 05:31+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -172,6 +172,8 @@ msgid ""
 "Manage your usage of this device by setting limits on time usage, websites, "
 "and apps."
 msgstr ""
+"Gérez l'utilisation de votre appareil en fixant des limites de temps "
+"d'utilisation, de sites web et d'applications."
 
 #: src/plug/Widgets/ControlPage.vala:83
 msgid ""
@@ -179,19 +181,22 @@ msgid ""
 "websites, and apps. Some limits may be bypassed with an administrator's "
 "authorization."
 msgstr ""
+"Supervisez et gérez l'utilisation de cet appareil en limitant le temps "
+"d'utilisation, les sites web et les applications. Certaines limites peuvent "
+"être contournées avec l'autorisation d'un administrateur."
 
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "Mon compte"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "Autres comptes"
-
-#: src/plug/MainView.vala:33
+#: src/plug/MainView.vala:41
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "La modification de certains paramètres nécessite les droits d'administrateur"
+
+#: src/plug/MainView.vala:127
+msgid "My Account"
+msgstr "Mon compte"
+
+#: src/plug/MainView.vala:130
+msgid "Other Accounts"
+msgstr "Autres comptes"
 
 #: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
