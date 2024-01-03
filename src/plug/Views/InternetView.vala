@@ -155,7 +155,7 @@ public class PC.Widgets.InternetBox : Gtk.Box {
             main_box.add (new Gtk.Label (url));
             main_box.add (delete_button);
 
-            add (main_box);
+            child = main_box;
             show_all ();
         }
     }
