@@ -62,6 +62,32 @@ namespace PC.Widgets {
             switcher.homogeneous = true;
             switcher.stack = stack;
 
+            var header_grid = new Gtk.Grid ();
+            header_grid.halign = Gtk.Align.START;
+            header_grid.column_spacing = 10;
+            header_grid.margin = 6;
+            var avatar = new Granite.Widgets.Avatar.from_file (user.get_icon_file (), 64);
+
+            var full_name = new Gtk.Label (user.get_real_name ());
+            full_name.halign = Gtk.Align.START;
+            full_name.get_style_context ().add_class ("h2");
+
+            var description_message = new Gtk.Label ("");
+            description_message.halign = Gtk.Align.FILL;
+            description_message.xalign = 0;
+            description_message.wrap = true;
+            description_message.wrap_mode = Pango.WrapMode.WORD;
+            if (Utils.get_current_user () == user) {
+                description_message.set_text (_("Manage your usage of this device by setting limits on time usage, websites, and apps."));
+            } else {
+                description_message.set_text (_("Supervise and manage usage of this device with limits on time usage, websites, and apps. Some limits may be bypassed with an administrator's authorization."));
+            }
+
+            header_grid.attach (avatar, 0, 0, 1, 2);
+            header_grid.attach (full_name, 1, 0, 1, 1);
+            header_grid.attach (description_message, 1, 1, 1, 1);
+
+            add (header_grid);
             add (switcher);
             add (stack);
 
