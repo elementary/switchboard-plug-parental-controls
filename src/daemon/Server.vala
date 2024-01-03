@@ -295,8 +295,7 @@ namespace PC.Daemon {
 
         private void ensure_pam_lightdm_enabled () {
             // Prioritize user config over system
-            var config_dirs = new string [0];
-            config_dirs += Environment.get_user_config_dir ();
+            var config_dirs = new (unowned string)[0] { Environment.get_user_config_dir () };
             foreach (unowned var dir in Environment.get_system_config_dirs ()) {
                 config_dirs += dir;
             }
