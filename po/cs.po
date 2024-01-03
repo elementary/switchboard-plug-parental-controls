@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:21+0000\n"
+"POT-Creation-Date: 2024-01-03 00:56+0000\n"
 "PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -167,6 +167,19 @@ msgstr "Internet"
 msgid "Applications"
 msgstr "Aplikace"
 
+#: src/plug/Widgets/ControlPage.vala:81
+msgid ""
+"Manage your usage of this device by setting limits on time usage, websites, "
+"and apps."
+msgstr ""
+
+#: src/plug/Widgets/ControlPage.vala:83
+msgid ""
+"Supervise and manage usage of this device with limits on time usage, "
+"websites, and apps. Some limits may be bypassed with an administrator's "
+"authorization."
+msgstr ""
+
 #: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "Můj účet"
@@ -175,7 +188,7 @@ msgstr "Můj účet"
 msgid "Other Accounts"
 msgstr "Ostatní účty"
 
-#: src/plug/MainView.vala:59
+#: src/plug/MainView.vala:33
 msgid "Some settings require administrator rights to be changed"
 msgstr "Některá nastavení vyžadují oprávnění na úrovni správce systému"
 

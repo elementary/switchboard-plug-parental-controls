@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:21+0000\n"
+"POT-Creation-Date: 2024-01-03 00:56+0000\n"
 "PO-Revision-Date: 2020-10-29 18:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -161,6 +161,19 @@ msgstr "इंटरनेट"
 msgid "Applications"
 msgstr "ॲप्लिकेशन्स्"
 
+#: src/plug/Widgets/ControlPage.vala:81
+msgid ""
+"Manage your usage of this device by setting limits on time usage, websites, "
+"and apps."
+msgstr ""
+
+#: src/plug/Widgets/ControlPage.vala:83
+msgid ""
+"Supervise and manage usage of this device with limits on time usage, "
+"websites, and apps. Some limits may be bypassed with an administrator's "
+"authorization."
+msgstr ""
+
 #: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "माझे खाते"
@@ -169,7 +182,7 @@ msgstr "माझे खाते"
 msgid "Other Accounts"
 msgstr "अन्य खाती"
 
-#: src/plug/MainView.vala:59
+#: src/plug/MainView.vala:33
 msgid "Some settings require administrator rights to be changed"
 msgstr "काही सेटिंग्जसाठी प्रशासकीय अधिकार बदलण्याची आवश्यकता आहे"
 
