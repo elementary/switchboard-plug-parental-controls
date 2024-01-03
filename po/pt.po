@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:21+0000\n"
+"POT-Creation-Date: 2024-01-03 00:56+0000\n"
 "PO-Revision-Date: 2022-03-31 16:24+0000\n"
 "Last-Translator: Nuno Alexandre MS Ribeiro <nuno.anarresti@gmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
@@ -166,6 +166,19 @@ msgstr "Internet"
 msgid "Applications"
 msgstr "Aplicações"
 
+#: src/plug/Widgets/ControlPage.vala:81
+msgid ""
+"Manage your usage of this device by setting limits on time usage, websites, "
+"and apps."
+msgstr ""
+
+#: src/plug/Widgets/ControlPage.vala:83
+msgid ""
+"Supervise and manage usage of this device with limits on time usage, "
+"websites, and apps. Some limits may be bypassed with an administrator's "
+"authorization."
+msgstr ""
+
 #: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "A Minha Conta"
@@ -174,7 +187,7 @@ msgstr "A Minha Conta"
 msgid "Other Accounts"
 msgstr "Outras Contas"
 
-#: src/plug/MainView.vala:59
+#: src/plug/MainView.vala:33
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Algumas definições requerem privilégios de administrador para serem alteradas"
