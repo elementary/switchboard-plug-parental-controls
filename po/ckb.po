@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-20 18:21+0000\n"
+"POT-Creation-Date: 2024-01-03 00:56+0000\n"
 "PO-Revision-Date: 2022-10-07 16:57+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -155,6 +155,19 @@ msgstr "ئینتەرنێت"
 msgid "Applications"
 msgstr "بەرنامەکان"
 
+#: src/plug/Widgets/ControlPage.vala:81
+msgid ""
+"Manage your usage of this device by setting limits on time usage, websites, "
+"and apps."
+msgstr ""
+
+#: src/plug/Widgets/ControlPage.vala:83
+msgid ""
+"Supervise and manage usage of this device with limits on time usage, "
+"websites, and apps. Some limits may be bypassed with an administrator's "
+"authorization."
+msgstr ""
+
 #: src/plug/Widgets/UserList.vala:104
 msgid "My Account"
 msgstr "هەژمارەکەم"
@@ -163,7 +176,7 @@ msgstr "هەژمارەکەم"
 msgid "Other Accounts"
 msgstr "هەژمارەکانی تر"
 
-#: src/plug/MainView.vala:59
+#: src/plug/MainView.vala:33
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "بەشێک لە ڕێکخستنەکان پێویستیان بە دەسەڵاتی بەڕێوەبەرە بۆ ئەوەی گۆڕانکاریان "
