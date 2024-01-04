@@ -26,9 +26,7 @@ public class PC.Widgets.AppChooser : Granite.Dialog {
         listbox.set_sort_func (sort_function);
 
         var scrolled = new Gtk.ScrolledWindow (null, null) {
-            child = listbox,
-            height_request = 200,
-            width_request = 500
+            child = listbox
         };
 
         var frame = new Gtk.Frame (null) {
