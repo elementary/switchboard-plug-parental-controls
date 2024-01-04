@@ -84,4 +84,4 @@ public class PC.Widgets.UserItem : Gtk.ListBoxRow {
             avatar.custom_image = null;
         }
     }
-}	
+}
