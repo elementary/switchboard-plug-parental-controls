@@ -25,8 +25,8 @@ gettext_declaration = configure_file(
 
 i18n.merge_file(
     input: gettext_declaration,
-    output: 'io.elementary.switchboard.screentime-limits.policy',
-    po_dir: join_paths(meson.source_root(), 'po', 'extra'),
+    output: gettext_name + '.policy',
+    po_dir: meson.source_root() / 'po' / 'extra',
     install: true,
     install_dir: polkit_actiondir
 )
@@ -56,8 +56,8 @@ install_data(
 )
 
 i18n.merge_file(
-    input: 'io.elementary.switchboard.parental-controls.appdata.xml.in',
-    output: 'io.elementary.switchboard.parental-controls.appdata.xml',
+    input: 'screentime-limits.metainfo.xml.in',
+    output: gettext_name + '.metainfo.xml',
     po_dir: join_paths(meson.source_root (), 'po', 'extra'),
     install_dir: join_paths(datadir, 'metainfo'),
     install: true
