@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:44+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2024-01-03 22:56+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -61,24 +61,21 @@ msgstr ""
 msgid "Time left"
 msgstr "Оставшееся время"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Запретить %s использовать эти приложения:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Добавить запрещённые приложения…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Удалить выбранное приложение"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Очистить всё"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Разрешить доступ к этим приложениям с правами доступа:"
 
@@ -104,33 +101,34 @@ msgid "Unblock %s"
 msgstr ""
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:41
+#: src/plug/Views/TimeLimitView.vala:20
 msgid "Weekdays"
 msgstr "Будние дни"
 
 #. /TRANSLATORS: Refers to weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:49
+#: src/plug/Views/TimeLimitView.vala:27
 msgid "Weekends"
 msgstr "Выходные дни"
 
-#: src/plug/Views/TimeLimitView.vala:169
+#: src/plug/Views/TimeLimitView.vala:149
 msgid "From:"
 msgstr "С:"
 
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:158
 msgid "To:"
 msgstr "До:"
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:192
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekends."
+#: src/plug/Views/TimeLimitView.vala:168
+#, fuzzy
+#| msgid ""
+#| "Screen Time for %s will not be limited during this period on weekends."
+msgid "Screen Time is not limited on weekends."
 msgstr ""
 "Время работы экрана для %s не будет ограничено в течение этого периода по "
 "выходным."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:196
+#: src/plug/Views/TimeLimitView.vala:170
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
@@ -139,16 +137,17 @@ msgstr ""
 "%s сможет войти в систему только в течение этого времени в выходные дни и "
 "автоматически выйдет из системы по истечении этого периода:"
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:201
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekdays."
+#: src/plug/Views/TimeLimitView.vala:174
+#, fuzzy
+#| msgid ""
+#| "Screen Time for %s will not be limited during this period on weekdays."
+msgid "Screen Time is not limited on weekdays."
 msgstr ""
 "Время работы экрана для %s не будет ограничено в течение этого периода в "
 "будние дни."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:205
+#: src/plug/Views/TimeLimitView.vala:176
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
@@ -161,31 +160,39 @@ msgstr ""
 msgid "Search Applications"
 msgstr "Поиск приложений"
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"
 msgstr "Время работы экрана"
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:34
 msgid "Internet"
 msgstr "Интернет"
 
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:35
 msgid "Applications"
 msgstr "Приложения"
 
-#: src/plug/Widgets/ControlPage.vala:81
+#: src/plug/Widgets/ControlPage.vala:73
+#, fuzzy
+#| msgid ""
+#| "Manage your usage of this device by setting limits on time usage, "
+#| "websites, and apps."
 msgid ""
-"Manage your usage of this device by setting limits on time usage, websites, "
-"and apps."
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
 msgstr ""
 "Управляйте использованием этого устройства, устанавливая ограничения на "
 "использование времени, веб-сайтов и приложений."
 
-#: src/plug/Widgets/ControlPage.vala:83
+#: src/plug/Widgets/ControlPage.vala:75
+#, fuzzy
+#| msgid ""
+#| "Supervise and manage usage of this device with limits on time usage, "
+#| "websites, and apps. Some limits may be bypassed with an administrator's "
+#| "authorization."
 msgid ""
-"Supervise and manage usage of this device with limits on time usage, "
-"websites, and apps. Some limits may be bypassed with an administrator's "
-"authorization."
+"Supervise and manage device usage with limits on Screen Time, websites, and "
+"apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
 "Управляйте использованием этого устройства с ограничениями на использование "
 "по времени веб-сайтов и приложений. Некоторые ограничения можно обойти с "
@@ -222,6 +229,13 @@ msgstr "Запретить доступ к веб-сайту"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Запретить доступ к приложению"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Запретить %s использовать эти приложения:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Удалить выбранное приложение"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"
