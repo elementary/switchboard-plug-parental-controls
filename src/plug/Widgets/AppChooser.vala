@@ -29,10 +29,6 @@ namespace PC.Widgets {
 
         public signal void app_chosen (AppInfo info);
 
-        public AppChooser (Gtk.Widget widget) {
-            Object (relative_to: widget);
-        }
-
         construct {
             search_entry = new Gtk.SearchEntry ();
             search_entry.margin_end = 12;
@@ -40,15 +36,15 @@ namespace PC.Widgets {
             search_entry.placeholder_text = _("Search Applications");
 
             listbox = new Gtk.ListBox ();
-            listbox.expand = true;
+            listbox.vexpand = true;
             listbox.set_filter_func (filter_function);
             listbox.set_sort_func (sort_function);
 
-            var scrolled = new Gtk.ScrolledWindow (null, null);
+            var scrolled = new Gtk.ScrolledWindow ();
             scrolled.height_request = 200;
             scrolled.width_request = 500;
             scrolled.vscrollbar_policy = Gtk.PolicyType.AUTOMATIC;
-            scrolled.add (listbox);
+            scrolled.child = listbox;
 
             var grid = new Gtk.Grid ();
             grid.margin_top = 12;
@@ -56,7 +52,7 @@ namespace PC.Widgets {
             grid.attach (search_entry, 0, 0);
             grid.attach (scrolled, 0, 1);
 
-            add (grid);
+            child = grid;
 
             foreach (var _info in AppInfo.get_all ()) {
                 if (_info.should_show ()) {

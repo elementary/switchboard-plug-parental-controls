@@ -54,7 +54,8 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
         };
         clear_button.clicked.connect (on_clear_button_clicked);
 
-        apps_popover = new AppChooser (add_button);
+        apps_popover = new AppChooser ();
+        apps_popover.set_parent (add_button);
         apps_popover.app_chosen.connect (load_info);
 
         var toolbar = new Gtk.ActionBar ();
