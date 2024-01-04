@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 22:56+0000\n"
+"POT-Creation-Date: 2024-01-03 23:51+0000\n"
 "PO-Revision-Date: 2020-05-27 12:11+0000\n"
 "Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
@@ -77,49 +77,53 @@ msgstr "Ryd alt"
 msgid "Allow access to these apps with admin permission:"
 msgstr "Tillad adgang til disse apps med administratorrettigheder:"
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Forhindre %s i at besøge disse websteder:"
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "Tilføj URL"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "Tilføj en ny URL , f.eks. google.dk"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "Ugyldig URL"
 
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr ""
+
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:41
+#: src/plug/Views/TimeLimitView.vala:20
 msgid "Weekdays"
 msgstr "Hverdage"
 
 #. /TRANSLATORS: Refers to weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:49
+#: src/plug/Views/TimeLimitView.vala:27
 msgid "Weekends"
 msgstr "Weekender"
 
-#: src/plug/Views/TimeLimitView.vala:169
+#: src/plug/Views/TimeLimitView.vala:149
 msgid "From:"
 msgstr "Fra:"
 
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:158
 msgid "To:"
 msgstr "Til:"
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:192
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekends."
-msgstr ""
+#: src/plug/Views/TimeLimitView.vala:168
+#, fuzzy
+#| msgid "Screen Time & Limits"
+msgid "Screen Time is not limited on weekends."
+msgstr "Skærmtid & Begrænsninger"
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:196
+#: src/plug/Views/TimeLimitView.vala:170
 #, fuzzy, c-format
 #| msgid ""
 #| "%s will only be able to log in during this time, and will be "
@@ -131,14 +135,14 @@ msgstr ""
 "%s kan kun logge ind i dette tidsrum, og bliver automatisk logget ud når "
 "perioden slutter:"
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:201
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekdays."
-msgstr ""
+#: src/plug/Views/TimeLimitView.vala:174
+#, fuzzy
+#| msgid "Screen Time & Limits"
+msgid "Screen Time is not limited on weekdays."
+msgstr "Skærmtid & Begrænsninger"
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:205
+#: src/plug/Views/TimeLimitView.vala:176
 #, fuzzy, c-format
 #| msgid ""
 #| "%s will only be able to log in during this time, and will be "
@@ -154,29 +158,28 @@ msgstr ""
 msgid "Search Applications"
 msgstr "Søg efter Applikationer"
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"
 msgstr "Skærmtid"
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:34
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:35
 msgid "Applications"
 msgstr "Applikationer"
 
-#: src/plug/Widgets/ControlPage.vala:81
+#: src/plug/Widgets/ControlPage.vala:73
 msgid ""
-"Manage your usage of this device by setting limits on time usage, websites, "
-"and apps."
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:83
+#: src/plug/Widgets/ControlPage.vala:75
 msgid ""
-"Supervise and manage usage of this device with limits on time usage, "
-"websites, and apps. Some limits may be bypassed with an administrator's "
-"authorization."
+"Supervise and manage device usage with limits on Screen Time, websites, and "
+"apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
 
 #: src/plug/MainView.vala:41
@@ -211,6 +214,16 @@ msgstr "Forhindrer webside adgang"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Forhindrer applikation adgang"
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "Forhindre %s i at besøge disse websteder:"
+
+#~ msgid "Add URL"
+#~ msgstr "Tilføj URL"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "Tilføj en ny URL , f.eks. google.dk"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "Begræns computerbrug:"
