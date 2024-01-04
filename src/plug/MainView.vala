@@ -29,10 +29,11 @@ public class PC.MainBox : Gtk.Box {
         var paned = new Gtk.Paned (HORIZONTAL) {
             position = 240,
             start_child = scrolled_window,
-            end_child = stack
+            end_child = stack,
+            shrink_start_child = false,
+            shrink_end_child = false,
+            resize_start_child = false
         };
-        // paned.pack1 (scrolled_window, true, true);
-        // paned.pack2 (stack, true, false);
 
         var lock_button = new Gtk.LockButton (Utils.get_permission ());
 
@@ -81,11 +82,9 @@ public class PC.MainBox : Gtk.Box {
         var useritem = new Widgets.UserItem (page);
 
         items.append (useritem);
-        list.add (useritem);
+        list.append (useritem);
 
         select_first ();
-
-        useritem.show_all ();
     }
 
     private void update_user (Act.User user) {
