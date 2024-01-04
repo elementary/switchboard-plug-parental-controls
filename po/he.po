@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-04 00:04+0000\n"
-"PO-Revision-Date: 2024-01-03 22:56+0000\n"
+"PO-Revision-Date: 2024-01-04 10:19+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/he/>\n"
@@ -58,13 +58,11 @@ msgstr "זמן שנותר"
 
 #: src/plug/Views/AppsView.vala:27
 msgid "Blocked Apps"
-msgstr ""
+msgstr "יישומים חסומים"
 
 #: src/plug/Views/AppsView.vala:37
-#, fuzzy
-#| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
-msgstr "הוספת יישומים לחסימה…"
+msgstr "הוספת יישום חסום…"
 
 #: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
@@ -76,15 +74,15 @@ msgstr "מתן אפשרות גישה ליישומים אלו עם הרשאות �
 
 #: src/plug/Views/InternetView.vala:28
 msgid "Blocked Websites"
-msgstr ""
+msgstr "אתרים חסומים"
 
 #: src/plug/Views/InternetView.vala:39
 msgid "Block URL"
-msgstr ""
+msgstr "חסימת כתובת"
 
 #: src/plug/Views/InternetView.vala:49
 msgid "example.com"
-msgstr ""
+msgstr "example.com"
 
 #: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
@@ -93,7 +91,7 @@ msgstr "כתובת שגויה"
 #: src/plug/Views/InternetView.vala:142
 #, c-format
 msgid "Unblock %s"
-msgstr ""
+msgstr "שחרור חסימת %s"
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:20
