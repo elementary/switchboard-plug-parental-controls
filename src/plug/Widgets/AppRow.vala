@@ -41,7 +41,7 @@ public class PC.Widgets.AppRow : Gtk.ListBoxRow {
     }
 
     construct {
-        var image = new Gtk.Image.from_gicon (app_info.get_icon (), DND) {
+        var image = new Gtk.Image.from_gicon (app_info.get_icon ()) {
             pixel_size = 32
         };
 

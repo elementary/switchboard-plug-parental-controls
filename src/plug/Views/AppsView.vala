@@ -28,25 +28,25 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
 
         list_box = new Gtk.ListBox ();
 
-        var scrolled = new Gtk.ScrolledWindow (null, null) {
+        var scrolled = new Gtk.ScrolledWindow () {
             child = list_box,
             hexpand = true,
             vexpand = true
         };
 
         var add_label = new Gtk.Label (_("Add Blocked App…"));
-        var add_image = new Gtk.Image.from_icon_name ("application-add-symbolic", SMALL_TOOLBAR);
+        var add_image = new Gtk.Image.from_icon_name ("application-add-symbolic");
 
         var add_button_box = new Gtk.Box (HORIZONTAL, 3);
-        add_button_box.add (add_image);
-        add_button_box.add (add_label);
+        add_button_box.append (add_image);
+        add_button_box.append (add_label);
 
         var add_button = new Gtk.Button () {
             child = add_button_box
         };
         add_label.mnemonic_widget = add_button;
-        add_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-        add_button.clicked.connect (on_add_button_clicked);
+        add_button.add_css_class (Granite.STYLE_CLASS_FLAT);
+        add_button.clicked.connect (apps_popover.popup);
 
         clear_button = new Gtk.Button.from_icon_name ("edit-clear-all-symbolic") {
             sensitive = false,
@@ -58,19 +58,19 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
         apps_popover.app_chosen.connect (load_info);
 
         var toolbar = new Gtk.ActionBar ();
-        toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
+        toolbar.add_css_class (Granite.STYLE_CLASS_FLAT);
         toolbar.pack_start (add_button);
         toolbar.pack_end (clear_button);
 
         var main_box = new Gtk.Box (VERTICAL, 0);
-        main_box.add (scrolled);
-        main_box.add (toolbar);
+        main_box.append (scrolled);
+        main_box.append (toolbar);
 
         var frame = new Gtk.Frame (null) {
             child = main_box,
             margin_bottom = 12
         };
-        frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        frame.add_css_class (Granite.STYLE_CLASS_VIEW);
 
         var admin_label = new Gtk.Label (_("Allow access to these apps with admin permission:")) {
             halign = END
@@ -87,11 +87,6 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
         attach (admin_switch_btn, 1, 2);
 
         load_existing.begin ();
-        show_all ();
-    }
-
-    private void on_add_button_clicked () {
-        apps_popover.show_all ();
     }
 
     private void on_clear_button_clicked () {
@@ -112,8 +107,7 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
         row.deleted.connect (on_deleted);
 
         entries.append (row);
-        list_box.add (row);
-        list_box.show_all ();
+        list_box.append (row);
         update_targets ();
     }
 
