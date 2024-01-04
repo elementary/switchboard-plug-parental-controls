@@ -1,32 +1,26 @@
 /*
- * Copyright (c) 2018 elementary, Inc (https://elementary.io)
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Library General Public
- * License as published by the Free Software Foundation; either
- * version 3 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Library General Public License for more details.
- *
- * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
- * Boston, MA 02110-1301 USA
+ * SPDX-License-Identifier: LGPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2018-2023 elementary, Inc. (https://elementary.io)
  */
 
 public class PC.Widgets.AppRow : Gtk.ListBoxRow {
     public signal void deleted ();
 
     public AppInfo app_info { get; construct; }
+    public bool has_delete { get; construct; default = false; }
 
     private static Flatpak.Installation system_installation;
     private static Flatpak.Installation user_installation;
 
     public AppRow (AppInfo app_info) {
         Object (app_info: app_info);
+    }
+
+    public AppRow.with_delete_button (AppInfo app_info) {
+        Object (
+            app_info: app_info,
+            has_delete: true
+        );
     }
 
     public bool is_flatpak {
@@ -47,27 +41,45 @@ public class PC.Widgets.AppRow : Gtk.ListBoxRow {
     }
 
     construct {
-        var image = new Gtk.Image.from_gicon (app_info.get_icon (), Gtk.IconSize.LARGE_TOOLBAR);
-        image.pixel_size = 32;
+        var image = new Gtk.Image.from_gicon (app_info.get_icon (), DND) {
+            pixel_size = 32
+        };
 
-        var app_name = new Gtk.Label (app_info.get_display_name ());
-        app_name.get_style_context ().add_class (Granite.STYLE_CLASS_H3_LABEL);
-        app_name.xalign = 0;
+        var app_name = new Gtk.Label (app_info.get_display_name ()) {
+            xalign = 0
+        };
 
-        var app_comment = new Gtk.Label (app_info.get_description ());
-        app_comment.ellipsize = Pango.EllipsizeMode.END;
-        app_comment.hexpand = true;
-        app_comment.xalign = 0;
+        var app_comment = new Gtk.Label (app_info.get_description ()) {
+            ellipsize = END,
+            hexpand = true,
+            xalign = 0
+        };
+        app_comment.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
-        var main_grid = new Gtk.Grid ();
-        main_grid.margin = 6;
-        main_grid.margin_start = 12;
-        main_grid.column_spacing = 12;
+        var delete_button = new Gtk.Button.from_icon_name ("edit-delete-symbolic") {
+            halign = END,
+            hexpand = true,
+            tooltip_text = _("Unblock %s").printf (app_info.get_display_name ())
+        };
+
+        var main_grid = new Gtk.Grid () {
+            column_spacing = 6,
+            margin_top = 6,
+            margin_end = 6,
+            margin_bottom = 6,
+            margin_start = 6
+        };
         main_grid.attach (image, 0, 0, 1, 2);
         main_grid.attach (app_name, 1, 0);
         main_grid.attach (app_comment, 1, 1);
 
-        add (main_grid);
+        if (has_delete) {
+            main_grid.attach (delete_button, 2, 0, 1, 2);
+        }
+
+        child = main_grid;
+
+        delete_button.clicked.connect (() => deleted ());
     }
 
     public static string? get_flatpak_ref_for_id (string id) {
