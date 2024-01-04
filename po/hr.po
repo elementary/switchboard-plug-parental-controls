@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2017-04-24 23:04+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://l10n.elementary.io/projects/switchboard/"
@@ -61,24 +61,21 @@ msgstr "Zatvorite sve aplikacije prije zaključavanja računala."
 msgid "Time left"
 msgstr "Preostalo vrijeme"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Spriječi %s da koristi ove aplikacije:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Dodaj spriječene aplikacije…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Ukloni odabranu aplikaciju"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Obriši sve"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Dopusti pristup ovim aplikacijama s administratorskim ovlastima:"
 
@@ -208,6 +205,13 @@ msgstr ""
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr ""
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Spriječi %s da koristi ove aplikacije:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Ukloni odabranu aplikaciju"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

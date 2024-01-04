@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2023-06-02 08:07+0000\n"
 "Last-Translator: Faisal Rachmadin <frachmadin@users.noreply.l10n.elementary."
 "io>\n"
@@ -50,24 +50,21 @@ msgstr "Pastikan untuk menutup semua aplikasi sebelum komputer Anda terkunci."
 msgid "Time left"
 msgstr "Waktu tersisa"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Mencegah %s menggunakan aplikasi ini:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Tambahkan Aplikasi yang Dicegah…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Hapus Aplikasi yang Dipilih"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Bersihkan Semua"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Izinkan akses ke aplikasi ini dengan izin admin:"
 
@@ -196,6 +193,13 @@ msgstr "Cegah akses situs"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Cegah akses aplikasi"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Mencegah %s menggunakan aplikasi ini:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Hapus Aplikasi yang Dipilih"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

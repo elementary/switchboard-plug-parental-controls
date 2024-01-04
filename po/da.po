@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2020-05-27 12:11+0000\n"
 "Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
@@ -56,24 +56,21 @@ msgstr "Husk at lukke alle applikationer inden din computer låses."
 msgid "Time left"
 msgstr "Tid tilbage"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Forhindre %s i at bruge disse apps:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Tilføj spærrede applikationer…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Fjern valgte applikation"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Ryd alt"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Tillad adgang til disse apps med administratorrettigheder:"
 
@@ -214,6 +211,13 @@ msgstr "Forhindrer webside adgang"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Forhindrer applikation adgang"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Forhindre %s i at bruge disse apps:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Fjern valgte applikation"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

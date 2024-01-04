@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2022-06-29 04:55+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -57,24 +57,21 @@ msgstr ""
 msgid "Time left"
 msgstr "Kalan süre"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "%s kullanıcısının aşağıdaki uygulamaları kullanmasını engelle:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Engellenecek Uygulama Ekle…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Seçili Uygulamayı Kaldır"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Tümünü Temizle"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Bu uygulamalara yönetici izinleri ile erişime izin ver:"
 
@@ -213,6 +210,13 @@ msgstr "Web sitesi erişimini engelle"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Uygulama erişimini engelle"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "%s kullanıcısının aşağıdaki uygulamaları kullanmasını engelle:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Seçili Uygulamayı Kaldır"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2020-10-24 13:15+0000\n"
 "Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
@@ -58,24 +58,21 @@ msgstr ""
 msgid "Time left"
 msgstr "Tempo rimanente"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Impedisci a %s l'utilizzo di queste applicazioni:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Aggiungi applicazioni da bloccare…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Rimuovi l'applicazione selezionata"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Rimuovi tutto"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr ""
 "Consenti l'accesso a queste applicazioni con il permesso di amministratore:"
@@ -218,6 +215,13 @@ msgstr "Impedisci l'accesso al sito web"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Impedisci l'accesso all'applicazione"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Impedisci a %s l'utilizzo di queste applicazioni:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Rimuovi l'applicazione selezionata"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

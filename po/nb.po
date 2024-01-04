@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2022-07-08 10:31+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
@@ -56,24 +56,21 @@ msgstr "Sørg for å lukke alle programmer før datamaskinen låses."
 msgid "Time left"
 msgstr "Gjenværende tid"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Forhindre %s fra å bruke disse programmene:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Legg til programmer med begrensninger…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Fjern valgt program"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Tøm alle"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Tillat tilgang til disse programmene gitt administratorrettigheter:"
 
@@ -209,6 +206,13 @@ msgstr "Forhindre nettsidetilgang"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Forhindre programtilgang"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Forhindre %s fra å bruke disse programmene:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Fjern valgt program"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

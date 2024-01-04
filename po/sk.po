@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2021-09-14 17:29+0000\n"
 "Last-Translator: JohnDumpling <john_dumpling@protonmail.com>\n"
 "Language-Team: Slovak <https://l10n.elementary.io/projects/switchboard/"
@@ -61,24 +61,21 @@ msgstr ""
 msgid "Time left"
 msgstr "Zostávajúci čas"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Zabrániť %s používať tieto aplikácie:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Pridať obmedzené aplikácie…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Odstrániť vybranú aplikáciu"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Vymazať všetko"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Povoliť prístup k týmto aplikáciam s povolením administrátora:"
 
@@ -218,6 +215,13 @@ msgstr "Zabráňte prístupu k webovým stránkám"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Zabráňte prístupu k aplikáciám"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Zabrániť %s používať tieto aplikácie:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Odstrániť vybranú aplikáciu"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

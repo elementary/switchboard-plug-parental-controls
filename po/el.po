@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2017-02-19 11:55+0000\n"
 "Last-Translator: Christos Iatropoulos <Unknown>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -54,24 +54,21 @@ msgstr ""
 msgid "Time left"
 msgstr "Χρόνος που απομένει"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Αποτροπή %s από τη χρήση αυτών των εφαρμογών:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Προσθήκη απετραμμένων εφαρμογών..."
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Αφαίρεση επιλεγμένης εφαρμογής"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Εκκαθάριση όλων"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr ""
 "Να επιτρέπεται η πρόσβαση σε αυτές τις εφαρμογές με άδεια του διαχειριστή:"
@@ -202,6 +199,13 @@ msgstr ""
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr ""
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Αποτροπή %s από τη χρήση αυτών των εφαρμογών:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Αφαίρεση επιλεγμένης εφαρμογής"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

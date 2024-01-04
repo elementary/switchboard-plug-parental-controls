@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2022-10-07 16:57+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -51,24 +51,21 @@ msgstr "دڵنیابە لە داخستنی هەموو بەرنامەکانت پ�
 msgid "Time left"
 msgstr "کاتی ماوە"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "ڕێگریکردنی %s لە بەکارهێنانی ئەم بەرنامانە:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "زیادکردنی بەرنامەی قەدەغەکراو…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "سڕینەوەی بەرنامەی دیاریکراو"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "سڕینەوەی هەموو"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "ڕێگەی بدە ئەم بەرنامانە بە مۆڵەتی بەڕێوەبەر بەکار بهێنێت:"
 
@@ -206,6 +203,13 @@ msgstr "ڕێگری لە چوونەژوورەوەی ماڵپەڕەکان بکە"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "ڕێگریکردن لە دەستڕاگەیشتن بە بەرنامەکان"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "ڕێگریکردنی %s لە بەکارهێنانی ئەم بەرنامانە:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "سڕینەوەی بەرنامەی دیاریکراو"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

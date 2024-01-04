@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2021-06-16 00:07+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -60,24 +60,21 @@ msgstr ""
 msgid "Time left"
 msgstr "Часу залишилось"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Заборонити %s користуватися цими застосунками:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Додати заборонені застосунки…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Вилучити вибрані застосунки"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Очистити все"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Дозволити доступ до цих застосунків з дозволу адміністратора:"
 
@@ -217,6 +214,13 @@ msgstr "Заборонити доступ до вебсайту"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Заборонити доступ до застосунків"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Заборонити %s користуватися цими застосунками:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Вилучити вибрані застосунки"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

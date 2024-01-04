@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2018-11-05 23:31+0000\n"
 "Last-Translator: Elvis Mujanović <elvis.mujanovic@gmail.com>\n"
 "Language-Team: Bosnian <https://weblate.elementary.io/projects/switchboard/"
@@ -56,24 +56,21 @@ msgstr "Zatvorite sve aplikacije prije nego što Vaš računar bude zaključan."
 msgid "Time left"
 msgstr "Preostalo vrijeme"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Spriječi da %s koristi ove aplikacije:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Dodaj spriječene aplikacije…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Ukloni odabranu aplikaciju"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Izbriši sve"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Dozvoli pristup ovim aplikacijama s administratorskim dozvolama:"
 
@@ -202,6 +199,13 @@ msgstr "Spriječite pristup web stranici"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Spriječite pristup aplikaciji"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Spriječi da %s koristi ove aplikacije:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Ukloni odabranu aplikaciju"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

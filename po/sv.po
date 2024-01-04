@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2018-10-21 11:44+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
@@ -58,24 +58,21 @@ msgstr "Glöm inte att stänga alla dina program innan datorn låser sig."
 msgid "Time left"
 msgstr "Återstående tid"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Förhindra %s från att använda dessa program:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Lägg till spärrat program…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Ta bort markerat program"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Rensa allt"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Tillåt åtkomst till dessa program med administratörsrättigheter:"
 
@@ -204,6 +201,13 @@ msgstr "Förhindra webbsideåtkomst"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Förhindra programåtkomst"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Förhindra %s från att använda dessa program:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Ta bort markerat program"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2021-12-17 12:02+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -56,24 +56,21 @@ msgstr ""
 msgid "Time left"
 msgstr "残り時間"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "%s が以下のアプリを使うことを防ぐ:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "制限するアプリを追加…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "選択されたアプリを削除"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "すべて消去"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "管理者の許可でこれらのアプリにアクセスすることを許可:"
 
@@ -209,6 +206,13 @@ msgstr "Web サイトへのアクセスを防止"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "アプリケーションへのアクセスを防止"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "%s が以下のアプリを使うことを防ぐ:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "選択されたアプリを削除"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

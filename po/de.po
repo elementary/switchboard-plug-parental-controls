@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2021-08-26 20:39+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -59,24 +59,21 @@ msgstr ""
 msgid "Time left"
 msgstr "Verbleibende Zeit"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Folgende Anwendungen für %s sperren:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Gesperrte Anwendungen hinzufügen …"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Ausgewählte Anwendung entfernen"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Alle entfernen"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Zugriff auf diese Anwendungen mit Systemverwalterrechten erlauben:"
 
@@ -219,6 +216,13 @@ msgstr "Website-Zugriff verhindern"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Zugriff auf Anwendungen verhindern"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Folgende Anwendungen für %s sperren:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Ausgewählte Anwendung entfernen"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"
