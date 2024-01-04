@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2023-03-13 04:25+0000\n"
 "Last-Translator: NorwayFun <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <https://l10n.elementary.io/projects/switchboard/"
@@ -54,24 +54,21 @@ msgstr "კომპიუტერის დაბლოკვამდე ყ�
 msgid "Time left"
 msgstr "დარჩენილი დრო"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "%s-ის შეზღუდვა შემდეგი აპებისგან:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "აკრძალული აპის დამატება…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "არჩეული აპის წაშლა"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "ყველას გასუფთავება"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "ამ აპებთან ადმინის უფლებებით წვდომის უფლება:"
 
@@ -207,6 +204,13 @@ msgstr "ვებგვერდთან წვდომის აკრძა�
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "აპლიკაცისთან წვდომის აკრძალვა"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "%s-ის შეზღუდვა შემდეგი აპებისგან:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "არჩეული აპის წაშლა"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

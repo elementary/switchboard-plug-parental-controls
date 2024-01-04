@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2022-08-14 02:55+0000\n"
 "Last-Translator: Dennis ten Hoove <dennistenhoove@protonmail.com>\n"
 "Language-Team: Dutch <https://l10n.elementary.io/projects/switchboard/"
@@ -58,24 +58,21 @@ msgstr ""
 msgid "Time left"
 msgstr "Resterende tijd"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Voorkom dat %s deze applicaties gebruikt:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Voeg geblokkeerde applicaties toe…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Verwijder geselecteerde app"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Alles wissen"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr ""
 "Toegang verlenen aan de volgende apps met goedkeuring van de administrator:"
@@ -215,6 +212,13 @@ msgstr "Ontzeg toegang tot websites"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Ontzeg toegang tot applicaties"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Voorkom dat %s deze applicaties gebruikt:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Verwijder geselecteerde app"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

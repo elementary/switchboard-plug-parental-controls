@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2019-01-06 17:22+0000\n"
 "Last-Translator: Simon Dagfinrud <semonje@gmail.com>\n"
 "Language-Team: Norwegian Nynorsk <https://weblate.elementary.io/projects/"
@@ -53,24 +53,21 @@ msgstr "Sørg for å lukke alle applikasjonar før datamaskina vert låst."
 msgid "Time left"
 msgstr "Gjenverande tid"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Hindre %s frå å bruke desse applikasjonane:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Legg til applikasjonar med avgrensingar…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Fjern vald applikasjon"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Fjern alt"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Tillat tilgjenge til desse applikasjonane med administratorrettar:"
 
@@ -199,6 +196,13 @@ msgstr "Hindre nettstadtilgjenge"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Hindre applikasjonstilgjenge"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Hindre %s frå å bruke desse applikasjonane:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Fjern vald applikasjon"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

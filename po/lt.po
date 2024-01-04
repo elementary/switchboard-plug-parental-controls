@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2019-07-26 09:13+0000\n"
 "Last-Translator: Moo <hazap@hotmail.com>\n"
 "Language-Team: Lithuanian <https://l10n.elementary.io/projects/switchboard/"
@@ -63,24 +63,21 @@ msgstr ""
 msgid "Time left"
 msgstr "Liko laiko"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Neleisti %s naudotis šiomis programomis:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Pridėti neleidžiamas programas…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Šalinti pasirinktą programą"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Viską išvalyti"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Leisti prieigą prie šių programų administratoriaus teisėmis:"
 
@@ -210,6 +207,13 @@ msgstr "Neleisti prieigą prie svetainių"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Neleisti prieigą prie programų"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Neleisti %s naudotis šiomis programomis:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Šalinti pasirinktą programą"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

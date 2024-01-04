@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2021-07-05 13:54+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -52,24 +52,21 @@ msgstr ""
 msgid "Time left"
 msgstr "Time left"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Prevent %s from using these apps:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Add Prevented Apps…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Remove Selected App"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Clear All"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Allow access to these apps with admin permission:"
 
@@ -205,6 +202,13 @@ msgstr "Prevent website access"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Prevent application access"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Prevent %s from using these apps:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Remove Selected App"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

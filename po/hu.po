@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2021-08-26 00:26+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
@@ -57,24 +57,21 @@ msgstr ""
 msgid "Time left"
 msgstr "Hátralévő idő"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "%s megakadályozása abban, hogy használja ezeket az alkalmazásokat:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Letiltott alkalmazások hozzáadása…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Kijelölt alkalmazás eltávolítása"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Az összes törlése"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Rendszergazdai jóváhagyással engedélyezze a hozzáférést:"
 
@@ -212,6 +209,13 @@ msgstr "Weboldalelérés megelőzése"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Alkalmazáselérés megelőzése"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "%s megakadályozása abban, hogy használja ezeket az alkalmazásokat:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Kijelölt alkalmazás eltávolítása"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

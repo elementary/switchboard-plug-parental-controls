@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2021-06-18 08:05+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -57,24 +57,21 @@ msgstr ""
 msgid "Time left"
 msgstr "Aikaa jäljellä"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Estä käyttäjää %s käyttämästä seuraavia sovelluksia:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Lisää estetyt sovellukset…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Poista valittu sovellus"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Tyhjennä kaikki"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Salli seuraavien sovellusten käyttö ylläpito-oikeuksin:"
 
@@ -211,6 +208,13 @@ msgstr "Estä verkkosivuille pääsy"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Estä sovellusten käyttö"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Estä käyttäjää %s käyttämästä seuraavia sovelluksia:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Poista valittu sovellus"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"

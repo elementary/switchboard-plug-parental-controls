@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 23:51+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2024-01-03 22:56+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -59,24 +59,21 @@ msgstr "Należy zamknąć wszystkie programy zanim komputer zostanie zablokowany
 msgid "Time left"
 msgstr "Pozostały czas"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Uniemożliwiaj %s korzystanie z tych programów:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Dodaj ograniczane programy…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Usuń wybrany program"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Wyczyść wszystkie"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Zezwalaj na dostęp do tych programów z uprawnieniami administratora:"
 
@@ -230,6 +227,13 @@ msgstr "Ogranicz dostęp do stron internetowych"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Ogranicz dostęp do programów"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Uniemożliwiaj %s korzystanie z tych programów:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Usuń wybrany program"
 
 #, c-format
 #~ msgid "Prevent %s from visiting these websites:"
