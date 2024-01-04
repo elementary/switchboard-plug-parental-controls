@@ -27,6 +27,7 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
         var header_label = new Granite.HeaderLabel (_("Blocked Apps"));
 
         list_box = new Gtk.ListBox ();
+        list_box.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
 
         var scrolled = new Gtk.ScrolledWindow () {
             child = list_box,
@@ -69,7 +70,7 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
 
         var frame = new Gtk.Frame (null) {
             child = main_box,
-            margin_bottom = 12
+            margin_bottom = 6
         };
         frame.add_css_class (Granite.STYLE_CLASS_VIEW);
 
@@ -82,6 +83,7 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
         };
         admin_switch_btn.notify["active"].connect (update_admin);
 
+        row_spacing = 6;
         attach (header_label, 0, 0, 2);
         attach (frame, 0, 1, 2);
         attach (admin_label, 0, 2);

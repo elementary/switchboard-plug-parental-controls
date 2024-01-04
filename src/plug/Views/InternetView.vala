@@ -65,6 +65,7 @@ public class PC.Widgets.InternetBox : Gtk.Box {
         frame.add_css_class (Granite.STYLE_CLASS_VIEW);
 
         orientation = VERTICAL;
+        spacing = 6;
         append (info_label);
         append (frame);
         load_existing.begin ();
