@@ -14,6 +14,10 @@ public class PC.Widgets.ControlPage : Gtk.Box {
         Object (user: user);
     }
 
+    class construct {
+        set_css_name ("simplesettingspage");
+    }
+
     construct {
         unowned var permission = Utils.get_permission ();
 
@@ -23,7 +27,6 @@ public class PC.Widgets.ControlPage : Gtk.Box {
         margin_bottom = 12;
         margin_start = 12;
         orientation = VERTICAL;
-        spacing = 24;
 
         time_limit_view = new TimeLimitView (user);
         var internet_box = new InternetBox (user);
@@ -40,6 +43,7 @@ public class PC.Widgets.ControlPage : Gtk.Box {
 
         var switcher = new Gtk.StackSwitcher () {
             halign = CENTER,
+            margin_bottom = 12,
             stack = stack
         };
 
@@ -55,6 +59,7 @@ public class PC.Widgets.ControlPage : Gtk.Box {
             column_spacing = 12,
             halign = START
         };
+        header_grid.add_css_class ("header-area");
 
         var avatar = new Adw.Avatar (48, user.get_real_name (), true) {
             valign = START
