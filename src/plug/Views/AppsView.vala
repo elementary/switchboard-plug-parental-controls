@@ -9,7 +9,7 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
     public Act.User user { get; construct; }
 
     private Gtk.ListBox list_box;
-    private AppChooser apps_popover;
+    private AppChooser apps_dialog;
     private Gtk.Switch admin_switch_btn;
     private Gtk.Button clear_button;
 
@@ -46,7 +46,6 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
         };
         add_label.mnemonic_widget = add_button;
         add_button.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
-        add_button.clicked.connect (on_add_button_clicked);
 
         clear_button = new Gtk.Button.from_icon_name ("edit-clear-all-symbolic") {
             sensitive = false,
@@ -54,8 +53,10 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
         };
         clear_button.clicked.connect (on_clear_button_clicked);
 
-        apps_popover = new AppChooser (add_button);
-        apps_popover.app_chosen.connect (load_info);
+        apps_dialog = new AppChooser () {
+            transient_for = ((Gtk.Application) Application.get_default ()).active_window
+        };
+        apps_dialog.app_chosen.connect (load_info);
 
         var toolbar = new Gtk.ActionBar ();
         toolbar.get_style_context ().add_class (Gtk.STYLE_CLASS_FLAT);
@@ -88,10 +89,8 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
 
         load_existing.begin ();
         show_all ();
-    }
 
-    private void on_add_button_clicked () {
-        apps_popover.show_all ();
+        add_button.clicked.connect (apps_dialog.present);
     }
 
     private void on_clear_button_clicked () {

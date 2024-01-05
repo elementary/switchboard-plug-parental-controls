@@ -7,20 +7,14 @@
  *              Julien Spautz <spautz.julien@gmail.com>
  */
 
-public class PC.Widgets.AppChooser : Gtk.Popover {
+public class PC.Widgets.AppChooser : Granite.Dialog {
     private Gtk.ListBox listbox;
     private Gtk.SearchEntry search_entry;
 
     public signal void app_chosen (AppInfo info);
 
-    public AppChooser (Gtk.Widget widget) {
-        Object (relative_to: widget);
-    }
-
     construct {
         search_entry = new Gtk.SearchEntry () {
-            margin_end = 12,
-            margin_start = 12,
             placeholder_text = _("Search Applications")
         };
 
@@ -32,18 +26,25 @@ public class PC.Widgets.AppChooser : Gtk.Popover {
         listbox.set_sort_func (sort_function);
 
         var scrolled = new Gtk.ScrolledWindow (null, null) {
-            child = listbox,
-            height_request = 200,
-            width_request = 500
+            child = listbox
+        };
+
+        var frame = new Gtk.Frame (null) {
+            child = scrolled
         };
 
         var box = new Gtk.Box (VERTICAL, 6) {
-            margin_top = 12
+            margin_end = 10,
+            margin_start = 10
         };
         box.add (search_entry);
-        box.add (scrolled);
+        box.add (frame);
 
-        child = box;
+        default_height = 500;
+        default_width = 400;
+        modal = true;
+        get_content_area ().add (box);
+        add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
 
         foreach (var _info in AppInfo.get_all ()) {
             if (_info.should_show ()) {
@@ -51,6 +52,10 @@ public class PC.Widgets.AppChooser : Gtk.Popover {
                 listbox.prepend (row);
             }
         }
+
+        box.show_all ();
+
+        response.connect (hide);
 
         listbox.row_activated.connect (on_app_selected);
 
@@ -78,6 +83,6 @@ public class PC.Widgets.AppChooser : Gtk.Popover {
     private void on_app_selected (Gtk.ListBoxRow row) {
         var app_row = (PC.Widgets.AppRow) row;
         app_chosen (app_row.app_info);
-        popdown ();
+        hide ();
     }
 }
