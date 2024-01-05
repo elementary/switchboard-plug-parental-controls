@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 00:04+0000\n"
-"PO-Revision-Date: 2024-01-03 22:56+0000\n"
+"POT-Creation-Date: 2024-01-05 10:31+0000\n"
+"PO-Revision-Date: 2024-01-05 05:34+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/fr/>\n"
@@ -60,34 +60,32 @@ msgstr "Temps restant"
 
 #: src/plug/Views/AppsView.vala:27
 msgid "Blocked Apps"
-msgstr ""
+msgstr "Applications bloquées"
 
 #: src/plug/Views/AppsView.vala:37
-#, fuzzy
-#| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
-msgstr "Ajouter des applications bloquées…"
+msgstr "Ajouter une application bloquée…"
 
-#: src/plug/Views/AppsView.vala:53
+#: src/plug/Views/AppsView.vala:52
 msgid "Clear All"
 msgstr "Tout effacer"
 
-#: src/plug/Views/AppsView.vala:75
+#: src/plug/Views/AppsView.vala:76
 msgid "Allow access to these apps with admin permission:"
 msgstr ""
 "Permettre l'utilisation de ces programmes avec des droits d'administrateur :"
 
 #: src/plug/Views/InternetView.vala:28
 msgid "Blocked Websites"
-msgstr ""
+msgstr "Sites bloqués"
 
 #: src/plug/Views/InternetView.vala:39
 msgid "Block URL"
-msgstr ""
+msgstr "Bloquer l'URL"
 
 #: src/plug/Views/InternetView.vala:49
 msgid "example.com"
-msgstr ""
+msgstr "exemple.com"
 
 #: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
@@ -96,7 +94,7 @@ msgstr "URL invalide"
 #: src/plug/Views/InternetView.vala:142
 #, c-format
 msgid "Unblock %s"
-msgstr ""
+msgstr "Débloquer %s"
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:20
@@ -117,13 +115,8 @@ msgid "To:"
 msgstr "Jusqu'à :"
 
 #: src/plug/Views/TimeLimitView.vala:168
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekends."
 msgid "Screen Time is not limited on weekends."
-msgstr ""
-"Le temps d'écran de %s ne sera pas limité pendant cette période les week-"
-"ends."
+msgstr "Le temps d'écran n'est pas limité les weekends."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:170
@@ -136,13 +129,8 @@ msgstr ""
 "automatiquement déconnecté à la fin de celle-ci :"
 
 #: src/plug/Views/TimeLimitView.vala:174
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekdays."
 msgid "Screen Time is not limited on weekdays."
-msgstr ""
-"Le temps d'écran de %s ne sera pas limité pendant cette période les jours de "
-"semaine."
+msgstr "Le temps d'écran n'est pas limité en semaine."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:176
@@ -154,9 +142,13 @@ msgstr ""
 "%s ne pourra se connecter que pendant cette période les jours de semaine, et "
 "sera automatiquement déconnecté à la fin de celle-ci :"
 
-#: src/plug/Widgets/AppChooser.vala:40
+#: src/plug/Widgets/AppChooser.vala:18
 msgid "Search Applications"
 msgstr "Rechercher des applications"
+
+#: src/plug/Widgets/AppChooser.vala:47
+msgid "Cancel"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"
@@ -171,10 +163,6 @@ msgid "Applications"
 msgstr "Applications"
 
 #: src/plug/Widgets/ControlPage.vala:73
-#, fuzzy
-#| msgid ""
-#| "Manage your usage of this device by setting limits on time usage, "
-#| "websites, and apps."
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
@@ -183,16 +171,11 @@ msgstr ""
 "d'utilisation, de sites web et d'applications."
 
 #: src/plug/Widgets/ControlPage.vala:75
-#, fuzzy
-#| msgid ""
-#| "Supervise and manage usage of this device with limits on time usage, "
-#| "websites, and apps. Some limits may be bypassed with an administrator's "
-#| "authorization."
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
-"Supervisez et gérez l'utilisation de cet appareil en limitant le temps "
+"Supervisez et gérez l'utilisation de l'appareil en limitant le temps "
 "d'utilisation, les sites web et les applications. Certaines limites peuvent "
 "être contournées avec l'autorisation d'un administrateur."
 

@@ -58,7 +58,8 @@ install_data(
 i18n.merge_file(
     input: 'screentime-limits.metainfo.xml.in',
     output: gettext_name + '.metainfo.xml',
-    po_dir: join_paths(meson.source_root (), 'po', 'extra'),
-    install_dir: join_paths(datadir, 'metainfo'),
-    install: true
+    po_dir: meson.source_root() / 'po' / 'extra',
+    type: 'xml',
+    install: true,
+    install_dir: datadir / 'metainfo',
 )

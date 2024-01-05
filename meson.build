@@ -1,7 +1,7 @@
 project(
     'screentime-limits',
     'vala', 'c',
-    meson_version: '>= 0.46.1',
+    meson_version: '>= 0.49',
     version: '6.0.1'
 )
 
