@@ -69,7 +69,7 @@ namespace PC.Daemon {
 
         private void process_adress (string url, string option, string filter) {
             try {
-                string[] argv = { IPTABLES_EXEC, option, filter, "-m", "string", "--string", @"$url",
+                string[] argv = { IPTABLES_EXEC, option, filter, "-m", "string", "--string", url,
                                   "--algo", "kmp", "--to", BYTES.to_string (), "-j", "DROP" };
 
                 GLib.Process.spawn_sync ("/",

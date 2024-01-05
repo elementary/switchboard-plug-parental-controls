@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 00:56+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2017-04-24 23:04+0000\n"
 "Last-Translator: gogogogi <trebelnik2@gmail.com>\n"
 "Language-Team: Croatian <https://l10n.elementary.io/projects/switchboard/"
@@ -61,84 +61,83 @@ msgstr "Zatvorite sve aplikacije prije zaključavanja računala."
 msgid "Time left"
 msgstr "Preostalo vrijeme"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Spriječi %s da koristi ove aplikacije:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "Dodaj spriječene aplikacije…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Ukloni odabranu aplikaciju"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Obriši sve"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "Dopusti pristup ovim aplikacijama s administratorskim ovlastima:"
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Spriječi %s da posjećuje ove web stranice:"
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "Dodaj URL"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "Dodaj novi URL, npr: google.hr"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "Neispravan URL"
 
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr ""
+
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:41
+#: src/plug/Views/TimeLimitView.vala:20
 msgid "Weekdays"
 msgstr "Radni dani"
 
 #. /TRANSLATORS: Refers to weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:49
+#: src/plug/Views/TimeLimitView.vala:27
 msgid "Weekends"
 msgstr "Vikendima"
 
-#: src/plug/Views/TimeLimitView.vala:169
+#: src/plug/Views/TimeLimitView.vala:149
 msgid "From:"
 msgstr "Od:"
 
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:158
 msgid "To:"
 msgstr "Do:"
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:192
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekends."
-msgstr ""
+#: src/plug/Views/TimeLimitView.vala:168
+#, fuzzy
+msgid "Screen Time is not limited on weekends."
+msgstr "Preostalo vrijeme"
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:196
+#: src/plug/Views/TimeLimitView.vala:170
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:201
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekdays."
-msgstr ""
+#: src/plug/Views/TimeLimitView.vala:174
+#, fuzzy
+msgid "Screen Time is not limited on weekdays."
+msgstr "Preostalo vrijeme"
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:205
+#: src/plug/Views/TimeLimitView.vala:176
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
@@ -149,42 +148,41 @@ msgstr ""
 msgid "Search Applications"
 msgstr "Pretraži aplikacije"
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:34
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:35
 msgid "Applications"
 msgstr "Aplikacije"
 
-#: src/plug/Widgets/ControlPage.vala:81
+#: src/plug/Widgets/ControlPage.vala:73
 msgid ""
-"Manage your usage of this device by setting limits on time usage, websites, "
-"and apps."
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:83
+#: src/plug/Widgets/ControlPage.vala:75
 msgid ""
-"Supervise and manage usage of this device with limits on time usage, "
-"websites, and apps. Some limits may be bypassed with an administrator's "
-"authorization."
+"Supervise and manage device usage with limits on Screen Time, websites, and "
+"apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
 
-#: src/plug/Widgets/UserList.vala:104
+#: src/plug/MainView.vala:41
+msgid "Some settings require administrator rights to be changed"
+msgstr "Neke postavke zahtijevaju administratorske ovlasti"
+
+#: src/plug/MainView.vala:127
 msgid "My Account"
 msgstr "Moj račun"
 
-#: src/plug/Widgets/UserList.vala:107
+#: src/plug/MainView.vala:130
 msgid "Other Accounts"
 msgstr "Ostali računi"
-
-#: src/plug/MainView.vala:33
-msgid "Some settings require administrator rights to be changed"
-msgstr "Neke postavke zahtijevaju administratorske ovlasti"
 
 #: src/plug/Plug.vala:36
 #, fuzzy
@@ -207,6 +205,23 @@ msgstr ""
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr ""
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Spriječi %s da koristi ove aplikacije:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Ukloni odabranu aplikaciju"
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "Spriječi %s da posjećuje ove web stranice:"
+
+#~ msgid "Add URL"
+#~ msgstr "Dodaj URL"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "Dodaj novi URL, npr: google.hr"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "Ograniči korištenje računala:"

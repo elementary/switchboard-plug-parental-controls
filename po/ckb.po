@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 00:56+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
 "PO-Revision-Date: 2022-10-07 16:57+0000\n"
 "Last-Translator: Aga Ismael <agaesmaeel@gmail.com>\n"
 "Language-Team: Kurdish (Central) <https://l10n.elementary.io/projects/"
@@ -51,70 +51,72 @@ msgstr "دڵنیابە لە داخستنی هەموو بەرنامەکانت پ�
 msgid "Time left"
 msgstr "کاتی ماوە"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "ڕێگریکردنی %s لە بەکارهێنانی ئەم بەرنامانە:"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr ""
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:37
+#, fuzzy
+#| msgid "Add Prevented Apps…"
+msgid "Add Blocked App…"
 msgstr "زیادکردنی بەرنامەی قەدەغەکراو…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "سڕینەوەی بەرنامەی دیاریکراو"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "سڕینەوەی هەموو"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr "ڕێگەی بدە ئەم بەرنامانە بە مۆڵەتی بەڕێوەبەر بەکار بهێنێت:"
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "ڕێگریکردن لە %s لە سەردانیکردنی ئەم وێبسایتانە:"
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "زیادکردنی وێبسایت"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "وێبسایتێکی نوێ زیاد بکە، بۆ نموونە google.com"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr ""
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "لینکەکە هەڵەیە"
 
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr ""
+
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:41
+#: src/plug/Views/TimeLimitView.vala:20
 msgid "Weekdays"
 msgstr "ڕۆژەکانی هەفتە"
 
 #. /TRANSLATORS: Refers to weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:49
+#: src/plug/Views/TimeLimitView.vala:27
 msgid "Weekends"
 msgstr "کۆتایی هەفتەکان"
 
-#: src/plug/Views/TimeLimitView.vala:169
+#: src/plug/Views/TimeLimitView.vala:149
 msgid "From:"
 msgstr "لە:"
 
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:158
 msgid "To:"
 msgstr "بۆ:"
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:192
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekends."
+#: src/plug/Views/TimeLimitView.vala:168
+#, fuzzy
+#| msgid ""
+#| "Screen Time for %s will not be limited during this period on weekends."
+msgid "Screen Time is not limited on weekends."
 msgstr "کاتی ڕوونما بۆ %s سنووردار نابێت لەماوەی کۆتایی هەفتەکاندا."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:196
+#: src/plug/Views/TimeLimitView.vala:170
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
@@ -123,14 +125,15 @@ msgstr ""
 "%s تەنها دەتوانیت لەم ماوەیەدا لە کۆتایی هەفتەکاندا بچێتە ژوورەوە و، دوای "
 "تەواوبوونی ماوەکە ڕاستەوخۆ دەوەستێندرێت:"
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:201
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekdays."
+#: src/plug/Views/TimeLimitView.vala:174
+#, fuzzy
+#| msgid ""
+#| "Screen Time for %s will not be limited during this period on weekdays."
+msgid "Screen Time is not limited on weekdays."
 msgstr "کاتی ڕوونما بۆ %s لەم ماوەیەدا لە ڕۆژەکانی هەفتەدا سنووردار نابێت."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:205
+#: src/plug/Views/TimeLimitView.vala:176
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
@@ -143,44 +146,43 @@ msgstr ""
 msgid "Search Applications"
 msgstr "بەدوای بەرنامەدا بگەڕێ"
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"
 msgstr "کاتی ڕوونما"
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:34
 msgid "Internet"
 msgstr "ئینتەرنێت"
 
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:35
 msgid "Applications"
 msgstr "بەرنامەکان"
 
-#: src/plug/Widgets/ControlPage.vala:81
+#: src/plug/Widgets/ControlPage.vala:73
 msgid ""
-"Manage your usage of this device by setting limits on time usage, websites, "
-"and apps."
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:83
+#: src/plug/Widgets/ControlPage.vala:75
 msgid ""
-"Supervise and manage usage of this device with limits on time usage, "
-"websites, and apps. Some limits may be bypassed with an administrator's "
-"authorization."
+"Supervise and manage device usage with limits on Screen Time, websites, and "
+"apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
 
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "هەژمارەکەم"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "هەژمارەکانی تر"
-
-#: src/plug/MainView.vala:33
+#: src/plug/MainView.vala:41
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "بەشێک لە ڕێکخستنەکان پێویستیان بە دەسەڵاتی بەڕێوەبەرە بۆ ئەوەی گۆڕانکاریان "
 "بەسەردا بێت"
+
+#: src/plug/MainView.vala:127
+msgid "My Account"
+msgstr "هەژمارەکەم"
+
+#: src/plug/MainView.vala:130
+msgid "Other Accounts"
+msgstr "هەژمارەکانی تر"
 
 #: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
@@ -201,3 +203,20 @@ msgstr "ڕێگری لە چوونەژوورەوەی ماڵپەڕەکان بکە"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "ڕێگریکردن لە دەستڕاگەیشتن بە بەرنامەکان"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "ڕێگریکردنی %s لە بەکارهێنانی ئەم بەرنامانە:"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "سڕینەوەی بەرنامەی دیاریکراو"
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "ڕێگریکردن لە %s لە سەردانیکردنی ئەم وێبسایتانە:"
+
+#~ msgid "Add URL"
+#~ msgstr "زیادکردنی وێبسایت"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "وێبسایتێکی نوێ زیاد بکە، بۆ نموونە google.com"

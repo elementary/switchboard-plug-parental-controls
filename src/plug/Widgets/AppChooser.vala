@@ -1,97 +1,88 @@
 /*
- * Copyright 2018 elementary, Inc. (https://elementary.io)
- *           2015 Adam Bieńkowski
- *
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Library General Public
- * License as published by the Free Software Foundation; either
- * version 3 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Library General Public License for more details.
- *
- * You should have received a copy of the GNU Library General Public
- * License along with this library; if not, write to the
- * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
- * Boston, MA 02110-1301 USA
+ * SPDX-License-Identifier: LGPL-3.0-or-later
+ * SPDX-FileCopyrightText: 2018-2023 elementary, Inc. (https://elementary.io)
+ *                         2015 Adam Bieńkowski
  *
  * Authored by: Adam Bieńkowski <donadigos159@gmail.com>
- * Julien Spautz <spautz.julien@gmail.com>
+ *              Julien Spautz <spautz.julien@gmail.com>
  */
 
-namespace PC.Widgets {
-    public class AppChooser : Gtk.Popover {
+public class PC.Widgets.AppChooser : Granite.Dialog {
+    private Gtk.ListBox listbox;
+    private Gtk.SearchEntry search_entry;
 
-        private Gtk.ListBox listbox;
-        private Gtk.SearchEntry search_entry;
+    public signal void app_chosen (AppInfo info);
 
-        public signal void app_chosen (AppInfo info);
+    construct {
+        search_entry = new Gtk.SearchEntry () {
+            placeholder_text = _("Search Applications")
+        };
 
-        public AppChooser (Gtk.Widget widget) {
-            Object (relative_to: widget);
-        }
+        listbox = new Gtk.ListBox () {
+            hexpand = true,
+            vexpand = true
+        };
+        listbox.set_filter_func (filter_function);
+        listbox.set_sort_func (sort_function);
 
-        construct {
-            search_entry = new Gtk.SearchEntry ();
-            search_entry.margin_end = 12;
-            search_entry.margin_start = 12;
-            search_entry.placeholder_text = _("Search Applications");
+        var scrolled = new Gtk.ScrolledWindow (null, null) {
+            child = listbox
+        };
 
-            listbox = new Gtk.ListBox ();
-            listbox.expand = true;
-            listbox.set_filter_func (filter_function);
-            listbox.set_sort_func (sort_function);
+        var frame = new Gtk.Frame (null) {
+            child = scrolled
+        };
 
-            var scrolled = new Gtk.ScrolledWindow (null, null);
-            scrolled.height_request = 200;
-            scrolled.width_request = 500;
-            scrolled.vscrollbar_policy = Gtk.PolicyType.AUTOMATIC;
-            scrolled.add (listbox);
+        var box = new Gtk.Box (VERTICAL, 6) {
+            margin_end = 10,
+            margin_start = 10
+        };
+        box.add (search_entry);
+        box.add (frame);
 
-            var grid = new Gtk.Grid ();
-            grid.margin_top = 12;
-            grid.row_spacing = 6;
-            grid.attach (search_entry, 0, 0);
-            grid.attach (scrolled, 0, 1);
+        default_height = 500;
+        default_width = 400;
+        modal = true;
+        get_content_area ().add (box);
+        add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
 
-            add (grid);
-
-            foreach (var _info in AppInfo.get_all ()) {
-                if (_info.should_show ()) {
-                    var row = new PC.Widgets.AppRow (_info);
-                    listbox.prepend (row);
-                }
+        foreach (var _info in AppInfo.get_all ()) {
+            if (_info.should_show ()) {
+                var row = new PC.Widgets.AppRow (_info);
+                listbox.prepend (row);
             }
-
-            listbox.row_activated.connect (on_app_selected);
-
-            search_entry.search_changed.connect (() => {
-                listbox.invalidate_filter ();
-            });
         }
 
-        private int sort_function (Gtk.ListBoxRow first_row, Gtk.ListBoxRow second_row) {
-            var row_1 = (PC.Widgets.AppRow)first_row;
-            var row_2 = (PC.Widgets.AppRow)second_row;
+        box.show_all ();
 
-            string name_1 = row_1.app_info.get_display_name ();
-            string name_2 = row_2.app_info.get_display_name ();
+        response.connect (hide);
 
-            return name_1.collate (name_2);
-        }
+        listbox.row_activated.connect (on_app_selected);
 
-        private bool filter_function (Gtk.ListBoxRow row) {
-            var app_row = (PC.Widgets.AppRow) row;
-            return search_entry.text.down () in app_row.app_info.get_display_name ().down ()
-                || search_entry.text.down () in app_row.app_info.get_description ().down ();
-        }
+        search_entry.search_changed.connect (() => {
+            listbox.invalidate_filter ();
+        });
+    }
 
-        private void on_app_selected (Gtk.ListBoxRow row) {
-            var app_row = (PC.Widgets.AppRow) row;
-            app_chosen (app_row.app_info);
-            hide ();
-        }
+    private int sort_function (Gtk.ListBoxRow first_row, Gtk.ListBoxRow second_row) {
+        var row_1 = (PC.Widgets.AppRow)first_row;
+        var row_2 = (PC.Widgets.AppRow)second_row;
+
+        string name_1 = row_1.app_info.get_display_name ();
+        string name_2 = row_2.app_info.get_display_name ();
+
+        return name_1.collate (name_2);
+    }
+
+    private bool filter_function (Gtk.ListBoxRow row) {
+        var app_row = (PC.Widgets.AppRow) row;
+        return search_entry.text.down () in app_row.app_info.get_display_name ().down ()
+            || search_entry.text.down () in app_row.app_info.get_description ().down ();
+    }
+
+    private void on_app_selected (Gtk.ListBoxRow row) {
+        var app_row = (PC.Widgets.AppRow) row;
+        app_chosen (app_row.app_info);
+        hide ();
     }
 }

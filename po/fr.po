@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-03 00:56+0000\n"
-"PO-Revision-Date: 2022-06-29 08:35+0000\n"
+"POT-Creation-Date: 2024-01-04 00:04+0000\n"
+"PO-Revision-Date: 2024-01-05 05:34+0000\n"
 "Last-Translator: Nathan <bonnemainsnathan@gmail.com>\n"
 "Language-Team: French <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-02-28 05:31+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -58,73 +58,68 @@ msgstr ""
 msgid "Time left"
 msgstr "Temps restant"
 
-#: src/plug/Views/AppsView.vala:50
-#, c-format
-msgid "Prevent %s from using these apps:"
-msgstr "Interdire à %s d'utiliser ces programmes :"
+#: src/plug/Views/AppsView.vala:27
+msgid "Blocked Apps"
+msgstr "Applications bloquées"
 
-#: src/plug/Views/AppsView.vala:60
-msgid "Add Prevented Apps…"
-msgstr "Ajouter des applications bloquées…"
+#: src/plug/Views/AppsView.vala:37
+msgid "Add Blocked App…"
+msgstr "Ajouter une application bloquée…"
 
-#: src/plug/Views/AppsView.vala:64
-msgid "Remove Selected App"
-msgstr "Supprimer l'application sélectionnée"
-
-#: src/plug/Views/AppsView.vala:69
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Tout effacer"
 
-#: src/plug/Views/AppsView.vala:92
+#: src/plug/Views/AppsView.vala:75
 msgid "Allow access to these apps with admin permission:"
 msgstr ""
 "Permettre l'utilisation de ces programmes avec des droits d'administrateur :"
 
-#: src/plug/Views/InternetView.vala:72
-#, c-format
-msgid "Prevent %s from visiting these websites:"
-msgstr "Interdire à %s la visite de ces sites internet :"
+#: src/plug/Views/InternetView.vala:28
+msgid "Blocked Websites"
+msgstr "Sites bloqués"
 
-#: src/plug/Views/InternetView.vala:87
-msgid "Add URL"
-msgstr "Ajouter une URL"
+#: src/plug/Views/InternetView.vala:39
+msgid "Block URL"
+msgstr "Bloquer l'URL"
 
-#: src/plug/Views/InternetView.vala:96
-msgid "Add a new URL, for example: google.com"
-msgstr "Ajouter une nouvelle URL, par exemple : www.google.fr"
+#: src/plug/Views/InternetView.vala:49
+msgid "example.com"
+msgstr "exemple.com"
 
-#: src/plug/Views/InternetView.vala:97
+#: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "URL invalide"
 
+#: src/plug/Views/InternetView.vala:142
+#, c-format
+msgid "Unblock %s"
+msgstr "Débloquer %s"
+
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:41
+#: src/plug/Views/TimeLimitView.vala:20
 msgid "Weekdays"
 msgstr "La semaine"
 
 #. /TRANSLATORS: Refers to weekend days, as used in a title
-#: src/plug/Views/TimeLimitView.vala:49
+#: src/plug/Views/TimeLimitView.vala:27
 msgid "Weekends"
 msgstr "Les week-ends"
 
-#: src/plug/Views/TimeLimitView.vala:169
+#: src/plug/Views/TimeLimitView.vala:149
 msgid "From:"
 msgstr "À partir de :"
 
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:158
 msgid "To:"
 msgstr "Jusqu'à :"
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:192
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekends."
-msgstr ""
-"Le temps d'écran de %s ne sera pas limité pendant cette période les week-"
-"ends."
+#: src/plug/Views/TimeLimitView.vala:168
+msgid "Screen Time is not limited on weekends."
+msgstr "Le temps d'écran n'est pas limité les weekends."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:196
+#: src/plug/Views/TimeLimitView.vala:170
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
@@ -133,16 +128,12 @@ msgstr ""
 "%s ne pourra se connecter que pendant cette période les week-ends, et sera "
 "automatiquement déconnecté à la fin de celle-ci :"
 
-#. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:201
-#, c-format
-msgid "Screen Time for %s will not be limited during this period on weekdays."
-msgstr ""
-"Le temps d'écran de %s ne sera pas limité pendant cette période les jours de "
-"semaine."
+#: src/plug/Views/TimeLimitView.vala:174
+msgid "Screen Time is not limited on weekdays."
+msgstr "Le temps d'écran n'est pas limité en semaine."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:205
+#: src/plug/Views/TimeLimitView.vala:176
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
@@ -155,43 +146,47 @@ msgstr ""
 msgid "Search Applications"
 msgstr "Rechercher des applications"
 
-#: src/plug/Widgets/ControlPage.vala:52
+#: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"
 msgstr "Temps d'écran"
 
-#: src/plug/Widgets/ControlPage.vala:53
+#: src/plug/Widgets/ControlPage.vala:34
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:54
+#: src/plug/Widgets/ControlPage.vala:35
 msgid "Applications"
 msgstr "Applications"
 
-#: src/plug/Widgets/ControlPage.vala:81
+#: src/plug/Widgets/ControlPage.vala:73
 msgid ""
-"Manage your usage of this device by setting limits on time usage, websites, "
-"and apps."
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
 msgstr ""
+"Gérez l'utilisation de votre appareil en fixant des limites de temps "
+"d'utilisation, de sites web et d'applications."
 
-#: src/plug/Widgets/ControlPage.vala:83
+#: src/plug/Widgets/ControlPage.vala:75
 msgid ""
-"Supervise and manage usage of this device with limits on time usage, "
-"websites, and apps. Some limits may be bypassed with an administrator's "
-"authorization."
+"Supervise and manage device usage with limits on Screen Time, websites, and "
+"apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
+"Supervisez et gérez l'utilisation de l'appareil en limitant le temps "
+"d'utilisation, les sites web et les applications. Certaines limites peuvent "
+"être contournées avec l'autorisation d'un administrateur."
 
-#: src/plug/Widgets/UserList.vala:104
-msgid "My Account"
-msgstr "Mon compte"
-
-#: src/plug/Widgets/UserList.vala:107
-msgid "Other Accounts"
-msgstr "Autres comptes"
-
-#: src/plug/MainView.vala:33
+#: src/plug/MainView.vala:41
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "La modification de certains paramètres nécessite les droits d'administrateur"
+
+#: src/plug/MainView.vala:127
+msgid "My Account"
+msgstr "Mon compte"
+
+#: src/plug/MainView.vala:130
+msgid "Other Accounts"
+msgstr "Autres comptes"
 
 #: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
@@ -214,6 +209,23 @@ msgstr "Empêcher l'accès au site web"
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
 msgstr "Empêcher l'accès à l'application"
+
+#, c-format
+#~ msgid "Prevent %s from using these apps:"
+#~ msgstr "Interdire à %s d'utiliser ces programmes :"
+
+#~ msgid "Remove Selected App"
+#~ msgstr "Supprimer l'application sélectionnée"
+
+#, c-format
+#~ msgid "Prevent %s from visiting these websites:"
+#~ msgstr "Interdire à %s la visite de ces sites internet :"
+
+#~ msgid "Add URL"
+#~ msgstr "Ajouter une URL"
+
+#~ msgid "Add a new URL, for example: google.com"
+#~ msgstr "Ajouter une nouvelle URL, par exemple : www.google.fr"
 
 #~ msgid "Limit computer use:"
 #~ msgstr "Limiter l'utilisation :"
