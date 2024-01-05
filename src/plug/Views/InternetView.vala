@@ -149,6 +149,7 @@ public class PC.Widgets.InternetBox : Gtk.Box {
             };
 
             delete_button.clicked.connect (() => {
+                unparent ();
                 destroy ();
             });
 

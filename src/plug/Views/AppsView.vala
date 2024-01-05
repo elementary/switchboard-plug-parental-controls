@@ -128,6 +128,7 @@ public class PC.Widgets.AppsBox : Gtk.Grid {
 
     private void on_deleted (PC.Widgets.AppRow row) {
         entries.remove (row);
+        list_box.remove (row);
         row.destroy ();
         update_targets ();
     }
