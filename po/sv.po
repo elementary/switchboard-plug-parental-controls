@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 00:04+0000\n"
+"POT-Creation-Date: 2024-01-05 10:31+0000\n"
 "PO-Revision-Date: 2018-10-21 11:44+0000\n"
 "Last-Translator: Fredrik B <frbo9002@gmail.com>\n"
 "Language-Team: Swedish <https://weblate.elementary.io/projects/switchboard/"
@@ -68,11 +68,11 @@ msgstr ""
 msgid "Add Blocked App…"
 msgstr "Lägg till spärrat program…"
 
-#: src/plug/Views/AppsView.vala:53
+#: src/plug/Views/AppsView.vala:52
 msgid "Clear All"
 msgstr "Rensa allt"
 
-#: src/plug/Views/AppsView.vala:75
+#: src/plug/Views/AppsView.vala:76
 msgid "Allow access to these apps with admin permission:"
 msgstr "Tillåt åtkomst till dessa program med administratörsrättigheter:"
 
@@ -141,9 +141,13 @@ msgid ""
 "automatically logged out once this period ends:"
 msgstr ""
 
-#: src/plug/Widgets/AppChooser.vala:40
+#: src/plug/Widgets/AppChooser.vala:18
 msgid "Search Applications"
 msgstr "Sök efter program"
+
+#: src/plug/Widgets/AppChooser.vala:47
+msgid "Cancel"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"

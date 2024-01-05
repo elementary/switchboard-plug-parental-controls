@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 00:04+0000\n"
+"POT-Creation-Date: 2024-01-05 10:31+0000\n"
 "PO-Revision-Date: 2020-04-27 00:10+0000\n"
 "Last-Translator: Rodrigo Oliveira <rod.oliveira@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://l10n.elementary.io/projects/"
@@ -68,11 +68,11 @@ msgstr ""
 msgid "Add Blocked App…"
 msgstr "Adicionar aplicativos impedidos…"
 
-#: src/plug/Views/AppsView.vala:53
+#: src/plug/Views/AppsView.vala:52
 msgid "Clear All"
 msgstr "Limpar tudo"
 
-#: src/plug/Views/AppsView.vala:75
+#: src/plug/Views/AppsView.vala:76
 msgid "Allow access to these apps with admin permission:"
 msgstr "Acessar estes aplicativos com permissão do administrador:"
 
@@ -153,9 +153,13 @@ msgstr ""
 "%s só poderá fazer login durante esse período e será desconectado "
 "automaticamente quando esse período terminar:"
 
-#: src/plug/Widgets/AppChooser.vala:40
+#: src/plug/Widgets/AppChooser.vala:18
 msgid "Search Applications"
 msgstr "Pesquisar por aplicativos"
+
+#: src/plug/Widgets/AppChooser.vala:47
+msgid "Cancel"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 00:04+0000\n"
+"POT-Creation-Date: 2024-01-05 10:31+0000\n"
 "PO-Revision-Date: 2021-06-16 00:07+0000\n"
 "Last-Translator: Ihor Hordiichuk <igor_ck@outlook.com>\n"
 "Language-Team: Ukrainian <https://l10n.elementary.io/projects/switchboard/"
@@ -70,11 +70,11 @@ msgstr ""
 msgid "Add Blocked App…"
 msgstr "Додати заборонені застосунки…"
 
-#: src/plug/Views/AppsView.vala:53
+#: src/plug/Views/AppsView.vala:52
 msgid "Clear All"
 msgstr "Очистити все"
 
-#: src/plug/Views/AppsView.vala:75
+#: src/plug/Views/AppsView.vala:76
 msgid "Allow access to these apps with admin permission:"
 msgstr "Дозволити доступ до цих застосунків з дозволу адміністратора:"
 
@@ -155,9 +155,13 @@ msgstr ""
 "%s зможе ввійти до системи лише впродовж цього часу у вихідні й автоматично "
 "вийде з системи після закінчення цього періоду:"
 
-#: src/plug/Widgets/AppChooser.vala:40
+#: src/plug/Widgets/AppChooser.vala:18
 msgid "Search Applications"
 msgstr "Шукати застосунки"
+
+#: src/plug/Widgets/AppChooser.vala:47
+msgid "Cancel"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"

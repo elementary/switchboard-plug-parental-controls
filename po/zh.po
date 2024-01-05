@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 00:04+0000\n"
+"POT-Creation-Date: 2024-01-05 10:31+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 
@@ -49,11 +49,11 @@ msgstr ""
 msgid "Add Blocked App…"
 msgstr ""
 
-#: src/plug/Views/AppsView.vala:53
+#: src/plug/Views/AppsView.vala:52
 msgid "Clear All"
 msgstr ""
 
-#: src/plug/Views/AppsView.vala:75
+#: src/plug/Views/AppsView.vala:76
 msgid "Allow access to these apps with admin permission:"
 msgstr ""
 
@@ -120,8 +120,12 @@ msgid ""
 "automatically logged out once this period ends:"
 msgstr ""
 
-#: src/plug/Widgets/AppChooser.vala:40
+#: src/plug/Widgets/AppChooser.vala:18
 msgid "Search Applications"
+msgstr ""
+
+#: src/plug/Widgets/AppChooser.vala:47
+msgid "Cancel"
 msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:33

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 00:04+0000\n"
+"POT-Creation-Date: 2024-01-05 10:31+0000\n"
 "PO-Revision-Date: 2022-06-29 04:55+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -67,11 +67,11 @@ msgstr ""
 msgid "Add Blocked App…"
 msgstr "Engellenecek Uygulama Ekle…"
 
-#: src/plug/Views/AppsView.vala:53
+#: src/plug/Views/AppsView.vala:52
 msgid "Clear All"
 msgstr "Tümünü Temizle"
 
-#: src/plug/Views/AppsView.vala:75
+#: src/plug/Views/AppsView.vala:76
 msgid "Allow access to these apps with admin permission:"
 msgstr "Bu uygulamalara yönetici izinleri ile erişime izin ver:"
 
@@ -150,9 +150,13 @@ msgstr ""
 "%s yalnızca hafta içi bu süre içinde giriş yapabilir ve bu süre sona "
 "erdiğinde otomatik olarak çıkış yapılır:"
 
-#: src/plug/Widgets/AppChooser.vala:40
+#: src/plug/Widgets/AppChooser.vala:18
 msgid "Search Applications"
 msgstr "Uygulama Ara"
+
+#: src/plug/Widgets/AppChooser.vala:47
+msgid "Cancel"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"

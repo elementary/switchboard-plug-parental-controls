@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-04 00:04+0000\n"
+"POT-Creation-Date: 2024-01-05 10:31+0000\n"
 "PO-Revision-Date: 2024-01-04 10:19+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -64,11 +64,11 @@ msgstr "יישומים חסומים"
 msgid "Add Blocked App…"
 msgstr "הוספת יישום חסום…"
 
-#: src/plug/Views/AppsView.vala:53
+#: src/plug/Views/AppsView.vala:52
 msgid "Clear All"
 msgstr "פינוי הכול"
 
-#: src/plug/Views/AppsView.vala:75
+#: src/plug/Views/AppsView.vala:76
 msgid "Allow access to these apps with admin permission:"
 msgstr "מתן אפשרות גישה ליישומים אלו עם הרשאות מנהל:"
 
@@ -145,9 +145,13 @@ msgstr ""
 "למשתמש %s תהיה אפשרות להיכנס רק בפרק זמן זה בימי השבוע ותתבצע יציאה אוטומטית "
 "עם סיום פרק הזמן הזה:"
 
-#: src/plug/Widgets/AppChooser.vala:40
+#: src/plug/Widgets/AppChooser.vala:18
 msgid "Search Applications"
 msgstr "חיפוש יישומים"
+
+#: src/plug/Widgets/AppChooser.vala:47
+msgid "Cancel"
+msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"
