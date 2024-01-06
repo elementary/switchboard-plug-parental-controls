@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-05 10:31+0000\n"
-"PO-Revision-Date: 2024-01-04 10:19+0000\n"
+"PO-Revision-Date: 2024-01-06 19:15+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/he/>\n"
@@ -112,11 +112,8 @@ msgid "To:"
 msgstr "סיום:"
 
 #: src/plug/Views/TimeLimitView.vala:168
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekends."
 msgid "Screen Time is not limited on weekends."
-msgstr "זמן המסך עבור %s לא יוגבל במהלך תקופה זו במשך סופי השבוע."
+msgstr "זמן המסך לא יוגבל במשך סופי שבוע."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:170
@@ -129,11 +126,8 @@ msgstr ""
 "עם סיום פרק הזמן הזה:"
 
 #: src/plug/Views/TimeLimitView.vala:174
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekdays."
 msgid "Screen Time is not limited on weekdays."
-msgstr "זמן המסך עבור %s לא יוגבל במהלך תקופה זו במשך ימי השבוע."
+msgstr "זמן המסך לא יוגבל במשך ימי השבוע."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:176
@@ -151,7 +145,7 @@ msgstr "חיפוש יישומים"
 
 #: src/plug/Widgets/AppChooser.vala:47
 msgid "Cancel"
-msgstr ""
+msgstr "ביטול"
 
 #: src/plug/Widgets/ControlPage.vala:33
 msgid "Screen Time"
@@ -166,27 +160,19 @@ msgid "Applications"
 msgstr "יישומים"
 
 #: src/plug/Widgets/ControlPage.vala:73
-#, fuzzy
-#| msgid ""
-#| "Manage your usage of this device by setting limits on time usage, "
-#| "websites, and apps."
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
-msgstr "ניהול השימוש במכשיר הזה על ידי הגבלות על זמן השימוש, אתרים ויישומים."
+msgstr ""
+"אפשר לנהל את השימוש במכשיר שלך על ידי הגבלות על זמן השימוש, אתרים ויישומים."
 
 #: src/plug/Widgets/ControlPage.vala:75
-#, fuzzy
-#| msgid ""
-#| "Supervise and manage usage of this device with limits on time usage, "
-#| "websites, and apps. Some limits may be bypassed with an administrator's "
-#| "authorization."
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
-"פיקוח וניהול השימוש במכשיר הזה על ידי הגבלות על זמן השימוש, אתרים ויישומים. "
-"חלק מההגבלות אפשר לעקוף באישור חשבונות הניהול."
+"אפשר לפקח ולנהל את השימוש במכשיר הזה על ידי הגבלות על זמן המסך, אתרים "
+"ויישומים. חלק מההגבלות אפשר לעקוף באישור חשבונות הניהול."
 
 #: src/plug/MainView.vala:41
 msgid "Some settings require administrator rights to be changed"
