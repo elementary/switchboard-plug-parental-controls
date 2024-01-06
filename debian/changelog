@@ -1,4 +1,4 @@
-switchboard-plug-parental-controls (6.0.1) bionic; urgency=medium
+io.elementary.settings.screentime-limits (6.0.1) bionic; urgency=medium
 
   * Release 6.0.1 (#163)
   * Update translation files
@@ -9,7 +9,7 @@ switchboard-plug-parental-controls (6.0.1) bionic; urgency=medium
 
  -- elementary OS Team <builds@elementary.io>  Fri, 21 Oct 2022 22:08:48 +0000
 
-switchboard-plug-parental-controls (6.0.0) bionic; urgency=medium
+io.elementary.settings.screentime-limits (6.0.0) bionic; urgency=medium
 
   * Release 6.0.0 (#151)
   * Add dependencies to readme (#150)
@@ -25,13 +25,13 @@ switchboard-plug-parental-controls (6.0.0) bionic; urgency=medium
 
  -- elementary OS Team <builds@elementary.io>  Wed, 14 Jul 2021 21:57:36 +0000
 
-switchboard-plug-parental-controls (3.0.1) bionic; urgency=medium
+io.elementary.settings.screentime-limits (3.0.1) bionic; urgency=medium
 
   * Release 3.0.1 (#131)
 
  -- elementary OS Team <builds@elementary.io>  Thu, 28 May 2020 18:41:08 +0000
 
-switchboard-plug-parental-controls (3.0.0) bionic; urgency=medium
+io.elementary.settings.screentime-limits (3.0.0) bionic; urgency=medium
 
   * Release 3.0.0 (#118)
   * Update translation files
@@ -116,37 +116,37 @@ switchboard-plug-parental-controls (3.0.0) bionic; urgency=medium
 
  -- elementary OS Team <builds@elementary.io>  Wed, 22 Apr 2020 21:08:19 +0000
 
-switchboard-plug-parental-controls (2.1.5) bionic; urgency=medium
+io.elementary.settings.screentime-limits (2.1.5) bionic; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Tue, 09 Oct 2018 04:19:24 -0500
 
-switchboard-plug-parental-controls (0.1.4) bionic; urgency=medium
+io.elementary.settings.screentime-limits (0.1.4) bionic; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Tue, 19 Jun 2018 01:31:31 -0500
 
-switchboard-plug-parental-controls (0.1.3) xenial; urgency=medium
+io.elementary.settings.screentime-limits (0.1.3) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Sat, 11 Feb 2017 12:04:49 -0600
 
-switchboard-plug-parental-controls (0.1.2) xenial; urgency=medium
+io.elementary.settings.screentime-limits (0.1.2) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Mon, 02 Jan 2017 19:53:33 -0600
 
-switchboard-plug-parental-controls (0.1.1) xenial; urgency=medium
+io.elementary.settings.screentime-limits (0.1.1) xenial; urgency=medium
 
   * New upstream release.
 
  -- Cody Garver <cody@elementary.io>  Wed, 21 Sep 2016 08:11:33 -0500
 
-switchboard-plug-parental-controls (0.1) xenial; urgency=medium
+io.elementary.settings.screentime-limits (0.1) xenial; urgency=medium
 
   * Initial Release.
 
