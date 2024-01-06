@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 10:31+0000\n"
+"POT-Creation-Date: 2024-01-06 19:17+0000\n"
 "PO-Revision-Date: 2024-01-04 10:19+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://l10n.elementary.io/projects/switchboard/"
@@ -28,31 +28,31 @@ msgstr "אין הרשאה להריץ יישום זה"
 msgid "An administrator has restricted your access to this application."
 msgstr "ההנהלה הגבילה את הגישה שלך ליישום הזה."
 
-#: src/client/Client.vala:163
+#: src/client/Client.vala:161
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "המחשב יינעל לאחר %s."
 
-#: src/client/Client.vala:165
+#: src/client/Client.vala:163
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "שעה אחת"
 msgstr[1] "%lu שעות"
 
-#: src/client/Client.vala:167
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "דקה אחת"
 msgstr[1] "%lu דקות"
 
-#: src/client/Client.vala:169
+#: src/client/Client.vala:167
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "נא לוודא שכל היישומים נסגרו לפני שהמחשב ינעל."
 
-#: src/client/Client.vala:175
+#: src/client/Client.vala:173
 msgid "Time left"
 msgstr "זמן שנותר"
 
@@ -60,15 +60,15 @@ msgstr "זמן שנותר"
 msgid "Blocked Apps"
 msgstr "יישומים חסומים"
 
-#: src/plug/Views/AppsView.vala:37
+#: src/plug/Views/AppsView.vala:38
 msgid "Add Blocked App…"
 msgstr "הוספת יישום חסום…"
 
-#: src/plug/Views/AppsView.vala:52
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "פינוי הכול"
 
-#: src/plug/Views/AppsView.vala:76
+#: src/plug/Views/AppsView.vala:77
 msgid "Allow access to these apps with admin permission:"
 msgstr "מתן אפשרות גישה ליישומים אלו עם הרשאות מנהל:"
 
@@ -88,7 +88,7 @@ msgstr "example.com"
 msgid "Invalid URL"
 msgstr "כתובת שגויה"
 
-#: src/plug/Views/InternetView.vala:142
+#: src/plug/Views/InternetView.vala:148
 #, c-format
 msgid "Unblock %s"
 msgstr "שחרור חסימת %s"
@@ -103,15 +103,15 @@ msgstr "ימות השבוע"
 msgid "Weekends"
 msgstr "סופי שבוע"
 
-#: src/plug/Views/TimeLimitView.vala:149
+#: src/plug/Views/TimeLimitView.vala:148
 msgid "From:"
 msgstr "התחלה:"
 
-#: src/plug/Views/TimeLimitView.vala:158
+#: src/plug/Views/TimeLimitView.vala:157
 msgid "To:"
 msgstr "סיום:"
 
-#: src/plug/Views/TimeLimitView.vala:168
+#: src/plug/Views/TimeLimitView.vala:163
 #, fuzzy
 #| msgid ""
 #| "Screen Time for %s will not be limited during this period on weekends."
@@ -119,7 +119,7 @@ msgid "Screen Time is not limited on weekends."
 msgstr "זמן המסך עבור %s לא יוגבל במהלך תקופה זו במשך סופי השבוע."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:170
+#: src/plug/Views/TimeLimitView.vala:165
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
@@ -128,7 +128,7 @@ msgstr ""
 "למשתמש %s תהיה אפשרות להיכנס רק בפרק זמן זה בסופי שבוע ותתבצע יציאה אוטומטית "
 "עם סיום פרק הזמן הזה:"
 
-#: src/plug/Views/TimeLimitView.vala:174
+#: src/plug/Views/TimeLimitView.vala:169
 #, fuzzy
 #| msgid ""
 #| "Screen Time for %s will not be limited during this period on weekdays."
@@ -136,7 +136,7 @@ msgid "Screen Time is not limited on weekdays."
 msgstr "זמן המסך עבור %s לא יוגבל במהלך תקופה זו במשך ימי השבוע."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:171
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
@@ -149,23 +149,23 @@ msgstr ""
 msgid "Search Applications"
 msgstr "חיפוש יישומים"
 
-#: src/plug/Widgets/AppChooser.vala:47
+#: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:33
+#: src/plug/Widgets/ControlPage.vala:36
 msgid "Screen Time"
 msgstr "זמן מסך"
 
-#: src/plug/Widgets/ControlPage.vala:34
+#: src/plug/Widgets/ControlPage.vala:37
 msgid "Internet"
 msgstr "אינטרנט"
 
-#: src/plug/Widgets/ControlPage.vala:35
+#: src/plug/Widgets/ControlPage.vala:38
 msgid "Applications"
 msgstr "יישומים"
 
-#: src/plug/Widgets/ControlPage.vala:73
+#: src/plug/Widgets/ControlPage.vala:90
 #, fuzzy
 #| msgid ""
 #| "Manage your usage of this device by setting limits on time usage, "
@@ -175,7 +175,7 @@ msgid ""
 "apps."
 msgstr "ניהול השימוש במכשיר הזה על ידי הגבלות על זמן השימוש, אתרים ויישומים."
 
-#: src/plug/Widgets/ControlPage.vala:75
+#: src/plug/Widgets/ControlPage.vala:92
 #, fuzzy
 #| msgid ""
 #| "Supervise and manage usage of this device with limits on time usage, "
@@ -192,11 +192,11 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "לצורך שינוי של חלק מההגדרות נדרשות הרשאות ניהול"
 
-#: src/plug/MainView.vala:127
+#: src/plug/MainView.vala:124
 msgid "My Account"
 msgstr "החשבון שלי"
 
-#: src/plug/MainView.vala:130
+#: src/plug/MainView.vala:127
 msgid "Other Accounts"
 msgstr "חשבונות אחרים"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 10:31+0000\n"
+"POT-Creation-Date: 2024-01-06 19:17+0000\n"
 "PO-Revision-Date: 2024-01-04 10:19+0000\n"
 "Last-Translator: lenemter <lenemter@gmail.com>\n"
 "Language-Team: Russian <https://l10n.elementary.io/projects/switchboard/"
@@ -29,12 +29,12 @@ msgstr "У вас нет разрешения на запуск этого пр�
 msgid "An administrator has restricted your access to this application."
 msgstr "Администратор ограничил ваш доступ к этому приложению."
 
-#: src/client/Client.vala:163
+#: src/client/Client.vala:161
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Этот компьютер будет заблокирован через %s."
 
-#: src/client/Client.vala:165
+#: src/client/Client.vala:163
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
@@ -42,7 +42,7 @@ msgstr[0] "%lu час"
 msgstr[1] "%lu часа"
 msgstr[2] "%lu часов"
 
-#: src/client/Client.vala:167
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
@@ -50,14 +50,14 @@ msgstr[0] "%lu минуту"
 msgstr[1] "%lu минуты"
 msgstr[2] "%lu минут"
 
-#: src/client/Client.vala:169
+#: src/client/Client.vala:167
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Обязательно закройте все приложения, прежде чем ваш компьютер будет "
 "заблокирован."
 
-#: src/client/Client.vala:175
+#: src/client/Client.vala:173
 msgid "Time left"
 msgstr "Оставшееся время"
 
@@ -65,15 +65,15 @@ msgstr "Оставшееся время"
 msgid "Blocked Apps"
 msgstr "Заблокированные приложения"
 
-#: src/plug/Views/AppsView.vala:37
+#: src/plug/Views/AppsView.vala:38
 msgid "Add Blocked App…"
 msgstr "Заблокировать приложение…"
 
-#: src/plug/Views/AppsView.vala:52
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Очистить всё"
 
-#: src/plug/Views/AppsView.vala:76
+#: src/plug/Views/AppsView.vala:77
 msgid "Allow access to these apps with admin permission:"
 msgstr "Разрешить доступ к этим приложениям с правами доступа:"
 
@@ -93,7 +93,7 @@ msgstr "example.com"
 msgid "Invalid URL"
 msgstr "Недействительный URL-адрес"
 
-#: src/plug/Views/InternetView.vala:142
+#: src/plug/Views/InternetView.vala:148
 #, c-format
 msgid "Unblock %s"
 msgstr "Разблокировать %s"
@@ -108,20 +108,20 @@ msgstr "Будние дни"
 msgid "Weekends"
 msgstr "Выходные дни"
 
-#: src/plug/Views/TimeLimitView.vala:149
+#: src/plug/Views/TimeLimitView.vala:148
 msgid "From:"
 msgstr "С:"
 
-#: src/plug/Views/TimeLimitView.vala:158
+#: src/plug/Views/TimeLimitView.vala:157
 msgid "To:"
 msgstr "До:"
 
-#: src/plug/Views/TimeLimitView.vala:168
+#: src/plug/Views/TimeLimitView.vala:163
 msgid "Screen Time is not limited on weekends."
 msgstr "Время работы экрана не ограничено по выходным."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:170
+#: src/plug/Views/TimeLimitView.vala:165
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
@@ -130,12 +130,12 @@ msgstr ""
 "%s сможет войти в систему только в течение этого времени в выходные дни и "
 "автоматически выйдет из системы по истечении этого периода:"
 
-#: src/plug/Views/TimeLimitView.vala:174
+#: src/plug/Views/TimeLimitView.vala:169
 msgid "Screen Time is not limited on weekdays."
 msgstr "Время работы экрана не ограничено в будние дни."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:171
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
@@ -148,23 +148,23 @@ msgstr ""
 msgid "Search Applications"
 msgstr "Поиск приложений"
 
-#: src/plug/Widgets/AppChooser.vala:47
+#: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:33
+#: src/plug/Widgets/ControlPage.vala:36
 msgid "Screen Time"
 msgstr "Время работы экрана"
 
-#: src/plug/Widgets/ControlPage.vala:34
+#: src/plug/Widgets/ControlPage.vala:37
 msgid "Internet"
 msgstr "Интернет"
 
-#: src/plug/Widgets/ControlPage.vala:35
+#: src/plug/Widgets/ControlPage.vala:38
 msgid "Applications"
 msgstr "Приложения"
 
-#: src/plug/Widgets/ControlPage.vala:73
+#: src/plug/Widgets/ControlPage.vala:90
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
@@ -172,7 +172,7 @@ msgstr ""
 "Управляйте своим устройством, устанавливая ограничения время работы экрана, "
 "веб-сайтов и приложений."
 
-#: src/plug/Widgets/ControlPage.vala:75
+#: src/plug/Widgets/ControlPage.vala:92
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
@@ -185,11 +185,11 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Для изменения некоторых настроек требуются права администратора"
 
-#: src/plug/MainView.vala:127
+#: src/plug/MainView.vala:124
 msgid "My Account"
 msgstr "Моя учётная запись"
 
-#: src/plug/MainView.vala:130
+#: src/plug/MainView.vala:127
 msgid "Other Accounts"
 msgstr "Другие учётные записи"
 

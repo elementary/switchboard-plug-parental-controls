@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 10:31+0000\n"
+"POT-Creation-Date: 2024-01-06 19:17+0000\n"
 "PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -28,12 +28,12 @@ msgstr "Nemáte oprávnění spouštět tuto aplikaci"
 msgid "An administrator has restricted your access to this application."
 msgstr "Správce počítače vám omezil přístup k této aplikaci."
 
-#: src/client/Client.vala:163
+#: src/client/Client.vala:161
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Tento počítač se zamkne za %s."
 
-#: src/client/Client.vala:165
+#: src/client/Client.vala:163
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
@@ -41,7 +41,7 @@ msgstr[0] "%lu hodina"
 msgstr[1] "%lu hodiny"
 msgstr[2] "%lu hodin"
 
-#: src/client/Client.vala:167
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
@@ -49,13 +49,13 @@ msgstr[0] "%lu minuta"
 msgstr[1] "%lu minuty"
 msgstr[2] "%lu minut"
 
-#: src/client/Client.vala:169
+#: src/client/Client.vala:167
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Ujistěte se, že jste zavřeli všechny aplikace, než bude váš počítač uzamčen."
 
-#: src/client/Client.vala:175
+#: src/client/Client.vala:173
 msgid "Time left"
 msgstr "Zbývající čas"
 
@@ -63,17 +63,17 @@ msgstr "Zbývající čas"
 msgid "Blocked Apps"
 msgstr ""
 
-#: src/plug/Views/AppsView.vala:37
+#: src/plug/Views/AppsView.vala:38
 #, fuzzy
 #| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
 msgstr "Přidat zakázané aplikace…"
 
-#: src/plug/Views/AppsView.vala:52
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Smazat vše"
 
-#: src/plug/Views/AppsView.vala:76
+#: src/plug/Views/AppsView.vala:77
 msgid "Allow access to these apps with admin permission:"
 msgstr "Povolit přístup k těmto aplikacím se svolením správce:"
 
@@ -93,7 +93,7 @@ msgstr ""
 msgid "Invalid URL"
 msgstr "Neplatná URL adresa"
 
-#: src/plug/Views/InternetView.vala:142
+#: src/plug/Views/InternetView.vala:148
 #, c-format
 msgid "Unblock %s"
 msgstr ""
@@ -108,15 +108,15 @@ msgstr "Všední dny"
 msgid "Weekends"
 msgstr "Víkendy"
 
-#: src/plug/Views/TimeLimitView.vala:149
+#: src/plug/Views/TimeLimitView.vala:148
 msgid "From:"
 msgstr "Od:"
 
-#: src/plug/Views/TimeLimitView.vala:158
+#: src/plug/Views/TimeLimitView.vala:157
 msgid "To:"
 msgstr "Do:"
 
-#: src/plug/Views/TimeLimitView.vala:168
+#: src/plug/Views/TimeLimitView.vala:163
 #, fuzzy
 #| msgid ""
 #| "Screen Time for %s will not be limited during this period on weekends."
@@ -126,7 +126,7 @@ msgstr ""
 "víkendech."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:170
+#: src/plug/Views/TimeLimitView.vala:165
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
@@ -135,7 +135,7 @@ msgstr ""
 "%s se bude moci přihlásit pouze v tomto čase o víkendech a bude po skončení "
 "této periody automaticky odhlášen(a):"
 
-#: src/plug/Views/TimeLimitView.vala:174
+#: src/plug/Views/TimeLimitView.vala:169
 #, fuzzy
 #| msgid ""
 #| "Screen Time for %s will not be limited during this period on weekdays."
@@ -145,7 +145,7 @@ msgstr ""
 "všedních dnech."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:171
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
@@ -158,29 +158,29 @@ msgstr ""
 msgid "Search Applications"
 msgstr "Hledat aplikace"
 
-#: src/plug/Widgets/AppChooser.vala:47
+#: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:33
+#: src/plug/Widgets/ControlPage.vala:36
 msgid "Screen Time"
 msgstr "Čas před obrazovkou"
 
-#: src/plug/Widgets/ControlPage.vala:34
+#: src/plug/Widgets/ControlPage.vala:37
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:35
+#: src/plug/Widgets/ControlPage.vala:38
 msgid "Applications"
 msgstr "Aplikace"
 
-#: src/plug/Widgets/ControlPage.vala:73
+#: src/plug/Widgets/ControlPage.vala:90
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:75
+#: src/plug/Widgets/ControlPage.vala:92
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
@@ -190,11 +190,11 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Některá nastavení vyžadují oprávnění na úrovni správce systému"
 
-#: src/plug/MainView.vala:127
+#: src/plug/MainView.vala:124
 msgid "My Account"
 msgstr "Můj účet"
 
-#: src/plug/MainView.vala:130
+#: src/plug/MainView.vala:127
 msgid "Other Accounts"
 msgstr "Ostatní účty"
 

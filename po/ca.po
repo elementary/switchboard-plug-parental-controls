@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 10:31+0000\n"
+"POT-Creation-Date: 2024-01-06 19:17+0000\n"
 "PO-Revision-Date: 2021-06-17 12:32+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -28,32 +28,32 @@ msgstr "No teniu permís per executar aquesta aplicació."
 msgid "An administrator has restricted your access to this application."
 msgstr "Un administrador ha restringit el vostre accés a aquesta aplicació."
 
-#: src/client/Client.vala:163
+#: src/client/Client.vala:161
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Aquest ordinador es bloquejarà al cap de %s."
 
-#: src/client/Client.vala:165
+#: src/client/Client.vala:163
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu hora"
 msgstr[1] "%lu hores"
 
-#: src/client/Client.vala:167
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu minut"
 msgstr[1] "%lu minuts"
 
-#: src/client/Client.vala:169
+#: src/client/Client.vala:167
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Assegureu-vos de tancar totes les aplicacions abans de bloquejar l'ordinador."
 
-#: src/client/Client.vala:175
+#: src/client/Client.vala:173
 msgid "Time left"
 msgstr "Temps restant"
 
@@ -61,17 +61,17 @@ msgstr "Temps restant"
 msgid "Blocked Apps"
 msgstr ""
 
-#: src/plug/Views/AppsView.vala:37
+#: src/plug/Views/AppsView.vala:38
 #, fuzzy
 #| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
 msgstr "Afegeix aplicacions protegides…"
 
-#: src/plug/Views/AppsView.vala:52
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Neteja-ho tot"
 
-#: src/plug/Views/AppsView.vala:76
+#: src/plug/Views/AppsView.vala:77
 msgid "Allow access to these apps with admin permission:"
 msgstr "Permet accés a aquestes aplicacions amb permís d'administrador:"
 
@@ -91,7 +91,7 @@ msgstr ""
 msgid "Invalid URL"
 msgstr "URL no vàlid"
 
-#: src/plug/Views/InternetView.vala:142
+#: src/plug/Views/InternetView.vala:148
 #, c-format
 msgid "Unblock %s"
 msgstr ""
@@ -106,15 +106,15 @@ msgstr "Dies feiners"
 msgid "Weekends"
 msgstr "Caps de setmana"
 
-#: src/plug/Views/TimeLimitView.vala:149
+#: src/plug/Views/TimeLimitView.vala:148
 msgid "From:"
 msgstr "De:"
 
-#: src/plug/Views/TimeLimitView.vala:158
+#: src/plug/Views/TimeLimitView.vala:157
 msgid "To:"
 msgstr "A:"
 
-#: src/plug/Views/TimeLimitView.vala:168
+#: src/plug/Views/TimeLimitView.vala:163
 #, fuzzy
 #| msgid ""
 #| "Screen Time for %s will not be limited during this period on weekends."
@@ -124,7 +124,7 @@ msgstr ""
 "de setmana."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:170
+#: src/plug/Views/TimeLimitView.vala:165
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
@@ -133,7 +133,7 @@ msgstr ""
 "%s només podrà iniciar la sessió durant aquest temps els caps de setmana i "
 "es desconnectarà automàticament un cop acabi el període:"
 
-#: src/plug/Views/TimeLimitView.vala:174
+#: src/plug/Views/TimeLimitView.vala:169
 #, fuzzy
 #| msgid ""
 #| "Screen Time for %s will not be limited during this period on weekdays."
@@ -143,7 +143,7 @@ msgstr ""
 "feiners."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:171
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
@@ -156,29 +156,29 @@ msgstr ""
 msgid "Search Applications"
 msgstr "Cerca aplicacions"
 
-#: src/plug/Widgets/AppChooser.vala:47
+#: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:33
+#: src/plug/Widgets/ControlPage.vala:36
 msgid "Screen Time"
 msgstr "Temps de pantalla"
 
-#: src/plug/Widgets/ControlPage.vala:34
+#: src/plug/Widgets/ControlPage.vala:37
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:35
+#: src/plug/Widgets/ControlPage.vala:38
 msgid "Applications"
 msgstr "Aplicacions"
 
-#: src/plug/Widgets/ControlPage.vala:73
+#: src/plug/Widgets/ControlPage.vala:90
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:75
+#: src/plug/Widgets/ControlPage.vala:92
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
@@ -188,11 +188,11 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Alguns paràmetres necessiten permisos d'administrador per modificar-se"
 
-#: src/plug/MainView.vala:127
+#: src/plug/MainView.vala:124
 msgid "My Account"
 msgstr "El meu compte"
 
-#: src/plug/MainView.vala:130
+#: src/plug/MainView.vala:127
 msgid "Other Accounts"
 msgstr "Altres comptes"
 

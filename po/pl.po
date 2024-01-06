@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 10:31+0000\n"
+"POT-Creation-Date: 2024-01-06 19:17+0000\n"
 "PO-Revision-Date: 2024-01-03 22:56+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -29,12 +29,12 @@ msgstr "Nie masz uprawnień do uruchomienia tego programu"
 msgid "An administrator has restricted your access to this application."
 msgstr "Administrator ograniczył twój dostęp do tej aplikacji."
 
-#: src/client/Client.vala:163
+#: src/client/Client.vala:161
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Ten komputer zostanie zablokowany po %s."
 
-#: src/client/Client.vala:165
+#: src/client/Client.vala:163
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
@@ -42,7 +42,7 @@ msgstr[0] "%lu godzina"
 msgstr[1] "%lu godziny"
 msgstr[2] "%lu godzin"
 
-#: src/client/Client.vala:167
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
@@ -50,12 +50,12 @@ msgstr[0] "%lu minuta"
 msgstr[1] "%lu minuty"
 msgstr[2] "%lu minut"
 
-#: src/client/Client.vala:169
+#: src/client/Client.vala:167
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "Należy zamknąć wszystkie programy zanim komputer zostanie zablokowany."
 
-#: src/client/Client.vala:175
+#: src/client/Client.vala:173
 msgid "Time left"
 msgstr "Pozostały czas"
 
@@ -63,17 +63,17 @@ msgstr "Pozostały czas"
 msgid "Blocked Apps"
 msgstr ""
 
-#: src/plug/Views/AppsView.vala:37
+#: src/plug/Views/AppsView.vala:38
 #, fuzzy
 #| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
 msgstr "Dodaj ograniczane programy…"
 
-#: src/plug/Views/AppsView.vala:52
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Wyczyść wszystkie"
 
-#: src/plug/Views/AppsView.vala:76
+#: src/plug/Views/AppsView.vala:77
 msgid "Allow access to these apps with admin permission:"
 msgstr "Zezwalaj na dostęp do tych programów z uprawnieniami administratora:"
 
@@ -93,7 +93,7 @@ msgstr ""
 msgid "Invalid URL"
 msgstr "Niepoprawny URL"
 
-#: src/plug/Views/InternetView.vala:142
+#: src/plug/Views/InternetView.vala:148
 #, c-format
 msgid "Unblock %s"
 msgstr ""
@@ -108,15 +108,15 @@ msgstr "Dni robocze"
 msgid "Weekends"
 msgstr "Weekendy"
 
-#: src/plug/Views/TimeLimitView.vala:149
+#: src/plug/Views/TimeLimitView.vala:148
 msgid "From:"
 msgstr "Od:"
 
-#: src/plug/Views/TimeLimitView.vala:158
+#: src/plug/Views/TimeLimitView.vala:157
 msgid "To:"
 msgstr "Do:"
 
-#: src/plug/Views/TimeLimitView.vala:168
+#: src/plug/Views/TimeLimitView.vala:163
 #, fuzzy
 #| msgid ""
 #| "Screen Time for %s will not be limited during this period on weekends."
@@ -126,7 +126,7 @@ msgstr ""
 "weekendy."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:170
+#: src/plug/Views/TimeLimitView.vala:165
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
@@ -135,7 +135,7 @@ msgstr ""
 "%s będzie mógł zalogować się tylko w tym przedziale czasowym w weekendy i "
 "będzie automatycznie wylogowany, gdy ten okres się skończy:"
 
-#: src/plug/Views/TimeLimitView.vala:174
+#: src/plug/Views/TimeLimitView.vala:169
 #, fuzzy
 #| msgid ""
 #| "Screen Time for %s will not be limited during this period on weekdays."
@@ -145,7 +145,7 @@ msgstr ""
 "robocze."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:171
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
@@ -158,23 +158,23 @@ msgstr ""
 msgid "Search Applications"
 msgstr "Wyszukiwanie programów"
 
-#: src/plug/Widgets/AppChooser.vala:47
+#: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:33
+#: src/plug/Widgets/ControlPage.vala:36
 msgid "Screen Time"
 msgstr "Harmonogram ekranu"
 
-#: src/plug/Widgets/ControlPage.vala:34
+#: src/plug/Widgets/ControlPage.vala:37
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:35
+#: src/plug/Widgets/ControlPage.vala:38
 msgid "Applications"
 msgstr "Programy"
 
-#: src/plug/Widgets/ControlPage.vala:73
+#: src/plug/Widgets/ControlPage.vala:90
 #, fuzzy
 #| msgid ""
 #| "Manage your usage of this device by setting limits on time usage, "
@@ -186,7 +186,7 @@ msgstr ""
 "Zarządzaj swoim użyciem urządzenia poprzez ustawienie limitów używania ze "
 "względu na czas, strony oraz aplikacje."
 
-#: src/plug/Widgets/ControlPage.vala:75
+#: src/plug/Widgets/ControlPage.vala:92
 #, fuzzy
 #| msgid ""
 #| "Supervise and manage usage of this device with limits on time usage, "
@@ -204,11 +204,11 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"
 
-#: src/plug/MainView.vala:127
+#: src/plug/MainView.vala:124
 msgid "My Account"
 msgstr "Moje konto"
 
-#: src/plug/MainView.vala:130
+#: src/plug/MainView.vala:127
 msgid "Other Accounts"
 msgstr "Inne konta"
 
