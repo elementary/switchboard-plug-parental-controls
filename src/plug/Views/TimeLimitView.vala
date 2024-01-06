@@ -31,9 +31,8 @@ public class PC.Widgets.TimeLimitView : Gtk.Box {
 
         orientation = VERTICAL;
         spacing = 24;
-        add (weekday_box);
-        add (weekend_box);
-        show_all ();
+        append (weekday_box);
+        append (weekend_box);
 
         weekday_box.changed.connect (() => update_pam ());
         weekend_box.changed.connect (() => update_pam ());
@@ -105,8 +104,8 @@ public class PC.Widgets.TimeLimitView : Gtk.Box {
         public bool is_weekend {get; construct; }
         public weak Act.User user { get; construct; }
 
-        private Granite.Widgets.TimePicker picker_from;
-        private Granite.Widgets.TimePicker picker_to;
+        private Granite.TimePicker picker_from;
+        private Granite.TimePicker picker_to;
 
         public WeekSpinBox (
             string title,
@@ -140,7 +139,7 @@ public class PC.Widgets.TimeLimitView : Gtk.Box {
                 23, 59, 59
             );
 
-            picker_from = new Granite.Widgets.TimePicker () {
+            picker_from = new Granite.TimePicker () {
                 hexpand = true,
                 margin_end = 6,
                 time = today_start
@@ -150,17 +149,13 @@ public class PC.Widgets.TimeLimitView : Gtk.Box {
                 mnemonic_widget = picker_from
             };
 
-            picker_to = new Granite.Widgets.TimePicker () {
+            picker_to = new Granite.TimePicker () {
                 hexpand = true,
                 time = today_end
             };
 
             var to_label = new Gtk.Label (_("To:")) {
                 mnemonic_widget = picker_to
-            };
-
-            var label = new Granite.HeaderLabel (title) {
-                mnemonic_widget = enable_switch
             };
 
             string message_not_limited, message_limited;
@@ -178,24 +173,23 @@ public class PC.Widgets.TimeLimitView : Gtk.Box {
                 );
             }
 
-            var limit_description = new Gtk.Label (message_not_limited) {
+            var label = new Granite.HeaderLabel (title) {
                 hexpand = true,
-                wrap = true,
-                xalign = 0
+                secondary_text = message_not_limited,
+                mnemonic_widget = enable_switch
             };
 
             var duration_box = new Gtk.Box (HORIZONTAL, 6) {
                 margin_top = 12
             };
-            duration_box.add (from_label);
-            duration_box.add (picker_from);
-            duration_box.add (to_label);
-            duration_box.add (picker_to);
+            duration_box.append (from_label);
+            duration_box.append (picker_from);
+            duration_box.append (to_label);
+            duration_box.append (picker_to);
 
             column_spacing = 12;
             attach (label, 0, 0);
-            attach (limit_description, 0, 1);
-            attach (enable_switch, 1, 0, 1, 2);
+            attach (enable_switch, 1, 0);
             attach (duration_box, 0, 2, 2);
 
             bind_property ("active", enable_switch, "active", BIDIRECTIONAL);
@@ -206,9 +200,9 @@ public class PC.Widgets.TimeLimitView : Gtk.Box {
 
             notify["active"].connect (() => {
                 if (active) {
-                    limit_description.label = message_limited;
+                    label.secondary_text = message_limited;
                 } else {
-                    limit_description.label = message_not_limited;
+                    label.secondary_text = message_not_limited;
                 }
             });
 

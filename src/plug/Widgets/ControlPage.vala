@@ -14,6 +14,10 @@ public class PC.Widgets.ControlPage : Gtk.Box {
         Object (user: user);
     }
 
+    class construct {
+        set_css_name ("simplesettingspage");
+    }
+
     construct {
         unowned var permission = Utils.get_permission ();
 
@@ -23,7 +27,6 @@ public class PC.Widgets.ControlPage : Gtk.Box {
         margin_bottom = 12;
         margin_start = 12;
         orientation = VERTICAL;
-        spacing = 24;
 
         time_limit_view = new TimeLimitView (user);
         var internet_box = new InternetBox (user);
@@ -40,19 +43,33 @@ public class PC.Widgets.ControlPage : Gtk.Box {
 
         var switcher = new Gtk.StackSwitcher () {
             halign = CENTER,
-            homogeneous = true,
+            margin_bottom = 12,
             stack = stack
         };
+
+        var size_group = new Gtk.SizeGroup (HORIZONTAL);
+
+        unowned var switcher_child = switcher.get_first_child ();
+        while (switcher_child != null) {
+            size_group.add_widget (switcher_child);
+            switcher_child = switcher_child.get_next_sibling ();
+        }
 
         var header_grid = new Gtk.Grid () {
             column_spacing = 12,
             halign = START
         };
+        header_grid.add_css_class ("header-area");
 
-        var avatar = new Hdy.Avatar (48, user.get_real_name (), true) {
-            loadable_icon = new FileIcon (File.new_for_path (user.get_icon_file ())),
+        var avatar = new Adw.Avatar (48, user.get_real_name (), true) {
             valign = START
         };
+
+        try {
+            avatar.custom_image = Gdk.Texture.from_filename (user.get_icon_file ());
+        } catch (Error e) {
+            critical (e.message);
+        }
 
         var full_name = new Gtk.Label (user.get_real_name ()) {
             hexpand = true,
@@ -79,11 +96,9 @@ public class PC.Widgets.ControlPage : Gtk.Box {
         header_grid.attach (full_name, 1, 0);
         header_grid.attach (description_message, 1, 1);
 
-        add (header_grid);
-        add (switcher);
-        add (stack);
-
-        show_all ();
+        append (header_grid);
+        append (switcher);
+        append (stack);
     }
 
     public void set_active (bool active) {

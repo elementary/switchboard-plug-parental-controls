@@ -22,10 +22,11 @@ public class PC.Widgets.AppChooser : Granite.Dialog {
             hexpand = true,
             vexpand = true
         };
+        listbox.add_css_class (Granite.STYLE_CLASS_RICH_LIST);
         listbox.set_filter_func (filter_function);
         listbox.set_sort_func (sort_function);
 
-        var scrolled = new Gtk.ScrolledWindow (null, null) {
+        var scrolled = new Gtk.ScrolledWindow () {
             child = listbox
         };
 
@@ -33,17 +34,15 @@ public class PC.Widgets.AppChooser : Granite.Dialog {
             child = scrolled
         };
 
-        var box = new Gtk.Box (VERTICAL, 6) {
-            margin_end = 10,
-            margin_start = 10
-        };
-        box.add (search_entry);
-        box.add (frame);
+        var box = new Gtk.Box (VERTICAL, 6);
+        box.append (search_entry);
+        box.append (frame);
 
         default_height = 500;
         default_width = 400;
+        focus_widget = search_entry;
         modal = true;
-        get_content_area ().add (box);
+        get_content_area ().append (box);
         add_button (_("Cancel"), Gtk.ResponseType.CANCEL);
 
         foreach (var _info in AppInfo.get_all ()) {
@@ -52,8 +51,6 @@ public class PC.Widgets.AppChooser : Granite.Dialog {
                 listbox.prepend (row);
             }
         }
-
-        box.show_all ();
 
         response.connect (hide);
 
