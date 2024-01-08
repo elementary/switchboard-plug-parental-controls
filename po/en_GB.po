@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-06 19:17+0000\n"
-"PO-Revision-Date: 2021-07-05 13:54+0000\n"
-"Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
+"PO-Revision-Date: 2024-01-10 11:11+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/en_GB/>\n"
 "Language: en_GB\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -54,13 +54,11 @@ msgstr "Time left"
 
 #: src/plug/Views/AppsView.vala:27
 msgid "Blocked Apps"
-msgstr ""
+msgstr "Blocked Apps"
 
 #: src/plug/Views/AppsView.vala:38
-#, fuzzy
-#| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
-msgstr "Add Prevented Apps…"
+msgstr "Add Blocked App…"
 
 #: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
@@ -72,15 +70,15 @@ msgstr "Allow access to these apps with admin permission:"
 
 #: src/plug/Views/InternetView.vala:28
 msgid "Blocked Websites"
-msgstr ""
+msgstr "Blocked Websites"
 
 #: src/plug/Views/InternetView.vala:39
 msgid "Block URL"
-msgstr ""
+msgstr "Block URL"
 
 #: src/plug/Views/InternetView.vala:49
 msgid "example.com"
-msgstr ""
+msgstr "example.com"
 
 #: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
@@ -89,7 +87,7 @@ msgstr "Invalid URL"
 #: src/plug/Views/InternetView.vala:148
 #, c-format
 msgid "Unblock %s"
-msgstr ""
+msgstr "Unblock %s"
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:20
@@ -110,11 +108,8 @@ msgid "To:"
 msgstr "To:"
 
 #: src/plug/Views/TimeLimitView.vala:163
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekends."
 msgid "Screen Time is not limited on weekends."
-msgstr "Screen Time for %s will not be limited during this period on weekends."
+msgstr "Screen Time is not limited on weekends."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:165
@@ -127,11 +122,8 @@ msgstr ""
 "automatically logged out once this period ends:"
 
 #: src/plug/Views/TimeLimitView.vala:169
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekdays."
 msgid "Screen Time is not limited on weekdays."
-msgstr "Screen Time for %s will not be limited during this period on weekdays."
+msgstr "Screen Time is not limited on weekdays."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:171
@@ -149,7 +141,7 @@ msgstr "Search Applications"
 
 #: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel"
 
 #: src/plug/Widgets/ControlPage.vala:36
 msgid "Screen Time"
@@ -168,12 +160,16 @@ msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
 msgstr ""
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
 
 #: src/plug/Widgets/ControlPage.vala:92
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
+"Supervise and manage device usage with limits on Screen Time, websites, and "
+"apps. Some limits may be bypassed with an administrator's permission."
 
 #: src/plug/MainView.vala:41
 msgid "Some settings require administrator rights to be changed"
