@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-06 19:17+0000\n"
-"PO-Revision-Date: 2021-12-17 12:02+0000\n"
+"PO-Revision-Date: 2024-01-14 10:11+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-02-17 06:09+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -58,11 +58,9 @@ msgstr "残り時間"
 
 #: src/plug/Views/AppsView.vala:27
 msgid "Blocked Apps"
-msgstr ""
+msgstr "制限するアプリ"
 
 #: src/plug/Views/AppsView.vala:38
-#, fuzzy
-#| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
 msgstr "制限するアプリを追加…"
 
@@ -76,15 +74,15 @@ msgstr "管理者の許可でこれらのアプリにアクセスすることを
 
 #: src/plug/Views/InternetView.vala:28
 msgid "Blocked Websites"
-msgstr ""
+msgstr "制限する Web サイト"
 
 #: src/plug/Views/InternetView.vala:39
 msgid "Block URL"
-msgstr ""
+msgstr "制限する URL"
 
 #: src/plug/Views/InternetView.vala:49
 msgid "example.com"
-msgstr ""
+msgstr "example.com"
 
 #: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
@@ -93,7 +91,7 @@ msgstr "不適切な URL です"
 #: src/plug/Views/InternetView.vala:148
 #, c-format
 msgid "Unblock %s"
-msgstr ""
+msgstr "%s のブロックを解除"
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:20
@@ -114,11 +112,8 @@ msgid "To:"
 msgstr "終了:"
 
 #: src/plug/Views/TimeLimitView.vala:163
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekends."
 msgid "Screen Time is not limited on weekends."
-msgstr "週末の以下の時間は、%s のスクリーンタイムは制限されません。"
+msgstr "週末は、スクリーンタイムは制限されません。"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:165
@@ -131,11 +126,8 @@ msgstr ""
 "ログアウトされます。"
 
 #: src/plug/Views/TimeLimitView.vala:169
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekdays."
 msgid "Screen Time is not limited on weekdays."
-msgstr "平日の以下の時間は、%s のスクリーンタイムは制限されません。"
+msgstr "平日は、スクリーンタイムは制限されません。"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:171
@@ -153,7 +145,7 @@ msgstr "アプリケーションを検索"
 
 #: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: src/plug/Widgets/ControlPage.vala:36
 msgid "Screen Time"
@@ -171,13 +163,15 @@ msgstr "アプリケーション"
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
-msgstr ""
+msgstr "スクリーンタイム、Web "
+"サイト、アプリに制限を設けることで、デバイスの利用を自分で管理できます。"
 
 #: src/plug/Widgets/ControlPage.vala:92
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
-msgstr ""
+msgstr "スクリーンタイム、Web サイト、アプリに制限を設けて、デバイス使用状況を管理し"
+"ます。一部の制限は管理者権限で無視できます。"
 
 #: src/plug/MainView.vala:41
 msgid "Some settings require administrator rights to be changed"
