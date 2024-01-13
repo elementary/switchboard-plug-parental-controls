@@ -17,14 +17,8 @@ configure_file(
     install_dir: systemdunitdir
 )
 
-gettext_declaration = configure_file(
-    configuration: configuration_data,
-    input: 'screentime-limits.policy.in.in',
-    output: '@BASENAME@'
-)
-
 i18n.merge_file(
-    input: gettext_declaration,
+    input: 'screentime-limits.policy.in',
     output: gettext_name + '.policy',
     po_dir: meson.source_root() / 'po' / 'extra',
     install: true,
