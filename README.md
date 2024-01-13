@@ -12,7 +12,7 @@ You'll need the following dependencies:
 * libdbus-1-dev
 * libflatpak-dev
 * libglib2.0-dev
-* libgranite-7-dev
+* libgranite-7-dev (>= 7.4.0)
 * libgtk-4-dev
 * libmalcontent-0-dev
 * libpolkit-gobject-1-dev
