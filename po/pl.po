@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-06 19:17+0000\n"
-"PO-Revision-Date: 2024-01-03 22:56+0000\n"
+"PO-Revision-Date: 2024-01-14 10:11+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pl/>\n"
@@ -61,13 +61,11 @@ msgstr "Pozostały czas"
 
 #: src/plug/Views/AppsView.vala:27
 msgid "Blocked Apps"
-msgstr ""
+msgstr "Zablokowane aplikacje"
 
 #: src/plug/Views/AppsView.vala:38
-#, fuzzy
-#| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
-msgstr "Dodaj ograniczane programy…"
+msgstr "Dodaj zablokowaną aplikację…"
 
 #: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
@@ -79,15 +77,15 @@ msgstr "Zezwalaj na dostęp do tych programów z uprawnieniami administratora:"
 
 #: src/plug/Views/InternetView.vala:28
 msgid "Blocked Websites"
-msgstr ""
+msgstr "Zablokowane strony"
 
 #: src/plug/Views/InternetView.vala:39
 msgid "Block URL"
-msgstr ""
+msgstr "Zablokuj URL"
 
 #: src/plug/Views/InternetView.vala:49
 msgid "example.com"
-msgstr ""
+msgstr "example.com"
 
 #: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
@@ -96,7 +94,7 @@ msgstr "Niepoprawny URL"
 #: src/plug/Views/InternetView.vala:148
 #, c-format
 msgid "Unblock %s"
-msgstr ""
+msgstr "Odblokuj %s"
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:20
@@ -117,13 +115,8 @@ msgid "To:"
 msgstr "Do:"
 
 #: src/plug/Views/TimeLimitView.vala:163
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekends."
 msgid "Screen Time is not limited on weekends."
-msgstr ""
-"Harmonogram ekranu dla %s nie będzie ograniczony w tym przedziale czasowym w "
-"weekendy."
+msgstr "Harmonogram ekranu nie jest ograniczony w weekendy."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:165
@@ -136,13 +129,8 @@ msgstr ""
 "będzie automatycznie wylogowany, gdy ten okres się skończy:"
 
 #: src/plug/Views/TimeLimitView.vala:169
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekdays."
 msgid "Screen Time is not limited on weekdays."
-msgstr ""
-"Harmonogram ekranu dla %s nie będzie ograniczony w trakcie tego okresu w dni "
-"robocze."
+msgstr "Harmonogram ekranu nie jest ograniczony w dni robocze."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:171
@@ -160,7 +148,7 @@ msgstr "Wyszukiwanie programów"
 
 #: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
-msgstr ""
+msgstr "Anuluj"
 
 #: src/plug/Widgets/ControlPage.vala:36
 msgid "Screen Time"
