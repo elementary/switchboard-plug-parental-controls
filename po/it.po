@@ -2,14 +2,15 @@
 # Copyright (c) 2015 Rosetta Contributors and Canonical Ltd 2015
 # This file is distributed under the same license as the switchboard-plug-networking package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2015.
+# ALBANO BATTISTELLA <ALBANOBATTISTELLA@GMAIL.COM>, 2024.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-01-06 19:17+0000\n"
-"PO-Revision-Date: 2020-10-24 13:15+0000\n"
-"Last-Translator: Fabio Zaramella <fabiozaramella@hotmail.it>\n"
+"PO-Revision-Date: 2024-01-13 15:15+0100\n"
+"Last-Translator: Albano Battistella <albanobattistella@gmail.com>\n"
 "Language-Team: Italian <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/it/>\n"
 "Language: it\n"
@@ -60,13 +61,12 @@ msgstr "Tempo rimanente"
 
 #: src/plug/Views/AppsView.vala:27
 msgid "Blocked Apps"
-msgstr ""
+msgstr "App bloccate"
 
 #: src/plug/Views/AppsView.vala:38
-#, fuzzy
 #| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
-msgstr "Aggiungi applicazioni da bloccare…"
+msgstr "Aggiungi app bloccata…"
 
 #: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
@@ -79,15 +79,15 @@ msgstr ""
 
 #: src/plug/Views/InternetView.vala:28
 msgid "Blocked Websites"
-msgstr ""
+msgstr "Siti web bloccati"
 
 #: src/plug/Views/InternetView.vala:39
 msgid "Block URL"
-msgstr ""
+msgstr "Blocca URL"
 
 #: src/plug/Views/InternetView.vala:49
 msgid "example.com"
-msgstr ""
+msgstr "esempio.com"
 
 #: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
@@ -96,7 +96,7 @@ msgstr "URL non valido"
 #: src/plug/Views/InternetView.vala:148
 #, c-format
 msgid "Unblock %s"
-msgstr ""
+msgstr "Sblocca %s"
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:20
@@ -117,14 +117,12 @@ msgid "To:"
 msgstr "Alle:"
 
 #: src/plug/Views/TimeLimitView.vala:163
-#, fuzzy
 #| msgid "Screen Time & Limits"
 msgid "Screen Time is not limited on weekends."
-msgstr "Tempo di utilizzo e limitazioni"
+msgstr "Il tempo sullo schermo non è limitato nei fine settimana."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:165
-#, fuzzy, c-format
 #| msgid ""
 #| "%s will only be able to log in during this time, and will be "
 #| "automatically logged out once this period ends:"
@@ -132,18 +130,16 @@ msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s potrà accedere solo durante questo intervallo di tempo e verrà "
+"%s potrà accedere durante questo periodo solo nei fine settimana e sarà "
 "disconnesso automaticamente al termine di questo periodo:"
 
 #: src/plug/Views/TimeLimitView.vala:169
-#, fuzzy
 #| msgid "Screen Time & Limits"
 msgid "Screen Time is not limited on weekdays."
-msgstr "Tempo di utilizzo e limitazioni"
+msgstr "Il tempo sullo schermo non è limitato nei giorni feriali."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:171
-#, fuzzy, c-format
 #| msgid ""
 #| "%s will only be able to log in during this time, and will be "
 #| "automatically logged out once this period ends:"
@@ -151,7 +147,7 @@ msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
-"%s potrà accedere solo durante questo intervallo di tempo e verrà "
+"%s potrà accedere durante questo periodo solo nei giorni feriali e sarà "
 "disconnesso automaticamente al termine di questo periodo:"
 
 #: src/plug/Widgets/AppChooser.vala:18
@@ -160,7 +156,7 @@ msgstr "Cerca applicazioni"
 
 #: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
-msgstr ""
+msgstr "Annulla"
 
 #: src/plug/Widgets/ControlPage.vala:36
 msgid "Screen Time"
@@ -179,12 +175,16 @@ msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
 msgstr ""
+"Gestisci l'utilizzo del tuo dispositivo impostando limiti sul tempo di utilizzo, siti Web e "
+"app."
 
 #: src/plug/Widgets/ControlPage.vala:92
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
+"Supervisiona e gestisci l'utilizzo del dispositivo con limiti sul tempo di utilizzo, sui siti Web e "
+"app. Alcuni limiti possono essere aggirati con il permesso di un amministratore."
 
 #: src/plug/MainView.vala:41
 msgid "Some settings require administrator rights to be changed"
@@ -252,11 +252,10 @@ msgstr "Impedisci l'accesso all'applicazione"
 #~ msgid "preferences-system-parental-controls"
 #~ msgstr "preferences-system-parental-controls"
 
-#, fuzzy
 #~ msgid "Authentication is required to change Screen Time &amp; Limits"
 #~ msgstr ""
-#~ "È necessario autenticarsi per modificare le impostazioni del filtro "
-#~ "famiglia"
+#~ "È necessario autenticarsi per modificare le impostazioni sul tempo di utilizzo "
+#~ "&amp; limiti"
 
 #~ msgid "You cannot run this application"
 #~ msgstr "Non puoi avviare quest'applicazione"
