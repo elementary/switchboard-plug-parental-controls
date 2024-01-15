@@ -1,8 +1,6 @@
 name: CI
 
 on:
-  push:
-    branches: [master]
   pull_request:
     types:
       - opened
@@ -25,7 +23,7 @@ jobs:
       - name: Install Dependencies
         run: |
           apt update
-          apt install -y debhelper libaccountsservice-dev libglib2.0-dev libgranite-dev libgtk-3-dev libhandy-1-dev libpolkit-gobject-1-dev libswitchboard-2.0-dev libdbus-1-dev policykit-1 libflatpak-dev libmalcontent-0-dev systemd meson valac
+          apt install -y debhelper libaccountsservice-dev libglib2.0-dev libgranite-7-dev libgtk-4-dev libadwaita-1-dev libpolkit-gobject-1-dev libswitchboard-3-dev libdbus-1-dev policykit-1 libflatpak-dev libmalcontent-0-dev systemd meson valac
       - name: Build
         env:
           DESTDIR: out

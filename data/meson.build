@@ -17,16 +17,10 @@ configure_file(
     install_dir: systemdunitdir
 )
 
-gettext_declaration = configure_file(
-    configuration: configuration_data,
-    input: 'screentime-limits.policy.in.in',
-    output: '@BASENAME@'
-)
-
 i18n.merge_file(
-    input: gettext_declaration,
-    output: 'io.elementary.switchboard.screentime-limits.policy',
-    po_dir: join_paths(meson.source_root(), 'po', 'extra'),
+    input: 'screentime-limits.policy.in',
+    output: gettext_name + '.policy',
+    po_dir: meson.source_root() / 'po' / 'extra',
     install: true,
     install_dir: polkit_actiondir
 )
@@ -56,9 +50,10 @@ install_data(
 )
 
 i18n.merge_file(
-    input: 'io.elementary.switchboard.parental-controls.appdata.xml.in',
-    output: 'io.elementary.switchboard.parental-controls.appdata.xml',
-    po_dir: join_paths(meson.source_root (), 'po', 'extra'),
-    install_dir: join_paths(datadir, 'metainfo'),
-    install: true
+    input: 'screentime-limits.metainfo.xml.in',
+    output: gettext_name + '.metainfo.xml',
+    po_dir: meson.source_root() / 'po' / 'extra',
+    type: 'xml',
+    install: true,
+    install_dir: datadir / 'metainfo',
 )

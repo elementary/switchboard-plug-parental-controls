@@ -41,7 +41,7 @@ public class PC.Widgets.AppRow : Gtk.ListBoxRow {
     }
 
     construct {
-        var image = new Gtk.Image.from_gicon (app_info.get_icon (), DND) {
+        var image = new Gtk.Image.from_gicon (app_info.get_icon ()) {
             pixel_size = 32
         };
 
@@ -63,11 +63,7 @@ public class PC.Widgets.AppRow : Gtk.ListBoxRow {
         };
 
         var main_grid = new Gtk.Grid () {
-            column_spacing = 6,
-            margin_top = 6,
-            margin_end = 6,
-            margin_bottom = 6,
-            margin_start = 6
+            column_spacing = 6
         };
         main_grid.attach (image, 0, 0, 1, 2);
         main_grid.attach (app_name, 1, 0);

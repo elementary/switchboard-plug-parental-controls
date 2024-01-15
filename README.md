@@ -1,4 +1,4 @@
-# Switchboard Screen Time & Limits Plug
+# Screen Time & Limits Settings
 [![Translation status](https://l10n.elementary.io/widgets/switchboard/-/switchboard-plug-parental-controls/svg-badge.svg)](https://l10n.elementary.io/engage/switchboard/?utm_source=widget)
 
 ![screenshot](data/screenshot.png?raw=true)
@@ -8,14 +8,15 @@
 You'll need the following dependencies:
 
 * libaccountsservice-dev
+* libadwaita-1-dev
 * libdbus-1-dev
 * libflatpak-dev
 * libglib2.0-dev
-* libgranite-dev
-* libhandy-1-dev >= 0.90.0
+* libgranite-7-dev (>= 7.4.0)
+* libgtk-4-dev
 * libmalcontent-0-dev
 * libpolkit-gobject-1-dev
-* libswitchboard-2.0-dev
+* libswitchboard-3-dev
 * meson >= 0.46.1
 * policykit-1
 * valac
@@ -28,4 +29,4 @@ Run `meson` to configure the build environment and then `ninja` to build
 
 To install, use `ninja install`
 
-    sudo ninja install
+    ninja install

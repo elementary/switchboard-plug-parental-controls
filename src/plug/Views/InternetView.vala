@@ -32,7 +32,7 @@ public class PC.Widgets.InternetBox : Gtk.Box {
             selection_mode = NONE
         };
 
-        var scrolled = new Gtk.ScrolledWindow (null, null) {
+        var scrolled = new Gtk.ScrolledWindow () {
             child = list_box,
             vexpand = true
         };
@@ -41,7 +41,7 @@ public class PC.Widgets.InternetBox : Gtk.Box {
             margin_end = 6,
             sensitive = false
         };
-        add_button.get_style_context ().add_class (Gtk.STYLE_CLASS_SUGGESTED_ACTION);
+        add_button.add_css_class (Granite.STYLE_CLASS_SUGGESTED_ACTION);
         add_button.clicked.connect (on_entry_activate);
 
         entry = new Granite.ValidatedEntry.from_regex (url_regex) {
@@ -63,13 +63,13 @@ public class PC.Widgets.InternetBox : Gtk.Box {
         var frame = new Gtk.Frame (null) {
             child = main_box
         };
-        frame.get_style_context ().add_class (Gtk.STYLE_CLASS_VIEW);
+        frame.add_css_class (Granite.STYLE_CLASS_VIEW);
 
         orientation = VERTICAL;
-        add (info_label);
-        add (frame);
+        spacing = 6;
+        append (info_label);
+        append (frame);
         load_existing.begin ();
-        show_all ();
 
         entry.bind_property ("is-valid", add_button, "sensitive");
         entry.notify["is-valid"].connect (() => {
@@ -109,19 +109,26 @@ public class PC.Widgets.InternetBox : Gtk.Box {
         string block_url;
         int i = 0;
         string[] block_urls = {};
-        foreach (weak Gtk.Widget url_entry in list_box.get_children ()) {
-            block_url = ((UrlEntry) url_entry).url;
-            if (formatted_url in block_url) {
-                if (formatted_url.length == block_url.length) {
-                    i++;
-                    if (i > 1) {
-                        list_box.remove (url_entry);
-                        entry.set_text (input_url);
-                        return;
+
+        unowned var child = list_box.get_first_child ();
+        while (child != null) {
+            if (child is UrlEntry) {
+                block_url = ((UrlEntry) child).url;
+                if (formatted_url in block_url) {
+                    if (formatted_url.length == block_url.length) {
+                        i++;
+                        if (i > 1) {
+                            list_box.remove (child);
+                            entry.set_text (input_url);
+                            return;
+                        }
                     }
                 }
+
+                block_urls += block_url;
             }
-            block_urls += block_url;
+
+            child = child.get_next_sibling ();
         }
 
         // SECTION end
@@ -191,7 +198,7 @@ public class PC.Widgets.InternetBox : Gtk.Box {
     private void add_entry (string url) {
         var url_entry = new UrlEntry (url);
         url_entry.destroy.connect (() => update_block_urls ());
-        list_box.add (url_entry);
+        list_box.append (url_entry);
     }
 
     private class UrlEntry : Gtk.ListBoxRow {
@@ -209,6 +216,7 @@ public class PC.Widgets.InternetBox : Gtk.Box {
             };
 
             delete_button.clicked.connect (() => {
+                unparent ();
                 destroy ();
             });
 
@@ -218,11 +226,10 @@ public class PC.Widgets.InternetBox : Gtk.Box {
                 margin_bottom = 6,
                 margin_start = 6
             };
-            main_box.add (new Gtk.Label (url));
-            main_box.add (delete_button);
+            main_box.append (new Gtk.Label (url));
+            main_box.append (delete_button);
 
             child = main_box;
-            show_all ();
         }
     }
 }

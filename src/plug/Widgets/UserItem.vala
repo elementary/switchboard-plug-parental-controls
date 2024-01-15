@@ -7,7 +7,7 @@
 public class PC.Widgets.UserItem : Gtk.ListBoxRow {
     public ControlPage page { get; construct; }
 
-    private Hdy.Avatar avatar;
+    private Adw.Avatar avatar;
     private Gtk.Label full_name_label;
     private Gtk.Label username_label;
     private Gtk.Switch master_switch;
@@ -22,7 +22,7 @@ public class PC.Widgets.UserItem : Gtk.ListBoxRow {
         user = page.user;
         user.changed.connect (update_view);
 
-        avatar = new Hdy.Avatar (32, null, true);
+        avatar = new Adw.Avatar (32, null, true);
 
         full_name_label = new Gtk.Label ("") {
             halign = START,
@@ -55,7 +55,6 @@ public class PC.Widgets.UserItem : Gtk.ListBoxRow {
         grid.attach (master_switch, 2, 0, 1, 2);
 
         child = grid;
-        show_all ();
 
         master_switch.bind_property ("active", page.stack, "sensitive", SYNC_CREATE);
         master_switch.sensitive = Utils.get_permission ().get_allowed ();
@@ -79,6 +78,10 @@ public class PC.Widgets.UserItem : Gtk.ListBoxRow {
         username_label.label = user.get_user_name ();
 
         avatar.text = user.get_real_name ();
-        avatar.loadable_icon = new FileIcon (File.new_for_path (user.get_icon_file ()));
+        try {
+            avatar.custom_image = Gdk.Texture.from_filename (user.get_icon_file ());
+        } catch (Error e) {
+            avatar.custom_image = null;
+        }
     }
 }

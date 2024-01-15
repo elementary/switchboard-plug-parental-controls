@@ -20,31 +20,30 @@ public class PC.MainBox : Gtk.Box {
         };
         list.set_header_func (update_headers);
 
-        var scrolled_window = new Gtk.ScrolledWindow (null, null) {
+        var scrolled_window = new Gtk.ScrolledWindow () {
             child = list,
             hscrollbar_policy = NEVER,
             vexpand = true
         };
 
         var paned = new Gtk.Paned (HORIZONTAL) {
-            position = 240
+            position = 240,
+            start_child = scrolled_window,
+            end_child = stack,
+            shrink_start_child = false,
+            shrink_end_child = false,
+            resize_start_child = false
         };
-        paned.pack1 (scrolled_window, true, true);
-        paned.pack2 (stack, true, false);
 
         var lock_button = new Gtk.LockButton (Utils.get_permission ());
 
         var infobar = new Gtk.InfoBar ();
-
-        var infobar_content = infobar.get_content_area ();
-        var infobar_action_area = (Gtk.Container) infobar.get_action_area ();
-        infobar_content.add (new Gtk.Label (_("Some settings require administrator rights to be changed")));
-        infobar_action_area.add (lock_button);
+        infobar.add_child (new Gtk.Label (_("Some settings require administrator rights to be changed")));
+        infobar.add_action_widget (lock_button, 1);
 
         orientation = VERTICAL;
-        add (infobar);
-        add (paned);
-        show_all ();
+        append (infobar);
+        append (paned);
 
         list.row_activated.connect ((row) => {
             var user_item_row = (Widgets.UserItem) row;
@@ -83,11 +82,9 @@ public class PC.MainBox : Gtk.Box {
         var useritem = new Widgets.UserItem (page);
 
         items.append (useritem);
-        list.add (useritem);
+        list.append (useritem);
 
         select_first ();
-
-        useritem.show_all ();
     }
 
     private void update_user (Act.User user) {
