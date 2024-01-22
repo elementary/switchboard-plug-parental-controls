@@ -23,7 +23,7 @@
 public class PC.Client.AppUnavailableDialog : Granite.MessageDialog {
     public AppUnavailableDialog () {
         Object (
-            image_icon: new ThemedIcon ("preferences-system-parental-controls"),
+            image_icon: new ThemedIcon ("io.elementary.settings.screentime-limits"),
             primary_text: _("You are not permitted to run this application"),
             secondary_text: _("An administrator has restricted your access to this application."),
             buttons: Gtk.ButtonsType.CLOSE

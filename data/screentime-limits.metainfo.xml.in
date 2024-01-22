@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component type="addon">
-  <id>io.elementary.switchboard.parental-controls</id>
-  <extends>io.elementary.switchboard</extends>
+  <id>io.elementary.settings.screentime-limits</id>
+  <extends>io.elementary.settings</extends>
   <name>Screen Time &amp; Limits Settings</name>
   <summary>Configure time limits and restrict application usage</summary>
-  <icon type="stock">preferences-system-parental-controls</icon>
-  <translation type="gettext">parental-controls-plug</translation>
+  <icon type="stock">io.elementary.settings.screentime-limits</icon>
+  <translation type="gettext">io.elementary.settings.screentime-limits</translation>
   <releases>
     <release version="6.0.1" date="2022-10-20" urgency="medium">
       <description>
@@ -51,7 +51,7 @@
   </releases>
   <screenshots>
     <screenshot type="default">
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-parental-controls/master/data/screenshot.png</image>
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-parental-controls/6.0.1/data/screenshot.png</image>
     </screenshot>
   </screenshots>
   <url type="homepage">https://elementary.io</url>
