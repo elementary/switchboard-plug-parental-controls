@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 10:31+0000\n"
+"POT-Creation-Date: 2024-01-06 19:17+0000\n"
 "PO-Revision-Date: 2020-10-29 18:15+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -23,31 +23,31 @@ msgstr "आपल्याला हा अनुप्रयोग चालव
 msgid "An administrator has restricted your access to this application."
 msgstr "प्रशासकाने या अनुप्रयोगात आपला प्रवेश प्रतिबंधित केला आहे."
 
-#: src/client/Client.vala:163
+#: src/client/Client.vala:161
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "हे संगणक %s नंतर लॉक होईल."
 
-#: src/client/Client.vala:165
+#: src/client/Client.vala:163
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu  तास"
 msgstr[1] "%lu तास"
 
-#: src/client/Client.vala:167
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu मिनिट"
 msgstr[1] "%lu मिनिटे"
 
-#: src/client/Client.vala:169
+#: src/client/Client.vala:167
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr "आपला संगणक लॉक होण्यापूर्वी सर्व अनुप्रयोग बंद करणे सुनिश्चित करा."
 
-#: src/client/Client.vala:175
+#: src/client/Client.vala:173
 msgid "Time left"
 msgstr "बाकी वेळ"
 
@@ -55,17 +55,17 @@ msgstr "बाकी वेळ"
 msgid "Blocked Apps"
 msgstr ""
 
-#: src/plug/Views/AppsView.vala:37
+#: src/plug/Views/AppsView.vala:38
 #, fuzzy
 #| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
 msgstr "प्रतिबंधित अॅप्स जोडा…"
 
-#: src/plug/Views/AppsView.vala:52
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "सर्व साफ करा"
 
-#: src/plug/Views/AppsView.vala:76
+#: src/plug/Views/AppsView.vala:77
 msgid "Allow access to these apps with admin permission:"
 msgstr "प्रशासकीय परवानगीसह या अॅप्सवरील प्रवेशास अनुमती द्या:"
 
@@ -85,7 +85,7 @@ msgstr ""
 msgid "Invalid URL"
 msgstr "अवैध यूआरएल"
 
-#: src/plug/Views/InternetView.vala:142
+#: src/plug/Views/InternetView.vala:148
 #, c-format
 msgid "Unblock %s"
 msgstr ""
@@ -100,22 +100,22 @@ msgstr "सोमवार ते शुक्रवार"
 msgid "Weekends"
 msgstr "शनिवार आणि रविवार"
 
-#: src/plug/Views/TimeLimitView.vala:149
+#: src/plug/Views/TimeLimitView.vala:148
 msgid "From:"
 msgstr "पासून:"
 
-#: src/plug/Views/TimeLimitView.vala:158
+#: src/plug/Views/TimeLimitView.vala:157
 msgid "To:"
 msgstr "पर्यंत:"
 
-#: src/plug/Views/TimeLimitView.vala:168
+#: src/plug/Views/TimeLimitView.vala:163
 #, fuzzy
 #| msgid "Screen Time & Limits"
 msgid "Screen Time is not limited on weekends."
 msgstr "स्क्रीन वेळ आणि मर्यादा"
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:170
+#: src/plug/Views/TimeLimitView.vala:165
 #, fuzzy, c-format
 #| msgid ""
 #| "%s will only be able to log in during this time, and will be "
@@ -127,14 +127,14 @@ msgstr ""
 "%s या वेळी केवळ लॉग इन करण्यात सक्षम होईल आणि हा कालावधी संपल्यानंतर स्वयंचलितपणे लॉग "
 "आउट होईल:"
 
-#: src/plug/Views/TimeLimitView.vala:174
+#: src/plug/Views/TimeLimitView.vala:169
 #, fuzzy
 #| msgid "Screen Time & Limits"
 msgid "Screen Time is not limited on weekdays."
 msgstr "स्क्रीन वेळ आणि मर्यादा"
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:171
 #, fuzzy, c-format
 #| msgid ""
 #| "%s will only be able to log in during this time, and will be "
@@ -150,29 +150,29 @@ msgstr ""
 msgid "Search Applications"
 msgstr "ऍप्लिकेशन्स शोधा"
 
-#: src/plug/Widgets/AppChooser.vala:47
+#: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:33
+#: src/plug/Widgets/ControlPage.vala:36
 msgid "Screen Time"
 msgstr "स्क्रीन वेळ"
 
-#: src/plug/Widgets/ControlPage.vala:34
+#: src/plug/Widgets/ControlPage.vala:37
 msgid "Internet"
 msgstr "इंटरनेट"
 
-#: src/plug/Widgets/ControlPage.vala:35
+#: src/plug/Widgets/ControlPage.vala:38
 msgid "Applications"
 msgstr "ॲप्लिकेशन्स्"
 
-#: src/plug/Widgets/ControlPage.vala:73
+#: src/plug/Widgets/ControlPage.vala:90
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:75
+#: src/plug/Widgets/ControlPage.vala:92
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
@@ -182,11 +182,11 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "काही सेटिंग्जसाठी प्रशासकीय अधिकार बदलण्याची आवश्यकता आहे"
 
-#: src/plug/MainView.vala:127
+#: src/plug/MainView.vala:124
 msgid "My Account"
 msgstr "माझे खाते"
 
-#: src/plug/MainView.vala:130
+#: src/plug/MainView.vala:127
 msgid "Other Accounts"
 msgstr "अन्य खाती"
 

@@ -2,9 +2,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 10:31+0000\n"
-"PO-Revision-Date: 2021-07-05 13:54+0000\n"
-"Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
+"POT-Creation-Date: 2024-01-06 19:17+0000\n"
+"PO-Revision-Date: 2024-01-10 11:11+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/en_GB/>\n"
 "Language: en_GB\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -23,73 +23,71 @@ msgstr "You are not permitted to run this application"
 msgid "An administrator has restricted your access to this application."
 msgstr "An administrator has restricted your access to this application."
 
-#: src/client/Client.vala:163
+#: src/client/Client.vala:161
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "This computer will lock after %s."
 
-#: src/client/Client.vala:165
+#: src/client/Client.vala:163
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu hour"
 msgstr[1] "%lu hours"
 
-#: src/client/Client.vala:167
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu minute"
 msgstr[1] "%lu minutes"
 
-#: src/client/Client.vala:169
+#: src/client/Client.vala:167
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Make sure to close all applications before your computer will be locked."
 
-#: src/client/Client.vala:175
+#: src/client/Client.vala:173
 msgid "Time left"
 msgstr "Time left"
 
 #: src/plug/Views/AppsView.vala:27
 msgid "Blocked Apps"
-msgstr ""
+msgstr "Blocked Apps"
 
-#: src/plug/Views/AppsView.vala:37
-#, fuzzy
-#| msgid "Add Prevented Apps…"
+#: src/plug/Views/AppsView.vala:38
 msgid "Add Blocked App…"
-msgstr "Add Prevented Apps…"
+msgstr "Add Blocked App…"
 
-#: src/plug/Views/AppsView.vala:52
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Clear All"
 
-#: src/plug/Views/AppsView.vala:76
+#: src/plug/Views/AppsView.vala:77
 msgid "Allow access to these apps with admin permission:"
 msgstr "Allow access to these apps with admin permission:"
 
 #: src/plug/Views/InternetView.vala:28
 msgid "Blocked Websites"
-msgstr ""
+msgstr "Blocked Websites"
 
 #: src/plug/Views/InternetView.vala:39
 msgid "Block URL"
-msgstr ""
+msgstr "Block URL"
 
 #: src/plug/Views/InternetView.vala:49
 msgid "example.com"
-msgstr ""
+msgstr "example.com"
 
 #: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
 msgstr "Invalid URL"
 
-#: src/plug/Views/InternetView.vala:142
+#: src/plug/Views/InternetView.vala:148
 #, c-format
 msgid "Unblock %s"
-msgstr ""
+msgstr "Unblock %s"
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:20
@@ -101,23 +99,20 @@ msgstr "Weekdays"
 msgid "Weekends"
 msgstr "Weekends"
 
-#: src/plug/Views/TimeLimitView.vala:149
+#: src/plug/Views/TimeLimitView.vala:148
 msgid "From:"
 msgstr "From:"
 
-#: src/plug/Views/TimeLimitView.vala:158
+#: src/plug/Views/TimeLimitView.vala:157
 msgid "To:"
 msgstr "To:"
 
-#: src/plug/Views/TimeLimitView.vala:168
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekends."
+#: src/plug/Views/TimeLimitView.vala:163
 msgid "Screen Time is not limited on weekends."
-msgstr "Screen Time for %s will not be limited during this period on weekends."
+msgstr "Screen Time is not limited on weekends."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:170
+#: src/plug/Views/TimeLimitView.vala:165
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
@@ -126,15 +121,12 @@ msgstr ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 
-#: src/plug/Views/TimeLimitView.vala:174
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekdays."
+#: src/plug/Views/TimeLimitView.vala:169
 msgid "Screen Time is not limited on weekdays."
-msgstr "Screen Time for %s will not be limited during this period on weekdays."
+msgstr "Screen Time is not limited on weekdays."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:171
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
@@ -147,43 +139,47 @@ msgstr ""
 msgid "Search Applications"
 msgstr "Search Applications"
 
-#: src/plug/Widgets/AppChooser.vala:47
+#: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel"
 
-#: src/plug/Widgets/ControlPage.vala:33
+#: src/plug/Widgets/ControlPage.vala:36
 msgid "Screen Time"
 msgstr "Screen Time"
 
-#: src/plug/Widgets/ControlPage.vala:34
+#: src/plug/Widgets/ControlPage.vala:37
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:35
+#: src/plug/Widgets/ControlPage.vala:38
 msgid "Applications"
 msgstr "Applications"
 
-#: src/plug/Widgets/ControlPage.vala:73
+#: src/plug/Widgets/ControlPage.vala:90
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
 msgstr ""
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
 
-#: src/plug/Widgets/ControlPage.vala:75
+#: src/plug/Widgets/ControlPage.vala:92
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
+"Supervise and manage device usage with limits on Screen Time, websites, and "
+"apps. Some limits may be bypassed with an administrator's permission."
 
 #: src/plug/MainView.vala:41
 msgid "Some settings require administrator rights to be changed"
 msgstr "Some settings require administrator rights to be changed"
 
-#: src/plug/MainView.vala:127
+#: src/plug/MainView.vala:124
 msgid "My Account"
 msgstr "My Account"
 
-#: src/plug/MainView.vala:130
+#: src/plug/MainView.vala:127
 msgid "Other Accounts"
 msgstr "Other Accounts"
 

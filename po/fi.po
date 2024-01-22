@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 10:31+0000\n"
+"POT-Creation-Date: 2024-01-06 19:17+0000\n"
 "PO-Revision-Date: 2021-06-18 08:05+0000\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
 "Language-Team: Finnish <https://l10n.elementary.io/projects/switchboard/"
@@ -28,32 +28,32 @@ msgstr "Sinulla ei ole oikeutta suorittaa tätä sovellusta"
 msgid "An administrator has restricted your access to this application."
 msgstr "Ylläpitäjä on rajoittanut mahdollisuuttasi käyttää tätä sovellusta."
 
-#: src/client/Client.vala:163
+#: src/client/Client.vala:161
 #, c-format
 msgid "This computer will lock after %s."
 msgstr "Tämä tietokone lukkiutuu viiveellä %s."
 
-#: src/client/Client.vala:165
+#: src/client/Client.vala:163
 #, c-format
 msgid "%lu hour"
 msgid_plural "%lu hours"
 msgstr[0] "%lu tunti"
 msgstr[1] "%lu tuntia"
 
-#: src/client/Client.vala:167
+#: src/client/Client.vala:165
 #, c-format
 msgid "%lu minute"
 msgid_plural "%lu minutes"
 msgstr[0] "%lu minuutti"
 msgstr[1] "%lu minuuttia"
 
-#: src/client/Client.vala:169
+#: src/client/Client.vala:167
 msgid ""
 "Make sure to close all applications before your computer will be locked."
 msgstr ""
 "Varmista, että suljet kaikki sovellukset, ennen kuin tietokone lukitaan."
 
-#: src/client/Client.vala:175
+#: src/client/Client.vala:173
 msgid "Time left"
 msgstr "Aikaa jäljellä"
 
@@ -61,17 +61,17 @@ msgstr "Aikaa jäljellä"
 msgid "Blocked Apps"
 msgstr ""
 
-#: src/plug/Views/AppsView.vala:37
+#: src/plug/Views/AppsView.vala:38
 #, fuzzy
 #| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
 msgstr "Lisää estetyt sovellukset…"
 
-#: src/plug/Views/AppsView.vala:52
+#: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
 msgstr "Tyhjennä kaikki"
 
-#: src/plug/Views/AppsView.vala:76
+#: src/plug/Views/AppsView.vala:77
 msgid "Allow access to these apps with admin permission:"
 msgstr "Salli seuraavien sovellusten käyttö ylläpito-oikeuksin:"
 
@@ -91,7 +91,7 @@ msgstr ""
 msgid "Invalid URL"
 msgstr "Virheellinen osoite"
 
-#: src/plug/Views/InternetView.vala:142
+#: src/plug/Views/InternetView.vala:148
 #, c-format
 msgid "Unblock %s"
 msgstr ""
@@ -106,15 +106,15 @@ msgstr "Arkipäivinä"
 msgid "Weekends"
 msgstr "Viikonloppuina"
 
-#: src/plug/Views/TimeLimitView.vala:149
+#: src/plug/Views/TimeLimitView.vala:148
 msgid "From:"
 msgstr "Alkaa:"
 
-#: src/plug/Views/TimeLimitView.vala:158
+#: src/plug/Views/TimeLimitView.vala:157
 msgid "To:"
 msgstr "Päättyy:"
 
-#: src/plug/Views/TimeLimitView.vala:168
+#: src/plug/Views/TimeLimitView.vala:163
 #, fuzzy
 #| msgid ""
 #| "Screen Time for %s will not be limited during this period on weekends."
@@ -123,7 +123,7 @@ msgstr ""
 "Näyttöaikaa käyttäjälle %s ei rajoiteta tällä ajanjaksolla viikonloppuisin."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:170
+#: src/plug/Views/TimeLimitView.vala:165
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
@@ -132,7 +132,7 @@ msgstr ""
 "%s voi kirjautua vain tällä aikavälillä viikonloppuisin, ja hänet kirjataan "
 "automaattisesti ulos kun ajanjakso päättyy:"
 
-#: src/plug/Views/TimeLimitView.vala:174
+#: src/plug/Views/TimeLimitView.vala:169
 #, fuzzy
 #| msgid ""
 #| "Screen Time for %s will not be limited during this period on weekdays."
@@ -140,7 +140,7 @@ msgid "Screen Time is not limited on weekdays."
 msgstr "Näyttöaikaa käyttäjälle %s ei rajoiteta tällä ajanjaksolla arkisin."
 
 #. /TRANSLATORS: %s is the user's name
-#: src/plug/Views/TimeLimitView.vala:176
+#: src/plug/Views/TimeLimitView.vala:171
 #, c-format
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
@@ -153,29 +153,29 @@ msgstr ""
 msgid "Search Applications"
 msgstr "Etsi sovelluksia"
 
-#: src/plug/Widgets/AppChooser.vala:47
+#: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:33
+#: src/plug/Widgets/ControlPage.vala:36
 msgid "Screen Time"
 msgstr "Näyttöaika"
 
-#: src/plug/Widgets/ControlPage.vala:34
+#: src/plug/Widgets/ControlPage.vala:37
 msgid "Internet"
 msgstr "Internet"
 
-#: src/plug/Widgets/ControlPage.vala:35
+#: src/plug/Widgets/ControlPage.vala:38
 msgid "Applications"
 msgstr "Sovellukset"
 
-#: src/plug/Widgets/ControlPage.vala:73
+#: src/plug/Widgets/ControlPage.vala:90
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:75
+#: src/plug/Widgets/ControlPage.vala:92
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
@@ -185,11 +185,11 @@ msgstr ""
 msgid "Some settings require administrator rights to be changed"
 msgstr "Jotkin asetukset vaativat muutoksia varten ylläpitäjän oikeuksia"
 
-#: src/plug/MainView.vala:127
+#: src/plug/MainView.vala:124
 msgid "My Account"
 msgstr "Oma tili"
 
-#: src/plug/MainView.vala:130
+#: src/plug/MainView.vala:127
 msgid "Other Accounts"
 msgstr "Muut tilit"
 
