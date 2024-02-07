@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-06 19:17+0000\n"
+"POT-Creation-Date: 2024-02-07 11:02+0000\n"
 "PO-Revision-Date: 2024-01-12 00:11+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
@@ -148,19 +148,7 @@ msgstr "Alkalmazások keresése"
 msgid "Cancel"
 msgstr "Mégse"
 
-#: src/plug/Widgets/ControlPage.vala:36
-msgid "Screen Time"
-msgstr "Kijelzőidő"
-
-#: src/plug/Widgets/ControlPage.vala:37
-msgid "Internet"
-msgstr "Internet"
-
-#: src/plug/Widgets/ControlPage.vala:38
-msgid "Applications"
-msgstr "Alkalmazások"
-
-#: src/plug/Widgets/ControlPage.vala:90
+#: src/plug/Widgets/ControlPage.vala:30
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
@@ -168,7 +156,7 @@ msgstr ""
 "Kezelje a saját készülékhasználatát a képernyőidő, weboldalak és "
 "alkalmazások korlátozásával."
 
-#: src/plug/Widgets/ControlPage.vala:92
+#: src/plug/Widgets/ControlPage.vala:32
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
@@ -176,6 +164,18 @@ msgstr ""
 "Ügyelje és kezelje a készülékhasználatot a képernyőidő, weboldalak és "
 "alkalmazások korlátozásával. Néhány korlátozás felülbírálható rendszergazdai "
 "jogokkal."
+
+#: src/plug/Widgets/ControlPage.vala:40
+msgid "Screen Time"
+msgstr "Kijelzőidő"
+
+#: src/plug/Widgets/ControlPage.vala:41
+msgid "Internet"
+msgstr "Internet"
+
+#: src/plug/Widgets/ControlPage.vala:42
+msgid "Applications"
+msgstr "Alkalmazások"
 
 #: src/plug/MainView.vala:41
 msgid "Some settings require administrator rights to be changed"

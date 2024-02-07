@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-06 19:17+0000\n"
+"POT-Creation-Date: 2024-02-07 11:02+0000\n"
 "PO-Revision-Date: 2024-01-10 11:11+0000\n"
 "Last-Translator: David M <rbndavid@gmail.com>\n"
 "Language-Team: Catalan <https://l10n.elementary.io/projects/switchboard/"
@@ -148,19 +148,7 @@ msgstr "Cerca aplicacions"
 msgid "Cancel"
 msgstr "Cancel·la"
 
-#: src/plug/Widgets/ControlPage.vala:36
-msgid "Screen Time"
-msgstr "Temps de pantalla"
-
-#: src/plug/Widgets/ControlPage.vala:37
-msgid "Internet"
-msgstr "Internet"
-
-#: src/plug/Widgets/ControlPage.vala:38
-msgid "Applications"
-msgstr "Aplicacions"
-
-#: src/plug/Widgets/ControlPage.vala:90
+#: src/plug/Widgets/ControlPage.vala:30
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
@@ -168,7 +156,7 @@ msgstr ""
 "Gestioneu l'ús del dispositiu establint límits al temps de pantalla, als "
 "llocs web i a les aplicacions."
 
-#: src/plug/Widgets/ControlPage.vala:92
+#: src/plug/Widgets/ControlPage.vala:32
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
@@ -176,6 +164,18 @@ msgstr ""
 "Superviseu i gestioneu l'ús del dispositiu amb límits de temps de pantalla, "
 "llocs web i aplicacions. Alguns límits es poden ometre amb el permís d'un "
 "administrador."
+
+#: src/plug/Widgets/ControlPage.vala:40
+msgid "Screen Time"
+msgstr "Temps de pantalla"
+
+#: src/plug/Widgets/ControlPage.vala:41
+msgid "Internet"
+msgstr "Internet"
+
+#: src/plug/Widgets/ControlPage.vala:42
+msgid "Applications"
+msgstr "Aplicacions"
 
 #: src/plug/MainView.vala:41
 msgid "Some settings require administrator rights to be changed"
