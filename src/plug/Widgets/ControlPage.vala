@@ -4,29 +4,33 @@
  *                         2015 Adam Bieńkowski
  */
 
-public class PC.Widgets.ControlPage : Gtk.Box {
+public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
     public weak Act.User user { get; construct; }
     public Gtk.Stack stack;
     private TimeLimitView time_limit_view;
     private AppsBox apps_box;
 
     public ControlPage (Act.User user) {
-        Object (user: user);
+        Object (
+            title: user.get_real_name (),
+            with_avatar: true,
+            user: user
+        );
     }
-
-    class construct {
-        set_css_name ("simplesettingspage");
-    }
-
     construct {
         unowned var permission = Utils.get_permission ();
 
-        hexpand = true;
-        margin_top = 12;
-        margin_end = 12;
-        margin_bottom = 12;
-        margin_start = 12;
-        orientation = VERTICAL;
+        try {
+            avatar_paintable = Gdk.Texture.from_filename (user.get_icon_file ());
+        } catch (Error e) {
+            critical (e.message);
+        }
+
+        if (Utils.get_current_user () == user) {
+            description = _("Manage your own device usage by setting limits on Screen Time, websites, and apps.");
+        } else {
+            description = _("Supervise and manage device usage with limits on Screen Time, websites, and apps. Some limits may be bypassed with an administrator's permission.");
+        }
 
         time_limit_view = new TimeLimitView (user);
         var internet_box = new InternetBox (user);
@@ -55,50 +59,11 @@ public class PC.Widgets.ControlPage : Gtk.Box {
             switcher_child = switcher_child.get_next_sibling ();
         }
 
-        var header_grid = new Gtk.Grid () {
-            column_spacing = 12,
-            halign = START
-        };
-        header_grid.add_css_class ("header-area");
+        var box = new Gtk.Box (VERTICAL, 0);
+        box.append (switcher);
+        box.append (stack);
 
-        var avatar = new Adw.Avatar (48, user.get_real_name (), true) {
-            valign = START
-        };
-
-        try {
-            avatar.custom_image = Gdk.Texture.from_filename (user.get_icon_file ());
-        } catch (Error e) {
-            critical (e.message);
-        }
-
-        var full_name = new Gtk.Label (user.get_real_name ()) {
-            hexpand = true,
-            selectable = true,
-            wrap = true,
-            xalign = 0
-        };
-        full_name.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
-
-        var description_message = new Gtk.Label ("") {
-            selectable = true,
-            use_markup = true,
-            wrap = true,
-            xalign = 0
-        };
-
-        if (Utils.get_current_user () == user) {
-            description_message.label = _("Manage your own device usage by setting limits on Screen Time, websites, and apps.");
-        } else {
-            description_message.label = _("Supervise and manage device usage with limits on Screen Time, websites, and apps. Some limits may be bypassed with an administrator's permission.");
-        }
-
-        header_grid.attach (avatar, 0, 0, 1, 2);
-        header_grid.attach (full_name, 1, 0);
-        header_grid.attach (description_message, 1, 1);
-
-        append (header_grid);
-        append (switcher);
-        append (stack);
+        child = box;
     }
 
     public void set_active (bool active) {
