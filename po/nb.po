@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-07 11:02+0000\n"
-"PO-Revision-Date: 2022-07-08 10:31+0000\n"
+"PO-Revision-Date: 2024-02-09 15:13+0000\n"
 "Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
 "Language-Team: Norwegian Bokmål <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/nb/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.0.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -58,7 +58,7 @@ msgstr "Gjenværende tid"
 
 #: src/plug/Views/AppsView.vala:27
 msgid "Blocked Apps"
-msgstr ""
+msgstr "Blokkerte programmer"
 
 #: src/plug/Views/AppsView.vala:38
 #, fuzzy
@@ -76,15 +76,16 @@ msgstr "Tillat tilgang til disse programmene gitt administratorrettigheter:"
 
 #: src/plug/Views/InternetView.vala:28
 msgid "Blocked Websites"
-msgstr ""
+msgstr "Blokkerte nettsider"
 
 #: src/plug/Views/InternetView.vala:39
 msgid "Block URL"
-msgstr ""
+msgstr "Blokker nettside"
 
 #: src/plug/Views/InternetView.vala:49
+#, fuzzy
 msgid "example.com"
-msgstr ""
+msgstr "eksempel.com"
 
 #: src/plug/Views/InternetView.vala:78
 msgid "Invalid URL"
@@ -93,7 +94,7 @@ msgstr "Ugyldig nettadresse"
 #: src/plug/Views/InternetView.vala:148
 #, c-format
 msgid "Unblock %s"
-msgstr ""
+msgstr "Opphev blokkering av %s"
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:20
@@ -152,19 +153,23 @@ msgstr "Søk i programmer"
 
 #: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: src/plug/Widgets/ControlPage.vala:30
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
 msgstr ""
+"Håndter egen enhetsbruk ved å sette grenser for skjermtid, nettsider, og "
+"programmer."
 
 #: src/plug/Widgets/ControlPage.vala:32
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
+"Hold øye med og håndter enhetsbruk med grenser for skjermtid, nettsider, og "
+"programmer. Noen grenser kan omgås med et administratorpassord."
 
 #: src/plug/Widgets/ControlPage.vala:40
 msgid "Screen Time"
