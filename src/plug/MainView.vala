@@ -15,6 +15,11 @@ public class PC.MainBox : Gtk.Box {
 
         items = new List<Widgets.UserItem> ();
 
+        var headerbar = new Adw.HeaderBar () {
+            show_end_title_buttons = false,
+            show_title = false
+        };
+
         list = new Gtk.ListBox () {
             selection_mode = SINGLE
         };
@@ -26,9 +31,17 @@ public class PC.MainBox : Gtk.Box {
             vexpand = true
         };
 
+        var toolbarview = new Adw.ToolbarView () {
+            content = scrolled_window,
+            top_bar_style = FLAT
+        };
+        toolbarview.add_top_bar (headerbar);
+
+        var sidebar = new Sidebar ();
+        sidebar.append (toolbarview);
+
         var paned = new Gtk.Paned (HORIZONTAL) {
-            position = 240,
-            start_child = scrolled_window,
+            start_child = sidebar,
             end_child = stack,
             shrink_start_child = false,
             shrink_end_child = false,
@@ -137,5 +150,16 @@ public class PC.MainBox : Gtk.Box {
         }
 
         return false;
+    }
+
+    // Workaround to set styles
+    private class Sidebar : Gtk.Box {
+        class construct {
+            set_css_name ("settingssidebar");
+        }
+
+        construct {
+            orientation = VERTICAL;
+        }
     }
 }
