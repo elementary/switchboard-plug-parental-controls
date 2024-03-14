@@ -11,8 +11,15 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
     private AppsBox apps_box;
 
     public ControlPage (Act.User user) {
+        var header = _("Other Accounts");
+
+        if (Utils.get_current_user () == user) {
+            header = _("My Account");
+        }
+
         Object (
             activatable: true,
+            header: header,
             title: user.get_real_name (),
             with_avatar: true,
             user: user
@@ -20,12 +27,6 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
     }
     construct {
         unowned var permission = Utils.get_permission ();
-
-        try {
-            avatar_paintable = Gdk.Texture.from_filename (user.get_icon_file ());
-        } catch (Error e) {
-            critical (e.message);
-        }
 
         if (Utils.get_current_user () == user) {
             description = _("Manage your own device usage by setting limits on Screen Time, websites, and apps.");
@@ -82,6 +83,8 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
         });
 
         permission.bind_property ("allowed", status_switch, "sensitive", SYNC_CREATE);
+
+        update_user ();
     }
 
     private void set_active (bool active) {
@@ -101,5 +104,16 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
         }
 
         return false;
+    }
+
+    public void update_user () {
+        title = user.get_real_name ();
+        status = user.get_user_name ();
+
+        try {
+            avatar_paintable = Gdk.Texture.from_filename (user.get_icon_file ());
+        } catch (Error e) {
+            critical (e.message);
+        }
     }
 }
