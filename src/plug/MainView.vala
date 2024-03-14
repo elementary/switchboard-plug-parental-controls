@@ -159,7 +159,7 @@ public class PC.MainBox : Gtk.Box {
         }
 
         construct {
-            orientation = VERTICAL;
+            add_css_class (Granite.STYLE_CLASS_SIDEBAR);
         }
     }
 }
