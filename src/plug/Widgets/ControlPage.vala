@@ -64,6 +64,7 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
         box.append (stack);
 
         child = box;
+        show_end_title_buttons = true;
     }
 
     public void set_active (bool active) {

@@ -43,11 +43,7 @@ public class PC.Widgets.UserItem : Gtk.ListBoxRow {
         };
 
         var grid = new Gtk.Grid () {
-            column_spacing = 12,
-            margin_top = 6,
-            margin_end = 12,
-            margin_bottom = 6,
-            margin_start = 12
+            column_spacing = 12
         };
         grid.attach (avatar, 0, 0, 1, 2);
         grid.attach (full_name_label, 1, 0);
