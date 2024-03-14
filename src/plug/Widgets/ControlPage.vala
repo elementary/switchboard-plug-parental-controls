@@ -18,8 +18,6 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
         );
     }
     construct {
-        unowned var permission = Utils.get_permission ();
-
         try {
             avatar_paintable = Gdk.Texture.from_filename (user.get_icon_file ());
         } catch (Error e) {
@@ -41,10 +39,6 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
         stack.add_titled (internet_box, "internet", _("Internet"));
         stack.add_titled (apps_box, "apps", _("Applications"));
 
-        permission.bind_property ("allowed", time_limit_view, "sensitive", SYNC_CREATE);
-        permission.bind_property ("allowed", internet_box, "sensitive", SYNC_CREATE);
-        permission.bind_property ("allowed", apps_box, "sensitive", SYNC_CREATE);
-
         var switcher = new Gtk.StackSwitcher () {
             halign = CENTER,
             margin_bottom = 12,
@@ -59,11 +53,27 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
             switcher_child = switcher_child.get_next_sibling ();
         }
 
+        var lock_button = new Gtk.LockButton (Utils.get_permission ());
+
+        var infobar = new Gtk.InfoBar () {
+            margin_bottom = 9
+        };
+        infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
+        infobar.add_child (new Gtk.Label (_("Some settings require administrator rights to be changed")));
+        infobar.add_action_widget (lock_button, 1);
+
         var box = new Gtk.Box (VERTICAL, 0);
+        box.append (infobar);
         box.append (switcher);
         box.append (stack);
 
         child = box;
+
+        unowned var permission = Utils.get_permission ();
+        permission.bind_property ("allowed", infobar, "revealed", SYNC_CREATE | INVERT_BOOLEAN);
+        permission.bind_property ("allowed", time_limit_view, "sensitive", SYNC_CREATE);
+        permission.bind_property ("allowed", internet_box, "sensitive", SYNC_CREATE);
+        permission.bind_property ("allowed", apps_box, "sensitive", SYNC_CREATE);
     }
 
     public void set_active (bool active) {
