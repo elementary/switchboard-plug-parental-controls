@@ -10,7 +10,6 @@ public class PC.Widgets.UserItem : Gtk.ListBoxRow {
     private Adw.Avatar avatar;
     private Gtk.Label full_name_label;
     private Gtk.Label username_label;
-    private Gtk.Switch master_switch;
 
     public weak Act.User user { public get; private set; }
 
@@ -38,10 +37,6 @@ public class PC.Widgets.UserItem : Gtk.ListBoxRow {
         };
         username_label.get_style_context ().add_class (Granite.STYLE_CLASS_SMALL_LABEL);
 
-        master_switch = new Gtk.Switch () {
-            valign = CENTER
-        };
-
         var grid = new Gtk.Grid () {
             column_spacing = 12,
             margin_top = 6,
@@ -52,28 +47,13 @@ public class PC.Widgets.UserItem : Gtk.ListBoxRow {
         grid.attach (avatar, 0, 0, 1, 2);
         grid.attach (full_name_label, 1, 0);
         grid.attach (username_label, 1, 1);
-        grid.attach (master_switch, 2, 0, 1, 2);
 
         child = grid;
-
-        master_switch.bind_property ("active", page.stack, "sensitive", SYNC_CREATE);
-        master_switch.sensitive = Utils.get_permission ().get_allowed ();
-        master_switch.notify["active"].connect (() => {
-            page.set_active (master_switch.active);
-        });
-
-        Utils.get_permission ().notify["allowed"].connect (() => {
-            master_switch.sensitive = Utils.get_permission ().get_allowed ();
-        });
 
         update_view ();
     }
 
     public void update_view () {
-        page.get_active.begin ((obj, res) => {
-            master_switch.active = page.get_active.end (res);
-        });
-
         full_name_label.label = user.get_real_name ();
         username_label.label = user.get_user_name ();
 
