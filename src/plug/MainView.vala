@@ -21,18 +21,8 @@ public class PC.MainBox : Gtk.Box {
             vexpand = true
         };
 
-        var lock_button = new Gtk.LockButton (Utils.get_permission ());
-
-        var infobar = new Gtk.InfoBar ();
-        infobar.add_child (new Gtk.Label (_("Some settings require administrator rights to be changed")));
-        infobar.add_action_widget (lock_button, 1);
-
         orientation = VERTICAL;
-        append (infobar);
         append (paned);
-
-        unowned Polkit.Permission permission = Utils.get_permission ();
-        permission.bind_property ("allowed", infobar, "revealed", SYNC_CREATE | INVERT_BOOLEAN);
 
         unowned var user_manager = Act.UserManager.get_default ();
         user_manager.user_added.connect (add_user);
