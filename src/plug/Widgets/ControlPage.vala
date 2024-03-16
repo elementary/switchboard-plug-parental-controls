@@ -12,13 +12,16 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
 
     public ControlPage (Act.User user) {
         var header = _("Other Accounts");
+        var description = _("Supervise and manage device usage with limits on Screen Time, websites, and apps. Some limits may be bypassed with an administrator's permission.");
 
         if (Utils.get_current_user () == user) {
             header = _("My Account");
+            description = _("Manage your own device usage by setting limits on Screen Time, websites, and apps.");
         }
 
         Object (
             activatable: true,
+            description: description,
             header: header,
             title: user.get_real_name (),
             with_avatar: true,
@@ -27,12 +30,6 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
     }
     construct {
         unowned var permission = Utils.get_permission ();
-
-        if (Utils.get_current_user () == user) {
-            description = _("Manage your own device usage by setting limits on Screen Time, websites, and apps.");
-        } else {
-            description = _("Supervise and manage device usage with limits on Screen Time, websites, and apps. Some limits may be bypassed with an administrator's permission.");
-        }
 
         time_limit_view = new TimeLimitView (user);
         var internet_box = new InternetBox (user);
