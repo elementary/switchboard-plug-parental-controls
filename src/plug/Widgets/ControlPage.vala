@@ -56,11 +56,15 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
 
         var lock_button = new Gtk.LockButton (Utils.get_permission ());
 
+        var infobar_label = new Gtk.Label (_("Some settings require administrator rights to be changed")) {
+            wrap = true
+        };
+
         var infobar = new Gtk.InfoBar () {
             margin_bottom = 9
         };
         infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
-        infobar.add_child (new Gtk.Label (_("Some settings require administrator rights to be changed")));
+        infobar.add_child (infobar_label);
         infobar.add_action_widget (lock_button, 1);
 
         var box = new Gtk.Box (VERTICAL, 0);
