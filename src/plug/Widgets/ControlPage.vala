@@ -12,6 +12,7 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
 
     public ControlPage (Act.User user) {
         Object (
+            activatable: true,
             title: user.get_real_name (),
             with_avatar: true,
             user: user
@@ -69,14 +70,30 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
 
         child = box;
 
+        status_switch.bind_property ("active", stack, "sensitive", SYNC_CREATE);
+        status_switch.notify["active"].connect (() => {
+            set_active (status_switch.active);
+        });
+
+        get_active.begin ((obj, res) => {
+            status_switch.active = get_active.end (res);
+        });
+
+        user.changed.connect (() => {
+            get_active.begin ((obj, res) => {
+                status_switch.active = get_active.end (res);
+            });
+        });
+
         unowned var permission = Utils.get_permission ();
-        permission.bind_property ("allowed", infobar, "revealed", SYNC_CREATE | INVERT_BOOLEAN);
-        permission.bind_property ("allowed", time_limit_view, "sensitive", SYNC_CREATE);
-        permission.bind_property ("allowed", internet_box, "sensitive", SYNC_CREATE);
         permission.bind_property ("allowed", apps_box, "sensitive", SYNC_CREATE);
+        permission.bind_property ("allowed", infobar, "revealed", SYNC_CREATE | INVERT_BOOLEAN);
+        permission.bind_property ("allowed", internet_box, "sensitive", SYNC_CREATE);
+        permission.bind_property ("allowed", status_switch, "sensitive", SYNC_CREATE);
+        permission.bind_property ("allowed", time_limit_view, "sensitive", SYNC_CREATE);
     }
 
-    public void set_active (bool active) {
+    private void set_active (bool active) {
         unowned Polkit.Permission permission = Utils.get_permission ();
         if (permission.allowed) {
             Utils.get_api ().set_user_daemon_active.begin (user.get_user_name (), active);
@@ -85,7 +102,7 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
         }
     }
 
-    public async bool get_active () {
+    private async bool get_active () {
         try {
             return yield Utils.get_api ().get_user_daemon_active (user.get_user_name ());
         } catch (Error e) {
