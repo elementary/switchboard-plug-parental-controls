@@ -20,6 +20,5 @@ src/plug/Views/InternetView.vala
 src/plug/Views/TimeLimitView.vala
 src/plug/Widgets/AppChooser.vala
 src/plug/Widgets/ControlPage.vala
-src/plug/Widgets/UserItem.vala
 src/plug/MainView.vala
 src/plug/Plug.vala

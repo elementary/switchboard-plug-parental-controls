@@ -11,26 +11,24 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
     private AppsBox apps_box;
 
     public ControlPage (Act.User user) {
+        var header = _("Other Accounts");
+        var description = _("Supervise and manage device usage with limits on Screen Time, websites, and apps. Some limits may be bypassed with an administrator's permission.");
+
+        if (Utils.get_current_user () == user) {
+            header = _("My Account");
+            description = _("Manage your own device usage by setting limits on Screen Time, websites, and apps.");
+        }
+
         Object (
             activatable: true,
+            description: description,
+            header: header,
             title: user.get_real_name (),
             with_avatar: true,
             user: user
         );
     }
     construct {
-        try {
-            avatar_paintable = Gdk.Texture.from_filename (user.get_icon_file ());
-        } catch (Error e) {
-            critical (e.message);
-        }
-
-        if (Utils.get_current_user () == user) {
-            description = _("Manage your own device usage by setting limits on Screen Time, websites, and apps.");
-        } else {
-            description = _("Supervise and manage device usage with limits on Screen Time, websites, and apps. Some limits may be bypassed with an administrator's permission.");
-        }
-
         time_limit_view = new TimeLimitView (user);
         var internet_box = new InternetBox (user);
         apps_box = new AppsBox (user);
@@ -73,6 +71,7 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
         box.append (stack);
 
         child = box;
+        show_end_title_buttons = true;
 
         status_switch.bind_property ("active", stack, "sensitive", SYNC_CREATE);
         status_switch.notify["active"].connect (() => {
@@ -95,6 +94,8 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
         permission.bind_property ("allowed", internet_box, "sensitive", SYNC_CREATE);
         permission.bind_property ("allowed", status_switch, "sensitive", SYNC_CREATE);
         permission.bind_property ("allowed", time_limit_view, "sensitive", SYNC_CREATE);
+
+        update_user ();
     }
 
     private void set_active (bool active) {
@@ -114,5 +115,16 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
         }
 
         return false;
+    }
+
+    public void update_user () {
+        title = user.get_real_name ();
+        status = user.get_user_name ();
+
+        try {
+            avatar_paintable = Gdk.Texture.from_filename (user.get_icon_file ());
+        } catch (Error e) {
+            critical (e.message);
+        }
     }
 }
