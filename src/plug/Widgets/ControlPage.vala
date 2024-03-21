@@ -71,6 +71,7 @@ public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
         box.append (stack);
 
         child = box;
+        show_end_title_buttons = true;
 
         status_switch.bind_property ("active", stack, "sensitive", SYNC_CREATE);
         status_switch.notify["active"].connect (() => {

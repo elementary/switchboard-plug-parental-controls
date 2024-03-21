@@ -10,7 +10,9 @@ public class PC.MainBox : Gtk.Box {
     construct {
         stack = new Gtk.Stack ();
 
-        var sidebar = new Switchboard.SettingsSidebar (stack);
+        var sidebar = new Switchboard.SettingsSidebar (stack) {
+            show_title_buttons = true
+        };
 
         var paned = new Gtk.Paned (HORIZONTAL) {
             start_child = sidebar,
