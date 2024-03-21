@@ -50,7 +50,7 @@ public class PC.MainBox : Gtk.Box {
     }
 
     private void update_user (Act.User user) {
-        ((Widgets.ControlPage) stack.get_child_by_name (user.uid.to_string ())).update_user;
+        ((Widgets.ControlPage) stack.get_child_by_name (user.uid.to_string ())).update_user ();
     }
 
     private void remove_user (Act.User user) {
