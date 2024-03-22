@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-07 11:02+0000\n"
-"PO-Revision-Date: 2024-01-19 16:35+0000\n"
+"PO-Revision-Date: 2024-03-23 19:13+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pl/>\n"
@@ -177,7 +177,7 @@ msgstr "Internet"
 
 #: src/plug/Widgets/ControlPage.vala:42
 msgid "Applications"
-msgstr "Programy"
+msgstr "Aplikacje"
 
 #: src/plug/MainView.vala:41
 msgid "Some settings require administrator rights to be changed"
