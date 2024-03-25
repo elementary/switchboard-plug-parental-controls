@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-02-07 11:02+0000\n"
-"PO-Revision-Date: 2024-02-08 16:11+0000\n"
+"PO-Revision-Date: 2024-03-26 22:13+0000\n"
 "Last-Translator: Hugo Carvalho <hugokarvalho@hotmail.com>\n"
 "Language-Team: Portuguese <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pt/>\n"
@@ -63,10 +63,8 @@ msgid "Blocked Apps"
 msgstr "Aplicações bloqueadas"
 
 #: src/plug/Views/AppsView.vala:38
-#, fuzzy
-#| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
-msgstr "Adicionar aplicações a impedir…"
+msgstr "Adicionar aplicação bloqueada…"
 
 #: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
@@ -116,13 +114,8 @@ msgid "To:"
 msgstr "Para:"
 
 #: src/plug/Views/TimeLimitView.vala:163
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekends."
 msgid "Screen Time is not limited on weekends."
-msgstr ""
-"O tempo do ecrã para %s não será limitado durante este período nos fins-de-"
-"semana."
+msgstr "O tempo de ecrã não é limitado aos fins-de-semana."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:165
@@ -135,13 +128,8 @@ msgstr ""
 "terminará automaticamente assim que este período terminar:"
 
 #: src/plug/Views/TimeLimitView.vala:169
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekdays."
 msgid "Screen Time is not limited on weekdays."
-msgstr ""
-"O tempo do ecrã para %s não será limitado durante este período nos dias de "
-"semana."
+msgstr "O tempo de ecrã não é limitado nos dias de semana."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:171
@@ -166,12 +154,17 @@ msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
 msgstr ""
+"Gerir a utilização do seu próprio dispositivo, definindo limites para o "
+"tempo de ecrã, websites e aplicações."
 
 #: src/plug/Widgets/ControlPage.vala:32
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
+"Supervisionar e gerir a utilização do dispositivo com limites de tempo de "
+"ecrã, websites e aplicações. Alguns limites podem ser contornados com a "
+"permissão de um administrador."
 
 #: src/plug/Widgets/ControlPage.vala:40
 msgid "Screen Time"
