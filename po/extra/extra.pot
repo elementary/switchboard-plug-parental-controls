@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-06 19:17+0000\n"
+"POT-Creation-Date: 2024-04-03 17:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,10 +87,10 @@ msgstr ""
 msgid "Reliably apply time restrictions"
 msgstr ""
 
-#: data/screentime-limits.policy.in.in:10
+#: data/screentime-limits.policy.in:10
 msgid "Manage Screen Time and Limits"
 msgstr ""
 
-#: data/screentime-limits.policy.in.in:11
+#: data/screentime-limits.policy.in:11
 msgid "Authentication is required to change Screen Time and Limits"
 msgstr ""

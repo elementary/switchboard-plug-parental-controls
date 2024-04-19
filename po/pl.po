@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-06 19:17+0000\n"
-"PO-Revision-Date: 2024-01-14 10:11+0000\n"
+"POT-Creation-Date: 2024-04-03 17:21+0000\n"
+"PO-Revision-Date: 2024-03-23 19:13+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
 "switchboard-plug-parental-controls/pl/>\n"
@@ -150,55 +150,46 @@ msgstr "Wyszukiwanie programów"
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: src/plug/Widgets/ControlPage.vala:36
-msgid "Screen Time"
-msgstr "Harmonogram ekranu"
+#: src/plug/Widgets/ControlPage.vala:14
+msgid "Other Accounts"
+msgstr "Inne konta"
 
-#: src/plug/Widgets/ControlPage.vala:37
-msgid "Internet"
-msgstr "Internet"
-
-#: src/plug/Widgets/ControlPage.vala:38
-msgid "Applications"
-msgstr "Programy"
-
-#: src/plug/Widgets/ControlPage.vala:90
-#, fuzzy
-#| msgid ""
-#| "Manage your usage of this device by setting limits on time usage, "
-#| "websites, and apps."
-msgid ""
-"Manage your own device usage by setting limits on Screen Time, websites, and "
-"apps."
-msgstr ""
-"Zarządzaj swoim użyciem urządzenia poprzez ustawienie limitów używania ze "
-"względu na czas, strony oraz aplikacje."
-
-#: src/plug/Widgets/ControlPage.vala:92
-#, fuzzy
-#| msgid ""
-#| "Supervise and manage usage of this device with limits on time usage, "
-#| "websites, and apps. Some limits may be bypassed with an administrator's "
-#| "authorization."
+#: src/plug/Widgets/ControlPage.vala:15
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
-"Nadzoruj i zarządzaj użytkowaniem tego urządzenia przez nałożenie limitu "
+"Nadzoruj i zarządzaj użytkowaniem urządzenia przez nałożenie limitu "
 "czasowego, na strony lub aplikacje. Niektóre limity mogą być ominięte przy "
 "użyciu uprawnień administracyjnych."
 
-#: src/plug/MainView.vala:41
-msgid "Some settings require administrator rights to be changed"
-msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"
-
-#: src/plug/MainView.vala:124
+#: src/plug/Widgets/ControlPage.vala:18
 msgid "My Account"
 msgstr "Moje konto"
 
-#: src/plug/MainView.vala:127
-msgid "Other Accounts"
-msgstr "Inne konta"
+#: src/plug/Widgets/ControlPage.vala:19
+msgid ""
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
+msgstr ""
+"Zarządzaj swoim użyciem swojego urządzenia poprzez ustawienie limitów ze "
+"względu na czas, strony oraz aplikacje."
+
+#: src/plug/Widgets/ControlPage.vala:37
+msgid "Screen Time"
+msgstr "Harmonogram ekranu"
+
+#: src/plug/Widgets/ControlPage.vala:38
+msgid "Internet"
+msgstr "Internet"
+
+#: src/plug/Widgets/ControlPage.vala:39
+msgid "Applications"
+msgstr "Aplikacje"
+
+#: src/plug/Widgets/ControlPage.vala:57
+msgid "Some settings require administrator rights to be changed"
+msgstr "Zmiana niektórych ustawień wymaga uprawnień administratora"
 
 #: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"

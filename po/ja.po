@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-06 19:17+0000\n"
+"POT-Creation-Date: 2024-04-03 17:21+0000\n"
 "PO-Revision-Date: 2024-01-14 10:11+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -147,43 +147,45 @@ msgstr "アプリケーションを検索"
 msgid "Cancel"
 msgstr "キャンセル"
 
-#: src/plug/Widgets/ControlPage.vala:36
-msgid "Screen Time"
-msgstr "スクリーンタイム"
+#: src/plug/Widgets/ControlPage.vala:14
+msgid "Other Accounts"
+msgstr "ほかのアカウント"
 
-#: src/plug/Widgets/ControlPage.vala:37
-msgid "Internet"
-msgstr "インターネット"
-
-#: src/plug/Widgets/ControlPage.vala:38
-msgid "Applications"
-msgstr "アプリケーション"
-
-#: src/plug/Widgets/ControlPage.vala:90
-msgid ""
-"Manage your own device usage by setting limits on Screen Time, websites, and "
-"apps."
-msgstr "スクリーンタイム、Web "
-"サイト、アプリに制限を設けることで、デバイスの利用を自分で管理できます。"
-
-#: src/plug/Widgets/ControlPage.vala:92
+#: src/plug/Widgets/ControlPage.vala:15
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
-msgstr "スクリーンタイム、Web サイト、アプリに制限を設けて、デバイス使用状況を管理し"
+msgstr ""
+"スクリーンタイム、Web サイト、アプリに制限を設けて、デバイス使用状況を管理し"
 "ます。一部の制限は管理者権限で無視できます。"
 
-#: src/plug/MainView.vala:41
-msgid "Some settings require administrator rights to be changed"
-msgstr "一部の設定変更には管理者権限が必要です"
-
-#: src/plug/MainView.vala:124
+#: src/plug/Widgets/ControlPage.vala:18
 msgid "My Account"
 msgstr "自分のアカウント"
 
-#: src/plug/MainView.vala:127
-msgid "Other Accounts"
-msgstr "ほかのアカウント"
+#: src/plug/Widgets/ControlPage.vala:19
+msgid ""
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
+msgstr ""
+"スクリーンタイム、Web サイト、アプリに制限を設けることで、デバイスの利用を自"
+"分で管理できます。"
+
+#: src/plug/Widgets/ControlPage.vala:37
+msgid "Screen Time"
+msgstr "スクリーンタイム"
+
+#: src/plug/Widgets/ControlPage.vala:38
+msgid "Internet"
+msgstr "インターネット"
+
+#: src/plug/Widgets/ControlPage.vala:39
+msgid "Applications"
+msgstr "アプリケーション"
+
+#: src/plug/Widgets/ControlPage.vala:57
+msgid "Some settings require administrator rights to be changed"
+msgstr "一部の設定変更には管理者権限が必要です"
 
 #: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"

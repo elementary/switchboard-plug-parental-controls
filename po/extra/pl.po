@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 10:31+0000\n"
+"POT-Creation-Date: 2024-04-03 17:21+0000\n"
 "PO-Revision-Date: 2021-11-08 08:35+0000\n"
 "Last-Translator: Marcin Serwin <marcin.serwin0@protonmail.com>\n"
 "Language-Team: Polish <https://l10n.elementary.io/projects/switchboard/"
@@ -20,31 +20,31 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
+#: data/screentime-limits.metainfo.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
 msgstr "Ustawienia czasu przed ekranem i ograniczeń"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
+#: data/screentime-limits.metainfo.xml.in:6
 msgid "Configure time limits and restrict application usage"
 msgstr "Konfiguruj ograniczenia czasowe i ogranicz korzystanie z programów"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:27
+#: data/screentime-limits.metainfo.xml.in:12
+#: data/screentime-limits.metainfo.xml.in:27
 msgid "Minor updates:"
 msgstr "Mniejsze aktualizacje:"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:37
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:48
+#: data/screentime-limits.metainfo.xml.in:14
+#: data/screentime-limits.metainfo.xml.in:31
+#: data/screentime-limits.metainfo.xml.in:37
+#: data/screentime-limits.metainfo.xml.in:48
 msgid "Updated translations"
 msgstr "Zaktualizowane tłumaczenia"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
+#: data/screentime-limits.metainfo.xml.in:21
 msgid "Fixes:"
 msgstr "Poprawki:"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
+#: data/screentime-limits.metainfo.xml.in:23
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
@@ -52,50 +52,50 @@ msgstr ""
 "Ustawiono domyślny czas przed ekranem od północy do północy by uniknąć "
 "przypadkowego zablokowania"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:24
+#: data/screentime-limits.metainfo.xml.in:24
 msgid "Improve reliability of app blocking"
 msgstr "Poprawiono skuteczność blokowania aplikacji"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:25
+#: data/screentime-limits.metainfo.xml.in:25
 msgid "Support blocking Flatpak apps"
 msgstr "Wsparcie dla blokowania aplikacji Flatpak"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:29
+#: data/screentime-limits.metainfo.xml.in:29
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr "Wyjaśnienie działania Czasu przed ekranem gdy jest włączany"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
+#: data/screentime-limits.metainfo.xml.in:30
 msgid "New colorful avatar fallback"
 msgstr "Nowe kolorowe awatary zastępcze"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:42
+#: data/screentime-limits.metainfo.xml.in:42
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Zmiana nazwy na Czas przed ekranem i ograniczenia"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:43
+#: data/screentime-limits.metainfo.xml.in:43
 msgid "Show your own account"
 msgstr "Pokazanie twojego konta"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:44
+#: data/screentime-limits.metainfo.xml.in:44
 msgid "Redesign the app chooser"
 msgstr "Przeprojektowanie wybierania aplikacji"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:45
+#: data/screentime-limits.metainfo.xml.in:45
 msgid "Redesign the Screen Time view"
 msgstr "Przeprojektowania widoku czasu przed ekranem"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:46
+#: data/screentime-limits.metainfo.xml.in:46
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr "Naprawiono problem z usuwaniem URLi z zablokowanych stron"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:47
+#: data/screentime-limits.metainfo.xml.in:47
 msgid "Reliably apply time restrictions"
 msgstr "Skutecznie aplikuj restrykcje czasu"
 
-#: data/screentime-limits.policy.in.in:10
+#: data/screentime-limits.policy.in:10
 msgid "Manage Screen Time and Limits"
 msgstr "Zarządzanie Czasem przed ekranem i ograniczeniami"
 
-#: data/screentime-limits.policy.in.in:11
+#: data/screentime-limits.policy.in:11
 msgid "Authentication is required to change Screen Time and Limits"
 msgstr "Wymagane uwierzytelnianie by zmienić Czas przed ekranem i ograczenia"

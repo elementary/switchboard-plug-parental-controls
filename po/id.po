@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-06 19:17+0000\n"
+"POT-Creation-Date: 2024-04-03 17:21+0000\n"
 "PO-Revision-Date: 2023-06-02 08:07+0000\n"
 "Last-Translator: Faisal Rachmadin <frachmadin@users.noreply.l10n.elementary."
 "io>\n"
@@ -141,41 +141,41 @@ msgstr "Cari Aplikasi"
 msgid "Cancel"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:36
-msgid "Screen Time"
-msgstr ""
+#: src/plug/Widgets/ControlPage.vala:14
+msgid "Other Accounts"
+msgstr "Akun Lain"
 
-#: src/plug/Widgets/ControlPage.vala:37
-msgid "Internet"
-msgstr "Internet"
-
-#: src/plug/Widgets/ControlPage.vala:38
-msgid "Applications"
-msgstr "Aplikasi"
-
-#: src/plug/Widgets/ControlPage.vala:90
-msgid ""
-"Manage your own device usage by setting limits on Screen Time, websites, and "
-"apps."
-msgstr ""
-
-#: src/plug/Widgets/ControlPage.vala:92
+#: src/plug/Widgets/ControlPage.vala:15
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
 
-#: src/plug/MainView.vala:41
-msgid "Some settings require administrator rights to be changed"
-msgstr "Beberapa pengaturan memerlukan hak administrator untuk diubah"
-
-#: src/plug/MainView.vala:124
+#: src/plug/Widgets/ControlPage.vala:18
 msgid "My Account"
 msgstr "Akun Saya"
 
-#: src/plug/MainView.vala:127
-msgid "Other Accounts"
-msgstr "Akun Lain"
+#: src/plug/Widgets/ControlPage.vala:19
+msgid ""
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
+msgstr ""
+
+#: src/plug/Widgets/ControlPage.vala:37
+msgid "Screen Time"
+msgstr ""
+
+#: src/plug/Widgets/ControlPage.vala:38
+msgid "Internet"
+msgstr "Internet"
+
+#: src/plug/Widgets/ControlPage.vala:39
+msgid "Applications"
+msgstr "Aplikasi"
+
+#: src/plug/Widgets/ControlPage.vala:57
+msgid "Some settings require administrator rights to be changed"
+msgstr "Beberapa pengaturan memerlukan hak administrator untuk diubah"
 
 #: src/plug/Plug.vala:36
 #, fuzzy

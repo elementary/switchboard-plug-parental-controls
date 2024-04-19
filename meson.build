@@ -1,7 +1,7 @@
 project(
     'screentime-limits',
     'vala', 'c',
-    meson_version: '>= 0.49',
+    meson_version: '>= 0.57',
     version: '6.0.1'
 )
 
@@ -50,3 +50,7 @@ posix_dep = meson.get_compiler('vala').find_library('posix')
 subdir('data')
 subdir('src')
 subdir('po')
+
+gnome.post_install(
+  gtk_update_icon_cache: true
+)

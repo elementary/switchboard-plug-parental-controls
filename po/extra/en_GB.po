@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 10:31+0000\n"
+"POT-Creation-Date: 2024-04-03 17:21+0000\n"
 "PO-Revision-Date: 2021-07-18 00:36+0000\n"
 "Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
@@ -19,31 +19,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
+#: data/screentime-limits.metainfo.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
 msgstr "Screen Time &amp; Limits Settings"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
+#: data/screentime-limits.metainfo.xml.in:6
 msgid "Configure time limits and restrict application usage"
 msgstr "Configure time limits and restrict application usage"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:27
+#: data/screentime-limits.metainfo.xml.in:12
+#: data/screentime-limits.metainfo.xml.in:27
 msgid "Minor updates:"
 msgstr "Minor updates:"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:37
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:48
+#: data/screentime-limits.metainfo.xml.in:14
+#: data/screentime-limits.metainfo.xml.in:31
+#: data/screentime-limits.metainfo.xml.in:37
+#: data/screentime-limits.metainfo.xml.in:48
 msgid "Updated translations"
 msgstr "Updated translations"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
+#: data/screentime-limits.metainfo.xml.in:21
 msgid "Fixes:"
 msgstr "Fixes:"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
+#: data/screentime-limits.metainfo.xml.in:23
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
@@ -51,51 +51,51 @@ msgstr ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:24
+#: data/screentime-limits.metainfo.xml.in:24
 msgid "Improve reliability of app blocking"
 msgstr "Improve reliability of app blocking"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:25
+#: data/screentime-limits.metainfo.xml.in:25
 msgid "Support blocking Flatpak apps"
 msgstr "Support blocking Flatpak apps"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:29
+#: data/screentime-limits.metainfo.xml.in:29
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr "Clarify how Screen Time limits work and when they take effect"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
+#: data/screentime-limits.metainfo.xml.in:30
 msgid "New colorful avatar fallback"
 msgstr "New colourful avatar fallback"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:42
+#: data/screentime-limits.metainfo.xml.in:42
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Rename to Screen Time &amp; Limits"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:43
+#: data/screentime-limits.metainfo.xml.in:43
 msgid "Show your own account"
 msgstr "Show your own account"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:44
+#: data/screentime-limits.metainfo.xml.in:44
 msgid "Redesign the app chooser"
 msgstr "Redesign the app chooser"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:45
+#: data/screentime-limits.metainfo.xml.in:45
 msgid "Redesign the Screen Time view"
 msgstr "Redesign the Screen Time view"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:46
+#: data/screentime-limits.metainfo.xml.in:46
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr "Fix an issue with removing URLs from restricted websites"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:47
+#: data/screentime-limits.metainfo.xml.in:47
 msgid "Reliably apply time restrictions"
 msgstr "Reliably apply time restrictions"
 
-#: data/screentime-limits.policy.in.in:10
+#: data/screentime-limits.policy.in:10
 msgid "Manage Screen Time and Limits"
 msgstr "Manage Screen Time and Limits"
 
-#: data/screentime-limits.policy.in.in:11
+#: data/screentime-limits.policy.in:11
 msgid "Authentication is required to change Screen Time and Limits"
 msgstr "Authentication is required to change Screen Time and Limits"
 

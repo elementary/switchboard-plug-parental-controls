@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-06 19:17+0000\n"
+"POT-Creation-Date: 2024-04-03 17:21+0000\n"
 "PO-Revision-Date: 2020-05-27 12:11+0000\n"
 "Last-Translator: Rantyrant <diseasemonger@gmail.com>\n"
 "Language-Team: Danish <https://l10n.elementary.io/projects/switchboard/"
@@ -159,42 +159,42 @@ msgstr "Søg efter Applikationer"
 msgid "Cancel"
 msgstr ""
 
-#: src/plug/Widgets/ControlPage.vala:36
-msgid "Screen Time"
-msgstr "Skærmtid"
+#: src/plug/Widgets/ControlPage.vala:14
+msgid "Other Accounts"
+msgstr "Andre konti"
 
-#: src/plug/Widgets/ControlPage.vala:37
-msgid "Internet"
-msgstr "Internet"
-
-#: src/plug/Widgets/ControlPage.vala:38
-msgid "Applications"
-msgstr "Applikationer"
-
-#: src/plug/Widgets/ControlPage.vala:90
-msgid ""
-"Manage your own device usage by setting limits on Screen Time, websites, and "
-"apps."
-msgstr ""
-
-#: src/plug/Widgets/ControlPage.vala:92
+#: src/plug/Widgets/ControlPage.vala:15
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
 
-#: src/plug/MainView.vala:41
-msgid "Some settings require administrator rights to be changed"
-msgstr ""
-"Nogle indstillinger kræver administratorrettigheder for at blive ændret"
-
-#: src/plug/MainView.vala:124
+#: src/plug/Widgets/ControlPage.vala:18
 msgid "My Account"
 msgstr "Min konto"
 
-#: src/plug/MainView.vala:127
-msgid "Other Accounts"
-msgstr "Andre konti"
+#: src/plug/Widgets/ControlPage.vala:19
+msgid ""
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
+msgstr ""
+
+#: src/plug/Widgets/ControlPage.vala:37
+msgid "Screen Time"
+msgstr "Skærmtid"
+
+#: src/plug/Widgets/ControlPage.vala:38
+msgid "Internet"
+msgstr "Internet"
+
+#: src/plug/Widgets/ControlPage.vala:39
+msgid "Applications"
+msgstr "Applikationer"
+
+#: src/plug/Widgets/ControlPage.vala:57
+msgid "Some settings require administrator rights to be changed"
+msgstr ""
+"Nogle indstillinger kræver administratorrettigheder for at blive ændret"
 
 #: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"

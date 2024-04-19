@@ -4,30 +4,31 @@
  *                         2015 Adam Bieńkowski
  */
 
-public class PC.Widgets.ControlPage : Gtk.Box {
+public class PC.Widgets.ControlPage : Switchboard.SettingsPage {
     public weak Act.User user { get; construct; }
     public Gtk.Stack stack;
     private TimeLimitView time_limit_view;
     private AppsBox apps_box;
 
     public ControlPage (Act.User user) {
-        Object (user: user);
-    }
+        var header = _("Other Accounts");
+        var description = _("Supervise and manage device usage with limits on Screen Time, websites, and apps. Some limits may be bypassed with an administrator's permission.");
 
-    class construct {
-        set_css_name ("simplesettingspage");
-    }
+        if (Utils.get_current_user () == user) {
+            header = _("My Account");
+            description = _("Manage your own device usage by setting limits on Screen Time, websites, and apps.");
+        }
 
+        Object (
+            activatable: true,
+            description: description,
+            header: header,
+            title: user.get_real_name (),
+            with_avatar: true,
+            user: user
+        );
+    }
     construct {
-        unowned var permission = Utils.get_permission ();
-
-        hexpand = true;
-        margin_top = 12;
-        margin_end = 12;
-        margin_bottom = 12;
-        margin_start = 12;
-        orientation = VERTICAL;
-
         time_limit_view = new TimeLimitView (user);
         var internet_box = new InternetBox (user);
         apps_box = new AppsBox (user);
@@ -36,10 +37,6 @@ public class PC.Widgets.ControlPage : Gtk.Box {
         stack.add_titled (time_limit_view, "general", _("Screen Time"));
         stack.add_titled (internet_box, "internet", _("Internet"));
         stack.add_titled (apps_box, "apps", _("Applications"));
-
-        permission.bind_property ("allowed", time_limit_view, "sensitive", SYNC_CREATE);
-        permission.bind_property ("allowed", internet_box, "sensitive", SYNC_CREATE);
-        permission.bind_property ("allowed", apps_box, "sensitive", SYNC_CREATE);
 
         var switcher = new Gtk.StackSwitcher () {
             halign = CENTER,
@@ -55,53 +52,53 @@ public class PC.Widgets.ControlPage : Gtk.Box {
             switcher_child = switcher_child.get_next_sibling ();
         }
 
-        var header_grid = new Gtk.Grid () {
-            column_spacing = 12,
-            halign = START
-        };
-        header_grid.add_css_class ("header-area");
+        var lock_button = new Gtk.LockButton (Utils.get_permission ());
 
-        var avatar = new Adw.Avatar (48, user.get_real_name (), true) {
-            valign = START
+        var infobar_label = new Gtk.Label (_("Some settings require administrator rights to be changed")) {
+            wrap = true
         };
 
-        try {
-            avatar.custom_image = Gdk.Texture.from_filename (user.get_icon_file ());
-        } catch (Error e) {
-            critical (e.message);
-        }
-
-        var full_name = new Gtk.Label (user.get_real_name ()) {
-            hexpand = true,
-            selectable = true,
-            wrap = true,
-            xalign = 0
+        var infobar = new Gtk.InfoBar () {
+            margin_bottom = 9
         };
-        full_name.get_style_context ().add_class (Granite.STYLE_CLASS_H2_LABEL);
+        infobar.add_css_class (Granite.STYLE_CLASS_FRAME);
+        infobar.add_child (infobar_label);
+        infobar.add_action_widget (lock_button, 1);
 
-        var description_message = new Gtk.Label ("") {
-            selectable = true,
-            use_markup = true,
-            wrap = true,
-            xalign = 0
-        };
+        var box = new Gtk.Box (VERTICAL, 0);
+        box.append (infobar);
+        box.append (switcher);
+        box.append (stack);
 
-        if (Utils.get_current_user () == user) {
-            description_message.label = _("Manage your own device usage by setting limits on Screen Time, websites, and apps.");
-        } else {
-            description_message.label = _("Supervise and manage device usage with limits on Screen Time, websites, and apps. Some limits may be bypassed with an administrator's permission.");
-        }
+        child = box;
+        show_end_title_buttons = true;
 
-        header_grid.attach (avatar, 0, 0, 1, 2);
-        header_grid.attach (full_name, 1, 0);
-        header_grid.attach (description_message, 1, 1);
+        status_switch.bind_property ("active", stack, "sensitive", SYNC_CREATE);
+        status_switch.notify["active"].connect (() => {
+            set_active (status_switch.active);
+        });
 
-        append (header_grid);
-        append (switcher);
-        append (stack);
+        get_active.begin ((obj, res) => {
+            status_switch.active = get_active.end (res);
+        });
+
+        user.changed.connect (() => {
+            get_active.begin ((obj, res) => {
+                status_switch.active = get_active.end (res);
+            });
+        });
+
+        unowned var permission = Utils.get_permission ();
+        permission.bind_property ("allowed", apps_box, "sensitive", SYNC_CREATE);
+        permission.bind_property ("allowed", infobar, "revealed", SYNC_CREATE | INVERT_BOOLEAN);
+        permission.bind_property ("allowed", internet_box, "sensitive", SYNC_CREATE);
+        permission.bind_property ("allowed", status_switch, "sensitive", SYNC_CREATE);
+        permission.bind_property ("allowed", time_limit_view, "sensitive", SYNC_CREATE);
+
+        update_user ();
     }
 
-    public void set_active (bool active) {
+    private void set_active (bool active) {
         unowned Polkit.Permission permission = Utils.get_permission ();
         if (permission.allowed) {
             Utils.get_api ().set_user_daemon_active.begin (user.get_user_name (), active);
@@ -110,7 +107,7 @@ public class PC.Widgets.ControlPage : Gtk.Box {
         }
     }
 
-    public async bool get_active () {
+    private async bool get_active () {
         try {
             return yield Utils.get_api ().get_user_daemon_active (user.get_user_name ());
         } catch (Error e) {
@@ -118,5 +115,16 @@ public class PC.Widgets.ControlPage : Gtk.Box {
         }
 
         return false;
+    }
+
+    public void update_user () {
+        title = user.get_real_name ();
+        status = user.get_user_name ();
+
+        try {
+            avatar_paintable = Gdk.Texture.from_filename (user.get_icon_file ());
+        } catch (Error e) {
+            critical (e.message);
+        }
     }
 }

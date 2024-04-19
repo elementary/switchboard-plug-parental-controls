@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-06 19:17+0000\n"
+"POT-Creation-Date: 2024-04-03 17:21+0000\n"
 "PO-Revision-Date: 2024-01-10 11:11+0000\n"
 "Last-Translator: Uwe S <saabisto@gmx.de>\n"
 "Language-Team: German <https://l10n.elementary.io/projects/switchboard/"
@@ -150,27 +150,11 @@ msgstr "Anwendungen suchen"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: src/plug/Widgets/ControlPage.vala:36
-msgid "Screen Time"
-msgstr "Rechnerzeit"
+#: src/plug/Widgets/ControlPage.vala:14
+msgid "Other Accounts"
+msgstr "Weitere Konten"
 
-#: src/plug/Widgets/ControlPage.vala:37
-msgid "Internet"
-msgstr "Internet"
-
-#: src/plug/Widgets/ControlPage.vala:38
-msgid "Applications"
-msgstr "Anwendungen"
-
-#: src/plug/Widgets/ControlPage.vala:90
-msgid ""
-"Manage your own device usage by setting limits on Screen Time, websites, and "
-"apps."
-msgstr ""
-"Verwendung Ihres Gerätes verwalten durch Einschränkungen bei Rechnerzeit, "
-"Intenet-Seiten und Anwendungen."
-
-#: src/plug/Widgets/ControlPage.vala:92
+#: src/plug/Widgets/ControlPage.vala:15
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
@@ -179,19 +163,35 @@ msgstr ""
 "Seiten und Anwendungen eingeschränkt werden. Einige dieser Einschränkungen "
 "können möglicherweise mit Systemverwalterrechten umgangen werden."
 
-#: src/plug/MainView.vala:41
+#: src/plug/Widgets/ControlPage.vala:18
+msgid "My Account"
+msgstr "Mein Konto"
+
+#: src/plug/Widgets/ControlPage.vala:19
+msgid ""
+"Manage your own device usage by setting limits on Screen Time, websites, and "
+"apps."
+msgstr ""
+"Verwendung Ihres Gerätes verwalten durch Einschränkungen bei Rechnerzeit, "
+"Intenet-Seiten und Anwendungen."
+
+#: src/plug/Widgets/ControlPage.vala:37
+msgid "Screen Time"
+msgstr "Rechnerzeit"
+
+#: src/plug/Widgets/ControlPage.vala:38
+msgid "Internet"
+msgstr "Internet"
+
+#: src/plug/Widgets/ControlPage.vala:39
+msgid "Applications"
+msgstr "Anwendungen"
+
+#: src/plug/Widgets/ControlPage.vala:57
 msgid "Some settings require administrator rights to be changed"
 msgstr ""
 "Bei einigen Einstellungen werden Systemverwalterberechtigungen benötigt, um "
 "sie ändern zu können"
-
-#: src/plug/MainView.vala:124
-msgid "My Account"
-msgstr "Mein Konto"
-
-#: src/plug/MainView.vala:127
-msgid "Other Accounts"
-msgstr "Weitere Konten"
 
 #: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"

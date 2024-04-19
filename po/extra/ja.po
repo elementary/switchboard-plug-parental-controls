@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-05 10:31+0000\n"
+"POT-Creation-Date: 2024-04-03 17:21+0000\n"
 "PO-Revision-Date: 2022-04-09 01:40+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
@@ -19,31 +19,31 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:5
+#: data/screentime-limits.metainfo.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
 msgstr "スクリーンタイムと制限の設定"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:6
+#: data/screentime-limits.metainfo.xml.in:6
 msgid "Configure time limits and restrict application usage"
 msgstr "時間制限を設定し、アプリケーションの使用を制限します"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:12
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:27
+#: data/screentime-limits.metainfo.xml.in:12
+#: data/screentime-limits.metainfo.xml.in:27
 msgid "Minor updates:"
 msgstr "そのほかのアップデート:"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:14
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:31
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:37
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:48
+#: data/screentime-limits.metainfo.xml.in:14
+#: data/screentime-limits.metainfo.xml.in:31
+#: data/screentime-limits.metainfo.xml.in:37
+#: data/screentime-limits.metainfo.xml.in:48
 msgid "Updated translations"
 msgstr "翻訳の更新"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:21
+#: data/screentime-limits.metainfo.xml.in:21
 msgid "Fixes:"
 msgstr "修正点:"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:23
+#: data/screentime-limits.metainfo.xml.in:23
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
@@ -51,51 +51,51 @@ msgstr ""
 "誤ってロックアウトされてしまわないように、デフォルトのスクリーンタイムを深夜"
 "から深夜に変更"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:24
+#: data/screentime-limits.metainfo.xml.in:24
 msgid "Improve reliability of app blocking"
 msgstr "アプリ実行のブロックにおける信頼性を改善"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:25
+#: data/screentime-limits.metainfo.xml.in:25
 msgid "Support blocking Flatpak apps"
 msgstr "Flatpak アプリの実行をブロックできるように変更"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:29
+#: data/screentime-limits.metainfo.xml.in:29
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr "スクリーンタイムの制限の仕組みや制限時間を明確化"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:30
+#: data/screentime-limits.metainfo.xml.in:30
 msgid "New colorful avatar fallback"
 msgstr "アバター画像未設定時に背景を色付きで表示するように変更"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:42
+#: data/screentime-limits.metainfo.xml.in:42
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "スクリーンタイムと制限の設定に名称変更"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:43
+#: data/screentime-limits.metainfo.xml.in:43
 msgid "Show your own account"
 msgstr "利用中のアカウントも表示するように修正"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:44
+#: data/screentime-limits.metainfo.xml.in:44
 msgid "Redesign the app chooser"
 msgstr "アプリ選択画面のデザインを変更"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:45
+#: data/screentime-limits.metainfo.xml.in:45
 msgid "Redesign the Screen Time view"
 msgstr "スクリーンタイムビューのデザインを変更"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:46
+#: data/screentime-limits.metainfo.xml.in:46
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr "制限された Web サイトから URL を削除する際の不具合を修正"
 
-#: data/io.elementary.switchboard.parental-controls.appdata.xml.in:47
+#: data/screentime-limits.metainfo.xml.in:47
 msgid "Reliably apply time restrictions"
 msgstr "時間制限が正しく適用されるように修正"
 
-#: data/screentime-limits.policy.in.in:10
+#: data/screentime-limits.policy.in:10
 msgid "Manage Screen Time and Limits"
 msgstr "スクリーンタイムと制限を管理"
 
-#: data/screentime-limits.policy.in.in:11
+#: data/screentime-limits.policy.in:11
 msgid "Authentication is required to change Screen Time and Limits"
 msgstr "スクリーンタイムと制限を変更するには認証が必要です"
 

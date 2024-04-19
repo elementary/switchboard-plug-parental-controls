@@ -2,7 +2,7 @@
 Name=Screen Time & Limits Client
 Exec=@CLIENT_PATH@
 Comment=Show Screen Time & Limits information and restrictions
-Icon=preferences-system-parental-controls
+Icon=io.elementary.settings.screentime-limits
 Terminal=false
 Type=Application
 NoDisplay=true
