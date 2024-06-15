@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-04-03 17:21+0000\n"
-"PO-Revision-Date: 2021-07-15 13:41+0000\n"
-"Last-Translator: Alvaro <alvaroaraoz_92@hotmail.com>\n"
+"PO-Revision-Date: 2024-06-16 02:16+0000\n"
+"Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/es/>\n"
 "Language: es\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.5.5\n"
 
 #: data/screentime-limits.metainfo.xml.in:5
 msgid "Screen Time &amp; Limits Settings"
-msgstr "Configuración de tiempo ante pantalla y límites"
+msgstr "Configuración de Tiempo en pantalla y límites"
 
 #: data/screentime-limits.metainfo.xml.in:6
 msgid "Configure time limits and restrict application usage"
@@ -48,28 +48,30 @@ msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 msgstr ""
-"El tiempo ante pantalla predeterminado se fijó a un intervalo de 24 horas "
-"para evitar que quede fuera accidentalmente"
+"El tiempo en pantalla predeterminado se fijó a un intervalo de 24 horas para "
+"evitar bloqueos accidentales"
 
 #: data/screentime-limits.metainfo.xml.in:24
 msgid "Improve reliability of app blocking"
-msgstr "Mejorar la fiabilidad del bloqueo de aplicaciones"
+msgstr "Mejorar la confiabilidad del bloqueo de aplicaciones"
 
 #: data/screentime-limits.metainfo.xml.in:25
 msgid "Support blocking Flatpak apps"
-msgstr ""
+msgstr "Se agregó soporte para bloquear aplicaciones de Flatpak"
 
 #: data/screentime-limits.metainfo.xml.in:29
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
+"Se explica con mayor claridad cómo funcionan los tiempos límite y cuando "
+"toman efecto"
 
 #: data/screentime-limits.metainfo.xml.in:30
 msgid "New colorful avatar fallback"
-msgstr ""
+msgstr "Nuevo y colorido avatar predeterminado"
 
 #: data/screentime-limits.metainfo.xml.in:42
 msgid "Rename to Screen Time &amp; Limits"
-msgstr "Cambio de nombre a Tiempo ante pantalla y límites"
+msgstr "Cambio de nombre a Tiempo en pantalla y límites"
 
 #: data/screentime-limits.metainfo.xml.in:43
 msgid "Show your own account"
@@ -77,30 +79,28 @@ msgstr "Se muestra su propia cuenta"
 
 #: data/screentime-limits.metainfo.xml.in:44
 msgid "Redesign the app chooser"
-msgstr "Rediseño del selector de aplicaciones"
+msgstr "Se ha rediseñado el selector de aplicaciones"
 
 #: data/screentime-limits.metainfo.xml.in:45
 msgid "Redesign the Screen Time view"
-msgstr "Rediseño de la vista Tiempo ante pantalla"
+msgstr "Se ha rediseñado la vista de Tiempo en pantalla"
 
 #: data/screentime-limits.metainfo.xml.in:46
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
-"Corrección de un problema con la eliminación de URL de sitios web "
-"restringidos"
+"Se corrigió un problema con la eliminación de URL de sitios web restringidos"
 
 #: data/screentime-limits.metainfo.xml.in:47
 msgid "Reliably apply time restrictions"
-msgstr "Aplicación fiable de las restricciones de tiempo"
+msgstr "Se aplican de manera confiable las restricciones de tiempo"
 
 #: data/screentime-limits.policy.in:10
 msgid "Manage Screen Time and Limits"
-msgstr "Gestione el tiempo ante pantalla y los límites"
+msgstr "Gestione el tiempo en pantalla y los límites"
 
 #: data/screentime-limits.policy.in:11
 msgid "Authentication is required to change Screen Time and Limits"
-msgstr ""
-"Necesita autenticarse para cambiar el tiempo ante pantalla y los límites"
+msgstr "Necesita autenticarse para cambiar el tiempo en pantalla y los límites"
 
 #~ msgid "Fix time restriction being applied even if master switch is disabled"
 #~ msgstr ""
