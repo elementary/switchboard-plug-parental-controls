@@ -36,8 +36,8 @@ namespace PC.Daemon {
         public override void start () {
             foreach (string url in config.block_urls) {
                 if (check_address_from_name (url)) {
-                    process_adress (url, "-A", "INPUT");
-                    process_adress (url, "-A", "OUTPUT");
+                    process_address (url, "-A", "INPUT");
+                    process_address (url, "-A", "OUTPUT");
                 }
             }
         }
@@ -45,8 +45,8 @@ namespace PC.Daemon {
         public override void stop () {
             foreach (string url in config.block_urls) {
                 if (check_address_from_name (url)) {
-                    process_adress (url, "-D", "INPUT");
-                    process_adress (url, "-D", "OUTPUT");
+                    process_address (url, "-D", "INPUT");
+                    process_address (url, "-D", "OUTPUT");
                 }
             }
         }
@@ -67,7 +67,7 @@ namespace PC.Daemon {
             return false;
         }
 
-        private void process_adress (string url, string option, string filter) {
+        private void process_address (string url, string option, string filter) {
             try {
                 string[] argv = { IPTABLES_EXEC, option, filter, "-m", "string", "--string", url,
                                   "--algo", "kmp", "--to", BYTES.to_string (), "-j", "DROP" };
