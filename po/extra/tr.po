@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-03 17:21+0000\n"
+"POT-Creation-Date: 2024-07-09 18:26+0000\n"
 "PO-Revision-Date: 2021-07-20 04:16+0000\n"
 "Last-Translator: Özgür Baskin <queeup@zoho.com>\n"
 "Language-Team: Turkish <https://l10n.elementary.io/projects/switchboard/"
@@ -19,31 +19,35 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-#: data/screentime-limits.metainfo.xml.in:5
+#: data/screentime-limits.metainfo.xml.in:10
 msgid "Screen Time &amp; Limits Settings"
 msgstr "Ekran Zaman Aşımı ve Sınırlarının Ayarları"
 
-#: data/screentime-limits.metainfo.xml.in:6
+#: data/screentime-limits.metainfo.xml.in:11
 msgid "Configure time limits and restrict application usage"
 msgstr "Zaman sınırlamasını ve uygulama kullanımını kısıtlamasını yapılandırın"
 
-#: data/screentime-limits.metainfo.xml.in:12
-#: data/screentime-limits.metainfo.xml.in:27
+#: data/screentime-limits.metainfo.xml.in:26
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/screentime-limits.metainfo.xml.in:34
+#: data/screentime-limits.metainfo.xml.in:49
 msgid "Minor updates:"
 msgstr "Küçük güncellemeler:"
 
-#: data/screentime-limits.metainfo.xml.in:14
-#: data/screentime-limits.metainfo.xml.in:31
-#: data/screentime-limits.metainfo.xml.in:37
-#: data/screentime-limits.metainfo.xml.in:48
+#: data/screentime-limits.metainfo.xml.in:36
+#: data/screentime-limits.metainfo.xml.in:53
+#: data/screentime-limits.metainfo.xml.in:60
+#: data/screentime-limits.metainfo.xml.in:72
 msgid "Updated translations"
 msgstr "Çeviriler güncellendi"
 
-#: data/screentime-limits.metainfo.xml.in:21
+#: data/screentime-limits.metainfo.xml.in:43
 msgid "Fixes:"
 msgstr "Düzeltmeler:"
 
-#: data/screentime-limits.metainfo.xml.in:23
+#: data/screentime-limits.metainfo.xml.in:45
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
@@ -51,47 +55,47 @@ msgstr ""
 "Yanlışlıkla kilitlenmeleri önlemek için varsayılan Ekran Zaman Aşımı gece "
 "yarısından gece yarısına ayarlandı"
 
-#: data/screentime-limits.metainfo.xml.in:24
+#: data/screentime-limits.metainfo.xml.in:46
 msgid "Improve reliability of app blocking"
 msgstr "Uygulama engellemenin güvenilirliği artırıldı"
 
-#: data/screentime-limits.metainfo.xml.in:25
+#: data/screentime-limits.metainfo.xml.in:47
 msgid "Support blocking Flatpak apps"
 msgstr "Flatpak uygulamalarını engelleme desteği eklendi"
 
-#: data/screentime-limits.metainfo.xml.in:29
+#: data/screentime-limits.metainfo.xml.in:51
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
 "Ekran Zaman Aşımı sınırlarının nasıl çalıştığı ve ne zaman yürürlüğe "
 "gireceği belirtildi"
 
-#: data/screentime-limits.metainfo.xml.in:30
+#: data/screentime-limits.metainfo.xml.in:52
 msgid "New colorful avatar fallback"
 msgstr "Yeni renkli avatar yedeği eklendi"
 
-#: data/screentime-limits.metainfo.xml.in:42
+#: data/screentime-limits.metainfo.xml.in:66
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Ekran Zaman Aşımı ve Sınırları olarak yeniden adlandırıldı"
 
-#: data/screentime-limits.metainfo.xml.in:43
+#: data/screentime-limits.metainfo.xml.in:67
 msgid "Show your own account"
 msgstr "Kendi hesabını göster"
 
-#: data/screentime-limits.metainfo.xml.in:44
+#: data/screentime-limits.metainfo.xml.in:68
 msgid "Redesign the app chooser"
 msgstr "Uygulama seçici yeniden tasarlandı"
 
-#: data/screentime-limits.metainfo.xml.in:45
+#: data/screentime-limits.metainfo.xml.in:69
 msgid "Redesign the Screen Time view"
 msgstr "Ekran Zaman Aşımı görünümünü yeniden tasarlandı"
 
-#: data/screentime-limits.metainfo.xml.in:46
+#: data/screentime-limits.metainfo.xml.in:70
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
 "URL'lerin kısıtlanmış web sitelerinden kaldırılmasıyla ilgili bir sorun "
 "düzeltildi"
 
-#: data/screentime-limits.metainfo.xml.in:47
+#: data/screentime-limits.metainfo.xml.in:71
 msgid "Reliably apply time restrictions"
 msgstr "Zaman kısıtlamaları daha güvenilir bir şekilde uygulandı"
 

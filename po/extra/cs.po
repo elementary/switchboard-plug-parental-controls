@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-04-03 17:21+0000\n"
+"POT-Creation-Date: 2024-07-09 18:26+0000\n"
 "PO-Revision-Date: 2022-01-10 21:58+0000\n"
 "Last-Translator: p-bo <pavel.borecki@gmail.com>\n"
 "Language-Team: Czech <https://l10n.elementary.io/projects/switchboard/"
@@ -19,31 +19,35 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Weblate 4.4.2\n"
 
-#: data/screentime-limits.metainfo.xml.in:5
+#: data/screentime-limits.metainfo.xml.in:10
 msgid "Screen Time &amp; Limits Settings"
 msgstr "Čas před obrazovkou a nastavení limitů"
 
-#: data/screentime-limits.metainfo.xml.in:6
+#: data/screentime-limits.metainfo.xml.in:11
 msgid "Configure time limits and restrict application usage"
 msgstr "Nastavit časové limity a omezení používání aplikace"
 
-#: data/screentime-limits.metainfo.xml.in:12
-#: data/screentime-limits.metainfo.xml.in:27
+#: data/screentime-limits.metainfo.xml.in:26
+msgid "elementary, Inc."
+msgstr ""
+
+#: data/screentime-limits.metainfo.xml.in:34
+#: data/screentime-limits.metainfo.xml.in:49
 msgid "Minor updates:"
 msgstr "Drobné aktualizace:"
 
-#: data/screentime-limits.metainfo.xml.in:14
-#: data/screentime-limits.metainfo.xml.in:31
-#: data/screentime-limits.metainfo.xml.in:37
-#: data/screentime-limits.metainfo.xml.in:48
+#: data/screentime-limits.metainfo.xml.in:36
+#: data/screentime-limits.metainfo.xml.in:53
+#: data/screentime-limits.metainfo.xml.in:60
+#: data/screentime-limits.metainfo.xml.in:72
 msgid "Updated translations"
 msgstr "Aktualizovány překlady"
 
-#: data/screentime-limits.metainfo.xml.in:21
+#: data/screentime-limits.metainfo.xml.in:43
 msgid "Fixes:"
 msgstr "Opravy:"
 
-#: data/screentime-limits.metainfo.xml.in:23
+#: data/screentime-limits.metainfo.xml.in:45
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
@@ -51,46 +55,46 @@ msgstr ""
 "Vyberte výchozí čas, strávený před obrazovkou od půlnoci do půlnoci a "
 "zabraňte tak náhodným uzamčením"
 
-#: data/screentime-limits.metainfo.xml.in:24
+#: data/screentime-limits.metainfo.xml.in:46
 msgid "Improve reliability of app blocking"
 msgstr "Zlepšena spolehlivost blokování aplikací"
 
-#: data/screentime-limits.metainfo.xml.in:25
+#: data/screentime-limits.metainfo.xml.in:47
 msgid "Support blocking Flatpak apps"
 msgstr "Podpora pro blokování Flatpak aplikací"
 
-#: data/screentime-limits.metainfo.xml.in:29
+#: data/screentime-limits.metainfo.xml.in:51
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
 "Objasněno jak fungují limity v Době před obrazovkou a kdy jsou uplatňovány"
 
-#: data/screentime-limits.metainfo.xml.in:30
+#: data/screentime-limits.metainfo.xml.in:52
 msgid "New colorful avatar fallback"
 msgstr "Nový náhradní profilový obrázek"
 
-#: data/screentime-limits.metainfo.xml.in:42
+#: data/screentime-limits.metainfo.xml.in:66
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Přejmenování na Čas před obrazovkou a limity"
 
-#: data/screentime-limits.metainfo.xml.in:43
+#: data/screentime-limits.metainfo.xml.in:67
 msgid "Show your own account"
 msgstr "Zobrazit váš vlastní účet"
 
-#: data/screentime-limits.metainfo.xml.in:44
+#: data/screentime-limits.metainfo.xml.in:68
 msgid "Redesign the app chooser"
 msgstr "Předělání volby aplikací"
 
-#: data/screentime-limits.metainfo.xml.in:45
+#: data/screentime-limits.metainfo.xml.in:69
 msgid "Redesign the Screen Time view"
 msgstr "Předělání pohledu na čas před obrazovkou"
 
-#: data/screentime-limits.metainfo.xml.in:46
+#: data/screentime-limits.metainfo.xml.in:70
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
 "Oprava problému při odebírání URL adres ze seznamu stránek s omezeným "
 "přístupem"
 
-#: data/screentime-limits.metainfo.xml.in:47
+#: data/screentime-limits.metainfo.xml.in:71
 msgid "Reliably apply time restrictions"
 msgstr "Spolehlivé uplatnění časových omezení"
 
