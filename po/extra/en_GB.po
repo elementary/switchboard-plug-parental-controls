@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:26+0000\n"
-"PO-Revision-Date: 2021-07-18 00:36+0000\n"
-"Last-Translator: Ciarán Ainsworth <ciaranainsworth@outlook.com>\n"
+"POT-Creation-Date: 2024-07-09 19:48+0000\n"
+"PO-Revision-Date: 2024-07-11 23:16+0000\n"
+"Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/parental-controls-plug-extra/en_GB/>\n"
 "Language: en_GB\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/screentime-limits.metainfo.xml.in:10
 msgid "Screen Time &amp; Limits Settings"
@@ -29,25 +29,31 @@ msgstr "Configure time limits and restrict application usage"
 
 #: data/screentime-limits.metainfo.xml.in:26
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/screentime-limits.metainfo.xml.in:34
-#: data/screentime-limits.metainfo.xml.in:49
+#: data/screentime-limits.metainfo.xml.in:47
+#: data/screentime-limits.metainfo.xml.in:62
 msgid "Minor updates:"
 msgstr "Minor updates:"
 
 #: data/screentime-limits.metainfo.xml.in:36
-#: data/screentime-limits.metainfo.xml.in:53
-#: data/screentime-limits.metainfo.xml.in:60
-#: data/screentime-limits.metainfo.xml.in:72
+msgid "Improve screen reader accessibility"
+msgstr "Improve screen reader accessibility"
+
+#: data/screentime-limits.metainfo.xml.in:37
+#: data/screentime-limits.metainfo.xml.in:49
+#: data/screentime-limits.metainfo.xml.in:66
+#: data/screentime-limits.metainfo.xml.in:73
+#: data/screentime-limits.metainfo.xml.in:85
 msgid "Updated translations"
 msgstr "Updated translations"
 
-#: data/screentime-limits.metainfo.xml.in:43
+#: data/screentime-limits.metainfo.xml.in:56
 msgid "Fixes:"
 msgstr "Fixes:"
 
-#: data/screentime-limits.metainfo.xml.in:45
+#: data/screentime-limits.metainfo.xml.in:58
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
@@ -55,43 +61,43 @@ msgstr ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 
-#: data/screentime-limits.metainfo.xml.in:46
+#: data/screentime-limits.metainfo.xml.in:59
 msgid "Improve reliability of app blocking"
 msgstr "Improve reliability of app blocking"
 
-#: data/screentime-limits.metainfo.xml.in:47
+#: data/screentime-limits.metainfo.xml.in:60
 msgid "Support blocking Flatpak apps"
 msgstr "Support blocking Flatpak apps"
 
-#: data/screentime-limits.metainfo.xml.in:51
+#: data/screentime-limits.metainfo.xml.in:64
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr "Clarify how Screen Time limits work and when they take effect"
 
-#: data/screentime-limits.metainfo.xml.in:52
+#: data/screentime-limits.metainfo.xml.in:65
 msgid "New colorful avatar fallback"
 msgstr "New colourful avatar fallback"
 
-#: data/screentime-limits.metainfo.xml.in:66
+#: data/screentime-limits.metainfo.xml.in:79
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Rename to Screen Time &amp; Limits"
 
-#: data/screentime-limits.metainfo.xml.in:67
+#: data/screentime-limits.metainfo.xml.in:80
 msgid "Show your own account"
 msgstr "Show your own account"
 
-#: data/screentime-limits.metainfo.xml.in:68
+#: data/screentime-limits.metainfo.xml.in:81
 msgid "Redesign the app chooser"
 msgstr "Redesign the app chooser"
 
-#: data/screentime-limits.metainfo.xml.in:69
+#: data/screentime-limits.metainfo.xml.in:82
 msgid "Redesign the Screen Time view"
 msgstr "Redesign the Screen Time view"
 
-#: data/screentime-limits.metainfo.xml.in:70
+#: data/screentime-limits.metainfo.xml.in:83
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr "Fix an issue with removing URLs from restricted websites"
 
-#: data/screentime-limits.metainfo.xml.in:71
+#: data/screentime-limits.metainfo.xml.in:84
 msgid "Reliably apply time restrictions"
 msgstr "Reliably apply time restrictions"
 

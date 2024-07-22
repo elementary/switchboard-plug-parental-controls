@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 18:26+0000\n"
-"PO-Revision-Date: 2024-06-16 02:16+0000\n"
+"POT-Creation-Date: 2024-07-09 19:48+0000\n"
+"PO-Revision-Date: 2024-07-10 21:16+0000\n"
 "Last-Translator: Italo Felipe Capasso Ballesteros <edwood.grant@gmail.com>\n"
 "Language-Team: Spanish <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/es/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.5.5\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/screentime-limits.metainfo.xml.in:10
 msgid "Screen Time &amp; Limits Settings"
@@ -29,25 +29,31 @@ msgstr "Configure límites de tiempo y restrinja el uso de aplicaciones"
 
 #: data/screentime-limits.metainfo.xml.in:26
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/screentime-limits.metainfo.xml.in:34
-#: data/screentime-limits.metainfo.xml.in:49
+#: data/screentime-limits.metainfo.xml.in:47
+#: data/screentime-limits.metainfo.xml.in:62
 msgid "Minor updates:"
 msgstr "Actualizaciones menores:"
 
 #: data/screentime-limits.metainfo.xml.in:36
-#: data/screentime-limits.metainfo.xml.in:53
-#: data/screentime-limits.metainfo.xml.in:60
-#: data/screentime-limits.metainfo.xml.in:72
+msgid "Improve screen reader accessibility"
+msgstr "Se mejoró la accesibilidad con los lectores de pantalla"
+
+#: data/screentime-limits.metainfo.xml.in:37
+#: data/screentime-limits.metainfo.xml.in:49
+#: data/screentime-limits.metainfo.xml.in:66
+#: data/screentime-limits.metainfo.xml.in:73
+#: data/screentime-limits.metainfo.xml.in:85
 msgid "Updated translations"
 msgstr "Traducciones actualizadas"
 
-#: data/screentime-limits.metainfo.xml.in:43
+#: data/screentime-limits.metainfo.xml.in:56
 msgid "Fixes:"
 msgstr "Correcciones:"
 
-#: data/screentime-limits.metainfo.xml.in:45
+#: data/screentime-limits.metainfo.xml.in:58
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
@@ -55,46 +61,46 @@ msgstr ""
 "El tiempo en pantalla predeterminado se fijó a un intervalo de 24 horas para "
 "evitar bloqueos accidentales"
 
-#: data/screentime-limits.metainfo.xml.in:46
+#: data/screentime-limits.metainfo.xml.in:59
 msgid "Improve reliability of app blocking"
 msgstr "Mejorar la confiabilidad del bloqueo de aplicaciones"
 
-#: data/screentime-limits.metainfo.xml.in:47
+#: data/screentime-limits.metainfo.xml.in:60
 msgid "Support blocking Flatpak apps"
 msgstr "Se agregó soporte para bloquear aplicaciones de Flatpak"
 
-#: data/screentime-limits.metainfo.xml.in:51
+#: data/screentime-limits.metainfo.xml.in:64
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
 "Se explica con mayor claridad cómo funcionan los tiempos límite y cuando "
 "toman efecto"
 
-#: data/screentime-limits.metainfo.xml.in:52
+#: data/screentime-limits.metainfo.xml.in:65
 msgid "New colorful avatar fallback"
 msgstr "Nuevo y colorido avatar predeterminado"
 
-#: data/screentime-limits.metainfo.xml.in:66
+#: data/screentime-limits.metainfo.xml.in:79
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "Cambio de nombre a Tiempo en pantalla y límites"
 
-#: data/screentime-limits.metainfo.xml.in:67
+#: data/screentime-limits.metainfo.xml.in:80
 msgid "Show your own account"
 msgstr "Se muestra su propia cuenta"
 
-#: data/screentime-limits.metainfo.xml.in:68
+#: data/screentime-limits.metainfo.xml.in:81
 msgid "Redesign the app chooser"
 msgstr "Se ha rediseñado el selector de aplicaciones"
 
-#: data/screentime-limits.metainfo.xml.in:69
+#: data/screentime-limits.metainfo.xml.in:82
 msgid "Redesign the Screen Time view"
 msgstr "Se ha rediseñado la vista de Tiempo en pantalla"
 
-#: data/screentime-limits.metainfo.xml.in:70
+#: data/screentime-limits.metainfo.xml.in:83
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
 "Se corrigió un problema con la eliminación de URL de sitios web restringidos"
 
-#: data/screentime-limits.metainfo.xml.in:71
+#: data/screentime-limits.metainfo.xml.in:84
 msgid "Reliably apply time restrictions"
 msgstr "Se aplican de manera confiable las restricciones de tiempo"
 
