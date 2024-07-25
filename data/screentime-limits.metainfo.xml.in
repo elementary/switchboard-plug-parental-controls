@@ -2,11 +2,46 @@
 <component type="addon">
   <id>io.elementary.settings.screentime-limits</id>
   <extends>io.elementary.settings</extends>
+  <translation type="gettext">io.elementary.settings.screentime-limits</translation>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0</project_license>
+
+  <icon type="stock">io.elementary.settings.screentime-limits</icon>
   <name>Screen Time &amp; Limits Settings</name>
   <summary>Configure time limits and restrict application usage</summary>
-  <icon type="stock">io.elementary.settings.screentime-limits</icon>
-  <translation type="gettext">io.elementary.settings.screentime-limits</translation>
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-parental-controls/6.0.1/data/screenshot.png</image>
+    </screenshot>
+  </screenshots>
+
+  <url type="bugtracker">https://github.com/elementary/switchboard-plug-parental-controls/issues</url>
+  <url type="donation">https://elementary.io/get-involved#funding</url>
+  <url type="help">https://github.com/elementary/switchboard-plug-parental-controls/discussions</url>
+  <url type="homepage">https://elementary.io/</url>
+  <url type="translate">https://l10n.elementary.io/engage/switchboard/</url>
+
+  <developer id="org.elementaryos">
+    <name>elementary, Inc.</name>
+  </developer>
+  <project_group>elementary</project_group>
+  <update_contact>contact_at_elementary.io</update_contact>
+
   <releases>
+    <release version="8.0.0" date="2024-07-09" urgency="medium">
+      <description>
+        <p>Minor updates:</p>
+        <ul>
+          <li>Improve screen reader accessibility</li>
+          <li>Updated translations</li>
+        </ul>
+      </description>
+      <issues>
+        <issue url="https://github.com/elementary/switchboard-plug-parental-controls/issues/93">Provide more context in the plug for Digital Wellbeing features</issue>
+      </issues>
+    </release>
+
     <release version="6.0.1" date="2022-10-20" urgency="medium">
       <description>
         <p>Minor updates:</p>
@@ -32,11 +67,13 @@
         </ul>
       </description>
     </release>
+
     <release version="3.0.1" date="2020-05-28" urgency="medium">
       <description>
         <p>Updated translations</p>
       </description>
     </release>
+
     <release version="3.0.0" date="2020-04-22" urgency="medium">
       <description>
         <p>Rename to Screen Time &amp; Limits</p>
@@ -49,13 +86,4 @@
       </description>
     </release>
   </releases>
-  <screenshots>
-    <screenshot type="default">
-      <image>https://raw.githubusercontent.com/elementary/switchboard-plug-parental-controls/6.0.1/data/screenshot.png</image>
-    </screenshot>
-  </screenshots>
-  <url type="homepage">https://elementary.io</url>
-  <url type="bugtracker">https://github.com/elementary/switchboard-plug-parental-controls/issues</url>
-  <metadata_license>CC0-1.0</metadata_license>
-  <project_license>GPL-3.0</project_license>
 </component>
