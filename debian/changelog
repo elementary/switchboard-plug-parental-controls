@@ -1,3 +1,9 @@
+io.elementary.settings.screentime-limits (8.0.0) noble; urgency=medium
+
+  * Release 8.0.0
+
+ -- Danielle Foré <danielle@elementary.io>  Fri, 26 Jul 2024 10:41:19 -0700
+
 io.elementary.settings.screentime-limits (6.0.1) bionic; urgency=medium
 
   * Release 6.0.1 (#163)
