@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 19:48+0000\n"
-"PO-Revision-Date: 2017-03-31 17:45+0000\n"
-"Last-Translator: Kristjan Vool <tictac7x@gmail.com>\n"
-"Language-Team: Estonian <et@li.org>\n"
+"PO-Revision-Date: 2024-08-07 00:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Estonian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-parental-controls/et/>\n"
 "Language: et\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-04-05 07:49+0000\n"
-"X-Generator: Launchpad (build 18335)\n"
 
 #: src/client/AppUnavailableDialog.vala:27
 #, fuzzy
@@ -146,7 +147,7 @@ msgstr "Otsi rakendusi…"
 
 #: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
-msgstr ""
+msgstr "Tühista"
 
 #: src/plug/Widgets/ControlPage.vala:14
 msgid "Other Accounts"
