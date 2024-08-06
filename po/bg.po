@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 19:48+0000\n"
-"PO-Revision-Date: 2017-01-03 04:06+0000\n"
-"Last-Translator: Cody Garver <cody@elementaryos.org>\n"
-"Language-Team: Bulgarian <bg@li.org>\n"
+"PO-Revision-Date: 2024-08-07 00:16+0000\n"
+"Last-Translator: anonymous <noreply@weblate.org>\n"
+"Language-Team: Bulgarian <https://l10n.elementary.io/projects/switchboard/"
+"switchboard-plug-parental-controls/bg/>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:27+0000\n"
-"X-Generator: Launchpad (build 18326)\n"
 
 #: src/client/AppUnavailableDialog.vala:27
 #, fuzzy
@@ -146,7 +147,7 @@ msgstr "Търсене на програми"
 
 #: src/plug/Widgets/AppChooser.vala:46
 msgid "Cancel"
-msgstr ""
+msgstr "Отказ"
 
 #: src/plug/Widgets/ControlPage.vala:14
 msgid "Other Accounts"
