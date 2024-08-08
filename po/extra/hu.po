@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-07-09 19:48+0000\n"
-"PO-Revision-Date: 2021-12-25 22:41+0000\n"
+"PO-Revision-Date: 2024-08-07 00:16+0000\n"
 "Last-Translator: TomiOhl <ohlslager.tom@gmail.com>\n"
 "Language-Team: Hungarian <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/hu/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.4.2\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/screentime-limits.metainfo.xml.in:10
 msgid "Screen Time &amp; Limits Settings"
@@ -29,7 +29,7 @@ msgstr "Határidők és alkalmazások korlátozásának beállítása"
 
 #: data/screentime-limits.metainfo.xml.in:26
 msgid "elementary, Inc."
-msgstr ""
+msgstr "elementary, Inc."
 
 #: data/screentime-limits.metainfo.xml.in:34
 #: data/screentime-limits.metainfo.xml.in:47
@@ -39,7 +39,7 @@ msgstr "Kisebb frissítések:"
 
 #: data/screentime-limits.metainfo.xml.in:36
 msgid "Improve screen reader accessibility"
-msgstr ""
+msgstr "Képernyőlvasókkal való hozzáférés javítva"
 
 #: data/screentime-limits.metainfo.xml.in:37
 #: data/screentime-limits.metainfo.xml.in:49
