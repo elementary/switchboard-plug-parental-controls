@@ -23,7 +23,7 @@
 namespace PC.Daemon {
     public class WebRestriction : Restriction {
         private const string IPTABLES_EXEC = "iptables";
-        private const int DPORT = 80;
+        private const int BYTES = 65535;
 
         public new static bool get_supported () {
             return Environment.find_program_in_path (IPTABLES_EXEC) != null;
@@ -35,43 +35,42 @@ namespace PC.Daemon {
 
         public override void start () {
             foreach (string url in config.block_urls) {
-                string[] addresses = get_addresses_from_name (url);
-                foreach (string address in addresses) {
-                    process_adress (address, "-A");
+                if (check_address_from_name (url)) {
+                    process_address (url, "-A", "INPUT");
+                    process_address (url, "-A", "OUTPUT");
                 }
             }
         }
 
         public override void stop () {
             foreach (string url in config.block_urls) {
-                string[] addresses = get_addresses_from_name (url);
-                foreach (string address in addresses) {
-                    process_adress (address, "-D");
+                if (check_address_from_name (url)) {
+                    process_address (url, "-D", "INPUT");
+                    process_address (url, "-D", "OUTPUT");
                 }
             }
         }
 
-        private string[] get_addresses_from_name (string name) {
-            string[] address_list = {};
+        // Check the host name before adding it to iptables
+        private bool check_address_from_name (string name) {
             var resolver = Resolver.get_default ();
             try {
                 var addresses = resolver.lookup_by_name (name, null);
                 foreach (InetAddress address in addresses) {
                     if (address.get_family () == SocketFamily.IPV4) {
-                        address_list += address.to_string ();
+                        return true;
                     }
                 }
             } catch (Error e) {
                 warning (e.message);
             }
-
-            return address_list;
+            return false;
         }
 
-        private void process_adress (string address, string option) {
+        private void process_address (string url, string option, string filter) {
             try {
-                string[] argv = { IPTABLES_EXEC, option, "OUTPUT", "-p", "tcp", "-d", address, "--dport",
-                                  DPORT.to_string (), "-j", "REJECT" };
+                string[] argv = { IPTABLES_EXEC, option, filter, "-m", "string", "--string", url,
+                                  "--algo", "kmp", "--to", BYTES.to_string (), "-j", "DROP" };
 
                 GLib.Process.spawn_sync ("/",
                                     argv,
