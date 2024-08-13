@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-09 19:48+0000\n"
+"POT-Creation-Date: 2024-08-13 18:00+0000\n"
 "PO-Revision-Date: 2024-08-07 00:16+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Amharic <https://l10n.elementary.io/projects/switchboard/"
@@ -67,23 +67,27 @@ msgstr ""
 msgid "Allow access to these apps with admin permission:"
 msgstr ""
 
-#: src/plug/Views/InternetView.vala:28
+#: src/plug/Views/InternetView.vala:29
 msgid "Blocked Websites"
 msgstr ""
 
-#: src/plug/Views/InternetView.vala:39
+#: src/plug/Views/InternetView.vala:40
 msgid "Block URL"
 msgstr ""
 
-#: src/plug/Views/InternetView.vala:49
+#: src/plug/Views/InternetView.vala:50
 msgid "example.com"
 msgstr ""
 
-#: src/plug/Views/InternetView.vala:78
+#: src/plug/Views/InternetView.vala:79 src/plug/Views/InternetView.vala:193
 msgid "Invalid URL"
 msgstr ""
 
-#: src/plug/Views/InternetView.vala:148
+#: src/plug/Views/InternetView.vala:187
+msgid "The specified URL already exists in list"
+msgstr ""
+
+#: src/plug/Views/InternetView.vala:215
 #, c-format
 msgid "Unblock %s"
 msgstr ""
