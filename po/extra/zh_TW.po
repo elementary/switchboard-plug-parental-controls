@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-13 18:00+0000\n"
-"PO-Revision-Date: 2024-09-02 05:42+0000\n"
+"PO-Revision-Date: 2024-09-05 21:13+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/parental-controls-plug-extra/zh_Hant/>\n"
@@ -39,7 +39,7 @@ msgstr "小型更新："
 
 #: data/screentime-limits.metainfo.xml.in:36
 msgid "Improve screen reader accessibility"
-msgstr ""
+msgstr "改善螢幕閱讀器輔助"
 
 #: data/screentime-limits.metainfo.xml.in:37
 #: data/screentime-limits.metainfo.xml.in:49
@@ -73,7 +73,7 @@ msgstr ""
 
 #: data/screentime-limits.metainfo.xml.in:65
 msgid "New colorful avatar fallback"
-msgstr ""
+msgstr "新的多彩備用代表頭像"
 
 #: data/screentime-limits.metainfo.xml.in:79
 msgid "Rename to Screen Time &amp; Limits"
