@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-13 18:00+0000\n"
-"PO-Revision-Date: 2024-08-07 00:16+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
+"PO-Revision-Date: 2024-09-06 10:13+0000\n"
+"Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/zh_Hant/>\n"
 "Language: zh_TW\n"
@@ -21,19 +21,17 @@ msgstr ""
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "您尚未授權執行此應用程式。"
+msgstr "您未被准許執行此應用程式"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "一名管理者已限制您對此應用程式的存取。"
 
 #: src/client/Client.vala:161
-#, fuzzy, c-format
+#, c-format
 msgid "This computer will lock after %s."
-msgstr "本電腦將於 %s %s 後上鎖。%s"
+msgstr "本電腦將於 %s 後上鎖。"
 
 #: src/client/Client.vala:163
 #, c-format
@@ -58,13 +56,11 @@ msgstr "剩下時間"
 
 #: src/plug/Views/AppsView.vala:27
 msgid "Blocked Apps"
-msgstr ""
+msgstr "已限制的應用程式"
 
 #: src/plug/Views/AppsView.vala:38
-#, fuzzy
-#| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
-msgstr "加入要防止的程式…"
+msgstr "新增要限制的應用程式…"
 
 #: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
@@ -76,15 +72,15 @@ msgstr "允許存取這些需要管理權的程式："
 
 #: src/plug/Views/InternetView.vala:29
 msgid "Blocked Websites"
-msgstr ""
+msgstr "已限制的網站"
 
 #: src/plug/Views/InternetView.vala:40
 msgid "Block URL"
-msgstr ""
+msgstr "限制網址"
 
 #: src/plug/Views/InternetView.vala:50
 msgid "example.com"
-msgstr ""
+msgstr "example.com"
 
 #: src/plug/Views/InternetView.vala:79 src/plug/Views/InternetView.vala:193
 msgid "Invalid URL"
@@ -92,17 +88,17 @@ msgstr "無效的網址"
 
 #: src/plug/Views/InternetView.vala:187
 msgid "The specified URL already exists in list"
-msgstr ""
+msgstr "指定的網址已存在於清單中"
 
 #: src/plug/Views/InternetView.vala:215
 #, c-format
 msgid "Unblock %s"
-msgstr ""
+msgstr "解除限制 %s"
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:20
 msgid "Weekdays"
-msgstr "週間"
+msgstr "平日"
 
 #. /TRANSLATORS: Refers to weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:27
@@ -118,9 +114,8 @@ msgid "To:"
 msgstr "到："
 
 #: src/plug/Views/TimeLimitView.vala:163
-#, fuzzy
 msgid "Screen Time is not limited on weekends."
-msgstr "剩下時間"
+msgstr "在週末不限制螢幕使用時間。"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:165
@@ -128,12 +123,11 @@ msgstr "剩下時間"
 msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
-msgstr ""
+msgstr "%s 只能在週末這段時間登入，並會在這段時間結束之後自動被登出："
 
 #: src/plug/Views/TimeLimitView.vala:169
-#, fuzzy
 msgid "Screen Time is not limited on weekdays."
-msgstr "剩下時間"
+msgstr "在平日不限制螢幕使用時間。"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:171
@@ -141,7 +135,7 @@ msgstr "剩下時間"
 msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
-msgstr ""
+msgstr "%s 只能在平日這段時間登入，並會在這段時間結束之後自動被登出："
 
 #: src/plug/Widgets/AppChooser.vala:18
 msgid "Search Applications"
@@ -159,7 +153,8 @@ msgstr "其他帳號"
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
-msgstr ""
+msgstr "利用螢幕使用時間、網站與應用程式的限制來控管並管理裝置使用量。某些限制能在管"
+"理者提供權限後忽略。"
 
 #: src/plug/Widgets/ControlPage.vala:18
 msgid "My Account"
@@ -169,11 +164,11 @@ msgstr "我的帳號"
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
-msgstr ""
+msgstr "設定螢幕使用時間、網站與應用程式的限制來管理您自己的裝置使用量。"
 
 #: src/plug/Widgets/ControlPage.vala:37
 msgid "Screen Time"
-msgstr ""
+msgstr "螢幕使用時間"
 
 #: src/plug/Widgets/ControlPage.vala:38
 msgid "Internet"
@@ -188,26 +183,24 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "有些設定值需要有管理員權利才能變更"
 
 #: src/plug/Plug.vala:36
-#, fuzzy
 msgid "Screen Time & Limits"
-msgstr "剩下時間"
+msgstr "螢幕使用時間與限制"
 
 #: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
 msgstr "設定時限和限制應用程式使用"
 
 #: src/plug/Plug.vala:64
-#, fuzzy
 msgid "Limit computer use"
-msgstr "限制電腦使用："
+msgstr "限制電腦使用"
 
 #: src/plug/Plug.vala:65
 msgid "Prevent website access"
-msgstr ""
+msgstr "防止網站存取"
 
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
-msgstr ""
+msgstr "防止應用程式存取"
 
 #, c-format
 #~ msgid "Prevent %s from using these apps:"
