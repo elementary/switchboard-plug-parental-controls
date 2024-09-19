@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-13 18:00+0000\n"
-"PO-Revision-Date: 2024-09-05 21:13+0000\n"
+"PO-Revision-Date: 2024-09-19 10:09+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/parental-controls-plug-extra/zh_Hant/>\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: data/screentime-limits.metainfo.xml.in:10
 msgid "Screen Time &amp; Limits Settings"
-msgstr ""
+msgstr "螢幕使用時間與限制設定值"
 
 #: data/screentime-limits.metainfo.xml.in:11
 msgid "Configure time limits and restrict application usage"
-msgstr "設定時限和限制應用程式使用"
+msgstr "設定時限並限制應用程式使用"
 
 #: data/screentime-limits.metainfo.xml.in:26
 msgid "elementary, Inc."
@@ -57,19 +57,19 @@ msgstr "修正："
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
-msgstr ""
+msgstr "將預設螢幕使用時間設定為深夜 12:00 到深夜 12:00 來防止意外鎖定"
 
 #: data/screentime-limits.metainfo.xml.in:59
 msgid "Improve reliability of app blocking"
-msgstr ""
+msgstr "改善應用程式限制的可靠性"
 
 #: data/screentime-limits.metainfo.xml.in:60
 msgid "Support blocking Flatpak apps"
-msgstr ""
+msgstr "支援限制 Flatpak 應用程式"
 
 #: data/screentime-limits.metainfo.xml.in:64
 msgid "Clarify how Screen Time limits work and when they take effect"
-msgstr ""
+msgstr "明確解釋螢幕使用時間限制如何運作，以及何時會生效"
 
 #: data/screentime-limits.metainfo.xml.in:65
 msgid "New colorful avatar fallback"
@@ -77,32 +77,32 @@ msgstr "新的多彩備用代表頭像"
 
 #: data/screentime-limits.metainfo.xml.in:79
 msgid "Rename to Screen Time &amp; Limits"
-msgstr ""
+msgstr "重新命名為「螢幕使用時間與限制」"
 
 #: data/screentime-limits.metainfo.xml.in:80
 msgid "Show your own account"
-msgstr ""
+msgstr "顯示目前使用中的帳號"
 
 #: data/screentime-limits.metainfo.xml.in:81
 msgid "Redesign the app chooser"
-msgstr ""
+msgstr "重新設計應用程式選擇畫面"
 
 #: data/screentime-limits.metainfo.xml.in:82
 msgid "Redesign the Screen Time view"
-msgstr ""
+msgstr "重新設計螢幕使用時間檢視"
 
 #: data/screentime-limits.metainfo.xml.in:83
 msgid "Fix an issue with removing URLs from restricted websites"
-msgstr ""
+msgstr "修正從受限制網站中移除網址時的問題"
 
 #: data/screentime-limits.metainfo.xml.in:84
 msgid "Reliably apply time restrictions"
-msgstr ""
+msgstr "更可靠地套用時間限制"
 
 #: data/screentime-limits.policy.in:10
 msgid "Manage Screen Time and Limits"
-msgstr ""
+msgstr "管理螢幕使用時間與限制"
 
 #: data/screentime-limits.policy.in:11
 msgid "Authentication is required to change Screen Time and Limits"
-msgstr ""
+msgstr "變更螢幕使用時間與限制需要先通過身分核對"
