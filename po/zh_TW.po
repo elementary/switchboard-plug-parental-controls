@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-13 18:00+0000\n"
-"PO-Revision-Date: 2024-09-06 10:13+0000\n"
+"PO-Revision-Date: 2024-09-19 10:09+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/zh_Hant/>\n"
@@ -188,7 +188,7 @@ msgstr "螢幕使用時間與限制"
 
 #: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
-msgstr "設定時限和限制應用程式使用"
+msgstr "設定時限並限制應用程式使用"
 
 #: src/plug/Plug.vala:64
 msgid "Limit computer use"
