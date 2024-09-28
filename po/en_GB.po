@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-08-13 18:00+0000\n"
-"PO-Revision-Date: 2024-01-10 11:11+0000\n"
+"PO-Revision-Date: 2024-09-29 02:16+0000\n"
 "Last-Translator: David Hewitt <davidmhewitt@gmail.com>\n"
 "Language-Team: English (United Kingdom) <https://l10n.elementary.io/projects/"
 "switchboard/switchboard-plug-parental-controls/en_GB/>\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.0.2\n"
+"X-Generator: Weblate 5.6.2\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -86,7 +86,7 @@ msgstr "Invalid URL"
 
 #: src/plug/Views/InternetView.vala:187
 msgid "The specified URL already exists in list"
-msgstr ""
+msgstr "The specified URL already exists in list"
 
 #: src/plug/Views/InternetView.vala:215
 #, c-format
