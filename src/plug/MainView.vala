@@ -23,6 +23,12 @@ public class PC.MainBox : Gtk.Box {
             vexpand = true
         };
 
+        var sss = SettingsSchemaSource.get_default ().lookup ("io.elementary.settings", true);
+        if (sss != null && sss.has_key ("sidebar-position")) {
+            var settings = new Settings ("io.elementary.settings");
+            settings.bind ("sidebar-position", paned, "position", DEFAULT);
+        }
+
         orientation = VERTICAL;
         append (paned);
 
