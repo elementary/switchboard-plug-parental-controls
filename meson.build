@@ -2,7 +2,7 @@ project(
     'screentime-limits',
     'vala', 'c',
     meson_version: '>= 0.57',
-    version: '8.0.0'
+    version: '8.0.1'
 )
 
 gettext_name = 'io.elementary.settings.' + meson.project_name()
