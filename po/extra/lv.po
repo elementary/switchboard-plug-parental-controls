@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 18:00+0000\n"
+"POT-Creation-Date: 2024-11-19 20:56+0000\n"
 "PO-Revision-Date: 2018-12-10 14:23-0800\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -31,70 +31,72 @@ msgid "elementary, Inc."
 msgstr ""
 
 #: data/screentime-limits.metainfo.xml.in:34
-#: data/screentime-limits.metainfo.xml.in:47
-#: data/screentime-limits.metainfo.xml.in:62
+#: data/screentime-limits.metainfo.xml.in:46
+#: data/screentime-limits.metainfo.xml.in:59
+#: data/screentime-limits.metainfo.xml.in:74
 msgid "Minor updates:"
 msgstr ""
 
 #: data/screentime-limits.metainfo.xml.in:36
-msgid "Improve screen reader accessibility"
-msgstr ""
-
-#: data/screentime-limits.metainfo.xml.in:37
 #: data/screentime-limits.metainfo.xml.in:49
-#: data/screentime-limits.metainfo.xml.in:66
-#: data/screentime-limits.metainfo.xml.in:73
+#: data/screentime-limits.metainfo.xml.in:61
+#: data/screentime-limits.metainfo.xml.in:78
 #: data/screentime-limits.metainfo.xml.in:85
+#: data/screentime-limits.metainfo.xml.in:97
 msgid "Updated translations"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:56
+#: data/screentime-limits.metainfo.xml.in:48
+msgid "Improve screen reader accessibility"
+msgstr ""
+
+#: data/screentime-limits.metainfo.xml.in:68
 msgid "Fixes:"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:58
+#: data/screentime-limits.metainfo.xml.in:70
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:59
+#: data/screentime-limits.metainfo.xml.in:71
 msgid "Improve reliability of app blocking"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:60
+#: data/screentime-limits.metainfo.xml.in:72
 msgid "Support blocking Flatpak apps"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:64
+#: data/screentime-limits.metainfo.xml.in:76
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:65
+#: data/screentime-limits.metainfo.xml.in:77
 msgid "New colorful avatar fallback"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:79
+#: data/screentime-limits.metainfo.xml.in:91
 msgid "Rename to Screen Time &amp; Limits"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:80
+#: data/screentime-limits.metainfo.xml.in:92
 msgid "Show your own account"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:81
+#: data/screentime-limits.metainfo.xml.in:93
 msgid "Redesign the app chooser"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:82
+#: data/screentime-limits.metainfo.xml.in:94
 msgid "Redesign the Screen Time view"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:83
+#: data/screentime-limits.metainfo.xml.in:95
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:84
+#: data/screentime-limits.metainfo.xml.in:96
 msgid "Reliably apply time restrictions"
 msgstr ""
 
