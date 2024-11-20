@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 18:00+0000\n"
+"POT-Creation-Date: 2024-11-19 20:56+0000\n"
 "PO-Revision-Date: 2024-08-07 00:16+0000\n"
 "Last-Translator: anonymous <noreply@weblate.org>\n"
 "Language-Team: Marathi <https://l10n.elementary.io/projects/switchboard/"
@@ -32,71 +32,73 @@ msgid "elementary, Inc."
 msgstr "एलिमेंटरी, Inc ."
 
 #: data/screentime-limits.metainfo.xml.in:34
-#: data/screentime-limits.metainfo.xml.in:47
-#: data/screentime-limits.metainfo.xml.in:62
+#: data/screentime-limits.metainfo.xml.in:46
+#: data/screentime-limits.metainfo.xml.in:59
+#: data/screentime-limits.metainfo.xml.in:74
 msgid "Minor updates:"
 msgstr "किरकोळ अद्यतने:"
 
 #: data/screentime-limits.metainfo.xml.in:36
-msgid "Improve screen reader accessibility"
-msgstr ""
-
-#: data/screentime-limits.metainfo.xml.in:37
 #: data/screentime-limits.metainfo.xml.in:49
-#: data/screentime-limits.metainfo.xml.in:66
-#: data/screentime-limits.metainfo.xml.in:73
+#: data/screentime-limits.metainfo.xml.in:61
+#: data/screentime-limits.metainfo.xml.in:78
 #: data/screentime-limits.metainfo.xml.in:85
+#: data/screentime-limits.metainfo.xml.in:97
 msgid "Updated translations"
 msgstr "अद्ययावत भाषांतर"
 
-#: data/screentime-limits.metainfo.xml.in:56
+#: data/screentime-limits.metainfo.xml.in:48
+msgid "Improve screen reader accessibility"
+msgstr ""
+
+#: data/screentime-limits.metainfo.xml.in:68
 msgid "Fixes:"
 msgstr "निराकारणे:"
 
-#: data/screentime-limits.metainfo.xml.in:58
+#: data/screentime-limits.metainfo.xml.in:70
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 msgstr ""
 "अपघाती लॉकआउट्स टाळण्यासाठी मध्यरात्र ते मध्यरात्री दरम्यान डीफॉल्ट स्क्रीन वेळ सेट करा"
 
-#: data/screentime-limits.metainfo.xml.in:59
+#: data/screentime-limits.metainfo.xml.in:71
 msgid "Improve reliability of app blocking"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:60
+#: data/screentime-limits.metainfo.xml.in:72
 msgid "Support blocking Flatpak apps"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:64
+#: data/screentime-limits.metainfo.xml.in:76
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:65
+#: data/screentime-limits.metainfo.xml.in:77
 msgid "New colorful avatar fallback"
 msgstr ""
 
-#: data/screentime-limits.metainfo.xml.in:79
+#: data/screentime-limits.metainfo.xml.in:91
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "स्क्रीन वेळ आणि मर्यादा असे नाव बदला"
 
-#: data/screentime-limits.metainfo.xml.in:80
+#: data/screentime-limits.metainfo.xml.in:92
 msgid "Show your own account"
 msgstr "आपले स्वतःचे खाते दर्शवा"
 
-#: data/screentime-limits.metainfo.xml.in:81
+#: data/screentime-limits.metainfo.xml.in:93
 msgid "Redesign the app chooser"
 msgstr "अ‍ॅप निवडकर्ता पुन्हा डिझाइन करा"
 
-#: data/screentime-limits.metainfo.xml.in:82
+#: data/screentime-limits.metainfo.xml.in:94
 msgid "Redesign the Screen Time view"
 msgstr "स्क्रीन वेळ दृश्य पुन्हा डिझाइन करा"
 
-#: data/screentime-limits.metainfo.xml.in:83
+#: data/screentime-limits.metainfo.xml.in:95
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr "प्रतिबंधित वेबसाइटवरून URL हटवण्याबाबद समस्येचे निराकरण करा"
 
-#: data/screentime-limits.metainfo.xml.in:84
+#: data/screentime-limits.metainfo.xml.in:96
 msgid "Reliably apply time restrictions"
 msgstr "विश्वासाने वेळेचे निर्बंध लागू करा"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-13 18:00+0000\n"
+"POT-Creation-Date: 2024-11-19 20:56+0000\n"
 "PO-Revision-Date: 2024-09-19 10:09+0000\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese (Traditional) <https://l10n.elementary.io/projects/"
@@ -32,70 +32,72 @@ msgid "elementary, Inc."
 msgstr "elementary, Inc."
 
 #: data/screentime-limits.metainfo.xml.in:34
-#: data/screentime-limits.metainfo.xml.in:47
-#: data/screentime-limits.metainfo.xml.in:62
+#: data/screentime-limits.metainfo.xml.in:46
+#: data/screentime-limits.metainfo.xml.in:59
+#: data/screentime-limits.metainfo.xml.in:74
 msgid "Minor updates:"
 msgstr "小型更新："
 
 #: data/screentime-limits.metainfo.xml.in:36
-msgid "Improve screen reader accessibility"
-msgstr "改善螢幕閱讀器輔助"
-
-#: data/screentime-limits.metainfo.xml.in:37
 #: data/screentime-limits.metainfo.xml.in:49
-#: data/screentime-limits.metainfo.xml.in:66
-#: data/screentime-limits.metainfo.xml.in:73
+#: data/screentime-limits.metainfo.xml.in:61
+#: data/screentime-limits.metainfo.xml.in:78
 #: data/screentime-limits.metainfo.xml.in:85
+#: data/screentime-limits.metainfo.xml.in:97
 msgid "Updated translations"
 msgstr "翻譯更新"
 
-#: data/screentime-limits.metainfo.xml.in:56
+#: data/screentime-limits.metainfo.xml.in:48
+msgid "Improve screen reader accessibility"
+msgstr "改善螢幕閱讀器輔助"
+
+#: data/screentime-limits.metainfo.xml.in:68
 msgid "Fixes:"
 msgstr "修正："
 
-#: data/screentime-limits.metainfo.xml.in:58
+#: data/screentime-limits.metainfo.xml.in:70
 msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 msgstr "將預設螢幕使用時間設定為深夜 12:00 到深夜 12:00 來防止意外鎖定"
 
-#: data/screentime-limits.metainfo.xml.in:59
+#: data/screentime-limits.metainfo.xml.in:71
 msgid "Improve reliability of app blocking"
 msgstr "改善應用程式限制的可靠性"
 
-#: data/screentime-limits.metainfo.xml.in:60
+#: data/screentime-limits.metainfo.xml.in:72
 msgid "Support blocking Flatpak apps"
 msgstr "支援限制 Flatpak 應用程式"
 
-#: data/screentime-limits.metainfo.xml.in:64
+#: data/screentime-limits.metainfo.xml.in:76
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr "明確解釋螢幕使用時間限制如何運作，以及何時會生效"
 
-#: data/screentime-limits.metainfo.xml.in:65
+#: data/screentime-limits.metainfo.xml.in:77
 msgid "New colorful avatar fallback"
 msgstr "新的多彩備用代表頭像"
 
-#: data/screentime-limits.metainfo.xml.in:79
+#: data/screentime-limits.metainfo.xml.in:91
 msgid "Rename to Screen Time &amp; Limits"
 msgstr "重新命名為「螢幕使用時間與限制」"
 
-#: data/screentime-limits.metainfo.xml.in:80
+#: data/screentime-limits.metainfo.xml.in:92
 msgid "Show your own account"
 msgstr "顯示目前使用中的帳號"
 
-#: data/screentime-limits.metainfo.xml.in:81
+#: data/screentime-limits.metainfo.xml.in:93
 msgid "Redesign the app chooser"
 msgstr "重新設計應用程式選擇畫面"
 
-#: data/screentime-limits.metainfo.xml.in:82
+#: data/screentime-limits.metainfo.xml.in:94
 msgid "Redesign the Screen Time view"
 msgstr "重新設計螢幕使用時間檢視"
 
-#: data/screentime-limits.metainfo.xml.in:83
+#: data/screentime-limits.metainfo.xml.in:95
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr "修正從受限制網站中移除網址時的問題"
 
-#: data/screentime-limits.metainfo.xml.in:84
+#: data/screentime-limits.metainfo.xml.in:96
 msgid "Reliably apply time restrictions"
 msgstr "更可靠地套用時間限制"
 
