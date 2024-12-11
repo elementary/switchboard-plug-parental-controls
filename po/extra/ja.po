@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-19 20:56+0000\n"
-"PO-Revision-Date: 2024-07-10 21:16+0000\n"
+"PO-Revision-Date: 2024-12-12 05:36+0000\n"
 "Last-Translator: Ryo Nakano <ryonakaknock3@gmail.com>\n"
 "Language-Team: Japanese <https://l10n.elementary.io/projects/switchboard/"
 "parental-controls-plug-extra/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.8.4\n"
 
 #: data/screentime-limits.metainfo.xml.in:10
 msgid "Screen Time &amp; Limits Settings"
@@ -36,7 +36,7 @@ msgstr "elementary, Inc."
 #: data/screentime-limits.metainfo.xml.in:59
 #: data/screentime-limits.metainfo.xml.in:74
 msgid "Minor updates:"
-msgstr "そのほかのアップデート:"
+msgstr "マイナーアップデート:"
 
 #: data/screentime-limits.metainfo.xml.in:36
 #: data/screentime-limits.metainfo.xml.in:49
