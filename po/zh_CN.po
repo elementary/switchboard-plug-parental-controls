@@ -8,16 +8,17 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-19 20:56+0000\n"
-"PO-Revision-Date: 2024-08-07 00:16+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://l10n.elementary.io/projects/"
-"switchboard/switchboard-plug-parental-controls/zh_Hans/>\n"
+"PO-Revision-Date: 2025-08-03 19:55+0000\n"
+"Last-Translator: JieXu <xujie0739@qq.com>\n"
+"Language-Team: Chinese (Simplified Han script) <https://"
+"l10n.elementaryos.org/projects/settings/switchboard-plug-parental-controls/"
+"zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Launchpad-Export-Date: 2017-03-14 07:34+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
@@ -74,15 +75,15 @@ msgstr "授予以下应用管理员权限："
 
 #: src/plug/Views/InternetView.vala:29
 msgid "Blocked Websites"
-msgstr ""
+msgstr "已限制的网站"
 
 #: src/plug/Views/InternetView.vala:40
 msgid "Block URL"
-msgstr ""
+msgstr "屏蔽 URL"
 
 #: src/plug/Views/InternetView.vala:50
 msgid "example.com"
-msgstr ""
+msgstr "example.com"
 
 #: src/plug/Views/InternetView.vala:79 src/plug/Views/InternetView.vala:193
 msgid "Invalid URL"
@@ -90,12 +91,12 @@ msgstr "无效 URL"
 
 #: src/plug/Views/InternetView.vala:187
 msgid "The specified URL already exists in list"
-msgstr ""
+msgstr "指定的网址已存在于列表中"
 
 #: src/plug/Views/InternetView.vala:215
 #, c-format
 msgid "Unblock %s"
-msgstr ""
+msgstr "解除限制 %s"
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:20
