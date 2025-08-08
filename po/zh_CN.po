@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-networking\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-19 20:56+0000\n"
-"PO-Revision-Date: 2025-08-03 19:55+0000\n"
+"PO-Revision-Date: 2025-08-09 11:55+0000\n"
 "Last-Translator: JieXu <xujie0739@qq.com>\n"
 "Language-Team: Chinese (Simplified Han script) <https://"
 "l10n.elementaryos.org/projects/settings/switchboard-plug-parental-controls/"
@@ -57,13 +57,11 @@ msgstr "剩余时间"
 
 #: src/plug/Views/AppsView.vala:27
 msgid "Blocked Apps"
-msgstr ""
+msgstr "已限制的应用程序"
 
 #: src/plug/Views/AppsView.vala:38
-#, fuzzy
-#| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
-msgstr "添加要阻止的应用…"
+msgstr "添加要限制的应用程序…"
 
 #: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
@@ -117,11 +115,8 @@ msgid "To:"
 msgstr "结束时间："
 
 #: src/plug/Views/TimeLimitView.vala:163
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekends."
 msgid "Screen Time is not limited on weekends."
-msgstr "在周末的这段时间里，%s 的屏幕时间将不受限制。"
+msgstr "在周末不限制屏幕使用时间。"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:165
@@ -132,11 +127,8 @@ msgid ""
 msgstr "%s 只能在周末的这段时间登录，超出所选时间段后系统将会自动注销："
 
 #: src/plug/Views/TimeLimitView.vala:169
-#, fuzzy
-#| msgid ""
-#| "Screen Time for %s will not be limited during this period on weekdays."
 msgid "Screen Time is not limited on weekdays."
-msgstr "在工作日的这段时间里，%s 的屏幕时间将不受限制。"
+msgstr "在平日不限制屏幕使用时间。"
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:171
@@ -162,7 +154,8 @@ msgstr "其他账户"
 msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
-msgstr ""
+msgstr "利用屏幕使用时间、网站与应用程式的限制来控管并管理设备使用量。某些限制能在管"
+"理者提供权限后忽略。"
 
 #: src/plug/Widgets/ControlPage.vala:18
 msgid "My Account"
@@ -172,7 +165,7 @@ msgstr "我的账户"
 msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
-msgstr ""
+msgstr "设定屏幕使用时间、网站与应用程式的限制来管理您自己的设备使用量。"
 
 #: src/plug/Widgets/ControlPage.vala:37
 msgid "Screen Time"
