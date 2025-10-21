@@ -8,27 +8,25 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-19 20:56+0000\n"
-"PO-Revision-Date: 2024-08-07 00:16+0000\n"
-"Last-Translator: anonymous <noreply@weblate.org>\n"
-"Language-Team: Swedish <https://l10n.elementary.io/projects/switchboard/"
+"PO-Revision-Date: 2025-10-22 05:26+0000\n"
+"Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
+"Language-Team: Swedish <https://l10n.elementaryos.org/projects/settings/"
 "switchboard-plug-parental-controls/sv/>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6.2\n"
+"X-Generator: Weblate 5.11.4\n"
 "X-Launchpad-Export-Date: 2017-02-12 06:28+0000\n"
 
 #: src/client/AppUnavailableDialog.vala:27
-#, fuzzy
-#| msgid "You are not permitted to run this application."
 msgid "You are not permitted to run this application"
-msgstr "Du har inte tillåtelse att köra detta program."
+msgstr "Du får inte köra den här applikationen"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
-msgstr ""
+msgstr "En administratör har begränsat din tillgång till denna applikation."
 
 #: src/client/Client.vala:161
 #, c-format
@@ -60,17 +58,15 @@ msgstr "Återstående tid"
 
 #: src/plug/Views/AppsView.vala:27
 msgid "Blocked Apps"
-msgstr ""
+msgstr "Blockerade appar"
 
 #: src/plug/Views/AppsView.vala:38
-#, fuzzy
-#| msgid "Add Prevented Apps…"
 msgid "Add Blocked App…"
-msgstr "Lägg till spärrat program…"
+msgstr "Lägg till blockerad app…"
 
 #: src/plug/Views/AppsView.vala:53
 msgid "Clear All"
-msgstr "Rensa allt"
+msgstr "Töm allt"
 
 #: src/plug/Views/AppsView.vala:77
 msgid "Allow access to these apps with admin permission:"
@@ -78,15 +74,15 @@ msgstr "Tillåt åtkomst till dessa program med administratörsrättigheter:"
 
 #: src/plug/Views/InternetView.vala:29
 msgid "Blocked Websites"
-msgstr ""
+msgstr "Blockerade webbplatser"
 
 #: src/plug/Views/InternetView.vala:40
 msgid "Block URL"
-msgstr ""
+msgstr "Blockera URL"
 
 #: src/plug/Views/InternetView.vala:50
 msgid "example.com"
-msgstr ""
+msgstr "exempel.se"
 
 #: src/plug/Views/InternetView.vala:79 src/plug/Views/InternetView.vala:193
 msgid "Invalid URL"
@@ -94,12 +90,12 @@ msgstr "Felaktig URL"
 
 #: src/plug/Views/InternetView.vala:187
 msgid "The specified URL already exists in list"
-msgstr ""
+msgstr "Den angivna URL:en finns redan i listan"
 
 #: src/plug/Views/InternetView.vala:215
 #, c-format
 msgid "Unblock %s"
-msgstr ""
+msgstr "Avblockera %s"
 
 #. /TRANSLATORS: Refers to non-weekend days, as used in a title
 #: src/plug/Views/TimeLimitView.vala:20
@@ -120,9 +116,8 @@ msgid "To:"
 msgstr "Till:"
 
 #: src/plug/Views/TimeLimitView.vala:163
-#, fuzzy
 msgid "Screen Time is not limited on weekends."
-msgstr "Återstående tid"
+msgstr "Skärmtiden är inte begränsad till helgerna."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:165
@@ -131,11 +126,12 @@ msgid ""
 "%s will only be able to log in during this time on weekends, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
+"%s kommer endast att kunna logga in under denna tid på helger och kommer "
+"automatiskt att loggas ut när denna period är slut:"
 
 #: src/plug/Views/TimeLimitView.vala:169
-#, fuzzy
 msgid "Screen Time is not limited on weekdays."
-msgstr "Återstående tid"
+msgstr "Skärmtiden är inte begränsad till vardagar."
 
 #. /TRANSLATORS: %s is the user's name
 #: src/plug/Views/TimeLimitView.vala:171
@@ -144,6 +140,8 @@ msgid ""
 "%s will only be able to log in during this time on weekdays, and will be "
 "automatically logged out once this period ends:"
 msgstr ""
+"%s kommer endast att kunna logga in under denna tid på vardagar och kommer "
+"automatiskt att loggas ut när denna period är slut:"
 
 #: src/plug/Widgets/AppChooser.vala:18
 msgid "Search Applications"
@@ -162,6 +160,9 @@ msgid ""
 "Supervise and manage device usage with limits on Screen Time, websites, and "
 "apps. Some limits may be bypassed with an administrator's permission."
 msgstr ""
+"Övervaka och hantera enhetens användning med gränser för skärmtid, "
+"webbplatser och appar. Vissa gränser kan kringgås med en administratörs "
+"tillstånd."
 
 #: src/plug/Widgets/ControlPage.vala:18
 msgid "My Account"
@@ -172,10 +173,12 @@ msgid ""
 "Manage your own device usage by setting limits on Screen Time, websites, and "
 "apps."
 msgstr ""
+"Hantera din egen enhetsanvändning genom att sätta gränser för skärmtid, "
+"webbplatser och appar."
 
 #: src/plug/Widgets/ControlPage.vala:37
 msgid "Screen Time"
-msgstr ""
+msgstr "Tid för skärm"
 
 #: src/plug/Widgets/ControlPage.vala:38
 msgid "Internet"
@@ -190,9 +193,8 @@ msgid "Some settings require administrator rights to be changed"
 msgstr "Vissa inställningar kräver administratörsrättigheter för att ändras"
 
 #: src/plug/Plug.vala:36
-#, fuzzy
 msgid "Screen Time & Limits"
-msgstr "Återstående tid"
+msgstr "Skärmtid och gränser"
 
 #: src/plug/Plug.vala:37
 msgid "Configure time limits and restrict application usage"
