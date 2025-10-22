@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-19 20:56+0000\n"
-"PO-Revision-Date: 2025-10-22 05:26+0000\n"
+"PO-Revision-Date: 2025-10-22 09:59+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <https://l10n.elementaryos.org/projects/settings/"
 "parental-controls-plug-extra/sv/>\n"
@@ -21,7 +21,7 @@ msgstr ""
 
 #: data/screentime-limits.metainfo.xml.in:10
 msgid "Screen Time &amp; Limits Settings"
-msgstr ""
+msgstr "Inställningar för skärmtid och gränser"
 
 #: data/screentime-limits.metainfo.xml.in:11
 msgid "Configure time limits and restrict application usage"
@@ -60,51 +60,55 @@ msgid ""
 "Set default Screen Time from midnight to midnight to prevent accidental "
 "lockouts"
 msgstr ""
+"Ställ in standardskärmtid från midnatt till midnatt för att förhindra "
+"oavsiktliga låsningar"
 
 #: data/screentime-limits.metainfo.xml.in:71
 msgid "Improve reliability of app blocking"
-msgstr ""
+msgstr "Förbättra tillförlitligheten för appblockering"
 
 #: data/screentime-limits.metainfo.xml.in:72
 msgid "Support blocking Flatpak apps"
-msgstr ""
+msgstr "Stöd för blockering av Flatpak-appar"
 
 #: data/screentime-limits.metainfo.xml.in:76
 msgid "Clarify how Screen Time limits work and when they take effect"
 msgstr ""
+"Förtydliga hur skärmtidsbegränsningar fungerar och när de träder i kraft"
 
 #: data/screentime-limits.metainfo.xml.in:77
 msgid "New colorful avatar fallback"
-msgstr ""
+msgstr "Nytt färgglatt avatarfallback"
 
 #: data/screentime-limits.metainfo.xml.in:91
 msgid "Rename to Screen Time &amp; Limits"
-msgstr ""
+msgstr "Byt namn till Screen Time &amp; Limits"
 
 #: data/screentime-limits.metainfo.xml.in:92
 msgid "Show your own account"
-msgstr ""
+msgstr "Visa ditt eget konto"
 
 #: data/screentime-limits.metainfo.xml.in:93
 msgid "Redesign the app chooser"
-msgstr ""
+msgstr "Omarbeta app-valet"
 
 #: data/screentime-limits.metainfo.xml.in:94
 msgid "Redesign the Screen Time view"
-msgstr ""
+msgstr "Omarbeta vyn för skärmtid"
 
 #: data/screentime-limits.metainfo.xml.in:95
 msgid "Fix an issue with removing URLs from restricted websites"
 msgstr ""
+"Åtgärda ett problem med att ta bort webbadresser från begränsade webbplatser"
 
 #: data/screentime-limits.metainfo.xml.in:96
 msgid "Reliably apply time restrictions"
-msgstr ""
+msgstr "Tillämpa tidsbegränsningar på ett tillförlitligt sätt"
 
 #: data/screentime-limits.policy.in:10
 msgid "Manage Screen Time and Limits"
-msgstr ""
+msgstr "Hantera skärmtid och gränser"
 
 #: data/screentime-limits.policy.in:11
 msgid "Authentication is required to change Screen Time and Limits"
-msgstr ""
+msgstr "Autentisering krävs för att ändra skärmtid och gränser"
