@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: extra\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-19 20:56+0000\n"
-"PO-Revision-Date: 2025-10-22 09:59+0000\n"
+"PO-Revision-Date: 2025-10-30 09:55+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <https://l10n.elementaryos.org/projects/settings/"
 "parental-controls-plug-extra/sv/>\n"
@@ -78,11 +78,11 @@ msgstr ""
 
 #: data/screentime-limits.metainfo.xml.in:77
 msgid "New colorful avatar fallback"
-msgstr "Nytt färgglatt avatarfallback"
+msgstr "Ny färgglad visningsbild som reserv"
 
 #: data/screentime-limits.metainfo.xml.in:91
 msgid "Rename to Screen Time &amp; Limits"
-msgstr "Byt namn till Screen Time &amp; Limits"
+msgstr "Byt namn till Skärmtid och gränser"
 
 #: data/screentime-limits.metainfo.xml.in:92
 msgid "Show your own account"
@@ -90,7 +90,7 @@ msgstr "Visa ditt eget konto"
 
 #: data/screentime-limits.metainfo.xml.in:93
 msgid "Redesign the app chooser"
-msgstr "Omarbeta app-valet"
+msgstr "Omarbeta app-väljaren"
 
 #: data/screentime-limits.metainfo.xml.in:94
 msgid "Redesign the Screen Time view"
