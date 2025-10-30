@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: switchboard-plug-parental-controls\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-11-19 20:56+0000\n"
-"PO-Revision-Date: 2025-10-23 12:55+0000\n"
+"PO-Revision-Date: 2025-10-30 09:55+0000\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <https://l10n.elementaryos.org/projects/settings/"
 "switchboard-plug-parental-controls/sv/>\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: src/client/AppUnavailableDialog.vala:27
 msgid "You are not permitted to run this application"
-msgstr "Du får inte köra det här programmet"
+msgstr "Du har inte behörighet att köra det här programmet"
 
 #: src/client/AppUnavailableDialog.vala:28
 msgid "An administrator has restricted your access to this application."
@@ -178,7 +178,7 @@ msgstr ""
 
 #: src/plug/Widgets/ControlPage.vala:37
 msgid "Screen Time"
-msgstr "Tid för skärm"
+msgstr "Skärmtid"
 
 #: src/plug/Widgets/ControlPage.vala:38
 msgid "Internet"
@@ -190,7 +190,7 @@ msgstr "Program"
 
 #: src/plug/Widgets/ControlPage.vala:57
 msgid "Some settings require administrator rights to be changed"
-msgstr "Vissa inställningar kräver administratörsrättigheter för att ändras"
+msgstr "Vissa inställningar kräver administratörsbehörighet för att ändras"
 
 #: src/plug/Plug.vala:36
 msgid "Screen Time & Limits"
@@ -206,7 +206,7 @@ msgstr "Begränsa datoranvändning"
 
 #: src/plug/Plug.vala:65
 msgid "Prevent website access"
-msgstr "Förhindra webbsideåtkomst"
+msgstr "Förhindra webbplatsåtkomst"
 
 #: src/plug/Plug.vala:66
 msgid "Prevent application access"
